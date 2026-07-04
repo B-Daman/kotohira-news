@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<base target="_blank">
+<title>kotohira-news ― 開発ダッシュボード</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f4; --card:#ffffff; --line:#e7e1d6; --ink:#2c2622; --sub:#7a7066;
+    --accent:#c8472f; --accent-d:#a3381f; --accent-soft:#fbe9e4; --soft:#fff7f3;
+    --teal:#0d9488; --code-bg:#2a221d; --code-ink:#f3e9e0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans JP","Yu Gothic UI","Meiryo",system-ui,sans-serif;
+    line-height:1.7;font-size:16px;padding-bottom:40px}
+  a{color:var(--accent-d)}
+
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
+    backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:1080px;margin:0 auto;padding:10px 20px 0}
+  .brandrow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .brand{font-weight:900;font-size:16px;color:var(--accent-d)}
+  .brand small{color:var(--sub);font-weight:500;font-size:12px;margin-left:8px}
+  .badge{background:var(--accent-soft);color:var(--accent-d);font-size:11px;font-weight:800;border-radius:999px;padding:3px 11px}
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0}
+  .tab{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;
+    padding:7px 14px;font-size:13.5px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.12s}
+  .tab:hover{background:var(--accent-soft);color:var(--accent-d)}
+  .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  main{max-width:1080px;margin:0 auto;padding:24px 20px 40px}
+  .page{display:none}
+  .page.active{display:block;animation:fade .22s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  .hero{background:var(--code-bg);color:#fff;border-radius:20px;padding:32px 36px 28px;margin-bottom:18px}
+  .hero .eyebrow{letter-spacing:.3em;font-size:12px;color:rgba(255,255,255,.6);font-weight:700}
+  .hero h1{font-size:28px;font-weight:900;margin:12px 0 8px;line-height:1.25}
+  .hero p{font-size:15px;color:rgba(255,255,255,.85);margin:0}
+  .hero .meta{display:flex;gap:14px;margin-top:16px;font-size:13px;color:rgba(255,255,255,.62);flex-wrap:wrap}
+
+  .sec{display:flex;align-items:center;gap:14px;margin:0 0 14px}
+  .sec .num{min-width:46px;height:46px;padding:0 10px;border-radius:12px;background:var(--accent);color:#fff;
+    font-size:17px;font-weight:900;display:flex;align-items:center;justify-content:center}
+  .sec h2{font-size:22px;font-weight:900;margin:0}
+  .sec .tag-line{color:var(--sub);font-size:14px}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+  .card h3{font-size:17px;font-weight:800;margin:2px 0 12px}
+  .ov{background:var(--soft);border-color:#f1ddd2}
+
+  .status{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .status .s{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;border-top:3px solid var(--teal)}
+  .status .s .l{font-size:11px;color:var(--sub);font-weight:700}
+  .status .s .v{font-size:15px;font-weight:800;margin-top:2px}
+
+  table{width:100%;border-collapse:collapse;margin:8px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+  th{background:var(--soft);color:var(--ink);font-weight:700;font-size:12.5px;white-space:nowrap}
+  td:first-child{font-weight:700;white-space:nowrap}
+  .mono,td code{font-family:"JetBrains Mono",monospace;font-size:12.5px}
+  p code,li code{background:#f0e7df;color:var(--accent-d);padding:1px 6px;border-radius:6px;font-size:.92em}
+
+  pre{background:var(--code-bg);color:var(--code-ink);border-radius:12px;padding:15px 17px;overflow-x:auto;
+    margin:10px 0;font-size:13px;line-height:1.65}
+  code{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+  .anno{color:#f3b765;font-weight:700} .arr{color:#caa} .cmt{color:#b09a8c} .ok{color:#8fd7c4}
+
+  ul.b{list-style:none;margin:8px 0;padding:0}
+  ul.b li{position:relative;padding:5px 0 5px 22px}
+  ul.b li::before{content:"";position:absolute;left:4px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .chk{list-style:none;padding:0;margin:8px 0;font-size:14px}
+  .chk li{padding:3px 0 3px 26px;position:relative}
+  .chk li.done::before{content:"✅";position:absolute;left:0}
+  .chk li.todo::before{content:"⬜";position:absolute;left:0}
+
+  .note{border-radius:12px;padding:11px 16px;margin:12px 0;font-size:14px;border:1px solid}
+  .note.info{background:var(--soft);border-color:#f1ddd2}
+  .note.warn{background:#fdeee9;border-color:#f3c9bb}
+  .note.teal{background:#f1fbf8;border-color:#bce7df}
+  .filelink{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--sub);margin-top:10px;word-break:break-all}
+  .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;border-radius:8px;padding:8px 16px;font-size:13.5px;font-weight:700}
+  .btn.ghost{background:#fff;color:var(--accent-d);border:1px solid var(--line)}
+  footer{text-align:center;font-size:11px;color:var(--sub);padding:24px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand">kotohira-news <small>開発ダッシュボード（琴平町 発信ダッシュボード）</small></div>
+      <span class="badge">個人プロジェクト</span>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab" data-i="0">全体像</button>
+      <button class="tab" data-i="1">要件</button>
+      <button class="tab" data-i="2">設計</button>
+      <button class="tab" data-i="3">ロードマップ</button>
+      <button class="tab" data-i="4">運用</button>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+  <!-- ===== 全体像 ===== -->
+  <section class="page">
+    <div class="hero">
+      <div class="eyebrow">KOTOHIRA-NEWS ・ DEV DASHBOARD</div>
+      <h1>琴平町の「今」を、1か所に。</h1>
+      <p>団体のSNS発信（RSS）と、町のニュース・イベント・キャンペーン（Notion）を集約し、DAO定例の情報収集を楽にする静的ダッシュボード。</p>
+      <div class="meta"><span>個人プロジェクト</span><span>最終更新 2026-07-03</span><span>Phase 0 完了 → 0.5 進行中（Notion連携＋5タブ再設計）</span></div>
+    </div>
+
+    <div class="card ov">
+      <h3>現在のステータス</h3>
+      <div class="status">
+        <div class="s"><div class="l">フェーズ</div><div class="v">Phase 0.5 進行中</div></div>
+        <div class="s"><div class="l">データ供給</div><div class="v">2系統（data.js＋notion-data.js）</div></div>
+        <div class="s"><div class="l">表示部</div><div class="v">5タブ再設計（redesign3）</div></div>
+        <div class="s"><div class="l">Notion連携</div><div class="v">3DB 読み取り実装済み</div></div>
+        <div class="s"><div class="l">公開（Pages）</div><div class="v">未（Phase 2）</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>成果物を開く</h3>
+      <div class="btnrow">
+        <a class="btn" href="file:///C:/Users/user/kotohira-news/index-redesign3.html">▶ 最新の表示部（index-redesign3.html）</a>
+        <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/index.html">現行 index.html（4タブ）</a>
+        <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/">📂 プロジェクトフォルダ</a>
+        <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/registry.json">registry.json</a>
+        <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/scripts/fetch_notion.py">fetch_notion.py</a>
+      </div>
+      <div class="note info">表示部は <code>index-redesign3.html</code> が最新（次期 index.html 候補：ホーム／ニュース／イベント／キャンペーン／団体の5タブ）。検証後に <code>index.html</code> へ正本化予定。</div>
+    </div>
+
+    <div class="card">
+      <h3>アーキテクチャ（データ供給は2系統）</h3>
+      <pre class="diagram"><code><span class="cmt"># 系統A：団体のSNS発信</span>
+<span class="ok">registry.json</span>  <span class="cmt"># 団体×媒体の元データ（人が育てる）</span>
+   <span class="arr">│</span> <span class="anno">/kotohira-news スキル</span>（note等RSSを WebFetch → 整形）
+<span class="ok">data.js</span>  <span class="cmt"># window.DASHBOARD_DATA</span>
+
+<span class="cmt"># 系統B：町のニュース／イベント／キャンペーン</span>
+<span class="ok">Notion 3DB</span>  <span class="cmt"># ニュース／イベント／キャンペーン</span>
+   <span class="arr">│</span> <span class="anno">scripts/fetch_notion.py</span>（読み取り専用・pip依存なし。サムネは assets/thumbs/ に保存）
+<span class="ok">notion-data.js</span>  <span class="cmt"># window.NOTION_DATA</span>
+
+      data.js ＋ notion-data.js <span class="arr">→</span> <span class="ok">index-redesign3.html</span> <span class="arr">→</span> ブラウザ / GitHub Pages</code></pre>
+      <div class="note info"><b>設計原則：</b> ロジック（表示HTML・スキル・スクリプト）とデータ（registry.json / data.js / notion-data.js）を分離。各データファイルは生成元が1つに固定。</div>
+      <div class="note teal">Notionニュースの収集自体は別リポジトリ <b>konpie-bot</b>（Railway常駐・30分毎に RSS/スクレイプ → Discord → NotionニュースDB）が担当。本リポジトリの <code>fetch_notion.py</code> は Notion 3DB を<b>読み取るだけ</b>（最小権限）。</div>
+    </div>
+
+    <div class="card">
+      <h3>ドキュメント</h3>
+      <ul class="b">
+        <li><a href="file:///C:/Users/user/kotohira-news/docs/要件定義書.md">要件定義書.md</a> ― 背景・目的・機能/非機能要件・制約</li>
+        <li><a href="file:///C:/Users/user/kotohira-news/docs/設計書.md">設計書.md</a> ― 2系統アーキ・データモデル・5タブ画面</li>
+        <li><a href="file:///C:/Users/user/kotohira-news/docs/ロードマップ.md">ロードマップ.md</a> ― フェーズ・タスク・決定ログ</li>
+        <li><a href="file:///C:/Users/user/kotohira-news/docs/参考サイト調査.md">参考サイト調査.md</a> ― 他地域10サイトのUI調査＋redesign3への採否</li>
+        <li><a href="file:///C:/Users/user/kotohira-news/docs/運用手順.md">運用手順.md</a> ― 週次更新・団体追加・埋め込み</li>
+        <li><a href="file:///C:/Users/user/kotohira-news/scripts/README.md">scripts/README.md</a> ― Notion連携のセットアップ・環境変数</li>
+        <li><a href="file:///C:/Users/user/kotohira-news/README.md">README.md</a> ― 概要</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 要件 ===== -->
+  <section class="page">
+    <div class="sec"><div class="num">要</div><div><h2>要件サマリ</h2><div class="tag-line">詳細は 要件定義書.md</div></div></div>
+
+    <div class="card">
+      <h3>目的</h3>
+      <ul class="b">
+        <li><b>主</b>：DAO定例の情報収集（今週なにがあったか）を、手作業のまとめなしで把握。</li>
+        <li><b>副</b>：「この団体はこんな活動をしている」と一覧で見られる発信マップ（将来公開）。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>機能要件</h3>
+      <table>
+        <tr><th>ID</th><th>要件</th><th>状態</th></tr>
+        <tr><td>F1</td><td>団体×媒体を registry.json で一元管理</td><td>✅</td></tr>
+        <tr><td>F2</td><td>RSS媒体の最新更新を WebFetch で取得</td><td>✅(note)</td></tr>
+        <tr><td>F3</td><td>団体タブ（ディレクトリ表＋SNSリンク→ドリルダウン）</td><td>✅</td></tr>
+        <tr><td>F4</td><td>ニュースタブ（全団体横断・時系列）</td><td>✅</td></tr>
+        <tr><td>F5</td><td>団体詳細（更新／Instagram／X サブタブ）</td><td>✅</td></tr>
+        <tr><td>F6</td><td>Instagram・X 埋め込み（手動URL）</td><td>✅(器)</td></tr>
+        <tr><td>F7</td><td>/kotohira-news で data.js 再生成</td><td>✅</td></tr>
+        <tr><td>F11</td><td>Notion 3DB → notion-data.js 生成（fetch_notion.py・読取専用）</td><td>✅</td></tr>
+        <tr><td>F12</td><td>ニュース：媒体バッジ／⭐定例ピックアップ／表示対象フィルタ</td><td>✅</td></tr>
+        <tr><td>F13</td><td>イベント／キャンペーン：月カレンダー＋カード＋詳細モーダル</td><td>✅</td></tr>
+        <tr><td>F14</td><td>ホーム：最新ニュース・直近イベント・実施中キャンペーンのダイジェスト</td><td>✅</td></tr>
+        <tr><td>F15</td><td>サムネを assets/thumbs/ にローカル保存（署名URL失効対策）</td><td>✅</td></tr>
+        <tr><td>F16</td><td>ハッシュルーティング／AAコントラスト・モーダルのフォーカス管理</td><td>✅</td></tr>
+        <tr><td>F9</td><td>GitHub Pages 公開</td><td>⏳ P2</td></tr>
+        <tr><td>F10</td><td>data.js / notion-data.js 定期自動更新</td><td>⏳ P3</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>媒体別 自動取得可否</h3>
+      <table>
+        <tr><th>媒体</th><th>自動</th><th>方法</th></tr>
+        <tr><td>note</td><td>◎</td><td>公式RSS（実取得確認済み）</td></tr>
+        <tr><td>YouTube</td><td>◎</td><td>チャンネルRSS</td></tr>
+        <tr><td>Ameblo</td><td>○</td><td>RSSあり（URL要確認）</td></tr>
+        <tr><td>WordPress系HP</td><td>○</td><td>/feed</td></tr>
+        <tr><td>X</td><td>×</td><td>手動URL→埋め込み</td></tr>
+        <tr><td>Instagram</td><td>×</td><td>手動URL→埋め込み</td></tr>
+      </table>
+      <div class="note warn"><b>制約：</b> Instagram・X はAPI制約で自動取得不可。投稿URLを手動登録して埋め込み表示する。</div>
+    </div>
+
+    <div class="card">
+      <h3>非機能（要点）</h3>
+      <ul class="b">
+        <li>外部取得は <b>WebFetch（RSS）</b> と <b>fetch_notion.py の Notion API（読み取り専用トークン）</b>のみ。PowerShell外部通信は使わない。取得内容は「データ」扱い＝インジェクション無効化。</li>
+        <li>Notionは <b>読み取り専用トークン</b>（<code>KOTOHIRA_DASHBOARD_NOTION_TOKEN</code>）。書き込み用は持たせない（最小権限）。<code>.env</code> は .gitignore 済み。</li>
+        <li>ロジックとデータを分離／静的サイト（ビルド不要）／取得失敗は明示。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 設計 ===== -->
+  <section class="page">
+    <div class="sec"><div class="num">設</div><div><h2>設計</h2><div class="tag-line">詳細は 設計書.md</div></div></div>
+
+    <div class="card">
+      <h3>ディレクトリ構成</h3>
+      <pre class="diagram"><code>C:\Users\user\kotohira-news\
+├── index.html            <span class="cmt"># 現行の正本（4タブ）</span>
+├── index-redesign3.html  <span class="cmt"># 最新・次期候補（5タブ）</span>
+├── data.js               <span class="cmt"># 系統A（/kotohira-news が再生成）</span>
+├── notion-data.js        <span class="cmt"># 系統B（fetch_notion.py が再生成）</span>
+├── registry.json         <span class="cmt"># 系統Aの元データ（人が編集）</span>
+├── scripts\              <span class="cmt"># fetch_notion.py＋README</span>
+├── assets\thumbs\        <span class="cmt"># サムネのローカル保存</span>
+├── .env / .env.example   <span class="cmt"># Notionトークン（.env は gitignore）</span>
+├── README.md / .gitignore
+└── docs\                 <span class="cmt"># 要件/設計/ロードマップ/運用/参考サイト調査/このHTML</span>
+
+<span class="cmt"># スキル本体（リポジトリ外・グローバル）</span>
+C:\Users\user\.claude\skills\kotohira-news\SKILL.md</code></pre>
+    </div>
+
+    <div class="card">
+      <h3>データモデル（2系統）</h3>
+      <pre><code><span class="cmt">// 系統A：data.js</span>
+window.DASHBOARD_DATA = {
+  "orgs": [{
+    "id","name","summary",
+    "links": { note, instagram, x, website, youtube, ameblo },
+    "items": [ {source,date,title,url,thumbnail?} ],  <span class="cmt">// RSS由来・最大10</span>
+    "instagram": [url..2], "x": [url..2]              <span class="cmt">// 手動・埋め込み</span>
+  }]
+};
+
+<span class="cmt">// 系統B：notion-data.js</span>
+window.NOTION_DATA = {
+  "fetched": "YYYY-MM-DD HH:MM",
+  "news":      [ {id,title,url,summary,org,media,date,thumbnail,
+                  duplicate,pickup,show} ],           <span class="cmt">// ニュースDB</span>
+  "events":    [ {id,title,url,start,end,status,city,place,
+                  image,comment,fee,organizer} ],      <span class="cmt">// イベントDB</span>
+  "campaigns": [ /* eventsと同一スキーマ */ ]          <span class="cmt">// キャンペーンDB</span>
+};</code></pre>
+      <div class="note info"><code>show</code>＝Notion「表示対象」（true のみ表示）、<code>pickup</code>＝「定例で紹介」（⭐）。<code>duplicate</code>（重複の可能性）は現DBにプロパティ未追加のため当面 false 固定。</div>
+    </div>
+
+    <div class="card">
+      <h3>画面構成（index-redesign3.html・5タブ＋ハッシュルーティング）</h3>
+      <pre class="diagram"><code>[🏠 ホーム][📰 ニュース][📅 イベント][🎁 キャンペーン][📋 団体]  <span class="cmt"># #home #news …</span>
+  ホーム     : 最新ニュース/直近イベント/実施中キャンペーンを各4件・boxカード横並び
+  ニュース   : ⭐定例ピックアップ → リスト(5件スクロール) → ボックス（切替UIなし）
+  イベント   : Googleカレンダー風の月グリッド ＋ カード（クリックで詳細モーダル）
+  キャンペーン: 同上（月グリッド＋カード＋詳細モーダル）
+  団体       : ディレクトリ表 → 行クリックで団体詳細（更新/Instagram/X サブタブ）</code></pre>
+      <div class="note teal">詳細モーダルはイベント/キャンペーン/日別一覧で共用（DRY）。Esc・オーバーレイで閉じる＋フォーカス管理。白文字バッジはAA(4.5:1)調整済み。</div>
+    </div>
+
+    <div class="card">
+      <h3>表示形式の方針（参考サイト調査の反映）</h3>
+      <ul class="b">
+        <li>採用：<b>情報の性質で表示形式を変える</b>（純ニュース＝リスト、催し・お得＝カード/カレンダー）。</li>
+        <li>非採用：<b>カード⇄リスト切替＋フィルタチップ</b>（小規模ゆえ導線を増やさず素直な一覧を優先／ユーザー指示）。</li>
+        <li>独自追加：Googleカレンダー風 月グリッド、詳細モーダル、⭐定例ピックアップ。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== ロードマップ ===== -->
+  <section class="page">
+    <div class="sec"><div class="num">道</div><div><h2>ロードマップ</h2><div class="tag-line">詳細は ロードマップ.md</div></div></div>
+
+    <div class="card">
+      <h3>フェーズ</h3>
+      <table>
+        <tr><th>Phase</th><th>目標</th><th>状態</th></tr>
+        <tr><td>0</td><td>収集エンジン＋ダッシュボード基盤</td><td>✅ 完了</td></tr>
+        <tr><td>0.5</td><td>Notion 3DB連携＋表示部の5タブ再設計</td><td>🔄 進行中</td></tr>
+        <tr><td>1</td><td>団体・媒体の洗い出しとレジストリ拡充</td><td>🔜 次</td></tr>
+        <tr><td>2</td><td>GitHub Pages 公開</td><td>⏳</td></tr>
+        <tr><td>3</td><td>data.js / notion-data.js の定期自動更新</td><td>⏳</td></tr>
+        <tr><td>4</td><td>共通ハッシュタグ等の展開（任意）</td><td>💭</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>Phase 0.5 タスク（進行中）</h3>
+      <ul class="chk">
+        <li class="done">fetch_notion.py（Notion 3DB → notion-data.js・読取専用・pip依存なし）</li>
+        <li class="done">サムネのローカル保存（assets/thumbs/）</li>
+        <li class="done">参考サイト調査（他地域10サイト）を再設計インプット化</li>
+        <li class="done">5タブ化＋ハッシュルーティング（index-redesign3.html）</li>
+        <li class="done">イベント・キャンペーンの月カレンダー＋詳細モーダル</li>
+        <li class="done">ホームのダイジェスト（各4件・boxカード）</li>
+        <li class="todo">index-redesign3.html を検証して index.html へ正本化</li>
+        <li class="todo">試作 index-redesign*.html の整理</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Phase 1 タスク（次にやる）</h3>
+      <ul class="chk">
+        <li class="todo">協力隊・役場・研究室ほか 未登録団体の洗い出し</li>
+        <li class="todo">観光協会 Ameblo の RSS実URL 検証 → auto=true</li>
+        <li class="todo">観光協会 公式サイトRSS／公式IG の有無</li>
+        <li class="todo">またたび Instagram/X ハンドル確定</li>
+        <li class="todo">各団体 note のサムネ補完</li>
+        <li class="todo">ニュースに IG/X 手動アイテムも混ぜるか方針決定</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>決定ログ</h3>
+      <ul class="b">
+        <li><b>06-09</b>：集約は案1（週次収集ツール）先行で進める。</li>
+        <li><b>06-09</b>：成果物を Markdown草案 → HTMLダッシュボードへ変更。</li>
+        <li><b>06-10</b>：独立リポジトリ <code>C:\Users\user\kotohira-news\</code> へ移転。</li>
+        <li><b>07-02</b>：データ供給を2系統に整理（収集の実体は konpie-bot）。index.html を4固定タブ化、団体はタブ→ドリルダウンに。</li>
+        <li><b>07-02</b>：Notion 3DBを読み取り専用で取り込む fetch_notion.py 追加（別コネクト作成）。</li>
+        <li><b>07-02</b>：見た目の試作反復。redesign1（明朝・罫線）→「見づらい」、redesign2（切替UI）→「初代が一番良い」で却下。参考サイト調査を実施。</li>
+        <li><b>07-02〜03</b>：初代 index.html を土台に redesign3 を作成。ホーム追加で5タブ化、イベント/キャンペーンは Googleカレンダー風＋詳細モーダル、ニュースはフィルタ・切替UI非採用。</li>
+        <li><b>07-02</b>：ニュース表示制御はNotion「表示対象」、⭐は「定例で紹介」。「重複の可能性」はDB未追加＝当面false。</li>
+        <li><b>07-03</b>：画像非表示は <code>img loading="lazy"</code> が原因と判明→撤去で解消。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 運用 ===== -->
+  <section class="page">
+    <div class="sec"><div class="num">運</div><div><h2>運用</h2><div class="tag-line">詳細は 運用手順.md</div></div></div>
+
+    <div class="card">
+      <h3>毎週の更新（2系統）</h3>
+      <p><b>系統A：団体SNS発信（data.js）</b></p>
+      <ol style="padding-left:20px">
+        <li><code>C:\Users\user\kotohira-news\</code> で Claude Code 起動</li>
+        <li><code>/kotohira-news</code> を実行 → data.js 再生成</li>
+      </ol>
+      <p style="margin-top:12px"><b>系統B：ニュース／イベント／キャンペーン（notion-data.js）</b></p>
+      <ol style="padding-left:20px">
+        <li>Notion 3DBが最新か確認（収集は konpie-bot が常時実施）</li>
+        <li><code>python scripts/fetch_notion.py</code> → notion-data.js 再生成＋サムネ保存</li>
+      </ol>
+      <p style="margin-top:12px"><b>共通</b>：<code>index-redesign3.html</code>（確定後は index.html）を開いて確認。</p>
+      <div class="note info">一部DBがコネクト漏れ等で404でも、成功したDBだけ更新し失敗DBは既存内容を温存。トークンは <code>.env</code> に設定すれば毎回の環境変数設定は不要。</div>
+    </div>
+
+    <div class="card">
+      <h3>団体を追加</h3>
+      <p><code>registry.json</code> の <code>orgs</code> に追記 → <code>/kotohira-news</code> 実行。RSS不明なら <code>auto:false</code> で登録し、確認後に <code>rss</code>＋<code>auto:true</code>。</p>
+    </div>
+
+    <div class="card">
+      <h3>Instagram / X を載せる</h3>
+      <p>自動取得不可。対象orgの <code>instagram</code> / <code>x</code> に投稿URL（各最大2）を登録、または <code>/kotohira-news</code> 実行時にURLを渡す。</p>
+    </div>
+
+    <div class="note teal">公開（Phase 2）前に「載せてよい団体か／非公開情報が出ていないか」を必ず確認する。</div>
+  </section>
+
+</main>
+
+<footer>kotohira-news ／ 開発ダッシュボード（個人プロジェクト）／ ローカルHTMLとして閲覧</footer>
+
+<script>
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pages=[].slice.call(document.querySelectorAll('.page'));
+  function show(i){
+    for(var p=0;p<pages.length;p++){pages[p].classList.toggle('active',p===i);}
+    for(var t=0;t<tabs.length;t++){tabs[t].classList.toggle('active',t===i);}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  for(var k=0;k<tabs.length;k++){(function(idx){tabs[idx].addEventListener('click',function(){show(idx);});})(k);}
+  show(0);
+</script>
+</body>
+</html>

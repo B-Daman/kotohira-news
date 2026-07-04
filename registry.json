@@ -1,0 +1,78 @@
+{
+  "project": "kotohira-news",
+  "purpose": "琴平町を発信する団体×媒体の一覧（レジストリ）。kotohira-news スキルがここを読み、RSSを取得して『今週のことひらニュース』草案を作る。将来の公開サイト（案2）でも共有データとして再利用する。",
+  "updated": "2026-06-26",
+  "window_days": 7,
+  "output_dir": "SecondBrain/03_Resources/agent-outputs/kotohira-news/summary",
+  "legend": {
+    "auto": "true=RSSで自動取得できる / false=手動チェック対象（IG・X・RSS無HP等）",
+    "verified": "true=URL/RSSを実取得で確認済み / false=未確認（要検証）"
+  },
+  "orgs": [
+    {
+      "name": "またたびプロジェクト（香川大学）",
+      "summary": "香川大の学生プロジェクト『地元再発見の旅 またたび』。2025年度より琴平にフォーカス。『琴平ビト探訪』など取材記事を発信。2026年に『琴平縁むすびプロジェクト またたび』へ新体制。",
+      "channels": [
+        {
+          "type": "note",
+          "url": "https://note.com/matatabi_tour",
+          "rss": "https://note.com/matatabi_tour/rss",
+          "auto": true,
+          "verified": true,
+          "note": "2026-06-09 実取得確認。直近=6/1『またたび22匹に』、5/1『琴平ビト探訪第10弾』。月1ペース更新。"
+        },
+        {
+          "type": "instagram",
+          "handle": "matatabi_saihakken",
+          "url": "https://www.instagram.com/matatabi_saihakken",
+          "auto": false,
+          "verified": false,
+          "note": "要確認: noteハンドル(matatabi_tour)と異なる。現行アカウントか/更新頻度を確認。"
+        },
+        {
+          "type": "x",
+          "url": "",
+          "auto": false,
+          "verified": false,
+          "note": "要確認: アカウント存在は確認済みだがURL未取得。X RSS化はRSSHub等が必要で当面は手動チェック。"
+        }
+      ]
+    },
+    {
+      "name": "こんぴら観光まちづくり協会（琴平町観光協会）",
+      "summary": "琴平の観光案内・まちづくり。公式サイト『琴平まるごとNavi』。会員店舗情報やまちの話題を発信。",
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.kotohirakankou.jp/",
+          "rss": "",
+          "auto": false,
+          "verified": false,
+          "note": "要検証: 公式サイトのRSS有無を確認。無ければ更新チェック方式を検討。"
+        },
+        {
+          "type": "ameblo",
+          "url": "https://ameblo.jp/kotohirakankou/",
+          "rss": "https://rssblog.ameba.jp/kotohirakankou/rss.html",
+          "auto": true,
+          "verified": true,
+          "note": "2026-06-26 実取得確認（RDF形式RSS）。直近=2/24 歌舞伎売店アルバイト募集、1/29 歌舞伎売店出店募集。協会事務局＋琴参閣からの告知が中心。"
+        },
+        {
+          "type": "instagram",
+          "handle": "",
+          "url": "",
+          "auto": false,
+          "verified": false,
+          "note": "要確認: 公式Instagramの有無・ハンドル。"
+        }
+      ]
+    }
+  ],
+  "todo_orgs": [
+    "琴平町地域おこし協力隊（媒体・アカウント要洗い出し）",
+    "琴平町役場 公式（観光商工課 / 公式HP・SNS）",
+    "香川大学の研究室（琴平関連。要特定）",
+    "その他 琴平町を発信する団体・個人（順次追加）"
+  ]
+}

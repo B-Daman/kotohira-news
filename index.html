@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>琴平町 発信ダッシュボード</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script src="data.js"></script>
+<script src="notion-data.js"></script>
+<!-- 埋め込み用スクリプト -->
+<script async src="//www.instagram.com/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js"></script>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#ffffff; --line:#e7e1d6; --ink:#2c2622; --sub:#7a7066;
+    --accent:#c8472f; --accent-d:#a3381f; --accent-soft:#fbe9e4;
+    --note:#41c9b4; --ig:#c13584; --x:#1d1d1f; --web:#5b8def; --yt:#e0344b; --ameblo:#34a853;
+    /* ニュース媒体用（既存パレットと調和） */
+    --media-newspaper:#3a5a80; --media-tv:#d9822b; --media-gov:#4a8c6b; --media-webmedia:#7c5cbf; --media-other:#9a9186;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",system-ui,sans-serif;
+    line-height:1.7;padding-bottom:40px}
+  a{color:var(--accent-d);text-decoration:none}
+
+  /* 上部固定バー＋タブ */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
+    backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:1080px;margin:0 auto;padding:10px 20px 0}
+  .brandrow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .brand{font-weight:900;font-size:16px;color:var(--accent-d)}
+  .brand small{color:var(--sub);font-weight:500;font-size:12px;margin-left:8px}
+  .updated{color:var(--sub);font-size:12px}
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0 10px}
+  .tab{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink);
+    border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:700;cursor:pointer;
+    white-space:nowrap;transition:.12s}
+  .tab:hover{background:var(--accent-soft);color:var(--accent-d)}
+  .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+  main{max-width:1080px;margin:0 auto;padding:22px 20px 40px}
+  h2.page-h{font-size:20px;font-weight:900;margin:0 0 14px}
+  h3.group-h{font-size:15px;font-weight:900;margin:22px 0 10px;color:var(--accent-d)}
+  h3.group-h:first-of-type{margin-top:0}
+
+  /* 検索ボックス */
+  .search-box{margin-bottom:14px}
+  .search-box input{width:100%;max-width:360px;padding:8px 12px;border:1px solid var(--line);
+    border-radius:10px;font-size:14px;font-family:inherit;background:#fff;color:var(--ink)}
+  .search-box input:focus{outline:2px solid var(--accent);outline-offset:1px}
+
+  /* 一覧表 */
+  .table-wrap{width:100%;overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:16px}
+  table{width:100%;min-width:640px;border-collapse:collapse;font-size:14px}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#fcfaf6;color:var(--sub);font-weight:700;font-size:12.5px;white-space:nowrap}
+  tbody tr{cursor:pointer;transition:background .12s}
+  tbody tr:hover{background:var(--accent-soft)}
+  tbody tr:last-child td{border-bottom:none}
+  td.cnt{white-space:nowrap;color:var(--sub)}
+  .muted{color:var(--sub);font-size:13px}
+
+  /* SNSリンクのバッジ */
+  .links{display:flex;flex-wrap:wrap;gap:6px}
+  .lk{display:inline-block;border-radius:6px;padding:3px 9px;font-size:12px;font-weight:700;
+    color:#fff;text-decoration:none;white-space:nowrap}
+  .lk.note{background:var(--note)} .lk.instagram{background:var(--ig)} .lk.x{background:var(--x)}
+  .lk.website{background:var(--web)} .lk.youtube{background:var(--yt)} .lk.ameblo{background:var(--ameblo)}
+  .lk.off{background:#d8d0c4}
+
+  /* 戻るリンク（ボタンだがリンク風） */
+  .back-link{display:inline-block;margin-bottom:12px;background:none;border:none;padding:0;
+    color:var(--accent-d);font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit}
+  .back-link:hover{text-decoration:underline}
+
+  /* 団体ヘッダ */
+  .acct-head{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:16px}
+  .acct-head .name{font-size:1.25rem;font-weight:900;margin:0 0 4px}
+  .acct-head .desc{margin:6px 0 12px;font-size:14px;color:#43403b}
+
+  /* サブタブ・媒体フィルタチップ 共通見た目 */
+  .subtabs,.chip-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+  .subtab,.chip{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 16px;
+    font-size:13px;font-weight:700;cursor:pointer;color:var(--sub);transition:.12s;font-family:inherit}
+  .subtab:hover,.chip:hover{border-color:var(--accent)}
+  .subtab.active,.chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .chip{border-radius:999px;padding:5px 13px;font-size:12.5px}
+
+  /* フィード（団体の更新一覧） */
+  .feed{display:flex;flex-direction:column;gap:10px}
+  .feed-item{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:11px 14px;align-items:center;text-decoration:none;color:inherit;transition:border-color .12s}
+  .feed-item:hover{border-color:var(--accent)}
+  .feed-item img{width:104px;height:68px;object-fit:cover;border-radius:8px;flex:0 0 104px;background:#eee;display:block}
+  .fi-ph{width:104px;height:68px;border-radius:8px;flex:0 0 104px;font-size:20px}
+  .feed-item .fi-body{flex:1;min-width:0}
+  .feed-item .fi-meta{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .feed-item .fi-ttl{font-size:14.5px;font-weight:700;line-height:1.5;margin-top:3px}
+  .org-name{font-weight:700;color:var(--accent-d)}
+
+  /* 出典・媒体バッジ（団体items由来 / Notionニュース由来 共用） */
+  .src{display:inline-block;border-radius:5px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap}
+  .src.note{background:var(--note)} .src.instagram{background:var(--ig)} .src.x{background:var(--x)}
+  .src.website{background:var(--web)} .src.youtube{background:var(--yt)} .src.ameblo{background:var(--ameblo)}
+  .src.newspaper{background:var(--media-newspaper)} .src.tv{background:var(--media-tv)}
+  .src.gov{background:var(--media-gov)} .src.webmedia{background:var(--media-webmedia)} .src.other{background:var(--media-other)}
+
+  /* プレースホルダサムネ共通（.src と組み合わせて背景色をつける） */
+  .ph{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+
+  /* ニュースカード */
+  .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+  .news-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .12s}
+  .news-card:hover{border-color:var(--accent)}
+  .news-card.dup{opacity:.55}
+  .nc-thumb{width:100%;aspect-ratio:16/9;background:#eee}
+  .nc-img{width:100%;height:100%;object-fit:cover;display:block}
+  .nc-img.ph{font-size:26px}
+  .nc-body{padding:12px 14px;display:flex;flex-direction:column;gap:5px}
+  .nc-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:11.5px;color:var(--sub)}
+  .nc-date{white-space:nowrap}
+  .nc-title{font-size:14.5px;font-weight:700;line-height:1.5}
+  .nc-summary{font-size:12.5px;color:var(--sub);line-height:1.5}
+  .badge-new{background:var(--accent);color:#fff;border-radius:5px;padding:1px 7px;font-size:10.5px;font-weight:900}
+  .badge-dup{background:#d8d0c4;color:#5c554c;border-radius:5px;padding:1px 7px;font-size:10.5px;font-weight:700}
+  .pickup-section{margin-bottom:24px}
+  .pickup-section .news-card{border-color:var(--accent)}
+
+  /* 行クランプ（2行） */
+  .clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+  /* イベント・キャンペーン カード（共用） */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+  .ev-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .12s}
+  a.ev-card:hover{border-color:var(--accent)}
+  .ev-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;display:block}
+  .ev-img.ph{font-size:30px;color:var(--sub);background:#f1ece2}
+  .ev-body{padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+  .ev-title{font-size:14.5px;font-weight:700;line-height:1.5}
+  .ev-meta{font-size:12.5px;color:var(--sub)}
+  .ev-comment{font-size:12.5px;color:#43403b;margin-top:4px}
+  .ended-section{margin-top:22px}
+  .ended-section summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--sub);padding:8px 0}
+  .ended-section[open] summary{margin-bottom:6px}
+
+  /* 埋め込みグリッド（Instagram/X） */
+  .embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(328px,1fr));gap:14px;align-items:start}
+  .instagram-media{margin:0 auto !important;min-width:auto !important}
+  .twitter-tweet{margin:0 auto !important}
+
+  .empty{color:var(--sub);font-size:14px;padding:26px;text-align:center;border:1px dashed var(--line);
+    border-radius:14px;background:var(--card)}
+  .hint{font-size:12px;color:var(--sub);margin:-4px 0 12px}
+  footer{max-width:1080px;margin:8px auto 0;padding:0 20px;color:var(--sub);font-size:12px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand" id="hTitle">琴平町 発信ダッシュボード <small>団体ごとの発信を1か所に</small></div>
+      <div class="updated" id="hUpdated"></div>
+    </div>
+    <nav class="tabs" id="tabs"></nav>
+  </div>
+</div>
+
+<main id="main"></main>
+<footer id="footer"></footer>
+
+<script>
+/* ===== データ取り込み（欠損に強い形へ正規化） ===== */
+const D = (window.DASHBOARD_DATA && window.DASHBOARD_DATA.orgs)
+  ? window.DASHBOARD_DATA
+  : { title:"琴平町 発信ダッシュボード", updated:"", orgs:[] };
+
+const ND_RAW = (window.NOTION_DATA && typeof window.NOTION_DATA === "object") ? window.NOTION_DATA : {};
+const ND = {
+  fetched: ND_RAW.fetched || "",
+  news: Array.isArray(ND_RAW.news) ? ND_RAW.news : [],
+  events: Array.isArray(ND_RAW.events) ? ND_RAW.events : [],
+  campaigns: Array.isArray(ND_RAW.campaigns) ? ND_RAW.campaigns : []
+};
+
+const SNS = [
+  {key:"note",label:"note"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
+  {key:"website",label:"HP"},{key:"youtube",label:"YouTube"},{key:"ameblo",label:"Ameblo"}
+];
+const TABS = [
+  {key:"orgs",label:"📋 団体"},
+  {key:"news",label:"📰 ニュース"},
+  {key:"events",label:"📅 イベント"},
+  {key:"campaigns",label:"🎁 キャンペーン"}
+];
+const MEDIA_CLASS = {
+  "note":"note", "Instagram":"instagram", "X":"x", "HP":"website",
+  "新聞":"newspaper", "テレビ":"tv", "行政":"gov", "Webメディア":"webmedia", "その他":"other"
+};
+const NOTION_EMPTY_MSG = "Notion連携が未設定です。scripts/fetch_notion.py を実行すると表示されます。";
+
+/* ===== 画面状態 ===== */
+let orgSearchTerm = "";
+let orgSub = "updates";
+let currentOrgId = null;
+let newsMediaFilter = "すべて";
+
+/* ===== 起動 ===== */
+function init(){
+  initHeader();
+  document.getElementById("tabs").addEventListener("click", onTabsClick);
+  document.getElementById("main").addEventListener("click", onMainClick);
+  document.getElementById("main").addEventListener("input", onMainInput);
+  window.addEventListener("hashchange", render);
+  if(!location.hash){ history.replaceState(null, "", "#news"); }
+  render();
+}
+
+function initHeader(){
+  document.getElementById("hTitle").innerHTML =
+    esc(D.title||"琴平町 発信ダッシュボード") + ' <small>団体ごとの発信を1か所に</small>';
+  const parts = [];
+  if(D.updated) parts.push("団体RSS " + fmtMD(D.updated));
+  if(ND.fetched) parts.push("Notion " + fmtFetched(ND.fetched));
+  document.getElementById("hUpdated").textContent = parts.length ? "最終更新 " + parts.join(" ／ ") : "";
+  document.getElementById("footer").innerHTML =
+    "data.js＝団体の note / ameblo 等RSSから自動取得。notion-data.js＝Notionのニュース・イベント・キャンペーンDBから <code>scripts/fetch_notion.py</code> を実行して生成。Instagram・X は投稿URLを登録すると埋め込み表示されます。";
+}
+
+/* ===== ルーティング ===== */
+function parseHash(){
+  const h = (location.hash||"").replace(/^#/, "");
+  if(h.indexOf("org=") === 0) return {view:"org", id: decodeURIComponent(h.slice(4))};
+  if(["orgs","news","events","campaigns"].indexOf(h) >= 0) return {view:h};
+  return {view:"news"};
+}
+
+function render(opt){
+  const r = parseHash();
+  renderTabs(r);
+  const m = document.getElementById("main");
+  if(r.view === "orgs"){
+    m.innerHTML = orgsListHTML(orgSearchTerm);
+  } else if(r.view === "org"){
+    const o = D.orgs.find(x=>x.id===r.id);
+    if(!o){ m.innerHTML = emptyMsg("団体が見つかりません。"); return; }
+    if(currentOrgId !== o.id){ orgSub = "updates"; currentOrgId = o.id; }
+    m.innerHTML = orgDetailHTML(o);
+    processEmbeds();
+  } else if(r.view === "events"){
+    m.innerHTML = eventsOrCampaignsHTML(ND.events, "event");
+  } else if(r.view === "campaigns"){
+    m.innerHTML = eventsOrCampaignsHTML(ND.campaigns, "campaign");
+  } else {
+    m.innerHTML = newsHTML();
+  }
+  if(!(opt && opt.noScroll)) window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function renderTabs(r){
+  const activeKey = r.view === "org" ? "orgs" : r.view;
+  document.getElementById("tabs").innerHTML = TABS.map(t=>
+    `<button class="tab ${activeKey===t.key?'active':''}" data-route="${t.key}">${t.label}</button>`
+  ).join("");
+}
+
+/* ===== イベント委譲 ===== */
+function onTabsClick(e){
+  const b = e.target.closest("[data-route]");
+  if(b){ location.hash = "#" + b.dataset.route; }
+}
+function onMainClick(e){
+  const orgRow = e.target.closest("[data-org-id]");
+  if(orgRow){ location.hash = "#org=" + encodeURIComponent(orgRow.dataset.orgId); return; }
+  const back = e.target.closest("[data-route]");
+  if(back){ location.hash = "#" + back.dataset.route; return; }
+  const subBtn = e.target.closest("[data-org-sub]");
+  if(subBtn){
+    orgSub = subBtn.dataset.orgSub;
+    const o = D.orgs.find(x=>x.id===currentOrgId);
+    const sp = document.getElementById("subpanel");
+    if(sp && o){
+      sp.innerHTML = orgSubPanelHTML(o);
+      document.querySelectorAll("[data-org-sub]").forEach(btn=>btn.classList.toggle("active", btn.dataset.orgSub===orgSub));
+      processEmbeds();
+    }
+    return;
+  }
+  const chip = e.target.closest("[data-media-filter]");
+  if(chip){ newsMediaFilter = chip.dataset.mediaFilter; render({noScroll:true}); return; }
+}
+function onMainInput(e){
+  if(e.target && e.target.id === "orgSearchInput"){
+    orgSearchTerm = e.target.value;
+    const rows = document.getElementById("orgRows");
+    if(rows) rows.innerHTML = orgRowsHTML(orgSearchTerm);
+  }
+}
+
+/* ===== 📋 団体タブ ===== */
+function orgsListHTML(filter){
+  return `<h2 class="page-h">📋 団体一覧</h2>
+    <div class="search-box"><input type="search" id="orgSearchInput" placeholder="🔍 団体をさがす" value="${esc(filter)}"></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>団体名</th><th>概要</th><th>発信媒体</th><th>最終更新</th></tr></thead>
+      <tbody id="orgRows">${orgRowsHTML(filter)}</tbody>
+    </table></div>`;
+}
+function orgRowsHTML(filter){
+  const f = (filter||"").toLowerCase();
+  const orgs = D.orgs.filter(o => !f
+    || (o.name||"").toLowerCase().includes(f)
+    || (o.summary||"").toLowerCase().includes(f));
+  return orgs.map(o => `
+    <tr data-org-id="${esc(o.id)}">
+      <td><b>${esc(o.name)}</b></td>
+      <td>${esc(o.summary||"")}</td>
+      <td><div class="links">${linkBadges(o.links)}</div></td>
+      <td class="cnt">${esc(lastUpdated(o))}</td>
+    </tr>`).join("") || `<tr><td colspan="4" class="muted">該当する団体がありません。</td></tr>`;
+}
+function lastUpdated(o){
+  const dates = (o.items||[]).map(it=>it.date).filter(Boolean).sort();
+  return dates.length ? fmtDate(dates[dates.length-1]) : "―";
+}
+
+/* ===== 団体詳細（ドリルダウン） ===== */
+function orgDetailHTML(o){
+  const subtabs = [{key:"updates", label:"📝 更新"}];
+  if((o.instagram||[]).length) subtabs.push({key:"instagram", label:"Instagram"});
+  if((o.x||[]).length) subtabs.push({key:"x", label:"X"});
+  if(!subtabs.some(s=>s.key===orgSub)) orgSub = "updates";
+  return `
+    <button class="back-link" data-route="orgs">← 団体一覧にもどる</button>
+    <div class="acct-head">
+      <p class="name">${esc(o.name)}</p>
+      <p class="desc">${esc(o.summary||"")}</p>
+      <div class="links">${linkBadges(o.links)}</div>
+    </div>
+    <div class="subtabs">
+      ${subtabs.map(s=>`<button class="subtab ${orgSub===s.key?'active':''}" data-org-sub="${s.key}">${s.label}</button>`).join("")}
+    </div>
+    <div id="subpanel">${orgSubPanelHTML(o)}</div>`;
+}
+function orgSubPanelHTML(o){
+  if(orgSub === "instagram"){
+    const urls = (o.instagram||[]).slice(0,2);
+    return urls.length
+      ? `<div class="hint">Instagram（最大2件）</div><div class="embeds">${urls.map(igEmbed).join("")}</div>`
+      : emptyMsg("Instagram投稿URLが未登録です。投稿URLを登録すると埋め込み表示されます。");
+  }
+  if(orgSub === "x"){
+    const urls = (o.x||[]).slice(0,2);
+    return urls.length
+      ? `<div class="hint">X / 旧Twitter（最大2件）</div><div class="embeds">${urls.map(xEmbed).join("")}</div>`
+      : emptyMsg("X投稿URLが未登録です。");
+  }
+  const items = (o.items||[]).slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  return items.length
+    ? `<div class="feed">${items.map(feedItem).join("")}</div>`
+    : emptyMsg("まだ更新がありません。registry.json にRSSを登録すると、ここに最新記事がサムネ付きで並びます。");
+}
+function feedItem(it){
+  const cls = esc(it.source || "other");
+  const letter = esc((it.source||"?").charAt(0));
+  const img = it.thumbnail
+    ? `<img src="${esc(it.thumbnail)}" alt="" data-ph-class="fi-ph ph src ${cls}" data-letter="${letter}" onerror="imgFallback(this)">`
+    : `<div class="fi-ph ph src ${cls}">${letter}</div>`;
+  const meta = [
+    `<span class="src ${cls}">${esc(it.source||"")}</span>`,
+    `<span>${esc(fmtDate(it.date))}</span>`
+  ].join(" ");
+  return `<a class="feed-item" href="${esc(it.url)}">
+    ${img}
+    <span class="fi-body">
+      <span class="fi-meta">${meta}</span>
+      <div class="fi-ttl">${esc(it.title)}</div>
+    </span></a>`;
+}
+
+/* ===== 📰 ニュースタブ（NOTION_DATA.news） ===== */
+function newsHTML(){
+  if(!ND.news.length) return '<h2 class="page-h">📰 ニュース</h2>' + emptyMsg(NOTION_EMPTY_MSG);
+  const news = ND.news.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  const pickups = news.filter(n=>n.pickup);
+  const mediaList = [];
+  news.forEach(n=>{ if(n.media && mediaList.indexOf(n.media)===-1) mediaList.push(n.media); });
+  const chips = ["すべて"].concat(mediaList);
+  const filtered = newsMediaFilter==="すべて" ? news : news.filter(n=>n.media===newsMediaFilter);
+
+  let html = '<h2 class="page-h">📰 ニュース</h2>';
+  if(pickups.length){
+    html += `<div class="pickup-section">
+      <h3 class="group-h">⭐ 定例ピックアップ</h3>
+      <div class="news-grid">${pickups.map(newsCard).join("")}</div>
+    </div>`;
+  }
+  html += `<div class="chip-row">${chips.map(c=>
+    `<button class="chip ${newsMediaFilter===c?'active':''}" data-media-filter="${esc(c)}">${esc(c)}</button>`
+  ).join("")}</div>`;
+  html += filtered.length
+    ? `<div class="news-grid">${filtered.map(newsCard).join("")}</div>`
+    : emptyMsg("この媒体の記事はありません。");
+  return html;
+}
+function newsCard(it){
+  const cls = mediaClass(it.media);
+  const letter = esc((it.media||"?").charAt(0));
+  const isNew = isWithinDays(it.date, 7);
+  const thumb = it.thumbnail
+    ? `<img class="nc-img" src="${esc(it.thumbnail)}" alt="" data-ph-class="nc-img ph src ${cls}" data-letter="${letter}" onerror="imgFallback(this)">`
+    : `<div class="nc-img ph src ${cls}">${letter}</div>`;
+  const inner = `<div class="nc-thumb">${thumb}</div>
+    <div class="nc-body">
+      <div class="nc-meta">
+        <span class="src ${cls}">${esc(it.media||"")}</span>
+        <span class="org-name">${esc(it.org||"")}</span>
+        <span class="nc-date">${esc(fmtDate(it.date))}</span>
+        ${isNew ? '<span class="badge-new">NEW</span>' : ""}
+        ${it.duplicate ? '<span class="badge-dup">重複の可能性</span>' : ""}
+      </div>
+      <div class="nc-title">${esc(it.title)}</div>
+      <div class="nc-summary clamp2">${esc(it.summary||"")}</div>
+    </div>`;
+  const cardCls = `news-card${it.duplicate?' dup':''}`;
+  return it.url ? `<a class="${cardCls}" href="${esc(it.url)}">${inner}</a>` : `<div class="${cardCls}">${inner}</div>`;
+}
+function mediaClass(media){ return MEDIA_CLASS[media] || "other"; }
+
+/* ===== 📅 イベント / 🎁 キャンペーン（カード共用） ===== */
+function eventsOrCampaignsHTML(items, kind){
+  const isEvent = kind === "event";
+  const heading = isEvent ? "📅 イベント" : "🎁 キャンペーン";
+  if(!items.length) return `<h2 class="page-h">${heading}</h2>` + emptyMsg(NOTION_EMPTY_MSG);
+
+  const active = items.filter(i=>i.status==="実施中");
+  const upcoming = items.filter(i=>i.status==="実施前").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
+  const ended = items.filter(i=>i.status==="終了").sort((a,b)=>(b.start||"").localeCompare(a.start||""));
+
+  const activeLabel = isEvent ? "🔴 開催中" : "🔴 実施中のキャンペーン";
+  const upcomingLabel = isEvent ? "🔜 今後の予定" : "🔜 今後の予定のキャンペーン";
+
+  let html = `<h2 class="page-h">${heading}</h2>`;
+  if(active.length) html += `<h3 class="group-h">${activeLabel}</h3><div class="card-grid">${active.map(eventCard).join("")}</div>`;
+  if(upcoming.length) html += `<h3 class="group-h">${upcomingLabel}</h3><div class="card-grid">${upcoming.map(eventCard).join("")}</div>`;
+  if(ended.length) html += `<details class="ended-section"><summary>終了（${ended.length}件）</summary><div class="card-grid">${ended.map(eventCard).join("")}</div></details>`;
+  if(!active.length && !upcoming.length && !ended.length) html += emptyMsg("該当する項目がありません。");
+  return html;
+}
+function eventCard(it){
+  const img = it.image
+    ? `<img class="ev-img" src="${esc(it.image)}" alt="" data-ph-class="ev-img ph" data-letter="🖼" onerror="imgFallback(this)">`
+    : `<div class="ev-img ph">🖼</div>`;
+  const placeParts = [];
+  if(it.city && it.city !== "琴平町") placeParts.push(it.city);
+  if(it.place) placeParts.push(it.place);
+  const rows = [
+    `<div class="ev-meta">🗓 ${esc(fmtEventDate(it.start, it.end))}</div>`,
+    placeParts.length ? `<div class="ev-meta">📍 ${esc(placeParts.join(" / "))}</div>` : "",
+    it.fee ? `<div class="ev-meta">💰 ${esc(it.fee)}</div>` : "",
+    it.organizer ? `<div class="ev-meta">🏢 ${esc(it.organizer)}</div>` : "",
+    it.comment ? `<div class="ev-comment clamp2">${esc(it.comment)}</div>` : ""
+  ].filter(Boolean).join("");
+  const inner = `${img}<div class="ev-body"><div class="ev-title">${esc(it.title)}</div>${rows}</div>`;
+  return it.url ? `<a class="ev-card" href="${esc(it.url)}">${inner}</a>` : `<div class="ev-card">${inner}</div>`;
+}
+
+/* ===== 埋め込み（Instagram/X） ===== */
+function igEmbed(url){
+  return `<blockquote class="instagram-media" data-instgrm-permalink="${esc(url)}" data-instgrm-version="14"
+    style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px rgba(0,0,0,.5),0 1px 10px rgba(0,0,0,.15);margin:0;max-width:540px;min-width:326px;padding:0;width:100%"></blockquote>`;
+}
+function xEmbed(url){ return `<blockquote class="twitter-tweet"><a href="${esc(url)}"></a></blockquote>`; }
+function processEmbeds(tries){
+  tries = tries || 0; let pending = false;
+  try{ if(window.instgrm && window.instgrm.Embeds){ window.instgrm.Embeds.process(); } else { pending = true; } }catch(e){}
+  try{ if(window.twttr && window.twttr.widgets){ window.twttr.widgets.load(); } else { pending = true; } }catch(e){}
+  if(pending && tries<6){ setTimeout(()=>processEmbeds(tries+1), 700); }
+}
+
+/* ===== 共通ユーティリティ ===== */
+function linkBadges(links){
+  links = links || {};
+  return SNS.map(s=>{
+    const url = links[s.key];
+    return url
+      ? `<a class="lk ${s.key}" href="${esc(url)}" onclick="event.stopPropagation()">${s.label}↗</a>`
+      : `<span class="lk ${s.key} off">${s.label}</span>`;
+  }).join("");
+}
+function emptyMsg(t){ return `<div class="empty">${esc(t)}</div>`; }
+function imgFallback(img){
+  const div = document.createElement("div");
+  div.className = img.dataset.phClass || "";
+  div.textContent = img.dataset.letter || "?";
+  img.replaceWith(div);
+}
+
+/* ---- 日付関連 ---- */
+const WEEKDAYS = ["日","月","火","水","木","金","土"];
+function fmtDate(d){ if(!d) return ""; const m=(""+d).match(/(\d{4})-(\d{2})-(\d{2})/); return m?`${m[1]}/${+m[2]}/${+m[3]}`:d; }
+function fmtMD(d){ const m=(""+d).match(/(\d{4})-(\d{2})-(\d{2})/); return m?`${+m[2]}/${+m[3]}`:d; }
+function fmtFetched(s){
+  const m = (""+s).match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}:\d{2})/);
+  return m ? `${+m[2]}/${+m[3]} ${m[4]}` : s;
+}
+function parseDT(s){
+  if(!s) return null;
+  const m = (""+s).match(/^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/);
+  if(!m) return null;
+  return {y:+m[1], mo:+m[2], d:+m[3], h: m[4]!==undefined?+m[4]:null, mi: m[5]!==undefined?+m[5]:null};
+}
+function pad2(n){ return ("" + n).padStart(2, "0"); }
+function fmtOne(dt){
+  const wd = WEEKDAYS[new Date(dt.y, dt.mo-1, dt.d).getDay()];
+  let s = `${dt.mo}/${dt.d}(${wd})`;
+  if(dt.h!==null) s += ` ${pad2(dt.h)}:${pad2(dt.mi)}`;
+  return s;
+}
+function fmtEventDate(start, end){
+  const s = parseDT(start), e = parseDT(end);
+  if(!s && !e) return "日程未定";
+  if(s && !e) return fmtOne(s) + (s.h!==null ? "〜" : "");
+  if(s && e){
+    if(s.y===e.y && s.mo===e.mo && s.d===e.d){
+      return fmtOne(s) + (e.h!==null ? `〜${pad2(e.h)}:${pad2(e.mi)}` : "〜");
+    }
+    return `${fmtOne(s)} 〜 ${fmtOne(e)}`;
+  }
+  return fmtOne(e);
+}
+function isWithinDays(dateStr, days){
+  const dt = parseDT(dateStr);
+  if(!dt) return false;
+  const d = new Date(dt.y, dt.mo-1, dt.d);
+  const now = new Date(); now.setHours(0,0,0,0);
+  const diff = (now - d) / 86400000;
+  return diff >= 0 && diff <= days;
+}
+function esc(s){ return ("" + (s==null?"":s)).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+init();
+</script>
+</body>
+</html>
