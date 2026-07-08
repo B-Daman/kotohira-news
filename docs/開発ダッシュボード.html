@@ -118,15 +118,15 @@
       <div class="eyebrow">KOTOHIRA-NEWS ・ DEV DASHBOARD</div>
       <h1>琴平町の「今」を、1か所に。</h1>
       <p>団体のSNS発信（RSS）と、町のニュース・イベント・キャンペーン（Notion）を集約し、DAO定例の情報収集を楽にする静的ダッシュボード。</p>
-      <div class="meta"><span>個人プロジェクト</span><span>最終更新 2026-07-03</span><span>Phase 0 完了 → 0.5 進行中（Notion連携＋5タブ再設計）</span></div>
+      <div class="meta"><span>個人プロジェクト</span><span>最終更新 2026-07-09</span><span>Phase 0.5 完了（Notion連携＋7タブ正本化）→ Phase 1 へ</span></div>
     </div>
 
     <div class="card ov">
       <h3>現在のステータス</h3>
       <div class="status">
-        <div class="s"><div class="l">フェーズ</div><div class="v">Phase 0.5 進行中</div></div>
+        <div class="s"><div class="l">フェーズ</div><div class="v">Phase 0.5 完了</div></div>
         <div class="s"><div class="l">データ供給</div><div class="v">2系統（data.js＋notion-data.js）</div></div>
-        <div class="s"><div class="l">表示部</div><div class="v">5タブ再設計（redesign3）</div></div>
+        <div class="s"><div class="l">表示部</div><div class="v">7タブ・正本化済み（index.html）</div></div>
         <div class="s"><div class="l">Notion連携</div><div class="v">3DB 読み取り実装済み</div></div>
         <div class="s"><div class="l">公開（Pages）</div><div class="v">未（Phase 2）</div></div>
       </div>
@@ -136,12 +136,12 @@
       <h3>成果物を開く</h3>
       <div class="btnrow">
         <a class="btn" href="file:///C:/Users/user/kotohira-news/index.html">▶ 最新の表示部（index.html）</a>
-        <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/index.html">現行 index.html（4タブ）</a>
+        <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/index-legacy.html">旧 index-legacy.html（4タブ）</a>
         <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/">📂 プロジェクトフォルダ</a>
         <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/registry.json">registry.json</a>
         <a class="btn ghost" href="file:///C:/Users/user/kotohira-news/scripts/fetch_notion.py">fetch_notion.py</a>
       </div>
-      <div class="note info">表示部は <code>index-redesign3.html</code> が最新（次期 index.html 候補：ホーム／ニュース／イベント／キャンペーン／団体の5タブ）。検証後に <code>index.html</code> へ正本化予定。</div>
+      <div class="note info">表示部は <code>index.html</code> が正本（2026-07-09 正本化・7タブ：ホーム／ニュース／イベント／キャンペーン／体験・滞在／団体／リンク）。旧4タブ版は <code>index-legacy.html</code> に退避。</div>
     </div>
 
     <div class="card">
@@ -156,7 +156,7 @@
    <span class="arr">│</span> <span class="anno">scripts/fetch_notion.py</span>（読み取り専用・pip依存なし。サムネは assets/thumbs/ に保存）
 <span class="ok">notion-data.js</span>  <span class="cmt"># window.NOTION_DATA</span>
 
-      data.js ＋ notion-data.js <span class="arr">→</span> <span class="ok">index-redesign3.html</span> <span class="arr">→</span> ブラウザ / GitHub Pages</code></pre>
+      data.js ＋ notion-data.js <span class="arr">→</span> <span class="ok">index.html</span> <span class="arr">→</span> ブラウザ / GitHub Pages</code></pre>
       <div class="note info"><b>設計原則：</b> ロジック（表示HTML・スキル・スクリプト）とデータ（registry.json / data.js / notion-data.js）を分離。各データファイルは生成元が1つに固定。</div>
       <div class="note teal">Notionニュースの収集自体は別リポジトリ <b>konpie-bot</b>（Railway常駐・30分毎に RSS/スクレイプ → Discord → NotionニュースDB）が担当。本リポジトリの <code>fetch_notion.py</code> は Notion 3DB を<b>読み取るだけ</b>（最小権限）。</div>
     </div>
@@ -165,7 +165,7 @@
       <h3>ドキュメント</h3>
       <ul class="b">
         <li><a href="file:///C:/Users/user/kotohira-news/docs/要件定義書.md">要件定義書.md</a> ― 背景・目的・機能/非機能要件・制約</li>
-        <li><a href="file:///C:/Users/user/kotohira-news/docs/設計書.md">設計書.md</a> ― 2系統アーキ・データモデル・5タブ画面</li>
+        <li><a href="file:///C:/Users/user/kotohira-news/docs/設計書.md">設計書.md</a> ― 2系統アーキ・データモデル・7タブ画面</li>
         <li><a href="file:///C:/Users/user/kotohira-news/docs/ロードマップ.md">ロードマップ.md</a> ― フェーズ・タスク・決定ログ</li>
         <li><a href="file:///C:/Users/user/kotohira-news/docs/参考サイト調査.md">参考サイト調査.md</a> ― 他地域10サイトのUI調査＋redesign3への採否</li>
         <li><a href="file:///C:/Users/user/kotohira-news/docs/運用手順.md">運用手順.md</a> ― 週次更新・団体追加・埋め込み</li>
@@ -240,8 +240,8 @@
     <div class="card">
       <h3>ディレクトリ構成</h3>
       <pre class="diagram"><code>C:\Users\user\kotohira-news\
-├── index.html            <span class="cmt"># 現行の正本（4タブ）</span>
-├── index-redesign3.html  <span class="cmt"># 最新・次期候補（5タブ）</span>
+├── index.html            <span class="cmt"># 現行の正本（2026-07-09 正本化・7タブ）</span>
+├── index-legacy.html     <span class="cmt"># 旧・表示部（4タブ版の退避）</span>
 ├── data.js               <span class="cmt"># 系統A（/kotohira-news が再生成）</span>
 ├── notion-data.js        <span class="cmt"># 系統B（fetch_notion.py が再生成）</span>
 ├── registry.json         <span class="cmt"># 系統Aの元データ（人が編集）</span>
@@ -280,13 +280,15 @@ window.NOTION_DATA = {
     </div>
 
     <div class="card">
-      <h3>画面構成（index-redesign3.html・5タブ＋ハッシュルーティング）</h3>
-      <pre class="diagram"><code>[🏠 ホーム][📰 ニュース][📅 イベント][🎁 キャンペーン][📋 団体]  <span class="cmt"># #home #news …</span>
+      <h3>画面構成（index.html・7タブ＋ハッシュルーティング）</h3>
+      <pre class="diagram"><code>[🏠 ホーム][📰 ニュース][📅 イベント][🎁 キャンペーン][🧭 体験・滞在][📋 団体][🔗 リンク]  <span class="cmt"># #home #news … #experiences #orgs #links</span>
   ホーム     : 最新ニュース/直近イベント/実施中キャンペーンを各4件・boxカード横並び
   ニュース   : ⭐定例ピックアップ → リスト(5件スクロール) → ボックス（切替UIなし）
   イベント   : Googleカレンダー風の月グリッド ＋ カード（クリックで詳細モーダル）
   キャンペーン: 同上（月グリッド＋カード＋詳細モーダル）
-  団体       : ディレクトリ表 → 行クリックで団体詳細（更新/Instagram/X サブタブ）</code></pre>
+  体験・滞在 : 種別グループ＋カード（Notion 体験・滞在DB由来。現状は接続待ちでプレースホルダ表示）
+  団体       : ディレクトリ表 → 行クリックで団体詳細（更新/Instagram/X サブタブ）
+  リンク     : 役場・観光・交通などの公式サイトへのリンク集（links-data.js 由来）</code></pre>
       <div class="note teal">詳細モーダルはイベント/キャンペーン/日別一覧で共用（DRY）。Esc・オーバーレイで閉じる＋フォーカス管理。白文字バッジはAA(4.5:1)調整済み。</div>
     </div>
 
@@ -309,7 +311,7 @@ window.NOTION_DATA = {
       <table>
         <tr><th>Phase</th><th>目標</th><th>状態</th></tr>
         <tr><td>0</td><td>収集エンジン＋ダッシュボード基盤</td><td>✅ 完了</td></tr>
-        <tr><td>0.5</td><td>Notion 3DB連携＋表示部の5タブ再設計</td><td>🔄 進行中</td></tr>
+        <tr><td>0.5</td><td>Notion 3DB連携＋表示部の再設計・正本化（7タブ）</td><td>✅ 完了</td></tr>
         <tr><td>1</td><td>団体・媒体の洗い出しとレジストリ拡充</td><td>🔜 次</td></tr>
         <tr><td>2</td><td>GitHub Pages 公開</td><td>⏳</td></tr>
         <tr><td>3</td><td>data.js / notion-data.js の定期自動更新</td><td>⏳</td></tr>
@@ -318,16 +320,16 @@ window.NOTION_DATA = {
     </div>
 
     <div class="card">
-      <h3>Phase 0.5 タスク（進行中）</h3>
+      <h3>Phase 0.5 タスク（完了）</h3>
       <ul class="chk">
         <li class="done">fetch_notion.py（Notion 3DB → notion-data.js・読取専用・pip依存なし）</li>
         <li class="done">サムネのローカル保存（assets/thumbs/）</li>
         <li class="done">参考サイト調査（他地域10サイト）を再設計インプット化</li>
-        <li class="done">5タブ化＋ハッシュルーティング（index-redesign3.html）</li>
+        <li class="done">5タブ化＋ハッシュルーティング（index-redesign3.html→現 index.html）</li>
         <li class="done">イベント・キャンペーンの月カレンダー＋詳細モーダル</li>
         <li class="done">ホームのダイジェスト（各4件・boxカード）</li>
-        <li class="todo">index-redesign3.html を検証して index.html へ正本化</li>
-        <li class="todo">試作 index-redesign*.html の整理</li>
+        <li class="done">index.html へ正本化（2026-07-09。旧4タブ版は index-legacy.html へ退避・7タブ化）</li>
+        <li class="done">試作ファイルの整理（redesign3→index.html、旧→index-legacy.html）</li>
       </ul>
     </div>
 
@@ -349,12 +351,13 @@ window.NOTION_DATA = {
         <li><b>06-09</b>：集約は案1（週次収集ツール）先行で進める。</li>
         <li><b>06-09</b>：成果物を Markdown草案 → HTMLダッシュボードへ変更。</li>
         <li><b>06-10</b>：独立リポジトリ <code>C:\Users\user\kotohira-news\</code> へ移転。</li>
-        <li><b>07-02</b>：データ供給を2系統に整理（収集の実体は konpie-bot）。index.html を4固定タブ化、団体はタブ→ドリルダウンに。</li>
+        <li><b>07-02</b>：データ供給を2系統に整理（収集の実体は konpie-bot）。index.html を4固定タブ化、団体はタブ→ドリルダウンに（この4タブ版は現 index-legacy.html）。</li>
         <li><b>07-02</b>：Notion 3DBを読み取り専用で取り込む fetch_notion.py 追加（別コネクト作成）。</li>
         <li><b>07-02</b>：見た目の試作反復。redesign1（明朝・罫線）→「見づらい」、redesign2（切替UI）→「初代が一番良い」で却下。参考サイト調査を実施。</li>
-        <li><b>07-02〜03</b>：初代 index.html を土台に redesign3 を作成。ホーム追加で5タブ化、イベント/キャンペーンは Googleカレンダー風＋詳細モーダル、ニュースはフィルタ・切替UI非採用。</li>
+        <li><b>07-02〜03</b>：初代 index.html を土台に redesign3（現 index.html）を作成。ホーム追加で5タブ化、イベント/キャンペーンは Googleカレンダー風＋詳細モーダル、ニュースはフィルタ・切替UI非採用。</li>
         <li><b>07-02</b>：ニュース表示制御はNotion「表示対象」、⭐は「定例で紹介」。「重複の可能性」はDB未追加＝当面false。</li>
         <li><b>07-03</b>：画像非表示は <code>img loading="lazy"</code> が原因と判明→撤去で解消。</li>
+        <li><b>07-09</b>：redesign3 を <code>index.html</code> に正本化（リネーム）。旧4タブ版は <code>index-legacy.html</code> へ退避。🧭体験・滞在（Notion 体験・滞在DB接続待ち）と🔗リンク（<code>links-data.js</code>）を追加し7タブ化。</li>
       </ul>
     </div>
   </section>
@@ -375,7 +378,7 @@ window.NOTION_DATA = {
         <li>Notion 3DBが最新か確認（収集は konpie-bot が常時実施）</li>
         <li><code>python scripts/fetch_notion.py</code> → notion-data.js 再生成＋サムネ保存</li>
       </ol>
-      <p style="margin-top:12px"><b>共通</b>：<code>index-redesign3.html</code>（確定後は index.html）を開いて確認。</p>
+      <p style="margin-top:12px"><b>共通</b>：<code>index.html</code> を開いて確認。</p>
       <div class="note info">一部DBがコネクト漏れ等で404でも、成功したDBだけ更新し失敗DBは既存内容を温存。トークンは <code>.env</code> に設定すれば毎回の環境変数設定は不要。</div>
     </div>
 
