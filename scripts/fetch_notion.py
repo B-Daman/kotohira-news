@@ -81,13 +81,24 @@ EVENT_DB_ID = os.environ.get(
 CAMPAIGN_DB_ID = os.environ.get(
     "CAMPAIGN_NOTION_DB_ID", "37c0b4e5ff5b8078b558e7cf2148744e"
 )
+# 体験・滞在DB（体験プログラム／おてつたび／ワーキングホリデー／求人／滞在）。
+# 既定は空文字。Notion側でDBを作成しインテグレーションをコネクトしたうえで、
+# 環境変数 EXPERIENCE_NOTION_DB_ID にDB IDを設定すると取得対象になる。
+# 未設定の間は取得処理そのものをスキップし、既存3DBの動作に影響を与えない。
+EXPERIENCE_DB_ID = os.environ.get("EXPERIENCE_NOTION_DB_ID", "")
 
 NEWS_MAX = 60
 EVENT_MAX = 200
+EXPERIENCE_MAX = 200
 RECENT_WINDOW_DAYS = 60
 
 THUMBS_DIR = os.path.join(REPO_ROOT, "assets", "thumbs")
 IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp")
+# 画像の“正”はこのローカルフォルダ。Notionは信用しない（表示バグ・URL失効あり）。
+# assets/image-overrides.json のマッピングにマッチした項目は、Notionから一切
+# 取得せず assets/manual/ のファイルを使う（local-first）。
+MANUAL_DIR = os.path.join(REPO_ROOT, "assets", "manual")
+OVERRIDES_PATH = os.path.join(REPO_ROOT, "assets", "image-overrides.json")
 DOWNLOAD_TIMEOUT = 20
 # 一部の新聞社サイト等は UA無しのリクエストを拒否するため、
 # 一般的なブラウザ風の User-Agent を付与する。
@@ -369,17 +380,84 @@ def download_image(url: str, page_id: str) -> tuple[str, bool]:
     return f"assets/thumbs/{file_id}{ext}", True
 
 
+def load_image_overrides() -> dict[str, str]:
+    """assets/image-overrides.json（キー→ファイル名）を読む。無ければ空dict。
+
+    キーは出典URL または タイトル。'_' で始まるキーは説明用として無視する。
+    """
+    if not os.path.exists(OVERRIDES_PATH):
+        return {}
+    try:
+        with open(OVERRIDES_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if not isinstance(data, dict):
+            return {}
+        return {k: v for k, v in data.items() if not str(k).startswith("_") and v}
+    except Exception as e:
+        print(f"[警告] image-overrides.json の読み込みに失敗（無視します）: {e}")
+        return {}
+
+
+def _override_matches(key: str, item: dict[str, Any]) -> bool:
+    """オーバーライドのキーが item にマッチするか。
+
+    http... で始まるキーはURL照合（部分一致・双方向）、それ以外はタイトルの
+    トークンAND一致（空白区切りの語がすべてタイトルに含まれれば一致）。
+    """
+    key = str(key).strip()
+    if not key:
+        return False
+    url = item.get("url") or ""
+    title = item.get("title") or ""
+    if key.startswith("http"):
+        return bool(url) and (key in url or url in key)
+    tokens = key.split()
+    return bool(tokens) and all(tok in title for tok in tokens)
+
+
+def apply_image_overrides(
+    items: list[dict[str, Any]], field: str, overrides: dict[str, str]
+) -> int:
+    """image-overrides.json を最優先で適用する（Notion非依存のローカル画像）。
+
+    マッチした item は field を assets/manual/<file> に差し替える。以後
+    save_images はローカルパスを見てNotion取得をスキップする。指定ファイルが
+    無い場合は警告して据え置く（誤って空表示になった時に気づけるように）。
+    先に一致したキーを採用。返り値は適用件数。
+    """
+    if not overrides:
+        return 0
+    applied = 0
+    for item in items:
+        for key, filename in overrides.items():
+            if not _override_matches(key, item):
+                continue
+            path = os.path.join(MANUAL_DIR, filename)
+            if os.path.exists(path):
+                item[field] = f"assets/manual/{filename}"
+                applied += 1
+            else:
+                print(
+                    f"[警告] image-overrides: '{key}' の画像が見つかりません: "
+                    f"assets/manual/{filename}"
+                )
+            break
+    return applied
+
+
 def save_images(items: list[dict[str, Any]], field: str) -> tuple[int, int]:
     """items内のfield（thumbnail/image）を対象にローカル保存する。
 
     値がある項目のみを対象とし、(対象件数, 成功件数) を返す。
     item[field] は保存後のパス（または空文字/元URL）に書き換える。
+    既に assets/ で始まるローカルパス（手動オーバーライド等）はNotionから
+    取得せずそのまま使う。
     """
     total = 0
     success = 0
     for item in items:
         url = item.get(field, "")
-        if not url:
+        if not url or url.startswith("assets/"):
             continue
         total += 1
         page_id = str(item.get("id", ""))
@@ -508,6 +586,45 @@ def fetch_events(database_id: str, token: str) -> list[dict[str, Any]]:
     return filter_events(items)
 
 
+def parse_experience(page: dict[str, Any]) -> dict[str, Any]:
+    """体験・滞在DBの1ページを表示用dictへ変換する。
+
+    ステータスは手動運用（募集中／通年／準備中／終了）。イベントと違い
+    通年・随時募集や求人があり日付から一意に決まらないため、日付計算では
+    なくNotionのセレクト値をそのまま使う。空なら「募集中」とみなす。
+    """
+    properties = page.get("properties", {})
+    return {
+        "id": page.get("id", ""),
+        "title": get_title(properties, "タイトル"),
+        "category": get_select(properties, "種別"),
+        "org": get_rich_text(properties, "団体・主催"),
+        "summary": strip_html(get_rich_text(properties, "概要")),
+        "start": get_date_start(properties, "募集開始日"),
+        "end": get_date_start(properties, "募集終了日"),
+        "place": get_rich_text(properties, "場所"),
+        "reward": get_rich_text(properties, "費用・報酬"),
+        "target": get_rich_text(properties, "対象・条件"),
+        "url": get_url(properties, "応募・詳細URL"),
+        "status": get_select(properties, "ステータス") or "募集中",
+        "image": get_files_url(properties, "画像"),
+        "show": get_checkbox(properties, "表示対象"),
+    }
+
+
+def fetch_experiences(database_id: str, token: str) -> list[dict[str, Any]]:
+    """体験・滞在DBを取得し、「表示対象」チェック済みの項目のみ返す。
+
+    並びは募集開始日の降順。日付未設定（通年・随時）の項目も取りこぼさ
+    ないよう、ソートはNotion側に任せつつ全件（EXPERIENCE_MAX上限）取る。
+    """
+    dsid = get_data_source_id(database_id, token)
+    sorts = [{"property": "募集開始日", "direction": "descending"}]
+    pages = query_data_source(dsid, token, sorts, EXPERIENCE_MAX)
+    items = [parse_experience(p) for p in pages]
+    return [item for item in items if item.get("show")]
+
+
 def load_existing_data() -> dict[str, Any]:
     """既存の notion-data.js があれば window.NOTION_DATA の中身を返す。
 
@@ -545,21 +662,35 @@ def main() -> None:
         sys.exit(1)
 
     existing = load_existing_data()
+    overrides = load_image_overrides()
+    if overrides:
+        print(f"画像オーバーライド: {len(overrides)}件のマッピングを読み込みました")
     result: dict[str, list[dict[str, Any]]] = {}
     errors: dict[str, str] = {}
     image_total = 0
     image_success = 0
+    override_total = 0
 
     tasks: list[tuple[str, str, Callable[[], list[dict[str, Any]]]]] = [
         ("news", "thumbnail", lambda: fetch_news(token)),
         ("events", "image", lambda: fetch_events(EVENT_DB_ID, token)),
         ("campaigns", "image", lambda: fetch_events(CAMPAIGN_DB_ID, token)),
     ]
+    # 体験・滞在DBは EXPERIENCE_NOTION_DB_ID が設定されている場合のみ取得する。
+    if EXPERIENCE_DB_ID:
+        tasks.append(
+            ("experiences", "image", lambda: fetch_experiences(EXPERIENCE_DB_ID, token))
+        )
 
     for key, image_field, fn in tasks:
         print(f"{key}を取得中...")
         try:
             items = fn()
+            # ローカル画像オーバーライドを最優先で適用（Notionを画像に使わない）
+            applied = apply_image_overrides(items, image_field, overrides)
+            override_total += applied
+            if applied:
+                print(f"{key}: ローカル画像を{applied}件適用（Notion非経由）")
             t, s = save_images(items, image_field)
             image_total += t
             image_success += s
@@ -573,7 +704,10 @@ def main() -> None:
             errors[key] = type(e).__name__
 
     # 失敗したDBは、既存 notion-data.js に該当キーがあれば温存する
-    for key in ("news", "events", "campaigns"):
+    result_keys = ["news", "events", "campaigns"]
+    if EXPERIENCE_DB_ID:
+        result_keys.append("experiences")
+    for key in result_keys:
         if key not in result:
             if key in existing:
                 result[key] = existing[key]
@@ -597,12 +731,20 @@ def main() -> None:
         "events": result.get("events", []),
         "campaigns": result.get("campaigns", []),
     }
+    # 体験・滞在は、DB設定済みか既存データがある場合のみ書き出す（未設定時は
+    # キー自体を省略し、既存の体験データがあれば温存する）。
+    if EXPERIENCE_DB_ID or "experiences" in existing:
+        data["experiences"] = result.get(
+            "experiences", existing.get("experiences", [])
+        )
 
+    if override_total:
+        print(f"画像: ローカル手動画像を{override_total}件適用（Notion非経由）")
     if image_total:
         image_failed = image_total - image_success
         print(
             f"画像: {image_total}件中 {image_success}件保存, "
-            f"{image_failed}件失敗"
+            f"{image_failed}件失敗（Notion由来）"
         )
 
     js = "/* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */\n"

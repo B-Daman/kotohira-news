@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <script src="data.js"></script>
 <script src="notion-data.js"></script>
+<script src="links-data.js"></script>
 <!-- Instagram/X の埋め込みスクリプトはここでは読み込まない。表示時にのみ動的注入する（ensureIgScript/ensureTwttrScript） -->
 <style>
   :root{
@@ -123,8 +124,9 @@
   /* 定例ピックアップ：通常ニュースと明確に差をつける大きめのフィーチャーカード */
   .pf-grid{display:flex;flex-direction:column;gap:14px}
   .pf-card{display:flex;gap:16px;background:var(--card);border:2px solid var(--accent);border-radius:16px;
-    padding:14px;text-decoration:none;color:inherit;transition:box-shadow .12s}
+    padding:14px;text-decoration:none;color:inherit;transition:box-shadow .12s;cursor:pointer;outline:none}
   .pf-card:hover{box-shadow:0 4px 16px rgba(200,71,47,.18)}
+  .pf-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .pf-img{width:180px;height:120px;object-fit:cover;border-radius:12px;flex:0 0 180px;background:#eee;font-size:34px}
   .pf-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;justify-content:center}
   .pf-meta{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -150,7 +152,7 @@
   .ev-card:hover{border-color:var(--accent)}
   .ev-card:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
   .ev-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;display:block}
-  .ev-img.ph{font-size:30px;color:var(--sub);background:#f1ece2}
+  .ev-img.ph{display:flex;font-size:30px;color:var(--sub);background:#f1ece2}
   .ev-body{padding:12px 14px;display:flex;flex-direction:column;gap:4px}
   .ev-status-badge{display:inline-block;background:var(--accent);color:#fff;border-radius:5px;padding:1px 8px;
     font-size:10.5px;font-weight:900;margin-bottom:2px;align-self:flex-start}
@@ -160,6 +162,16 @@
   .ended-section{margin-top:22px}
   .ended-section summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--sub);padding:8px 0}
   .ended-section[open] summary{margin-bottom:6px}
+
+  /* 🔗 リンクタブ：公式サイトへのリンクカード */
+  .link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:8px}
+  .link-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .12s,box-shadow .12s}
+  .link-card:hover{border-color:var(--accent);box-shadow:0 2px 10px rgba(200,71,47,.10)}
+  .link-name{font-size:14.5px;font-weight:700;line-height:1.5;color:var(--ink)}
+  .link-arrow{color:var(--accent-d);font-size:12px}
+  .link-note{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.55}
+  .link-url{font-size:11.5px;color:var(--web);margin-top:6px;word-break:break-all}
 
   /* 終了・ニュースリスト等：コンパクトな行（クリックでモーダル or 外部記事） */
   .compact-list{display:flex;flex-direction:column}
@@ -180,6 +192,10 @@
   .home-box:hover{border-color:var(--accent)}
   .home-box:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
   .hb-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;display:block}
+  /* ホーム／ボックス表示カード：画像欠損時は頭文字（ニュース）／絵文字（イベント・キャンペーン）を中央表示。
+     .hb-img が display:block で .ph の flex を上書きするため、ここで再指定して中央寄せを効かせる */
+  .hb-img.ph{display:flex;font-size:22px}
+  .hb-img.ph.plain{background:#f1ece2;color:var(--sub)}
   .hb-body{padding:10px 12px;display:flex;flex-direction:column;gap:4px}
   .hb-meta{font-size:11px;color:var(--sub);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
   .hb-title{font-size:13.5px;font-weight:700;line-height:1.45}
@@ -210,8 +226,10 @@
     background:#fcfaf6;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
   .cal-week{position:relative}
   .cal-cells{display:grid;grid-template-columns:repeat(7,1fr);border-left:1px solid var(--line)}
+  /* min-width:0 は必須。Gridの既定 min-width:auto のままだと、下の nowrap な
+     チップ/バーの長文が列の最小幅を押し広げ、隣セルへはみ出して崩れる（ellipsisも効かない）。 */
   .cal-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);
-    min-height:var(--cell-h,88px);padding:4px 6px;background:var(--card)}
+    min-height:var(--cell-h,88px);padding:4px 6px;background:var(--card);min-width:0}
   .cal-cell.other-month{background:#faf9f6}
   .cal-cell-num{font-size:12px;color:var(--sub);font-weight:700;display:inline-block}
   .cal-cell.other-month .cal-cell-num{color:#cfc7b9}
@@ -220,7 +238,7 @@
   .cal-bars-overlay{position:absolute;top:24px;left:0;right:0;bottom:2px;display:grid;
     grid-template-columns:repeat(7,1fr);gap:2px;pointer-events:none;overflow:hidden}
   .cal-bar{pointer-events:auto;grid-row:1;border-radius:4px;padding:2px 6px;font-size:10.5px;color:#fff;font-weight:700;
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:18px;line-height:14px;cursor:pointer;outline:none}
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:18px;line-height:14px;cursor:pointer;outline:none;min-width:0}
   .cal-bar.active{background:var(--accent)}
   .cal-bar.upcoming{background:var(--accent-soft);color:var(--accent-d)}
   .cal-bar.cont-left{border-top-left-radius:0;border-bottom-left-radius:0}
@@ -229,10 +247,10 @@
   .cal-bar:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
 
   /* イベントカレンダー：単日イベントは開始日セル内のチップで表示（複数日のみバー） */
-  .cal-chips{display:flex;flex-direction:column;gap:2px}
+  .cal-chips{display:flex;flex-direction:column;gap:2px;min-width:0}
   .cal-chip{background:var(--accent-soft);color:var(--accent-d);border-radius:3px;padding:1px 5px;
     font-size:10px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-    cursor:pointer;outline:none}
+    cursor:pointer;outline:none;min-width:0}
   .cal-chip:hover{filter:brightness(.96)}
   .cal-chip:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
   .cal-chip-more{background:none;color:var(--sub)}
@@ -248,6 +266,8 @@
   .modal-close:hover{background:var(--accent-soft);color:var(--accent-d)}
   .modal-close:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .modal-title{font-size:17px;font-weight:900;margin:0 0 8px;padding-right:30px}
+  .modal-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:12px;background:#eee;display:block}
+  .modal-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--sub);margin-bottom:10px}
   .modal-badge{display:inline-block;border-radius:6px;padding:3px 10px;font-size:11.5px;font-weight:700;margin-bottom:10px}
   .modal-badge.status-active{background:var(--accent);color:#fff}
   .modal-badge.status-upcoming{background:var(--accent-soft);color:var(--accent-d)}
@@ -312,8 +332,13 @@ const ND = {
   fetched: ND_RAW.fetched || "",
   news: Array.isArray(ND_RAW.news) ? ND_RAW.news : [],
   events: Array.isArray(ND_RAW.events) ? ND_RAW.events : [],
-  campaigns: Array.isArray(ND_RAW.campaigns) ? ND_RAW.campaigns : []
+  campaigns: Array.isArray(ND_RAW.campaigns) ? ND_RAW.campaigns : [],
+  experiences: Array.isArray(ND_RAW.experiences) ? ND_RAW.experiences : []
 };
+
+/* 🔗 リンク集（links-data.js 由来。コード直書き運用） */
+const LINKS = (window.LINKS_DATA && Array.isArray(window.LINKS_DATA.categories))
+  ? window.LINKS_DATA : { categories: [] };
 
 const SNS = [
   {key:"note",label:"note"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
@@ -324,13 +349,19 @@ const TABS = [
   {key:"news",label:"📰 ニュース"},
   {key:"events",label:"📅 イベント"},
   {key:"campaigns",label:"🎁 キャンペーン"},
-  {key:"orgs",label:"📋 団体"}
+  {key:"experiences",label:"🧭 体験・滞在"},
+  {key:"orgs",label:"📋 団体"},
+  {key:"links",label:"🔗 リンク"}
 ];
 const MEDIA_CLASS = {
   "note":"note", "Instagram":"instagram", "X":"x", "HP":"website",
   "新聞":"newspaper", "テレビ":"tv", "行政":"gov", "Webメディア":"webmedia", "その他":"other"
 };
 const NOTION_EMPTY_MSG = "Notion連携が未設定です。scripts/fetch_notion.py を実行すると表示されます。";
+const EXPERIENCE_EMPTY_MSG = "体験・滞在の情報は準備中です。Notionで体験・滞在DBを作成し、EXPERIENCE_NOTION_DB_ID を設定して scripts/fetch_notion.py を実行すると表示されます。";
+/* 種別ごとの絵文字・表示順（体験・滞在タブのグループ見出しと欠損時プレースホルダで共用） */
+const EXPERIENCE_CATS = ["体験プログラム","おてつたび","ワーキングホリデー","求人","滞在・宿泊"];
+const EXPERIENCE_EMOJI = {"体験プログラム":"🎨","おてつたび":"🤝","ワーキングホリデー":"🏕","求人":"💼","滞在・宿泊":"🏠"};
 const WEEKDAYS = ["日","月","火","水","木","金","土"];        // 日曜始まり（表記用）
 const WEEKDAYS_MON = ["月","火","水","木","金","土","日"];    // 月曜始まり（カレンダー見出し用）
 
@@ -373,7 +404,7 @@ function initHeader(){
   if(ND.fetched) parts.push("Notion " + fmtFetched(ND.fetched));
   document.getElementById("hUpdated").textContent = parts.length ? "最終更新 " + parts.join(" ／ ") : "";
   document.getElementById("footer").innerHTML =
-    "data.js＝団体の note / ameblo 等RSSから自動取得。notion-data.js＝Notionのニュース・イベント・キャンペーンDBから <code>scripts/fetch_notion.py</code> を実行して生成。Instagram・X は投稿URLを登録すると埋め込み表示されます。" +
+    "data.js＝団体の note / ameblo 等RSSから自動取得。notion-data.js＝Notionのニュース・イベント・キャンペーン・体験/滞在DBから <code>scripts/fetch_notion.py</code> を実行して生成。リンク集は links-data.js（手編集）。Instagram・X は投稿URLを登録すると埋め込み表示されます。" +
     '<div class="footer-legend">⭐ 定例ピックアップ＝DAO定例で紹介予定 ／ 重複の可能性＝同じ出来事の別媒体報道の可能性</div>';
 }
 
@@ -381,7 +412,7 @@ function initHeader(){
 function parseHash(){
   const h = (location.hash||"").replace(/^#/, "");
   if(h.indexOf("org=") === 0) return {view:"org", id: decodeURIComponent(h.slice(4))};
-  if(["home","orgs","news","events","campaigns"].indexOf(h) >= 0) return {view:h};
+  if(["home","orgs","news","events","campaigns","experiences","links"].indexOf(h) >= 0) return {view:h};
   return {view:"home"};
 }
 
@@ -403,6 +434,10 @@ function render(opt){
     m.innerHTML = eventsTabHTML();
   } else if(r.view === "campaigns"){
     m.innerHTML = campaignsTabHTML();
+  } else if(r.view === "experiences"){
+    m.innerHTML = experiencesTabHTML();
+  } else if(r.view === "links"){
+    m.innerHTML = linksTabHTML();
   } else {
     m.innerHTML = homeHTML();
   }
@@ -500,7 +535,11 @@ function onMainKeydown(e){
 
 /* ===== 詳細モーダル（イベント／キャンペーン共用。ハーネス制約によりalert/confirm/promptは使わずDOM要素で自作） ===== */
 function registerItem(it, kind){
-  const slug = contentSlug(kind === "event" ? "evc" : "camp", it);
+  const prefix = kind === "event" ? "evc"
+    : kind === "experience" ? "exp"
+    : kind === "news" ? "news"
+    : "camp";
+  const slug = contentSlug(prefix, it);
   itemRegistry[slug] = {item: it, kind};
   return slug;
 }
@@ -509,7 +548,9 @@ function statusBadgeClass(status){
   if(status === "終了") return "status-ended";
   return "status-upcoming";
 }
-function modalContentHTML(it){
+function modalContentHTML(it, kind){
+  if(kind === "experience") return experienceModalHTML(it);
+  if(kind === "news") return newsModalHTML(it);
   const placeParts = [];
   if(it.city && it.city !== "琴平町") placeParts.push(it.city);
   if(it.place) placeParts.push(it.place);
@@ -521,7 +562,9 @@ function modalContentHTML(it){
   if(it.fee) rows.push(row("💰 参加費", it.fee));
   if(it.organizer) rows.push(row("🏢 主催", it.organizer));
   const href = safeUrl(it.url);
+  const imgSrc = safeUrl(it.image);
   return `
+    ${imgSrc ? `<img class="modal-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
     <h3 class="modal-title" id="modalTitle">${esc(it.title)}</h3>
     ${it.status ? `<span class="modal-badge ${statusBadgeClass(it.status)}">${esc(it.status)}</span>` : ""}
     ${rows.join("")}
@@ -605,12 +648,16 @@ function homeBox(kind, it){
   if(kind === "news"){
     const cls = mediaClass(it.media);
     const imgSrc = safeUrl(it.thumbnail);
-    img = imgSrc ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : "";
+    img = imgSrc
+      ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+      : `<div class="hb-img ph src ${cls}">${esc((it.media||"?").charAt(0))}</div>`;
     meta = `<span class="src ${cls}">${esc(it.media||"")}</span><span>${esc(fmtDate(it.date))}</span>`;
-    href = safeUrl(it.url);
+    slug = registerItem(it, "news");
   } else {
     const imgSrc = safeUrl(it.image);
-    img = imgSrc ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : "";
+    img = imgSrc
+      ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+      : `<div class="hb-img ph plain">${kind === "event" ? "📅" : "🎁"}</div>`;
     const s = parseDT(it.start);
     const dateStr = s ? `${s.mo}/${s.d}（${WEEKDAYS[new Date(s.y,s.mo-1,s.d).getDay()]}）` : "―";
     meta = `<span>${esc(dateStr)}</span>` + (it.status === "実施中" ? ' <span class="badge-new">開催中</span>' : "");
@@ -722,12 +769,30 @@ function newsFeedItem(it){
   const cls2 = `feed-item${it.duplicate?' dup':''}`;
   return href ? `<a class="${cls2}" href="${esc(href)}">${inner}</a>` : `<div class="${cls2}">${inner}</div>`;
 }
-/* ニュースのコンパクト行（日付＋媒体バッジ＋見出し。サムネなし） */
+/* ニュースのコンパクト行（日付＋媒体バッジ＋見出し。サムネなし。クリックで詳細モーダル） */
 function newsCompactRow(it){
   const cls = mediaClass(it.media);
-  const href = safeUrl(it.url);
+  const slug = registerItem(it, "news");
   const inner = `<span class="cr-date">${esc(fmtDate(it.date))}</span><span class="src ${cls}">${esc(it.media||"")}</span><span class="cr-title">${esc(it.title)}</span>`;
-  return href ? `<a class="compact-row" href="${esc(href)}">${inner}</a>` : `<div class="compact-row">${inner}</div>`;
+  return `<div class="compact-row" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
+}
+/* ニュース詳細モーダル（イベント／キャンペーンと同様に、カードクリックで要約を表示。記事へのリンク付き） */
+function newsModalHTML(it){
+  const cls = mediaClass(it.media);
+  const imgSrc = safeUrl(it.thumbnail);
+  const href = safeUrl(it.url);
+  const meta = [
+    it.media ? `<span class="src ${cls}">${esc(it.media)}</span>` : "",
+    it.org ? `<span class="org-name">${esc(it.org)}</span>` : "",
+    it.date ? `<span>${esc(fmtDate(it.date))}</span>` : "",
+    it.duplicate ? '<span class="badge-dup">重複の可能性</span>' : ""
+  ].filter(Boolean).join(" ");
+  return `
+    ${imgSrc ? `<img class="modal-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
+    <h3 class="modal-title" id="modalTitle">${esc(it.title)}</h3>
+    <div class="modal-meta">${meta}</div>
+    ${it.summary ? `<div class="modal-comment">${esc(it.summary)}</div>` : ""}
+    ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">記事を開く ↗</a>` : ""}`;
 }
 function mediaClass(media){ return MEDIA_CLASS[media] || "other"; }
 /* ニュースの表示対象フィルタ：show===false のみ非表示（未定義/absentは表示する前方互換ロジック） */
@@ -769,13 +834,13 @@ function pickupFeatureCard(it){
     `<span>${esc(fmtDate(it.date))}</span>`,
     isNew ? '<span class="badge-new">NEW</span>' : ""
   ].filter(Boolean).join(" ");
-  const href = safeUrl(it.url);
+  const slug = registerItem(it, "news");
   const inner = `${img}<div class="pf-body">
       <div class="pf-meta">${meta}</div>
       <div class="pf-title">${esc(it.title)}</div>
       ${it.summary ? `<div class="pf-summary clamp2">${esc(it.summary)}</div>` : ""}
     </div>`;
-  return href ? `<a class="pf-card" href="${esc(href)}">${inner}</a>` : `<div class="pf-card">${inner}</div>`;
+  return `<div class="pf-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
 }
 
 /* ===== 📅 イベントタブ ===== */
@@ -833,16 +898,21 @@ function eventCalendarInnerHTML(events){
     }
   });
   assignLanes(barIntervals);
-  const maxBarLane = barIntervals.reduce((m,c)=>Math.max(m,c.lane), -1);
   const CHIP_VISIBLE = 3;
-  const maxChipsShown = Object.values(chipsByDay).reduce((m,arr)=>Math.max(m, Math.min(arr.length,CHIP_VISIBLE) + (arr.length>CHIP_VISIBLE?1:0)), 0);
-  const cellMinHeight = Math.max(88, 26 + (maxBarLane+1)*20 + maxChipsShown*18 + 6);
   const todayKey = (()=>{ const t=new Date(); t.setHours(0,0,0,0); return t.getTime(); })();
 
   const weekRows = weeks.map((week, wi)=>{
     const weekStartOffset = wi*7;
     const weekBars = barIntervals.filter(iv => iv.startOffset <= weekStartOffset+6 && iv.endOffset >= weekStartOffset);
     const weekBarLaneCount = weekBars.reduce((m,c)=>Math.max(m,c.lane+1), 0);
+    // セル高さは週ごとに算出する。従来は全週にグローバル最大高を当てていたため、
+    // 予定の無い週まで無駄に高くなり全体が崩れて見えていた。この週のバー段数と
+    // 「1日あたり表示チップ数の最大」から必要な高さだけ確保する（空の週は最小88px）。
+    const weekChipMax = week.reduce((m,d)=>{
+      const arr = chipsByDay[`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`] || [];
+      return Math.max(m, Math.min(arr.length, CHIP_VISIBLE) + (arr.length > CHIP_VISIBLE ? 1 : 0));
+    }, 0);
+    const weekCellHeight = Math.max(88, 26 + weekBarLaneCount*20 + weekChipMax*18 + 6);
 
     const cellsHtml = week.map(d=>{
       const isOther = (d.getMonth()+1) !== mo;
@@ -883,7 +953,7 @@ function eventCalendarInnerHTML(events){
       : "";
 
     return `<div class="cal-week">
-      <div class="cal-cells" style="--cell-h:${cellMinHeight}px">${cellsHtml}</div>
+      <div class="cal-cells" style="--cell-h:${weekCellHeight}px">${cellsHtml}</div>
       ${barsOverlay}
     </div>`;
   }).join("");
@@ -1072,6 +1142,103 @@ function campaignCalendarInnerHTML(campaigns){
     ${weekRows}
     ${intervals.length===0 ? '<div class="hint" style="margin-top:8px">この月に該当するキャンペーンはありません。</div>' : ''}`;
 }
+
+/* ===== 🧭 体験・滞在タブ（種別グループ＋カード。クリックで詳細モーダル。イベントカードのDRY流用） ===== */
+function experiencesTabHTML(){
+  const all = ND.experiences.filter(x => x.show !== false);
+  if(!all.length){
+    return '<h2 class="page-h">🧭 体験・滞在</h2>' + emptyMsg(EXPERIENCE_EMPTY_MSG);
+  }
+  const active = all.filter(i => i.status !== "終了" && i.status !== "準備中");
+  const ended = all.filter(i => i.status === "終了").sort((a,b)=>(b.start||"").localeCompare(a.start||""));
+
+  let html = '<h2 class="page-h">🧭 体験・滞在</h2>';
+  html += '<div class="hint">琴平町で体験できること・募集中のおてつたび／ワーキングホリデー／求人などをまとめています。カードを押すと詳細が開きます。</div>';
+
+  if(active.length){
+    const grouped = {};
+    active.forEach(it=>{ const c = it.category || "その他"; (grouped[c] = grouped[c] || []).push(it); });
+    const known = EXPERIENCE_CATS.filter(c => grouped[c]);
+    const rest = Object.keys(grouped).filter(c => EXPERIENCE_CATS.indexOf(c) < 0);
+    known.concat(rest).forEach(c=>{
+      const emoji = EXPERIENCE_EMOJI[c] || "🧭";
+      html += `<h3 class="group-h">${emoji} ${esc(c)}</h3><div class="card-grid">${grouped[c].map(experienceCard).join("")}</div>`;
+    });
+  } else {
+    html += emptyMsg("現在募集中の体験・滞在情報はありません。");
+  }
+  if(ended.length){
+    html += `<details class="ended-section"><summary>募集終了（${ended.length}件）</summary><div class="compact-list">${ended.map(it=>compactRow(it,"experience")).join("")}</div></details>`;
+  }
+  return html;
+}
+/* 期間表示：開始/終了日があれば整形、無く「通年」ステータスなら「通年」、それ以外は空 */
+function expPeriod(it){
+  const d = fmtEventDate(it.start, it.end);
+  if(d && d !== "日程未定") return d;
+  if(it.status === "通年") return "通年";
+  return "";
+}
+function experienceCard(it){
+  const imgSrc = safeUrl(it.image);
+  const emoji = EXPERIENCE_EMOJI[it.category] || "🧭";
+  const img = imgSrc
+    ? `<img class="ev-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    : `<div class="ev-img ph">${emoji}</div>`;
+  const period = expPeriod(it);
+  const rows = [
+    period ? `<div class="ev-meta">🗓 ${esc(period)}</div>` : "",
+    it.place ? `<div class="ev-meta">📍 ${esc(it.place)}</div>` : "",
+    it.reward ? `<div class="ev-meta">💰 ${esc(it.reward)}</div>` : "",
+    it.org ? `<div class="ev-meta">🏢 ${esc(it.org)}</div>` : "",
+    it.summary ? `<div class="ev-comment clamp2">${esc(it.summary)}</div>` : ""
+  ].filter(Boolean).join("");
+  const badge = it.category ? `<span class="ev-status-badge">${esc(it.category)}</span>` : "";
+  const slug = registerItem(it, "experience");
+  const inner = `${img}<div class="ev-body">${badge}<div class="ev-title">${esc(it.title)}</div>${rows}</div>`;
+  return `<div class="ev-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
+}
+function experienceModalHTML(it){
+  function row(label, val){
+    return `<div class="modal-row"><span class="mr-label">${esc(label)}</span><span>${esc(val)}</span></div>`;
+  }
+  const rows = [];
+  const period = expPeriod(it);
+  if(period) rows.push(row("🗓 期間", period));
+  if(it.place) rows.push(row("📍 場所", it.place));
+  if(it.reward) rows.push(row("💰 費用・報酬", it.reward));
+  if(it.target) rows.push(row("🎯 対象・条件", it.target));
+  if(it.org) rows.push(row("🏢 団体", it.org));
+  const href = safeUrl(it.url);
+  const imgSrc = safeUrl(it.image);
+  return `
+    ${imgSrc ? `<img class="modal-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
+    <h3 class="modal-title" id="modalTitle">${esc(it.title)}</h3>
+    ${it.category ? `<span class="modal-badge status-active">${esc(it.category)}</span>` : ""}
+    ${rows.join("")}
+    ${it.summary ? `<div class="modal-comment">${esc(it.summary)}</div>` : ""}
+    ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">詳細・応募ページを開く ↗</a>` : ""}`;
+}
+
+/* ===== 🔗 リンクタブ（公式サイトへのリンク集。links-data.js 由来・コード直書き） ===== */
+function linksTabHTML(){
+  const cats = (LINKS.categories || []).filter(c => (c.links || []).length);
+  let html = '<h2 class="page-h">🔗 リンク</h2>';
+  html += '<div class="hint">琴平町の役場・観光・交通などの公式サイトへのリンク集です。</div>';
+  if(!cats.length) return html + emptyMsg("リンクが登録されていません。");
+  cats.forEach(c=>{
+    html += `<h3 class="group-h">${esc(c.name)}</h3><div class="link-grid">${(c.links||[]).map(linkCard).join("")}</div>`;
+  });
+  return html;
+}
+function linkCard(l){
+  const href = safeUrl(l.url);
+  const inner = `<div class="link-name">${esc(l.name)} <span class="link-arrow">↗</span></div>`
+    + (l.note ? `<div class="link-note">${esc(l.note)}</div>` : "")
+    + (href ? `<div class="link-url">${esc(prettyUrl(href))}</div>` : "");
+  return href ? `<a class="link-card" href="${esc(href)}">${inner}</a>` : `<div class="link-card">${inner}</div>`;
+}
+function prettyUrl(u){ return ("" + u).replace(/^https?:\/\//, "").replace(/\/$/, ""); }
 
 /* ===== 埋め込み（Instagram/X）：表示時のみスクリプトを動的注入 ===== */
 let igScriptState = "idle"; // idle | loading | ready

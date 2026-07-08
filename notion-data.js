@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-07 08:35",
+  "fetched": "2026-07-09 00:02",
   "news": [
+    {
+      "id": "3970b4e5-ff5b-8174-80a9-c9cac894ccdf",
+      "title": "あめシロップ開発でコラボ　池商店（琴平）×砂川農園（東かがわ）",
+      "url": "https://www.coolkagawa.jp/news/entry-5716.html",
+      "summary": "琴平町の老舗あめ店「五人百姓 池商店」と東かがわ市の砂川農園が、香川県産サトウキビを使用した液状のあめシロップ「御利益飴 あめ蜜」を開発した。県産品の活用と伝統製法の継承を目指した地域連携プロジェクト。",
+      "org": "COOL KAGAWA（四国新聞社）",
+      "media": "新聞",
+      "date": "2026-07-08",
+      "thumbnail": "assets/thumbs/3970b4e5ff5b817480a9c9cac894ccdf.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3950b4e5-ff5b-8198-ac48-eb379f43eb27",
       "title": "カマタマーレ讃岐が金刀比羅宮で必勝祈願",
@@ -36,7 +49,7 @@ window.NOTION_DATA = {
       "org": "Instagram / Amazon Prime Video",
       "media": "Webメディア",
       "date": "2026-06-25",
-      "thumbnail": "",
+      "thumbnail": "assets/thumbs/38e0b4e5ff5b819ebd09d743ae6adf78.png",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -49,7 +62,7 @@ window.NOTION_DATA = {
       "org": "京蔵 Instagram",
       "media": "Webメディア",
       "date": "2026-06-25",
-      "thumbnail": "",
+      "thumbnail": "assets/thumbs/38e0b4e5ff5b818a8206d2190dbfffa3.png",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -62,7 +75,7 @@ window.NOTION_DATA = {
       "org": "Instagram（ことウラさんぽ公式アカウント）",
       "media": "Webメディア",
       "date": "2026-06-25",
-      "thumbnail": "",
+      "thumbnail": "assets/thumbs/38e0b4e5ff5b81fa91acf4735ebea1eb.png",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -240,6 +253,20 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3960b4e5-ff5b-813c-8ead-e44c30995fab",
+      "title": "第55回　平和祈願灯ろう流し",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11791.html",
+      "start": "2026-08-15T18:00",
+      "end": "2026-08-15T20:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "image": "assets/thumbs/3960b4e5ff5b813c8eade44c30995fab.png",
+      "comment": "会場: 琴平町 一之橋公園（香川県仲多度郡琴平町722） 戦没犠牲者の追悼や恒久平和への祈り、ご先祖への供養を目的とした灯ろう流しイベント。金倉川の川面を灯ろうが照らす幻想的な夏の夜の催し。",
+      "fee": "",
+      "organizer": ""
+    },
+    {
       "id": "3950b4e5-ff5b-81a2-838c-ca505a5924ef",
       "title": "こんぴら十帖ビアガーデン",
       "url": "https://www.instagram.com/p/DacFTbnTFL7/",
@@ -262,7 +289,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
-      "image": "assets/thumbs/3950b4e5ff5b804581ccdba0f5666693.png",
+      "image": "assets/manual/mokumoku_ai.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "",
       "organizer": ""
@@ -290,7 +317,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
-      "image": "assets/thumbs/3950b4e5ff5b80eb90e8d3c8a5e697fe.png",
+      "image": "assets/manual/mokumoku_ai.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "",
       "organizer": ""
@@ -332,7 +359,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260718.png",
       "comment": "会場: 琴平中学校 運動場 琴平中学校運動場で7月18日に開催されるニュースポーツ交流会。グラウンドゴルフを通じて子どもから大人まで交流できる。参加費無料、当日参加も可能。",
       "fee": "",
       "organizer": ""
@@ -360,7 +387,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
-      "image": "assets/thumbs/3950b4e5ff5b800ca17af22d29bad6cc.png",
+      "image": "assets/manual/mokumoku_ai.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "",
       "organizer": ""
@@ -388,7 +415,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260712.png",
       "comment": "会場: 藤田屋2階和室（7/11）、五人百姓池商店（7/12） 京都の茶道裏千家準教授・水島宗華先生を迎えた夏のお茶会。7月11日は藤田屋で浴衣茶会、7月12日は五人百姓池商店で琴平学とお茶会を開催。",
       "fee": "",
       "organizer": ""
@@ -402,7 +429,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260711.png",
       "comment": "会場: 藤田屋2階和室（7/11）、五人百姓池商店（7/12） 京都の茶道裏千家準教授・水島宗華先生を迎えた夏のお茶会。7月11日は藤田屋で浴衣茶会、7月12日は五人百姓池商店で琴平学とお茶会を開催。",
       "fee": "",
       "organizer": ""
@@ -437,14 +464,14 @@ window.NOTION_DATA = {
     },
     {
       "id": "3810b4e5-ff5b-8105-8760-e186eaca7b97",
-      "title": "ユルッと楽しく着付けレッスン 第14回",
+      "title": "第14回「ユルッと楽しく着付けレッスン」",
       "url": "https://www.instagram.com/p/DZmpi6HgDGT/",
       "start": "2026-07-09T18:30",
       "end": "2026-07-09T20:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260709.png",
       "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の着方や帯結び、着物を着た時の所作を学べる。ドリンクとおやつ付き。",
       "fee": "",
       "organizer": ""
@@ -455,10 +482,10 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-07-09T18:00",
       "end": "2026-07-09T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
-      "image": "assets/thumbs/3950b4e5ff5b80cbaa3fe4d6f9f7f383.png",
+      "image": "assets/manual/mokumoku_ai.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "",
       "organizer": ""
@@ -469,11 +496,25 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
       "start": "2026-07-08T12:00",
       "end": "2026-07-08T13:00",
-      "status": "実施前",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "image": "assets/thumbs/38f0b4e5ff5b80808966c10ffddc164b.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
+      "fee": "",
+      "organizer": ""
+    },
+    {
+      "id": "3960b4e5-ff5b-8184-996f-dd7865e5b0bf",
+      "title": "故谷本重義さん作品展",
+      "url": "https://www.shikoku-np.co.jp/dg/amp/article.aspx?id=K2026070800000002500",
+      "start": "2026-07-08",
+      "end": "2026-07-13",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "image": "assets/thumbs/3960b4e5ff5b8184996fdd7865e5b0bf.webp",
+      "comment": "会場: ACTことひら 県文化功労者で洋画家の谷本重義さん（1929～2022年）の作品展が琴平町のACTことひらで開催中。1970年代から晩年までの油彩画32点が展示され、作風の変遷を鑑賞できる。",
       "fee": "",
       "organizer": ""
     },
@@ -483,7 +524,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DaPZvclzRRa/",
       "start": "2026-07-07T18:00",
       "end": "2026-07-07T20:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "image": "assets/thumbs/3950b4e5ff5b81fc87e6f5cc4ab28ef3.png",
@@ -497,7 +538,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-07-07T13:30",
       "end": "2026-07-07T15:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "image": "assets/thumbs/38f0b4e5ff5b80328c57eb1bf5f2e4fc.png",
@@ -556,7 +597,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260704.png",
       "comment": "会場: つるや旅館 2階大広間（香川県琴平町） 琴平町のつるや旅館で、リユース着物や帯などの和物を販売する蚤の市と着物コーディネート相談会が開催されます。着物の使い方や合わせ方について専門家に相談できます。",
       "fee": "",
       "organizer": ""
@@ -570,7 +611,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/mokumoku_ai.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "",
       "organizer": ""
@@ -626,7 +667,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260630.png",
       "comment": "会場: 麻心（MAGOKORO） 麻心で日本対ブラジルのワールドカップ決勝トーナメント試合をパブリックビューイングで放映。大画面・大音量で応援できるイベント。",
       "fee": "",
       "organizer": ""
@@ -640,7 +681,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260629.png",
       "comment": "会場: コトリ琴平 参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事をしながら交流するイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "",
       "organizer": ""
@@ -654,7 +695,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260628.png",
       "comment": "会場: HAKOBUNEビル屋上（香川県仲多度郡琴平町725） 琴平町のHAKOBUNEビル屋上で開催される音楽とテントサウナのイベント。DJパフォーマンス、ビール、ギョーザ、ドリンク、フードが提供される。",
       "fee": "",
       "organizer": ""
@@ -766,7 +807,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/20260620.png",
       "comment": "会場: コトリ コワーキング＆ホステル琴平 オーストラリア出身のフィリップをホストに、クッキー作りとオーストラリアのお菓子を楽しみながら地元の人や旅人と交流するイベント。好きな具材を選んでクッキーを作り、新しい友達づくりができます。",
       "fee": "",
       "organizer": ""
@@ -1172,7 +1213,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "assets/thumbs/35f0b4e5ff5b8010aa24f820c6055fae.png",
+      "image": "assets/manual/konpira_asaichi.png",
       "comment": "",
       "fee": "",
       "organizer": ""
@@ -1368,7 +1409,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
-      "image": "",
+      "image": "assets/manual/konpira_asaichi.png",
       "comment": "",
       "fee": "",
       "organizer": ""
@@ -1383,48 +1424,6 @@ window.NOTION_DATA = {
       "city": "琴平町",
       "place": "",
       "image": "assets/thumbs/3550b4e5ff5b802ca35ee23b942c5cc9.jpg",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3410b4e5-ff5b-80de-ba21-fe7498cd8efd",
-      "title": "Trynight Music Terrace Vol.5",
-      "url": "https://www.instagram.com/p/DW2UXvHEsOu/",
-      "start": "2026-05-09T15:00",
-      "end": "2026-05-09T21:00",
-      "status": "終了",
-      "city": "善通寺市",
-      "place": "",
-      "image": "assets/thumbs/3410b4e5ff5b80deba21fe7498cd8efd.png",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3490b4e5-ff5b-80d0-9edd-ff931a02b88b",
-      "title": "琴平の魅力発見ツアー",
-      "url": "https://www.instagram.com/p/DXLn_rdj2oU/",
-      "start": "2026-05-09T14:00",
-      "end": "2026-05-10T11:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "image": "assets/thumbs/3490b4e5ff5b80d09eddff931a02b88b.png",
-      "comment": "香川県琴平町は、 金刀比羅宮（こんぴらさん）の門前町として 栄えてきた歴史ある町。 全国から参拝者が訪れる観光地でありながら、 今も地域に根付いた文化や人の営みが色濃く残っています。 今回のADDress Local Activityでは、 地元企業で琴平の\"今\"を作る琴平バスさんと 観光だけでは触れられない琴平の文化・人・歴史を 体験できるツアーを開催。 ・讃岐うどん文化を体験するうどん打ち ・780年以上続く家系の語り部による琴平の物語 ・地域プレイヤーとの交流 ・早朝のこんぴらさん参拝 観光ではなく、「地域を理解する体験」として琴平を味わえる2日間をご案内します。 【このツアーで体験できること】 ✔ 讃岐うどん文化の体験（うどん打ち） ✔ 780年以上続く家系による琴平の歴史ストーリー ✔ ローカルプレイヤーとの交流 ✔ こんぴらさん早朝参拝 ✔ 文化拠点となるリノベーション施設の見学 ✔ 日本最古の芝居小屋 旧金毘羅大芝居（金丸座）見学 観光ではなく、 地域を理解できる体験型ツアーです。",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3520b4e5-ff5b-8037-b23d-d472c82d330e",
-      "title": "四国こんぴら歌舞伎大芝居～初めてでも楽しい！時をかける芝居小屋～",
-      "url": "https://www.youtube.com/watch?v=_SRJpzAJ_fA",
-      "start": "2026-05-09T10:30",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "image": "assets/thumbs/3520b4e5ff5b8037b23dd472c82d330e.jpg",
       "comment": "",
       "fee": "",
       "organizer": ""
