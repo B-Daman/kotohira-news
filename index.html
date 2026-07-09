@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base target="_blank">
-<title>琴平町 発信ダッシュボード</title>
+<title>ことひらいふ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -31,11 +31,11 @@
   /* 上部固定バー＋タブ */
   .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
     backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid var(--line)}
-  .topbar-inner{max-width:1080px;margin:0 auto;padding:10px 20px 0}
+  /* ヘッダーは全幅（参考サイト調査より）。コンテンツ本体のみ幅を絞る */
+  .topbar-inner{padding:10px 20px 0}
   .brandrow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .brand{font-weight:900;font-size:16px;color:var(--accent-d)}
-  .brand small{color:var(--sub);font-weight:500;font-size:12px;margin-left:8px}
-  .updated{color:var(--sub);font-size:12px}
+  .brand{font-weight:900;font-size:22px;color:var(--accent-d)}
+  .brand small{color:var(--sub);font-weight:500;font-size:13.5px;margin-left:10px}
   .tabs{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0 10px}
   .tab{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink);
     border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:700;cursor:pointer;
@@ -43,8 +43,7 @@
   .tab:hover{background:var(--accent-soft);color:var(--accent-d)}
   .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 
-  main{max-width:1080px;margin:0 auto;padding:22px 20px 40px}
-  h2.page-h{font-size:20px;font-weight:900;margin:0 0 14px}
+  main{max-width:1320px;margin:0 auto;padding:22px 20px 40px}
   h3.group-h{font-size:15px;font-weight:900;margin:22px 0 10px;color:var(--accent-d)}
   h3.group-h:first-of-type{margin-top:0}
 
@@ -74,6 +73,8 @@
     color:#fff;text-decoration:none;white-space:nowrap}
   .lk.note{background:var(--note)} .lk.instagram{background:var(--ig)} .lk.x{background:var(--x)}
   .lk.website{background:var(--web)} .lk.youtube{background:var(--yt)} .lk.ameblo{background:var(--ameblo)}
+  /* LINE・Facebook・Discord（リンクタブのSNSバッジ用）。ブランド色を白文字AAを満たす暗さに調整 */
+  .lk.line{background:#148244} .lk.facebook{background:#14549c} .lk.discord{background:#4b57d9}
   .lk.off{background:none;border:1px solid var(--line);color:#736a60}
 
   /* 戻るリンク（ボタンだがリンク風） */
@@ -121,7 +122,7 @@
   .pickup-section{margin-bottom:26px}
   .pickup-section .feed-item{border-color:var(--accent)}
 
-  /* 定例ピックアップ：通常ニュースと明確に差をつける大きめのフィーチャーカード */
+  /* 最新ニュース：通常ニュースと明確に差をつける大きめのフィーチャーカード */
   .pf-grid{display:flex;flex-direction:column;gap:14px}
   .pf-card{display:flex;gap:16px;background:var(--card);border:2px solid var(--accent);border-radius:16px;
     padding:14px;text-decoration:none;color:inherit;transition:box-shadow .12s;cursor:pointer;outline:none}
@@ -156,6 +157,8 @@
   .ev-body{padding:12px 14px;display:flex;flex-direction:column;gap:4px}
   .ev-status-badge{display:inline-block;background:var(--accent);color:#fff;border-radius:5px;padding:1px 8px;
     font-size:10.5px;font-weight:900;margin-bottom:2px;align-self:flex-start}
+  .ev-status-badge.upcoming{background:var(--accent-soft);color:var(--accent-d)}
+  .ev-status-badge.ended{background:#d8d0c4;color:#5c554c}
   .ev-title{font-size:14.5px;font-weight:700;line-height:1.5}
   .ev-meta{font-size:12.5px;color:var(--sub)}
   .ev-comment{font-size:12.5px;color:#43403b;margin-top:4px}
@@ -163,11 +166,18 @@
   .ended-section summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--sub);padding:8px 0}
   .ended-section[open] summary{margin-bottom:6px}
 
-  /* 🔗 リンクタブ：公式サイトへのリンクカード */
+  /* 🔗 リンクタブ：公式サイトへのリンクカード（サムネ＋SNSバッジ付き）。
+     サムネは assets/links/ のローカル画像（local-first。無ければ頭文字プレースホルダ）。
+     SNSバッジは独立したリンクのため、a要素の入れ子にならないよう本体リンク(.lc-main)と分離する */
   .link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:8px}
-  .link-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
-    padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .12s,box-shadow .12s}
+  .link-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;overflow:hidden;transition:border-color .12s,box-shadow .12s}
   .link-card:hover{border-color:var(--accent);box-shadow:0 2px 10px rgba(200,71,47,.10)}
+  .lc-main{display:block;text-decoration:none;color:inherit}
+  .lc-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#f1ece2;display:block}
+  .lc-img.ph{display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:var(--sub)}
+  .lc-body{padding:12px 16px 4px}
+  .lc-sns{padding:2px 16px 12px;margin-top:auto}
   .link-name{font-size:14.5px;font-weight:700;line-height:1.5;color:var(--ink)}
   .link-arrow{color:var(--accent-d);font-size:12px}
   .link-note{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.55}
@@ -183,35 +193,34 @@
   .cr-date{flex:0 0 60px;color:var(--sub);font-size:12px;white-space:nowrap}
   .cr-title{flex:1;min-width:0;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
-  /* ホーム／ニュース タブ：box カード（3種で共通） */
-  .home-box-row{display:flex;flex-wrap:wrap;gap:12px}
+  /* ニュース box カード（ホーム／ニュースタブのギャラリー共通。card-grid内で使用） */
   .home-box{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
     border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .12s;
-    cursor:pointer;outline:none;flex:0 0 200px}
-  .card-grid .home-box{flex:0 0 auto;width:100%}
+    cursor:pointer;outline:none}
   .home-box:hover{border-color:var(--accent)}
   .home-box:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
   .hb-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;display:block}
-  /* ホーム／ボックス表示カード：画像欠損時は頭文字（ニュース）／絵文字（イベント・キャンペーン）を中央表示。
+  /* ニュースboxカード：サムネ欠損時は媒体の頭文字を中央表示。
      .hb-img が display:block で .ph の flex を上書きするため、ここで再指定して中央寄せを効かせる */
   .hb-img.ph{display:flex;font-size:22px}
-  .hb-img.ph.plain{background:#f1ece2;color:var(--sub)}
   .hb-body{padding:10px 12px;display:flex;flex-direction:column;gap:4px}
   .hb-meta{font-size:11px;color:var(--sub);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
   .hb-title{font-size:13.5px;font-weight:700;line-height:1.45}
 
-  /* ホーム：ダイジェスト段落 */
-  .home-sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:22px 0 10px}
-  .home-sec-head:first-of-type{margin-top:0}
-  .home-sec-head .group-h{margin:0}
+  /* ホーム：3セクション（ニュース＝赤／イベント＝青／キャンペーン＝緑）をテーマ色の
+     縦ライン・見出し色・説明文で区別する。「全部ニュース？」と誤読されない工夫 */
+  .home-sec{border-left:4px solid var(--hs);padding:2px 0 2px 16px;margin-bottom:28px}
+  .home-sec:last-of-type{margin-bottom:0}
+  .hs-news{--hs:var(--accent)}
+  .hs-events{--hs:#3170eb}
+  .hs-camps{--hs:#1d8a4e}
+  .home-sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 10px}
+  .home-sec-head .group-h{margin:0;color:var(--hs)}
+  .hs-sub{flex:1;font-size:12px;color:var(--sub);white-space:nowrap}
   .more-link{background:none;border:none;color:var(--accent-d);font-size:12.5px;font-weight:700;
     cursor:pointer;font-family:inherit;white-space:nowrap}
   .more-link:hover{text-decoration:underline}
 
-  @media (max-width:480px){
-    .home-box-row{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
-    .home-box{flex:0 0 160px}
-  }
 
   /* キャンペーンタブ：Googleカレンダー風の月グリッド */
   .cal-wrap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:22px}
@@ -224,6 +233,8 @@
     border-top:1px solid var(--line)}
   .cal-weekday{font-size:11px;color:var(--sub);text-align:center;font-weight:700;padding:4px 0;
     background:#fcfaf6;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cal-weekday.sat{color:#3170eb}
+  .cal-weekday.sun{color:var(--accent)}
   .cal-week{position:relative}
   .cal-cells{display:grid;grid-template-columns:repeat(7,1fr);border-left:1px solid var(--line)}
   /* min-width:0 は必須。Gridの既定 min-width:auto のままだと、下の nowrap な
@@ -231,6 +242,12 @@
   .cal-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);
     min-height:var(--cell-h,88px);padding:4px 6px;background:var(--card);min-width:0}
   .cal-cell.other-month{background:#faf9f6}
+  .cal-cell.sat{background:#f3f7fd}
+  .cal-cell.sun{background:#fdf4f1}
+  .cal-cell.sat .cal-cell-num{color:#3170eb}
+  .cal-cell.sun .cal-cell-num{color:var(--accent)}
+  .cal-cell.other-month.sat,.cal-cell.other-month.sun{background:#faf9f6}
+  .cal-cell.today{background:var(--accent-soft);box-shadow:inset 0 0 0 2px var(--accent)}
   .cal-cell-num{font-size:12px;color:var(--sub);font-weight:700;display:inline-block}
   .cal-cell.other-month .cal-cell-num{color:#cfc7b9}
   .cal-cell.today .cal-cell-num{background:var(--accent);color:#fff;border-radius:50%;
@@ -287,8 +304,6 @@
   .empty{color:var(--sub);font-size:14px;padding:26px;text-align:center;border:1px dashed var(--line);
     border-radius:14px;background:var(--card)}
   .hint{font-size:12px;color:var(--sub);margin:-4px 0 12px}
-  footer{max-width:1080px;margin:8px auto 0;padding:0 20px;color:var(--sub);font-size:12px}
-  .footer-legend{margin-top:6px}
 
   @media (max-width:480px){
     .card-grid{grid-template-columns:1fr}
@@ -304,15 +319,13 @@
 <div class="topbar">
   <div class="topbar-inner">
     <div class="brandrow">
-      <div class="brand" id="hTitle">琴平町 発信ダッシュボード <small>団体ごとの発信を1か所に</small></div>
-      <div class="updated" id="hUpdated"></div>
+      <div class="brand" id="hTitle">ことひらいふ <small>香川県琴平町の"今"をお届け</small></div>
     </div>
     <nav class="tabs" id="tabs"></nav>
   </div>
 </div>
 
 <main id="main"></main>
-<footer id="footer"></footer>
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-box" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -325,7 +338,7 @@
 /* ===== データ取り込み（欠損に強い形へ正規化） ===== */
 const D = (window.DASHBOARD_DATA && window.DASHBOARD_DATA.orgs)
   ? window.DASHBOARD_DATA
-  : { title:"琴平町 発信ダッシュボード", updated:"", orgs:[] };
+  : { orgs:[] };
 
 const ND_RAW = (window.NOTION_DATA && typeof window.NOTION_DATA === "object") ? window.NOTION_DATA : {};
 const ND = {
@@ -365,6 +378,19 @@ const EXPERIENCE_EMOJI = {"体験プログラム":"🎨","おてつたび":"🤝
 const WEEKDAYS = ["日","月","火","水","木","金","土"];        // 日曜始まり（表記用）
 const WEEKDAYS_MON = ["月","火","水","木","金","土","日"];    // 月曜始まり（カレンダー見出し用）
 
+/* 日本の祝日（2025〜2027年。振替休日・国民の休日を含む）。カレンダーの土日祝配色用 */
+const JP_HOLIDAYS = new Set([
+  "2025-01-01","2025-01-13","2025-02-11","2025-02-23","2025-02-24","2025-03-20",
+  "2025-04-29","2025-05-03","2025-05-04","2025-05-05","2025-05-06","2025-07-21",
+  "2025-08-11","2025-09-15","2025-09-23","2025-10-13","2025-11-03","2025-11-23","2025-11-24",
+  "2026-01-01","2026-01-12","2026-02-11","2026-02-23","2026-03-20","2026-04-29",
+  "2026-05-03","2026-05-04","2026-05-05","2026-05-06","2026-07-20","2026-08-11",
+  "2026-09-21","2026-09-22","2026-09-23","2026-10-12","2026-11-03","2026-11-23",
+  "2027-01-01","2027-01-11","2027-02-11","2027-02-23","2027-03-21","2027-03-22",
+  "2027-04-29","2027-05-03","2027-05-04","2027-05-05","2027-07-19","2027-08-11",
+  "2027-09-20","2027-09-23","2027-10-11","2027-11-03","2027-11-23"
+]);
+
 /* ===== 画面状態 ===== */
 let orgSearchTerm = "";
 let orgSub = "updates";
@@ -377,7 +403,6 @@ let modalLastFocusedEl = null;
 
 /* ===== 起動 ===== */
 function init(){
-  initHeader();
   document.getElementById("tabs").addEventListener("click", onTabsClick);
   document.getElementById("main").addEventListener("click", onMainClick);
   document.getElementById("main").addEventListener("input", onMainInput);
@@ -394,18 +419,6 @@ function init(){
   window.addEventListener("hashchange", render);
   if(!location.hash){ history.replaceState(null, "", "#home"); }
   render();
-}
-
-function initHeader(){
-  document.getElementById("hTitle").innerHTML =
-    esc(D.title||"琴平町 発信ダッシュボード") + ' <small>団体ごとの発信を1か所に</small>';
-  const parts = [];
-  if(D.updated) parts.push("団体RSS " + fmtMD(D.updated));
-  if(ND.fetched) parts.push("Notion " + fmtFetched(ND.fetched));
-  document.getElementById("hUpdated").textContent = parts.length ? "最終更新 " + parts.join(" ／ ") : "";
-  document.getElementById("footer").innerHTML =
-    "data.js＝団体の note / ameblo 等RSSから自動取得。notion-data.js＝Notionのニュース・イベント・キャンペーン・体験/滞在DBから <code>scripts/fetch_notion.py</code> を実行して生成。リンク集は links-data.js（手編集）。Instagram・X は投稿URLを登録すると埋め込み表示されます。" +
-    '<div class="footer-legend">⭐ 定例ピックアップ＝DAO定例で紹介予定 ／ 重複の可能性＝同じ出来事の別媒体報道の可能性</div>';
 }
 
 /* ===== ルーティング ===== */
@@ -544,7 +557,7 @@ function registerItem(it, kind){
   return slug;
 }
 function statusBadgeClass(status){
-  if(status === "実施中") return "status-active";
+  if(status === "実施中" || status === "開催中" || status === "本日開催") return "status-active";
   if(status === "終了") return "status-ended";
   return "status-upcoming";
 }
@@ -557,16 +570,20 @@ function modalContentHTML(it, kind){
   function row(label, val){
     return `<div class="modal-row"><span class="mr-label">${esc(label)}</span><span>${esc(val)}</span></div>`;
   }
-  const rows = [row("🗓 日時", fmtEventDate(it.start, it.end))];
-  if(placeParts.length) rows.push(row("📍 場所", placeParts.join(" / ")));
-  if(it.fee) rows.push(row("💰 参加費", it.fee));
-  if(it.organizer) rows.push(row("🏢 主催", it.organizer));
+  const isEvent = kind === "event";
+  const rows = [row(isEvent ? "開催日時" : "🗓 日時", fmtEventDate(it.start, it.end))];
+  if(placeParts.length) rows.push(row(isEvent ? "開催場所" : "📍 場所", placeParts.join(" / ")));
+  if(it.address) rows.push(row(isEvent ? "住所" : "🏠 住所", it.address));
+  if(it.fee) rows.push(row(isEvent ? "参加費" : "💰 参加費", isEvent ? formatEventFee(it.fee) : it.fee));
+  if(it.organizer) rows.push(row(isEvent ? "主催" : "🏢 主催", it.organizer));
+  // ステータスはカード（クリック前）と一致させる：イベントは開催日から毎回計算した値を使う
+  const statusText = isEvent ? eventDateStatus(it) : it.status;
   const href = safeUrl(it.url);
   const imgSrc = safeUrl(it.image);
   return `
     ${imgSrc ? `<img class="modal-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
     <h3 class="modal-title" id="modalTitle">${esc(it.title)}</h3>
-    ${it.status ? `<span class="modal-badge ${statusBadgeClass(it.status)}">${esc(it.status)}</span>` : ""}
+    ${statusText ? `<span class="modal-badge ${statusBadgeClass(statusText)}">${esc(statusText)}</span>` : ""}
     ${rows.join("")}
     ${it.comment ? `<div class="modal-comment">${esc(it.comment)}</div>` : ""}
     ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">ホームページを開く ↗</a>` : ""}`;
@@ -605,73 +622,68 @@ function openDayEventsModal(dateKey, items){
   document.getElementById("modalCloseBtn").focus();
 }
 
-/* ===== 🏠 ホーム（ダイジェスト・3段落とも横並びboxカード） ===== */
+/* ===== 🏠 ホーム（ダイジェスト。カードは各タブと同じ部品・同じサイズで統一。
+   3セクションはテーマ色＋説明文で区別する） ===== */
+function homeSection(cls, title, sub, route, bodyHtml){
+  return `<section class="home-sec ${cls}">
+    <div class="home-sec-head"><h3 class="group-h">${title}</h3><span class="hs-sub">${esc(sub)}</span><button class="more-link" data-route="${route}">もっと見る →</button></div>
+    ${bodyHtml}
+  </section>`;
+}
 function homeHTML(){
-  let html = '<h2 class="page-h">🏠 ホーム</h2>';
-
-  html += `<div class="home-sec-head"><h3 class="group-h">📰 最新ニュース</h3><button class="more-link" data-route="news">もっと見る →</button></div>`;
+  let newsBody;
   const newsVisible = ND.news.filter(newsIsVisible);
   if(newsVisible.length){
     const top4 = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,4);
-    html += `<div class="home-box-row">${top4.map(it=>homeBox("news",it)).join("")}</div>`;
+    newsBody = `<div class="card-grid">${top4.map(newsBox).join("")}</div>`;
   } else {
-    html += emptyMsg(ND.news.length ? "表示対象のニュースがありません。" : NOTION_EMPTY_MSG);
+    newsBody = emptyMsg(ND.news.length ? "表示対象のニュースがありません。" : NOTION_EMPTY_MSG);
   }
 
-  html += `<div class="home-sec-head"><h3 class="group-h">📅 直近のイベント</h3><button class="more-link" data-route="events">もっと見る →</button></div>`;
+  let eventsBody;
   if(ND.events.length){
-    const active = ND.events.filter(i=>i.status==="実施中");
-    const upcoming = ND.events.filter(i=>i.status!=="実施中" && i.status!=="終了").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
+    // イベントタブと同じく開催日から毎回計算して選ぶ（statusは取得時点で固定のため使わない）
+    const active = ND.events.filter(i=>{ const st = eventDateStatus(i); return st === "本日開催" || st === "開催中"; });
+    const upcoming = ND.events.filter(i=>eventDateStatus(i)==="開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
     const picks = active.concat(upcoming).slice(0,4);
-    html += picks.length
-      ? `<div class="home-box-row">${picks.map(it=>homeBox("event",it)).join("")}</div>`
+    eventsBody = picks.length
+      ? `<div class="card-grid">${picks.map(it=>itemCard(it,"event")).join("")}</div>`
       : emptyMsg("現在、開催中・予定のイベントはありません。");
   } else {
-    html += emptyMsg(NOTION_EMPTY_MSG);
+    eventsBody = emptyMsg(NOTION_EMPTY_MSG);
   }
 
-  html += `<div class="home-sec-head"><h3 class="group-h">🎁 実施中のキャンペーン</h3><button class="more-link" data-route="campaigns">もっと見る →</button></div>`;
+  let campsBody;
   if(ND.campaigns.length){
     const active = ND.campaigns.filter(i=>i.status==="実施中");
-    html += active.length
-      ? `<div class="home-box-row">${active.map(it=>homeBox("campaign",it)).join("")}</div>`
+    campsBody = active.length
+      ? `<div class="card-grid">${active.map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`
       : emptyMsg("現在実施中のキャンペーンはありません。");
   } else {
-    html += emptyMsg(NOTION_EMPTY_MSG);
+    campsBody = emptyMsg(NOTION_EMPTY_MSG);
   }
 
-  return html;
+  return homeSection("hs-news", "📰 最新ニュース", "町に関する報道・記事", "news", newsBody)
+    + homeSection("hs-events", "📅 直近のイベント", "今日・これからの催し", "events", eventsBody)
+    + homeSection("hs-camps", "🎁 実施中のキャンペーン", "いま使えるお得情報", "campaigns", campsBody);
 }
-/* box カード：ニュース／イベント／キャンペーンで共通コンポーネント。サムネが無ければ画像なしで詰める */
-function homeBox(kind, it){
-  let img = "", meta = "", href = null, slug = null;
-  if(kind === "news"){
-    const cls = mediaClass(it.media);
-    const imgSrc = safeUrl(it.thumbnail);
-    img = imgSrc
-      ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-      : `<div class="hb-img ph src ${cls}">${esc((it.media||"?").charAt(0))}</div>`;
-    meta = `<span class="src ${cls}">${esc(it.media||"")}</span><span>${esc(fmtDate(it.date))}</span>`;
-    slug = registerItem(it, "news");
-  } else {
-    const imgSrc = safeUrl(it.image);
-    img = imgSrc
-      ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-      : `<div class="hb-img ph plain">${kind === "event" ? "📅" : "🎁"}</div>`;
-    const s = parseDT(it.start);
-    const dateStr = s ? `${s.mo}/${s.d}（${WEEKDAYS[new Date(s.y,s.mo-1,s.d).getDay()]}）` : "―";
-    meta = `<span>${esc(dateStr)}</span>` + (it.status === "実施中" ? ' <span class="badge-new">開催中</span>' : "");
-    slug = registerItem(it, kind);
-  }
+/* ニュースのboxカード（ホームのダイジェスト／ニュースタブのギャラリーで共用。card-grid内で使う）。
+   イベント・キャンペーンのカードはタブと同じ itemCard を使うため、この部品はニュース専用 */
+function newsBox(it){
+  const cls = mediaClass(it.media);
+  const imgSrc = safeUrl(it.thumbnail);
+  const img = imgSrc
+    ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    : `<div class="hb-img ph src ${cls}">${esc((it.media||"?").charAt(0))}</div>`;
+  const meta = `<span class="src ${cls}">${esc(it.media||"")}</span><span>${esc(fmtDate(it.date))}</span>`;
+  const slug = registerItem(it, "news");
   const inner = `${img}<div class="hb-body"><div class="hb-meta">${meta}</div><div class="hb-title">${esc(it.title)}</div></div>`;
-  if(slug) return `<div class="home-box" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
-  return href ? `<a class="home-box" href="${esc(href)}">${inner}</a>` : `<div class="home-box">${inner}</div>`;
+  return `<div class="home-box" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
 }
 
 /* ===== 📋 団体タブ ===== */
 function orgsListHTML(filter){
-  return `<h2 class="page-h">📋 団体一覧</h2>
-    <div class="search-box"><input type="search" id="orgSearchInput" placeholder="🔍 団体をさがす" value="${esc(filter)}"></div>
+  return `<div class="search-box"><input type="search" id="orgSearchInput" placeholder="🔍 団体をさがす" value="${esc(filter)}"></div>
     <div class="hint">団体名をクリックすると、その団体の個別ページが開きます。</div>
     <div class="table-wrap"><table>
       <thead><tr><th>団体名</th><th>概要</th><th>発信媒体</th><th>最終更新</th></tr></thead>
@@ -798,28 +810,33 @@ function mediaClass(media){ return MEDIA_CLASS[media] || "other"; }
 /* ニュースの表示対象フィルタ：show===false のみ非表示（未定義/absentは表示する前方互換ロジック） */
 function newsIsVisible(n){ return n.show !== false; }
 
-/* ===== 📰 ニュースタブ（①定例ピックアップ→②リスト→③ボックス。フィルタチップ・切替UIは無し） ===== */
+/* ===== 📰 ニュースタブ（①最新ニュース(1件)→②ニュース一覧(直近2か月)→③ギャラリー(直近2か月)。フィルタチップ・切替UIは無し） ===== */
 function newsTabHTML(){
-  if(!ND.news.length) return '<h2 class="page-h">📰 ニュース</h2>' + emptyMsg(NOTION_EMPTY_MSG);
+  if(!ND.news.length) return emptyMsg(NOTION_EMPTY_MSG);
   const visible = ND.news.filter(newsIsVisible).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  const pickups = visible.filter(n=>n.pickup);
+  if(!visible.length) return emptyMsg("表示対象のニュースがありません。");
 
-  let html = '<h2 class="page-h">📰 ニュース</h2>';
-  if(pickups.length){
-    html += `<div class="pickup-section">
-      <h3 class="group-h">⭐ 定例ピックアップ</h3>
-      <div class="pf-grid">${pickups.map(pickupFeatureCard).join("")}</div>
+  // ①最新ニュース：もっとも新しいニュース1件だけを大きめのフィーチャーカードで表示
+  let html = `<div class="pickup-section">
+      <h3 class="group-h">⭐ 最新ニュース</h3>
+      <div class="pf-grid">${pickupFeatureCard(visible[0])}</div>
     </div>`;
-  }
-  if(!visible.length){
-    html += emptyMsg("表示対象のニュースがありません。");
-    return html;
-  }
-  html += `<h3 class="group-h">📋 リスト</h3><div class="compact-list-scroll"><div class="compact-list">${visible.map(newsCompactRow).join("")}</div></div>`;
-  html += `<h3 class="group-h">🗂 ボックス表示</h3><div class="card-grid">${visible.map(it=>homeBox("news",it)).join("")}</div>`;
+
+  // 直近2か月のニュース（②一覧・③ギャラリーで共用）
+  const recent = visible.filter(n=>isWithinMonths(n.date, 2));
+
+  // ②ニュース一覧：直近2か月のニュースをコンパクトなリストで表示
+  html += `<h3 class="group-h">📋 ニュース一覧</h3>` + (recent.length
+    ? `<div class="compact-list-scroll"><div class="compact-list">${recent.map(newsCompactRow).join("")}</div></div>`
+    : emptyMsg("直近2か月のニュースはありません。"));
+
+  // ③ギャラリー：直近2か月のニュースをサムネ付きのカードで一覧
+  html += `<h3 class="group-h">🗂 ギャラリー</h3>` + (recent.length
+    ? `<div class="card-grid">${recent.map(newsBox).join("")}</div>`
+    : emptyMsg("直近2か月のニュースはありません。"));
   return html;
 }
-/* 定例ピックアップ：通常ニュースより大きいフィーチャーカード（大きいサムネ＋大きめタイトル＋目立つ枠） */
+/* 最新ニュース：通常ニュースより大きいフィーチャーカード（大きいサムネ＋大きめタイトル＋目立つ枠） */
 function pickupFeatureCard(it){
   const cls = mediaClass(it.media);
   const letter = esc((it.media||"?").charAt(0));
@@ -846,18 +863,17 @@ function pickupFeatureCard(it){
 /* ===== 📅 イベントタブ ===== */
 function eventsTabHTML(){
   const items = ND.events;
-  if(!items.length) return '<h2 class="page-h">📅 イベント</h2>' + emptyMsg(NOTION_EMPTY_MSG);
+  if(!items.length) return emptyMsg(NOTION_EMPTY_MSG);
 
-  const active = items.filter(i=>i.status==="実施中");
-  const ended = items.filter(i=>i.status==="終了").sort((a,b)=>(b.start||"").localeCompare(a.start||""));
-  const upcoming = items.filter(i=>i.status!=="実施中" && i.status!=="終了").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
+  // statusは自動更新できないため、開催日から毎回計算して仕分ける。過去のイベントはカレンダーから辿る（下部には並べない）
+  const todays = items.filter(it => { const st = eventDateStatus(it); return st === "本日開催" || st === "開催中"; });
+  const upcoming = items.filter(it => eventDateStatus(it) === "開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
 
-  let html = '<h2 class="page-h">📅 イベント</h2>';
+  let html = '';
   html += `<div class="cal-wrap" id="eventCalendar">${eventCalendarInnerHTML(items)}</div>`;
-  if(active.length) html += `<h3 class="group-h">🔴 開催中</h3><div class="card-grid">${active.map(it=>itemCard(it,"event",{badge:"開催中"})).join("")}</div>`;
+  if(todays.length) html += `<h3 class="group-h">🔴 今日のイベント</h3><div class="card-grid">${todays.map(it=>itemCard(it,"event")).join("")}</div>`;
   if(upcoming.length) html += `<h3 class="group-h">🔜 今後の予定</h3><div class="card-grid">${upcoming.map(it=>itemCard(it,"event")).join("")}</div>`;
-  if(ended.length) html += `<details class="ended-section"><summary>終了（${ended.length}件）</summary><div class="compact-list">${ended.map(it=>compactRow(it,"event")).join("")}</div></details>`;
-  if(!active.length && !upcoming.length && !ended.length) html += emptyMsg("該当する項目がありません。");
+  if(!todays.length && !upcoming.length) html += emptyMsg("今日・今後のイベントはありません。過去のイベントはカレンダーからご覧いただけます。");
   return html;
 }
 /* イベント月カレンダー：単日イベントは開始日セル内のチップ（時刻＋タイトル）、複数日イベントのみキャンペーンと同じ期間バー。
@@ -870,7 +886,8 @@ function eventCalendarInnerHTML(events){
   const gridEndExclusive = new Date(weeks[weeks.length-1][6]);
   gridEndExclusive.setDate(gridEndExclusive.getDate()+1);
 
-  const relevant = events.filter(it => it.status !== "終了");
+  // 終了イベントもカレンダーには表示する（過去月に遡り、クリックで詳細を開けるようにするため）
+  const relevant = events;
   const barIntervals = [];
   const chipsByDay = {}; // "y-mo-d" -> [item...]
   relevant.forEach(it=>{
@@ -897,6 +914,10 @@ function eventCalendarInnerHTML(events){
       dayEventsRegistry[key] = chipsByDay[key];
     }
   });
+  // 同日内のチップは開始時刻の昇順（00:00に近い順）で上から並べる。ND.eventsは開始日時の
+  // 降順で来るため、そのままだと遅い時間のイベントが上に来てしまう。
+  // dayEventsRegistry は同じ配列を参照しているので「+N件」モーダルの並びも揃う。
+  Object.keys(chipsByDay).forEach(k=>chipsByDay[k].sort((a,b)=>(a.start||"").localeCompare(b.start||"")));
   assignLanes(barIntervals);
   const CHIP_VISIBLE = 3;
   const todayKey = (()=>{ const t=new Date(); t.setHours(0,0,0,0); return t.getTime(); })();
@@ -915,8 +936,6 @@ function eventCalendarInnerHTML(events){
     const weekCellHeight = Math.max(88, 26 + weekBarLaneCount*20 + weekChipMax*18 + 6);
 
     const cellsHtml = week.map(d=>{
-      const isOther = (d.getMonth()+1) !== mo;
-      const isToday = d.getTime() === todayKey;
       const key = `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
       const dayItems = chipsByDay[key] || [];
       const visible = dayItems.slice(0, CHIP_VISIBLE);
@@ -931,7 +950,7 @@ function eventCalendarInnerHTML(events){
       const moreHtml = restCount > 0
         ? `<div class="cal-chip cal-chip-more" data-day-more="${esc(key)}" tabindex="0" role="button" aria-haspopup="dialog">+${restCount}件</div>`
         : "";
-      return `<div class="cal-cell${isOther?' other-month':''}${isToday?' today':''}">
+      return `<div class="${calCellClass(d, mo, todayKey)}">
         <span class="cal-cell-num">${d.getDate()}</span>
         <div class="cal-chips" style="margin-top:${weekBarLaneCount*20}px">${chipsHtml}${moreHtml}</div>
       </div>`;
@@ -966,7 +985,7 @@ function eventCalendarInnerHTML(events){
       <div class="cal-month-label">${esc(monthLabel)}</div>
       <button class="cal-nav-btn" data-cal-nav="1" data-cal-target="event" aria-label="次の月">▶</button>
     </div>
-    <div class="cal-weekday-row">${WEEKDAYS_MON.map(w=>`<div class="cal-weekday">${w}</div>`).join("")}</div>
+    ${calWeekdayHeaderHTML()}
     ${weekRows}
     ${!hasAny ? '<div class="hint" style="margin-top:8px">この月に該当するイベントはありません。</div>' : ''}`;
 }
@@ -980,14 +999,27 @@ function itemCard(it, kind, opts){
   const placeParts = [];
   if(it.city && it.city !== "琴平町") placeParts.push(it.city);
   if(it.place) placeParts.push(it.place);
-  const rows = [
-    `<div class="ev-meta">🗓 ${esc(fmtEventDate(it.start, it.end))}</div>`,
-    placeParts.length ? `<div class="ev-meta">📍 ${esc(placeParts.join(" / "))}</div>` : "",
-    it.fee ? `<div class="ev-meta">💰 ${esc(it.fee)}</div>` : "",
-    it.organizer ? `<div class="ev-meta">🏢 ${esc(it.organizer)}</div>` : "",
-    it.comment ? `<div class="ev-comment clamp2">${esc(it.comment)}</div>` : ""
-  ].filter(Boolean).join("");
-  const badge = opts.badge ? `<span class="ev-status-badge">${esc(opts.badge)}</span>` : "";
+  // イベントのカードは「イベント名・開催日時・開催場所」の3点に絞り、ラベルは絵文字でなく
+  // 「開催日時：」等のテキストにする。住所・参加費・内容は個別モーダルで表示。キャンペーンは従来どおり。
+  let rows, badgeText, badgeCls = "";
+  if(kind === "event"){
+    rows = [
+      `<div class="ev-meta">開催日時：${esc(fmtEventDate(it.start, it.end))}</div>`,
+      placeParts.length ? `<div class="ev-meta">開催場所：${esc(placeParts.join(" / "))}</div>` : ""
+    ].filter(Boolean).join("");
+    badgeText = eventDateStatus(it);   // クリック後のモーダルと同じ状態・色で表示（統一）
+    badgeCls = badgeText === "終了" ? " ended" : (badgeText === "開催予定" ? " upcoming" : "");
+  } else {
+    rows = [
+      `<div class="ev-meta">🗓 ${esc(fmtEventDate(it.start, it.end))}</div>`,
+      placeParts.length ? `<div class="ev-meta">📍 ${esc(placeParts.join(" / "))}</div>` : "",
+      it.fee ? `<div class="ev-meta">💰 ${esc(it.fee)}</div>` : "",
+      it.organizer ? `<div class="ev-meta">🏢 ${esc(it.organizer)}</div>` : "",
+      it.comment ? `<div class="ev-comment clamp2">${esc(it.comment)}</div>` : ""
+    ].filter(Boolean).join("");
+    badgeText = opts.badge || "";      // キャンペーンは従来どおりアクセント色
+  }
+  const badge = badgeText ? `<span class="ev-status-badge${badgeCls}">${esc(badgeText)}</span>` : "";
   const inner = `${img}<div class="ev-body">${badge}<div class="ev-title">${esc(it.title)}</div>${rows}</div>`;
   const slug = registerItem(it, kind);
   return `<div class="ev-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
@@ -1004,19 +1036,17 @@ function compactRow(it, kind){
 /* ===== 🎁 キャンペーンタブ（Googleカレンダー風の月グリッド＋現行踏襲のカード） ===== */
 function campaignsTabHTML(){
   const items = ND.campaigns;
-  if(!items.length) return '<h2 class="page-h">🎁 キャンペーン</h2>' + emptyMsg(NOTION_EMPTY_MSG);
+  if(!items.length) return emptyMsg(NOTION_EMPTY_MSG);
 
-  let html = '<h2 class="page-h">🎁 キャンペーン</h2>';
+  let html = '';
   html += `<div class="cal-wrap" id="campaignCalendar">${campaignCalendarInnerHTML(items)}</div>`;
 
   const active = items.filter(i=>i.status==="実施中");
-  const ended = items.filter(i=>i.status==="終了").sort((a,b)=>(b.start||"").localeCompare(a.start||""));
   const upcoming = items.filter(i=>i.status!=="実施中" && i.status!=="終了").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
 
   if(active.length) html += `<h3 class="group-h">🔴 実施中のキャンペーン</h3><div class="card-grid">${active.map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`;
   if(upcoming.length) html += `<h3 class="group-h">🔜 今後の予定のキャンペーン</h3><div class="card-grid">${upcoming.map(it=>itemCard(it,"campaign")).join("")}</div>`;
-  if(ended.length) html += `<details class="ended-section"><summary>終了（${ended.length}件）</summary><div class="compact-list">${ended.map(it=>compactRow(it,"campaign")).join("")}</div></details>`;
-  if(!active.length && !upcoming.length && !ended.length) html += emptyMsg("該当する項目がありません。");
+  if(!active.length && !upcoming.length) html += emptyMsg("実施中・今後のキャンペーンはありません。");
   return html;
 }
 
@@ -1106,9 +1136,7 @@ function campaignCalendarInnerHTML(campaigns){
   const weekRows = weeks.map((week, wi)=>{
     const weekStartOffset = wi*7;
     const cellsHtml = week.map(d=>{
-      const isOther = (d.getMonth()+1) !== mo;
-      const isToday = d.getTime() === todayKey;
-      return `<div class="cal-cell${isOther?' other-month':''}${isToday?' today':''}">
+      return `<div class="${calCellClass(d, mo, todayKey)}">
         <span class="cal-cell-num">${d.getDate()}</span>
       </div>`;
     }).join("");
@@ -1138,7 +1166,7 @@ function campaignCalendarInnerHTML(campaigns){
       <div class="cal-month-label">${esc(monthLabel)}</div>
       <button class="cal-nav-btn" data-cal-nav="1" data-cal-target="campaign" aria-label="次の月">▶</button>
     </div>
-    <div class="cal-weekday-row">${WEEKDAYS_MON.map(w=>`<div class="cal-weekday">${w}</div>`).join("")}</div>
+    ${calWeekdayHeaderHTML()}
     ${weekRows}
     ${intervals.length===0 ? '<div class="hint" style="margin-top:8px">この月に該当するキャンペーンはありません。</div>' : ''}`;
 }
@@ -1147,12 +1175,12 @@ function campaignCalendarInnerHTML(campaigns){
 function experiencesTabHTML(){
   const all = ND.experiences.filter(x => x.show !== false);
   if(!all.length){
-    return '<h2 class="page-h">🧭 体験・滞在</h2>' + emptyMsg(EXPERIENCE_EMPTY_MSG);
+    return emptyMsg(EXPERIENCE_EMPTY_MSG);
   }
   const active = all.filter(i => i.status !== "終了" && i.status !== "準備中");
   const ended = all.filter(i => i.status === "終了").sort((a,b)=>(b.start||"").localeCompare(a.start||""));
 
-  let html = '<h2 class="page-h">🧭 体験・滞在</h2>';
+  let html = '';
   html += '<div class="hint">琴平町で体験できること・募集中のおてつたび／ワーキングホリデー／求人などをまとめています。カードを押すと詳細が開きます。</div>';
 
   if(active.length){
@@ -1223,20 +1251,37 @@ function experienceModalHTML(it){
 /* ===== 🔗 リンクタブ（公式サイトへのリンク集。links-data.js 由来・コード直書き） ===== */
 function linksTabHTML(){
   const cats = (LINKS.categories || []).filter(c => (c.links || []).length);
-  let html = '<h2 class="page-h">🔗 リンク</h2>';
-  html += '<div class="hint">琴平町の役場・観光・交通などの公式サイトへのリンク集です。</div>';
+  let html = '';
+  html += '<div class="hint">琴平町の公式窓口への入口です。観光の詳しい情報は観光協会、くらしの情報は役場のサイトをご覧ください。</div>';
   if(!cats.length) return html + emptyMsg("リンクが登録されていません。");
   cats.forEach(c=>{
     html += `<h3 class="group-h">${esc(c.name)}</h3><div class="link-grid">${(c.links||[]).map(linkCard).join("")}</div>`;
   });
   return html;
 }
+/* リンクカードに出すSNSバッジの種類と表示順（linkCard用） */
+const LINK_SNS = [
+  {key:"line",label:"LINE"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
+  {key:"youtube",label:"YouTube"},{key:"facebook",label:"Facebook"},{key:"discord",label:"Discord"}
+];
 function linkCard(l){
   const href = safeUrl(l.url);
-  const inner = `<div class="link-name">${esc(l.name)} <span class="link-arrow">↗</span></div>`
-    + (l.note ? `<div class="link-note">${esc(l.note)}</div>` : "")
-    + (href ? `<div class="link-url">${esc(prettyUrl(href))}</div>` : "");
-  return href ? `<a class="link-card" href="${esc(href)}">${inner}</a>` : `<div class="link-card">${inner}</div>`;
+  const imgSrc = safeUrl(l.image);
+  const img = imgSrc
+    ? `<img class="lc-img" src="${esc(imgSrc)}" alt="" onerror="this.style.display='none'">`
+    : `<div class="lc-img ph">${esc((l.name||"?").charAt(0))}</div>`;
+  const sns = l.sns || {};
+  const badges = LINK_SNS.map(s=>{
+    const u = safeUrl(sns[s.key]);
+    return u ? `<a class="lk ${s.key}" href="${esc(u)}">${s.label}↗</a>` : "";
+  }).filter(Boolean).join("");
+  const main = `${img}<div class="lc-body">
+      <div class="link-name">${esc(l.name)}${href ? ' <span class="link-arrow">↗</span>' : ''}</div>
+      ${l.note ? `<div class="link-note">${esc(l.note)}</div>` : ""}
+      ${href ? `<div class="link-url">${esc(prettyUrl(href))}</div>` : ""}
+    </div>`;
+  const mainWrapped = href ? `<a class="lc-main" href="${esc(href)}">${main}</a>` : `<div class="lc-main">${main}</div>`;
+  return `<div class="link-card">${mainWrapped}${badges ? `<div class="links lc-sns">${badges}</div>` : ""}</div>`;
 }
 function prettyUrl(u){ return ("" + u).replace(/^https?:\/\//, "").replace(/\/$/, ""); }
 
@@ -1294,9 +1339,11 @@ function safeUrl(u){
   if(/^[a-z][a-z0-9+.\-]*:/i.test(u)) return "";
   return u;
 }
-/* イベント／キャンペーンの安定した識別子（詳細モーダルのルックアップキー） */
+/* イベント／キャンペーン等の安定した識別子（詳細モーダルのルックアップキー）。
+   定期イベントは同じ告知URLを使い回すため、URLベースだと衝突して別の回の詳細が
+   開いてしまう。NotionのページIDを最優先し、さらに開始日時を混ぜて一意にする。 */
 function contentSlug(prefix, it){
-  const raw = (it.url || ((it.title||"") + "|" + (it.start||""))) + "";
+  const raw = (it.id || it.url || (it.title||"")) + "|" + (it.start||"");
   let h = 0;
   for(let i=0;i<raw.length;i++){ h = (h*31 + raw.charCodeAt(i)) | 0; }
   return prefix + "-" + Math.abs(h);
@@ -1304,11 +1351,6 @@ function contentSlug(prefix, it){
 
 /* ---- 日付関連 ---- */
 function fmtDate(d){ if(!d) return ""; const m=(""+d).match(/(\d{4})-(\d{2})-(\d{2})/); return m?`${m[1]}/${+m[2]}/${+m[3]}`:d; }
-function fmtMD(d){ const m=(""+d).match(/(\d{4})-(\d{2})-(\d{2})/); return m?`${+m[2]}/${+m[3]}`:d; }
-function fmtFetched(s){
-  const m = (""+s).match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}:\d{2})/);
-  return m ? `${+m[2]}/${+m[3]} ${m[4]}` : s;
-}
 function parseDT(s){
   if(!s) return null;
   const m = (""+s).match(/^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/);
@@ -1342,6 +1384,50 @@ function isWithinDays(dateStr, days){
   const diff = (now - d) / 86400000;
   return diff >= 0 && diff <= days;
 }
+/* 直近Nか月以内か（📰ニュース一覧の絞り込みで使用）。暦月ベースで今日からNか月前を起点にする */
+function isWithinMonths(dateStr, months){
+  const dt = parseDT(dateStr);
+  if(!dt) return false;
+  const d = new Date(dt.y, dt.mo-1, dt.d);
+  const cutoff = new Date(); cutoff.setHours(0,0,0,0);
+  cutoff.setMonth(cutoff.getMonth() - months);
+  return d >= cutoff;
+}
+/* 今日の0時（イベントの日付判定で使用） */
+function todayMidnight(){ const t = new Date(); t.setHours(0,0,0,0); return t; }
+/* イベントの開催日レンジ（endが無ければ単日）。start未定はnull */
+function eventDayRange(it){
+  const s = parseDT(it.start);
+  if(!s) return null;
+  const start = new Date(s.y, s.mo-1, s.d);
+  const e = parseDT(it.end);
+  const end = e ? new Date(e.y, e.mo-1, e.d) : new Date(start);
+  return {start, end};
+}
+/* 開催日から算出するイベントの状態。単日で当日なら「本日開催」、期間開催で
+   当日を含むなら「開催中」、未来は「開催予定」、過去は「終了」。カード・一覧・
+   モーダルで共用し、クリック前後のバッジ表示を一致させる。notion-data.jsのstatus
+   （取得時点で固定）ではなく毎回計算するので、日付が過ぎても表示がズレない。 */
+function eventDateStatus(it){
+  const r = eventDayRange(it);
+  if(!r) return "";
+  const t = todayMidnight();
+  if(r.start <= t && t <= r.end){
+    return r.start.getTime() === r.end.getTime() ? "本日開催" : "開催中";
+  }
+  if(r.start > t) return "開催予定";
+  return "終了";
+}
+/* 参加費（Notionは「参加費（日本円）」の数値）を表示用に整形。
+   0は「無料」、正の数は「N,NNN円」、数値でなければそのまま、空は空文字。 */
+function formatEventFee(fee){
+  const s = ("" + (fee==null?"":fee)).trim();
+  if(s === "") return "";
+  const n = Number(s);
+  if(!isFinite(n)) return s;
+  if(n === 0) return "無料";
+  return n.toLocaleString("ja-JP") + "円";
+}
 /* 週の起点=月曜（キャンペーンカレンダー・今週の予定テーブルで使用） */
 function mondayOf(date){
   const d = new Date(date);
@@ -1349,6 +1435,24 @@ function mondayOf(date){
   d.setDate(d.getDate() - day);
   d.setHours(0,0,0,0);
   return d;
+}
+/* 祝日判定（JP_HOLIDAYS参照。範囲外の年は平日扱い） */
+function isJpHoliday(d){
+  return JP_HOLIDAYS.has(`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`);
+}
+/* カレンダーセルのclass組み立て（イベント／キャンペーン共用）。日曜・祝日=sun、土曜=sat */
+function calCellClass(d, mo, todayKey){
+  let cls = "cal-cell";
+  if((d.getMonth()+1) !== mo) cls += " other-month";
+  if(d.getTime() === todayKey) cls += " today";
+  if(isJpHoliday(d) || d.getDay() === 0) cls += " sun";
+  else if(d.getDay() === 6) cls += " sat";
+  return cls;
+}
+/* 曜日見出し行（土曜・日曜に配色クラス付き。両カレンダー共用） */
+function calWeekdayHeaderHTML(){
+  return `<div class="cal-weekday-row">${WEEKDAYS_MON.map((w,i)=>
+    `<div class="cal-weekday${i===6?' sun':i===5?' sat':''}">${w}</div>`).join("")}</div>`;
 }
 function esc(s){ return ("" + (s==null?"":s)).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 

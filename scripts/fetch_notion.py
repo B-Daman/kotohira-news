@@ -255,6 +255,14 @@ def get_checkbox(properties: dict[str, Any], key: str) -> bool:
     return bool(p.get("checkbox", False))
 
 
+def get_relation_ids(properties: dict[str, Any], key: str) -> list[str]:
+    """relationプロパティのリンク先ページIDのリストを返す（未リンクは空）。"""
+    p = _prop(properties, key)
+    if not p or p.get("type") != "relation":
+        return []
+    return [r.get("id", "") for r in p.get("relation", []) if r.get("id")]
+
+
 def get_date_start(properties: dict[str, Any], key: str) -> str:
     """日付を返す。
 
@@ -290,6 +298,75 @@ def get_files_url(properties: dict[str, Any], key: str) -> str:
     if file_type == "file":
         return f.get("file", {}).get("url", "")
     return f.get("external", {}).get("url") or f.get("file", {}).get("url") or ""
+
+
+def _format_number(n: Any) -> str:
+    """数値を表示用文字列にする（整数はそのまま、桁区切りは付けない）。"""
+    if isinstance(n, float) and n.is_integer():
+        return str(int(n))
+    return str(n)
+
+
+def _value_to_text(v: dict[str, Any]) -> str:
+    """1つのプロパティ値オブジェクトから表示用の平文を取り出す。
+
+    rich_text / title / number / select / multi_select / formula / date /
+    rollup（配列・数値・日付）に対応する。ロールアップ中身の型ゆらぎ
+    （テキスト・数値・リレーション先タイトル等）も吸収する。
+    """
+    if not isinstance(v, dict):
+        return ""
+    t = v.get("type")
+    if t == "rich_text":
+        return "".join(x.get("plain_text", "") for x in v.get("rich_text", []))
+    if t == "title":
+        return "".join(x.get("plain_text", "") for x in v.get("title", []))
+    if t == "number":
+        n = v.get("number")
+        return "" if n is None else _format_number(n)
+    if t == "select":
+        return (v.get("select") or {}).get("name", "")
+    if t == "multi_select":
+        return " / ".join(o.get("name", "") for o in v.get("multi_select", []))
+    if t == "formula":
+        f = v.get("formula") or {}
+        ft = f.get("type")
+        if ft == "string":
+            return f.get("string") or ""
+        if ft == "number":
+            n = f.get("number")
+            return "" if n is None else _format_number(n)
+        if ft == "date":
+            return (f.get("date") or {}).get("start") or ""
+        return ""
+    if t == "date":
+        return (v.get("date") or {}).get("start") or ""
+    if t == "rollup":
+        r = v.get("rollup") or {}
+        rt = r.get("type")
+        if rt == "array":
+            parts = [_value_to_text(el) for el in r.get("array", [])]
+            return " / ".join(p for p in parts if p)
+        if rt == "number":
+            n = r.get("number")
+            return "" if n is None else _format_number(n)
+        if rt == "date":
+            return (r.get("date") or {}).get("start") or ""
+        return ""
+    return ""
+
+
+def get_any_text(properties: dict[str, Any], key: str) -> str:
+    """プロパティ型に依存せず平文を取り出す（rich_text/number/rollup等に対応）。
+
+    「参加費（日本円）」のように型がテキストか数値か不定な項目や、
+    「住所」のようなロールアップ項目に用いる。get_rich_text では
+    リッチテキスト以外の型が空になってしまうため、その代替。
+    """
+    p = _prop(properties, key)
+    if not p:
+        return ""
+    return _value_to_text(p)
 
 
 def strip_html(text: str) -> str:
@@ -527,11 +604,17 @@ def parse_event(page: dict[str, Any]) -> dict[str, Any]:
         "end": end,
         "status": status_from_dates(start, end),
         "city": get_select(properties, "市町村"),
-        "place": get_rich_text(properties, "開催場所"),
+        # 「開催場所」は会場DBへの relation、「住所」はその relation 経由の rollup。
+        # 会場名は fetch_events が relation 先ページのタイトルを解決して place に
+        # 埋める（_place_ids は解決時に取り除かれ、出力JSONには含まれない）。
+        # 「住所」rollup は会場を紐づければ自動で入る（get_any_text が対応済み）。
+        "place": "",
+        "_place_ids": get_relation_ids(properties, "開催場所"),
+        "address": get_any_text(properties, "住所"),
         "image": get_files_url(properties, "参考画像"),
         "comment": strip_html(get_rich_text(properties, "コメント")),
-        "fee": get_rich_text(properties, "参加費（日本円）"),
-        "organizer": get_rich_text(properties, "主催/運営"),
+        "fee": get_any_text(properties, "参加費（日本円）"),
+        "organizer": get_any_text(properties, "主催/運営"),
     }
 
 
@@ -578,12 +661,50 @@ def fetch_news(token: str) -> list[dict[str, Any]]:
     return [item for item in items if item.get("show")]
 
 
+def fetch_page_title(page_id: str, token: str) -> str:
+    """ページのタイトル（type=title のプロパティ）を取得する。失敗時は空文字。
+
+    会場ページがインテグレーションに共有されていない場合は404になるため、
+    例外はすべて握りつぶして空文字を返す（イベント表示自体は止めない）。
+    """
+    try:
+        page = http_request(f"/pages/{page_id}", token)
+    except Exception:
+        return ""
+    for val in (page.get("properties") or {}).values():
+        if isinstance(val, dict) and val.get("type") == "title":
+            return "".join(t.get("plain_text", "") for t in val.get("title", []))
+    return ""
+
+
+def resolve_place_names(items: list[dict[str, Any]], token: str) -> None:
+    """「開催場所」relation のリンク先ページ名を place に解決する。
+
+    同じ会場を多数のイベントが参照するため、ページIDでキャッシュして
+    APIコールを会場数ぶんに抑える。_place_ids はここで取り除く。
+    """
+    cache: dict[str, str] = {}
+    for item in items:
+        ids = item.pop("_place_ids", [])
+        names: list[str] = []
+        for pid in ids:
+            if pid not in cache:
+                cache[pid] = fetch_page_title(pid, token)
+            if cache[pid]:
+                names.append(cache[pid])
+        if names:
+            item["place"] = " / ".join(names)
+
+
 def fetch_events(database_id: str, token: str) -> list[dict[str, Any]]:
     dsid = get_data_source_id(database_id, token)
     sorts = [{"property": "開催日時（開始）", "direction": "descending"}]
     pages = query_data_source(dsid, token, sorts, EVENT_MAX)
     items = [parse_event(p) for p in pages]
-    return filter_events(items)
+    items = filter_events(items)
+    # 絞り込み後に会場名を解決する（対象件数を減らしてAPIコールを節約）
+    resolve_place_names(items, token)
+    return items
 
 
 def parse_experience(page: dict[str, Any]) -> dict[str, Any]:

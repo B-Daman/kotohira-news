@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-09 00:02",
+  "fetched": "2026-07-09 08:35",
   "news": [
     {
       "id": "3970b4e5-ff5b-8174-80a9-c9cac894ccdf",
@@ -247,6 +247,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
+      "address": "",
       "image": "",
       "comment": "",
       "fee": "",
@@ -260,11 +261,12 @@ window.NOTION_DATA = {
       "end": "2026-08-15T20:30",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "一之橋公園",
+      "address": "〒766-0001 香川県仲多度郡琴平町722",
       "image": "assets/thumbs/3960b4e5ff5b813c8eade44c30995fab.png",
       "comment": "会場: 琴平町 一之橋公園（香川県仲多度郡琴平町722） 戦没犠牲者の追悼や恒久平和への祈り、ご先祖への供養を目的とした灯ろう流しイベント。金倉川の川面を灯ろうが照らす幻想的な夏の夜の催し。",
-      "fee": "",
-      "organizer": ""
+      "fee": "500",
+      "organizer": "平和祈願灯ろう流し実行委員会（琴平町観光商工課）"
     },
     {
       "id": "3950b4e5-ff5b-81a2-838c-ca505a5924ef",
@@ -274,11 +276,12 @@ window.NOTION_DATA = {
       "end": "2026-08-10T21:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "一之橋公園",
+      "address": "〒766-0001 香川県仲多度郡琴平町722",
       "image": "assets/thumbs/3950b4e5ff5b81a2838cca505a5924ef.png",
-      "comment": "会場: 一之橋公園（仲多度郡琴平町722） 琴平町の一之橋公園で開催される夏限定のビアガーデン。冷たいビールと美味しいグルメを楽しめるイベント。入場無料。",
-      "fee": "",
-      "organizer": ""
+      "comment": "琴平町の一之橋公園で開催される夏限定のビアガーデン。冷たいビールと美味しいグルメを楽しめるイベント。入場無料。",
+      "fee": "0",
+      "organizer": "こんぴら十帖"
     },
     {
       "id": "3950b4e5-ff5b-8045-81cc-dba0f5666693",
@@ -288,11 +291,12 @@ window.NOTION_DATA = {
       "end": "2026-07-30T19:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
-      "image": "assets/manual/mokumoku_ai.png",
+      "place": "オンライン",
+      "address": "",
+      "image": "assets/thumbs/3950b4e5ff5b804581ccdba0f5666693.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
-      "organizer": ""
+      "fee": "0",
+      "organizer": "地域おこし協力隊 あっきー"
     },
     {
       "id": "38f0b4e5-ff5b-8077-8ed4-c8bee33c422c",
@@ -302,7 +306,8 @@ window.NOTION_DATA = {
       "end": "2026-07-29T13:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/38f0b4e5ff5b80778ed4c8bee33c422c.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -316,11 +321,12 @@ window.NOTION_DATA = {
       "end": "2026-07-23T19:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
-      "image": "assets/manual/mokumoku_ai.png",
+      "place": "オンライン",
+      "address": "",
+      "image": "assets/thumbs/3950b4e5ff5b80eb90e8d3c8a5e697fe.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
-      "organizer": ""
+      "fee": "0",
+      "organizer": "地域おこし協力隊 あっきー"
     },
     {
       "id": "38f0b4e5-ff5b-8090-8ccd-fdb45dbc570e",
@@ -330,7 +336,8 @@ window.NOTION_DATA = {
       "end": "2026-07-22T13:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/38f0b4e5ff5b80908ccdfdb45dbc570e.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -344,10 +351,11 @@ window.NOTION_DATA = {
       "end": "2026-07-21T15:30",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
       "image": "assets/thumbs/38f0b4e5ff5b801c9860d7689605e56e.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -358,11 +366,12 @@ window.NOTION_DATA = {
       "end": "",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平中学校",
+      "address": "香川県仲多度郡琴平町五條654-1",
       "image": "assets/manual/20260718.png",
       "comment": "会場: 琴平中学校 運動場 琴平中学校運動場で7月18日に開催されるニュースポーツ交流会。グラウンドゴルフを通じて子どもから大人まで交流できる。参加費無料、当日参加も可能。",
-      "fee": "",
-      "organizer": ""
+      "fee": "0",
+      "organizer": "琴平町スポーツ推進委員会"
     },
     {
       "id": "38c0b4e5-ff5b-81ea-9ed2-c1332b2d533b",
@@ -372,11 +381,12 @@ window.NOTION_DATA = {
       "end": "2026-07-18T13:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/38c0b4e5ff5b81ea9ed2c1332b2d533b.png",
       "comment": "会場: 琴平町 琴平を舞台にした1泊2日の事業づくり体験プログラム。地域に入り、人を知り、新たなお土産とコンテンツの種を見つけることを目的とする。",
-      "fee": "",
-      "organizer": ""
+      "fee": "6000",
+      "organizer": "785Launch"
     },
     {
       "id": "3950b4e5-ff5b-800c-a17a-f22d29bad6cc",
@@ -386,11 +396,12 @@ window.NOTION_DATA = {
       "end": "2026-07-16T19:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
-      "image": "assets/manual/mokumoku_ai.png",
+      "place": "オンライン",
+      "address": "",
+      "image": "assets/thumbs/3950b4e5ff5b800ca17af22d29bad6cc.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
-      "organizer": ""
+      "fee": "0",
+      "organizer": "地域おこし協力隊 あっきー"
     },
     {
       "id": "38f0b4e5-ff5b-80d1-956a-ec4c1360606b",
@@ -400,7 +411,8 @@ window.NOTION_DATA = {
       "end": "2026-07-15T13:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/38f0b4e5ff5b80d1956aec4c1360606b.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -414,11 +426,12 @@ window.NOTION_DATA = {
       "end": "2026-07-12T11:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "五人百姓　池商店",
+      "address": "香川県仲多度郡琴平町933",
       "image": "assets/manual/20260712.png",
       "comment": "会場: 藤田屋2階和室（7/11）、五人百姓池商店（7/12） 京都の茶道裏千家準教授・水島宗華先生を迎えた夏のお茶会。7月11日は藤田屋で浴衣茶会、7月12日は五人百姓池商店で琴平学とお茶会を開催。",
-      "fee": "",
-      "organizer": ""
+      "fee": "4000",
+      "organizer": "こんぴら路地裏着物レンタル藤田屋、五人百姓池商店"
     },
     {
       "id": "38e0b4e5-ff5b-8155-8726-e575b82f6058",
@@ -428,11 +441,12 @@ window.NOTION_DATA = {
       "end": "2026-07-11T12:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
+      "address": "香川県仲多度郡琴平町806",
       "image": "assets/manual/20260711.png",
       "comment": "会場: 藤田屋2階和室（7/11）、五人百姓池商店（7/12） 京都の茶道裏千家準教授・水島宗華先生を迎えた夏のお茶会。7月11日は藤田屋で浴衣茶会、7月12日は五人百姓池商店で琴平学とお茶会を開催。",
-      "fee": "",
-      "organizer": ""
+      "fee": "4000",
+      "organizer": "こんぴら路地裏着物レンタル藤田屋、五人百姓池商店"
     },
     {
       "id": "3950b4e5-ff5b-810c-871a-d9fc2b6a9a91",
@@ -442,11 +456,12 @@ window.NOTION_DATA = {
       "end": "2026-07-10T20:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
+      "place": "呑象ブリューイング",
+      "address": "香川県仲多度郡琴平町182-2",
       "image": "assets/thumbs/3950b4e5ff5b810c871ad9fc2b6a9a91.png",
       "comment": "イタリア南部プーリア州出身のシェフ、サルヴァトーレ氏が呑象ブリューイングで本格イタリアンコースを提供する特別イベント。クラフトビールとのペアリングセットも用意されている。",
-      "fee": "",
-      "organizer": ""
+      "fee": "3300",
+      "organizer": "呑象ブリューイング"
     },
     {
       "id": "3950b4e5-ff5b-8097-b3bc-f5ec434dc2c6",
@@ -457,6 +472,7 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3950b4e5ff5b8097b3bcf5ec434dc2c6.jpg",
       "comment": "",
       "fee": "",
@@ -470,11 +486,12 @@ window.NOTION_DATA = {
       "end": "2026-07-09T20:00",
       "status": "実施中",
       "city": "琴平町",
-      "place": "",
+      "place": "つるや旅館",
+      "address": "766-0001 香川県仲多度郡琴平町620",
       "image": "assets/manual/20260709.png",
       "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の着方や帯結び、着物を着た時の所作を学べる。ドリンクとおやつ付き。",
-      "fee": "",
-      "organizer": ""
+      "fee": "500",
+      "organizer": "つるや旅館、藤田屋"
     },
     {
       "id": "3950b4e5-ff5b-80cb-aa3f-e4d6f9f7f383",
@@ -484,11 +501,12 @@ window.NOTION_DATA = {
       "end": "2026-07-09T19:00",
       "status": "実施中",
       "city": "琴平町",
-      "place": "",
-      "image": "assets/manual/mokumoku_ai.png",
+      "place": "オンライン",
+      "address": "",
+      "image": "assets/thumbs/3950b4e5ff5b80cbaa3fe4d6f9f7f383.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
-      "organizer": ""
+      "fee": "0",
+      "organizer": "地域おこし協力隊 あっきー"
     },
     {
       "id": "38f0b4e5-ff5b-8080-8966-c10ffddc164b",
@@ -498,7 +516,8 @@ window.NOTION_DATA = {
       "end": "2026-07-08T13:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/38f0b4e5ff5b80808966c10ffddc164b.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -512,10 +531,11 @@ window.NOTION_DATA = {
       "end": "2026-07-13",
       "status": "実施中",
       "city": "琴平町",
-      "place": "",
+      "place": "ACTことひら",
+      "address": "〒766-0002 香川県仲多度郡琴平町176",
       "image": "assets/thumbs/3960b4e5ff5b8184996fdd7865e5b0bf.webp",
       "comment": "会場: ACTことひら 県文化功労者で洋画家の谷本重義さん（1929～2022年）の作品展が琴平町のACTことひらで開催中。1970年代から晩年までの油彩画32点が展示され、作風の変遷を鑑賞できる。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -526,11 +546,12 @@ window.NOTION_DATA = {
       "end": "2026-07-07T20:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3950b4e5ff5b81fc87e6f5cc4ab28ef3.png",
       "comment": "七夕の夜、イギリス出身のNellさんをホストに、願いを込めたミサンガ（ブレスレット）を作るクラフトイベント。初心者から挑戦者向けまで様々な編み方が用意されており、ドリンクやお菓子も楽しめる。",
-      "fee": "",
-      "organizer": ""
+      "fee": "500",
+      "organizer": "Kotori Cow"
     },
     {
       "id": "38f0b4e5-ff5b-8032-8c57-eb1bf5f2e4fc",
@@ -540,10 +561,11 @@ window.NOTION_DATA = {
       "end": "2026-07-07T15:30",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
       "image": "assets/thumbs/38f0b4e5ff5b80328c57eb1bf5f2e4fc.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -554,11 +576,12 @@ window.NOTION_DATA = {
       "end": "2026-07-06T21:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
       "image": "assets/thumbs/3950b4e5ff5b810fa474ed5867f3436d.png",
       "comment": "ハンドパンのパイオニア・ヤマザキヤマトと、アフリカン音楽を牽引する三好東洋による民族楽器ライブ。7月6日に香川県仲多度郡琴平町の麻心で開催。",
       "fee": "",
-      "organizer": ""
+      "organizer": "麻心"
     },
     {
       "id": "3670b4e5-ff5b-8068-9e2d-e6f3a5ab697d",
@@ -568,10 +591,11 @@ window.NOTION_DATA = {
       "end": "2026-07-05T15:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町商工会",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井869-5",
       "image": "assets/thumbs/3670b4e5ff5b80689e2de6f3a5ab697d.jpg",
       "comment": "",
-      "fee": "",
+      "fee": "3300",
       "organizer": ""
     },
     {
@@ -582,7 +606,8 @@ window.NOTION_DATA = {
       "end": "",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "Sando Sand. Stand",
+      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル 1F",
       "image": "",
       "comment": "",
       "fee": "",
@@ -596,11 +621,12 @@ window.NOTION_DATA = {
       "end": "2026-07-04T16:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "つるや旅館",
+      "address": "766-0001 香川県仲多度郡琴平町620",
       "image": "assets/manual/20260704.png",
       "comment": "会場: つるや旅館 2階大広間（香川県琴平町） 琴平町のつるや旅館で、リユース着物や帯などの和物を販売する蚤の市と着物コーディネート相談会が開催されます。着物の使い方や合わせ方について専門家に相談できます。",
       "fee": "",
-      "organizer": ""
+      "organizer": "こんぴら路地裏着物レンタル藤田屋、つるや旅館"
     },
     {
       "id": "38f0b4e5-ff5b-806e-a7c6-edc4399778c4",
@@ -610,10 +636,11 @@ window.NOTION_DATA = {
       "end": "2026-07-02T19:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
-      "image": "assets/manual/mokumoku_ai.png",
+      "place": "オンライン",
+      "address": "",
+      "image": "",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -624,7 +651,8 @@ window.NOTION_DATA = {
       "end": "2026-07-01T13:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/38f0b4e5ff5b801b800ed93e350f8019.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -639,9 +667,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3730b4e5ff5b8069adcdc620fd4f99c7.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -652,10 +681,11 @@ window.NOTION_DATA = {
       "end": "2026-06-30T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/38f0b4e5ff5b8009825fe4c5da8ffd9a.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIで色んな動画を作成する仕組みを学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -666,11 +696,12 @@ window.NOTION_DATA = {
       "end": "",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
       "image": "assets/manual/20260630.png",
       "comment": "会場: 麻心（MAGOKORO） 麻心で日本対ブラジルのワールドカップ決勝トーナメント試合をパブリックビューイングで放映。大画面・大音量で応援できるイベント。",
-      "fee": "",
-      "organizer": ""
+      "fee": "0",
+      "organizer": "麻心"
     },
     {
       "id": "37f0b4e5-ff5b-8171-8276-c4da4dfaa559",
@@ -680,11 +711,12 @@ window.NOTION_DATA = {
       "end": "2026-06-29T21:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/manual/20260629.png",
       "comment": "会場: コトリ琴平 参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事をしながら交流するイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
-      "fee": "",
-      "organizer": ""
+      "fee": "500",
+      "organizer": "Kotori Coworking & Hostel Kotohira"
     },
     {
       "id": "38e0b4e5-ff5b-8105-98d6-fa2b02d49e7a",
@@ -694,11 +726,12 @@ window.NOTION_DATA = {
       "end": "2026-06-28T21:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "HAKOBUNEビル",
+      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
       "image": "assets/manual/20260628.png",
       "comment": "会場: HAKOBUNEビル屋上（香川県仲多度郡琴平町725） 琴平町のHAKOBUNEビル屋上で開催される音楽とテントサウナのイベント。DJパフォーマンス、ビール、ギョーザ、ドリンク、フードが提供される。",
-      "fee": "",
-      "organizer": ""
+      "fee": "1500",
+      "organizer": "Onyoku Konyoku"
     },
     {
       "id": "37c0b4e5-ff5b-81d4-9235-faae1a2ed63c",
@@ -708,11 +741,12 @@ window.NOTION_DATA = {
       "end": "2026-06-29T16:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
       "image": "assets/thumbs/37c0b4e5ff5b81d49235faae1a2ed63c.png",
       "comment": "会場: 麻心琴平店 アフリカ発祥の民族楽器「カリンバ」の手作りワークショップを6月28日～29日に麻心琴平店で開催。世界にたった一つの楽器を作り、心と体を癒す音の旅を体験できる。",
-      "fee": "",
-      "organizer": ""
+      "fee": "19800",
+      "organizer": "麻心琴平店"
     },
     {
       "id": "3710b4e5-ff5b-808c-b634-e590a9314d50",
@@ -722,7 +756,8 @@ window.NOTION_DATA = {
       "end": "2026-06-27T10:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b808cb634e590a9314d50.jpg",
       "comment": "",
       "fee": "",
@@ -736,7 +771,8 @@ window.NOTION_DATA = {
       "end": "2026-06-24T13:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b803ba1c1e1c9d6d537bb.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -751,9 +787,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3730b4e5ff5b8055a96efbbf2c3bff5e.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -764,10 +801,11 @@ window.NOTION_DATA = {
       "end": "2026-06-23T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
       "image": "assets/thumbs/3880b4e5ff5b80479da6cd5639549f39.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIを活かせる副業について気軽に学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -778,10 +816,11 @@ window.NOTION_DATA = {
       "end": "2026-06-22T21:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b800b8c87f80d815f1a00.png",
       "comment": "讃岐おでんプロジェクト｜2026年度 方針 ■ 年間テーマ 讃岐おでんを文化にする ～ 人が集まり、会話が生まれる「場」を育てる ～ ■ 目指す姿（ゴール） ◎讃岐うどん・骨付き鳥に次ぐ、香川の第三の食文化にする ◎観光地・琴平において、夜の過ごし方として定着させる ◎将来的に店舗を持ち、継続的に運営できる状態をつくる 日時 毎月 22日 19:00〜 参加費：2000円（現地支払い） 場所 コトリ コワーキング＆ホステル琴平 ■ 4月｜ ・具体的な役割と募集の明確な共有 ・共通財布の運用方法検討 ・貢献ポイントの項目・配点の素案共有と協議（=総合評価表） ・夏おでんに向けた調査結果の共有と検討（この会の後に、各自調査して次回も協議） ◉可能であれば話したい範囲 ・讃岐おでんのホームページのチェック ・ホームページには、何が記載されているべきか ・メニュー表（物）の検討 ■ 5月｜冷やしおでんの可能性を広げる ・夏でも成立する讃岐おでんを考える ・冷やしおでんのリサーチ ・食材・味・提供方法のアイデア出し ■ 6月｜冷やしおでん試作① ・試作・試食 ・改善点の洗い出し ・体験として成立するか検証 ■ 7月｜冷やしおでん試作②＋体験設計 ・試作のブラッシュアップ ・提供方法・見せ方の設計 ■ 8月｜冬営業に向けた設計① ・店舗営業方法 ・店頭に立ちたい人を募集する ・イベント出店 ・懇親会などの引き受け ■ 9月｜冬営業に向けた設計② ・接客スタイルの設計 ・オペレーション整理 ・メニュー・価格の方向性確認 ・広報",
-      "fee": "",
+      "fee": "2000",
       "organizer": ""
     },
     {
@@ -792,10 +831,11 @@ window.NOTION_DATA = {
       "end": "2026-06-21T15:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "ヒトツブビーズ店",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1132-5",
       "image": "assets/thumbs/3710b4e5ff5b809ba6a3fc2e93364fa0.png",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -806,11 +846,12 @@ window.NOTION_DATA = {
       "end": "2026-06-20T20:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/manual/20260620.png",
       "comment": "会場: コトリ コワーキング＆ホステル琴平 オーストラリア出身のフィリップをホストに、クッキー作りとオーストラリアのお菓子を楽しみながら地元の人や旅人と交流するイベント。好きな具材を選んでクッキーを作り、新しい友達づくりができます。",
-      "fee": "",
-      "organizer": ""
+      "fee": "0",
+      "organizer": "コトリ コワーキング＆ホステル琴平"
     },
     {
       "id": "3710b4e5-ff5b-80e1-acf9-d41c5ea289f8",
@@ -820,10 +861,11 @@ window.NOTION_DATA = {
       "end": "2026-06-20T17:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "ヒトツブビーズ店",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1132-5",
       "image": "assets/thumbs/3710b4e5ff5b80e1acf9d41c5ea289f8.png",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -835,6 +877,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "東京都",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3810b4e5ff5b803d9b14fa8995dade83.webp",
       "comment": "",
       "fee": "",
@@ -848,7 +891,8 @@ window.NOTION_DATA = {
       "end": "2026-06-20T10:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b80a6b199d3fc55694591.jpg",
       "comment": "",
       "fee": "",
@@ -862,7 +906,8 @@ window.NOTION_DATA = {
       "end": "2026-06-17T13:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b80ae905bf1a39a3b7682.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -877,9 +922,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3730b4e5ff5b80679751fc636762696d.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -890,10 +936,11 @@ window.NOTION_DATA = {
       "end": "2026-06-16T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
       "image": "assets/thumbs/3810b4e5ff5b8059adebd3d6bebe8724.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでホームページを作成する仕組みを学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -904,10 +951,11 @@ window.NOTION_DATA = {
       "end": "2026-06-13T18:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町公会堂",
+      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
       "image": "assets/thumbs/3660b4e5ff5b80e19ae9f6c805a50232.png",
       "comment": "",
-      "fee": "",
+      "fee": "2200",
       "organizer": ""
     },
     {
@@ -918,7 +966,8 @@ window.NOTION_DATA = {
       "end": "2026-06-13T10:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b803cbc3aed5abb630247.jpg",
       "comment": "",
       "fee": "",
@@ -932,10 +981,11 @@ window.NOTION_DATA = {
       "end": "",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
       "image": "assets/thumbs/3640b4e5ff5b8027bca0de39e4f115ee.png",
       "comment": "",
-      "fee": "",
+      "fee": "2500",
       "organizer": ""
     },
     {
@@ -946,10 +996,11 @@ window.NOTION_DATA = {
       "end": "2026-06-11T20:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "つるや旅館",
+      "address": "766-0001 香川県仲多度郡琴平町620",
       "image": "assets/thumbs/3710b4e5ff5b80bbac16dd4e9ac8a7ae.png",
       "comment": "第13回 「ユルッと楽しく着付けレッスン」開催日決定しました。 …＊…＊…＊…＊…＊…＊… 日時 6/11（木） 18:30〜20:00 場所 つるや旅館 (駐車場有) 参加費 着物一式持参の方 ¥500 着物一式レンタルの方 ¥1000 帯結びだけ今回はしたい方 帯一式ご持参¥500 ☆ドリンク、おやつ付き ご予約 藤田屋Instagramメッセージ、公式ライン、お電話にて受け付けております。 定員 6名 講師 つるや旅館女将、若女将、藤田屋 @turuyaryokan_konpira_wakaokami @fujitaya__kimono …＊…＊…＊…＊…＊… ○自分で着物を着れるようになりたい ○お家に眠っている着物を着たい ○帯結びが難しくて習いたい 着物を着てみたい始めの一歩をユルッと楽しくレッスンしましょう！ ご予約お待ちしております。",
-      "fee": "",
+      "fee": "500",
       "organizer": ""
     },
     {
@@ -960,10 +1011,11 @@ window.NOTION_DATA = {
       "end": "2026-06-10T21:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b80f5bd76eb9c942533f5.png",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -974,7 +1026,8 @@ window.NOTION_DATA = {
       "end": "2026-06-10T13:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b8022b648c308e284b02d.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -989,6 +1042,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3710b4e5ff5b80bab883d3fd2b437cfa.jpg",
       "comment": "",
       "fee": "",
@@ -1003,9 +1057,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3730b4e5ff5b80258637d3f19070d491.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1016,10 +1071,11 @@ window.NOTION_DATA = {
       "end": "2026-06-09T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
       "image": "assets/thumbs/37a0b4e5ff5b80c4997cc8b24eb7b0d6.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1030,10 +1086,11 @@ window.NOTION_DATA = {
       "end": "2026-06-07T20:30",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "Sando Sand. Stand",
+      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル 1F",
       "image": "assets/thumbs/3600b4e5ff5b8090bdf9c571408f6f6a.jpg",
       "comment": "誰でも歓迎の参加型音楽イベント その名も 「Sando Sand. Sound(サンドーサンドサウンド)」🎷 上手い・下手は関係なく ただ「みんなと歌いたい」「楽器を鳴らしたい」という人が それぞれ事前に課題曲を練習して、当日みんなで合わせてみよう！ という企画です。 ライブやコンサートではないので観客不在。 原曲・楽譜に無い楽器を使ってもOK。 主役は「曲」ではなく「場」であり とにかくみんなと音・声を合わせることを楽しむ時間です。 「楽器は弾けないけど手拍子なら…」という人も歓迎だし 「1フレーズだけだけどハモってみたい」という人でも大丈夫。 もちろんお子様も大歓迎です！ 【当日の流れ】 ・軽い自己紹介 ・ウォームアップ（手拍子・簡単な音出し） ・課題曲を使って合奏（途中で止めたり確認しながら） ・最後に通して合わせる ・次回の課題曲をみんなで考える ▼課題曲▼ ①Piano Man / Billy Joel 参考動画：https://youtu.be/gxEPV4kolz0?si=Esn-W284d-LdLh9e ②明日があるさ / 坂本九 参考動画：https://youtu.be/4XOWE1G31aU?si=BG9XxnUWo1a6IV4q 【参加方法】 以下のページで詳細をご確認いただき、下部にあるフォームからご予約ください。 https://sando-sand-stand.com/sando-sand-sound/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1044,10 +1101,11 @@ window.NOTION_DATA = {
       "end": "2026-06-06T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平中学校",
+      "address": "香川県仲多度郡琴平町五條654-1",
       "image": "assets/thumbs/36c0b4e5ff5b809cb411d5896b3ee4cd.png",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1058,7 +1116,8 @@ window.NOTION_DATA = {
       "end": "2026-06-06T10:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b80bebbd8e31a97fc738f.jpg",
       "comment": "",
       "fee": "",
@@ -1072,7 +1131,8 @@ window.NOTION_DATA = {
       "end": "2026-06-03T13:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b8076996ce62b79a5af6a.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
@@ -1087,9 +1147,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3730b4e5ff5b80b1bc74d37e3279e276.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1100,7 +1161,8 @@ window.NOTION_DATA = {
       "end": "2026-05-30T16:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "松尾寺",
+      "address": "〒766-0001 香川県仲多度郡琴平町川西973",
       "image": "assets/thumbs/3710b4e5ff5b8030b0c1d6c90bbfbccc.png",
       "comment": "",
       "fee": "",
@@ -1114,7 +1176,8 @@ window.NOTION_DATA = {
       "end": "2026-05-28T20:30",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b8064a446d2783497ce34.png",
       "comment": "",
       "fee": "",
@@ -1128,10 +1191,11 @@ window.NOTION_DATA = {
       "end": "2026-05-28T21:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/36c0b4e5ff5b80758528f4fc9b907504.png",
       "comment": "",
-      "fee": "",
+      "fee": "1600",
       "organizer": ""
     },
     {
@@ -1142,10 +1206,11 @@ window.NOTION_DATA = {
       "end": "2026-05-28T19:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/35d0b4e5ff5b80729ac4c60bf4d82b08.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでホームページを作成する仕組みを学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1156,7 +1221,8 @@ window.NOTION_DATA = {
       "end": "",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "ことひらテラス",
+      "address": "〒766-0001 香川県仲多度郡琴平町716-5",
       "image": "assets/thumbs/3660b4e5ff5b80b996fbe3c4b2f28c83.jpg",
       "comment": "",
       "fee": "",
@@ -1171,9 +1237,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3640b4e5ff5b80809bebe55a433b299b.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1184,10 +1251,11 @@ window.NOTION_DATA = {
       "end": "2026-05-26T19:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/36c0b4e5ff5b80f98901e2855ae67a22.jpg",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1198,10 +1266,11 @@ window.NOTION_DATA = {
       "end": "2026-05-26T14:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
       "image": "assets/thumbs/35d0b4e5ff5b805faf4ee2c7786275c8.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIで色んな画像を作成する仕組みを学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1212,10 +1281,11 @@ window.NOTION_DATA = {
       "end": "2026-05-24T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "一之橋公園",
+      "address": "〒766-0001 香川県仲多度郡琴平町722",
       "image": "assets/manual/konpira_asaichi.png",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1226,10 +1296,11 @@ window.NOTION_DATA = {
       "end": "2026-05-22T21:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3660b4e5ff5b80088021ec49aac1bb81.png",
       "comment": "讃岐おでんプロジェクト｜2026年度 方針 ■ 年間テーマ 讃岐おでんを文化にする ～ 人が集まり、会話が生まれる「場」を育てる ～ ■ 目指す姿（ゴール） ◎讃岐うどん・骨付き鳥に次ぐ、香川の第三の食文化にする ◎観光地・琴平において、夜の過ごし方として定着させる ◎将来的に店舗を持ち、継続的に運営できる状態をつくる 日時 毎月 22日 19:00〜 参加費：2000円（現地支払い） 場所 コトリ コワーキング＆ホステル琴平 ■ 4月｜ ・具体的な役割と募集の明確な共有 ・共通財布の運用方法検討 ・貢献ポイントの項目・配点の素案共有と協議（=総合評価表） ・夏おでんに向けた調査結果の共有と検討（この会の後に、各自調査して次回も協議） ◉可能であれば話したい範囲 ・讃岐おでんのホームページのチェック ・ホームページには、何が記載されているべきか ・メニュー表（物）の検討 ■ 5月｜冷やしおでんの可能性を広げる ・夏でも成立する讃岐おでんを考える ・冷やしおでんのリサーチ ・食材・味・提供方法のアイデア出し ■ 6月｜冷やしおでん試作① ・試作・試食 ・改善点の洗い出し ・体験として成立するか検証 ■ 7月｜冷やしおでん試作②＋体験設計 ・試作のブラッシュアップ ・提供方法・見せ方の設計 ■ 8月｜冬営業に向けた設計① ・店舗営業方法 ・店頭に立ちたい人を募集する ・イベント出店 ・懇親会などの引き受け ■ 9月｜冬営業に向けた設計② ・接客スタイルの設計 ・オペレーション整理 ・メニュー・価格の方向性確認 ・広報",
-      "fee": "",
+      "fee": "2000",
       "organizer": ""
     },
     {
@@ -1240,10 +1311,11 @@ window.NOTION_DATA = {
       "end": "2026-05-21T19:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/35d0b4e5ff5b808ba450e323080f2f9b.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIで色んな画像を作成する仕組みを学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1254,10 +1326,11 @@ window.NOTION_DATA = {
       "end": "2026-05-21T13:30",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "金刀比羅宮（旭社）",
+      "address": "〒766-0001 香川県仲多度郡琴平町892-1（石段628段目）",
       "image": "",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1269,9 +1342,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3640b4e5ff5b8005ba26ebad1a1d95f0.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1282,10 +1356,11 @@ window.NOTION_DATA = {
       "end": "2026-05-19T15:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
       "image": "assets/thumbs/35d0b4e5ff5b80f39133ccc74fde7667.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでSNSの文章を作成する仕組みを学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1296,10 +1371,11 @@ window.NOTION_DATA = {
       "end": "2026-05-17T14:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "金刀比羅宮（表書院）",
+      "address": "〒766-0001 香川県仲多度郡琴平町892-1（石段477段目）",
       "image": "assets/thumbs/3570b4e5ff5b80468304eaf916f9fde3.png",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1310,7 +1386,8 @@ window.NOTION_DATA = {
       "end": "2026-05-20T17:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "ヒトツブビーズ店",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1132-5",
       "image": "assets/thumbs/3490b4e5ff5b80b49260cba0de0bb86f.png",
       "comment": "＼第10回ヒトツブ資材交換会／ 使わないけど捨てられない、ハンドメイド資材を交換しませんか？ 持ち込んだ資材の重さを計り、同じ重さの資材を持ち帰ることができます(※店内の商品は交換対象外) 手ぶらでも大丈夫！その場合は、店内でのお買い物(カフェ利用もOK)税込1100円ごとに約100gまで持ち帰れます。 1日の上限は持ち込み、持ち帰りそれぞれ約1000g(1kg)です。 色んな資材が集まり、参加者さまと「何に使えるかな？」とお喋りも楽しいイベントです。ぜひご参加ください♪ 《日時》 2026.5/17(日)〜20(水) 11:00〜17:00 ※期間中カフェはテイクアウトのみとなります。 《参加費》 店内ご利用(カフェもOK)もしくは550円 ※お買い物やカフェ利用など店内でのお支払いが1円以上あれば550円の参加費は不要です。 《場所》 ヒトツブビーズ店(香川県琴平町上櫛梨1132-5) 店内 《資材交換会のルール》 ハンドメイドに使える新品の資材をお持ちください。未使用新品なら、開封済みや買ってから時間が経っていてもOK。生花や食品、使用期限があるもの、危険物、取り扱いに許可が必要なものなどは不可。ヒトツブビーズ店で普段販売していないジャンルのものでも構いません。 布類は、一部を使っていてもOKですがひどいシワやカビ、匂いがついているなど不潔に感じられるものは不可です。 気持ちよくもらっていただけるものをご用意ください。ご不安な場合は事前にコメントやDMでご質問ください。 YouTube『ヒトツブビーズ店チャンネル』で資材交換会の流れを動画でご紹介しています。初めての方も雰囲気などが分かりやすいと思うのでよければご覧ください♪ 《YouTubeチャンネル》 https://www.youtube.com/@hitotububeads お家で眠ってるもう使わない資材も、他の方には宝物かも！ 新たな作品作りのきっかけになったり、お客さま同士の交流の場になればうれしいです♫ 《大切なこと》 持ち込んでいただいた資材の返却はできません。最終日に残ったものは、当店で実施するワークショップで使用したり、店主の判断でボランティア団体さまに寄付したりいたします。 ただ、どうしても貰い手が見つからない場合、最終的に処分する場合もあるかもしれません。ご了承の上お持ち込みください。 《資材の寄付をいただける場合》 遠方にお住まいで『交換会には参加できないけど資材を寄付したい』と言う方は、まずDMから『資材交換会の寄付希望』とご連絡ください。 詳細をお伝えしますので、了承いただけましたら5/17(日)までにヒトツブビーズ店までお送りください。 寄付分の送料は送り主さまにご負担いただきます。それでもよければ、ぜひよろしくお願いします。 資材交換会の4日間はカフェはテイクアウトのみの営業となります。",
       "fee": "",
@@ -1324,10 +1401,11 @@ window.NOTION_DATA = {
       "end": "2026-05-15T20:30",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/35d0b4e5ff5b807abdb4d0c1a26a8aa0.png",
       "comment": "",
-      "fee": "",
+      "fee": "1600",
       "organizer": ""
     },
     {
@@ -1338,10 +1416,11 @@ window.NOTION_DATA = {
       "end": "2026-05-14T20:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "つるや旅館",
+      "address": "766-0001 香川県仲多度郡琴平町620",
       "image": "assets/thumbs/3490b4e5ff5b80cfb04de76a1169a1ce.png",
       "comment": "第12回 「ユルッと楽しく着付けレッスン」開催日決定しました。 …＊…＊…＊…＊…＊…＊… 日時 4/14(木) 18:30〜20:00 場所 つるや旅館 (駐車場有) 参加費 着物一式持参の方 ¥500 着物一式レンタルの方 ¥1000 帯結びだけ今回はしたい方 帯一式ご持参¥500 ☆ドリンク、おやつ付き ご予約 藤田屋Instagramメッセージ、公式ライン、お電話にて受け付けております。 定員 6名 講師 つるや旅館女将、若女将、藤田屋 @turuyaryokan_konpira_wakaokami @fujitaya__kimono …＊…＊…＊…＊…＊… ○自分で着物を着れるようになりたい ○お家に眠っている着物を着たい ○帯結びが難しくて習いたい 着物を着てみたい始めの一歩をユルッと楽しくレッスンしましょう！ ご予約お待ちしております。",
-      "fee": "",
+      "fee": "500",
       "organizer": ""
     },
     {
@@ -1352,10 +1431,11 @@ window.NOTION_DATA = {
       "end": "2026-05-14T19:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/35d0b4e5ff5b8093b68fcb17546df841.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでSNSの文章を作成する仕組みを学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1367,9 +1447,10 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "オンライン",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/35d0b4e5ff5b806c8d85ec9b9efe5661.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1380,10 +1461,11 @@ window.NOTION_DATA = {
       "end": "2026-05-12T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
       "image": "assets/thumbs/35d0b4e5ff5b800e85c0f86fd4025d47.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1394,10 +1476,11 @@ window.NOTION_DATA = {
       "end": "2026-05-10T17:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3590b4e5ff5b8077a0cbe594000b65f4.jpg",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1408,10 +1491,11 @@ window.NOTION_DATA = {
       "end": "2026-05-10T12:00",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "一之橋公園",
+      "address": "〒766-0001 香川県仲多度郡琴平町722",
       "image": "assets/manual/konpira_asaichi.png",
       "comment": "",
-      "fee": "",
+      "fee": "0",
       "organizer": ""
     },
     {
@@ -1423,6 +1507,7 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/3550b4e5ff5b802ca35ee23b942c5cc9.jpg",
       "comment": "",
       "fee": "",
@@ -1438,7 +1523,8 @@ window.NOTION_DATA = {
       "end": "2026-07-31",
       "status": "実施中",
       "city": "琴平町",
-      "place": "",
+      "place": "呑象ブリューイング",
+      "address": "香川県仲多度郡琴平町182-2",
       "image": "assets/thumbs/3950b4e5ff5b80f984d4da7e14a3f79b.png",
       "comment": "",
       "fee": "",
@@ -1453,10 +1539,11 @@ window.NOTION_DATA = {
       "status": "実施中",
       "city": "琴平町",
       "place": "",
+      "address": "",
       "image": "",
       "comment": "讃岐うどん狸屋のネットショップで期間限定の5％割引キャンペーンを実施。クーポンコード「tanukiya8」を入力することで割引が適用される。10,000円以上の購入で全国送料無料。",
       "fee": "",
-      "organizer": ""
+      "organizer": "宗家 金毘羅うどん 狸屋"
     },
     {
       "id": "3810b4e5-ff5b-81b6-bc09-fa6b8acf57b5",
@@ -1466,11 +1553,12 @@ window.NOTION_DATA = {
       "end": "2026-06-22",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "呑象ブリューイング",
+      "address": "香川県仲多度郡琴平町182-2",
       "image": "assets/thumbs/3810b4e5ff5b81b6bc09fa6b8acf57b5.png",
       "comment": "会場: DONZO Brewing DONZO Brewingの3周年記念キャンペーン期間中、地元食材を使った「DONZOビストロ風プレート」を提供。豚肉のリエット、オリーブ地鶏のコンフィ、香川産スイートコーンのキッシュが含まれ、プレートは1,500円、クラフトビールとソフトドリンク（400円商品）は半額。",
-      "fee": "",
-      "organizer": ""
+      "fee": "1500",
+      "organizer": "DONZO Brewing"
     },
     {
       "id": "37c0b4e5-ff5b-818e-bf1f-e0a076e47339",
@@ -1481,10 +1569,11 @@ window.NOTION_DATA = {
       "status": "終了",
       "city": "琴平町",
       "place": "",
+      "address": "",
       "image": "assets/thumbs/37c0b4e5ff5b818ebf1fe0a076e47339.png",
       "comment": "琴平町の金昇蔵（きょうぐら）による感謝の割禁祭の告知。歴史的な醤油樽を背景に、感謝イベントの開催を案内している。",
       "fee": "",
-      "organizer": ""
+      "organizer": "金昇蔵"
     },
     {
       "id": "37c0b4e5-ff5b-80a4-a6c2-d7231a1fb123",
@@ -1494,7 +1583,8 @@ window.NOTION_DATA = {
       "end": "2026-06-29",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
+      "place": "呑象ブリューイング",
+      "address": "香川県仲多度郡琴平町182-2",
       "image": "assets/thumbs/37c0b4e5ff5b80a4a6c2d7231a1fb123.png",
       "comment": "",
       "fee": "",
@@ -1509,10 +1599,11 @@ window.NOTION_DATA = {
       "status": "実施前",
       "city": "琴平町",
       "place": "",
+      "address": "",
       "image": "",
       "comment": "うさぎいろで桃大福の販売が本日より開始された。白桃を使用したフルーツ大福。",
       "fee": "",
-      "organizer": ""
+      "organizer": "うさぎいろ"
     }
   ]
 };
