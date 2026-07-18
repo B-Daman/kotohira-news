@@ -456,17 +456,34 @@ SITE_WIDGETS_DATA = { weather, lineOpenChat, ads, footerLinks };</code></pre>
     </div>
 
     <div class="card">
-      <h3>🔔 相談・決定待ち</h3>
-      <ul class="chk">
-        <li class="todo">【要決定】団体タブの扱い — 推奨: タブを畳み、団体名簿はリンク集📣カテゴリへ・新着はホームの自動モジュールへ（代替案: タブ継続／タブ非表示で段階移行）。data.js自動化はこの決定後に設計</li>
-        <li class="todo">【要決定】広告掲載基準・窓口・掲載料・審査・表示期間 — サイト公開により広告枠が実際に見える状態になったため優先度上昇</li>
-        <li class="done">【判断済・当面不要】LINEオープンチャットのルールページ — 2026-07-19に「当面不要」と判断。参加者増・トラブル時に再検討（rulesUrlに設定すれば自動表示される実装済み）</li>
-        <li class="todo">【継続】うどん営業中バッジ対象外の8店（営業時間が要確認）— 裏取りでき次第 schedule 追加でバッジ有効化</li>
-        <li class="todo">【継続】店舗カード画像 — og:imageの無い約20店はプレースホルダ。手持ち写真を assets/places/{item id}.jpg に置き image フィールドを追記すれば反映</li>
-        <li class="todo">【年次】祝日データ2028年分を2027年末までに追記（運用手順F）</li>
-        <li class="todo">【運用】Notionトークンのローテーション時は GitHub Secret の再登録が必要（切れると日次更新が失敗しActionsに赤×）</li>
-        <li class="todo">【軽微】カレンダー月/週トグルの配置（中央のまま or 右端固定）／assets/places の不採用画像5枚の整理／過去キャンペーン2件のDiscord失効画像（Notion側差し替えで解消可）</li>
-      </ul>
+      <h3>🔔 相談・決定待ち（2026-07-19 整理）</h3>
+      <div class="two-col">
+        <div><p><b>サイト全体・ブランド</b></p><ul class="chk">
+          <li class="todo">掲載情報の棚卸し — 今の分類（ニュース／イベント／キャンペーン／体験・滞在／うどん／かき氷／駐車場／リンク）で<b>足りない情報がないか</b>を点検する</li>
+          <li class="todo">ロゴ等のブランド制作 — 「ことひらいふ」のロゴ・ビジュアルを作りたい（要相談）</li>
+          <li class="todo">独自ドメインの取得 — どういう名前（ドメイン名）にするか（要相談）</li>
+        </ul></div>
+        <div><p><b>コンテンツの網羅性チェック</b></p><ul class="chk">
+          <li class="todo">ニュース・イベント・キャンペーンに<b>登録されていないものがないか</b>の確認</li>
+          <li class="todo">うどん店タブ — 町内のうどん店が<b>正しく全店登録されているか</b>の確認</li>
+          <li class="todo">かき氷・アイス — どこで何が販売しているかを<b>みんなの情報で更新していく</b>体制づくり</li>
+          <li class="todo">駐車場 — 同様に、実地・みんなの情報で更新していく体制づくり</li>
+        </ul></div>
+        <div><p><b>見せ方</b></p><ul class="chk">
+          <li class="todo">イベントカレンダーの表示改善 — 見づらさの解消を相談しながら詰める（月／週表示の続き）</li>
+        </ul></div>
+        <div><p><b>町を知るタブ（団体・リンク）</b></p><ul class="chk">
+          <li class="todo">団体・リンクの記載内容の方針を相談 — 団体タブを畳むか（推奨: 名簿はリンク集📣カテゴリへ・新着はホームの自動モジュールへ／代替案: タブ継続・段階移行）を含めて。data.js自動化はこの決定後に設計</li>
+        </ul></div>
+        <div><p><b>判断済み・継続・低優先</b></p><ul class="chk">
+          <li class="done">【判断済】LINEオープンチャットのルールページは当面不要（2026-07-19判断。rulesUrl設定で自動表示される実装は済み）</li>
+          <li class="todo">【継続】うどん営業中バッジ対象外の8店 — 営業時間の裏取りでき次第 schedule 追加でバッジ有効化</li>
+          <li class="todo">【継続】店舗カード画像 — og:imageの無い約20店はプレースホルダ。手持ち写真を assets/places/{item id}.jpg に置き image フィールドを追記すれば反映</li>
+          <li class="todo">【年次】祝日データ2028年分を2027年末までに追記（運用手順F）</li>
+          <li class="todo">【軽微】カレンダー月/週トグルの配置／assets/places の不採用画像5枚の整理／過去キャンペーン2件のDiscord失効画像（Notion側差し替えで解消可）</li>
+          <li class="todo">【低優先】広告掲載基準・窓口・掲載料・審査・表示期間 — 現状は「とりあえず枠だけ用意」の段階で、具体はまだ考えなくてよい</li>
+        </ul></div>
+      </div>
     </div>
 
     <div class="card">
