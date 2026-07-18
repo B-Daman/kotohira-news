@@ -71,11 +71,14 @@ python scripts/fetch_notion.py
 
 リポジトリ直下に `notion-data.js` を UTF-8 で生成/更新します。
 
-## 週次運用での位置づけ
+## 運用での位置づけ
 
 `notion-data.js` はダッシュボード（`index.html`）が読み込む静的データファイルです。
-Notion側の更新を反映するには、週次などのタイミングで本スクリプトを再実行し、
-生成された `notion-data.js` をコミット・デプロイしてください。
+
+**2026-07-19以降は GitHub Actions（`.github/workflows/update-notion-data.yml`）が毎日
+00:00 JST に本スクリプトを自動実行し、差分があればコミット・push（=GitHub Pages反映）します。**
+トークンはリポジトリSecret `KOTOHIRA_DASHBOARD_NOTION_TOKEN` から渡されます。
+ローカルでの手動実行（.env利用）は、即時反映やデバッグ時の手段として引き続き使えます。
 （`data.js` はSNS由来の別データで、本スクリプトの対象外です）
 
 ## イベントDBのプロパティ型の癖（get_any_text）
