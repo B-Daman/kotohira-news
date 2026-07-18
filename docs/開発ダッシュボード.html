@@ -146,7 +146,7 @@
   <div class="topbar-inner">
     <div class="brandrow">
       <div class="brand">kotohira-news <small>「ことひらいふ」開発ダッシュボード</small></div>
-      <span class="badge">更新 2026-07-16</span>
+      <span class="badge">更新 2026-07-19</span>
     </div>
     <nav class="tabs" id="tabs" role="tablist" aria-label="開発ダッシュボードのページ">
       <button type="button" class="tab" data-page="overview" role="tab" aria-controls="overview">全体像</button>
@@ -166,7 +166,7 @@
       <div class="eyebrow">KOTOHIRA-NEWS ・ DEV DASHBOARD</div>
       <h1>暮らす人にも、訪れる人にも。琴平町を1か所に。</h1>
       <p>町民向けのニュース・イベント・キャンペーンと、来訪者向けの体験・うどん・駐車場・地域情報を、同じ入口から探せる静的地域ポータル。</p>
-      <div class="meta"><span>ローカル実装中・未コミット変更あり</span><span>最終更新 2026-07-16</span><span>Phase 0.6 地域ポータル化・公開準備</span></div>
+      <div class="meta"><span>GitHub Pages公開・日次自動更新稼働</span><span>最終更新 2026-07-19</span><span>Phase 2 公開・運用</span></div>
     </div>
 
     <div class="card ov">
@@ -174,10 +174,10 @@
       <div class="status">
         <div class="s"><div class="l">表示部</div><div class="v">4分類ナビ・9ルート</div></div>
         <div class="s"><div class="l">データ／設定</div><div class="v">4系統・7個のJS</div></div>
-        <div class="s"><div class="l">掲載スナップショット</div><div class="v">ニュース19／イベント82</div></div>
+        <div class="s"><div class="l">掲載スナップショット</div><div class="v">ニュース27／イベント95（日次自動更新）</div></div>
         <div class="s"><div class="l">来訪者向け情報</div><div class="v">体験12／うどん17／駐車場20</div></div>
-        <div class="s pending"><div class="l">共通ウィジェット</div><div class="v">天気有効・LINE/広告設定待ち</div></div>
-        <div class="s future"><div class="l">公開（Pages）</div><div class="v">未公開・Phase 2</div></div>
+        <div class="s pending"><div class="l">共通ウィジェット</div><div class="v">天気有効・LINE掲載中・広告設定待ち</div></div>
+        <div class="s"><div class="l">公開（Pages）</div><div class="v">公開済み 2026-07-19<br><a href="https://b-daman.github.io/kotohira-news/" style="font-size:11px;">サイトを開く</a></div></div>
       </div>
       <div class="note warn"><b>公開前の残件：</b> 運営主体・問い合わせ先、LINE参加情報、広告掲載ルールを確定し、実機スマホで再確認する。</div>
     </div>
@@ -268,12 +268,12 @@ Notion <span class="arr">→</span> <span class="anno">scripts/fetch_notion.py</
         <tr><td>F21</td><td>9ルートを「ホーム／町の今／訪れる・関わる／町を知る」の4分類へ整理し、第二階層を縦表示</td><td><span class="state done">実装済み</span></td></tr>
         <tr><td>F22</td><td>PCは本文＋右300pxサイドバー、スマホは本文を先にした1カラム</td><td><span class="state done">実装済み</span></td></tr>
         <tr><td>F23</td><td>気象庁の予報と目的別ショートカットを共通ウィジェット化</td><td><span class="state done">天気有効</span></td></tr>
-        <tr><td>F24</td><td>LINEオープンチャットをURL・QR・運営・ルール・注記の確定後だけ表示</td><td><span class="state pending">UI済み・設定待ち</span></td></tr>
+        <tr><td>F24</td><td>LINEオープンチャットをURL・QR・運営・ルール・注記の確定後だけ表示</td><td><span class="state done">掲載中</span></td></tr>
         <tr><td>F25</td><td>広告主・期間・配置・画像代替文を持つ広告枠。編集情報と区別</td><td><span class="state pending">UI済み・掲載0件</span></td></tr>
         <tr><td>F26</td><td>各ページ先頭は短いタイトルカードとし、大きなヒーロー・長い導入文を置かない</td><td><span class="state done">実装済み</span></td></tr>
         <tr><td>F28</td><td>フッターからプライバシーポリシー／運営者情報へ案内</td><td><span class="state pending">暫定版・正式情報待ち</span></td></tr>
-        <tr><td>F9</td><td>GitHub Pagesで公開</td><td><span class="state future">Phase 2</span></td></tr>
-        <tr><td>F10</td><td>data.js／notion-data.jsの定期自動更新</td><td><span class="state future">Phase 3</span></td></tr>
+        <tr><td>F9</td><td>GitHub Pagesで公開</td><td><span class="state done">完了 07-19</span></td></tr>
+        <tr><td>F10</td><td>data.js／notion-data.jsの定期自動更新</td><td><span class="state pending">notion-data.js=毎日00:00自動／data.js=手動</span></td></tr>
       </table></div>
     </div>
 
@@ -406,8 +406,8 @@ SITE_WIDGETS_DATA = { weather, lineOpenChat, ads, footerLinks };</code></pre>
         <tr><td>0.5</td><td>Notion連携＋表示部の再設計・正本化</td><td><span class="state done">完了</span></td></tr>
         <tr><td>0.6</td><td>9ルートの地域ポータル化、サイドバー、来訪者向け情報、スマホ改善</td><td><span class="state pending">ローカル実装済み</span></td></tr>
         <tr><td>1</td><td>団体・媒体の拡充と地域情報の継続更新</td><td><span class="state pending">継続</span></td></tr>
-        <tr><td>2</td><td>運営情報・掲載基準を確定しGitHub Pages公開</td><td><span class="state future">未着手</span></td></tr>
-        <tr><td>3</td><td>生成データの定期自動更新</td><td><span class="state future">未着手</span></td></tr>
+        <tr><td>2</td><td>運営情報・掲載基準を確定しGitHub Pages公開</td><td><span class="state done">公開済み 07-19</span></td></tr>
+        <tr><td>3</td><td>生成データの定期自動更新</td><td><span class="state pending">Notion分=達成／RSS分=未</span></td></tr>
         <tr><td>4</td><td>コミュニティ展開（任意）</td><td><span class="state future">構想</span></td></tr>
       </table></div>
     </div>
@@ -456,11 +456,25 @@ SITE_WIDGETS_DATA = { weather, lineOpenChat, ads, footerLinks };</code></pre>
     </div>
 
     <div class="card">
+      <h3>🔔 相談・決定待ち</h3>
+      <ul class="chk">
+        <li class="todo">【要決定】団体タブの扱い — 推奨: タブを畳み、団体名簿はリンク集📣カテゴリへ・新着はホームの自動モジュールへ（代替案: タブ継続／タブ非表示で段階移行）。data.js自動化はこの決定後に設計</li>
+        <li class="todo">【要決定】広告掲載基準・窓口・掲載料・審査・表示期間 — サイト公開により広告枠が実際に見える状態になったため優先度上昇</li>
+        <li class="done">【判断済・当面不要】LINEオープンチャットのルールページ — 2026-07-19に「当面不要」と判断。参加者増・トラブル時に再検討（rulesUrlに設定すれば自動表示される実装済み）</li>
+        <li class="todo">【継続】うどん営業中バッジ対象外の8店（営業時間が要確認）— 裏取りでき次第 schedule 追加でバッジ有効化</li>
+        <li class="todo">【継続】店舗カード画像 — og:imageの無い約20店はプレースホルダ。手持ち写真を assets/places/{item id}.jpg に置き image フィールドを追記すれば反映</li>
+        <li class="todo">【年次】祝日データ2028年分を2027年末までに追記（運用手順F）</li>
+        <li class="todo">【運用】Notionトークンのローテーション時は GitHub Secret の再登録が必要（切れると日次更新が失敗しActionsに赤×）</li>
+        <li class="todo">【軽微】カレンダー月/週トグルの配置（中央のまま or 右端固定）／assets/places の不採用画像5枚の整理／過去キャンペーン2件のDiscord失効画像（Notion側差し替えで解消可）</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <h3>公開準備（Phase 2へ進む条件）</h3>
       <ul class="chk">
         <li class="todo">運営者の正式名称、琴平町との関係、公開問い合わせ先を確定</li>
         <li class="todo">プライバシー／運営者ページを正式化し、公開時の noindex を見直す</li>
-        <li class="progress">LINEは名称「ことひらいふ」確定・参加URL・QR用意済み。説明・運営主体・参加ルール・注記を確定し site-widgets-data.js へ反映</li>
+        <li class="done">LINEは名称「ことひらいふ」・参加URL・QR・説明・注記を site-widgets-data.js へ反映済み（2026-07-19掲載開始）。参加ルールURLは当面不要と判断（2026-07-19）</li>
         <li class="todo">広告掲載基準・窓口・掲載料・審査・表示期間を決定</li>
         <li class="todo">うどん店・駐車場の変動情報を公開直前に再確認</li>
         <li class="todo">360／390／560／1280px、キーボード、外部リンク、天気失敗時を実機確認</li>
@@ -491,6 +505,9 @@ SITE_WIDGETS_DATA = { weather, lineOpenChat, ads, footerLinks };</code></pre>
         <li><b>07-14</b>：スマホの7列イベントカレンダーでは名称が読めないと実機で判明。PCは月間グリッドを維持し、スマホは同じ月の日付・時間・名称・場所を読める予定一覧へ切り替える。</li>
         <li><b>07-14 定例</b>：第36回DAO定例で「ことひらいふ」公開間近を共有。<b>かき氷マップを新設</b>する方針（参道・石段沿いはほぼ全店。網羅は困難なためコミュニティの人海戦術で収集）。「冷たいもの」枠としてアイスも載せるが、検索需要に合わせSEOは「かき氷」を前面に。うどん店マップは掲載漏れ（体感20数軒／現17軒）を町民から募集。7/21 AI体験会で年配女性層から店舗情報を聞き取る。</li>
         <li><b>07-14 定例</b>：LINEオープンチャットの名称を<b>「ことひらいふ」（サイトと同名の統一ブランド）に確定</b>し試験運用を開始（招待リンク・QRを共有）。→ F24／公開準備のLINE項目のうち名称・参加URL・QRが揃いつつある。サイトのLINEウィジェット（site-widgets-data.js）反映は別途。</li>
+        <li><b>07-16</b>：イベント月カレンダーのチップをイベント名のみに変更。週表示を追加し、月カレンダーのセル右上に祝日名を表示（2025〜27年 54件）。うどん・かき氷・駐車場カードに画像枠を追加（local-first、公式 og:image 5件を適用）。</li>
+        <li><b>07-17</b>：週表示を「月グリッドの1週間拡大版」に刷新（PCは大型グリッド、スマホはリスト表示）。</li>
+        <li><b>07-19</b>：うどん営業中バッジを追加（11店・JST判定・4状態）し、ホームに「いま営業中のうどん店」モジュールを追加。LINEウィジェットを公開（縦積み: 説明→QR→参加ボタン、運営表記なし）。GitHub Pagesで公開し、Notionデータ（ニュース・イベント・キャンペーン）の日次自動更新が稼働（初回実行成功）。運用手順を A-1（Notion＝自動）・A-2（RSS＝手動）に改訂。</li>
       </ul>
     </div>
   </section>
@@ -541,10 +558,10 @@ site-widgets-data.js → index.html</code></pre>
     <div class="card">
       <h3>LINE・広告を有効にする条件</h3>
       <div class="two-col">
-        <div><p><b>LINEオープンチャット</b></p><ul class="chk"><li class="todo">名称・説明</li><li class="todo">参加URL・QR画像</li><li class="todo">運営主体・参加ルールURL・注記</li></ul></div>
+        <div><p><b>LINEオープンチャット</b></p><ul class="chk"><li class="done">名称・説明</li><li class="done">参加URL・QR画像</li><li class="done">注記＝反映済み、運営表記＝非表示と決定、ルールURL＝当面不要（2026-07-19判断）</li></ul></div>
         <div><p><b>地域スポンサー広告</b></p><ul class="chk"><li class="todo">広告主名・タイトル・リンク</li><li class="todo">代替テキスト付き画像</li><li class="todo">開始日・終了日・掲載場所・表示順</li></ul></div>
       </div>
-      <div class="note warn">現在はLINE無効・広告0件。仮URLや仮QR、契約前の広告は表示しない。</div>
+      <div class="note warn">LINEは2026-07-19に掲載開始（稼働中）。広告は基準未確定のため現在も0件（仮URLや仮QR、契約前の広告は表示しない）。</div>
     </div>
 
     <div class="card">
@@ -567,7 +584,7 @@ site-widgets-data.js → index.html</code></pre>
 
 </main>
 
-<footer>kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-07-16 ／ ローカルHTML</footer>
+<footer>kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-07-19 ／ ローカルHTML</footer>
 
 <script>
   var tabs=[].slice.call(document.querySelectorAll('.tab'));
