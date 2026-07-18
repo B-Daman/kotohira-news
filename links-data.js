@@ -83,6 +83,18 @@ window.LINKS_DATA = {
           }
         },
         {
+          name: "こんぴら十帖",
+          url: "https://www.konpira10.com/",
+          note: "毎月10日、町内の店が限定メニューでもてなす観光協会発のまちおこし企画",
+          image: "",
+          sns: {
+            instagram: "https://www.instagram.com/konpira10/",
+            x: "https://x.com/konpira10",
+            facebook: "https://www.facebook.com/konpira10/",
+            youtube: "https://youtube.com/channel/UC_tU8qjxpA9I-lOzjzSLODw"
+          }
+        },
+        {
           name: "ことひらまちじゅう図書館",
           url: "https://kotohira-machitosho.com/",
           note: "町のあちこちが図書館になる読書プロジェクト",

@@ -13,9 +13,7 @@
 <script src="links-data.js"></script>
 <script src="experiences-data.js"></script>
 <script src="udon-data.js"></script>
-<script src="cool-sweets-data.js"></script>
 <script src="parking-data.js"></script>
-<script src="site-widgets-data.js"></script>
 <!-- Instagram/X の埋め込みスクリプトはここでは読み込まない。表示時にのみ動的注入する（ensureIgScript/ensureTwttrScript） -->
 <style>
   :root{
@@ -30,10 +28,10 @@
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--ink);
     font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",system-ui,sans-serif;
-    line-height:1.7}
+    line-height:1.7;padding-bottom:40px}
   a{color:var(--accent-d);text-decoration:none}
 
-  /* 上部固定バー＋ホバー／フォーカスで開く2階層ナビ */
+  /* 上部固定バー＋タブ */
   .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
     backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid var(--line)}
   /* ヘッダーは全幅（参考サイト調査より）。コンテンツ本体のみ幅を絞る */
@@ -41,35 +39,16 @@
   .brandrow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .brand{font-weight:900;font-size:22px;color:var(--accent-d)}
   .brand small{color:var(--sub);font-weight:500;font-size:13.5px;margin-left:10px}
-  .primary-nav{display:flex;gap:7px;padding:10px 0 6px;overflow:visible}
-  .primary-nav-item{position:relative;flex:0 0 auto}
-  .primary-tab{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);
-    border-radius:10px;padding:8px 15px;font-size:14px;font-weight:900;cursor:pointer;
-    white-space:nowrap;transition:.12s;font-family:inherit}
-  .primary-tab:hover{background:var(--accent-soft);color:var(--accent-d)}
-  .primary-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .primary-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .primary-tab .nav-short{display:none}
-  .nav-caret{display:inline-block;margin-left:5px;font-size:10px;transition:transform .12s}
-  .primary-tab[aria-expanded="true"] .nav-caret{transform:rotate(180deg)}
-  .nav-dropdown{position:absolute;top:100%;left:0;z-index:70;min-width:210px;padding:6px;
-    background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 28px rgba(44,38,34,.14)}
-  .nav-dropdown[hidden]{display:none}
-  .nav-dropdown-item{display:block;width:100%;border:0;border-radius:8px;padding:9px 11px;
-    background:#fff;color:var(--ink);text-align:left;white-space:nowrap;font:700 13.5px/1.45 inherit;cursor:pointer}
-  .nav-dropdown-item:hover,.nav-dropdown-item:focus-visible{background:var(--accent-soft);color:var(--accent-d);outline:none}
-  .nav-dropdown-item.active{background:var(--accent);color:#fff}
-  .nav-dropdown-item.active:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .tabs{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0 10px}
+  .tab{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink);
+    border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:700;cursor:pointer;
+    white-space:nowrap;transition:.12s}
+  .tab:hover{background:var(--accent-soft);color:var(--accent-d)}
+  .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 
-  .page-shell{max-width:1320px;margin:0 auto;padding:22px 20px 40px;display:grid;
-    grid-template-columns:minmax(0,1fr);grid-template-areas:"main" "utility" "community";
-    gap:18px;align-items:start}
-  #main{grid-area:main;min-width:0;scroll-margin-top:110px}
-  .sidebar-utility{grid-area:utility}
-  .sidebar-community{grid-area:community}
-  .sidebar-block:empty{display:none}
-  .group-h{font-size:15px;font-weight:900;margin:22px 0 10px;color:var(--accent-d)}
-  .group-h:first-of-type{margin-top:0}
+  main{max-width:1320px;margin:0 auto;padding:22px 20px 40px}
+  h3.group-h{font-size:15px;font-weight:900;margin:22px 0 10px;color:var(--accent-d)}
+  h3.group-h:first-of-type{margin-top:0}
 
   /* 検索ボックス */
   .search-box{margin-bottom:14px}
@@ -199,19 +178,6 @@
   .conf-medium{background:var(--web);color:#fff}       /* ○ 一部裏取り */
   .conf-low{background:var(--accent);color:#fff}       /* △ 要現地確認（目立つ赤） */
 
-  /* 🍜 うどん：営業中バッジ（ev-status-badge と同寸）。種類バッジの横に並べる。
-     open=緑系（conf-high＝var(--media-gov)と調和）／pre=accent-soft／closed-today・after=グレー系。
-     .lg はモーダル用の一回り大きい版（modal-badge と並べる）。 */
-  .badge-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:2px}
-  .badge-row .ev-status-badge{margin-bottom:0}
-  .open-badge{display:inline-block;border-radius:5px;padding:1px 8px;font-size:10.5px;font-weight:900}
-  .open-badge.lg{padding:3px 10px;font-size:11.5px;border-radius:6px}
-  .open-badge.open{background:var(--media-gov);color:#fff}
-  .open-badge.pre{background:var(--accent-soft);color:var(--accent-d)}
-  .open-badge.closed-today,.open-badge.after{background:#d8d0c4;color:#5c554c}
-  .modal-badge-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
-  .modal-badge-row .modal-badge{margin-bottom:0}
-
   /* 🅿 駐車場タブ：Googleマップ埋め込み（APIキー不要の検索クエリ型iframe）。
      角丸・枠はカード類に合わせる。width:100% で横スクロールを出さない */
   .map-embed{width:100%;border:1px solid var(--line);border-radius:12px;overflow:hidden;
@@ -273,92 +239,6 @@
     cursor:pointer;font-family:inherit;white-space:nowrap}
   .more-link:hover{text-decoration:underline}
 
-  /* ホーム：いま営業中のうどん店モジュール。主要3セクションより控えめな枠付きカードにする（琥珀の左ライン） */
-  .home-udon{border:1px solid var(--line);border-left:4px solid #d8a24a;border-radius:12px;
-    background:#fdfbf7;padding:13px 16px;margin-bottom:28px}
-  .home-udon-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
-  .home-udon-head .group-h{margin:0;color:#8a5a1d}
-  .home-udon-time{font-size:11.5px;color:var(--sub);font-weight:700;white-space:nowrap}
-  .home-udon-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;
-    overflow:hidden;background:var(--card)}
-  .home-udon-row{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;border:0;
-    border-bottom:1px solid var(--line);background:var(--card);color:var(--ink);font-family:inherit;
-    cursor:pointer;padding:9px 12px}
-  .home-udon-row:last-child{border-bottom:0}
-  .home-udon-row:hover{background:var(--accent-soft)}
-  .home-udon-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-  .hur-name{font-size:13.5px;font-weight:900;line-height:1.4}
-  .hur-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:11.5px;color:var(--sub)}
-  .home-udon-empty{font-size:12.5px;color:var(--sub);padding:6px 2px}
-  .home-udon-pre{font-size:12px;color:#4d4740;margin-top:8px}
-  .home-udon-foot{margin-top:10px}
-  .home-udon-more{width:100%}
-
-  /* 画面を押し下げすぎない、ページ名と更新状況だけの小さなカード */
-  .page-title-card{display:flex;align-items:center;justify-content:space-between;gap:12px;
-    background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
-    border-radius:12px;padding:9px 14px;margin:0 0 14px}
-  .page-title-card h1{font-size:17px;line-height:1.4;font-weight:900;margin:0}
-  .page-title-meta{color:var(--sub);font-size:11px;font-weight:700;white-space:nowrap}
-
-  /* サイドバーウィジェット（モバイルは本文を先にし、その後へまとめる） */
-  .widget-stack{display:flex;flex-direction:column;gap:14px}
-  .widget-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;min-width:0}
-  .widget-card.weather-card{border-top:4px solid #3170eb}
-  .widget-card.line-card{border-top:4px solid #148244}
-  .widget-card.ad-card{padding:10px}
-  .widget-kicker{display:block;color:var(--sub);font-size:10.5px;font-weight:900;letter-spacing:.06em;margin-bottom:2px}
-  .widget-title{font-size:15px;font-weight:900;line-height:1.45;margin:0 0 8px}
-  .widget-copy{font-size:12.5px;color:#4d4740;line-height:1.65;margin:0 0 10px}
-  .widget-note{font-size:10.5px;color:var(--sub);line-height:1.55;margin:8px 0 0}
-  .widget-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-  .widget-link{font-size:11.5px;font-weight:700;color:var(--accent-d);text-decoration:none}
-  .widget-link:hover{text-decoration:underline}
-  .widget-loading{font-size:12.5px;color:var(--sub);padding:8px 0}
-  .weather-days{display:flex;flex-direction:column;gap:8px}
-  .weather-day{display:grid;grid-template-columns:42px minmax(0,1fr);gap:9px;align-items:center;
-    border-top:1px solid var(--line);padding-top:8px}
-  .weather-day:first-child{border-top:none;padding-top:0}
-  .weather-icon{font-size:28px;line-height:1;text-align:center}
-  .weather-label{font-size:11px;color:var(--sub);font-weight:700}
-  .weather-text{font-size:13.5px;font-weight:900;line-height:1.4;margin-top:1px}
-  .weather-meta{display:flex;gap:8px;flex-wrap:wrap;color:#4d4740;font-size:11.5px;margin-top:3px}
-  .weather-fallback{font-size:12.5px;color:var(--sub);line-height:1.65}
-  .quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
-  .quick-route{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 7px;
-    color:var(--ink);font:700 11.5px/1.35 inherit;text-align:left;cursor:pointer}
-  .quick-route:hover{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
-  .quick-route:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .line-content{display:flex;flex-direction:column;gap:10px}
-  .line-content>*{margin:0}
-  .line-qr{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);border-radius:8px;
-    background:#fff;align-self:center}
-  .line-join{display:inline-block;background:#148244;color:#fff;border-radius:8px;padding:8px 13px;
-    font-size:12.5px;font-weight:900;text-align:center}
-  .line-join:hover{background:#0f6e38;color:#fff}
-  .ad-label{display:flex;justify-content:space-between;gap:8px;align-items:center;color:var(--sub);
-    font-size:10px;font-weight:900;margin:0 2px 7px}
-  .ad-main{display:block;color:inherit;text-decoration:none;border-radius:8px;overflow:hidden}
-  .ad-main:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .ad-image{width:100%;aspect-ratio:3/1;display:block;object-fit:cover;background:#f1ece2}
-  .ad-title{font-size:12px;font-weight:700;line-height:1.5;padding:8px 3px 2px}
-  .ad-vacancy{border-style:dashed;text-align:center;background:#fcfaf6}
-  .ad-vacancy .widget-copy{margin-bottom:0}
-  .ad-mobile-only{display:none}
-  .mobile-ad-slot{display:none;margin:0 0 18px}
-  .data-widget{background:transparent;border-style:dashed}
-  .data-widget .widget-note{margin:0}
-
-  /* 最小限のフッター。リンクは正式URLが設定されたものだけ表示する */
-  .site-footer{border-top:1px solid var(--line);background:#fff}
-  .footer-inner{max-width:1320px;margin:0 auto;padding:15px 20px;display:flex;align-items:center;
-    justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .footer-brand{font-size:14px;font-weight:900;color:var(--accent-d)}
-  .footer-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-  .footer-links[hidden],.footer-links:empty{display:none}
-  .footer-link{font-size:11.5px;color:var(--sub);font-weight:700}
-  .footer-link:hover{text-decoration:underline;color:var(--accent-d)}
-
 
   /* キャンペーンタブ：Googleカレンダー風の月グリッド */
   .cal-wrap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:22px}
@@ -371,8 +251,8 @@
     border-top:1px solid var(--line)}
   .cal-weekday{font-size:11px;color:var(--sub);text-align:center;font-weight:700;padding:4px 0;
     background:#fcfaf6;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .cal-weekday.sat{color:#2b63cf}
-  .cal-weekday.sun{color:var(--accent-d)}
+  .cal-weekday.sat{color:#3170eb}
+  .cal-weekday.sun{color:var(--accent)}
   .cal-week{position:relative}
   .cal-cells{display:grid;grid-template-columns:repeat(7,1fr);border-left:1px solid var(--line)}
   /* min-width:0 は必須。Gridの既定 min-width:auto のままだと、下の nowrap な
@@ -382,19 +262,14 @@
   .cal-cell.other-month{background:#faf9f6}
   .cal-cell.sat{background:#f3f7fd}
   .cal-cell.sun{background:#fdf4f1}
-  .cal-cell.sat .cal-cell-num{color:#2b63cf}
-  .cal-cell.sun .cal-cell-num{color:var(--accent-d)}
+  .cal-cell.sat .cal-cell-num{color:#3170eb}
+  .cal-cell.sun .cal-cell-num{color:var(--accent)}
   .cal-cell.other-month.sat,.cal-cell.other-month.sun{background:#faf9f6}
   .cal-cell.today{background:var(--accent-soft);box-shadow:inset 0 0 0 2px var(--accent)}
   .cal-cell-num{font-size:12px;color:var(--sub);font-weight:700;display:inline-block}
   .cal-cell.other-month .cal-cell-num{color:#cfc7b9}
   .cal-cell.today .cal-cell-num{background:var(--accent);color:#fff;border-radius:50%;
     width:20px;height:20px;line-height:20px;text-align:center}
-  /* 日付番号と祝日名を同一行に並べる（右端に祝日名）。セル高さは日付番号のみの時と変わらない。 */
-  .cal-cell-head{display:flex;align-items:baseline;justify-content:space-between;gap:4px;min-width:0}
-  .cal-holiday-name{font-size:9.5px;font-weight:700;color:var(--accent-d);white-space:nowrap;
-    overflow:hidden;text-overflow:ellipsis;min-width:0}
-  .cal-cell.other-month .cal-holiday-name{color:#d3b0a6}
   .cal-bars-overlay{position:absolute;top:24px;left:0;right:0;bottom:2px;display:grid;
     grid-template-columns:repeat(7,1fr);gap:2px;pointer-events:none;overflow:hidden}
   .cal-bar{pointer-events:auto;grid-row:1;border-radius:4px;padding:2px 6px;font-size:10.5px;color:#fff;font-weight:700;
@@ -414,67 +289,6 @@
   .cal-chip:hover{filter:brightness(.96)}
   .cal-chip:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
   .cal-chip-more{background:none;color:var(--sub)}
-  /* 週表示（PC）：月グリッドの1週間拡大版。セルを大きくし（min-height 260px。内容に応じて伸びる）、
-     チップは折り返しを許可し「HH:MM イベント名」を最大3行まで表示、時刻部分を強調する。 */
-  .cal-cells.week-grid .cal-cell{min-height:260px}
-  .cal-cells.week-grid .cal-chips{gap:4px}
-  .cal-chip-week{white-space:normal;text-overflow:clip;font-size:11.5px;line-height:1.35;
-    padding:3px 6px;border-radius:5px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}
-  .cal-chip-time{font-weight:900;color:var(--accent-d)}
-
-  /* イベントカレンダーのスマホ表示。PCは月間グリッド／週グリッド、スマホは一覧に切り替える。 */
-  .event-mobile-agenda{display:none}
-  .event-week-mobile{display:none}
-  .event-agenda-head{display:flex;align-items:center;justify-content:space-between;gap:10px;
-    margin:2px 0 9px;font-size:12px;color:var(--sub);font-weight:700}
-  .event-agenda-list{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--card)}
-  .event-agenda-item{width:100%;display:grid;grid-template-columns:94px minmax(0,1fr) 14px;gap:10px;
-    align-items:center;min-height:64px;padding:10px 11px;border:0;border-bottom:1px solid var(--line);
-    background:var(--card);color:var(--ink);text-align:left;font-family:inherit;cursor:pointer}
-  .event-agenda-item:last-child{border-bottom:0}
-  .event-agenda-item:hover{background:var(--accent-soft)}
-  .event-agenda-item:focus-visible{position:relative;z-index:1;outline:2px solid var(--accent);outline-offset:-2px}
-  .event-agenda-date{display:flex;flex-direction:column;line-height:1.35;color:var(--accent-d)}
-  .event-agenda-date strong{font-size:13px;font-weight:900}
-  .event-agenda-date small{font-size:11px;color:var(--sub);font-weight:700}
-  .event-agenda-body{min-width:0;display:flex;flex-direction:column;gap:3px}
-  .event-agenda-title{font-size:13.5px;line-height:1.5;font-weight:900;overflow-wrap:anywhere}
-  .event-agenda-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:11.5px;color:var(--sub)}
-  .event-agenda-status{display:inline-block;border-radius:999px;padding:1px 6px;font-size:10.5px;font-weight:800;
-    background:var(--accent-soft);color:var(--accent-d)}
-  .event-agenda-status.active{background:var(--accent);color:#fff}
-  .event-agenda-status.ended{background:#e8e3dc;color:#625a51}
-  .event-agenda-arrow{color:var(--sub);font-size:18px;line-height:1;text-align:right}
-
-  /* イベントカレンダーの月／週切替トグル（イベントカレンダーのみ。cal-nav-btnと調和する小さめのボタン） */
-  .cal-view-toggle{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  .cal-view-btn{border:0;background:#fff;color:var(--sub);font:800 12px/1 inherit;font-family:inherit;
-    padding:8px 12px;cursor:pointer}
-  .cal-view-btn+.cal-view-btn{border-left:1px solid var(--line)}
-  .cal-view-btn:hover{background:var(--accent-soft);color:var(--accent-d)}
-  .cal-view-btn.active{background:var(--accent);color:#fff}
-  .cal-view-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-  .cal-week-label{min-width:200px}
-  /* 週表示：Googleカレンダーの「スケジュール」ビュー風。全体を1枚のカードにし、日付列とイベント列の
-     2列グリッド行を1pxの区切り線だけで縦に並べる（PC・スマホ共通。月表示の出し分けとは別クラス）。 */
-  .event-week-view{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--card)}
-  .ewk-row{display:grid;grid-template-columns:86px minmax(0,1fr);border-top:1px solid var(--line)}
-  .ewk-row:first-child{border-top:0}
-  /* 今日の行は月カレンダーの .cal-cell.today と同系に強調（accent-soft＋左端のアクセントバー） */
-  .ewk-row.today{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
-  .ewk-datecol{display:flex;flex-direction:column;justify-content:center;gap:1px;line-height:1.2;
-    padding:10px 8px 10px 12px;border-right:1px solid var(--line)}
-  .ewk-date{font-size:16px;font-weight:900;color:var(--ink)}
-  .ewk-sub{font-size:10.5px;font-weight:700;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ewk-row.sat .ewk-date,.ewk-row.sat .ewk-sub{color:#2b63cf}
-  .ewk-row.sun .ewk-date,.ewk-row.sun .ewk-sub{color:var(--accent-d)}
-  .ewk-events{min-width:0;display:flex;flex-direction:column;justify-content:center}
-  /* イベント行内はカード背景を透過させ、行の強調（today）や区切り線が正しく見えるようにする */
-  .ewk-events .event-agenda-item{background:transparent}
-  /* 予定のない日は低い行高で薄く（見出しは7日分すべて残す） */
-  .ewk-empty{padding:7px 12px;font-size:11.5px;color:var(--sub)}
-  /* 週表示の行は日付見出しが別にあるため、日付列を省いた本文＋矢印の2列にする */
-  .event-agenda-item.agenda-week{grid-template-columns:minmax(0,1fr) 14px}
 
   /* 詳細モーダル（イベント／キャンペーン共用） */
   .modal-overlay{position:fixed;inset:0;background:rgba(30,25,20,.55);z-index:100;
@@ -511,41 +325,8 @@
     border-radius:14px;background:var(--card)}
   .hint{font-size:12px;color:var(--sub);margin:-4px 0 12px}
 
-  @media (min-width:1100px){
-    .page-shell{grid-template-columns:minmax(0,1fr) 300px;
-      grid-template-areas:"main utility" "main community";grid-template-rows:max-content 1fr;
-      column-gap:24px;row-gap:14px}
-    .sidebar-community{align-self:start}
-  }
-  @media (max-width:720px){
-    body{padding-bottom:0}
-    .topbar-inner{padding:8px 12px 0}
-    .brand{font-size:20px}
-    .brand small{display:block;margin:0;font-size:11.5px}
-    .primary-nav{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding-top:8px}
-    .primary-nav-item{position:static;min-width:0}
-    .primary-tab{padding:7px 2px;font-size:11.5px;text-align:center;overflow:hidden;text-overflow:ellipsis}
-    .primary-tab .nav-full{display:none}
-    .primary-tab .nav-short{display:inline}
-    .nav-caret{margin-left:2px;font-size:9px}
-    .nav-dropdown{left:0;right:0;top:100%;width:auto;min-width:0;padding:8px}
-    .page-shell{padding:16px 12px 30px;gap:16px}
-    .footer-inner{padding:13px 12px}
-    #eventCalendar .event-calendar-desktop{display:none}
-    #eventCalendar .event-mobile-agenda{display:block}
-    #eventCalendar .event-week-mobile{display:block}
-    #eventCalendar .cal-nav-btn{width:44px;height:44px}
-  }
-  @media (max-width:1099px){
-    .ad-desktop-only{display:none}
-    .ad-mobile-only{display:block}
-    .mobile-ad-slot{display:block}
-    .sidebar-community.mobile-empty{display:none}
-    .line-qr{display:none}
-  }
   @media (max-width:480px){
-    .page-title-card{padding:8px 11px}
-    .page-title-card h1{font-size:16px}
+    .tabs{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
     .card-grid{grid-template-columns:1fr}
     .map-embed iframe{height:230px}
     .cal-wrap{padding:12px 10px}
@@ -557,29 +338,16 @@
 </head>
 <body>
 
-<div id="appFrame">
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brandrow">
-        <div class="brand" id="hTitle">ことひらいふ <small>香川県琴平町の"今"をお届け</small></div>
-      </div>
-      <nav class="primary-nav" id="primaryNav" aria-label="メインメニュー"></nav>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brandrow">
+      <div class="brand" id="hTitle">ことひらいふ <small>香川県琴平町の"今"をお届け</small></div>
     </div>
+    <nav class="tabs" id="tabs"></nav>
   </div>
-
-  <div class="page-shell" id="pageShell">
-    <main id="main"></main>
-    <aside class="sidebar-block sidebar-utility" id="utilityWidgets" aria-label="今日の琴平と目的から探す"></aside>
-    <aside class="sidebar-block sidebar-community" id="communityWidgets" aria-label="地域コミュニティとスポンサー"></aside>
-  </div>
-
-  <footer class="site-footer" id="siteFooter">
-    <div class="footer-inner">
-      <div class="footer-brand">ことひらいふ</div>
-      <nav class="footer-links" id="footerLinks" aria-label="サイト情報" hidden></nav>
-    </div>
-  </footer>
 </div>
+
+<main id="main"></main>
 
 <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
   <div class="modal-box" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -615,18 +383,9 @@ const LINKS = (window.LINKS_DATA && Array.isArray(window.LINKS_DATA.categories))
 const UDON = (window.UDON_DATA && typeof window.UDON_DATA === "object")
   ? window.UDON_DATA : { checked: "", kinds: [], items: [] };
 
-/* 🍧 かき氷・アイス（cool-sweets-data.js 由来。夏の参拝者向け手編集運用） */
-const COOL_SWEETS = (window.COOL_SWEETS_DATA && typeof window.COOL_SWEETS_DATA === "object")
-  ? window.COOL_SWEETS_DATA : { checked: "", zones: [], items: [] };
-
 /* 🅿 駐車場（parking-data.js 由来。コード直書き運用） */
 const PARKING = (window.PARKING_DATA && typeof window.PARKING_DATA === "object")
   ? window.PARKING_DATA : { checked: "", groups: [], items: [] };
-
-/* 🌤 共通ウィジェット／広告（公開設定のみ。契約・請求等の非公開情報は置かない） */
-const WIDGETS = (window.SITE_WIDGETS_DATA && typeof window.SITE_WIDGETS_DATA === "object")
-  ? window.SITE_WIDGETS_DATA
-  : { updated:"", weather:{enabled:false}, lineOpenChat:{enabled:false}, footerLinks:{}, ads:[] };
 
 const SNS = [
   {key:"note",label:"note"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
@@ -639,30 +398,10 @@ const TABS = [
   {key:"campaigns",label:"🎁 キャンペーン"},
   {key:"experiences",label:"🧭 体験・滞在"},
   {key:"udon",label:"🍜 うどん店"},
-  {key:"sweets",label:"🍧 かき氷・アイス"},
   {key:"parking",label:"🅿 駐車場"},
   {key:"orgs",label:"📋 団体"},
   {key:"links",label:"🔗 リンク"}
 ];
-/* 第一階層は目的別に4つへ整理し、各ルートは第二階層として維持する */
-const NAV_GROUPS = [
-  {key:"home", label:"🏠 ホーム", shortLabel:"🏠 ホーム", routes:["home"]},
-  {key:"now", label:"📰 町の今", shortLabel:"📰 町の今", routes:["news","events","campaigns"]},
-  {key:"visit", label:"🧭 訪れる・関わる", shortLabel:"🧭 訪れる", routes:["experiences","udon","sweets","parking"]},
-  {key:"know", label:"🔗 町を知る", shortLabel:"🔗 町を知る", routes:["orgs","links"]}
-];
-const PAGE_META = {
-  home:{title:"🏠 ホーム"},
-  news:{title:"📰 ニュース"},
-  events:{title:"📅 イベント"},
-  campaigns:{title:"🎁 キャンペーン"},
-  experiences:{title:"🧭 体験・滞在"},
-  udon:{title:"🍜 うどん店"},
-  sweets:{title:"🍧 かき氷・アイス"},
-  parking:{title:"🅿 駐車場"},
-  orgs:{title:"📋 団体"},
-  links:{title:"🔗 リンク"}
-};
 const MEDIA_CLASS = {
   "note":"note", "Instagram":"instagram", "X":"x", "HP":"website",
   "新聞":"newspaper", "テレビ":"tv", "行政":"gov", "Webメディア":"webmedia", "その他":"other"
@@ -680,27 +419,18 @@ const PARKING_EMOJI = {"無料":"🆓","有料":"🅿","予約":"📱"};
 const WEEKDAYS = ["日","月","火","水","木","金","土"];        // 日曜始まり（表記用）
 const WEEKDAYS_MON = ["月","火","水","木","金","土","日"];    // 月曜始まり（カレンダー見出し用）
 
-/* 日本の祝日（2025〜2027年。振替休日・国民の休日を含む）。日付→祝日名の対応表。
-   土日祝配色（isJpHoliday）とカレンダーセル右上・週表示見出しの祝日名（jpHolidayName）で共用。
-   年次更新は docs/運用手順.md セクションF 参照（各日付の曜日は「2026/01/01=木」基準で検算する）。 */
-const JP_HOLIDAY_NAMES = {
-  "2025-01-01":"元日","2025-01-13":"成人の日","2025-02-11":"建国記念の日","2025-02-23":"天皇誕生日",
-  "2025-02-24":"振替休日","2025-03-20":"春分の日","2025-04-29":"昭和の日","2025-05-03":"憲法記念日",
-  "2025-05-04":"みどりの日","2025-05-05":"こどもの日","2025-05-06":"振替休日","2025-07-21":"海の日",
-  "2025-08-11":"山の日","2025-09-15":"敬老の日","2025-09-23":"秋分の日","2025-10-13":"スポーツの日",
-  "2025-11-03":"文化の日","2025-11-23":"勤労感謝の日","2025-11-24":"振替休日",
-  "2026-01-01":"元日","2026-01-12":"成人の日","2026-02-11":"建国記念の日","2026-02-23":"天皇誕生日",
-  "2026-03-20":"春分の日","2026-04-29":"昭和の日","2026-05-03":"憲法記念日","2026-05-04":"みどりの日",
-  "2026-05-05":"こどもの日","2026-05-06":"振替休日","2026-07-20":"海の日","2026-08-11":"山の日",
-  "2026-09-21":"敬老の日","2026-09-22":"国民の休日","2026-09-23":"秋分の日","2026-10-12":"スポーツの日",
-  "2026-11-03":"文化の日","2026-11-23":"勤労感謝の日",
-  "2027-01-01":"元日","2027-01-11":"成人の日","2027-02-11":"建国記念の日","2027-02-23":"天皇誕生日",
-  "2027-03-21":"春分の日","2027-03-22":"振替休日","2027-04-29":"昭和の日","2027-05-03":"憲法記念日",
-  "2027-05-04":"みどりの日","2027-05-05":"こどもの日","2027-07-19":"海の日","2027-08-11":"山の日",
-  "2027-09-20":"敬老の日","2027-09-23":"秋分の日","2027-10-11":"スポーツの日","2027-11-03":"文化の日",
-  "2027-11-23":"勤労感謝の日"
-};
-const JP_HOLIDAYS = new Set(Object.keys(JP_HOLIDAY_NAMES));
+/* 日本の祝日（2025〜2027年。振替休日・国民の休日を含む）。カレンダーの土日祝配色用 */
+const JP_HOLIDAYS = new Set([
+  "2025-01-01","2025-01-13","2025-02-11","2025-02-23","2025-02-24","2025-03-20",
+  "2025-04-29","2025-05-03","2025-05-04","2025-05-05","2025-05-06","2025-07-21",
+  "2025-08-11","2025-09-15","2025-09-23","2025-10-13","2025-11-03","2025-11-23","2025-11-24",
+  "2026-01-01","2026-01-12","2026-02-11","2026-02-23","2026-03-20","2026-04-29",
+  "2026-05-03","2026-05-04","2026-05-05","2026-05-06","2026-07-20","2026-08-11",
+  "2026-09-21","2026-09-22","2026-09-23","2026-10-12","2026-11-03","2026-11-23",
+  "2027-01-01","2027-01-11","2027-02-11","2027-02-23","2027-03-21","2027-03-22",
+  "2027-04-29","2027-05-03","2027-05-04","2027-05-05","2027-07-19","2027-08-11",
+  "2027-09-20","2027-09-23","2027-10-11","2027-11-03","2027-11-23"
+]);
 
 /* ===== 画面状態 ===== */
 let orgSearchTerm = "";
@@ -708,29 +438,16 @@ let orgSub = "updates";
 let currentOrgId = null;
 let campaignCalMonth = null;      // {y, mo} キャンペーンカレンダーの表示中の月
 let eventCalMonth = null;         // {y, mo} イベントカレンダーの表示中の月
-let eventCalView = "month";       // "month" | "week" イベントカレンダーの表示モード（既定は月）
-let eventCalWeekStart = null;      // Date 週表示の週開始日（月曜。monthGridWeek系と同じ月曜始まり規則）
 let itemRegistry = {};            // slug -> {item, kind}  詳細モーダル表示用のルックアップ
 let dayEventsRegistry = {};       // "y-mo-d" -> [items]  「+N件」の日別一覧モーダル用のルックアップ
 let modalLastFocusedEl = null;
-let hasRenderedOnce = false;
-let openNavGroup = null;
-let pinnedNavGroup = null;
-let suppressNavFocusOpen = false;
 
 /* ===== 起動 ===== */
 function init(){
-  const primaryNav = document.getElementById("primaryNav");
-  primaryNav.addEventListener("click", onTabsClick);
-  primaryNav.addEventListener("pointerover", onNavPointerOver);
-  primaryNav.addEventListener("pointerout", onNavPointerOut);
-  primaryNav.addEventListener("focusin", onNavFocusIn);
-  primaryNav.addEventListener("focusout", onNavFocusOut);
-  primaryNav.addEventListener("keydown", onNavKeydown);
-  document.addEventListener("click", onDocumentNavClick);
-  document.getElementById("pageShell").addEventListener("click", onMainClick);
-  document.getElementById("pageShell").addEventListener("input", onMainInput);
-  document.getElementById("pageShell").addEventListener("keydown", onMainKeydown);
+  document.getElementById("tabs").addEventListener("click", onTabsClick);
+  document.getElementById("main").addEventListener("click", onMainClick);
+  document.getElementById("main").addEventListener("input", onMainInput);
+  document.getElementById("main").addEventListener("keydown", onMainKeydown);
   document.getElementById("modalBody").addEventListener("click", onMainClick);
   document.getElementById("modalBody").addEventListener("keydown", onMainKeydown);
   document.getElementById("modalOverlay").addEventListener("click", function(e){
@@ -759,21 +476,14 @@ function init(){
   });
   window.addEventListener("hashchange", render);
   if(!location.hash){ history.replaceState(null, "", "#home"); }
-  renderUtilityWidgets();
-  renderCommunityWidgets();
-  renderFooterLinks();
-  loadWeatherWidget();
   render();
 }
 
 /* ===== ルーティング ===== */
 function parseHash(){
   const h = (location.hash||"").replace(/^#/, "");
-  if(h.indexOf("org=") === 0){
-    try{ return {view:"org", id: decodeURIComponent(h.slice(4))}; }
-    catch(e){ return {view:"orgs"}; }
-  }
-  if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","links"].indexOf(h) >= 0) return {view:h};
+  if(h.indexOf("org=") === 0) return {view:"org", id: decodeURIComponent(h.slice(4))};
+  if(["home","orgs","news","events","campaigns","experiences","udon","parking","links"].indexOf(h) >= 0) return {view:h};
   return {view:"home"};
 }
 
@@ -781,12 +491,11 @@ function render(opt){
   const r = parseHash();
   renderTabs(r);
   const m = document.getElementById("main");
-  document.body.dataset.view = r.view;
   if(r.view === "orgs"){
     m.innerHTML = orgsListHTML(orgSearchTerm);
   } else if(r.view === "org"){
     const o = D.orgs.find(x=>x.id===r.id);
-    if(!o){ location.hash = "#orgs"; return; }
+    if(!o){ m.innerHTML = emptyMsg("団体が見つかりません。"); return; }
     if(currentOrgId !== o.id){ orgSub = "updates"; currentOrgId = o.id; }
     m.innerHTML = orgDetailHTML(o);
     loadEmbedsForOrgSub(orgSub);
@@ -800,8 +509,6 @@ function render(opt){
     m.innerHTML = experiencesTabHTML();
   } else if(r.view === "udon"){
     m.innerHTML = udonTabHTML();
-  } else if(r.view === "sweets"){
-    m.innerHTML = coolSweetsTabHTML();
   } else if(r.view === "parking"){
     m.innerHTML = parkingTabHTML();
   } else if(r.view === "links"){
@@ -809,189 +516,26 @@ function render(opt){
   } else {
     m.innerHTML = homeHTML();
   }
-  if(r.view !== "org") m.innerHTML = pageTitleCardHTML(r.view) + m.innerHTML;
-  insertMobileInlineAds(m, r.view);
-  const meta = PAGE_META[r.view];
-  const orgTitle = r.view === "org" ? (D.orgs.find(x=>x.id===r.id)?.name || "") : "";
-  document.title = orgTitle ? `${orgTitle}｜ことひらいふ`
-    : r.view === "home" ? "ことひらいふ"
-    : meta ? `${meta.title.replace(/^\S+\s*/, "")}｜ことひらいふ` : "ことひらいふ";
-  if(hasRenderedOnce && !(opt && opt.noScroll)){
-    const focusTarget = m.querySelector("h1") || m;
-    focusTarget.setAttribute("tabindex", "-1");
-    try{ focusTarget.focus({preventScroll:true}); }catch(e){ focusTarget.focus(); }
-    if(r.view === "home"){
-      window.scrollTo({top:0, behavior:"smooth"});
-    }else if(typeof m.scrollIntoView === "function"){
-      m.scrollIntoView({block:"start", behavior:"smooth"});
-    }
-  }else if(!(opt && opt.noScroll)){
-    window.scrollTo({top:0, behavior:"smooth"});
-  }
-  hasRenderedOnce = true;
-}
-
-function pageTitleMeta(view){
-  const experienceUpdated = (Array.isArray(ND_RAW.experiences) && ND_RAW.experiences.length)
-    ? ND.fetched : (window.EXPERIENCES_DATA?.updated || "");
-  const values = {
-    news:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
-    events:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
-    campaigns:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
-    experiences:experienceUpdated ? `更新 ${fmtDate(experienceUpdated)}` : "",
-    udon:[`${(UDON.items || []).filter(x=>x.show !== false).length}件`, UDON.checked ? `確認 ${fmtDate(UDON.checked)}` : ""].filter(Boolean).join(" · "),
-    sweets:[`${(COOL_SWEETS.items || []).filter(x=>x.show !== false).length}店`, COOL_SWEETS.checked ? `確認 ${fmtDate(COOL_SWEETS.checked)}` : ""].filter(Boolean).join(" · "),
-    parking:[`${(PARKING.items || []).filter(x=>x.show !== false).length}件`, PARKING.checked ? `確認 ${fmtDate(PARKING.checked)}` : ""].filter(Boolean).join(" · "),
-    orgs:D.updated ? `更新 ${fmtDate(D.updated)}` : "",
-    links:LINKS.updated ? `更新 ${fmtDate(LINKS.updated)}` : ""
-  };
-  return values[view] || "";
-}
-function pageTitleCardHTML(view){
-  const meta = PAGE_META[view];
-  const detail = pageTitleMeta(view);
-  return `<header class="page-title-card">
-    <h1>${esc(meta?.title || "ことひらいふ")}</h1>
-    ${detail ? `<span class="page-title-meta">${esc(detail)}</span>` : ""}
-  </header>`;
+  if(!(opt && opt.noScroll)) window.scrollTo({top:0, behavior:"smooth"});
 }
 
 function renderTabs(r){
   const activeKey = r.view === "org" ? "orgs" : r.view;
-  const activeGroup = NAV_GROUPS.find(g=>g.routes.indexOf(activeKey) >= 0) || NAV_GROUPS[0];
-  const primary = document.getElementById("primaryNav");
-  openNavGroup = null;
-  pinnedNavGroup = null;
-  primary.innerHTML = NAV_GROUPS.map(g=>{
-    const groupActive = activeGroup.key === g.key;
-    const fullLabel = esc(g.label);
-    const shortLabel = esc(g.shortLabel);
-    if(g.routes.length === 1){
-      return `<div class="primary-nav-item">
-        <button type="button" class="primary-tab ${groupActive?'active':''}" data-route="${esc(g.routes[0])}"
-          ${groupActive?'aria-current="page"':''}>
-          <span class="nav-full">${fullLabel}</span><span class="nav-short">${shortLabel}</span>
-        </button>
-      </div>`;
-    }
-    const groupTabs = TABS.filter(t=>g.routes.indexOf(t.key) >= 0);
-    return `<div class="primary-nav-item" data-nav-item="${esc(g.key)}">
-      <button type="button" class="primary-tab ${groupActive?'active':''}" data-nav-group="${esc(g.key)}"
-        aria-expanded="false" aria-controls="nav-sub-${esc(g.key)}"
-        aria-label="${fullLabel}${groupActive?'（選択中）':''}">
-        <span class="nav-full">${fullLabel}</span><span class="nav-short">${shortLabel}</span><span class="nav-caret" aria-hidden="true">▾</span>
-      </button>
-      <div class="nav-dropdown" id="nav-sub-${esc(g.key)}" role="group" aria-label="${fullLabel}" hidden>
-        ${groupTabs.map(t=>`<button type="button" class="nav-dropdown-item ${activeKey===t.key?'active':''}"
-          data-route="${esc(t.key)}"${activeKey===t.key?' aria-current="page"':''}>${esc(t.label)}</button>`).join("")}
-      </div>
-    </div>`;
-  }).join("");
+  const tabs = document.getElementById("tabs");
+  tabs.innerHTML = TABS.map(t=>
+    `<button class="tab ${activeKey===t.key?'active':''}" data-route="${t.key}"${activeKey===t.key?' aria-current="page"':''}>${t.label}</button>`
+  ).join("");
+  /* モバイルの横長タブ列では、URLから直接開いたタブも見える位置へ寄せる */
+  const activeTab = tabs.querySelector(".tab.active");
+  if(activeTab && tabs.scrollWidth > tabs.clientWidth && typeof activeTab.scrollIntoView === "function"){
+    activeTab.scrollIntoView({inline:"center", block:"nearest"});
+  }
 }
 
 /* ===== イベント委譲 ===== */
 function onTabsClick(e){
-  const groupBtn = e.target.closest("[data-nav-group]");
-  if(groupBtn){
-    const key = groupBtn.dataset.navGroup;
-    if(openNavGroup === key && pinnedNavGroup === key){
-      closeNavMenus();
-    }else{
-      pinnedNavGroup = key;
-      setNavOpen(key, true);
-    }
-    return;
-  }
   const b = e.target.closest("[data-route]");
-  if(b){
-    closeNavMenus();
-    location.hash = "#" + b.dataset.route;
-  }
-}
-function setNavOpen(key, shouldOpen){
-  const primary = document.getElementById("primaryNav");
-  primary.querySelectorAll("[data-nav-item]").forEach(item=>{
-    const trigger = item.querySelector("[data-nav-group]");
-    const panel = item.querySelector(".nav-dropdown");
-    if(!trigger || !panel) return;
-    const open = !!shouldOpen && item.dataset.navItem === key;
-    panel.hidden = !open;
-    trigger.setAttribute("aria-expanded", String(open));
-  });
-  openNavGroup = shouldOpen ? key : null;
-}
-function closeNavMenus(){
-  pinnedNavGroup = null;
-  setNavOpen(null, false);
-}
-function navItemFromEvent(e){
-  const item = e.target.closest("[data-nav-item]");
-  const primary = document.getElementById("primaryNav");
-  return item && primary.contains(item) ? item : null;
-}
-function onNavPointerOver(e){
-  if(e.pointerType !== "mouse" && e.pointerType !== "pen") return;
-  const item = navItemFromEvent(e);
-  if(!item || (e.relatedTarget && item.contains(e.relatedTarget))) return;
-  if(pinnedNavGroup && pinnedNavGroup !== item.dataset.navItem) pinnedNavGroup = null;
-  setNavOpen(item.dataset.navItem, true);
-}
-function onNavPointerOut(e){
-  if(e.pointerType !== "mouse" && e.pointerType !== "pen") return;
-  const item = navItemFromEvent(e);
-  if(!item || (e.relatedTarget && item.contains(e.relatedTarget))) return;
-  if(pinnedNavGroup !== item.dataset.navItem) setNavOpen(null, false);
-}
-function onNavFocusIn(e){
-  if(suppressNavFocusOpen) return;
-  const item = navItemFromEvent(e);
-  if(item) setNavOpen(item.dataset.navItem, true);
-}
-function onNavFocusOut(e){
-  const item = navItemFromEvent(e);
-  if(!item) return;
-  setTimeout(()=>{
-    const stillFocused = item.contains(document.activeElement);
-    const stillHovered = typeof item.matches === "function" && item.matches(":hover");
-    if(!stillFocused && !stillHovered && openNavGroup === item.dataset.navItem) closeNavMenus();
-  }, 0);
-}
-function onNavKeydown(e){
-  const trigger = e.target.closest("[data-nav-group]");
-  const item = navItemFromEvent(e);
-  if(e.key === "Escape" && openNavGroup){
-    e.preventDefault();
-    const key = openNavGroup;
-    suppressNavFocusOpen = true;
-    closeNavMenus();
-    const target = document.querySelector(`[data-nav-group="${key}"]`);
-    if(target) target.focus();
-    setTimeout(()=>{ suppressNavFocusOpen = false; }, 0);
-    return;
-  }
-  if(trigger && e.key === "ArrowDown"){
-    e.preventDefault();
-    const key = trigger.dataset.navGroup;
-    pinnedNavGroup = key;
-    setNavOpen(key, true);
-    const first = item?.querySelector(".nav-dropdown-item");
-    if(first) first.focus();
-    return;
-  }
-  const current = e.target.closest(".nav-dropdown-item");
-  if(!current || !item || !["ArrowDown","ArrowUp","Home","End"].includes(e.key)) return;
-  e.preventDefault();
-  const items = Array.from(item.querySelectorAll(".nav-dropdown-item"));
-  let index = items.indexOf(current);
-  if(e.key === "Home") index = 0;
-  else if(e.key === "End") index = items.length - 1;
-  else if(e.key === "ArrowDown") index = (index + 1) % items.length;
-  else index = (index - 1 + items.length) % items.length;
-  items[index]?.focus();
-}
-function onDocumentNavClick(e){
-  const primary = document.getElementById("primaryNav");
-  if(openNavGroup && !primary.contains(e.target)) closeNavMenus();
+  if(b){ location.hash = "#" + b.dataset.route; }
 }
 function onMainClick(e){
   const orgRow = e.target.closest("[data-org-id]");
@@ -1022,8 +566,6 @@ function onMainClick(e){
     openDayEventsModal(key, dayEventsRegistry[key] || []);
     return;
   }
-  const calView = e.target.closest("[data-cal-view]");
-  if(calView){ switchEventCalView(calView.dataset.calView); return; }
   const calNav = e.target.closest("[data-cal-nav]");
   if(calNav){ navigateCalendar(calNav.dataset.calTarget, parseInt(calNav.dataset.calNav, 10) || 0); return; }
 }
@@ -1034,69 +576,26 @@ function onMainInput(e){
     if(rows) rows.innerHTML = orgRowsHTML(orgSearchTerm);
   }
 }
-/* 月表示→週表示に切り替えるときの週開始日（月曜）。表示中の月に今日が含まれれば今日を含む週、
-   そうでなければその月の1日を含む週。週の起点は monthGridWeeks と同じ月曜始まり（mondayOf）。 */
-function weekStartForCurrentMonth(){
-  if(!eventCalMonth){ const t=new Date(); eventCalMonth={y:t.getFullYear(), mo:t.getMonth()+1}; }
-  const t = new Date(); t.setHours(0,0,0,0);
-  const {y, mo} = eventCalMonth;
-  const inMonth = (t.getFullYear() === y && (t.getMonth()+1) === mo);
-  return mondayOf(inMonth ? t : new Date(y, mo-1, 1));
-}
-/* イベントカレンダーの月／週表示の切替。#eventCalendar のみ再描画する（月送りと同じ方式）。 */
-function switchEventCalView(view){
-  if((view !== "month" && view !== "week") || view === eventCalView) return;
-  if(view === "week"){
-    eventCalWeekStart = weekStartForCurrentMonth();          // 表示中の月に合わせた週へ
-  } else if(eventCalWeekStart){
-    eventCalMonth = {y: eventCalWeekStart.getFullYear(), mo: eventCalWeekStart.getMonth()+1}; // 週開始日を含む月へ
-  }
-  eventCalView = view;
-  const calEl = document.getElementById("eventCalendar");
-  if(calEl){
-    calEl.innerHTML = eventCalendarInnerHTML(ND.events);
-    const activeBtn = calEl.querySelector(`[data-cal-view="${view}"]`);
-    if(activeBtn) try{ activeBtn.focus({preventScroll:true}); }catch(e){ activeBtn.focus(); }
-  }
-}
-/* カレンダー（イベント／キャンペーン共通）の移動。イベントは週表示中なら±7日の週送り、
-   それ以外は月送り。対象カレンダーのコンテナのみ再描画する */
+/* カレンダー（イベント／キャンペーン共通）の月移動。対象カレンダーのコンテナのみ再描画する */
 function navigateCalendar(target, delta){
   if(target === "event"){
-    if(eventCalView === "week"){
-      if(!eventCalWeekStart){ eventCalWeekStart = weekStartForCurrentMonth(); }
-      const ws = new Date(eventCalWeekStart);
-      ws.setDate(ws.getDate() + delta*7);
-      eventCalWeekStart = ws;
-    } else {
-      if(!eventCalMonth){ const t=new Date(); eventCalMonth={y:t.getFullYear(), mo:t.getMonth()+1}; }
-      eventCalMonth.mo += delta;
-      if(eventCalMonth.mo < 1){ eventCalMonth.mo = 12; eventCalMonth.y--; }
-      if(eventCalMonth.mo > 12){ eventCalMonth.mo = 1; eventCalMonth.y++; }
-    }
+    if(!eventCalMonth){ const t=new Date(); eventCalMonth={y:t.getFullYear(), mo:t.getMonth()+1}; }
+    eventCalMonth.mo += delta;
+    if(eventCalMonth.mo < 1){ eventCalMonth.mo = 12; eventCalMonth.y--; }
+    if(eventCalMonth.mo > 12){ eventCalMonth.mo = 1; eventCalMonth.y++; }
     const calEl = document.getElementById("eventCalendar");
-    if(calEl){
-      calEl.innerHTML = eventCalendarInnerHTML(ND.events);
-      const nextNav = calEl.querySelector(`[data-cal-nav="${delta < 0 ? -1 : 1}"]`);
-      if(nextNav) try{ nextNav.focus({preventScroll:true}); }catch(e){ nextNav.focus(); }
-    }
+    if(calEl) calEl.innerHTML = eventCalendarInnerHTML(ND.events);
   } else {
     if(!campaignCalMonth){ campaignCalMonth = pickInitialCampaignMonth(ND.campaigns); }
     campaignCalMonth.mo += delta;
     if(campaignCalMonth.mo < 1){ campaignCalMonth.mo = 12; campaignCalMonth.y--; }
     if(campaignCalMonth.mo > 12){ campaignCalMonth.mo = 1; campaignCalMonth.y++; }
     const calEl = document.getElementById("campaignCalendar");
-    if(calEl){
-      calEl.innerHTML = campaignCalendarInnerHTML(ND.campaigns);
-      const nextNav = calEl.querySelector(`[data-cal-nav="${delta < 0 ? -1 : 1}"]`);
-      if(nextNav) try{ nextNav.focus({preventScroll:true}); }catch(e){ nextNav.focus(); }
-    }
+    if(calEl) calEl.innerHTML = campaignCalendarInnerHTML(ND.campaigns);
   }
 }
 function onMainKeydown(e){
   if(e.key !== "Enter" && e.key !== " ") return;
-  /* 行内のSNSリンクや通常のボタンは、それぞれの既定操作を優先する。 */
-  if(e.target.closest("a,button,input,select,textarea")) return;
   const orgRow = e.target.closest("[data-org-id]");
   if(orgRow){ e.preventDefault(); location.hash = "#org=" + encodeURIComponent(orgRow.dataset.orgId); return; }
   const openBtn = e.target.closest("[data-open-detail]");
@@ -1121,7 +620,6 @@ function registerItem(it, kind){
     : kind === "experience" ? "exp"
     : kind === "news" ? "news"
     : kind === "udon" ? "ud"
-    : kind === "sweets" ? "sweet"
     : kind === "parking" ? "pk"
     : "camp";
   const slug = contentSlug(prefix, it);
@@ -1137,7 +635,6 @@ function modalContentHTML(it, kind){
   if(kind === "experience") return experienceModalHTML(it);
   if(kind === "news") return newsModalHTML(it);
   if(kind === "udon") return udonModalHTML(it);
-  if(kind === "sweets") return coolSweetModalHTML(it);
   if(kind === "parking") return parkingModalHTML(it);
   const placeParts = [];
   if(it.city && it.city !== "琴平町") placeParts.push(it.city);
@@ -1174,15 +671,19 @@ function showDetailModal(){
   overlay.classList.add("show");
   overlay.setAttribute("aria-hidden", "false");
   document.getElementById("modalCloseBtn").focus();
-  const frame = document.getElementById("appFrame");
-  frame.setAttribute("inert", "");
-  frame.setAttribute("aria-hidden", "true");
+  [document.querySelector(".topbar"), document.getElementById("main")].forEach(el=>{
+    if(!el) return;
+    el.setAttribute("inert", "");
+    el.setAttribute("aria-hidden", "true");
+  });
 }
 function closeDetailModal(){
   const overlay = document.getElementById("modalOverlay");
-  const frame = document.getElementById("appFrame");
-  frame.removeAttribute("inert");
-  frame.removeAttribute("aria-hidden");
+  [document.querySelector(".topbar"), document.getElementById("main")].forEach(el=>{
+    if(!el) return;
+    el.removeAttribute("inert");
+    el.removeAttribute("aria-hidden");
+  });
   overlay.classList.remove("show");
   overlay.setAttribute("aria-hidden", "true");
   if(modalLastFocusedEl && modalLastFocusedEl.isConnected && typeof modalLastFocusedEl.focus === "function"){
@@ -1214,7 +715,7 @@ function openDayEventsModal(dateKey, items){
    3セクションはテーマ色＋説明文で区別する） ===== */
 function homeSection(cls, title, sub, route, bodyHtml){
   return `<section class="home-sec ${cls}">
-    <div class="home-sec-head"><h2 class="group-h">${title}</h2><span class="hs-sub">${esc(sub)}</span><button class="more-link" data-route="${route}">もっと見る →</button></div>
+    <div class="home-sec-head"><h3 class="group-h">${title}</h3><span class="hs-sub">${esc(sub)}</span><button class="more-link" data-route="${route}">もっと見る →</button></div>
     ${bodyHtml}
   </section>`;
 }
@@ -1222,8 +723,8 @@ function homeHTML(){
   let newsBody;
   const newsVisible = ND.news.filter(newsIsVisible);
   if(newsVisible.length){
-    const top3 = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,3);
-    newsBody = `<div class="card-grid">${top3.map(newsBox).join("")}</div>`;
+    const top4 = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,4);
+    newsBody = `<div class="card-grid">${top4.map(newsBox).join("")}</div>`;
   } else {
     newsBody = emptyMsg(ND.news.length ? "表示対象のニュースがありません。" : NOTION_EMPTY_MSG);
   }
@@ -1233,7 +734,7 @@ function homeHTML(){
     // イベントタブと同じく開催日から毎回計算して選ぶ（statusは取得時点で固定のため使わない）
     const active = ND.events.filter(i=>{ const st = eventDateStatus(i); return st === "本日開催" || st === "開催中"; });
     const upcoming = ND.events.filter(i=>eventDateStatus(i)==="開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
-    const picks = active.concat(upcoming).slice(0,3);
+    const picks = active.concat(upcoming).slice(0,4);
     eventsBody = picks.length
       ? `<div class="card-grid">${picks.map(it=>itemCard(it,"event")).join("")}</div>`
       : emptyMsg("現在、開催中・予定のイベントはありません。");
@@ -1245,70 +746,15 @@ function homeHTML(){
   if(ND.campaigns.length){
     const active = ND.campaigns.filter(i=>i.status==="実施中");
     campsBody = active.length
-      ? `<div class="card-grid">${active.slice(0,3).map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`
+      ? `<div class="card-grid">${active.map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`
       : emptyMsg("現在実施中のキャンペーンはありません。");
   } else {
     campsBody = emptyMsg(NOTION_EMPTY_MSG);
   }
 
   return homeSection("hs-news", "📰 最新ニュース", "町に関する報道・記事", "news", newsBody)
-    + homeUdonOpenHTML()
     + homeSection("hs-events", "📅 直近のイベント", "今日・これからの催し", "events", eventsBody)
     + homeSection("hs-camps", "🎁 実施中のキャンペーン", "いま使えるお得情報", "campaigns", campsBody);
-}
-/* ホーム：いま営業中のうどん店モジュール。schedule を持つ店が1件も無ければ（データ未着時）何も出さない。
-   ニュースの直後に置き、主要3セクションより控えめな装いにする。判定は改修Bと同じ営業時間の目安。 */
-function homeUdonOpenHTML(){
-  const items = (UDON.items || []).filter(x => x.show !== false && x.schedule);
-  if(!items.length) return "";
-  const np = jstNowParts();
-  const nowLabel = minToHHMM(np.minutes);
-
-  const open = [];
-  const preList = [];
-  items.forEach(it=>{
-    const st = udonOpenStatus(it.schedule, np);
-    if(!st) return;
-    if(st.key === "open"){ open.push(it); }
-    else if(st.key === "pre"){
-      const openMin = udonNextOpenMinutes(it.schedule, np);
-      if(openMin != null) preList.push({it, openMin});
-    }
-  });
-
-  const listHtml = open.length
-    ? `<div class="home-udon-list">${open.map(it=>homeUdonRow(it, np)).join("")}</div>`
-    : `<div class="home-udon-empty">いま営業時間内の店はありません。</div>`;
-
-  let preHtml = "";
-  if(preList.length){
-    preList.sort((a,b)=>a.openMin - b.openMin);
-    const picks = preList.slice(0,2).map(p=>`${esc(p.it.name)} ${minToHHMM(p.openMin)}〜`);
-    preHtml = `<div class="home-udon-pre">このあと開店: ${picks.join(" ／ ")}</div>`;
-  }
-
-  return `<section class="home-udon" aria-labelledby="homeUdonTitle">
-    <div class="home-udon-head">
-      <h2 class="group-h" id="homeUdonTitle">🍜 いま営業中のうどん店</h2>
-      <span class="home-udon-time">${esc(nowLabel)}時点</span>
-    </div>
-    ${listHtml}
-    ${preHtml}
-    <div class="home-udon-foot"><button type="button" class="quick-route home-udon-more" data-route="udon">営業状況を確認できない店もあります → うどん店一覧へ</button></div>
-    <p class="hint" style="margin:8px 0 0">営業中の表示は確認日時点の営業時間による目安です（臨時休業・売り切れ終了あり）。</p>
-  </section>`;
-}
-/* ホームの営業中うどん店の1行（店名・種類・本日の営業時間・エリア簡略）。クリックで既存うどんモーダル。 */
-function homeUdonRow(it, nowParts){
-  const slug = registerItem(it, "udon");
-  const hours = udonTodayRangeLabel(it.schedule, nowParts);
-  const area = udonShortArea(it.area);
-  const metaParts = [it.kind, hours, area].filter(Boolean);
-  const meta = metaParts.map(v=>`<span>${esc(v)}</span>`).join('<span aria-hidden="true">·</span>');
-  return `<button type="button" class="home-udon-row" data-open-detail="${esc(slug)}" aria-haspopup="dialog" aria-label="${esc(it.name)}の詳細を見る">
-    <span class="hur-name">${esc(it.name)}</span>
-    <span class="hur-meta">${meta}</span>
-  </button>`;
 }
 /* ニュースのboxカード（ホームのダイジェスト／ニュースタブのギャラリーで共用。card-grid内で使う）。
    イベント・キャンペーンのカードはタブと同じ itemCard を使うため、この部品はニュース専用 */
@@ -1326,7 +772,8 @@ function newsBox(it){
 
 /* ===== 📋 団体タブ ===== */
 function orgsListHTML(filter){
-  return `<div class="search-box"><input type="search" id="orgSearchInput" aria-label="団体名または概要で絞り込む" placeholder="🔍 団体をさがす" value="${esc(filter)}"></div>
+  return `<div class="search-box"><input type="search" id="orgSearchInput" placeholder="🔍 団体をさがす" value="${esc(filter)}"></div>
+    <div class="hint">団体名をクリックすると、その団体の個別ページが開きます。</div>
     <div class="table-wrap"><table>
       <thead><tr><th>団体名</th><th>概要</th><th>発信媒体</th><th>最終更新</th></tr></thead>
       <tbody id="orgRows">${orgRowsHTML(filter)}</tbody>
@@ -1359,7 +806,7 @@ function orgDetailHTML(o){
   return `
     <button class="back-link" data-route="orgs">← 団体一覧にもどる</button>
     <div class="acct-head">
-      <h1 class="name">${esc(o.name)}</h1>
+      <p class="name">${esc(o.name)}</p>
       <p class="desc">${esc(o.summary||"")}</p>
       <div class="links">${linkBadges(o.links)}</div>
     </div>
@@ -1460,7 +907,7 @@ function newsTabHTML(){
 
   // ①最新ニュース：もっとも新しいニュース1件だけを大きめのフィーチャーカードで表示
   let html = `<div class="pickup-section">
-      <h2 class="group-h">⭐ 最新ニュース</h2>
+      <h3 class="group-h">⭐ 最新ニュース</h3>
       <div class="pf-grid">${pickupFeatureCard(visible[0])}</div>
     </div>`;
 
@@ -1468,12 +915,12 @@ function newsTabHTML(){
   const recent = visible.filter(n=>isWithinMonths(n.date, 2));
 
   // ②ニュース一覧：直近2か月のニュースをコンパクトなリストで表示
-  html += `<h2 class="group-h">📋 ニュース一覧</h2>` + (recent.length
+  html += `<h3 class="group-h">📋 ニュース一覧</h3>` + (recent.length
     ? `<div class="compact-list-scroll"><div class="compact-list">${recent.map(newsCompactRow).join("")}</div></div>`
     : emptyMsg("直近2か月のニュースはありません。"));
 
   // ③ギャラリー：直近2か月のニュースをサムネ付きのカードで一覧
-  html += `<h2 class="group-h">🗂 ギャラリー</h2>` + (recent.length
+  html += `<h3 class="group-h">🗂 ギャラリー</h3>` + (recent.length
     ? `<div class="card-grid">${recent.map(newsBox).join("")}</div>`
     : emptyMsg("直近2か月のニュースはありません。"));
   return html;
@@ -1512,25 +959,16 @@ function eventsTabHTML(){
   const upcoming = items.filter(it => eventDateStatus(it) === "開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
 
   let html = '';
-  html += `<div class="cal-wrap" id="eventCalendar" aria-live="polite">${eventCalendarInnerHTML(items)}</div>`;
-  if(todays.length) html += `<h2 class="group-h">🔴 今日のイベント</h2><div class="card-grid">${todays.map(it=>itemCard(it,"event")).join("")}</div>`;
-  if(upcoming.length) html += `<h2 class="group-h">🔜 今後の予定</h2><div class="card-grid">${upcoming.map(it=>itemCard(it,"event")).join("")}</div>`;
+  html += `<div class="cal-wrap" id="eventCalendar">${eventCalendarInnerHTML(items)}</div>`;
+  if(todays.length) html += `<h3 class="group-h">🔴 今日のイベント</h3><div class="card-grid">${todays.map(it=>itemCard(it,"event")).join("")}</div>`;
+  if(upcoming.length) html += `<h3 class="group-h">🔜 今後の予定</h3><div class="card-grid">${upcoming.map(it=>itemCard(it,"event")).join("")}</div>`;
   if(!todays.length && !upcoming.length) html += emptyMsg("今日・今後のイベントはありません。過去のイベントはカレンダーからご覧いただけます。");
   return html;
 }
-/* イベントカレンダーの月／週切替トグル（イベントカレンダーのみ。キャンペーン側には付けない）。 */
-function eventCalViewToggleHTML(){
-  return `<div class="cal-view-toggle">
-    <button type="button" class="cal-view-btn${eventCalView==="month"?" active":""}" data-cal-view="month" aria-pressed="${eventCalView==="month"}">月</button>
-    <button type="button" class="cal-view-btn${eventCalView==="week"?" active":""}" data-cal-view="week" aria-pressed="${eventCalView==="week"}">週</button>
-  </div>`;
-}
-/* イベント月カレンダー：単日イベントは開始日セル内のチップ（イベント名のみ。時刻はクリック後のモーダルで確認）、
-   複数日イベントのみキャンペーンと同じ期間バー。1セルに収まりきらない分は「+N件」チップにまとめ、
-   クリックでその日のイベント一覧モーダルを開く。既定表示月は今日を含む月（週表示中は eventCalendarWeekHTML に委譲）。 */
+/* イベント月カレンダー：単日イベントは開始日セル内のチップ（時刻＋タイトル）、複数日イベントのみキャンペーンと同じ期間バー。
+   1セルに収まりきらない分は「+N件」チップにまとめ、クリックでその日のイベント一覧モーダルを開く。既定表示月は今日を含む月 */
 function eventCalendarInnerHTML(events){
   if(!eventCalMonth){ const t=new Date(); eventCalMonth={y:t.getFullYear(), mo:t.getMonth()+1}; }
-  if(eventCalView === "week"){ return eventCalendarWeekHTML(events); }
   const {y, mo} = eventCalMonth;
   const weeks = monthGridWeeks(y, mo);
   const gridStart = weeks[0][0];
@@ -1591,18 +1029,18 @@ function eventCalendarInnerHTML(events){
       const dayItems = chipsByDay[key] || [];
       const visible = dayItems.slice(0, CHIP_VISIBLE);
       const restCount = dayItems.length - visible.length;
-      // チップはイベント名のみ（同日内の開始時刻昇順は上のsortで維持済み。時刻はクリック後のモーダルで確認）
       const chipsHtml = visible.map(it=>{
+        const s = parseDT(it.start);
+        const timeStr = (s && s.h!==null) ? `${pad2(s.h)}:${pad2(s.mi)} ` : "";
         const slug = registerItem(it, "event");
         return `<div class="cal-chip" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"
-          aria-label="${esc(it.title)}の詳細を見る" title="${esc(it.title)}">${esc(it.title)}</div>`;
+          title="${esc(it.title)}">${esc(timeStr)}${esc(it.title)}</div>`;
       }).join("");
       const moreHtml = restCount > 0
         ? `<div class="cal-chip cal-chip-more" data-day-more="${esc(key)}" tabindex="0" role="button" aria-haspopup="dialog">+${restCount}件</div>`
         : "";
-      const holName = jpHolidayName(d);
       return `<div class="${calCellClass(d, mo, todayKey)}">
-        <div class="cal-cell-head"><span class="cal-cell-num">${d.getDate()}</span>${holName ? `<span class="cal-holiday-name">${esc(holName)}</span>` : ""}</div>
+        <span class="cal-cell-num">${d.getDate()}</span>
         <div class="cal-chips" style="margin-top:${weekBarLaneCount*20}px">${chipsHtml}${moreHtml}</div>
       </div>`;
     }).join("");
@@ -1615,7 +1053,7 @@ function eventCalendarInnerHTML(events){
       const slug = registerItem(iv.item, "event");
       return `<div class="cal-bar upcoming${contLeft?' cont-left':''}${contRight?' cont-right':''}"
         style="grid-column:${colStart+1} / ${colEnd+2};grid-row:${iv.lane+1}"
-        data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${esc(iv.item.title)}の詳細を見る"
+        data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"
         title="${esc(iv.item.title)}">${esc(iv.item.title)}</div>`;
     }).join("");
     const barsOverlay = weekBars.length
@@ -1635,240 +1073,10 @@ function eventCalendarInnerHTML(events){
       <button class="cal-nav-btn" data-cal-nav="-1" data-cal-target="event" aria-label="前の月">◀</button>
       <div class="cal-month-label">${esc(monthLabel)}</div>
       <button class="cal-nav-btn" data-cal-nav="1" data-cal-target="event" aria-label="次の月">▶</button>
-      ${eventCalViewToggleHTML()}
     </div>
-    <div class="event-calendar-desktop">
-      ${calWeekdayHeaderHTML()}
-      ${weekRows}
-      ${!hasAny ? '<div class="hint" style="margin-top:8px">この月に該当するイベントはありません。</div>' : ''}
-    </div>
-    ${eventMobileAgendaHTML(events, y, mo)}`;
-}
-
-/* 週表示・スマホ月間一覧で共用するイベント行ボタン（クリックで既存の詳細モーダル）。DRY:
-   opts.dateCol を渡すと94px日付列付き（スマホ月間一覧用）、省略すると本文＋矢印の2列（週表示用。
-   日付は日ごとの見出しにあるため列を省く）。opts.metaParts は本文メタに並べる文字列配列
-   （時刻・場所・期間など。空要素は除外）。状態バッジは末尾に自動付与する。 */
-function eventAgendaButtonHTML(it, opts){
-  opts = opts || {};
-  const slug = registerItem(it, "event");
-  const status = eventDateStatus(it);
-  const statusClass = status === "終了" ? " ended" : (status === "本日開催" || status === "開催中" ? " active" : "");
-  const metaHtml = (opts.metaParts || []).filter(Boolean)
-    .map(v=>`<span>${esc(v)}</span>`).join('<span aria-hidden="true">·</span>');
-  const dateCol = opts.dateCol
-    ? `<span class="event-agenda-date"><strong>${esc(opts.dateCol.main)}</strong><small>${esc(opts.dateCol.sub)}</small></span>`
-    : "";
-  const weekCls = opts.dateCol ? "" : " agenda-week";
-  return `<button type="button" class="event-agenda-item${weekCls}" data-open-detail="${esc(slug)}" aria-haspopup="dialog" aria-label="${esc(it.title)}の詳細を見る">
-      ${dateCol}<span class="event-agenda-body"><span class="event-agenda-title">${esc(it.title)}</span><span class="event-agenda-meta">${metaHtml}<span aria-hidden="true">·</span><span class="event-agenda-status${statusClass}">${esc(status)}</span></span></span>
-      <span class="event-agenda-arrow" aria-hidden="true">›</span>
-    </button>`;
-}
-/* イベントカレンダーの週表示：ヘッダー（週送り＋月/週トグル）は不変。本体は
-   PC＝月グリッドの1週間拡大版（eventWeekGridHTML）、スマホ＝スケジュール一覧
-   （eventWeekViewHTML）を出し分ける。月表示と同じく .event-calendar-desktop は
-   ≤720px で非表示になり、.event-week-mobile は ≤720px のみ表示する。 */
-function eventCalendarWeekHTML(events){
-  if(!eventCalWeekStart){ eventCalWeekStart = weekStartForCurrentMonth(); }
-  const ws = new Date(eventCalWeekStart);
-  const we = new Date(ws); we.setDate(we.getDate()+6);
-  const wsY=ws.getFullYear(), wsM=ws.getMonth()+1, wsD=ws.getDate();
-  const weY=we.getFullYear(), weM=we.getMonth()+1, weD=we.getDate();
-  // 例「2026年7月13日〜7月19日」。年をまたぐ週のみ末尾にも年を出す。
-  const endLabel = (wsY !== weY) ? `${weY}年${weM}月${weD}日` : `${weM}月${weD}日`;
-  const rangeLabel = `${wsY}年${wsM}月${wsD}日〜${endLabel}`;
-  return `
-    <div class="cal-header">
-      <button class="cal-nav-btn" data-cal-nav="-1" data-cal-target="event" aria-label="前の週">◀</button>
-      <div class="cal-month-label cal-week-label">${esc(rangeLabel)}</div>
-      <button class="cal-nav-btn" data-cal-nav="1" data-cal-target="event" aria-label="次の週">▶</button>
-      ${eventCalViewToggleHTML()}
-    </div>
-    <div class="event-calendar-desktop">
-      ${calWeekdayHeaderHTML()}
-      ${eventWeekGridHTML(events, ws)}
-    </div>
-    <div class="event-week-mobile">
-      ${eventWeekViewHTML(events, ws)}
-    </div>`;
-}
-/* 週表示（PC）：月グリッドと同じ7列グリッドを1週間ぶんだけ、縦に大きいセルで描く。
-   複数日イベントは月グリッドと同じ期間バー（今週の範囲でクリップ→assignLanes→
-   .cal-bars-overlay、cont-left/right・チップの margin-top オフセットも同方式）。
-   単日イベントはセル内チップに「HH:MM イベント名」を全件表示（+N件の間引きはしない。
-   折り返し可・時刻を強調）。週表示は「+N件」モーダルを使わないため dayEventsRegistry
-   には登録しない（月ビューとの競合回避）。クリックは月グリッドと同じ詳細モーダル。 */
-function eventWeekGridHTML(events, weekStart){
-  const days = [];
-  for(let i=0;i<7;i++){ const d=new Date(weekStart); d.setDate(d.getDate()+i); d.setHours(0,0,0,0); days.push(d); }
-  const gridStart = days[0];
-  const gridEndExclusive = new Date(days[6]); gridEndExclusive.setDate(gridEndExclusive.getDate()+1);
-  const todayKey = (()=>{ const t=new Date(); t.setHours(0,0,0,0); return t.getTime(); })();
-  // other-month（当月外セルの淡色化）判定は週開始日の月に合わせる（月グリッドと同じ calCellClass を使う）
-  const mo = weekStart.getMonth()+1;
-
-  const barIntervals = [];
-  const chipsByDay = {}; // "y-mo-d" -> [item...]（週表示は dayEventsRegistry へは登録しない）
-  (events || []).forEach(it=>{
-    const s = parseDT(it.start);
-    if(!s) return; // 日付未定はカレンダーには出さない
-    const startDate = new Date(s.y, s.mo-1, s.d);
-    const e = parseDT(it.end);
-    const endDate = e ? new Date(e.y, e.mo-1, e.d) : null;
-    const isMultiDay = !!(endDate && endDate.getTime() !== startDate.getTime());
-    if(isMultiDay){
-      if(endDate < gridStart || startDate >= gridEndExclusive) return;
-      // クリップは今週の範囲で。cont-left/right は「クリップ前」の開始・終了で判定する
-      const contLeft = startDate < gridStart;
-      const contRight = endDate >= gridEndExclusive;
-      const clippedStart = startDate < gridStart ? gridStart : startDate;
-      const clipRightDate = new Date(gridEndExclusive.getTime() - 86400000);
-      const clippedEnd = endDate >= gridEndExclusive ? clipRightDate : endDate;
-      barIntervals.push({
-        item: it, contLeft, contRight,
-        startOffset: Math.round((clippedStart - gridStart)/86400000),
-        endOffset: Math.round((clippedEnd - gridStart)/86400000)
-      });
-    } else {
-      if(startDate < gridStart || startDate >= gridEndExclusive) return;
-      const key = `${s.y}-${s.mo}-${s.d}`;
-      (chipsByDay[key] = chipsByDay[key] || []).push(it);
-    }
-  });
-  // 単日チップは開始時刻の昇順（ND.eventsは開始日時の降順で来るため並べ直す）
-  Object.keys(chipsByDay).forEach(k=>chipsByDay[k].sort((a,b)=>(a.start||"").localeCompare(b.start||"")));
-  assignLanes(barIntervals);
-  const laneCount = barIntervals.reduce((m,c)=>Math.max(m,c.lane+1), 0);
-
-  const cellsHtml = days.map(d=>{
-    const key = `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
-    const dayItems = chipsByDay[key] || [];
-    // 単日イベントは全件チップ表示（「+N件」の間引きはしない。セルが伸びる方が一覧性が高い）
-    const chipsHtml = dayItems.map(it=>{
-      const slug = registerItem(it, "event");
-      const s = parseDT(it.start);
-      const timeLabel = (s && s.h !== null) ? `${pad2(s.h)}:${pad2(s.mi)}` : "";
-      const full = (timeLabel ? timeLabel + " " : "") + it.title;
-      const timeHtml = timeLabel ? `<span class="cal-chip-time">${esc(timeLabel)}</span> ` : "";
-      return `<div class="cal-chip cal-chip-week" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"
-        aria-label="${esc(full)}の詳細を見る" title="${esc(full)}">${timeHtml}${esc(it.title)}</div>`;
-    }).join("");
-    const holName = jpHolidayName(d);
-    return `<div class="${calCellClass(d, mo, todayKey)}">
-      <div class="cal-cell-head"><span class="cal-cell-num">${d.getDate()}</span>${holName ? `<span class="cal-holiday-name">${esc(holName)}</span>` : ""}</div>
-      <div class="cal-chips" style="margin-top:${laneCount*20}px">${chipsHtml}</div>
-    </div>`;
-  }).join("");
-
-  const barsHtml = barIntervals.map(iv=>{
-    const slug = registerItem(iv.item, "event");
-    return `<div class="cal-bar upcoming${iv.contLeft?' cont-left':''}${iv.contRight?' cont-right':''}"
-      style="grid-column:${iv.startOffset+1} / ${iv.endOffset+2};grid-row:${iv.lane+1}"
-      data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${esc(iv.item.title)}の詳細を見る"
-      title="${esc(iv.item.title)}">${esc(iv.item.title)}</div>`;
-  }).join("");
-  const barsOverlay = barIntervals.length
-    ? `<div class="cal-bars-overlay" style="bottom:auto;height:${laneCount*20}px">${barsHtml}</div>`
-    : "";
-
-  return `<div class="cal-week">
-    <div class="cal-cells week-grid">${cellsHtml}</div>
-    ${barsOverlay}
-  </div>`;
-}
-/* 週表示のスマホ用本体（.event-week-mobile 内・≤720pxのみ表示）：7列グリッドは
-   スマホでは潰れるため、Googleカレンダーの「スケジュール」ビュー風に7日分を1枚のカード内へ
-   [日付列｜イベント列] の2列グリッド行として並べる。予定の無い日も必ず見出しを出し、
-   「何日に何があるか」を一目で分かるようにする。土曜=青系・日曜祝日=赤系。 */
-function eventWeekViewHTML(events, weekStart){
-  const days = [];
-  for(let i=0;i<7;i++){ const d=new Date(weekStart); d.setDate(d.getDate()+i); d.setHours(0,0,0,0); days.push(d); }
-  const weekEnd = days[6];
-  const todayKey = (()=>{ const t=new Date(); t.setHours(0,0,0,0); return t.getTime(); })();
-  // 週内に重なるイベントを範囲付きで抽出（単日はその日、複数日は週内の重なる各日に出す）
-  const entries = (events || []).map(it=>{
-    const s = parseDT(it.start);
-    if(!s) return null;
-    const e = parseDT(it.end);
-    const startDate = new Date(s.y, s.mo-1, s.d); startDate.setHours(0,0,0,0);
-    const endDate = e ? new Date(e.y, e.mo-1, e.d) : new Date(startDate); endDate.setHours(0,0,0,0);
-    if(endDate < days[0] || startDate > weekEnd) return null;
-    return {it, s, e, startDate, endDate, isMulti: endDate.getTime() !== startDate.getTime()};
-  }).filter(Boolean);
-
-  const rows = days.map(d=>{
-    const wd = WEEKDAYS[d.getDay()];
-    const holName = jpHolidayName(d);
-    const toneCls = (isJpHoliday(d) || d.getDay() === 0) ? " sun" : (d.getDay() === 6 ? " sat" : "");
-    const todayCls = d.getTime() === todayKey ? " today" : "";
-    const subLabel = holName ? `${wd}・${holName}` : wd;   // 曜日＋祝日名（例「火・海の日」）
-    const dayEntries = entries.filter(en => en.startDate <= d && d <= en.endDate)
-      .sort((a,b)=>(a.it.start||"").localeCompare(b.it.start||""));   // 開始時刻昇順
-    let eventsHtml;
-    if(!dayEntries.length){
-      eventsHtml = `<div class="ewk-empty">予定なし</div>`;
-    } else {
-      eventsHtml = dayEntries.map(en=>{
-        const {it, s, e, isMulti} = en;
-        let timeLabel = "";
-        if(s.h !== null){
-          timeLabel = `${pad2(s.h)}:${pad2(s.mi)}`;
-          if(!isMulti && e && e.h !== null) timeLabel += `〜${pad2(e.h)}:${pad2(e.mi)}`;
-        }
-        const placeParts = [];
-        if(it.city && it.city !== "琴平町") placeParts.push(it.city);
-        if(it.place) placeParts.push(it.place);
-        const period = isMulti ? `${s.mo}/${s.d}〜${e.mo}/${e.d}` : "";
-        return eventAgendaButtonHTML(it, {metaParts:[timeLabel || "時間記載なし", placeParts.join(" / "), period]});
-      }).join("");
-    }
-    return `<div class="ewk-row${toneCls}${todayCls}">
-      <div class="ewk-datecol"><span class="ewk-date">${d.getMonth()+1}/${d.getDate()}</span><span class="ewk-sub">${esc(subLabel)}</span></div>
-      <div class="ewk-events">${eventsHtml}</div>
-    </div>`;
-  }).join("");
-  return `<div class="event-week-view">${rows}</div>`;
-}
-
-/* スマホでは7列カレンダーを縮めず、選択月に重なるイベントを日付順の一覧で表示する。 */
-function eventMobileAgendaHTML(events, y, mo){
-  const monthStart = new Date(y, mo-1, 1);
-  const monthEndExclusive = new Date(y, mo, 1);
-  const items = (events || []).map(it=>{
-    const s = parseDT(it.start);
-    if(!s) return null;
-    const e = parseDT(it.end);
-    const startDate = new Date(s.y, s.mo-1, s.d);
-    const endDate = e ? new Date(e.y, e.mo-1, e.d) : startDate;
-    if(startDate >= monthEndExclusive || endDate < monthStart) return null;
-    return {it, s, e, startDate};
-  }).filter(Boolean).sort((a,b)=>a.startDate-b.startDate || (a.it.start||"").localeCompare(b.it.start||""));
-
-  if(!items.length){
-    return `<div class="event-mobile-agenda">${emptyMsg("この月に該当するイベントはありません。")}</div>`;
-  }
-
-  const rows = items.map(entry=>{
-    const {it, s, e} = entry;
-    const sameDay = !e || (s.y===e.y && s.mo===e.mo && s.d===e.d);
-    const dateLabel = sameDay ? `${s.mo}/${s.d}` : `${s.mo}/${s.d}〜${e.mo}/${e.d}`;
-    const weekday = WEEKDAYS[new Date(s.y, s.mo-1, s.d).getDay()];
-    let timeLabel = "";
-    if(s.h !== null){
-      timeLabel = `${pad2(s.h)}:${pad2(s.mi)}`;
-      if(sameDay && e && e.h !== null) timeLabel += `〜${pad2(e.h)}:${pad2(e.mi)}`;
-    }
-    const placeParts = [];
-    if(it.city && it.city !== "琴平町") placeParts.push(it.city);
-    if(it.place) placeParts.push(it.place);
-    return eventAgendaButtonHTML(it, {
-      dateCol: {main: dateLabel, sub: weekday + "曜日"},
-      metaParts: [timeLabel || "時間記載なし", placeParts.join(" / ") || "場所記載なし"]
-    });
-  }).join("");
-
-  return `<div class="event-mobile-agenda"><div class="event-agenda-head"><span>この月のイベント</span><span>${items.length}件</span></div><div class="event-agenda-list">${rows}</div></div>`;
+    ${calWeekdayHeaderHTML()}
+    ${weekRows}
+    ${!hasAny ? '<div class="hint" style="margin-top:8px">この月に該当するイベントはありません。</div>' : ''}`;
 }
 /* イベント／キャンペーン カード：クリックで詳細モーダル（DRY：両タブ・ホームのbox以外の全カードで共用） */
 function itemCard(it, kind, opts){
@@ -1926,8 +1134,8 @@ function campaignsTabHTML(){
   const active = items.filter(i=>i.status==="実施中");
   const upcoming = items.filter(i=>i.status!=="実施中" && i.status!=="終了").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
 
-  if(active.length) html += `<h2 class="group-h">🔴 実施中のキャンペーン</h2><div class="card-grid">${active.map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`;
-  if(upcoming.length) html += `<h2 class="group-h">🔜 今後の予定のキャンペーン</h2><div class="card-grid">${upcoming.map(it=>itemCard(it,"campaign")).join("")}</div>`;
+  if(active.length) html += `<h3 class="group-h">🔴 実施中のキャンペーン</h3><div class="card-grid">${active.map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`;
+  if(upcoming.length) html += `<h3 class="group-h">🔜 今後の予定のキャンペーン</h3><div class="card-grid">${upcoming.map(it=>itemCard(it,"campaign")).join("")}</div>`;
   if(!active.length && !upcoming.length) html += emptyMsg("実施中・今後のキャンペーンはありません。");
   return html;
 }
@@ -2018,9 +1226,8 @@ function campaignCalendarInnerHTML(campaigns){
   const weekRows = weeks.map((week, wi)=>{
     const weekStartOffset = wi*7;
     const cellsHtml = week.map(d=>{
-      const holName = jpHolidayName(d);
       return `<div class="${calCellClass(d, mo, todayKey)}">
-        <div class="cal-cell-head"><span class="cal-cell-num">${d.getDate()}</span>${holName ? `<span class="cal-holiday-name">${esc(holName)}</span>` : ""}</div>
+        <span class="cal-cell-num">${d.getDate()}</span>
       </div>`;
     }).join("");
     const weekBars = intervals.filter(iv => iv.startOffset <= weekStartOffset+6 && iv.endOffset >= weekStartOffset);
@@ -2063,7 +1270,11 @@ function experiencesTabHTML(){
   const active = all.filter(i => i.status !== "終了" && i.status !== "準備中");
   const ended = all.filter(i => i.status === "終了").sort((a,b)=>(b.start||"").localeCompare(a.start||""));
 
+  const updated = (Array.isArray(ND_RAW.experiences) && ND_RAW.experiences.length)
+    ? ND.fetched
+    : (window.EXPERIENCES_DATA?.updated || "");
   let html = '';
+  html += `<div class="hint">琴平町の体験プログラム・特別な権利、お手伝い滞在（フリアコ・おてつたび等）、移住情報をまとめています。カードを押すと詳細が開きます。${updated ? ` 情報更新: <b>${esc(fmtDate(updated))}</b>` : ""}</div>`;
 
   if(active.length){
     const grouped = {};
@@ -2072,7 +1283,7 @@ function experiencesTabHTML(){
     const rest = Object.keys(grouped).filter(c => EXPERIENCE_CATS.indexOf(c) < 0);
     known.concat(rest).forEach(c=>{
       const emoji = EXPERIENCE_EMOJI[c] || "🧭";
-      html += `<h2 class="group-h">${emoji} ${esc(experienceCategoryLabel(c))}</h2><div class="card-grid">${grouped[c].map(experienceCard).join("")}</div>`;
+      html += `<h3 class="group-h">${emoji} ${esc(experienceCategoryLabel(c))}</h3><div class="card-grid">${grouped[c].map(experienceCard).join("")}</div>`;
     });
   } else {
     html += emptyMsg("現在募集中の体験・滞在情報はありません。");
@@ -2138,7 +1349,11 @@ function udonTabHTML(){
   const items = (UDON.items || []).filter(x => x.show !== false);
   if(!items.length) return emptyMsg("うどん店情報が登録されていません。");
 
-  let html = `<p class="hint">「営業中」表示は確認日時点の営業時間による目安です（臨時休業・売り切れ終了あり）。お出かけ前に公式情報をご確認ください。</p>`;
+  let html = `<div class="hint">営業時間・定休日・価格・駐車場は <b>${esc(fmtDate(UDON.checked) || UDON.checked)}</b> 時点の確認情報です。`
+    + `琴平町内のうどん店・うどん作り体験・製麺所・食事処を${esc(items.length)}件掲載しています。`
+    + `変更や売り切れの場合があるため、来店前に公式サイト・SNS・電話で最新情報をご確認ください。`
+    + `${isOlderThanDays(UDON.checked, 180) ? `<strong>確認から180日以上経過しているため、情報が古い可能性があります。</strong>` : ""}`
+    + `地図は周辺確認の目安としてご利用ください。</div>`;
   html += mapEmbed("琴平町 うどん", 14, "琴平町内のうどん店マップ");
 
   const grouped = {};
@@ -2150,21 +1365,17 @@ function udonTabHTML(){
   const rest = Object.keys(grouped).filter(kind => ordered.indexOf(kind) < 0);
   ordered.concat(rest).forEach(kind=>{
     const emoji = UDON_EMOJI[kind] || "🍜";
-    html += `<h2 class="group-h">${emoji} ${esc(kind)}（${grouped[kind].length}件）</h2>`
+    html += `<h3 class="group-h">${emoji} ${esc(kind)}（${grouped[kind].length}件）</h3>`
       + `<div class="card-grid">${grouped[kind].map(udonCard).join("")}</div>`;
   });
   return html;
 }
-function kotohiraShortAddress(address){
+function udonShortAddress(address){
   return (address || "").replace(/^香川県仲多度郡/, "");
 }
 function udonCard(it){
-  const imgSrc = safeUrl(it.image);
-  const img = imgSrc
-    ? `<img class="ev-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-    : `<div class="ev-img ph">🍜</div>`;
   const rows = [
-    it.address ? `<div class="ev-meta">📍 ${esc(kotohiraShortAddress(it.address))}</div>` : "",
+    it.address ? `<div class="ev-meta">📍 ${esc(udonShortAddress(it.address))}</div>` : "",
     `<div class="ev-meta">🕐 ${esc(it.hours || "要確認")}</div>`,
     `<div class="ev-meta">📅 定休日: ${esc(it.closed || "要確認")}</div>`,
     `<div class="ev-meta">💰 ${esc(it.priceRange || "要確認")}</div>`,
@@ -2172,14 +1383,11 @@ function udonCard(it){
     it.description ? `<div class="ev-comment clamp2">${esc(it.description)}</div>` : ""
   ].filter(Boolean).join("");
   const slug = registerItem(it, "udon");
-  const st = udonOpenStatus(it.schedule);
-  const openBadge = st ? `<span class="open-badge ${esc(st.key)}">${esc(st.label)}</span>` : "";
-  const inner = `${img}<div class="ev-body">`
-    + `<span class="badge-row"><span class="ev-status-badge">${esc(it.kind || "うどん")}</span>${openBadge}</span>`
+  const inner = `<div class="ev-body"><span class="ev-status-badge">${esc(it.kind || "うどん")}</span>`
     + `<div class="ev-title">${esc(it.name)}</div>${rows}</div>`;
   return `<div class="ev-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
 }
-function placeModalLink(url, label, primary){
+function udonModalLink(url, label, primary){
   const href = safeUrl(url);
   return href ? `<a class="modal-link${primary ? "" : " secondary"}" href="${esc(href)}" target="_blank" rel="noopener">${esc(label)} ↗</a>` : "";
 }
@@ -2197,144 +1405,17 @@ function udonModalHTML(it){
   if(it.phone) rows.push(row("☎ 電話", it.phone));
   const links = it.links || {};
   const actions = [
-    placeModalLink(links.official, "公式サイト", true),
-    placeModalLink(links.instagram, "Instagram", !links.official),
-    placeModalLink(links.x, "X", !links.official && !links.instagram),
-    placeModalLink(links.facebook, "Facebook", false),
-    placeModalLink(links.map, "Googleマップ", false),
-    placeModalLink(links.tourism, "観光公式情報", false)
+    udonModalLink(links.official, "公式サイト", true),
+    udonModalLink(links.instagram, "Instagram", !links.official),
+    udonModalLink(links.x, "X", !links.official && !links.instagram),
+    udonModalLink(links.facebook, "Facebook", false),
+    udonModalLink(links.map, "Googleマップ", false),
+    udonModalLink(links.tourism, "観光公式情報", false)
   ].filter(Boolean).join(" ");
   const checked = it.checked || UDON.checked;
-  const imgSrc = safeUrl(it.image);
-  const st = udonOpenStatus(it.schedule);
-  const openBadge = st ? `<span class="open-badge lg ${esc(st.key)}">${esc(st.label)}</span>` : "";
-  const scheduleNote = (it.schedule && it.schedule.note) ? it.schedule.note : "";
   return `
     <h3 class="modal-title" id="modalTitle">${esc(it.name)}</h3>
-    ${imgSrc ? `<img class="modal-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
-    <div class="modal-badge-row"><span class="modal-badge status-active">${esc(it.kind || "うどん")}</span>${openBadge}</div>
-    ${scheduleNote ? `<div class="hint" style="margin:-4px 0 10px">※${esc(scheduleNote)}</div>` : ""}
-    ${rows.join("")}
-    ${it.description ? `<div class="modal-comment">${esc(it.description)}</div>` : ""}
-    ${actions}
-    ${checked ? `<div class="hint" style="margin-top:12px">確認日: ${esc(checked)}</div>` : ""}`;
-}
-/* 本日の営業時間帯を取り出す（byDay に曜日別の上書きがあれば優先、なければ ranges）。[[開分,閉分]...] を
-   開店昇順で返す純粋関数。営業中バッジ・本日の営業時間表示・次の開店時刻の各判定で共用する。 */
-function udonTodayRanges(schedule, nowParts){
-  if(!schedule) return [];
-  const np = nowParts || jstNowParts();
-  const byDay = schedule.byDay || {};
-  const raw = byDay[np.wd] || byDay[String(np.wd)] || schedule.ranges || [];
-  return raw
-    .map(r => Array.isArray(r) ? [hhmmToMin(r[0]), hhmmToMin(r[1])] : [null, null])
-    .filter(r => r[0] != null && r[1] != null)
-    .sort((a,b)=>a[0]-b[0]);
-}
-/* うどん店の「いま営業中か」を判定する純粋関数。schedule は udon-data.js の機械可読スケジュール。
-   nowParts を注入できるようにしてテスト可能にする（省略時は現在のJST）。
-   戻り値: null（schedule 無し＝バッジ非表示）または {key, label}。
-   判定順は 定休日/祝日休み → 営業中 → 最初の開店前 → 中休み中は次の開店案内 → 本日の営業終了。 */
-function udonOpenStatus(schedule, nowParts){
-  if(!schedule) return null;
-  const np = nowParts || jstNowParts();
-  const closedDays = Array.isArray(schedule.closedDays) ? schedule.closedDays : [];
-  if(closedDays.indexOf(np.wd) >= 0 || (schedule.closedOnHoliday && isJpHoliday(np.date))){
-    return {key:"closed-today", label:"本日定休日"};
-  }
-  const ranges = udonTodayRanges(schedule, np);
-  if(!ranges.length) return {key:"closed-today", label:"本日定休日"};
-  for(const r of ranges){
-    if(np.minutes >= r[0] && np.minutes < r[1]) return {key:"open", label:"営業中"};
-  }
-  // 最初の開店前、または2部営業の中休み中は「次に開く帯」の開店時刻を案内する（中休み→終了扱いにしない）
-  const next = ranges.find(r => r[0] > np.minutes);
-  if(next) return {key:"pre", label:`開店前 ${minToHHMM(next[0])}〜`};
-  return {key:"after", label:"本日の営業終了"};
-}
-/* 本日の営業時間帯を「10:00〜15:00・17:00〜20:00」形式で返す（ホームの営業中リストで使用） */
-function udonTodayRangeLabel(schedule, nowParts){
-  return udonTodayRanges(schedule, nowParts).map(r => `${minToHHMM(r[0])}〜${minToHHMM(r[1])}`).join("・");
-}
-/* 本日これから開く帯の開店時刻（0時からの分）。以降に開く帯が無ければ null。
-   ホームの「このあと開店」で「開店前」状態の店を時刻順に並べるために使用する。 */
-function udonNextOpenMinutes(schedule, nowParts){
-  const np = nowParts || jstNowParts();
-  const next = udonTodayRanges(schedule, np).find(r => r[0] > np.minutes);
-  return next ? next[0] : null;
-}
-/* うどんのエリア表示を短縮（先頭の「琴平町・」を省く。単独の「琴平町」等はそのまま） */
-function udonShortArea(area){
-  const s = ("" + (area || "")).replace(/^琴平町[・･]/, "");
-  return s || "琴平町";
-}
-
-/* ===== 🍧 かき氷・アイスタブ（食べたいもの別の2ゾーン＋全体マップ＋詳細モーダル） ===== */
-function coolSweetsTabHTML(){
-  const items = (COOL_SWEETS.items || []).filter(x => x.show !== false);
-  if(!items.length) return emptyMsg("かき氷・アイスの情報が登録されていません。");
-
-  let html = `<p class="hint">夏季・期間限定の商品を含みます。参拝当日の提供状況は公式サイト・SNSでご確認ください。</p>`;
-  html += mapEmbed("琴平町 かき氷 ソフトクリーム", 15, "琴平町のかき氷・アイスマップ");
-
-  const zones = (COOL_SWEETS.zones && COOL_SWEETS.zones.length)
-    ? COOL_SWEETS.zones
-    : [{key:"kakigori",label:"かき氷",emoji:"🍧"},{key:"ice",label:"ソフトクリーム・アイス",emoji:"🍦"}];
-  zones.forEach(zone=>{
-    const inZone = items.filter(it=>Array.isArray(it.zones) && it.zones.indexOf(zone.key) >= 0)
-      .sort((a,b)=>(a.area || "").localeCompare(b.area || "", "ja") || (a.name || "").localeCompare(b.name || "", "ja"));
-    if(!inZone.length) return;
-    html += `<h2 class="group-h">${esc(zone.emoji || "🍨")} ${esc(zone.label)}（${inZone.length}店）</h2>`
-      + `<div class="card-grid">${inZone.map(it=>coolSweetCard(it, zone)).join("")}</div>`;
-  });
-  return html;
-}
-function coolSweetCard(it, zone){
-  const imgSrc = safeUrl(it.image);
-  const img = imgSrc
-    ? `<img class="ev-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-    : `<div class="ev-img ph">${esc(zone && zone.emoji || "🍨")}</div>`;
-  const rows = [
-    it.address ? `<div class="ev-meta">📍 ${esc(kotohiraShortAddress(it.address))}</div>` : "",
-    it.offerings ? `<div class="ev-meta">🍨 ${esc(it.offerings)}</div>` : "",
-    it.availability ? `<div class="ev-meta">🗓 ${esc(it.availability)}</div>` : "",
-    `<div class="ev-meta">🕐 ${esc(it.hours || "要確認")}</div>`,
-    `<div class="ev-meta">📅 定休日: ${esc(it.closed || "要確認")}</div>`,
-    `<div class="ev-meta">💰 ${esc(it.priceRange || "要確認")}</div>`,
-    `<div class="ev-meta">🚗 ${esc(it.parking || "要確認")}</div>`,
-    it.description ? `<div class="ev-comment clamp2">${esc(it.description)}</div>` : ""
-  ].filter(Boolean).join("");
-  const slug = registerItem(it, "sweets");
-  const inner = `${img}<div class="ev-body"><span class="ev-status-badge">${esc(zone?.label || "冷たい甘味")}</span>`
-    + `<div class="ev-title">${esc(it.name)}</div>${rows}</div>`;
-  return `<div class="ev-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
-}
-function coolSweetModalHTML(it){
-  function row(label, val){
-    return `<div class="modal-row"><span class="mr-label">${esc(label)}</span><span>${esc(val)}</span></div>`;
-  }
-  const rows = [];
-  if(it.address) rows.push(row("🏠 住所", it.address));
-  if(it.offerings) rows.push(row("🍨 冷たいもの", it.offerings));
-  if(it.availability) rows.push(row("🗓 提供状況", it.availability));
-  rows.push(row("🕐 営業時間", it.hours || "要確認"));
-  rows.push(row("📅 定休日", it.closed || "要確認"));
-  rows.push(row("💰 価格帯", it.priceRange || "要確認"));
-  rows.push(row("🚗 駐車場", it.parking || "要確認"));
-  if(it.phone) rows.push(row("☎ 電話", it.phone));
-  const links = it.links || {};
-  const actions = [
-    placeModalLink(links.official, "公式サイト", true),
-    placeModalLink(links.instagram, "Instagram", !links.official),
-    placeModalLink(links.map, "Googleマップ", false),
-    placeModalLink(links.tourism, "観光公式情報", false)
-  ].filter(Boolean).join(" ");
-  const checked = it.checked || COOL_SWEETS.checked;
-  const imgSrc = safeUrl(it.image);
-  return `
-    <h3 class="modal-title" id="modalTitle">${esc(it.name)}</h3>
-    ${imgSrc ? `<img class="modal-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
-    <span class="modal-badge status-active">ひんやり甘味</span>
+    <span class="modal-badge status-active">${esc(it.kind || "うどん")}</span>
     ${rows.join("")}
     ${it.description ? `<div class="modal-comment">${esc(it.description)}</div>` : ""}
     ${actions}
@@ -2373,8 +1454,13 @@ function parkingTabHTML(){
   const items = (PARKING.items || []).filter(x => x.show !== false);
   if(!items.length) return emptyMsg("駐車場情報が登録されていません。");
 
+  let html = '';
+  html += `<div class="hint">料金・台数は <b>${esc(fmtDate(PARKING.checked) || PARKING.checked)}</b> 時点の確認情報です。`
+    + `変わっている場合があるため、最新情報は各駐車場の公式サイト・電話でご確認ください。`
+    + `裏取り度は ◎確認済み／○一部確認／△要確認 で示しています（△は現地・電話での最終確認を推奨）。</div>`;
+
   // ページトップ: 琴平町全体の駐車場マップ（検索ベース。一覧と完全一致しない場合あり）
-  let html = mapEmbed("琴平町 駐車場", 15, "琴平町の駐車場マップ");
+  html += mapEmbed("琴平町 駐車場", 15, "琴平町の駐車場マップ");
 
   const groups = (PARKING.groups && PARKING.groups.length)
     ? PARKING.groups
@@ -2385,15 +1471,11 @@ function parkingTabHTML(){
     const emoji = PARKING_EMOJI[g] || "🅿";
     const mq = PARKING_MAP_QUERY[g];
     const secMap = mq ? mapEmbed(mq.q, mq.z, `${g}の駐車場マップ`) : "";
-    html += `<h2 class="group-h">${emoji} ${esc(g)}</h2>${secMap}<div class="card-grid">${inGroup.map(parkingCard).join("")}</div>`;
+    html += `<h3 class="group-h">${emoji} ${esc(g)}</h3>${secMap}<div class="card-grid">${inGroup.map(parkingCard).join("")}</div>`;
   });
   return html;
 }
 function parkingCard(it){
-  const imgSrc = safeUrl(it.image);
-  const img = imgSrc
-    ? `<img class="ev-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-    : `<div class="ev-img ph">${esc(PARKING_EMOJI[it.group] || "🅿")}</div>`;
   const priceLine = (it.price ? esc(it.price) : "要確認")
     + (it.priceMax ? ` <span class="muted">／最大 ${esc(it.priceMax)}</span>` : "");
   const rows = [
@@ -2402,7 +1484,7 @@ function parkingCard(it){
     // 🚶 徒歩目安(walk)は未裏取りが多いため非表示（データは残す）
   ].filter(Boolean).join("");
   const slug = registerItem(it, "parking");
-  const inner = `${img}<div class="ev-body">${confBadge(it.confidence)}<div class="ev-title">${esc(it.name)}</div>${rows}</div>`;
+  const inner = `<div class="ev-body">${confBadge(it.confidence)}<div class="ev-title">${esc(it.name)}</div>${rows}</div>`;
   return `<div class="ev-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
 }
 function parkingModalHTML(it){
@@ -2427,10 +1509,8 @@ function parkingModalHTML(it){
     href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">公式サイト ↗</a>` : "",
     mapHref ? `<a class="modal-link" href="${esc(mapHref)}" target="_blank" rel="noopener">Googleマップ ↗</a>` : ""
   ].filter(Boolean).join(" ");
-  const imgSrc = safeUrl(it.image);
   return `
     <h3 class="modal-title" id="modalTitle">${esc(it.name)}</h3>
-    ${imgSrc ? `<img class="modal-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
     ${confBadge(it.confidence)}
     ${rows.join("")}
     ${it.note ? `<div class="modal-comment">${esc(it.note)}</div>` : ""}
@@ -2442,9 +1522,10 @@ function parkingModalHTML(it){
 function linksTabHTML(){
   const cats = (LINKS.categories || []).filter(c => (c.links || []).length);
   let html = '';
-  if(!cats.length) return emptyMsg("リンクが登録されていません。");
+  html += '<div class="hint">琴平町の公式窓口への入口です。観光の詳しい情報は観光協会、くらしの情報は役場のサイトをご覧ください。</div>';
+  if(!cats.length) return html + emptyMsg("リンクが登録されていません。");
   cats.forEach(c=>{
-    html += `<h2 class="group-h">${esc(c.name)}</h2><div class="link-grid">${(c.links||[]).map(linkCard).join("")}</div>`;
+    html += `<h3 class="group-h">${esc(c.name)}</h3><div class="link-grid">${(c.links||[]).map(linkCard).join("")}</div>`;
   });
   return html;
 }
@@ -2507,399 +1588,6 @@ function igEmbed(url){
 }
 function xEmbed(url){ return `<blockquote class="twitter-tweet"><a href="${esc(safeUrl(url))}"></a></blockquote>`; }
 
-/* ===== 共通ウィジェット（天気／目的別入口／LINE／地域スポンサー） ===== */
-function renderUtilityWidgets(){
-  const host = document.getElementById("utilityWidgets");
-  const weather = WIDGETS.weather || {};
-  const weatherLocation = ("" + (weather.locationLabel || "琴平町")).trim();
-  const weatherCard = weather.enabled === true ? `
-    <section class="widget-card weather-card" aria-labelledby="weatherWidgetTitle">
-      <span class="widget-kicker">今日の琴平</span>
-      <div class="widget-title" id="weatherWidgetTitle">🌤 ${esc(weatherLocation)}周辺の天気</div>
-      <div id="weatherBody" aria-live="polite"><div class="widget-loading">予報を読み込んでいます…</div></div>
-    </section>` : "";
-  host.innerHTML = `<div class="widget-stack">
-    ${weatherCard}
-    <section class="widget-card" aria-labelledby="quickWidgetTitle">
-      <span class="widget-kicker">目的から探す</span>
-      <div class="widget-title" id="quickWidgetTitle">琴平で何をする？</div>
-      <div class="quick-grid">
-        <button class="quick-route" data-route="events">📅 イベント</button>
-        <button class="quick-route" data-route="udon">🍜 うどん店</button>
-        <button class="quick-route" data-route="experiences">🧭 体験・滞在</button>
-        <button class="quick-route" data-route="sweets">🍧 かき氷・アイス</button>
-        <button class="quick-route" data-route="parking">🅿 駐車場</button>
-      </div>
-    </section>
-  </div>`;
-}
-
-function renderCommunityWidgets(){
-  const host = document.getElementById("communityWidgets");
-  const line = WIDGETS.lineOpenChat || {};
-  const lineJoin = safeUrl(line.joinUrl);
-  const lineQr = safeUrl(line.qrImage);
-  const lineRules = safeUrl(line.rulesUrl);
-  /* 表示に必須なのは 有効・参加URL・名称 のみ。QR・説明・運営・ルールURL・注意書きは「あれば表示」。 */
-  const lineReady = line.enabled === true && lineJoin && ("" + (line.name || "")).trim();
-  let lineHTML = "";
-  if(lineReady){
-    lineHTML = `<section class="widget-card line-card" aria-labelledby="lineWidgetTitle">
-      <span class="widget-kicker">地域コミュニティ</span>
-      <div class="widget-title" id="lineWidgetTitle">💬 ${esc(line.name || "LINEオープンチャット")}</div>
-      <div class="line-content">
-        ${line.description ? `<p class="widget-copy">${esc(line.description)}</p>` : ""}
-        ${lineQr ? `<img class="line-qr" src="${esc(lineQr)}" alt="LINEオープンチャット参加用QRコード">` : ""}
-        <a class="line-join" href="${esc(lineJoin)}" rel="noopener">LINEで参加する ↗</a>
-        <p class="widget-note">このトークルーム専用のニックネームで参加できます。</p>
-      </div>
-      ${line.disclaimer ? `<p class="widget-note">${esc(line.disclaimer)}</p>` : ""}
-      ${lineRules ? `<div class="widget-links"><a class="widget-link" href="${esc(lineRules)}" rel="noopener">参加前にルールを確認 ↗</a></div>` : ""}
-    </section>`;
-  }
-
-  const sidebarAds = adsForPlacement("sidebar", 2);
-  const adsHTML = sidebarAds.length
-    ? sidebarAds.map(ad=>adCardHTML(ad, " ad-desktop-only")).join("")
-    : `<section class="widget-card ad-vacancy ad-desktop-only" aria-label="地域スポンサー広告枠">
-        <span class="widget-kicker">地域スポンサー</span>
-        <div class="widget-title">広告掲載枠</div>
-        <p class="widget-copy">琴平に関わる事業者・団体の広告枠を準備しています。</p>
-      </section>`;
-
-  host.innerHTML = `<div class="widget-stack">${lineHTML}${adsHTML}</div>`;
-  host.classList.toggle("mobile-empty", !lineHTML);
-}
-
-/* mobile-inline は最初の表示コンテンツの直後へ差し込み、ページ先頭を広告で塞がない。 */
-function insertMobileInlineAds(host, view){
-  const ads = adsForPlacement("mobile-inline", 2);
-  if(!ads.length) return;
-  const html = `<aside class="mobile-ad-slot" aria-label="スポンサー広告">
-    <div class="widget-stack">${ads.map(ad=>adCardHTML(ad, " ad-mobile-only")).join("")}</div>
-  </aside>`;
-  let anchor = host.querySelector(view === "home" ? ".home-sec" : ".page-title-card + *") || host.firstElementChild;
-  /* 最初の内容が分類見出しなら、見出しと対応する一覧を分断せず一覧の後へ置く。 */
-  if(anchor && /^H[1-6]$/.test(anchor.tagName) && anchor.nextElementSibling){
-    anchor = anchor.nextElementSibling;
-  }
-  if(anchor) anchor.insertAdjacentHTML("afterend", html);
-  else host.insertAdjacentHTML("afterbegin", html);
-}
-
-function adsForPlacement(placement, limit){
-  return (Array.isArray(WIDGETS.ads) ? WIDGETS.ads : [])
-    .filter(isVisibleAd)
-    .filter(ad=>Array.isArray(ad.placements) && ad.placements.indexOf(placement) >= 0)
-    .sort((a,b)=>(Number(a.order)||0)-(Number(b.order)||0))
-    .slice(0, limit);
-}
-
-/* 掲載期間と天気の日付は、閲覧端末の所在地に左右されない日本時間で判定する。 */
-function tokyoDateKey(date){
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone:"Asia/Tokyo", year:"numeric", month:"2-digit", day:"2-digit"
-  }).formatToParts(date || new Date());
-  const values = {};
-  parts.forEach(p=>{ if(p.type !== "literal") values[p.type] = p.value; });
-  return `${values.year}-${values.month}-${values.day}`;
-}
-/* 現在の日本時間を、うどん店の営業中バッジ判定に使う形へ分解する。閲覧端末のTZに依存しない。
-   戻り値: {date（祝日判定 isJpHoliday 用に「JSTの年月日」で構築したDate）, wd（0=日〜6=土）,
-   minutes（0:00からの経過分）}。now を差し替え可能にして純粋関数のテストを可能にする。 */
-function jstNowParts(now){
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone:"Asia/Tokyo", year:"numeric", month:"2-digit", day:"2-digit",
-    hour:"2-digit", minute:"2-digit", hour12:false, weekday:"short"
-  }).formatToParts(now || new Date());
-  const v = {};
-  parts.forEach(p=>{ if(p.type !== "literal") v[p.type] = p.value; });
-  let hour = +v.hour;
-  if(hour === 24) hour = 0;   // 一部環境が深夜0時を"24"で返すため正規化
-  const wdMap = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
-  return {
-    date: new Date(+v.year, +v.month-1, +v.day),
-    wd: wdMap[v.weekday],
-    minutes: hour*60 + (+v.minute)
-  };
-}
-/* "HH:MM" を 0時からの経過分に変換（不正なら null）。営業時間帯の判定で使用 */
-function hhmmToMin(s){
-  const m = ("" + (s || "")).match(/^(\d{1,2}):(\d{2})$/);
-  if(!m) return null;
-  const h = +m[1], mi = +m[2];
-  if(h > 47 || mi > 59) return null;   // 深夜帯の延長（24:00超）も許容
-  return h*60 + mi;
-}
-/* 0時からの経過分を "HH:MM" に戻す（営業中バッジの時刻表示で使用） */
-function minToHHMM(min){ return `${pad2(Math.floor(min/60))}:${pad2(min%60)}`; }
-function addDaysToDateKey(value, days){
-  const m = ("" + value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  if(!m) return "";
-  const d = new Date(Date.UTC(+m[1], +m[2]-1, +m[3] + days));
-  return `${d.getUTCFullYear()}-${pad2(d.getUTCMonth()+1)}-${pad2(d.getUTCDate())}`;
-}
-function isVisibleAd(ad){
-  if(!ad || ad.enabled !== true) return false;
-  const today = tokyoDateKey(new Date());
-  const start = ("" + (ad.startDate || "")).trim();
-  const end = ("" + (ad.endDate || "")).trim();
-  const id = ("" + (ad.id || "")).trim();
-  const advertiser = ("" + (ad.advertiserName || "")).trim();
-  const title = ("" + (ad.title || "")).trim();
-  const hasAccessibleImage = !!(safeUrl(ad.image) && ("" + (ad.alt || "")).trim());
-  if(!id || !advertiser || (!title && !hasAccessibleImage)) return false;
-  if((start && !isValidDateKey(start)) || (end && !isValidDateKey(end))) return false;
-  return (!start || start <= today) && (!end || today <= end);
-}
-function isValidDateKey(value){
-  const m = ("" + value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  if(!m) return false;
-  const d = new Date(Date.UTC(+m[1], +m[2]-1, +m[3]));
-  return d.getUTCFullYear() === +m[1] && d.getUTCMonth()+1 === +m[2] && d.getUTCDate() === +m[3];
-}
-function adCardHTML(ad, visibilityClass){
-  const href = safeUrl(ad.url);
-  const image = safeUrl(ad.image);
-  const imageAlt = ("" + (ad.alt || "")).trim();
-  /* 広告画像は装飾扱いにせず、代替テキストが無ければ画像自体を表示しない。 */
-  const body = `${image && imageAlt ? `<img class="ad-image" src="${esc(image)}" alt="${esc(imageAlt)}">` : ""}
-    ${ad.title ? `<div class="ad-title">${esc(ad.title)}</div>` : ""}`;
-  return `<section class="widget-card ad-card${visibilityClass || ""}" data-ad-id="${esc(ad.id || "")}">
-    <div class="ad-label"><span>広告</span><span>広告主: ${esc(ad.advertiserName || "")}</span></div>
-    ${href ? `<a class="ad-main" href="${esc(href)}" rel="sponsored noopener noreferrer">${body}</a>` : `<div class="ad-main">${body}</div>`}
-  </section>`;
-}
-
-function renderFooterLinks(){
-  const host = document.getElementById("footerLinks");
-  const cfg = WIDGETS.footerLinks || {};
-  const links = [
-    {label:"プライバシーポリシー", url:safeUrl(cfg.privacyPolicyUrl)},
-    {label:"運営者", url:safeUrl(cfg.operatorUrl)}
-  ].filter(link=>link.url);
-  host.innerHTML = links.map(link=>
-    `<a class="footer-link" href="${esc(link.url)}" target="_self" rel="noopener">${esc(link.label)}</a>`
-  ).join("");
-  host.hidden = !links.length;
-}
-
-const WEATHER_CACHE_KEY = "kotohiralife-weather-v1";
-async function loadWeatherWidget(){
-  const body = document.getElementById("weatherBody");
-  const cfg = WIDGETS.weather || {};
-  const dataUrl = safeUrl(cfg.dataUrl);
-  if(!body || cfg.enabled !== true) return;
-  if(!dataUrl){ body.innerHTML = weatherFallbackHTML(); return; }
-  const cached = readWeatherCache();
-  const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
-  const timer = controller ? setTimeout(()=>controller.abort(), 6000) : null;
-  try{
-    const response = await fetch(dataUrl, {
-      cache:"no-store", credentials:"omit", signal:controller ? controller.signal : undefined
-    });
-    if(!response.ok) throw new Error("weather http " + response.status);
-    const normalized = normalizeJmaForecast(await response.json());
-    writeWeatherCache(normalized);
-    body.innerHTML = weatherForecastHTML(normalized, false);
-  }catch(err){
-    const currentCache = cached && isFreshWeatherCache(cached)
-      ? currentWeatherCacheData(cached.data) : null;
-    if(currentCache){
-      body.innerHTML = weatherForecastHTML(currentCache, true);
-    }else{
-      body.innerHTML = weatherFallbackHTML();
-    }
-  }finally{
-    if(timer) clearTimeout(timer);
-  }
-}
-function readWeatherCache(){
-  try{
-    const raw = localStorage.getItem(WEATHER_CACHE_KEY);
-    return raw ? JSON.parse(raw) : null;
-  }catch(err){ return null; }
-}
-function writeWeatherCache(data){
-  try{ localStorage.setItem(WEATHER_CACHE_KEY, JSON.stringify({savedAt:Date.now(), data})); }
-  catch(err){ /* file:// やプライベートブラウズで保存できなくても表示は継続する */ }
-}
-function isFreshWeatherCache(cache){
-  const hours = Math.max(1, Number(WIDGETS.weather?.cacheHours) || 24);
-  return cache && cache.data && Number(cache.savedAt) > 0
-    && Date.now() - Number(cache.savedAt) <= hours * 3600000;
-}
-function currentWeatherCacheData(data){
-  if(!data || !Array.isArray(data.days)) return null;
-  const today = tokyoDateKey(new Date());
-  const days = data.days.filter(day=>day && isValidDateKey(day.date) && day.date >= today).slice(0,2);
-  return days.length ? Object.assign({}, data, {days}) : null;
-}
-function normalizeJmaForecast(payload){
-  if(!Array.isArray(payload) || !payload.length) throw new Error("weather payload");
-  const short = payload[0] || {};
-  const weekly = payload[1] || {};
-  const days = {};
-  function ensureDay(dateKey){
-    if(!/^\d{4}-\d{2}-\d{2}$/.test(dateKey)) return null;
-    if(!days[dateKey]) days[dateKey] = {
-      date:dateKey, weather:"", weatherCode:"", precipitationMax:null, min:null, max:null, temps:[]
-    };
-    return days[dateKey];
-  }
-  function eachArea(block, callback){
-    (Array.isArray(block.timeSeries) ? block.timeSeries : []).forEach(series=>{
-      const times = Array.isArray(series.timeDefines) ? series.timeDefines : [];
-      (Array.isArray(series.areas) ? series.areas : []).forEach(area=>callback(series, area || {}, times));
-    });
-  }
-  eachArea(short, (series, area, times)=>{
-    if(area.area?.code === "370000" && Array.isArray(area.weatherCodes)){
-      times.forEach((time,i)=>{
-        const day = ensureDay((time || "").slice(0,10));
-        if(!day) return;
-        day.weatherCode = area.weatherCodes[i] || day.weatherCode;
-        if(Array.isArray(area.weathers) && area.weathers[i]){
-          day.weather = cleanWeatherText(area.weathers[i]);
-        }
-      });
-    }
-    if(area.area?.code === "370000" && Array.isArray(area.pops)){
-      times.forEach((time,i)=>mergePrecip(days, time, area.pops[i]));
-    }
-    if(area.area?.code === "72086" && Array.isArray(area.temps)){
-      times.forEach((time,i)=>{
-        const day = ensureDay((time || "").slice(0,10));
-        const value = numericWeatherValue(area.temps[i]);
-        if(day && value !== null) day.temps.push(value);
-      });
-    }
-  });
-  eachArea(weekly, (series, area, times)=>{
-    if(area.area?.code === "370000" && Array.isArray(area.weatherCodes)){
-      times.forEach((time,i)=>{
-        const day = ensureDay((time || "").slice(0,10));
-        if(!day) return;
-        if(!day.weatherCode) day.weatherCode = area.weatherCodes[i] || "";
-        mergePrecip(days, time, Array.isArray(area.pops) ? area.pops[i] : "");
-      });
-    }
-    if(area.area?.code === "72086" && (Array.isArray(area.tempsMin) || Array.isArray(area.tempsMax))){
-      times.forEach((time,i)=>{
-        const day = ensureDay((time || "").slice(0,10));
-        if(!day) return;
-        const min = numericWeatherValue(area.tempsMin?.[i]);
-        const max = numericWeatherValue(area.tempsMax?.[i]);
-        if(min !== null) day.min = min;
-        if(max !== null) day.max = max;
-      });
-    }
-  });
-  Object.values(days).forEach(day=>{
-    if(day.temps.length){
-      if(day.min === null) day.min = Math.min.apply(null, day.temps);
-      if(day.max === null) day.max = Math.max.apply(null, day.temps);
-    }
-    delete day.temps;
-    if(!day.weather) day.weather = weatherCodeLabel(day.weatherCode);
-  });
-  const today = tokyoDateKey(new Date());
-  const desired = [today, addDaysToDateKey(today, 1)];
-  const selectedKeys = desired.filter(key=>days[key]);
-  Object.keys(days).filter(key=>key >= today).sort().forEach(key=>{
-    if(selectedKeys.length < 2 && selectedKeys.indexOf(key) < 0) selectedKeys.push(key);
-  });
-  const selected = selectedKeys.slice(0,2).map(key=>days[key]);
-  if(!selected.length) throw new Error("weather days");
-  return {
-    issuedAt:short.reportDatetime || weekly.reportDatetime || "",
-    area:WIDGETS.weather?.forecastAreaLabel || "香川県",
-    temperaturePoint:WIDGETS.weather?.temperaturePointLabel || "高松",
-    days:selected
-  };
-}
-function mergePrecip(days, time, raw){
-  const key = (time || "").slice(0,10);
-  if(!/^\d{4}-\d{2}-\d{2}$/.test(key)) return;
-  const value = numericWeatherValue(raw);
-  if(value === null) return;
-  if(!days[key]) days[key] = {
-    date:key, weather:"", weatherCode:"", precipitationMax:null, min:null, max:null, temps:[]
-  };
-  days[key].precipitationMax = days[key].precipitationMax === null
-    ? value : Math.max(days[key].precipitationMax, value);
-}
-function numericWeatherValue(value){
-  if(value === null || value === undefined || value === "") return null;
-  const n = Number(value);
-  return Number.isFinite(n) ? n : null;
-}
-function cleanWeatherText(text){
-  return ("" + (text || "")).replace(/[\s\u3000]+/g, " ").trim();
-}
-function weatherCodeLabel(code){
-  const first = ("" + (code || "")).charAt(0);
-  return first === "1" ? "晴れ" : first === "2" ? "くもり"
-    : first === "3" ? "雨" : first === "4" ? "雪" : "天気予報";
-}
-function weatherIcon(code){
-  const first = ("" + (code || "")).charAt(0);
-  return first === "1" ? "☀️" : first === "2" ? "☁️"
-    : first === "3" ? "🌧️" : first === "4" ? "❄️" : "🌤";
-}
-function forecastDayLabel(dateKey){
-  const today = tokyoDateKey(new Date());
-  if(dateKey === today) return "今日";
-  if(dateKey === addDaysToDateKey(today, 1)) return "明日";
-  return fmtDate(dateKey);
-}
-function formatForecastIssued(value){
-  const d = new Date(value);
-  if(Number.isNaN(d.getTime())) return fmtDate(value);
-  return new Intl.DateTimeFormat("ja-JP", {
-    timeZone:"Asia/Tokyo", month:"numeric", day:"numeric", hour:"2-digit", minute:"2-digit",
-    hourCycle:"h23"
-  }).format(d);
-}
-function weatherForecastHTML(data, cached){
-  const rows = (Array.isArray(data.days) ? data.days : []).map(day=>{
-    const temps = [];
-    if(day.max !== null && day.max !== undefined) temps.push(`最高 ${esc(day.max)}℃`);
-    if(day.min !== null && day.min !== undefined) temps.push(`最低 ${esc(day.min)}℃`);
-    if(day.precipitationMax !== null && day.precipitationMax !== undefined){
-      temps.push(`降水 最大${esc(day.precipitationMax)}%`);
-    }
-    return `<div class="weather-day">
-      <div class="weather-icon" aria-hidden="true">${weatherIcon(day.weatherCode)}</div>
-      <div>
-        <div class="weather-label">${esc(forecastDayLabel(day.date))}</div>
-        <div class="weather-text">${esc(day.weather || weatherCodeLabel(day.weatherCode))}</div>
-        <div class="weather-meta">${temps.map(t=>`<span>${t}</span>`).join("")}</div>
-      </div>
-    </div>`;
-  }).join("");
-  const cfg = WIDGETS.weather || {};
-  const issued = data.issuedAt ? `${formatForecastIssued(data.issuedAt)}発表` : "";
-  const sourceName = cfg.sourceName || "気象庁";
-  const sourceUrl = safeUrl(cfg.sourceUrl);
-  const source = sourceUrl
-    ? `<a class="widget-link" href="${esc(sourceUrl)}" rel="noopener">${esc(sourceName)}</a>`
-    : esc(sourceName);
-  return `<div class="weather-days">${rows}</div>
-    <p class="widget-note">${cached ? "前回取得した予報を表示中。 " : ""}${source} ${esc(issued)}
-      ／ ${esc(data.area || "香川県")}の予報・気温は${esc(data.temperaturePoint || "高松")}</p>
-    <div class="widget-links">
-      ${safeUrl(cfg.forecastUrl) ? `<a class="widget-link" href="${esc(safeUrl(cfg.forecastUrl))}" rel="noopener">詳しい予報 ↗</a>` : ""}
-      ${safeUrl(cfg.warningUrl) ? `<a class="widget-link" href="${esc(safeUrl(cfg.warningUrl))}" rel="noopener">警報・注意報 ↗</a>` : ""}
-    </div>`;
-}
-function weatherFallbackHTML(){
-  const cfg = WIDGETS.weather || {};
-  const url = safeUrl(cfg.forecastUrl);
-  return `<p class="weather-fallback">予報を取得できませんでした。最新情報は気象庁でご確認ください。</p>
-    ${url ? `<div class="widget-links"><a class="widget-link" href="${esc(url)}" rel="noopener">気象庁の予報を見る ↗</a></div>` : ""}`;
-}
-
 /* ===== 共通ユーティリティ ===== */
 function linkBadges(links){
   links = links || {};
@@ -2914,16 +1602,9 @@ function emptyMsg(t){ return `<div class="empty">${esc(t)}</div>`; }
 /* URLスキーム検証（深層防御）。http(s)絶対URLと、ローカル相対パス（assets/thumbs/... 等）は許可し、
    javascript: 等の危険スキームとプロトコル相対URL（//...）は空文字にして無害化する */
 function safeUrl(u){
-  u = ("" + (u || "")).trim();
+  u = (u || "").trim();
   if(!u) return "";
-  /* URLパーサが除去して危険スキームとして解釈し得る改行・タブ等は拒否する。 */
-  if(/[\u0000-\u001f\u007f]/.test(u)) return "";
-  if(/^https?:\/\//i.test(u)){
-    try{
-      const parsed = new URL(u);
-      return parsed.protocol === "http:" || parsed.protocol === "https:" ? u : "";
-    }catch(e){ return ""; }
-  }
+  if(/^https?:\/\//i.test(u)) return u;
   if(/^\/\//.test(u)) return "";
   if(/^[a-z][a-z0-9+.\-]*:/i.test(u)) return "";
   return u;
@@ -3037,10 +1718,6 @@ function mondayOf(date){
 /* 祝日判定（JP_HOLIDAYS参照。範囲外の年は平日扱い） */
 function isJpHoliday(d){
   return JP_HOLIDAYS.has(`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`);
-}
-/* 祝日名（JP_HOLIDAY_NAMES参照。祝日でなければ空文字）。カレンダーセル右上・週表示見出しで使用 */
-function jpHolidayName(d){
-  return JP_HOLIDAY_NAMES[`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`] || "";
 }
 /* カレンダーセルのclass組み立て（イベント／キャンペーン共用）。日曜・祝日=sun、土曜=sat */
 function calCellClass(d, mo, todayKey){

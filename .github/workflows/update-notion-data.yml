@@ -1,0 +1,65 @@
+# Notionの3DB（ニュース・イベント・キャンペーン）を毎日取得して notion-data.js を更新し、
+# 差分があればコミット→push→GitHub Pages に自動反映するワークフロー。
+# 必要なSecret: KOTOHIRA_DASHBOARD_NOTION_TOKEN（読み取り専用トークン。scripts/README.md 参照）
+name: Update Notion data
+
+on:
+  schedule:
+    # 毎日 00:00 JST（= 15:00 UTC）。GitHubのcronは数分〜最大1時間程度遅れることがある
+    - cron: "0 15 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-notion-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Notion data
+        env:
+          KOTOHIRA_DASHBOARD_NOTION_TOKEN: ${{ secrets.KOTOHIRA_DASHBOARD_NOTION_TOKEN }}
+        run: |
+          if [ -z "$KOTOHIRA_DASHBOARD_NOTION_TOKEN" ]; then
+            echo "::error::Secret KOTOHIRA_DASHBOARD_NOTION_TOKEN が未設定です。リポジトリの Settings > Secrets and variables > Actions で登録してください。"
+            exit 1
+          fi
+          python scripts/fetch_notion.py
+
+      - name: Validate output
+        # 3キーとも空でないことを確認してから公開する（空なら中止。fetch側にも失敗時の既存データ温存あり）
+        run: |
+          node -e '
+            const fs = require("fs");
+            const w = {};
+            (new Function("window", fs.readFileSync("notion-data.js", "utf8")))(w);
+            const d = w.NOTION_DATA || {};
+            for (const k of ["news", "events", "campaigns"]) {
+              if (!Array.isArray(d[k]) || d[k].length === 0) {
+                console.error("validation failed: " + k + " is empty");
+                process.exit(1);
+              }
+              console.log(k + ": " + d[k].length + " items");
+            }'
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add notion-data.js assets/thumbs
+          if git diff --cached --quiet; then
+            echo "No changes; skip commit."
+            exit 0
+          fi
+          git commit -m "chore: daily Notion data update"
+          git push

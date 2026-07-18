@@ -425,6 +425,19 @@ def find_local_thumb(file_id: str) -> str:
     return ""
 
 
+def quote_non_ascii_url(url: str) -> str:
+    """URLのパス・クエリに残る非ASCII文字（日本語ファイル名等）をパーセント
+    エンコードする。urllibは非ASCIIを含むURLを開けないため。既存の%エスケープは
+    safeに'%'を含めることで二重エンコードしない。
+    """
+    parts = urllib.parse.urlsplit(url)
+    path = urllib.parse.quote(parts.path, safe="/%")
+    query = urllib.parse.quote(parts.query, safe="=&%+")
+    return urllib.parse.urlunsplit(
+        (parts.scheme, parts.netloc, path, query, parts.fragment)
+    )
+
+
 def download_image(url: str, page_id: str) -> tuple[str, bool]:
     """画像をダウンロードしてローカルへ保存し、相対パスと成否を返す。
 
@@ -440,7 +453,7 @@ def download_image(url: str, page_id: str) -> tuple[str, bool]:
     if existing:
         return existing, True
 
-    req = urllib.request.Request(url)
+    req = urllib.request.Request(quote_non_ascii_url(url))
     req.add_header("User-Agent", DOWNLOAD_USER_AGENT)
     try:
         with urllib.request.urlopen(req, timeout=DOWNLOAD_TIMEOUT) as res:
