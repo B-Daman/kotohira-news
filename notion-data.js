@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-19 03:14",
+  "fetched": "2026-07-20 00:50",
   "news": [
     {
       "id": "3a00b4e5-ff5b-8128-bfb4-eaeef3fb08be",
@@ -676,7 +676,7 @@ window.NOTION_DATA = {
       "url": "https://x.com/invadersjp/status/2076154584997994583",
       "start": "2026-07-19T12:00",
       "end": "2026-07-19T17:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
