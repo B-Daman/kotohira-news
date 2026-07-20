@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-20 00:50",
+  "fetched": "2026-07-21 01:21",
   "news": [
+    {
+      "id": "3a30b4e5-ff5b-8108-b574-d404e6b6c7da",
+      "title": "J3カマタマーレ讃岐 新体制発表会 in 金丸座",
+      "url": "https://topics.smt.docomo.ne.jp/article/ksb/region/ksb-16740541",
+      "summary": "J3カマタマーレ讃岐が琴平町の金丸座（旧金毘羅大芝居）で新体制発表会を開催。歌舞伎の隈取をデザインした新ユニホームを披露し、新加入選手を含む30人の選手が登場した。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-07-20",
+      "thumbnail": "assets/thumbs/3a30b4e5ff5b8108b574d404e6b6c7da.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3a30b4e5-ff5b-81ee-b646-ccec864e80bf",
+      "title": "海外協力隊赴任へ、田中さん意気込み　琴平町長を表敬",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072000000003500",
+      "summary": "琴平町の田中玖瑠美さん（27）がJICAの海外協力隊員としてエルサルバドルに赴任することが決まり、琴平町役場で片岡英樹町長に表敬訪問した。22日から2年間の活動予定。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-07-20",
+      "thumbnail": "assets/thumbs/3a30b4e5ff5b81eeb646ccec864e80bf.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3a00b4e5-ff5b-8128-bfb4-eaeef3fb08be",
       "title": "琴平のおすすめ温泉宿４選",
@@ -326,32 +352,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "37e0b4e5-ff5b-81f4-a462-c10448fe9e46",
-      "title": "琴平町長にプレゼンできる権利を販売開始",
-      "url": "https://prtimes.jp/main/html/rd/p/000000318.000091165.html",
-      "summary": "株式会社あるやうむが運営するプラットフォーム「TOKKEN」にて、琴平町長と1時間直接対話・プレゼンテーションできる権利（NFT付与）を限定10点で販売開始。価格は100,000円（税込）で、有効期限は購入日から令和10年3月31日まで。",
-      "org": "PR TIMES（株式会社あるやうむプレスリリース）",
-      "media": "Webメディア",
-      "date": "2026-06-01",
-      "thumbnail": "assets/thumbs/37e0b4e5ff5b81f4a462c10448fe9e46.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "37d0b4e5-ff5b-8111-9005-fdc0f1cd9cd2",
-      "title": "太鼓台初奉納、地域に活気　琴平・籏岡神社例大祭",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026060100000002900",
-      "summary": "琴平町榎井の籏岡神社で5月31日に例大祭が行われ、太鼓台が初めて同神社に奉納された。例年は神事のみだったが、地元有志が企画して地域に活気を生み出そうと試みた。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-06-01",
-      "thumbnail": "assets/thumbs/37d0b4e5ff5b81119005fdc0f1cd9cd2.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -646,7 +646,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-07-21T20:00",
       "end": "2026-07-21T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -661,7 +661,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-07-21T13:30",
       "end": "2026-07-21T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -1748,36 +1748,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3660b4e5ff5b80088021ec49aac1bb81.png",
       "comment": "讃岐おでんプロジェクト｜2026年度 方針 ■ 年間テーマ 讃岐おでんを文化にする ～ 人が集まり、会話が生まれる「場」を育てる ～ ■ 目指す姿（ゴール） ◎讃岐うどん・骨付き鳥に次ぐ、香川の第三の食文化にする ◎観光地・琴平において、夜の過ごし方として定着させる ◎将来的に店舗を持ち、継続的に運営できる状態をつくる 日時 毎月 22日 19:00〜 参加費：2000円（現地支払い） 場所 コトリ コワーキング＆ホステル琴平 ■ 4月｜ ・具体的な役割と募集の明確な共有 ・共通財布の運用方法検討 ・貢献ポイントの項目・配点の素案共有と協議（=総合評価表） ・夏おでんに向けた調査結果の共有と検討（この会の後に、各自調査して次回も協議） ◉可能であれば話したい範囲 ・讃岐おでんのホームページのチェック ・ホームページには、何が記載されているべきか ・メニュー表（物）の検討 ■ 5月｜冷やしおでんの可能性を広げる ・夏でも成立する讃岐おでんを考える ・冷やしおでんのリサーチ ・食材・味・提供方法のアイデア出し ■ 6月｜冷やしおでん試作① ・試作・試食 ・改善点の洗い出し ・体験として成立するか検証 ■ 7月｜冷やしおでん試作②＋体験設計 ・試作のブラッシュアップ ・提供方法・見せ方の設計 ■ 8月｜冬営業に向けた設計① ・店舗営業方法 ・店頭に立ちたい人を募集する ・イベント出店 ・懇親会などの引き受け ■ 9月｜冬営業に向けた設計② ・接客スタイルの設計 ・オペレーション整理 ・メニュー・価格の方向性確認 ・広報",
       "fee": "2000",
-      "organizer": ""
-    },
-    {
-      "id": "35d0b4e5-ff5b-808b-a450-e323080f2f9b",
-      "title": "AIで画像を生成してみよう",
-      "url": "https://www.instagram.com/p/DUIYkhHD0BC/",
-      "start": "2026-05-21T18:00",
-      "end": "2026-05-21T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/35d0b4e5ff5b808ba450e323080f2f9b.png",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIで色んな画像を作成する仕組みを学べます。",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3500b4e5-ff5b-8029-8f28-f61e346c7219",
-      "title": "旭社 令和の大改修プロジェクト 第1回報告会",
-      "url": "https://www.konpira.or.jp/entries03/article.html",
-      "start": "2026-05-21T13:00",
-      "end": "2026-05-21T13:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "金刀比羅宮（旭社）",
-      "address": "〒766-0001 香川県仲多度郡琴平町892-1（石段628段目）",
-      "image": "",
-      "comment": "",
-      "fee": "0",
       "organizer": ""
     }
   ],
