@@ -6,7 +6,7 @@
    image は公式サイト等のog:imageを assets/places/ にローカル保存したもの（出所は imageSource）。
    Notion同様に画像はリポジトリを正とするlocal-first運用。og:imageが無い/ロゴのみ等の店舗は image を付けていない。 */
 window.COOL_SWEETS_DATA = {
-  checked: "2026-07-15",
+  checked: "2026-07-21",
   zones: [
     { key: "kakigori", label: "かき氷", emoji: "🍧" },
     { key: "ice", label: "ソフトクリーム・アイス", emoji: "🍦" }
@@ -43,7 +43,7 @@ window.COOL_SWEETS_DATA = {
     {
       id: "cool-usagiiro",
       name: "KOTOHIRAスィーツ うさぎいろ",
-      zones: ["kakigori"],
+      zones: ["kakigori", "ice"],
       area: "表参道入口周辺",
       address: "香川県仲多度郡琴平町702-12",
       phone: "0877-73-5225",
@@ -52,9 +52,9 @@ window.COOL_SWEETS_DATA = {
       priceRange: "店頭・Instagramで要確認",
       parking: "無料駐車場あり",
       availability: "期間限定・Instagramで提供確認",
-      offerings: "期間限定のかき氷・フルーツスムージー",
-      description: "表参道入口近くの和洋菓子店です。旬の果物を使った大福や焼き菓子に加え、暑い時期には期間限定のかき氷やフルーツスムージーが登場します。",
-      note: "かき氷は期間限定。提供中の種類と価格は公式Instagramで再確認する。",
+      offerings: "期間限定のかき氷・アイスクリーム・フルーツスムージー",
+      description: "表参道入口近くの和洋菓子店です。旬の果物を使った大福や焼き菓子に加え、暑い時期には期間限定のかき氷やアイスクリーム、フルーツスムージーが登場します。",
+      note: "かき氷・アイス・スムージーは期間限定。アイスクリームの提供は公式Instagram投稿で確認（提供中の種類と価格は来店前に再確認）。",
       links: {
         instagram: "https://www.instagram.com/usagiiro_kagawa/",
         map: "https://www.google.com/maps/search/?api=1&query=KOTOHIRAスィーツ+うさぎいろ",
@@ -64,7 +64,7 @@ window.COOL_SWEETS_DATA = {
         "https://www.kotohirakankou.jp/spot/buy/entry-313.html",
         "https://www.instagram.com/usagiiro_kagawa/"
       ],
-      checked: "2026-07-14",
+      checked: "2026-07-21",
       show: true
     },
     {
@@ -364,6 +364,89 @@ window.COOL_SWEETS_DATA = {
         "https://www.terakoyahonpo.jp/"
       ],
       checked: "2026-07-15",
+      show: true
+    },
+    {
+      id: "cool-ikeshoten",
+      name: "五人百姓 池商店",
+      zones: ["kakigori", "ice"],
+      area: "表参道（石段69段目）",
+      address: "香川県仲多度郡琴平町933",
+      phone: "0877-75-3694",
+      hours: "9:30〜18:00",
+      closed: "不定休",
+      priceRange: "店頭・Instagramで要確認（ソフト・ドリンク各500円前後）",
+      parking: "要確認",
+      availability: "公式Instagram・オンラインショップで商品掲載",
+      offerings: "飴がけソフト（生姜／いちご）・おいりソフト・ひやしあめソーダ 等／併設『天然氷にちか』の天然氷かき氷",
+      description: "こんぴらさんの石段で名物「加美代飴」を売る五人百姓の一軒です。飴を生かした飴がけソフトやひやしあめソーダのほか、同じ敷地の『天然氷にちか 四国こんぴら店』では日光直送の天然氷を使ったかき氷も味わえます。",
+      note: "五人百姓の一軒（加美代飴の販売店）。営業開始時刻は9:00/9:30で情報に軽微な相違あり、来店前に確認。かき氷は同一敷地内で営業する別事業者『天然氷にちか 四国こんぴら店』（@nichica_konpira）が提供するもので池商店自体の商品ではない点に注意。",
+      links: {
+        official: "https://ikesyouten.com/",
+        instagram: "https://www.instagram.com/ikesyouten/",
+        map: "https://www.google.com/maps/search/?api=1&query=五人百姓+池商店+琴平町",
+        tourism: "https://www.kotohirakankou.jp/spot/buy/entry-85.html"
+      },
+      sources: [
+        "https://ikesyouten.com/",
+        "https://www.kotohirakankou.jp/spot/buy/entry-85.html",
+        "https://www.instagram.com/ikesyouten/"
+      ],
+      checked: "2026-07-21",
+      show: true
+    },
+    {
+      id: "cool-tanukiya",
+      name: "宗家金毘羅饂飩 狸屋",
+      zones: ["kakigori"],
+      area: "表参道（琴電琴平駅そば）",
+      address: "香川県仲多度郡琴平町700-8",
+      phone: "0877-73-2409",
+      hours: "10:00〜17:00（曜日により変動、要確認）",
+      closed: "要確認（公式は月曜、観光協会は不定休と情報相違）",
+      priceRange: "店頭・公式サイトで要確認",
+      parking: "要確認",
+      availability: "夏季にかき氷セットを提供（公式サイトに掲載）",
+      offerings: "かき氷セット（うどん店の季節メニュー）",
+      description: "琴電琴平駅すぐそばの金毘羅うどんの店で、夏にはかき氷セットも登場します。参拝後の食事や、暑い日のひと休みに立ち寄れます。",
+      note: "本業はうどん店で、かき氷は季節メニュー。公式サイトにかき氷セットの掲載を確認。営業時間・定休日は公式サイト（月曜定休）と観光協会（不定休）で情報が異なるため来店前に確認。かき氷の商品名・価格は公式サイトのテキスト取得時に文字化けし未確定。",
+      links: {
+        official: "https://www.tanukiyaudon.com/",
+        instagram: "https://www.instagram.com/tanukiyaudon/",
+        map: "https://www.google.com/maps/search/?api=1&query=狸屋+うどん+琴平町",
+        tourism: "https://www.kotohirakankou.jp/spot/eat/entry-96.html"
+      },
+      sources: [
+        "https://www.tanukiyaudon.com/",
+        "https://www.kotohirakankou.jp/spot/eat/entry-96.html",
+        "https://www.instagram.com/tanukiyaudon/"
+      ],
+      checked: "2026-07-21",
+      show: true
+    },
+    {
+      id: "cool-kisayama",
+      name: "カフェ 象山",
+      zones: ["kakigori"],
+      area: "榎井地区（JR琴平駅から東へ徒歩約13分）",
+      address: "香川県仲多度郡琴平町榎井553-1",
+      phone: "0877-73-5504",
+      hours: "要確認（ネット上の情報が錯綜）",
+      closed: "要確認",
+      priceRange: "店頭・Instagramで要確認",
+      parking: "要確認",
+      availability: "かき氷・スムージーを提供（Instagram投稿で確認）",
+      offerings: "かき氷・スムージー",
+      description: "JR琴平駅の東側、榎井地区にあるカフェです。暑い時期にはかき氷やスムージーで涼めます。",
+      note: "かき氷・スムージーの提供は運営者からの情報（Instagram投稿）で確認。営業時間・定休日はネット上の情報が錯綜（無休／水曜定休など）しており来店前に要確認。同じ建物で別屋号の店（たこ焼き等）も営業。InstagramアカウントURLは未取得のため後日補記する。",
+      links: {
+        map: "https://www.google.com/maps/search/?api=1&query=カフェ象山+琴平町榎井"
+      },
+      sources: [
+        "https://www.hotpepper.jp/strJ000755053/",
+        "https://tabelog.com/kagawa/A3703/A370302/37012662/"
+      ],
+      checked: "2026-07-21",
       show: true
     }
   ]
