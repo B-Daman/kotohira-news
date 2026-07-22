@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-22 01:18",
+  "fetched": "2026-07-23 01:16",
   "news": [
+    {
+      "id": "3a50b4e5-ff5b-816d-aa6d-e2e529b6a5a4",
+      "title": "四国シェアサミット2026 in 琴平",
+      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
+      "summary": "琴平町で9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
+      "org": "琴平バス株式会社（プレスリリース）",
+      "media": "Webメディア",
+      "date": "2026-07-22",
+      "thumbnail": "assets/thumbs/3a50b4e5ff5b816daa6de2e529b6a5a4.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3a50b4e5-ff5b-81f4-9bb3-cf6bfed20aba",
+      "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100",
+      "summary": "公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催する。小学生～高校生200人を無料招待する。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-07-22",
+      "thumbnail": "assets/thumbs/3a50b4e5ff5b81f49bb3cf6bfed20aba.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3a30b4e5-ff5b-8108-b574-d404e6b6c7da",
       "title": "J3カマタマーレ讃岐 新体制発表会 in 金丸座",
@@ -313,48 +339,24 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "37d0b4e5-ff5b-813b-a98b-cb2fbaeae277",
-      "title": "琴平町のベーグル店がヴィーガン料理JAS認定取得",
-      "url": "https://news.ksb.co.jp/article/16624743",
-      "summary": "香川県琴平町のベーグル店「Bagel House KOTOHIRA」がベーグル店として日本初となるヴィーガン料理管理のJAS認定を取得しました。2024年10月にオープンし、6月1日からオンライン販売を開始予定です。",
-      "org": "KSB瀬戸内海放送",
-      "media": "テレビ",
-      "date": "2026-06-07",
-      "thumbnail": "assets/thumbs/37d0b4e5ff5b813ba98bcb2fbaeae277.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "37d0b4e5-ff5b-81ec-8c33-eb38dc3c2ef8",
-      "title": "香川県内への移住者、昨年度は2番目の多さ",
-      "url": "https://www.asahi.com/articles/ASV654HL7V65PLXB00PM.html",
-      "summary": "2025年度の香川県内への移住者数は2857人で統計開始以降2番目の多さ。市町別では高松市が最多で、琴平町は175人で5番目。若者や子育て世代が半数を超えた。",
-      "org": "朝日新聞",
-      "media": "新聞",
-      "date": "2026-06-06",
-      "thumbnail": "assets/thumbs/37d0b4e5ff5b81ec8c33eb38dc3c2ef8.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "38b0b4e5-ff5b-817b-a861-d65b2b615d0d",
-      "title": "琴平町放課後子ども教室の指導員募集",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/27/11452.html",
-      "summary": "琴平町放課後子ども教室の指導員を1名程度募集しています。資格・経験不問で、子どもたちの見守りや教室運営を担当します。謝金は時給1,200円です。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-06-01",
-      "thumbnail": "",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
+    {
+      "id": "3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d",
+      "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100",
+      "start": "2026-11-07",
+      "end": "2026-11-08",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "旧金毘羅大芝居(金丸座)",
+      "address": "〒766-0001 香川県仲多度郡琴平町乙1241",
+      "image": "assets/thumbs/3a50b4e5ff5b8110b6ecdc2d98a5715d.webp",
+      "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
+      "fee": "0",
+      "organizer": "公益財団法人中山芳彦香川イタリア交流財団"
+    },
     {
       "id": "3950b4e5-ff5b-80a5-8568-c7496fa57528",
       "title": "第152回 こんぴら氏子まつり 太鼓台清祓式",
@@ -386,19 +388,34 @@ window.NOTION_DATA = {
       "organizer": "流通科学大学"
     },
     {
-      "id": "39f0b4e5-ff5b-8102-82cd-f1f580d4ead3",
+      "id": "3a50b4e5-ff5b-818d-a225-d0048ef3f63f",
       "title": "四国シェアサミット2026 in 琴平",
-      "url": "https://shikokushare2026.netlify.app/",
+      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
       "start": "2026-09-11T18:00",
       "end": "2026-09-13",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/39f0b4e5ff5b810282cdf1f580d4ead3.png",
-      "comment": "会場: 琴平町公会堂（主会場）、琴平町内各所 2026年9月11日〜13日に香川県琴平町で開催される3年ぶりのシェアサミット。シェアリングエコノミーを「共助のしくみ」として地域に実装するための対話と実践の2日間。基調講演、6つの分科会、ワールドカフェ、スペシャルツアーを予定。",
+      "place": "琴平町公会堂",
+      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
+      "image": "assets/thumbs/3a50b4e5ff5b818da225d0048ef3f63f.png",
+      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
+      "fee": "0",
+      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会"
+    },
+    {
+      "id": "3a50b4e5-ff5b-80d6-8027-df1a65f72270",
+      "title": "第４回台湾フェス・台湾夜市 in 琴平（第四届琴平台湾節・台湾夜市）",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-282.html",
+      "start": "2026-09-05T15:00",
+      "end": "2026-09-05T20:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "",
+      "comment": "",
       "fee": "",
-      "organizer": "四国シェアサミット2026実行委員会"
+      "organizer": ""
     },
     {
       "id": "3990b4e5-ff5b-8102-b09a-d41fdbea2905",
@@ -616,7 +633,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-07-23T18:00",
       "end": "2026-07-23T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -631,7 +648,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/events/cmpwlu8xz0015dui87mg88h80?ref=cmo0x2dtb01mmf2fr3e4qsctp",
       "start": "2026-07-22T19:00",
       "end": "2026-07-22T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -646,7 +663,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
       "start": "2026-07-22T12:00",
       "end": "2026-07-22T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
