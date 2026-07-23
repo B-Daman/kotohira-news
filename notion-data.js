@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-23 01:16",
+  "fetched": "2026-07-24 01:21",
   "news": [
+    {
+      "id": "3a60b4e5-ff5b-81d5-9cae-cbe096971f92",
+      "title": "第61回海事産業発展並びに海上安全祈願祭",
+      "url": "https://news.mynavi.jp/article/20260722-4730158/",
+      "summary": "金刀比羅宮の本殿で7月15日に開催された海上安全祈願祭。全国の海事産業事業者や海事団体など110名以上が参加し、海事産業の発展と海上安全を祈願した。",
+      "org": "マイナビニュース",
+      "media": "Webメディア",
+      "date": "2026-07-22",
+      "thumbnail": "assets/thumbs/3a60b4e5ff5b81d59caecbe096971f92.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3a50b4e5-ff5b-81cf-8f84-cc14f57be983",
+      "title": "第1回こんぴらふねふねお座敷世界大会",
+      "url": "https://mainichi.jp/articles/20260722/ddl/k37/040/240000c",
+      "summary": "香川県琴平町で6月13日、民謡「こんぴらふねふね」を題材にしたお座敷遊びの第1回世界大会が開催された。仕掛け人は2025年5月に移住してきたこんぴら観光まちづくり協会事務局長の石田哲也さんで、観光振興を目的とした新しいイベント。",
+      "org": "毎日新聞",
+      "media": "新聞",
+      "date": "2026-07-22",
+      "thumbnail": "assets/thumbs/3a50b4e5ff5b81cf8f84cc14f57be983.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3a50b4e5-ff5b-816d-aa6d-e2e529b6a5a4",
       "title": "四国シェアサミット2026 in 琴平",
@@ -326,19 +352,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "37d0b4e5-ff5b-8125-ae05-d911ae121594",
-      "title": "琴平署、特殊詐欺対策マスコット犬を委嘱　タクシーに啓発ステッカー",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026060800000001900&ref=sn_top",
-      "summary": "琴平署は6月4日、2匹の犬を特殊詐欺対策マスコット犬に委嘱した。タクシー会社コトバスMX（琴平町）と連携し、マスコット犬の写真をあしらった啓発ステッカーを車両に貼り付け、防犯意識向上を促す取り組みを開始した。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-06-08",
-      "thumbnail": "assets/thumbs/37d0b4e5ff5b8125ae05d911ae121594.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -618,7 +631,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DaxE514kxJn/",
       "start": "2026-07-24T18:30",
       "end": "2026-07-24T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -633,7 +646,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-07-23T18:00",
       "end": "2026-07-23T19:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -1751,21 +1764,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIで色んな画像を作成する仕組みを学べます。",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "35f0b4e5-ff5b-8010-aa24-f820c6055fae",
-      "title": "こんぴら朝市",
-      "url": "https://www.facebook.com/konpira.asaichi/",
-      "start": "2026-05-24T09:00",
-      "end": "2026-05-24T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/manual/konpira_asaichi.png",
-      "comment": "",
-      "fee": "0",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -1790,7 +1788,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DakafxpktrA/",
       "start": "2026-07-24",
       "end": "2026-08-31",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "琴平グランドホテル桜の抄",
       "address": "〒766-0001 香川県仲多度郡琴平町977-1",
