@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-24 01:21",
+  "fetched": "2026-07-25 01:35",
   "news": [
     {
       "id": "3a60b4e5-ff5b-81d5-9cae-cbe096971f92",
@@ -339,19 +339,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "37c0b4e5-ff5b-81c5-b6c4-d2e406371ec5",
-      "title": "車内で通話・ウェブ会議OK！ 大阪～琴平間を移動オフィス化…琴平バス「コトリンクビズ」",
-      "url": "https://carcareplus.jp/article/2026/06/09/14132.html",
-      "summary": "琴平バスが6月1日、大阪～琴平間の直行バス車内で電話・ウェブ会議・PC作業ができる新サービス「コトリンクビズ」を開始。Wi-Fi・モバイルテーブル・モバイルバッテリーを備え、約4時間の移動時間をオフィス化する。琴平をワーケーションやデジタルノマドの滞在拠点にする狙い。",
-      "org": "CAR CARE PLUS",
-      "media": "Webメディア",
-      "date": "2026-06-09",
-      "thumbnail": "assets/thumbs/37c0b4e5ff5b81c5b6c4d2e406371ec5.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -601,7 +588,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/reels/DanbRmgS6kZ/",
       "start": "2026-07-25T17:00",
       "end": "2026-07-25T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "HAKOBUNEビル",
       "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
@@ -616,7 +603,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dajuk7qkds9/",
       "start": "2026-07-25T11:30",
       "end": "2026-07-25T12:45",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "ヴィスポことひら",
       "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
@@ -631,7 +618,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DaxE514kxJn/",
       "start": "2026-07-24T18:30",
       "end": "2026-07-24T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
