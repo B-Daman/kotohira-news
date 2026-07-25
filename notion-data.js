@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-25 01:35",
+  "fetched": "2026-07-26 00:58",
   "news": [
     {
       "id": "3a60b4e5-ff5b-81d5-9cae-cbe096971f92",
@@ -326,19 +326,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": true,
       "show": true
-    },
-    {
-      "id": "37c0b4e5-ff5b-81c6-9945-f42ed72e5e8c",
-      "title": "カマタマーレ讃岐、2026/27シーズンのユニフォームデザインを発表",
-      "url": "https://news.yahoo.co.jp/articles/cf820513839b85946e620f6e0000194f54cd177a",
-      "summary": "カマタマーレ讃岐が2026/27シーズンのユニフォームデザインを発表した。金刀比羅宮と琴平町の金丸座をモチーフに、歌舞伎の隈取をデザインに採用している。",
-      "org": "フットボールチャンネル / Yahoo!ニュース",
-      "media": "Webメディア",
-      "date": "2026-06-11",
-      "thumbnail": "assets/thumbs/37c0b4e5ff5b81c69945f42ed72e5e8c.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -573,7 +560,7 @@ window.NOTION_DATA = {
       "url": "https://www.k-wel.or.jp/activity/promotion/",
       "start": "2026-07-26T09:00",
       "end": "2026-07-26T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -588,7 +575,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/reels/DanbRmgS6kZ/",
       "start": "2026-07-25T17:00",
       "end": "2026-07-25T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "HAKOBUNEビル",
       "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
@@ -603,7 +590,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dajuk7qkds9/",
       "start": "2026-07-25T11:30",
       "end": "2026-07-25T12:45",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "ヴィスポことひら",
       "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
@@ -1705,51 +1692,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3660b4e5ff5b80b996fbe3c4b2f28c83.jpg",
       "comment": "",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3640b4e5-ff5b-8080-9beb-e55a433b299b",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-05-26T20:00",
-      "end": "2026-05-26T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3640b4e5ff5b80809bebe55a433b299b.png",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "36c0b4e5-ff5b-80f9-8901-e2855ae67a22",
-      "title": "琴平デジタル町民 公式LINE説明会",
-      "url": "https://www.instagram.com/p/DYihnZ0vvRB/",
-      "start": "2026-05-26T18:00",
-      "end": "2026-05-26T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/36c0b4e5ff5b80f98901e2855ae67a22.jpg",
-      "comment": "",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "35d0b4e5-ff5b-805f-af4e-e2c7786275c8",
-      "title": "AIで画像を生成してみよう",
-      "url": "https://www.instagram.com/p/DUIYkhHD0BC/",
-      "start": "2026-05-26T13:00",
-      "end": "2026-05-26T14:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町総合センター",
-      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
-      "image": "assets/thumbs/35d0b4e5ff5b805faf4ee2c7786275c8.png",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIで色んな画像を作成する仕組みを学べます。",
-      "fee": "0",
       "organizer": ""
     }
   ],
