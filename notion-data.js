@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-26 00:58",
+  "fetched": "2026-07-27 00:56",
   "news": [
     {
       "id": "3a60b4e5-ff5b-81d5-9cae-cbe096971f92",
@@ -560,7 +560,7 @@ window.NOTION_DATA = {
       "url": "https://www.k-wel.or.jp/activity/promotion/",
       "start": "2026-07-26T09:00",
       "end": "2026-07-26T12:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -1677,21 +1677,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/35d0b4e5ff5b80729ac4c60bf4d82b08.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでホームページを作成する仕組みを学べます。",
       "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3660b4e5-ff5b-80b9-96fb-e3c4b2f28c83",
-      "title": "温泉むすめ こんぴら桃萌ちゃんのお誕生日会",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-325.html",
-      "start": "2026-05-27",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ことひらテラス",
-      "address": "〒766-0001 香川県仲多度郡琴平町716-5",
-      "image": "assets/thumbs/3660b4e5ff5b80b996fbe3c4b2f28c83.jpg",
-      "comment": "",
-      "fee": "",
       "organizer": ""
     }
   ],
