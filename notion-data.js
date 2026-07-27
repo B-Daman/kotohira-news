@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-27 00:56",
+  "fetched": "2026-07-28 01:53",
   "news": [
+    {
+      "id": "3a90b4e5-ff5b-810c-b715-e2c7ef75114a",
+      "title": "弥彦燈籠まつり開催、琴平町との交流50周年記念花火も打ち上げ",
+      "url": "https://www.kenoh.com/2026/07/26_tourou.html",
+      "summary": "新潟県弥彦村の夏の大祭「弥彦燈籠まつり」が7月25日に開かれ、土曜開催で例年以上の人出でにぎわった。琴平町との交流50周年を記念し、琴平町から記念スターマインが奉納された。",
+      "org": "ケンオー・ドットコム（kenoh.com）",
+      "media": "Webメディア",
+      "date": "2026-07-26",
+      "thumbnail": "http://www.kenoh.com/2026/07/26_TOUROU/photo1.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3a90b4e5-ff5b-8193-88ce-c302a5a45691",
+      "title": "新潟県弥彦村と香川県琴平町が交流50周年　新協定締結",
+      "url": "https://www.kenoh.com/2026/07/25_kotohira.html",
+      "summary": "新潟県弥彦村と香川県琴平町は7月25日、弥彦村役場で交流50周年記念協定締結式を開催した。1976年の提携から半世紀を経て、観光や行政、文化など幅広い分野での連携を深める新協定を締結。琴平町からは弥彦燈籠まつりへの記念花火、弥彦村からは琴平町の子どもたちへの弥彦米贈呈など、50周年記念事業を展開する。",
+      "org": "県民ホットライン（kenoh.com）",
+      "media": "行政",
+      "date": "2026-07-25",
+      "thumbnail": "http://www.kenoh.com/2026/07/25_kotohira/photo1.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3a60b4e5-ff5b-81d5-9cae-cbe096971f92",
       "title": "第61回海事産業発展並びに海上安全祈願祭",
@@ -313,19 +339,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "37e0b4e5-ff5b-8169-84e0-f3391cd2db93",
-      "title": "第1回こんぴらふねふねお座敷世界大会",
-      "url": "https://www.sankei.com/article/20260613-GIHSFMWWQVLCNGSNEYJMW3CRDU/",
-      "summary": "お座敷遊び「こんぴらふねふね」の初代世界王者を決める大会が香川県琴平町で開催された。愛好者35人が参加し、徳島県三好市の「かずら橋ゆらゆらファイブ」が優勝した。",
-      "org": "産経新聞",
-      "media": "新聞",
-      "date": "2026-06-13",
-      "thumbnail": "assets/thumbs/37e0b4e5ff5b816984e0f3391cd2db93.jpg",
-      "duplicate": false,
-      "pickup": true,
-      "show": true
     }
   ],
   "events": [
@@ -354,7 +367,7 @@ window.NOTION_DATA = {
       "city": "琴平町",
       "place": "",
       "address": "",
-      "image": "",
+      "image": "assets/thumbs/3950b4e5ff5b80a58568c7496fa57528.webp",
       "comment": "",
       "fee": "",
       "organizer": ""
@@ -495,6 +508,21 @@ window.NOTION_DATA = {
       "organizer": "麻心琴平"
     },
     {
+      "id": "3a90b4e5-ff5b-81d4-a130-ffcbf1c1ffa4",
+      "title": "香川県琴平町×困りごと公開会議＠大阪京橋",
+      "url": "https://x.com/uzuki_rin/status/2078767555217670238",
+      "start": "2026-08-05T16:30",
+      "end": "2026-08-05T18:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "https://pbs.twimg.com/media/HNlB2f6akAATaH5.jpg:large",
+      "comment": "会場: QUINTBRIDGE 1階（京橋徒歩5分） 琴平町の地方創生チームが大阪京橋で開催する公開会議。現場の事業者が抱える課題を公開し、参加者とブレインストーミングを行う。トークイベント後に懇親会あり。",
+      "fee": "0",
+      "organizer": "琴平地方創生チーム"
+    },
+    {
       "id": "39c0b4e5-ff5b-8137-bd2d-dd707e370fd9",
       "title": "こんぴら路地裏着物レンタル藤田屋 3周年イベント開催",
       "url": "https://www.instagram.com/p/DavQfIeGJxF/",
@@ -545,7 +573,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-07-28T20:00",
       "end": "2026-07-28T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -1632,51 +1660,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b8030b0c1d6c90bbfbccc.png",
       "comment": "",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-8064-a446-d2783497ce34",
-      "title": "「琴平AIラボ」プレイベント",
-      "url": "https://www.instagram.com/p/DYyQeyuoG2H/",
-      "start": "2026-05-28T19:00",
-      "end": "2026-05-28T20:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b8064a446d2783497ce34.png",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "36c0b4e5-ff5b-8075-8528-f4fc9b907504",
-      "title": "コミュニティナイト パエリア at コトリ",
-      "url": "https://www.instagram.com/p/DYwbJEqk-t1/",
-      "start": "2026-05-28T19:00",
-      "end": "2026-05-28T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/36c0b4e5ff5b80758528f4fc9b907504.png",
-      "comment": "",
-      "fee": "1600",
-      "organizer": ""
-    },
-    {
-      "id": "35d0b4e5-ff5b-8072-9ac4-c60bf4d82b08",
-      "title": "AIでホームページを作ってみよう",
-      "url": "https://www.instagram.com/p/DUIYkhHD0BC/",
-      "start": "2026-05-28T18:00",
-      "end": "2026-05-28T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/35d0b4e5ff5b80729ac4c60bf4d82b08.png",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでホームページを作成する仕組みを学べます。",
-      "fee": "0",
       "organizer": ""
     }
   ],
