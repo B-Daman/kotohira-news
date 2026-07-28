@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-28 01:53",
+  "fetched": "2026-07-29 01:29",
   "news": [
+    {
+      "id": "3ab0b4e5-ff5b-8145-90e7-c50d04af2c9c",
+      "title": "第2弾街ガチャin琴平町 デザイン発表会",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072800000001600",
+      "summary": "善通寺一高校の生徒が琴平町の観光名所をカプセルトイにする「街ガチャ」第2弾のデザイン発表会が琴平町で開催された。生徒たちが琴平の魅力を凝縮したアイデアを披露した。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-07-28",
+      "thumbnail": "assets/thumbs/3ab0b4e5ff5b814590e7c50d04af2c9c.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3a90b4e5-ff5b-810c-b715-e2c7ef75114a",
       "title": "弥彦燈籠まつり開催、琴平町との交流50周年記念花火も打ち上げ",
@@ -403,19 +416,19 @@ window.NOTION_DATA = {
       "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会"
     },
     {
-      "id": "3a50b4e5-ff5b-80d6-8027-df1a65f72270",
-      "title": "第４回台湾フェス・台湾夜市 in 琴平（第四届琴平台湾節・台湾夜市）",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-282.html",
+      "id": "3ab0b4e5-ff5b-815a-ac45-cbf997fdd175",
+      "title": "第4回 台湾フェス・台湾夜市 in 琴平（第四届琴平台湾節・台湾夜市）",
+      "url": "https://www.instagram.com/p/DbSN6Pfgej_/",
       "start": "2026-09-05T15:00",
       "end": "2026-09-05T20:00",
       "status": "実施前",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
-      "image": "",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
+      "image": "assets/thumbs/3ab0b4e5ff5b815aac45cbf997fdd175.jpg",
+      "comment": "琴平町の金陵の郷で開催される台湾グルメ・文化イベント。台湾屋台グルメの出店、ステージイベント（電音三太子・二胡演奏・トークショー）、町内コラボメニュースタンプラリー、限定ガチャガチャなどが予定されている。",
+      "fee": "0",
+      "organizer": "琴平町"
     },
     {
       "id": "3990b4e5-ff5b-8102-b09a-d41fdbea2905",
@@ -538,6 +551,21 @@ window.NOTION_DATA = {
       "organizer": "こんぴら路地裏着物レンタル藤田屋"
     },
     {
+      "id": "3ab0b4e5-ff5b-814a-8aad-c15fcbacb097",
+      "title": "スマートエイジングフォーラム ロボットと暮らす未来を考える",
+      "url": "https://broadbandschool.jp/blog_articles/1783861366.html",
+      "start": "2026-08-01T14:00",
+      "end": "2026-08-01T16:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3ab0b4e5ff5b814a8aadc15fcbacb097.jpg",
+      "comment": "高齢者の暮らしを支えるロボットについて学ぶフォーラム。日本生まれのLOVOT、ロボットフレンドリー社会、歩行支援ロボットWALK-MAATについての講演と質疑応答が行われる。",
+      "fee": "0",
+      "organizer": "NPO ブロードバンドスクール協会"
+    },
+    {
       "id": "3950b4e5-ff5b-8045-81cc-dba0f5666693",
       "title": "もくもくAI作業会（ことひらAI会）",
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
@@ -558,7 +586,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
       "start": "2026-07-29T12:00",
       "end": "2026-07-29T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -573,7 +601,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-07-28T20:00",
       "end": "2026-07-28T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
