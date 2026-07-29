@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-29 01:29",
+  "fetched": "2026-07-30 01:17",
   "news": [
     {
       "id": "3ab0b4e5-ff5b-8145-90e7-c50d04af2c9c",
@@ -446,6 +446,21 @@ window.NOTION_DATA = {
       "organizer": "こんぴら観光まちづくり協会"
     },
     {
+      "id": "3ac0b4e5-ff5b-800f-80f8-c429f7e0678c",
+      "title": "あなたにもできる AI体験会「まずは、AIに話しかけてみる」",
+      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
+      "start": "2026-08-18T13:30",
+      "end": "2026-08-18T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
+      "image": "assets/thumbs/3ac0b4e5ff5b800f80f8c429f7e0678c.png",
+      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "3990b4e5-ff5b-81f7-b3e1-d335b962d1b7",
       "title": "かがわローカルツーリズムブートキャンプ",
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-466.html",
@@ -536,6 +551,21 @@ window.NOTION_DATA = {
       "organizer": "琴平地方創生チーム"
     },
     {
+      "id": "3ac0b4e5-ff5b-809b-8b2f-d5aa257f637e",
+      "title": "あなたにもできる AI体験会「まずは、AIに話しかけてみる」",
+      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
+      "start": "2026-08-04T13:30",
+      "end": "2026-08-04T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
+      "image": "assets/thumbs/3ac0b4e5ff5b809b8b2fd5aa257f637e.png",
+      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "39c0b4e5-ff5b-8137-bd2d-dd707e370fd9",
       "title": "こんぴら路地裏着物レンタル藤田屋 3周年イベント開催",
       "url": "https://www.instagram.com/p/DavQfIeGJxF/",
@@ -571,7 +601,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-07-30T18:00",
       "end": "2026-07-30T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -586,7 +616,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
       "start": "2026-07-29T12:00",
       "end": "2026-07-29T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1673,21 +1703,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3730b4e5ff5b80b1bc74d37e3279e276.png",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-8030-b0c1-d6c90bbfbccc",
-      "title": "琴平の朝、ガンジスを想いながら",
-      "url": "https://www.instagram.com/yuwalal_tabla/p/DYmZSVnmpoQ/?img_index=1",
-      "start": "2026-05-30T10:30",
-      "end": "2026-05-30T16:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "松尾寺",
-      "address": "〒766-0001 香川県仲多度郡琴平町川西973",
-      "image": "assets/thumbs/3710b4e5ff5b8030b0c1d6c90bbfbccc.png",
-      "comment": "",
-      "fee": "",
       "organizer": ""
     }
   ],
