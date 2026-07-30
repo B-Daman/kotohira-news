@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-30 01:17",
+  "fetched": "2026-07-31 01:22",
   "news": [
+    {
+      "id": "3ad0b4e5-ff5b-8122-a3ef-fa76b2b70229",
+      "title": "香川県琴平町の困りごと公開会議",
+      "url": "https://prtimes.jp/main/html/rd/p/000002272.000016751.html",
+      "summary": "パソナ地方創生が観光庁の『企業版第2のふるさとづくりモデル実証事業』に採択され、琴平町の地域課題を企業に紹介するイベントを8月5日に大阪で開催。琴平町の地域事業者と域外企業の共創のきっかけを創出する。",
+      "org": "パソナグループ プレスリリース",
+      "media": "Webメディア",
+      "date": "2026-07-30",
+      "thumbnail": "assets/thumbs/3ad0b4e5ff5b8122a3effa76b2b70229.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ad0b4e5-ff5b-81a1-8645-d48ef790654b",
+      "title": "四国シェアサミット2026 in 琴平",
+      "url": "https://news.yahoo.co.jp/articles/40c7d7790f08fc0730901ad9ee991f92c472a607",
+      "summary": "香川県琴平町が主催する「四国シェアサミット2026 in 琴平」が9月12日・13日に開催される。二地域居住や関係人口、シェアリングエコノミーをテーマに、全国40名を超える実践者が集結し、「人口をシェアする」まちづくりについて議論する。",
+      "org": "Yahoo!ニュース（FINDERS）",
+      "media": "Webメディア",
+      "date": "2026-07-29",
+      "thumbnail": "assets/thumbs/3ad0b4e5ff5b81a18645d48ef790654b.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3ab0b4e5-ff5b-8145-90e7-c50d04af2c9c",
       "title": "第2弾街ガチャin琴平町 デザイン発表会",
@@ -11,6 +37,19 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-07-28",
       "thumbnail": "assets/thumbs/3ab0b4e5ff5b814590e7c50d04af2c9c.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ab0b4e5-ff5b-81bb-b4a6-c2ec364dc9a4",
+      "title": "第4回 台湾フェス・台湾夜市 in 琴平",
+      "url": "https://www.instagram.com/p/DbSN6Pfgej_/",
+      "summary": "台湾グルメ、ステージイベント、コラボ企画などを楽しめるイベント。台湾屋台グルメの出店、電音三太子や二胡の生演奏、台湾観光PRなどが行われる。",
+      "org": "Instagram（琴平町関連アカウント）",
+      "media": "行政",
+      "date": "2026-07-27",
+      "thumbnail": "assets/thumbs/3ab0b4e5ff5b81bbb4a6c2ec364dc9a4.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -539,13 +578,13 @@ window.NOTION_DATA = {
       "id": "3a90b4e5-ff5b-81d4-a130-ffcbf1c1ffa4",
       "title": "香川県琴平町×困りごと公開会議＠大阪京橋",
       "url": "https://x.com/uzuki_rin/status/2078767555217670238",
-      "start": "2026-08-05T16:30",
+      "start": "2026-08-05T16:00",
       "end": "2026-08-05T18:30",
       "status": "実施前",
-      "city": "琴平町",
+      "city": "",
       "place": "",
       "address": "",
-      "image": "https://pbs.twimg.com/media/HNlB2f6akAATaH5.jpg:large",
+      "image": "assets/thumbs/3a90b4e5ff5b81d4a130ffcbf1c1ffa4.jpg",
       "comment": "会場: QUINTBRIDGE 1階（京橋徒歩5分） 琴平町の地方創生チームが大阪京橋で開催する公開会議。現場の事業者が抱える課題を公開し、参加者とブレインストーミングを行う。トークイベント後に懇親会あり。",
       "fee": "0",
       "organizer": "琴平地方創生チーム"
@@ -601,7 +640,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-07-30T18:00",
       "end": "2026-07-30T19:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
