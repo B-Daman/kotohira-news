@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-07-31 01:22",
+  "fetched": "2026-08-01 01:40",
   "news": [
     {
       "id": "3ad0b4e5-ff5b-8122-a3ef-fa76b2b70229",
@@ -625,7 +625,7 @@ window.NOTION_DATA = {
       "url": "https://broadbandschool.jp/blog_articles/1783861366.html",
       "start": "2026-08-01T14:00",
       "end": "2026-08-01T16:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1752,7 +1752,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Da7quhKEh6p/",
       "start": "2026-08-01",
       "end": "2026-08-21",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "ことひら温泉 琴参閣",
       "address": "〒766-0001 香川県仲多度郡琴平町685ｰ11",
@@ -1782,7 +1782,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dab1SnID1IT/",
       "start": "2026-07-01",
       "end": "2026-07-31",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "呑象ブリューイング",
       "address": "香川県仲多度郡琴平町182-2",
@@ -1835,21 +1835,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の金昇蔵（きょうぐら）による感謝の割禁祭の告知。歴史的な醤油樽を背景に、感謝イベントの開催を案内している。",
       "fee": "",
       "organizer": "金昇蔵"
-    },
-    {
-      "id": "37c0b4e5-ff5b-80a4-a6c2-d7231a1fb123",
-      "title": "レモンフェア",
-      "url": "https://www.instagram.com/p/DZB1sOkEQsZ/",
-      "start": "2026-06-01",
-      "end": "2026-06-29",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "呑象ブリューイング",
-      "address": "香川県仲多度郡琴平町182-2",
-      "image": "assets/thumbs/37c0b4e5ff5b80a4a6c2d7231a1fb123.png",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
