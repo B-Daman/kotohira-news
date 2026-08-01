@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-01 01:40",
+  "fetched": "2026-08-02 00:54",
   "news": [
     {
       "id": "3ad0b4e5-ff5b-8122-a3ef-fa76b2b70229",
@@ -610,7 +610,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DavQfIeGJxF/",
       "start": "2026-08-02T10:00",
       "end": "2026-08-02T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
       "address": "香川県仲多度郡琴平町806",
@@ -625,7 +625,7 @@ window.NOTION_DATA = {
       "url": "https://broadbandschool.jp/blog_articles/1783861366.html",
       "start": "2026-08-01T14:00",
       "end": "2026-08-01T16:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1727,21 +1727,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b8076996ce62b79a5af6a.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3730b4e5-ff5b-80b1-bc74-d37e3279e276",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-06-02T20:00",
-      "end": "2026-06-02T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3730b4e5ff5b80b1bc74d37e3279e276.png",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
       "organizer": ""
     }
   ],
