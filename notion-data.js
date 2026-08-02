@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-02 00:54",
+  "fetched": "2026-08-03 00:55",
   "news": [
     {
       "id": "3ad0b4e5-ff5b-8122-a3ef-fa76b2b70229",
@@ -378,19 +378,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3880b4e5-ff5b-8116-8bbb-f4ff6d5c0a16",
-      "title": "琴平町の保育施設へ体育遊具を届ける支援をTOKKENで販売開始",
-      "url": "https://prtimes.jp/main/html/rd/p/000000331.000091165.html",
-      "summary": "株式会社あるやうむが提供するNFT販売プラットフォーム「TOKKEN」で、琴平町内の3つの保育施設に体操マットと平均台を届ける支援を販売開始。支援者は施設を選択して購入すると、都村製作所が遊具を手配・配送し、施設からの感謝メッセージと写真を受け取ることができる。",
-      "org": "PR TIMES（株式会社あるやうむ プレスリリース）",
-      "media": "Webメディア",
-      "date": "2026-06-19",
-      "thumbnail": "assets/thumbs/3880b4e5ff5b81168bbbf4ff6d5c0a16.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -485,6 +472,36 @@ window.NOTION_DATA = {
       "organizer": "こんぴら観光まちづくり協会"
     },
     {
+      "id": "3b00b4e5-ff5b-8085-bdbc-f9eafdf51928",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-08-29T07:20",
+      "end": "2026-08-29T09:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3b00b4e5ff5b8085bdbcf9eafdf51928.jpg",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
+    },
+    {
+      "id": "3b00b4e5-ff5b-805b-9fcc-fa224ff7cbec",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-08-22T07:20",
+      "end": "2026-08-22T09:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3b00b4e5ff5b805b9fccfa224ff7cbec.jpg",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
+    },
+    {
       "id": "3ac0b4e5-ff5b-800f-80f8-c429f7e0678c",
       "title": "あなたにもできる AI体験会「まずは、AIに話しかけてみる」",
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
@@ -530,6 +547,21 @@ window.NOTION_DATA = {
       "organizer": "平和祈願灯ろう流し実行委員会（琴平町観光商工課）"
     },
     {
+      "id": "3b00b4e5-ff5b-80fb-8332-cdf5816e6761",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-08-15T07:20",
+      "end": "2026-08-15T09:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3b00b4e5ff5b80fb8332cdf5816e6761.jpg",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
+    },
+    {
       "id": "3950b4e5-ff5b-81a2-838c-ca505a5924ef",
       "title": "こんぴら十帖ビアガーデン",
       "url": "https://www.instagram.com/p/DacFTbnTFL7/",
@@ -543,6 +575,36 @@ window.NOTION_DATA = {
       "comment": "琴平町の一之橋公園で開催される夏限定のビアガーデン。冷たいビールと美味しいグルメを楽しめるイベント。入場無料。",
       "fee": "0",
       "organizer": "こんぴら十帖"
+    },
+    {
+      "id": "3b00b4e5-ff5b-81ef-9a74-d83ce90ee77a",
+      "title": "琴平町文化財保存活用地域計画 住民説明会",
+      "url": "https://www.instagram.com/p/DbabPj4E-xN/",
+      "start": "2026-08-08T10:00",
+      "end": "2026-08-08T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
+      "image": "assets/thumbs/3b00b4e5ff5b81ef9a74d83ce90ee77a.jpg",
+      "comment": "会場: 琴平町総合センター 2階 大ホール 琴平町の文化財を町全体で守り未来へ繋いでいくための住民説明会。琴平町教育委員会主催で、町内の古い建物や歴史に関する情報を募集し、専門家と共に琴平の文化財について学ぶ機会。",
+      "fee": "0",
+      "organizer": "琴平町教育委員会"
+    },
+    {
+      "id": "3b00b4e5-ff5b-804a-a5f8-dd867150d1ff",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-08-08T07:20",
+      "end": "2026-08-08T09:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3b00b4e5ff5b804aa5f8dd867150d1ff.jpg",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
     },
     {
       "id": "39c0b4e5-ff5b-80b2-8b74-c9526c699ddb",
@@ -610,7 +672,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DavQfIeGJxF/",
       "start": "2026-08-02T10:00",
       "end": "2026-08-02T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
       "address": "香川県仲多度郡琴平町806",
@@ -633,6 +695,21 @@ window.NOTION_DATA = {
       "comment": "高齢者の暮らしを支えるロボットについて学ぶフォーラム。日本生まれのLOVOT、ロボットフレンドリー社会、歩行支援ロボットWALK-MAATについての講演と質疑応答が行われる。",
       "fee": "0",
       "organizer": "NPO ブロードバンドスクール協会"
+    },
+    {
+      "id": "3b00b4e5-ff5b-804c-8611-f17cf21da961",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-08-01T07:20",
+      "end": "2026-08-01T09:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3b00b4e5ff5b804c8611f17cf21da961.jpg",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
     },
     {
       "id": "3950b4e5-ff5b-8045-81cc-dba0f5666693",
@@ -1711,21 +1788,6 @@ window.NOTION_DATA = {
       "address": "香川県仲多度郡琴平町720−15",
       "image": "assets/thumbs/3710b4e5ff5b80bebbd8e31a97fc738f.jpg",
       "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-8076-996c-e62b79a5af6a",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DY31ZvcE0Lp/?img_index=2",
-      "start": "2026-06-03T12:00",
-      "end": "2026-06-03T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b8076996ce62b79a5af6a.jpg",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": ""
     }
