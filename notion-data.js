@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-06 01:27",
+  "fetched": "2026-08-08 00:47",
   "news": [
+    {
+      "id": "3b40b4e5-ff5b-810f-b5c9-cc8698bbd828",
+      "title": "移住者が仕掛ける「お座敷遊び」世界大会　琴平町で開催",
+      "url": "https://www.47news.jp/14746990.html",
+      "summary": "香川県琴平町で6月13日、民謡「こんぴらふねふね」を題材にした第1回世界大会が琴平町公会堂で開かれた。仕掛け人は昨年5月に移住してきたこんぴら観光まちづくり協会事務局長の石田哲也さんで、観光振興の一環として企画した。",
+      "org": "共同通信",
+      "media": "Webメディア",
+      "date": "2026-08-06",
+      "thumbnail": "assets/thumbs/3b40b4e5ff5b810fb5c9cc8698bbd828.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3b30b4e5-ff5b-81b8-b5fa-fb4a7d74ffb6",
       "title": "まちづくりワークショップ（子育て世代向け）",
@@ -365,19 +378,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3900b4e5-ff5b-8178-82f8-cb1f855e6aae",
-      "title": "こんぴら温泉湯元八千代が日帰り温泉パスポートをTOKKENにて販売開始",
-      "url": "https://prtimes.jp/main/html/rd/p/000000303.000091165.html",
-      "summary": "こんぴら温泉湯元八千代が、香川県民向け「湯習慣パス」（2か月9,000円）と香川県外向け「年間整いパス」（1年16,500円）の2種類の日帰り温泉パスポートをNFT販売プラットフォーム「TOKKEN」で7月1日から販売開始。参拝・観光・日常利用に合わせた温泉体験を提供する。",
-      "org": "株式会社あるやうむ プレスリリース",
-      "media": "Webメディア",
-      "date": "2026-07-01",
-      "thumbnail": "assets/thumbs/3900b4e5ff5b817882f8cb1f855e6aae.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -500,6 +500,21 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": ""
+    },
+    {
+      "id": "3b30b4e5-ff5b-81c6-bd4b-e3808b81dbff",
+      "title": "着物補修ワークショップ",
+      "url": "https://www.instagram.com/p/DblawCnmJvJ/",
+      "start": "2026-08-29T10:00",
+      "end": "2026-08-29T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
+      "address": "香川県仲多度郡琴平町806",
+      "image": "assets/thumbs/3b30b4e5ff5b81c6bd4be3808b81dbff.jpg",
+      "comment": "会場: こんぴら路地裏着物レンタル藤田屋（香川県仲多度郡琴平町806） 琴平町の着物レンタル藤田屋が開催する着物補修ワークショップ。ほつれた着物の修理や脇の補強方法を元和裁師から学べる。初心者向けで、自分の着物を持参して直すことができる。",
+      "fee": "1000",
+      "organizer": "こんぴら路地裏着物レンタル藤田屋"
     },
     {
       "id": "3b00b4e5-ff5b-8085-bdbc-f9eafdf51928",
@@ -822,7 +837,7 @@ window.NOTION_DATA = {
       "url": "https://www.facebook.com/sandosandstand/posts/pfbid0BerDypvDZimbnkw8SGSDZUEvPrpDtAjnLn1xDTpLWP4xAhoruQS3DTPqEEw15UVLl",
       "start": "2026-08-08T18:00",
       "end": "2026-08-08T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "HAKOBUNEビル",
       "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
@@ -837,7 +852,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DbabPj4E-xN/",
       "start": "2026-08-08T10:00",
       "end": "2026-08-08T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "琴平町総合センター",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
@@ -852,7 +867,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-08-08T07:20",
       "end": "2026-08-08T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -867,7 +882,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/reels/DaljXe5yEJ9/",
       "start": "2026-08-06T18:30",
       "end": "2026-08-06T20:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "つるや旅館",
       "address": "766-0001 香川県仲多度郡琴平町620",
@@ -882,7 +897,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-08-06T18:00",
       "end": "2026-08-06T19:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -2060,21 +2075,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "3600b4e5-ff5b-8090-bdf9-c571408f6f6a",
-      "title": "Sando Sand. Sound(サンドーサンドサウンド)",
-      "url": "https://www.facebook.com/kishimoto.hiroki/posts/pfbid02MNSH3eQETLjZnW7TQqMoY8d9rVyJRibBGmz8qKerxMLXedi9QANiQAHWBxpT2tbnl",
-      "start": "2026-06-07T19:00",
-      "end": "2026-06-07T20:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "Sando Sand. Stand",
-      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル 1F",
-      "image": "assets/thumbs/3600b4e5ff5b8090bdf9c571408f6f6a.jpg",
-      "comment": "誰でも歓迎の参加型音楽イベント その名も 「Sando Sand. Sound(サンドーサンドサウンド)」🎷 上手い・下手は関係なく ただ「みんなと歌いたい」「楽器を鳴らしたい」という人が それぞれ事前に課題曲を練習して、当日みんなで合わせてみよう！ という企画です。 ライブやコンサートではないので観客不在。 原曲・楽譜に無い楽器を使ってもOK。 主役は「曲」ではなく「場」であり とにかくみんなと音・声を合わせることを楽しむ時間です。 「楽器は弾けないけど手拍子なら…」という人も歓迎だし 「1フレーズだけだけどハモってみたい」という人でも大丈夫。 もちろんお子様も大歓迎です！ 【当日の流れ】 ・軽い自己紹介 ・ウォームアップ（手拍子・簡単な音出し） ・課題曲を使って合奏（途中で止めたり確認しながら） ・最後に通して合わせる ・次回の課題曲をみんなで考える ▼課題曲▼ ①Piano Man / Billy Joel 参考動画：https://youtu.be/gxEPV4kolz0?si=Esn-W284d-LdLh9e ②明日があるさ / 坂本九 参考動画：https://youtu.be/4XOWE1G31aU?si=BG9XxnUWo1a6IV4q 【参加方法】 以下のページで詳細をご確認いただき、下部にあるフォームからご予約ください。 https://sando-sand-stand.com/sando-sand-sound/",
-      "fee": "0",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -2167,21 +2167,6 @@ window.NOTION_DATA = {
       "comment": "会場: DONZO Brewing DONZO Brewingの3周年記念キャンペーン期間中、地元食材を使った「DONZOビストロ風プレート」を提供。豚肉のリエット、オリーブ地鶏のコンフィ、香川産スイートコーンのキッシュが含まれ、プレートは1,500円、クラフトビールとソフトドリンク（400円商品）は半額。",
       "fee": "1500",
       "organizer": "DONZO Brewing"
-    },
-    {
-      "id": "37c0b4e5-ff5b-818e-bf1f-e0a076e47339",
-      "title": "京蔵感謝の割禁祭",
-      "url": "https://www.instagram.com/p/DZHxzQamugo/?img_index=1",
-      "start": "2026-06-08",
-      "end": "2026-06-20",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/37c0b4e5ff5b818ebf1fe0a076e47339.png",
-      "comment": "琴平町の金昇蔵（きょうぐら）による感謝の割禁祭の告知。歴史的な醤油樽を背景に、感謝イベントの開催を案内している。",
-      "fee": "",
-      "organizer": "金昇蔵"
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
