@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-08 00:47",
+  "fetched": "2026-08-09 00:21",
   "news": [
     {
       "id": "3b40b4e5-ff5b-810f-b5c9-cc8698bbd828",
@@ -837,7 +837,7 @@ window.NOTION_DATA = {
       "url": "https://www.facebook.com/sandosandstand/posts/pfbid0BerDypvDZimbnkw8SGSDZUEvPrpDtAjnLn1xDTpLWP4xAhoruQS3DTPqEEw15UVLl",
       "start": "2026-08-08T18:00",
       "end": "2026-08-08T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "HAKOBUNEビル",
       "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
@@ -852,7 +852,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DbabPj4E-xN/",
       "start": "2026-08-08T10:00",
       "end": "2026-08-08T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平町総合センター",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
@@ -867,7 +867,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-08-08T07:20",
       "end": "2026-08-08T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2044,36 +2044,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b80bab883d3fd2b437cfa.jpg",
       "comment": "",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3730b4e5-ff5b-8025-8637-d3f19070d491",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-06-09T20:00",
-      "end": "2026-06-09T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3730b4e5ff5b80258637d3f19070d491.png",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "37a0b4e5-ff5b-80c4-997c-c8b24eb7b0d6",
-      "title": "ゼロから分かるAI超入門 ースマホが使えれば大丈夫！今日から使えるAIの基本操作ー",
-      "url": "",
-      "start": "2026-06-09T11:00",
-      "end": "2026-06-09T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町総合センター",
-      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
-      "image": "assets/thumbs/37a0b4e5ff5b80c4997cc8b24eb7b0d6.png",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
       "organizer": ""
     }
   ],
