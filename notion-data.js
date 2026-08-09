@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-09 00:21",
+  "fetched": "2026-08-10 00:23",
   "news": [
     {
       "id": "3b40b4e5-ff5b-810f-b5c9-cc8698bbd828",
@@ -362,19 +362,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-07-06",
       "thumbnail": "assets/thumbs/3950b4e5ff5b8198ac48eb379f43eb27.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3b10b4e5-ff5b-814c-8f16-fb689e81e311",
-      "title": "神野（かんの）朝顔の会「絵手紙・切り絵展」",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-492.html",
-      "summary": "神野朝顔の会メンバーによる絵手紙・切り絵展がACTことひらで開催中。ことひらの日常生活から文化、イベントまでを題材とした素朴で心温まる芸術展。",
-      "org": "琴平まるごとNavi（こんぴら観光まちづくり協会）",
-      "media": "Webメディア",
-      "date": "2026-07-01T09:00",
-      "thumbnail": "assets/thumbs/3b10b4e5ff5b814c8f16fb689e81e311.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -807,7 +794,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DacFTbnTFL7/",
       "start": "2026-08-10T16:00",
       "end": "2026-08-10T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -822,7 +809,7 @@ window.NOTION_DATA = {
       "url": "",
       "start": "2026-08-10",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1999,51 +1986,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b80bbac16dd4e9ac8a7ae.png",
       "comment": "第13回 「ユルッと楽しく着付けレッスン」開催日決定しました。 …＊…＊…＊…＊…＊…＊… 日時 6/11（木） 18:30〜20:00 場所 つるや旅館 (駐車場有) 参加費 着物一式持参の方 ¥500 着物一式レンタルの方 ¥1000 帯結びだけ今回はしたい方 帯一式ご持参¥500 ☆ドリンク、おやつ付き ご予約 藤田屋Instagramメッセージ、公式ライン、お電話にて受け付けております。 定員 6名 講師 つるや旅館女将、若女将、藤田屋 @turuyaryokan_konpira_wakaokami @fujitaya__kimono …＊…＊…＊…＊…＊… ○自分で着物を着れるようになりたい ○お家に眠っている着物を着たい ○帯結びが難しくて習いたい 着物を着てみたい始めの一歩をユルッと楽しくレッスンしましょう！ ご予約お待ちしております。",
       "fee": "500",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-80f5-bd76-eb9c942533f5",
-      "title": "Chiang Mai Night in Kotohira",
-      "url": "https://www.instagram.com/p/DZERgRrzgkl/",
-      "start": "2026-06-10T19:00",
-      "end": "2026-06-10T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b80f5bd76eb9c942533f5.png",
-      "comment": "",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-8022-b648-c308e284b02d",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DY31ZvcE0Lp/?img_index=2",
-      "start": "2026-06-10T12:00",
-      "end": "2026-06-10T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b8022b648c308e284b02d.jpg",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-80ba-b883-d3fd2b437cfa",
-      "title": "6/10 こんぴら十帖",
-      "url": "",
-      "start": "2026-06-10",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3710b4e5ff5b80bab883d3fd2b437cfa.jpg",
-      "comment": "",
-      "fee": "",
       "organizer": ""
     }
   ],
