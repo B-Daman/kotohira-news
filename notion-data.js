@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-10 00:23",
+  "fetched": "2026-08-11 00:52",
   "news": [
     {
       "id": "3b40b4e5-ff5b-810f-b5c9-cc8698bbd828",
@@ -779,7 +779,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-08-11T20:00",
       "end": "2026-08-11T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -794,7 +794,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DacFTbnTFL7/",
       "start": "2026-08-10T16:00",
       "end": "2026-08-10T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -809,7 +809,7 @@ window.NOTION_DATA = {
       "url": "",
       "start": "2026-08-10",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1971,21 +1971,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3640b4e5ff5b8027bca0de39e4f115ee.png",
       "comment": "",
       "fee": "2500",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-80bb-ac16-dd4e9ac8a7ae",
-      "title": "第13回 ユルッと楽しく着付けレッスン",
-      "url": "https://www.instagram.com/p/DY3zxZvgBOm/",
-      "start": "2026-06-11T18:30",
-      "end": "2026-06-11T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "つるや旅館",
-      "address": "766-0001 香川県仲多度郡琴平町620",
-      "image": "assets/thumbs/3710b4e5ff5b80bbac16dd4e9ac8a7ae.png",
-      "comment": "第13回 「ユルッと楽しく着付けレッスン」開催日決定しました。 …＊…＊…＊…＊…＊…＊… 日時 6/11（木） 18:30〜20:00 場所 つるや旅館 (駐車場有) 参加費 着物一式持参の方 ¥500 着物一式レンタルの方 ¥1000 帯結びだけ今回はしたい方 帯一式ご持参¥500 ☆ドリンク、おやつ付き ご予約 藤田屋Instagramメッセージ、公式ライン、お電話にて受け付けております。 定員 6名 講師 つるや旅館女将、若女将、藤田屋 @turuyaryokan_konpira_wakaokami @fujitaya__kimono …＊…＊…＊…＊…＊… ○自分で着物を着れるようになりたい ○お家に眠っている着物を着たい ○帯結びが難しくて習いたい 着物を着てみたい始めの一歩をユルッと楽しくレッスンしましょう！ ご予約お待ちしております。",
-      "fee": "500",
       "organizer": ""
     }
   ],
