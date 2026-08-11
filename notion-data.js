@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-11 00:52",
+  "fetched": "2026-08-12 00:53",
   "news": [
+    {
+      "id": "3b90b4e5-ff5b-81f1-b092-f5937311250c",
+      "title": "参道えびのあられ揚げ～瀬戸内塩レモン～ 限定販売",
+      "url": "https://news.ksb.co.jp/article/16801729",
+      "summary": "琴平町の金刀比羅宮表参道のエビ専門店「海老乃家」が、瀬戸内産レモンと塩を使った夏季限定新フレーバー「参道えびのあられ揚げ～瀬戸内塩レモン～」を8月12日から発売。700円で平日15個、土日祝30個の限定販売。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-08-12",
+      "thumbnail": "assets/thumbs/3b90b4e5ff5b81f1b092f5937311250c.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3b40b4e5-ff5b-810f-b5c9-cc8698bbd828",
       "title": "移住者が仕掛ける「お座敷遊び」世界大会　琴平町で開催",
@@ -313,58 +326,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "39c0b4e5-ff5b-8174-834d-dfdac526e192",
-      "title": "琴平町に「お食事処 きんちゃん」が2026年4月下旬頃にオープン",
-      "url": "https://www.marugame2.jp/stores/126468",
-      "summary": "琴平町に骨付鳥や新鮮な魚介を使った刺身、各種肉料理やうどんなどを提供する「お食事処 きんちゃん」が2026年4月下旬頃にオープンする。ランチ営業も行われ、今後かき氷やチュロスの提供も予定されている。",
-      "org": "まるつー（丸亀・坂出・綾歌の地域情報サイト）",
-      "media": "Webメディア",
-      "date": "2026-07-11",
-      "thumbnail": "assets/thumbs/39c0b4e5ff5b8174834ddfdac526e192.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3990b4e5-ff5b-8131-b4ac-c9f045c4295c",
-      "title": "観光振興は「とがったものを考えないと」　移住者が仕掛ける「お座敷遊び」世界大会",
-      "url": "https://www.okinawatimes.co.jp/articles/-/1877709",
-      "summary": "香川県琴平町で6月にお座敷遊びの第1回世界大会が開催された。仕掛け人は昨年5月に同町に移住したこんぴら観光まちづくり協会事務局長の石田哲也さん。観光振興の一環として企画された。",
-      "org": "沖縄タイムス＋プラス（共同通信プレミアム）",
-      "media": "Webメディア",
-      "date": "2026-07-10",
-      "thumbnail": "assets/thumbs/3990b4e5ff5b8131b4acc9f045c4295c.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3970b4e5-ff5b-8174-80a9-c9cac894ccdf",
-      "title": "あめシロップ開発でコラボ　池商店（琴平）×砂川農園（東かがわ）",
-      "url": "https://www.coolkagawa.jp/news/entry-5716.html",
-      "summary": "琴平町の老舗あめ店「五人百姓 池商店」と東かがわ市の砂川農園が、香川県産サトウキビを使用した液状のあめシロップ「御利益飴 あめ蜜」を開発した。県産品の活用と伝統製法の継承を目指した地域連携プロジェクト。",
-      "org": "COOL KAGAWA（四国新聞社）",
-      "media": "新聞",
-      "date": "2026-07-08",
-      "thumbnail": "assets/thumbs/3970b4e5ff5b817480a9c9cac894ccdf.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3950b4e5-ff5b-8198-ac48-eb379f43eb27",
-      "title": "カマタマーレ讃岐が金刀比羅宮で必勝祈願",
-      "url": "https://news.jp/i/1446752151610736656?c=1179248089549373591",
-      "summary": "J3・カマタマーレ讃岐が香川県琴平町の金刀比羅宮で新シーズンに向けて必勝祈願を行いました。大嶽直人監督やコーチ、選手が785の石段を登り御本宮でご祈祷を受けました。8月9日のJ3開幕戦に向けて巻き返しを誓っています。",
-      "org": "NEWSjp",
-      "media": "Webメディア",
-      "date": "2026-07-06",
-      "thumbnail": "assets/thumbs/3950b4e5ff5b8198ac48eb379f43eb27.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -427,6 +388,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
       "fee": "0",
       "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会"
+    },
+    {
+      "id": "3b90b4e5-ff5b-81aa-becd-efb6408e5110",
+      "title": "Craft Beer & Food Event - DONZO Brewing × イタリアンシェフペアリング",
+      "url": "https://www.instagram.com/p/DbxXdG1s96-/",
+      "start": "2026-09-10T17:00",
+      "end": "2026-09-10T20:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "呑象ブリューイング",
+      "address": "香川県仲多度郡琴平町182-2",
+      "image": "assets/thumbs/3b90b4e5ff5b81aabecdefb6408e5110.jpg",
+      "comment": "会場: DONZO Brewing DONZO Brewingと南イタリア出身シェフによるクラフトビール＆フードペアリングイベント第2弾。全8品のコース料理とクラフトビール3種または4種のマリアージュを楽しむ。要予約。",
+      "fee": "3300",
+      "organizer": "DONZO Brewing"
     },
     {
       "id": "3ab0b4e5-ff5b-815a-ac45-cbf997fdd175",
@@ -764,7 +740,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
       "start": "2026-08-12T12:00",
       "end": "2026-08-12T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -779,7 +755,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-08-11T20:00",
       "end": "2026-08-11T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -1956,21 +1932,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b803cbc3aed5abb630247.jpg",
       "comment": "",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3640b4e5-ff5b-8027-bca0-de39e4f115ee",
-      "title": "岡林立哉 馬頭琴・ホーミーライブ",
-      "url": "https://www.instagram.com/p/DYNB81cCQ-f/",
-      "start": "2026-06-12T18:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/3640b4e5ff5b8027bca0de39e4f115ee.png",
-      "comment": "",
-      "fee": "2500",
       "organizer": ""
     }
   ],
