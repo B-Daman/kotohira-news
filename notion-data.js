@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-12 00:53",
+  "fetched": "2026-08-13 00:53",
   "news": [
     {
       "id": "3b90b4e5-ff5b-81f1-b092-f5937311250c",
@@ -310,19 +310,6 @@ window.NOTION_DATA = {
       "media": "テレビ",
       "date": "2026-07-14",
       "thumbnail": "assets/thumbs/39d0b4e5ff5b81a396bef89890a9466f.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "39c0b4e5-ff5b-8160-bb56-e0a990d8739b",
-      "title": "さぬきこんぴら七八五 オープン",
-      "url": "https://www.marugame2.jp/stores/126580",
-      "summary": "琴平町のつるや旅館の入口に創作いなり専門店「さぬきこんぴら七八五」が2026年7月8日(水)にオープン。昼は創作いなり専門店、夜は居酒屋として営業。",
-      "org": "まるつー（丸亀・綾歌の地域情報サイト）",
-      "media": "Webメディア",
-      "date": "2026-07-13",
-      "thumbnail": "assets/thumbs/39c0b4e5ff5b8160bb56e0a990d8739b.png",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -725,7 +712,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-08-13T18:00",
       "end": "2026-08-13T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -740,7 +727,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
       "start": "2026-08-12T12:00",
       "end": "2026-08-12T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1902,36 +1889,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3810b4e5ff5b8059adebd3d6bebe8724.png",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでホームページを作成する仕組みを学べます。",
       "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3660b4e5-ff5b-80e1-9ae9-f6c805a50232",
-      "title": "第１回 こんぴらふねふね お座敷世界大会",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-134.html",
-      "start": "2026-06-13T10:00",
-      "end": "2026-06-13T18:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町公会堂",
-      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
-      "image": "assets/thumbs/3660b4e5ff5b80e19ae9f6c805a50232.png",
-      "comment": "",
-      "fee": "2200",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-803c-bc3a-ed5abb630247",
-      "title": "Sando Sand. Stand（SSS）モーニング＠コトリ",
-      "url": "https://www.instagram.com/p/DY31ZvcE0Lp/?img_index=3",
-      "start": "2026-06-13T08:00",
-      "end": "2026-06-13T10:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b803cbc3aed5abb630247.jpg",
-      "comment": "",
-      "fee": "",
       "organizer": ""
     }
   ],
