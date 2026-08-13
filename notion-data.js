@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-13 00:53",
+  "fetched": "2026-08-14 00:52",
   "news": [
     {
       "id": "3b90b4e5-ff5b-81f1-b092-f5937311250c",
@@ -712,7 +712,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-08-13T18:00",
       "end": "2026-08-13T19:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
