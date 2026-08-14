@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-14 08:35",
+  "fetched": "2026-08-15 00:43",
   "news": [
+    {
+      "id": "3bc0b4e5-ff5b-814e-9bbc-e04209cc1f45",
+      "title": "第58回 こんぴら石段マラソン",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11910.html",
+      "summary": "琴平町で開催される石段マラソン大会。参道から金刀比羅宮御本宮までのコースを走る。定員785名、参加費3,000円。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-08-14",
+      "thumbnail": "assets/thumbs/3bc0b4e5ff5b814e9bbce04209cc1f45.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3b90b4e5-ff5b-81f1-b092-f5937311250c",
       "title": "参道えびのあられ揚げ～瀬戸内塩レモン～ 限定販売",
@@ -300,19 +313,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "39d0b4e5-ff5b-81a3-96be-f89890a9466f",
-      "title": "観光ブートキャンプ2026 in 琴平町",
-      "url": "https://news.ksb.co.jp/article/16724950",
-      "summary": "せとうち観光専門職短期大学が、観光に関心のある高校生向けの2泊3日ブートキャンプを8月18日から20日に琴平町で開催します。ゲストにQuizKnockのふくらPさんが参加し、琴平の観光をテーマにアイデアを出し合います。",
-      "org": "KSB瀬戸内海放送",
-      "media": "テレビ",
-      "date": "2026-07-14",
-      "thumbnail": "assets/thumbs/39d0b4e5ff5b81a396bef89890a9466f.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -330,6 +330,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
       "fee": "0",
       "organizer": "公益財団法人中山芳彦香川イタリア交流財団"
+    },
+    {
+      "id": "3bc0b4e5-ff5b-8157-895d-f6bf67704406",
+      "title": "第58回 こんぴら石段マラソン",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11910.html",
+      "start": "2026-10-04T10:00",
+      "end": "2026-10-04T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/3bc0b4e5ff5b8157895df6bf67704406.png",
+      "comment": "会場: 参道～金刀比羅宮御本宮 琴平町で開催される石段マラソン大会。参道から金刀比羅宮御本宮までのコースを走る。定員785名、参加費3,000円。",
+      "fee": "3000",
+      "organizer": "琴平町"
     },
     {
       "id": "3950b4e5-ff5b-80a5-8568-c7496fa57528",
@@ -682,7 +697,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11791.html",
       "start": "2026-08-15T18:00",
       "end": "2026-08-15T20:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -697,7 +712,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-08-15T07:20",
       "end": "2026-08-15T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
