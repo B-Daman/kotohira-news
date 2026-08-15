@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-15 00:43",
+  "fetched": "2026-08-16 00:12",
   "news": [
     {
       "id": "3bc0b4e5-ff5b-814e-9bbc-e04209cc1f45",
@@ -697,7 +697,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11791.html",
       "start": "2026-08-15T18:00",
       "end": "2026-08-15T20:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -712,7 +712,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-08-15T07:20",
       "end": "2026-08-15T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1874,36 +1874,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b80ae905bf1a39a3b7682.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3730b4e5-ff5b-8067-9751-fc636762696d",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-06-16T20:00",
-      "end": "2026-06-16T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3730b4e5ff5b80679751fc636762696d.png",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3810b4e5-ff5b-8059-adeb-d3d6bebe8724",
-      "title": "AIでホームページを作ってみよう",
-      "url": "",
-      "start": "2026-06-16T11:00",
-      "end": "2026-06-16T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町総合センター",
-      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
-      "image": "assets/thumbs/3810b4e5ff5b8059adebd3d6bebe8724.png",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIでホームページを作成する仕組みを学べます。",
-      "fee": "0",
       "organizer": ""
     }
   ],
