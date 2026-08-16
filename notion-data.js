@@ -1,7 +1,46 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-16 00:12",
+  "fetched": "2026-08-17 00:13",
   "news": [
+    {
+      "id": "3be0b4e5-ff5b-8176-89b4-c58ba055a908",
+      "title": "JR定期券で琴参バス琴平線が無料に　丸亀市が実証実験",
+      "url": "https://news.yahoo.co.jp/articles/ae9bedcdfdc64fb512406b960bc1bf164ac0757b",
+      "summary": "丸亀市は、丸亀駅⇔琴平駅方面のJR通勤・通学定期券を持つ人を対象に、琴参バスの琴平線を無料で利用できる実証実験を10月1日～12月28日に実施する。鉄道とバスの組み合わせ利用による利便性向上と定住促進が目的。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-10-01",
+      "thumbnail": "assets/thumbs/3be0b4e5ff5b817689b4c58ba055a908.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3bd0b4e5-ff5b-8132-94de-fc3d2a1d46c2",
+      "title": "琴平町が来春採用職員を募集",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026081600000002200",
+      "summary": "琴平町は来春採用の職員を募集している。一般行政3人程度（うち障害者1人）、技能労務（清掃）1人程度、建築2人程度で、いずれも高卒程度。締め切りは8月21日（必着）。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-08-16",
+      "thumbnail": "assets/thumbs/3bd0b4e5ff5b813294defc3d2a1d46c2.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3bd0b4e5-ff5b-813a-9cf3-cba02b5c9f74",
+      "title": "平和祈願灯ろう流し",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026081600000003100",
+      "summary": "終戦記念日の8月15日夜、琴平町の一之橋公園周辺で戦争犠牲者を追悼する灯ろう流しが行われた。約200個の灯籠が金倉川に浮かび、参加者が恒久平和を祈った。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-08-16",
+      "thumbnail": "assets/thumbs/3bd0b4e5ff5b813a9cf3cba02b5c9f74.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3bc0b4e5-ff5b-814e-9bbc-e04209cc1f45",
       "title": "第58回 こんぴら石段マラソン",
@@ -284,32 +323,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-07-16",
       "thumbnail": "assets/thumbs/39f0b4e5ff5b8179a7e0ce5c9cacf7bd.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "39f0b4e5-ff5b-81c7-90ba-c3d28214f3b1",
-      "title": "金刀比羅宮（こんぴらさん）参拝ガイド｜石段785段の登り方・アクセス・所要時間を体験レポート",
-      "url": "https://www.journal-one.net/jp/42704/",
-      "summary": "香川県琴平町にある金刀比羅宮の参拝ガイド記事。御本宮までの785段の石段の登り方、電車・車でのアクセス、所要時間、見どころ、お守り・御朱印、門前町の楽しみ方などを詳しく解説している。",
-      "org": "日本と世界を繋ぐ国際交流メディア ― スポーツ・観光（journal-one.net）",
-      "media": "Webメディア",
-      "date": "2026-07-15",
-      "thumbnail": "assets/thumbs/39f0b4e5ff5b81c790bac3d28214f3b1.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "39e0b4e5-ff5b-81dc-a395-ed94802bdaa1",
-      "title": "讃岐うどん体験ガイド｜こんぴら参りとあわせて打って味わう中野うどん学校",
-      "url": "https://www.journal-one.net/jp/42716?3",
-      "summary": "琴平町の中野うどん学校 琴平校でのうどん打ち体験について、体験内容・所要時間・予約方法・金刀比羅宮との組み合わせプランなどを紹介するガイド記事。讃岐うどんの特徴や駅ナカの「めりけんや」での食事情報も掲載。",
-      "org": "日本と世界を繋ぐ国際交流メディア ― スポーツ・観光（journal-one.net）",
-      "media": "Webメディア",
-      "date": "2026-07-15",
-      "thumbnail": "assets/thumbs/39e0b4e5ff5b81dca395ed94802bdaa1.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -1860,24 +1873,24 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-80ae-905b-f1a39a3b7682",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DY31ZvcE0Lp/?img_index=2",
-      "start": "2026-06-17T12:00",
-      "end": "2026-06-17T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b80ae905bf1a39a3b7682.jpg",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
+    {
+      "id": "3be0b4e5-ff5b-81f3-8528-f7d075a2da22",
+      "title": "JR定期券で琴参バス琴平線が無料に　丸亀市が実証実験",
+      "url": "https://news.yahoo.co.jp/articles/ae9bedcdfdc64fb512406b960bc1bf164ac0757b",
+      "start": "2026-10-01",
+      "end": "2026-12-28",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3be0b4e5ff5b81f38528f7d075a2da22.jpg",
+      "comment": "会場: 琴参バス琴平線（丸亀市内バス停発着区間） 丸亀市は、丸亀駅⇔琴平駅方面のJR通勤・通学定期券を持つ人を対象に、琴参バスの琴平線を無料で利用できる実証実験を10月1日～12月28日に実施する。鉄道とバスの組み合わせ利用による利便性向上と定住促進が目的。",
+      "fee": "0",
+      "organizer": "丸亀市、善通寺市、琴平町、多度津町、まんのう町"
+    },
     {
       "id": "3b00b4e5-ff5b-8100-801e-d571cd9e9dd6",
       "title": "KOTOVEGAS 3店舗合同ハワイフェア",
