@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-17 00:13",
+  "fetched": "2026-08-18 00:18",
   "news": [
     {
       "id": "3be0b4e5-ff5b-8176-89b4-c58ba055a908",
@@ -11,6 +11,19 @@ window.NOTION_DATA = {
       "media": "テレビ",
       "date": "2026-10-01",
       "thumbnail": "assets/thumbs/3be0b4e5ff5b817689b4c58ba055a908.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3bf0b4e5-ff5b-8185-bad6-c5c313d21746",
+      "title": "ことウラさんぽ プレモニターツアー開催決定！＆中讃ケーブルテレビ放送のお知らせ",
+      "url": "https://www.instagram.com/p/Db_3rulEx0k/",
+      "summary": "琴平町の橋の物語をめぐるプレモニターツアーが9月6日（日）に開催される。中讃ケーブルテレビで放送される「歴史のみ方」番組の取材内容をもとに、祇園橋、鞘橋、一之橋、栄橋、玄孝橋、大宮橋の6つの橋の歴史を紹介するツアー。",
+      "org": "Instagram（ことウラさんぽ）",
+      "media": "Webメディア",
+      "date": "2026-09-06",
+      "thumbnail": "assets/thumbs/3bf0b4e5ff5b8185bad6c5c313d21746.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -37,6 +50,19 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-08-16",
       "thumbnail": "assets/thumbs/3bd0b4e5ff5b813a9cf3cba02b5c9f74.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3bf0b4e5-ff5b-81f2-81a1-e303b7695754",
+      "title": "珈琲ジェリー牛乳本舗 JiJi&Jelly 4周年を迎える",
+      "url": "https://www.instagram.com/p/DcCe7KizX79/",
+      "summary": "珈琲ジェリー牛乳本舗 JiJi&Jellyが2026年8月15日に4周年を迎えた。店主は交通事故による頚椎手術のため入院中だが、リハビリに取り組む予定。",
+      "org": "Instagram（珈琲ジェリー牛乳本舗 JiJi&Jelly）",
+      "media": "Webメディア",
+      "date": "2026-08-15",
+      "thumbnail": "assets/thumbs/3bf0b4e5ff5b81f281a1e303b7695754.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -297,32 +323,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-07-16",
       "thumbnail": "assets/thumbs/3a00b4e5ff5b8128bfb4eaeef3fb08be.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3a00b4e5-ff5b-8187-9f58-f5aa2b4d8c21",
-      "title": "785Launch（ローンチ）琴平初の実践型プログラム",
-      "url": "https://prtimes.jp/main/html/rd/p/000000010.000169805.html",
-      "summary": "琴平バス株式会社が主催する実践型プログラム「785Launch」が2026年7月17日・18日の1泊2日で開催される。地域事業者と全国の起業家・経営者がチームを組み、琴平の地域課題をテーマに新規事業を提案する。参道や商店街を歩きながら地域と共に事業をつくることを目指す。",
-      "org": "PR TIMES / 琴平バス株式会社",
-      "media": "Webメディア",
-      "date": "2026-07-16",
-      "thumbnail": "assets/thumbs/3a00b4e5ff5b81879f58f5aa2b4d8c21.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "39f0b4e5-ff5b-8179-a7e0-ce5c9cacf7bd",
-      "title": "交流半世紀、深化誓う　新潟県弥彦村が琴平町にブランド米贈呈",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026071600000001600",
-      "summary": "琴平町と新潟県弥彦村の交流が50周年を迎えたのを記念して、弥彦村のブランド米「伊彌彦米」が琴平の子どもたちに贈られた。7月14日に町役場で贈呈式が行われ、出席者が一層の交流促進を誓った。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-07-16",
-      "thumbnail": "assets/thumbs/39f0b4e5ff5b8179a7e0ce5c9cacf7bd.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -665,7 +665,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-08-18T20:00",
       "end": "2026-08-18T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -680,7 +680,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-08-18T13:30",
       "end": "2026-08-18T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -695,7 +695,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-466.html",
       "start": "2026-08-18T13:00",
       "end": "2026-08-20T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "UDON na HOTEL 琴平",
       "address": "〒766-0001 香川県仲多度郡琴平町字川西 796-1",
@@ -1965,21 +1965,6 @@ window.NOTION_DATA = {
       "comment": "讃岐うどん狸屋のネットショップで期間限定の5％割引キャンペーンを実施。クーポンコード「tanukiya8」を入力することで割引が適用される。10,000円以上の購入で全国送料無料。",
       "fee": "",
       "organizer": "宗家 金毘羅うどん 狸屋"
-    },
-    {
-      "id": "3810b4e5-ff5b-81b6-bc09-fa6b8acf57b5",
-      "title": "3周年記念キャンペーン限定「DONZOビストロ風プレート」",
-      "url": "https://www.instagram.com/p/DZo5crrmVcR/",
-      "start": "2026-06-18",
-      "end": "2026-06-22",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "呑象ブリューイング",
-      "address": "香川県仲多度郡琴平町182-2",
-      "image": "assets/thumbs/3810b4e5ff5b81b6bc09fa6b8acf57b5.png",
-      "comment": "会場: DONZO Brewing DONZO Brewingの3周年記念キャンペーン期間中、地元食材を使った「DONZOビストロ風プレート」を提供。豚肉のリエット、オリーブ地鶏のコンフィ、香川産スイートコーンのキッシュが含まれ、プレートは1,500円、クラフトビールとソフトドリンク（400円商品）は半額。",
-      "fee": "1500",
-      "organizer": "DONZO Brewing"
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
