@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-18 00:18",
+  "fetched": "2026-08-19 00:26",
   "news": [
     {
       "id": "3be0b4e5-ff5b-8176-89b4-c58ba055a908",
@@ -375,6 +375,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
+      "title": "第16回「ユルッと楽しく着付けレッスン」",
+      "url": "https://www.instagram.com/p/DcJUmy4gUJL/",
+      "start": "2026-09-17T18:30",
+      "end": "2026-09-17T20:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "つるや旅館",
+      "address": "766-0001 香川県仲多度郡琴平町620",
+      "image": "assets/thumbs/3bf0b4e5ff5b81c09360c0c6944cd93a.jpg",
+      "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
+      "fee": "500",
+      "organizer": "つるや旅館、藤田屋"
+    },
+    {
       "id": "39e0b4e5-ff5b-8153-842a-c16dbdfaad50",
       "title": "第3回コトコトプロジェクト 琴平での8日間体験プログラム",
       "url": "https://www.instagram.com/p/DauldN1E2cQ/?img_index=1",
@@ -650,7 +665,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
       "start": "2026-08-19T12:00",
       "end": "2026-08-19T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -665,7 +680,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-08-18T20:00",
       "end": "2026-08-18T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -680,7 +695,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-08-18T13:30",
       "end": "2026-08-18T15:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
