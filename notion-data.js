@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-19 00:26",
+  "fetched": "2026-08-20 00:23",
   "news": [
     {
       "id": "3be0b4e5-ff5b-8176-89b4-c58ba055a908",
@@ -313,19 +313,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3a00b4e5-ff5b-8128-bfb4-eaeef3fb08be",
-      "title": "琴平のおすすめ温泉宿４選",
-      "url": "https://www.mapple.net/original/582167/",
-      "summary": "琴平町の金刀比羅宮門前町で、創業400年の老舗旅館や温泉宿4軒を紹介する記事。各宿の特徴、温泉、食事、アクセス情報をまとめている。",
-      "org": "まっぷるウェブ",
-      "media": "Webメディア",
-      "date": "2026-07-16",
-      "thumbnail": "assets/thumbs/3a00b4e5ff5b8128bfb4eaeef3fb08be.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -635,7 +622,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-08-20T18:00",
       "end": "2026-08-20T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -650,7 +637,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/2/11875.html",
       "start": "2026-08-20T10:30",
       "end": "2026-08-20T12:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "琴平町総合センター",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
@@ -665,7 +652,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
       "start": "2026-08-19T12:00",
       "end": "2026-08-19T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1827,66 +1814,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b809ba6a3fc2e93364fa0.png",
       "comment": "",
       "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "37f0b4e5-ff5b-81ed-a58e-daf583c04604",
-      "title": "クッキー作り＆交流ナイト",
-      "url": "https://www.instagram.com/p/DZmdPIfTKRQ/",
-      "start": "2026-06-20T18:00",
-      "end": "2026-06-20T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/manual/20260620.png",
-      "comment": "会場: コトリ コワーキング＆ホステル琴平 オーストラリア出身のフィリップをホストに、クッキー作りとオーストラリアのお菓子を楽しみながら地元の人や旅人と交流するイベント。好きな具材を選んでクッキーを作り、新しい友達づくりができます。",
-      "fee": "0",
-      "organizer": "コトリ コワーキング＆ホステル琴平"
-    },
-    {
-      "id": "3710b4e5-ff5b-80e1-acf9-d41c5ea289f8",
-      "title": "ヒトツブビーズ店さん ありがとう販売会（1日目）",
-      "url": "https://www.instagram.com/p/DY9Bwz5hWo2/",
-      "start": "2026-06-20T13:00",
-      "end": "2026-06-20T17:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ヒトツブビーズ店",
-      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1132-5",
-      "image": "assets/thumbs/3710b4e5ff5b80e1acf9d41c5ea289f8.png",
-      "comment": "",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3810b4e5-ff5b-803d-9b14-fa8995dade83",
-      "title": "にんケット2026",
-      "url": "https://ninket2026.studio.site/",
-      "start": "2026-06-20T11:00",
-      "end": "2026-06-20T17:00",
-      "status": "終了",
-      "city": "東京都",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3810b4e5ff5b803d9b14fa8995dade83.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-80a6-b199-d3fc55694591",
-      "title": "Sando Sand. Stand（SSS）モーニング＠コトリ",
-      "url": "https://www.instagram.com/p/DY31ZvcE0Lp/?img_index=3",
-      "start": "2026-06-20T08:00",
-      "end": "2026-06-20T10:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b80a6b199d3fc55694591.jpg",
-      "comment": "",
-      "fee": "",
       "organizer": ""
     }
   ],
