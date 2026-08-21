@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-21 00:26",
+  "fetched": "2026-08-22 00:25",
   "news": [
+    {
+      "id": "3c30b4e5-ff5b-81ff-9026-d6b442011bc2",
+      "title": "晩ご飯前に落語はいかが？「こんぴらくご」開催　香川・琴平町",
+      "url": "https://news.ksb.co.jp/article/16824679",
+      "summary": "香川県琴平町の夜の観光充実を目的とした落語イベント。高松らくご愛好会メンバーの落語家4人による公演。定員30人、観覧料1100円（ワンドリンク付き）。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-08-21",
+      "thumbnail": "assets/thumbs/3c30b4e5ff5b81ff9026d6b442011bc2.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3c30b4e5-ff5b-8119-bcba-e2bb8ad05519",
+      "title": "モンバス2026開催に伴う町内混雑の可能性と公共交通機関利用のお願い",
+      "url": "https://www.kotohirakankou.jp/news/entry-510.html",
+      "summary": "2026年8月22日・23日にことひら近郊の国営讃岐まんのう公園でモンバス2026が開催される。これに伴い町内および周辺エリアの道路・駐車場は終日混雑が見込まれるため、無断駐車の禁止と公共交通機関の利用が推奨されている。",
+      "org": "こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-08-21",
+      "thumbnail": "https://www.kotohirakankou.jp/archives/",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3c20b4e5-ff5b-816e-9a2a-fec640e85513",
       "title": "高校生が琴平町の観光について提案する成果発表会",
@@ -245,32 +271,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-07-26",
       "thumbnail": "assets/thumbs/3a90b4e5ff5b810cb715e2c7ef75114a.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3a90b4e5-ff5b-8193-88ce-c302a5a45691",
-      "title": "新潟県弥彦村と香川県琴平町が交流50周年　新協定締結",
-      "url": "https://www.kenoh.com/2026/07/25_kotohira.html",
-      "summary": "新潟県弥彦村と香川県琴平町は7月25日、弥彦村役場で交流50周年記念協定締結式を開催した。1976年の提携から半世紀を経て、観光や行政、文化など幅広い分野での連携を深める新協定を締結。琴平町からは弥彦燈籠まつりへの記念花火、弥彦村からは琴平町の子どもたちへの弥彦米贈呈など、50周年記念事業を展開する。",
-      "org": "県民ホットライン（kenoh.com）",
-      "media": "行政",
-      "date": "2026-07-25",
-      "thumbnail": "assets/thumbs/3a90b4e5ff5b819388cec302a5a45691.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3a60b4e5-ff5b-81d5-9cae-cbe096971f92",
-      "title": "第61回海事産業発展並びに海上安全祈願祭",
-      "url": "https://news.mynavi.jp/article/20260722-4730158/",
-      "summary": "金刀比羅宮の本殿で7月15日に開催された海上安全祈願祭。全国の海事産業事業者や海事団体など110名以上が参加し、海事産業の発展と海上安全を祈願した。",
-      "org": "マイナビニュース",
-      "media": "Webメディア",
-      "date": "2026-07-22",
-      "thumbnail": "assets/thumbs/3a60b4e5ff5b81d59caecbe096971f92.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -553,7 +553,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/events/cmpwlu8zg0016dui8nwxvoqjf",
       "start": "2026-08-22T19:00",
       "end": "2026-08-22T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -568,7 +568,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-08-22T07:20",
       "end": "2026-08-22T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1746,21 +1746,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIを活かせる副業について気軽に学べます。",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-800b-8c87-f80d815f1a00",
-      "title": "【2026/06】これからの讃岐おでん 私たちが目指す形はこれだ！～夏おでん意見交換回～",
-      "url": "https://did-event.vercel.app/events/cmpt9qeh10006gihd8idktcir",
-      "start": "2026-06-22T19:00",
-      "end": "2026-06-22T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b800b8c87f80d815f1a00.png",
-      "comment": "讃岐おでんプロジェクト｜2026年度 方針 ■ 年間テーマ 讃岐おでんを文化にする ～ 人が集まり、会話が生まれる「場」を育てる ～ ■ 目指す姿（ゴール） ◎讃岐うどん・骨付き鳥に次ぐ、香川の第三の食文化にする ◎観光地・琴平において、夜の過ごし方として定着させる ◎将来的に店舗を持ち、継続的に運営できる状態をつくる 日時 毎月 22日 19:00〜 参加費：2000円（現地支払い） 場所 コトリ コワーキング＆ホステル琴平 ■ 4月｜ ・具体的な役割と募集の明確な共有 ・共通財布の運用方法検討 ・貢献ポイントの項目・配点の素案共有と協議（=総合評価表） ・夏おでんに向けた調査結果の共有と検討（この会の後に、各自調査して次回も協議） ◉可能であれば話したい範囲 ・讃岐おでんのホームページのチェック ・ホームページには、何が記載されているべきか ・メニュー表（物）の検討 ■ 5月｜冷やしおでんの可能性を広げる ・夏でも成立する讃岐おでんを考える ・冷やしおでんのリサーチ ・食材・味・提供方法のアイデア出し ■ 6月｜冷やしおでん試作① ・試作・試食 ・改善点の洗い出し ・体験として成立するか検証 ■ 7月｜冷やしおでん試作②＋体験設計 ・試作のブラッシュアップ ・提供方法・見せ方の設計 ■ 8月｜冬営業に向けた設計① ・店舗営業方法 ・店頭に立ちたい人を募集する ・イベント出店 ・懇親会などの引き受け ■ 9月｜冬営業に向けた設計② ・接客スタイルの設計 ・オペレーション整理 ・メニュー・価格の方向性確認 ・広報",
-      "fee": "2000",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -1800,7 +1785,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Da7quhKEh6p/",
       "start": "2026-08-01",
       "end": "2026-08-21",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "ことひら温泉 琴参閣",
       "address": "〒766-0001 香川県仲多度郡琴平町685ｰ11",
