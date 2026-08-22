@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-22 00:25",
+  "fetched": "2026-08-23 00:12",
   "news": [
+    {
+      "id": "3c40b4e5-ff5b-811c-a263-dc94860be85d",
+      "title": "熊本地震チャリティライブ 高松千春",
+      "url": "https://www.instagram.com/p/DcKx2kkkfsd/",
+      "summary": "熊本地震復興支援を目的とした高松千春によるチャリティライブが琴平町で開催される。入場は無料で、会場での投げ銭募金は全額熊本地震復興支援に寄付される。",
+      "org": "Instagram / 株式会社ウエイ（ことひらいとこひペートナーズ）",
+      "media": "Webメディア",
+      "date": "2026-08-22",
+      "thumbnail": "assets/thumbs/3c40b4e5ff5b811ca263dc94860be85d.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3c40b4e5-ff5b-8123-915a-fdffcbdb1b02",
+      "title": "三つの保育施設へ遊具支援権利販売　琴平町",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026082200000002900",
+      "summary": "琴平町は町内の三つの保育施設に体操用マットと平均台を届ける権利を販売している。1施設につき27万円の価格で、NFT（非代替性トークン）を活用した販売方式である。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-08-22",
+      "thumbnail": "assets/thumbs/3c40b4e5ff5b8123915afdffcbdb1b02.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3c30b4e5-ff5b-81ff-9026-d6b442011bc2",
       "title": "晩ご飯前に落語はいかが？「こんぴらくご」開催　香川・琴平町",
@@ -23,7 +49,7 @@ window.NOTION_DATA = {
       "org": "こんぴら観光まちづくり協会",
       "media": "Webメディア",
       "date": "2026-08-21",
-      "thumbnail": "https://www.kotohirakankou.jp/archives/",
+      "thumbnail": "assets/thumbs/3c30b4e5ff5b8119bcbae2bb8ad05519.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -235,45 +261,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3ab0b4e5-ff5b-8145-90e7-c50d04af2c9c",
-      "title": "第2弾街ガチャin琴平町 デザイン発表会",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072800000001600",
-      "summary": "善通寺一高校の生徒が琴平町の観光名所をカプセルトイにする「街ガチャ」第2弾のデザイン発表会が琴平町で開催された。生徒たちが琴平の魅力を凝縮したアイデアを披露した。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-07-28",
-      "thumbnail": "assets/thumbs/3ab0b4e5ff5b814590e7c50d04af2c9c.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ab0b4e5-ff5b-81bb-b4a6-c2ec364dc9a4",
-      "title": "第4回 台湾フェス・台湾夜市 in 琴平",
-      "url": "https://www.instagram.com/p/DbSN6Pfgej_/",
-      "summary": "台湾グルメ、ステージイベント、コラボ企画などを楽しめるイベント。台湾屋台グルメの出店、電音三太子や二胡の生演奏、台湾観光PRなどが行われる。",
-      "org": "Instagram（琴平町関連アカウント）",
-      "media": "行政",
-      "date": "2026-07-27",
-      "thumbnail": "assets/thumbs/3ab0b4e5ff5b81bbb4a6c2ec364dc9a4.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3a90b4e5-ff5b-810c-b715-e2c7ef75114a",
-      "title": "弥彦燈籠まつり開催、琴平町との交流50周年記念花火も打ち上げ",
-      "url": "https://www.kenoh.com/2026/07/26_tourou.html",
-      "summary": "新潟県弥彦村の夏の大祭「弥彦燈籠まつり」が7月25日に開かれ、土曜開催で例年以上の人出でにぎわった。琴平町との交流50周年を記念し、琴平町から記念スターマインが奉納された。",
-      "org": "ケンオー・ドットコム（kenoh.com）",
-      "media": "Webメディア",
-      "date": "2026-07-26",
-      "thumbnail": "assets/thumbs/3a90b4e5ff5b810cb715e2c7ef75114a.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -368,6 +355,21 @@ window.NOTION_DATA = {
       "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会"
     },
     {
+      "id": "3c40b4e5-ff5b-8196-85aa-e7b6a784f00c",
+      "title": "熊本地震チャリティライブ 高松千春",
+      "url": "https://www.instagram.com/p/DcKx2kkkfsd/",
+      "start": "2026-09-11T16:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "ヴィスポことひら",
+      "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
+      "image": "assets/thumbs/3c40b4e5ff5b819685aae7b6a784f00c.jpg",
+      "comment": "会場: ヴィスポことひら サブアリーナ 熊本地震復興支援を目的とした高松千春によるチャリティライブが琴平町で開催される。入場は無料で、会場での投げ銭募金は全額熊本地震復興支援に寄付される。",
+      "fee": "0",
+      "organizer": "株式会社ウエイ（ことひらいとこひペートナーズ）"
+    },
+    {
       "id": "3b90b4e5-ff5b-81aa-becd-efb6408e5110",
       "title": "Craft Beer & Food Event - DONZO Brewing × イタリアンシェフペアリング",
       "url": "https://www.instagram.com/p/DbxXdG1s96-/",
@@ -411,6 +413,21 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": ""
+    },
+    {
+      "id": "3c40b4e5-ff5b-81ad-97b9-e28306eada5c",
+      "title": "sunset live. benikake to rairo",
+      "url": "https://www.instagram.com/p/DcRKDSqp2aD/",
+      "start": "2026-08-29T17:00",
+      "end": "2026-08-29T21:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
+      "image": "assets/thumbs/3c40b4e5ff5b81ad97b9e28306eada5c.jpg",
+      "comment": "会場: 麻心 琴平店 鍵盤ハーモニカ奏者イシタニタイジュによるライブパフォーマンス。夕暮れ時から夜間にかけて、ピアニカとベースがBGMのように流れるジャズライブ。麻心琴平店での開催。",
+      "fee": "0",
+      "organizer": "麻心琴平店"
     },
     {
       "id": "3990b4e5-ff5b-8102-b09a-d41fdbea2905",
@@ -553,7 +570,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/events/cmpwlu8zg0016dui8nwxvoqjf",
       "start": "2026-08-22T19:00",
       "end": "2026-08-22T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -568,7 +585,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-08-22T07:20",
       "end": "2026-08-22T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1715,36 +1732,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3710b4e5ff5b803ba1c1e1c9d6d537bb.jpg",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3730b4e5-ff5b-8055-a96e-fbbf2c3bff5e",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-06-23T20:00",
-      "end": "2026-06-23T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3730b4e5ff5b8055a96efbbf2c3bff5e.png",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3880b4e5-ff5b-8047-9da6-cd5639549f39",
-      "title": "AI副業カタログ -琴平でもできる副業の選択肢-",
-      "url": "",
-      "start": "2026-06-23T11:00",
-      "end": "2026-06-23T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町総合センター",
-      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
-      "image": "assets/thumbs/3880b4e5ff5b80479da6cd5639549f39.png",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIを活かせる副業について気軽に学べます。",
-      "fee": "0",
       "organizer": ""
     }
   ],
