@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-23 00:12",
+  "fetched": "2026-08-24 00:14",
   "news": [
     {
       "id": "3c40b4e5-ff5b-811c-a263-dc94860be85d",
@@ -1718,21 +1718,6 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "3710b4e5-ff5b-803b-a1c1-e1c9d6d537bb",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DY31ZvcE0Lp/?img_index=2",
-      "start": "2026-06-24T12:00",
-      "end": "2026-06-24T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b803ba1c1e1c9d6d537bb.jpg",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -1810,21 +1795,6 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "3870b4e5-ff5b-8186-b384-d7f07f1ba4bd",
-      "title": "狸屋ネットショップ 期間限定5％割引キャンペーン",
-      "url": "https://www.instagram.com/p/DZynlihiaCd/",
-      "start": "2026-06-20",
-      "end": "2026-08-23",
-      "status": "実施中",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "讃岐うどん狸屋のネットショップで期間限定の5％割引キャンペーンを実施。クーポンコード「tanukiya8」を入力することで割引が適用される。10,000円以上の購入で全国送料無料。",
-      "fee": "",
-      "organizer": "宗家 金毘羅うどん 狸屋"
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
