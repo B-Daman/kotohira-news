@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-24 00:14",
+  "fetched": "2026-08-25 00:33",
   "news": [
     {
       "id": "3c40b4e5-ff5b-811c-a263-dc94860be85d",
@@ -245,19 +245,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-07-30",
       "thumbnail": "assets/thumbs/3ad0b4e5ff5b8122a3effa76b2b70229.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ad0b4e5-ff5b-81a1-8645-d48ef790654b",
-      "title": "四国シェアサミット2026 in 琴平",
-      "url": "https://news.yahoo.co.jp/articles/40c7d7790f08fc0730901ad9ee991f92c472a607",
-      "summary": "香川県琴平町が主催する「四国シェアサミット2026 in 琴平」が9月12日・13日に開催される。二地域居住や関係人口、シェアリングエコノミーをテーマに、全国40名を超える実践者が集結し、「人口をシェアする」まちづくりについて議論する。",
-      "org": "Yahoo!ニュース（FINDERS）",
-      "media": "Webメディア",
-      "date": "2026-07-29",
-      "thumbnail": "assets/thumbs/3ad0b4e5ff5b81a18645d48ef790654b.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -555,7 +542,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-08-25T20:00",
       "end": "2026-08-25T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
