@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-25 00:33",
+  "fetched": "2026-08-26 00:34",
   "news": [
     {
       "id": "3c40b4e5-ff5b-811c-a263-dc94860be85d",
@@ -232,19 +232,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-08-01",
       "thumbnail": "assets/thumbs/3b00b4e5ff5b8171bf77eb68c8d6d9bb.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ad0b4e5-ff5b-8122-a3ef-fa76b2b70229",
-      "title": "香川県琴平町の困りごと公開会議",
-      "url": "https://prtimes.jp/main/html/rd/p/000002272.000016751.html",
-      "summary": "パソナ地方創生が観光庁の『企業版第2のふるさとづくりモデル実証事業』に採択され、琴平町の地域課題を企業に紹介するイベントを8月5日に大阪で開催。琴平町の地域事業者と域外企業の共創のきっかけを創出する。",
-      "org": "パソナグループ プレスリリース",
-      "media": "Webメディア",
-      "date": "2026-07-30",
-      "thumbnail": "assets/thumbs/3ad0b4e5ff5b8122a3effa76b2b70229.jpg",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -527,7 +514,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
       "start": "2026-08-26T12:00",
       "end": "2026-08-26T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -542,7 +529,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-08-25T20:00",
       "end": "2026-08-25T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
