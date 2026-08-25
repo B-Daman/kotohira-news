@@ -146,7 +146,7 @@
   <div class="topbar-inner">
     <div class="brandrow">
       <div class="brand">kotohira-news <small>「ことひらいふ」開発ダッシュボード</small></div>
-      <span class="badge">更新 2026-07-19</span>
+      <span class="badge">更新 2026-08-26</span>
     </div>
     <nav class="tabs" id="tabs" role="tablist" aria-label="開発ダッシュボードのページ">
       <button type="button" class="tab" data-page="overview" role="tab" aria-controls="overview">全体像</button>
@@ -166,7 +166,7 @@
       <div class="eyebrow">KOTOHIRA-NEWS ・ DEV DASHBOARD</div>
       <h1>暮らす人にも、訪れる人にも。琴平町を1か所に。</h1>
       <p>町民向けのニュース・イベント・キャンペーンと、来訪者向けの体験・うどん・駐車場・地域情報を、同じ入口から探せる静的地域ポータル。</p>
-      <div class="meta"><span>GitHub Pages公開・日次自動更新稼働</span><span>最終更新 2026-07-19</span><span>Phase 2 公開・運用</span></div>
+      <div class="meta"><span>独自ドメイン kotohilife.com で公開・日次自動更新稼働</span><span>最終更新 2026-08-26</span><span>運用フェーズ</span></div>
     </div>
 
     <div class="card ov">
@@ -174,12 +174,13 @@
       <div class="status">
         <div class="s"><div class="l">表示部</div><div class="v">4分類ナビ・9ルート</div></div>
         <div class="s"><div class="l">データ／設定</div><div class="v">4系統・7個のJS</div></div>
-        <div class="s"><div class="l">掲載スナップショット</div><div class="v">ニュース27／イベント95（日次自動更新）</div></div>
+        <div class="s"><div class="l">掲載スナップショット</div><div class="v">ニュース18／イベント97（日次自動更新）</div></div>
         <div class="s"><div class="l">来訪者向け情報</div><div class="v">体験12／うどん17／駐車場20</div></div>
-        <div class="s pending"><div class="l">共通ウィジェット</div><div class="v">天気有効・LINE掲載中・広告設定待ち</div></div>
+        <div class="s pending"><div class="l">共通ウィジェット</div><div class="v">天気・LINE2枠・大型イベント枠有効／広告設定待ち</div></div>
+        <div class="s"><div class="l">画像</div><div class="v">WebP圧縮（参照合計 約12MB）</div></div>
         <div class="s"><div class="l">公開（Pages）</div><div class="v">独自ドメイン公開 2026-08-26<br><a href="https://kotohilife.com/" style="font-size:11px;">サイトを開く</a><br><span style="font-size:10px;">Cloudflare Pages（旧: GitHub Pages 2026-07-19〜）</span></div></div>
       </div>
-      <div class="note warn"><b>公開前の残件：</b> 運営主体・問い合わせ先、LINE参加情報、広告掲載ルールを確定し、実機スマホで再確認する。</div>
+      <div class="note warn"><b>当面の残件：</b> 広報ことひら10月号のQR入稿（Web掲載9/24前後まで表示必須）、運営者情報の正式化とnoindex見直し、広告掲載ルールの確定、旧GitHub Pages併存の扱い決定。</div>
     </div>
 
     <div class="card">
@@ -202,7 +203,7 @@ registry.json <span class="arr">→</span> <span class="anno">/kotohira-news</sp
 
 <span class="cmt"># B：ニュース・イベント・キャンペーン・体験（更新生成）</span>
 Notion <span class="arr">→</span> <span class="anno">scripts/fetch_notion.py</span> <span class="arr">→</span> <span class="ok">notion-data.js</span>
-                              <span class="arr">└→</span> assets/thumbs/
+                              <span class="arr">└→</span> assets/thumbs/ <span class="cmt"># WebP圧縮保存（image_utils.py・長辺1200px）</span>
 
 <span class="cmt"># C：地域案内（人が調査・確認して編集）</span>
 <span class="ok">experiences-data.js</span>  <span class="cmt"># Notionが空のときの体験フォールバック</span>
@@ -213,7 +214,7 @@ Notion <span class="arr">→</span> <span class="anno">scripts/fetch_notion.py</
 <span class="cmt"># D：共通UI設定（公開設定のみ）</span>
 <span class="ok">site-widgets-data.js</span> <span class="cmt"># 天気／LINE／広告／フッターリンク</span>
 
-      7個のJS <span class="arr">→</span> <span class="ok">index.html</span> <span class="arr">→</span> ローカル / 将来は GitHub Pages
+      7個のJS <span class="arr">→</span> <span class="ok">index.html</span> <span class="arr">→</span> <span class="ok">https://kotohilife.com</span> <span class="cmt"># Cloudflare Pages・push自動デプロイ</span>
                               <span class="arr">└→</span> privacy.html / operator.html</code></pre>
       <div class="note info"><b>設計原則：</b> 表示ロジックとデータを分離し、データごとに更新責任を固定する。個別の調査メモは画面向け紹介文と分ける。</div>
       <div class="note teal">Notionニュースの収集は別リポジトリ <b>konpie-bot</b>、本リポジトリは読み取り専用。天気だけは閲覧時に気象庁JSONを取得し、24時間キャッシュする。</div>
@@ -268,11 +269,13 @@ Notion <span class="arr">→</span> <span class="anno">scripts/fetch_notion.py</
         <tr><td>F21</td><td>9ルートを「ホーム／町の今／訪れる・関わる／町を知る」の4分類へ整理し、第二階層を縦表示</td><td><span class="state done">実装済み</span></td></tr>
         <tr><td>F22</td><td>PCは本文＋右300pxサイドバー、スマホは本文を先にした1カラム</td><td><span class="state done">実装済み</span></td></tr>
         <tr><td>F23</td><td>気象庁の予報と目的別ショートカットを共通ウィジェット化</td><td><span class="state done">天気有効</span></td></tr>
-        <tr><td>F24</td><td>LINEオープンチャットをURL・QR・運営・ルール・注記の確定後だけ表示</td><td><span class="state done">掲載中</span></td></tr>
+        <tr><td>F24</td><td>LINEオープンチャットをURL・QR・運営・ルール・注記の確定後だけ表示（複数枠対応）</td><td><span class="state done">2枠掲載中（ことひらいふ／無料AI体験会）</span></td></tr>
+        <tr><td>F30</td><td>サイドバーの大型イベント告知枠（期間内だけ表示・終了翌日に自動非表示）</td><td><span class="state done">台湾夜市 掲載中（〜09-05）</span></td></tr>
+        <tr><td>F31</td><td>サムネイルをWebPへ縮小圧縮して配信（取得時圧縮＋既存一括変換）</td><td><span class="state done">実装済み 08-25</span></td></tr>
         <tr><td>F25</td><td>広告主・期間・配置・画像代替文を持つ広告枠。編集情報と区別</td><td><span class="state pending">UI済み・掲載0件</span></td></tr>
         <tr><td>F26</td><td>各ページ先頭は短いタイトルカードとし、大きなヒーロー・長い導入文を置かない</td><td><span class="state done">実装済み</span></td></tr>
         <tr><td>F28</td><td>フッターからプライバシーポリシー／運営者情報へ案内</td><td><span class="state pending">暫定版・正式情報待ち</span></td></tr>
-        <tr><td>F9</td><td>GitHub Pagesで公開</td><td><span class="state done">完了 07-19</span></td></tr>
+        <tr><td>F9</td><td>公開（GitHub Pages → 独自ドメイン kotohilife.com ＋ Cloudflare Pages）</td><td><span class="state done">独自ドメイン公開 08-26</span></td></tr>
         <tr><td>F10</td><td>data.js／notion-data.jsの定期自動更新</td><td><span class="state pending">notion-data.js=毎日00:00自動／data.js=手動</span></td></tr>
       </table></div>
     </div>
@@ -318,9 +321,13 @@ Notion <span class="arr">→</span> <span class="anno">scripts/fetch_notion.py</
 ├── udon-data.js / parking-data.js          <span class="cmt"># 調査・手編集</span>
 ├── links-data.js / site-widgets-data.js    <span class="cmt"># リンク／共通設定</span>
 ├── registry.json                           <span class="cmt"># 団体×媒体の元データ</span>
-├── scripts\fetch_notion.py
+├── scripts\fetch_notion.py                 <span class="cmt"># Notion取得（保存時WebP圧縮）</span>
+├── scripts\image_utils.py                  <span class="cmt"># WebP圧縮の共通処理</span>
+├── scripts\compress_thumbs.py              <span class="cmt"># 既存画像の一括変換（08-25実行済み）</span>
 ├── assets\
-│   ├── thumbs\                             <span class="cmt"># Notionサムネ</span>
+│   ├── thumbs\                             <span class="cmt"># Notionサムネ（WebP）</span>
+│   ├── manual\                             <span class="cmt"># 手動差し替え画像（image-overrides.json対応）</span>
+│   ├── brand\                              <span class="cmt"># ファビコン・OG画像</span>
 │   ├── experiences\                        <span class="cmt"># TOKKEN等</span>
 │   └── links\                              <span class="cmt"># リンクカード</span>
 └── docs\                                   <span class="cmt"># 要件・設計・調査・運用・このハブ</span></code></pre>
@@ -376,7 +383,7 @@ SITE_WIDGETS_DATA = { weather, lineOpenChats[], featuredEvents[], ads, footerLin
     <div class="card">
       <h3>レイアウトと共通ウィジェット</h3>
       <div class="two-col">
-        <div><p><b>PC（1100px以上）</b></p><ul class="b"><li>本文＋右300pxサイドバー</li><li>天気 → 目的別入口 → LINE → 広告</li><li>イベントは月間グリッド</li></ul></div>
+        <div><p><b>PC（1100px以上）</b></p><ul class="b"><li>本文＋右300pxサイドバー</li><li>天気 → 目的別入口 → 大型イベント → LINE（2枠） → 広告</li><li>イベントは月間グリッド</li></ul></div>
         <div><p><b>スマホ</b></p><ul class="b"><li>本文を先にした1カラム</li><li>イベントは月別予定一覧</li><li>LINEは参加ボタン中心、QRは非表示</li><li>広告は最初の内容ブロック後</li></ul></div>
       </div>
       <div class="note info">LINEは必須項目がすべて揃うまで非表示。広告は配置別に抽出後、各最大2件を表示し、「広告」「広告主」を明記する。</div>
@@ -407,6 +414,7 @@ SITE_WIDGETS_DATA = { weather, lineOpenChats[], featuredEvents[], ads, footerLin
         <tr><td>0.6</td><td>9ルートの地域ポータル化、サイドバー、来訪者向け情報、スマホ改善</td><td><span class="state pending">ローカル実装済み</span></td></tr>
         <tr><td>1</td><td>団体・媒体の拡充と地域情報の継続更新</td><td><span class="state pending">継続</span></td></tr>
         <tr><td>2</td><td>運営情報・掲載基準を確定しGitHub Pages公開</td><td><span class="state done">公開済み 07-19</span></td></tr>
+        <tr><td>2.5</td><td>独自ドメイン kotohilife.com 取得・Cloudflare Pages移行・画像WebP化</td><td><span class="state done">完了 08-26</span></td></tr>
         <tr><td>3</td><td>生成データの定期自動更新</td><td><span class="state pending">Notion分=達成／RSS分=未</span></td></tr>
         <tr><td>4</td><td>コミュニティ展開（任意）</td><td><span class="state future">構想</span></td></tr>
       </table></div>
@@ -460,8 +468,8 @@ SITE_WIDGETS_DATA = { weather, lineOpenChats[], featuredEvents[], ads, footerLin
       <div class="two-col">
         <div><p><b>サイト全体・ブランド</b></p><ul class="chk">
           <li class="todo">掲載情報の棚卸し — 今の分類（ニュース／イベント／キャンペーン／体験・滞在／うどん／かき氷／駐車場／リンク）で<b>足りない情報がないか</b>を点検する</li>
-          <li class="todo">ロゴ等のブランド制作 — 「ことひらいふ」のロゴ・ビジュアルを作りたい（要相談）</li>
-          <li class="todo">独自ドメインの取得 — どういう名前（ドメイン名）にするか（要相談）</li>
+          <li class="todo">ロゴ等のブランド制作 — ファビコン・OG画像は整備済み（assets/brand）。ロゴ本体は引き続き相談</li>
+          <li class="done">【済 08-25】独自ドメイン取得 — kotohilife.com（Xserver契約・SNSハンドル @kotohilife と統一。DNS/公開はCloudflare）</li>
         </ul></div>
         <div><p><b>コンテンツの網羅性チェック</b></p><ul class="chk">
           <li class="todo">ニュース・イベント・キャンペーンに<b>登録されていないものがないか</b>の確認</li>
@@ -495,8 +503,9 @@ SITE_WIDGETS_DATA = { weather, lineOpenChats[], featuredEvents[], ads, footerLin
         <li class="todo">広告掲載基準・窓口・掲載料・審査・表示期間を決定</li>
         <li class="todo">うどん店・駐車場の変動情報を公開直前に再確認</li>
         <li class="todo">360／390／560／1280px、キーボード、外部リンク、天気失敗時を実機確認</li>
-        <li class="todo">公開範囲と個人情報を確認後、GitHub Pagesへ公開</li>
+        <li class="done">公開範囲と個人情報を確認後、公開（07-19 GitHub Pages → 08-26 kotohilife.com）</li>
       </ul>
+      <div class="note info"><b>広報ことひら10月号（QR掲載）：</b> Web掲載は9/24前後の見込み。QRのURLは <code>https://kotohilife.com</code>。入稿前チェックリストは <code>SecondBrain\03_Resources\agent-outputs\kotohira-newsletter\writing\2026-08-25_10月号_Canva移植チェックリスト.md</code>。</div>
     </div>
 
     <div class="card">
@@ -525,6 +534,10 @@ SITE_WIDGETS_DATA = { weather, lineOpenChats[], featuredEvents[], ads, footerLin
         <li><b>07-16</b>：イベント月カレンダーのチップをイベント名のみに変更。週表示を追加し、月カレンダーのセル右上に祝日名を表示（2025〜27年 54件）。うどん・かき氷・駐車場カードに画像枠を追加（local-first、公式 og:image 5件を適用）。</li>
         <li><b>07-17</b>：週表示を「月グリッドの1週間拡大版」に刷新（PCは大型グリッド、スマホはリスト表示）。</li>
         <li><b>07-19</b>：うどん営業中バッジを追加（11店・JST判定・4状態）し、ホームに「いま営業中のうどん店」モジュールを追加。LINEウィジェットを公開（縦積み: 説明→QR→参加ボタン、運営表記なし）。GitHub Pagesで公開し、Notionデータ（ニュース・イベント・キャンペーン）の日次自動更新が稼働（初回実行成功）。運用手順を A-1（Notion＝自動）・A-2（RSS＝手動）に改訂。</li>
+        <li><b>08-22</b>：サイドバーに2枠追加。LINEオープンチャットを配列化（lineOpenChats[]）して「無料AI体験会」を追加（08-24にQR読取で参加URL確認→公開）。大型イベント告知枠（featuredEvents[]）を新設し「第4回 台湾フェス・台湾夜市 in 琴平」を掲載（endDate翌日に自動非表示）。</li>
+        <li><b>08-25</b>：画像をWebPへ一括圧縮（thumbs 187MB→19MB、manual 18MB→1.3MB）。fetch_notion.py に取得時圧縮を実装（Pillow無しでも動作継続）。カード・サイドバー画像へ loading="lazy" を追加（07-03に一度撤去した属性の再導入。今回はスマホ実機・本番URLで表示を確認済み。再発したら真っ先にここを疑う）。日次ワークフローに uv + Pillow を追加。</li>
+        <li><b>08-25</b>：独自ドメイン <b>kotohilife.com</b> をXserverで取得（SNSハンドル @kotohilife と統一。ハイフン案・.jp案は不採用）。広報ことひら10月号でQR掲載予定（サイト＋オプチャ）。</li>
+        <li><b>08-26</b>：DNSをCloudflareへ移管しCloudflare Pagesで公開（Git連携・push自動デプロイ）。カスタムドメイン apex＋www、canonical/og:urlを新ドメインへ変更。旧GitHub Pagesは当面併存（canonicalで評価は新ドメインへ集約）。</li>
       </ul>
     </div>
   </section>
@@ -547,6 +560,7 @@ experiences-data.js / udon-data.js / parking-data.js / links-data.js
 <span class="cmt"># 4. 共通設定と画面を確認</span>
 site-widgets-data.js → index.html</code></pre>
       <div class="note info">一部DBがコネクト漏れ等で404でも、成功したDBだけ更新し失敗DBは既存内容を温存。トークンは <code>.env</code> に設定すれば毎回の環境変数設定は不要。</div>
+      <div class="note teal">手順2はGitHub Actionsが毎日0:00 JSTに自動実行（Pillow入り＝サムネはWebP圧縮保存）。push すると Cloudflare Pages が自動デプロイして <code>kotohilife.com</code> に反映される。手動で <code>assets/</code> へ画像を足すときも数MBの原寸は置かず、WebP化してから置く。</div>
     </div>
 
     <div class="card">
@@ -557,7 +571,7 @@ site-widgets-data.js → index.html</code></pre>
         <tr><td><code>udon-data.js</code></td><td>琴平町内の営業時間・休み・価格・駐車場・紹介文</td><td>町外店を含めず、内部メモを紹介文に混ぜない</td></tr>
         <tr><td><code>parking-data.js</code></td><td>料金・台数・営業・確認度・地図</td><td>臨時／季節情報と確認日</td></tr>
         <tr><td><code>links-data.js</code></td><td>カテゴリ・公式URL・SNS・画像</td><td>一次窓口か、アカウントが公式か</td></tr>
-        <tr><td><code>site-widgets-data.js</code></td><td>天気・LINE・広告・フッターリンク</td><td>公開設定だけを置き、契約情報・個人情報を入れない</td></tr>
+        <tr><td><code>site-widgets-data.js</code></td><td>天気・LINE（複数枠）・大型イベント枠・広告・フッターリンク</td><td>公開設定だけを置き、契約情報・個人情報を入れない。大型イベントは endDate で自動非表示</td></tr>
         <tr><td><code>privacy.html</code><br><code>operator.html</code></td><td>運営者・問い合わせ・外部サービス説明</td><td>正式情報確定後に暫定表示とnoindexを見直す</td></tr>
       </table></div>
     </div>
@@ -575,7 +589,7 @@ site-widgets-data.js → index.html</code></pre>
     <div class="card">
       <h3>LINE・広告を有効にする条件</h3>
       <div class="two-col">
-        <div><p><b>LINEオープンチャット</b></p><ul class="chk"><li class="done">名称・説明</li><li class="done">参加URL・QR画像</li><li class="done">注記＝反映済み、運営表記＝非表示と決定、ルールURL＝当面不要（2026-07-19判断）</li></ul></div>
+        <div><p><b>LINEオープンチャット（2枠）</b></p><ul class="chk"><li class="done">ことひらいふ（07-19掲載開始）</li><li class="done">無料AI体験会（08-24掲載開始。QR読取で参加URL確認済み）</li><li class="done">注記＝反映済み、運営表記＝非表示と決定、ルールURL＝当面不要（2026-07-19判断）</li></ul></div>
         <div><p><b>地域スポンサー広告</b></p><ul class="chk"><li class="todo">広告主名・タイトル・リンク</li><li class="todo">代替テキスト付き画像</li><li class="todo">開始日・終了日・掲載場所・表示順</li></ul></div>
       </div>
       <div class="note warn">LINEは2026-07-19に掲載開始（稼働中）。広告は基準未確定のため現在も0件（仮URLや仮QR、契約前の広告は表示しない）。</div>
@@ -601,7 +615,7 @@ site-widgets-data.js → index.html</code></pre>
 
 </main>
 
-<footer>kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-07-19 ／ ローカルHTML</footer>
+<footer>kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-08-26 ／ ローカルHTML</footer>
 
 <script>
   var tabs=[].slice.call(document.querySelectorAll('.tab'));
