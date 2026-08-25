@@ -5,6 +5,24 @@ Notionの「ニュースDB」「イベントDB」「キャンペーンDB」の3�
 
 pip依存なし（Python標準ライブラリのみ）で動作します。
 
+Pillow が入っている環境では、サムネイル保存時に長辺1200pxへ縮小してWebPへ圧縮します。
+入っていなければ圧縮せず原寸のまま保存するため、動作自体は変わりません。
+GitHub Actions では uv 経由で Pillow を用意しています（`uv run --with Pillow`）。
+
+## scripts/compress_thumbs.py
+
+圧縮機能を入れる前に保存された既存画像（`assets/thumbs/` と `assets/manual/`）を、
+まとめてWebPへ変換する一回性のスクリプトです。2026-08-25 に実行済みで、
+参照中の画像は約90MBから11.8MBになりました。
+
+元ファイルは削除せず、変換で不要になった一覧を `scripts/unused-images.txt` に出力します。
+削除するかどうかは中身を確認したうえで判断してください。
+
+```bash
+python scripts/compress_thumbs.py --dry-run   # 結果の見込みだけ表示
+python scripts/compress_thumbs.py             # 実行（何度実行しても結果は同じ）
+```
+
 ## セットアップ手順
 
 > **既存トークンの使い回し（推奨の近道）**: konpie-bot の読み取り専用トークン

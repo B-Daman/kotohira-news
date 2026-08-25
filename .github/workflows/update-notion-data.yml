@@ -26,6 +26,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      # サムネイル圧縮に使う Pillow を一時環境で用意する。
+      # ここが失敗しても下の fetch は Pillow 無しで動く（圧縮だけ行われない）
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        continue-on-error: true
+
       - name: Fetch Notion data
         env:
           KOTOHIRA_DASHBOARD_NOTION_TOKEN: ${{ secrets.KOTOHIRA_DASHBOARD_NOTION_TOKEN }}
@@ -34,7 +40,12 @@ jobs:
             echo "::error::Secret KOTOHIRA_DASHBOARD_NOTION_TOKEN が未設定です。リポジトリの Settings > Secrets and variables > Actions で登録してください。"
             exit 1
           fi
-          python scripts/fetch_notion.py
+          if command -v uv >/dev/null 2>&1; then
+            uv run --with Pillow --python 3.12 scripts/fetch_notion.py
+          else
+            echo "::warning::uv が使えないため、画像を圧縮せずに実行します。"
+            python scripts/fetch_notion.py
+          fi
 
       - name: Validate output
         # 3キーとも空でないことを確認してから公開する（空なら中止。fetch側にも失敗時の既存データ温存あり）

@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base target="_blank">
 <title>ことひらいふ</title>
+<meta name="description" content="こんぴらさんの町・香川県琴平町のニュース・イベント・キャンペーンを1か所に集めた非公式ファンメディア「ことひらいふ」。琴平の“いま”を、ゆるっと。">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/brand/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ことひらいふ">
+<meta property="og:title" content="ことひらいふ｜香川県琴平町の情報まとめ">
+<meta property="og:description" content="こんぴらさんの町・琴平の“いま”を、ゆるっと。ニュース・イベント・キャンペーンを毎日自動更新でまとめています。">
+<meta property="og:url" content="https://b-daman.github.io/kotohira-news/">
+<meta property="og:image" content="https://b-daman.github.io/kotohira-news/assets/brand/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -336,6 +349,14 @@
   .line-join{display:inline-block;background:#148244;color:#fff;border-radius:8px;padding:8px 13px;
     font-size:12.5px;font-weight:900;text-align:center}
   .line-join:hover{background:#0f6e38;color:#fff}
+  .widget-card.featured-event-card{border-top:4px solid var(--accent)}
+  .featured-event-card .widget-kicker{color:var(--accent-d)}
+  .featured-event-main{display:block;color:inherit;text-decoration:none;border-radius:8px}
+  a.featured-event-main:hover .widget-title{color:var(--accent-d)}
+  .featured-event-main:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .featured-event-image{width:100%;display:block;border-radius:8px;background:#f1ece2;margin:2px 0 9px}
+  .featured-event-meta{display:flex;flex-direction:column;gap:3px;font-size:12.5px;color:#4d4740;line-height:1.55}
+  .featured-event-cta{margin-top:9px;font-size:12.5px;font-weight:900;color:var(--accent-d)}
   .ad-label{display:flex;justify-content:space-between;gap:8px;align-items:center;color:var(--sub);
     font-size:10px;font-weight:900;margin:0 2px 7px}
   .ad-main{display:block;color:inherit;text-decoration:none;border-radius:8px;overflow:hidden}
@@ -626,7 +647,7 @@ const PARKING = (window.PARKING_DATA && typeof window.PARKING_DATA === "object")
 /* 🌤 共通ウィジェット／広告（公開設定のみ。契約・請求等の非公開情報は置かない） */
 const WIDGETS = (window.SITE_WIDGETS_DATA && typeof window.SITE_WIDGETS_DATA === "object")
   ? window.SITE_WIDGETS_DATA
-  : { updated:"", weather:{enabled:false}, lineOpenChat:{enabled:false}, footerLinks:{}, ads:[] };
+  : { updated:"", weather:{enabled:false}, lineOpenChats:[], featuredEvents:[], footerLinks:{}, ads:[] };
 
 const SNS = [
   {key:"note",label:"note"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
@@ -1316,7 +1337,7 @@ function newsBox(it){
   const cls = mediaClass(it.media);
   const imgSrc = safeUrl(it.thumbnail);
   const img = imgSrc
-    ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
     : `<div class="hb-img ph src ${cls}">${esc((it.media||"?").charAt(0))}</div>`;
   const meta = `<span class="src ${cls}">${esc(it.media||"")}</span><span>${esc(fmtDate(it.date))}</span>`;
   const slug = registerItem(it, "news");
@@ -1391,7 +1412,7 @@ function feedItem(it){
   const letter = esc((it.source||"?").charAt(0));
   const imgSrc = safeUrl(it.thumbnail);
   const img = imgSrc
-    ? `<img src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    ? `<img src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
     : `<div class="fi-ph ph src ${cls}">${letter}</div>`;
   const meta = [
     `<span class="src ${cls}">${esc(it.source||"")}</span>`,
@@ -1409,7 +1430,7 @@ function newsFeedItem(it){
   const isNew = isWithinDays(it.date, 7);
   const imgSrc = safeUrl(it.thumbnail);
   const img = imgSrc
-    ? `<img src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    ? `<img src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
     : `<div class="fi-ph ph src ${cls}">${letter}</div>`;
   const meta = [
     `<span class="src ${cls}">${esc(it.media||"")}</span>`,
@@ -1485,7 +1506,7 @@ function pickupFeatureCard(it){
   const isNew = isWithinDays(it.date, 7);
   const imgSrc = safeUrl(it.thumbnail);
   const img = imgSrc
-    ? `<img class="pf-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    ? `<img class="pf-img" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
     : `<div class="pf-img ph src ${cls}">${letter}</div>`;
   const meta = [
     `<span class="src ${cls}">${esc(it.media||"")}</span>`,
@@ -1875,7 +1896,7 @@ function itemCard(it, kind, opts){
   opts = opts || {};
   const imgSrc = safeUrl(it.image);
   const img = imgSrc
-    ? `<img class="ev-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    ? `<img class="ev-img" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
     : `<div class="ev-img ph">🖼</div>`;
   const placeParts = [];
   if(it.city && it.city !== "琴平町") placeParts.push(it.city);
@@ -2095,7 +2116,7 @@ function experienceCard(it){
   const imgSrc = safeUrl(it.image);
   const emoji = EXPERIENCE_EMOJI[it.category] || "🧭";
   const img = imgSrc
-    ? `<img class="ev-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    ? `<img class="ev-img${it.imageFit === "contain" ? " fit-contain" : ""}" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
     : `<div class="ev-img ph">${emoji}</div>`;
   const period = expPeriod(it);
   const rows = [
@@ -2457,7 +2478,7 @@ function linkCard(l){
   const href = safeUrl(l.url);
   const imgSrc = safeUrl(l.image);
   const img = imgSrc
-    ? `<img class="lc-img" src="${esc(imgSrc)}" alt="" onerror="this.style.display='none'">`
+    ? `<img class="lc-img" src="${esc(imgSrc)}" alt="" loading="lazy" onerror="this.style.display='none'">`
     : `<div class="lc-img ph">${esc((l.name||"?").charAt(0))}</div>`;
   const sns = l.sns || {};
   const badges = LINK_SNS.map(s=>{
@@ -2536,27 +2557,16 @@ function renderUtilityWidgets(){
 
 function renderCommunityWidgets(){
   const host = document.getElementById("communityWidgets");
-  const line = WIDGETS.lineOpenChat || {};
-  const lineJoin = safeUrl(line.joinUrl);
-  const lineQr = safeUrl(line.qrImage);
-  const lineRules = safeUrl(line.rulesUrl);
-  /* 表示に必須なのは 有効・参加URL・名称 のみ。QR・説明・運営・ルールURL・注意書きは「あれば表示」。 */
-  const lineReady = line.enabled === true && lineJoin && ("" + (line.name || "")).trim();
-  let lineHTML = "";
-  if(lineReady){
-    lineHTML = `<section class="widget-card line-card" aria-labelledby="lineWidgetTitle">
-      <span class="widget-kicker">地域コミュニティ</span>
-      <div class="widget-title" id="lineWidgetTitle">💬 ${esc(line.name || "LINEオープンチャット")}</div>
-      <div class="line-content">
-        ${line.description ? `<p class="widget-copy">${esc(line.description)}</p>` : ""}
-        ${lineQr ? `<img class="line-qr" src="${esc(lineQr)}" alt="LINEオープンチャット参加用QRコード">` : ""}
-        <a class="line-join" href="${esc(lineJoin)}" rel="noopener">LINEで参加する ↗</a>
-        <p class="widget-note">このトークルーム専用のニックネームで参加できます。</p>
-      </div>
-      ${line.disclaimer ? `<p class="widget-note">${esc(line.disclaimer)}</p>` : ""}
-      ${lineRules ? `<div class="widget-links"><a class="widget-link" href="${esc(lineRules)}" rel="noopener">参加前にルールを確認 ↗</a></div>` : ""}
-    </section>`;
-  }
+  /* 旧形式（lineOpenChat 単一オブジェクト）のデータでも表示が欠けないよう配列へ寄せる */
+  const chats = Array.isArray(WIDGETS.lineOpenChats)
+    ? WIDGETS.lineOpenChats
+    : (WIDGETS.lineOpenChat ? [WIDGETS.lineOpenChat] : []);
+  const lineHTML = chats.map(lineOpenChatCardHTML).join("");
+
+  const featuredHTML = (Array.isArray(WIDGETS.featuredEvents) ? WIDGETS.featuredEvents : [])
+    .filter(isVisibleFeaturedEvent)
+    .sort((a,b)=>(Number(a.order)||0)-(Number(b.order)||0))
+    .map(featuredEventCardHTML).join("");
 
   const sidebarAds = adsForPlacement("sidebar", 2);
   const adsHTML = sidebarAds.length
@@ -2567,8 +2577,65 @@ function renderCommunityWidgets(){
         <p class="widget-copy">琴平に関わる事業者・団体の広告枠を準備しています。</p>
       </section>`;
 
-  host.innerHTML = `<div class="widget-stack">${lineHTML}${adsHTML}</div>`;
-  host.classList.toggle("mobile-empty", !lineHTML);
+  host.innerHTML = `<div class="widget-stack">${featuredHTML}${lineHTML}${adsHTML}</div>`;
+  host.classList.toggle("mobile-empty", !lineHTML && !featuredHTML);
+}
+
+/* LINEオープンチャット1枠分。表示に必須なのは 有効・参加URL・名称 のみ。
+   QR・説明・ルールURL・注意書きは「あれば表示」。 */
+function lineOpenChatCardHTML(line, i){
+  line = line || {};
+  const join = safeUrl(line.joinUrl);
+  const name = ("" + (line.name || "")).trim();
+  if(line.enabled !== true || !join || !name) return "";
+  const qr = safeUrl(line.qrImage);
+  const rules = safeUrl(line.rulesUrl);
+  const titleId = `lineWidgetTitle${i}`;
+  return `<section class="widget-card line-card" aria-labelledby="${titleId}">
+    <span class="widget-kicker">${esc(line.kicker || "地域コミュニティ")}</span>
+    <div class="widget-title" id="${titleId}">💬 ${esc(name)}</div>
+    <div class="line-content">
+      ${line.description ? `<p class="widget-copy">${esc(line.description)}</p>` : ""}
+      ${qr ? `<img class="line-qr" src="${esc(qr)}" alt="${esc(name)}のLINEオープンチャット参加用QRコード" loading="lazy">` : ""}
+      <a class="line-join" href="${esc(join)}" rel="noopener">LINEで参加する ↗</a>
+      <p class="widget-note">このトークルーム専用のニックネームで参加できます。</p>
+    </div>
+    ${line.disclaimer ? `<p class="widget-note">${esc(line.disclaimer)}</p>` : ""}
+    ${rules ? `<div class="widget-links"><a class="widget-link" href="${esc(rules)}" rel="noopener">参加前にルールを確認 ↗</a></div>` : ""}
+  </section>`;
+}
+
+/* 大型イベント告知枠：enabled かつ タイトルあり かつ 掲載期間内だけ表示する。
+   期間判定は広告と同じく日本時間で、endDate は当日を含む。 */
+function isVisibleFeaturedEvent(ev){
+  if(!ev || ev.enabled !== true) return false;
+  if(!("" + (ev.title || "")).trim()) return false;
+  const start = ("" + (ev.startDate || "")).trim();
+  const end = ("" + (ev.endDate || "")).trim();
+  if((start && !isValidDateKey(start)) || (end && !isValidDateKey(end))) return false;
+  const today = tokyoDateKey(new Date());
+  return (!start || start <= today) && (!end || today <= end);
+}
+
+function featuredEventCardHTML(ev, i){
+  const href = safeUrl(ev.url);
+  const image = safeUrl(ev.image);
+  const imageAlt = ("" + (ev.imageAlt || "")).trim();
+  const titleId = `featuredEventTitle${i}`;
+  const meta = [
+    ev.dateLabel ? `📅 ${ev.dateLabel}` : "",
+    ev.place ? `📍 ${ev.place}` : "",
+    ev.note ? `🎫 ${ev.note}` : ""
+  ].filter(Boolean);
+  /* 画像は広告と同じ方針で、代替テキストが無ければ表示しない */
+  const body = `${image && imageAlt ? `<img class="featured-event-image" src="${esc(image)}" alt="${esc(imageAlt)}" loading="lazy">` : ""}
+    <div class="widget-title" id="${titleId}">${esc(ev.title)}</div>
+    ${meta.length ? `<div class="featured-event-meta">${meta.map(m=>`<span>${esc(m)}</span>`).join("")}</div>` : ""}
+    ${href ? `<div class="featured-event-cta">詳しく見る ↗</div>` : ""}`;
+  return `<section class="widget-card featured-event-card" aria-labelledby="${titleId}">
+    <span class="widget-kicker">${esc(ev.kicker || "大型イベント")}</span>
+    ${href ? `<a class="featured-event-main" href="${esc(href)}" rel="noopener">${body}</a>` : `<div class="featured-event-main">${body}</div>`}
+  </section>`;
 }
 
 /* mobile-inline は最初の表示コンテンツの直後へ差し込み、ページ先頭を広告で塞がない。 */
@@ -2663,7 +2730,7 @@ function adCardHTML(ad, visibilityClass){
   const image = safeUrl(ad.image);
   const imageAlt = ("" + (ad.alt || "")).trim();
   /* 広告画像は装飾扱いにせず、代替テキストが無ければ画像自体を表示しない。 */
-  const body = `${image && imageAlt ? `<img class="ad-image" src="${esc(image)}" alt="${esc(imageAlt)}">` : ""}
+  const body = `${image && imageAlt ? `<img class="ad-image" src="${esc(image)}" alt="${esc(imageAlt)}" loading="lazy">` : ""}
     ${ad.title ? `<div class="ad-title">${esc(ad.title)}</div>` : ""}`;
   return `<section class="widget-card ad-card${visibilityClass || ""}" data-ad-id="${esc(ad.id || "")}">
     <div class="ad-label"><span>広告</span><span>広告主: ${esc(ad.advertiserName || "")}</span></div>

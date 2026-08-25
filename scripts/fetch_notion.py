@@ -9,7 +9,8 @@
   （databases.retrieve → data_sources.query）に合わせている。
   同一DBを読むため、プロパティの解釈も konpie-bot 側の
   get_property_value 等に揃えた。
-- 標準ライブラリのみで実装（pip依存なし）。
+- 標準ライブラリのみで動く（pip依存なし）。Pillow が入っている場合だけ、
+  保存前にサムネイルを縮小してWebPへ圧縮する（無ければ原寸のまま保存）。
 - サムネイル/参考画像は署名付きURL（Notion S3は約1時間、Discord CDNは
   約24時間で失効）が大半のため、取得直後にローカル（assets/thumbs/）へ
   保存し、notion-data.js には相対パスを書き込む。
@@ -48,6 +49,10 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 OUTPUT_PATH = os.path.join(REPO_ROOT, "notion-data.js")
 ENV_PATH = os.path.join(REPO_ROOT, ".env")
+
+if SCRIPT_DIR not in sys.path:
+    sys.path.insert(0, SCRIPT_DIR)
+from image_utils import compress_to_webp  # noqa: E402
 
 
 def load_env_file(path: str) -> None:
@@ -94,6 +99,11 @@ RECENT_WINDOW_DAYS = 60
 
 THUMBS_DIR = os.path.join(REPO_ROOT, "assets", "thumbs")
 IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp")
+# 保存済みファイルを探す時は .webp を優先する。compress_thumbs.py で変換すると
+# 同じIDの .png と .webp が併存するため、軽い方を選ぶ。
+THUMB_EXT_PREFERENCE = (".webp",) + tuple(
+    ext for ext in IMAGE_EXTENSIONS if ext != ".webp"
+)
 # 画像の“正”はこのローカルフォルダ。Notionは信用しない（表示バグ・URL失効あり）。
 # assets/image-overrides.json のマッピングにマッチした項目は、Notionから一切
 # 取得せず assets/manual/ のファイルを使う（local-first）。
@@ -419,7 +429,7 @@ def find_local_thumb(file_id: str) -> str:
 
     見つかれば相対パス、無ければ空文字を返す。
     """
-    for ext in IMAGE_EXTENSIONS:
+    for ext in THUMB_EXT_PREFERENCE:
         if os.path.exists(os.path.join(THUMBS_DIR, f"{file_id}{ext}")):
             return f"assets/thumbs/{file_id}{ext}"
     return ""
@@ -463,6 +473,12 @@ def download_image(url: str, page_id: str) -> tuple[str, bool]:
         return ("" if is_signed_url(url) else url), False
 
     ext = guess_extension(url, content_type)
+    # Pillow があれば縮小＋WebP化する（無い・失敗時は取得したまま保存）。
+    # 元画像は数MBのことがあり、そのまま置くと閲覧者の通信量を圧迫する。
+    compressed = compress_to_webp(data)
+    if compressed is not None:
+        data = compressed
+        ext = ".webp"
     os.makedirs(THUMBS_DIR, exist_ok=True)
     file_path = os.path.join(THUMBS_DIR, f"{file_id}{ext}")
     with open(file_path, "wb") as f:
