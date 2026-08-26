@@ -86,7 +86,6 @@ window.SITE_WIDGETS_DATA = {
     }
   ],
 
-  /* 正式情報の確定前は、noindex の暫定ページへ案内する。 */
   footerLinks: {
     privacyPolicyUrl: "privacy.html",
     operatorUrl: "operator.html"
