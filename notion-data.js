@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-26 00:34",
+  "fetched": "2026-08-27 01:11",
   "news": [
     {
       "id": "3c40b4e5-ff5b-811c-a263-dc94860be85d",
@@ -314,6 +314,21 @@ window.NOTION_DATA = {
       "organizer": "流通科学大学"
     },
     {
+      "id": "3c80b4e5-ff5b-81a1-bbda-f8ed9895895d",
+      "title": "第8回 こんぴら秋夜市",
+      "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
+      "start": "2026-09-12T17:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "一之橋公園",
+      "address": "〒766-0001 香川県仲多度郡琴平町722",
+      "image": "assets/thumbs/3c80b4e5ff5b81a1bbdaf8ed9895895d.webp",
+      "comment": "会場: 一之橋公園・金陵の郷 琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
+      "fee": "0",
+      "organizer": "琴平町商工会"
+    },
+    {
       "id": "3a50b4e5-ff5b-818d-a225-d0048ef3f63f",
       "title": "四国シェアサミット2026 in 琴平",
       "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
@@ -357,6 +372,21 @@ window.NOTION_DATA = {
       "comment": "会場: DONZO Brewing DONZO Brewingと南イタリア出身シェフによるクラフトビール＆フードペアリングイベント第2弾。全8品のコース料理とクラフトビール3種または4種のマリアージュを楽しむ。要予約。",
       "fee": "3300",
       "organizer": "DONZO Brewing"
+    },
+    {
+      "id": "3c80b4e5-ff5b-80bf-8eba-ecd35c85c207",
+      "title": "ことひらふれあい音楽祭",
+      "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
+      "start": "2026-09-05T17:00",
+      "end": "2026-09-05T20:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "一之橋公園",
+      "address": "〒766-0001 香川県仲多度郡琴平町722",
+      "image": "assets/thumbs/3c80b4e5ff5b80bf8ebaecd35c85c207.webp",
+      "comment": "会場: 一之橋公園 琴平町で開催される秋の音楽イベント。",
+      "fee": "0",
+      "organizer": "琴平町商工会"
     },
     {
       "id": "3ab0b4e5-ff5b-815a-ac45-cbf997fdd175",
@@ -484,7 +514,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-08-27T18:00",
       "end": "2026-08-27T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -499,7 +529,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DbfDCfxkxR-/",
       "start": "2026-08-27T09:30",
       "end": "2026-08-27T10:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "海の科学館",
       "address": "〒766-0001 香川県仲多度郡琴平町953番地",
@@ -514,7 +544,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
       "start": "2026-08-26T12:00",
       "end": "2026-08-26T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1677,21 +1707,6 @@ window.NOTION_DATA = {
       "comment": "会場: 麻心琴平店 アフリカ発祥の民族楽器「カリンバ」の手作りワークショップを6月28日～29日に麻心琴平店で開催。世界にたった一つの楽器を作り、心と体を癒す音の旅を体験できる。",
       "fee": "19800",
       "organizer": "麻心琴平店"
-    },
-    {
-      "id": "3710b4e5-ff5b-808c-b634-e590a9314d50",
-      "title": "Sando Sand. Stand（SSS）モーニング＠コトリ",
-      "url": "https://www.instagram.com/p/DY31ZvcE0Lp/?img_index=3",
-      "start": "2026-06-27T08:00",
-      "end": "2026-06-27T10:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3710b4e5ff5b808cb634e590a9314d50.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
