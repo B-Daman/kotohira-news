@@ -30,6 +30,7 @@
 <script src="cool-sweets-data.js"></script>
 <script src="parking-data.js"></script>
 <script src="site-widgets-data.js"></script>
+<script src="site-nav.js"></script>
 <!-- Instagram/X の埋め込みスクリプトはここでは読み込まない。表示時にのみ動的注入する（ensureIgScript/ensureTwttrScript） -->
 <style>
   :root{
@@ -278,7 +279,10 @@
   /* ホーム：3セクション（ニュース＝赤／イベント＝青／キャンペーン＝緑）をテーマ色の
      縦ライン・見出し色・説明文で区別する。「全部ニュース？」と誤読されない工夫 */
   .home-sec{border-left:4px solid var(--hs);padding:2px 0 2px 16px;margin-bottom:28px}
-  .home-sec:last-of-type{margin-bottom:0}
+  /* 末尾の余白調整：うどんモジュールが無い日は.hs-camps、ある日は.home-udonが実際の最後尾になる。
+     :last-of-typeは<section>タグ単位の判定でクラスを見ないため、順序が変わると効かなくなる。
+     :last-childなら実際の兄弟順で判定できるので、どちらが最後でも正しくmargin-bottomが消える */
+  .home-sec:last-child{margin-bottom:0}
   .hs-news{--hs:var(--accent)}
   .hs-events{--hs:#3170eb}
   .hs-camps{--hs:#1d8a4e}
@@ -292,6 +296,7 @@
   /* ホーム：いま営業中のうどん店モジュール。主要3セクションより控えめな枠付きカードにする（琥珀の左ライン） */
   .home-udon{border:1px solid var(--line);border-left:4px solid #d8a24a;border-radius:12px;
     background:#fdfbf7;padding:13px 16px;margin-bottom:28px}
+  .home-udon:last-child{margin-bottom:0}
   .home-udon-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
   .home-udon-head .group-h{margin:0;color:#8a5a1d}
   .home-udon-time{font-size:11.5px;color:var(--sub);font-weight:700;white-space:nowrap}
@@ -345,9 +350,6 @@
     color:var(--ink);font:700 11.5px/1.35 inherit;text-align:left;cursor:pointer}
   .quick-route:hover{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
   .quick-route:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  /* モバイルのホーム最上部に出す「目的から探す」の複製カード。サイドバー版(.sidebar-quicknav)と
-     二重表示にならないよう、PCでは常に非表示（≤720pxの@mediaで出し分ける） */
-  .home-quicknav{display:none}
   .line-content{display:flex;flex-direction:column;gap:10px}
   .line-content>*{margin:0}
   .line-qr{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);border-radius:8px;
@@ -535,6 +537,7 @@
   .weather-chip{display:none}
   .weather-chip-panel{display:none}
   .drawer-overlay{display:none}
+  .carousel-arrow{display:none}
 
   /* 埋め込みグリッド（Instagram/X） */
   .embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(328px,1fr));gap:14px;align-items:start}
@@ -596,23 +599,31 @@
     .drawer-close{border:none;background:var(--bg);width:32px;height:32px;border-radius:50%;
       font-size:18px;line-height:1;cursor:pointer;color:var(--sub)}
     .drawer-close:hover{background:var(--accent-soft);color:var(--accent-d)}
-    .drawer-nav{flex:1;overflow-y:auto;padding:10px 8px 24px}
-    .drawer-group{margin:14px 0 4px}
-    .drawer-group-h{font-size:11px;font-weight:900;color:var(--sub);letter-spacing:.06em;
-      padding:0 10px;margin:0 0 4px}
-    .drawer-link{display:block;width:100%;text-align:left;border:0;background:none;
-      color:var(--ink);font:700 14px/1.7 inherit;padding:9px 10px;border-radius:8px;
-      cursor:pointer;text-decoration:none}
+    .drawer-nav{flex:1;overflow-y:auto;padding:8px 8px 24px}
+    /* ドロワーのアコーディオン：大分類（ホーム/町の今/訪れる・関わる/町を知る/サイト情報）は
+       常に見えていて、タップで配下（.drawer-sub）が開閉する。.drawer-subの表示切替はhidden属性で行い、
+       ここではdisplayを一切上書きしない（[hidden]の既定挙動をそのまま使う） */
+    .drawer-group{margin:2px 0}
+    .drawer-group-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;
+      min-height:44px;border:0;background:none;color:var(--ink);font:900 15.5px/1.3 inherit;
+      padding:10px 10px;border-radius:8px;cursor:pointer;text-align:left}
+    .drawer-group-toggle:hover{background:var(--accent-soft);color:var(--accent-d)}
+    .drawer-group-toggle.active{color:var(--accent-d)}
+    .drawer-group-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+    .drawer-group-label{flex:1;min-width:0}
+    .drawer-caret{flex:0 0 auto;font-size:12px;color:var(--sub);margin-left:8px}
+    .drawer-sub{padding:0 4px 6px 14px;display:flex;flex-direction:column}
+    .drawer-sub[hidden]{display:none}
+    .drawer-link{display:flex;align-items:center;min-height:44px;width:100%;text-align:left;
+      border:0;background:none;color:var(--ink);font:700 15px/1.5 inherit;padding:6px 10px;
+      border-radius:8px;cursor:pointer;text-decoration:none}
     .drawer-link:hover{background:var(--accent-soft);color:var(--accent-d)}
     .drawer-link.active{background:var(--ink);color:#fff}
     .drawer-link:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 
-    /* ホーム最上部の「目的から探す」複製カードを表示し、二重表示を避けるためサイドバー側は隠す */
-    .home-quicknav{display:block;margin-bottom:22px}
-    .sidebar-quicknav{display:none}
-
-    /* 天気チップと表示が重複するため、サイドバーの天気カードは隠す */
-    .weather-card{display:none}
+    /* 「目的から探す」はハンバーガードロワーに統合したため、サイドバー（天気・クイックナビ）を
+       まるごと畳んで空のasideの余白を出さない。PC(>720px)のサイドバー表示はそのまま */
+    #utilityWidgets{display:none}
 
     /* ホームタブはタブ切替のアクティブ表示と重複するため、ページ名カードを消す
        （他タブでは残す。ホームのみ view=home の時だけ main が再生成されるため body[data-view]で判定） */
@@ -623,13 +634,24 @@
     .home-sec-head{flex-wrap:nowrap}
     .home-sec-head .hs-sub{display:none}
 
-    /* ホーム「最新ニュース」を横スクロールカルーセルに（.hs-news 配下限定でニュースタブのギャラリーには影響しない）。
-       カードはPCと同じ縦型（上サムネ・下本文）のまま、幅だけ狭めて次のカードが覗くようにする */
-    .hs-news .card-grid{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:12px;
-      scroll-snap-type:x mandatory;padding:2px 2px 8px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
-    .hs-news .card-grid::-webkit-scrollbar{height:6px}
-    .hs-news .card-grid::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-    .hs-news .card-grid > .home-box{flex:0 0 72vw;max-width:280px;scroll-snap-align:start}
+    /* ホーム：最新ニュース／直近のイベント／実施中のキャンペーン共通の横スクロールカルーセル。
+       カード自体（.home-box/.ev-card）の見た目は変えず、.carousel配下でだけ横並びにする */
+    .carousel{position:relative}
+    .carousel .card-grid{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:12px;
+      scroll-snap-type:x proximity;padding:2px 2px 8px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+    .carousel .card-grid::-webkit-scrollbar{height:6px}
+    .carousel .card-grid::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+    .carousel .card-grid > *{flex:0 0 72vw;max-width:280px;scroll-snap-align:start}
+    .carousel-arrow{display:flex;position:absolute;top:50%;transform:translateY(-50%);
+      width:32px;height:32px;border-radius:50%;border:1px solid var(--line);
+      background:rgba(255,255,255,.85);align-items:center;justify-content:center;
+      font-size:13px;color:var(--ink);cursor:pointer;z-index:2;box-shadow:0 1px 4px rgba(0,0,0,.14)}
+    .carousel-arrow.prev{left:2px}
+    .carousel-arrow.next{right:2px}
+    .carousel-arrow:hover{background:#fff}
+    .carousel-arrow:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .carousel.at-start .carousel-arrow.prev{opacity:.35;pointer-events:none}
+    .carousel.at-end .carousel-arrow.next{opacity:.35;pointer-events:none}
   }
   /* PC(721px〜)ではホーム最新ニュースを従来通り3件だけ見せる（データ自体は6件描画している） */
   @media (min-width:721px){
@@ -640,7 +662,6 @@
     .ad-mobile-only{display:block}
     .mobile-ad-slot{display:block}
     .sidebar-community.mobile-empty{display:none}
-    .line-qr{display:none}
   }
   @media (max-width:480px){
     .page-title-card{padding:8px 11px}
@@ -748,25 +769,14 @@ const SNS = [
   {key:"note",label:"note"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
   {key:"website",label:"HP"},{key:"youtube",label:"YouTube"},{key:"ameblo",label:"Ameblo"}
 ];
-const TABS = [
-  {key:"home",label:"🏠 ホーム"},
-  {key:"news",label:"📰 ニュース"},
-  {key:"events",label:"📅 イベント"},
-  {key:"campaigns",label:"🎁 キャンペーン"},
-  {key:"experiences",label:"🧭 体験・滞在"},
-  {key:"udon",label:"🍜 うどん店"},
-  {key:"sweets",label:"🍧 かき氷・アイス"},
-  {key:"parking",label:"🅿 駐車場"},
-  {key:"orgs",label:"📋 団体"},
-  {key:"links",label:"🔗 リンク"}
-];
-/* 第一階層は目的別に4つへ整理し、各ルートは第二階層として維持する */
-const NAV_GROUPS = [
-  {key:"home", label:"🏠 ホーム", shortLabel:"🏠 ホーム", routes:["home"]},
-  {key:"now", label:"📰 町の今", shortLabel:"📰 町の今", routes:["news","events","campaigns"]},
-  {key:"visit", label:"🧭 訪れる・関わる", shortLabel:"🧭 訪れる", routes:["experiences","udon","sweets","parking"]},
-  {key:"know", label:"🔗 町を知る", shortLabel:"🔗 町を知る", routes:["orgs","links"]}
-];
+/* ナビ構造（第一階層グループ×第二階層ページ）はsite-nav.jsのwindow.SITE_NAVを正とし、
+   operator/contact/privacy.htmlのドロワーと共有する。ここではrenderTabs/renderDrawerNavの
+   既存ロジックを変えずに済むよう、従来と同じTABS/NAV_GROUPSの形へ変換するだけにする。 */
+const SITE_NAV_GROUPS = (window.SITE_NAV && Array.isArray(window.SITE_NAV.groups)) ? window.SITE_NAV.groups : [];
+const TABS = SITE_NAV_GROUPS.flatMap(g => g.items || []);
+const NAV_GROUPS = SITE_NAV_GROUPS.map(g => ({
+  key: g.key, label: g.label, shortLabel: g.shortLabel, routes: (g.items || []).map(it => it.key)
+}));
 const PAGE_META = {
   home:{title:"🏠 ホーム"},
   news:{title:"📰 ニュース"},
@@ -864,6 +874,7 @@ function init(){
     if(e.target === this){ closeDrawer(); }
   });
   document.getElementById("drawerNav").addEventListener("click", onDrawerNavClick);
+  if(window.SiteNav) window.SiteNav.bindAccordionToggles(document.getElementById("drawerNav"));
   document.getElementById("weatherChip").addEventListener("click", toggleWeatherChipPanel);
   document.addEventListener("click", function(e){
     const panel = document.getElementById("weatherChipPanel");
@@ -965,6 +976,7 @@ function render(opt){
   }
   if(r.view !== "org") m.innerHTML = pageTitleCardHTML(r.view) + m.innerHTML;
   insertMobileInlineAds(m, r.view);
+  bindCarouselArrows();
   const meta = PAGE_META[r.view];
   const orgTitle = r.view === "org" ? (D.orgs.find(x=>x.id===r.id)?.name || "") : "";
   document.title = orgTitle ? `${orgTitle}｜ことひらいふ`
@@ -1044,35 +1056,22 @@ function renderTabs(r){
   renderDrawerNav(activeKey);
 }
 
-/* モバイルのハンバーガードロワーの中身。NAV_GROUPS/TABSからそのまま生成し、
-   ハードコードのタブ一覧を二重管理しない。サイト情報3リンクのみ運営者情報等のURL設定（WIDGETS.footerLinks）を再利用する。 */
+/* モバイルのハンバーガードロワーの中身。アコーディオンのHTML生成自体はsite-nav.js（operator/contact/
+   privacy.htmlのドロワーとも共用）に委譲し、ここでは「ハッシュ遷移のボタンをどう作るか」と
+   「サイト情報3リンクのURLをWIDGETS.footerLinksから解決する」というindex.html固有の部分だけ受け持つ。 */
 function renderDrawerNav(activeKey){
   const host = document.getElementById("drawerNav");
-  if(!host) return;
-  const groupsHtml = NAV_GROUPS.map(g=>{
-    if(g.routes.length === 1){
-      const key = g.routes[0];
-      const active = activeKey === key;
-      return `<button type="button" class="drawer-link ${active?'active':''}" data-route="${esc(key)}"${active?' aria-current="page"':''}>${esc(g.label)}</button>`;
-    }
-    const groupTabs = TABS.filter(t=>g.routes.indexOf(t.key) >= 0);
-    return `<div class="drawer-group">
-      <div class="drawer-group-h">${esc(g.label)}</div>
-      ${groupTabs.map(t=>`<button type="button" class="drawer-link ${activeKey===t.key?'active':''}"
-        data-route="${esc(t.key)}"${activeKey===t.key?' aria-current="page"':''}>${esc(t.label)}</button>`).join("")}
-    </div>`;
-  }).join("");
+  if(!host || !window.SiteNav) return;
+  const activeGroup = NAV_GROUPS.find(g=>g.routes.indexOf(activeKey) >= 0);
   const cfg = WIDGETS.footerLinks || {};
-  const siteLinks = [
-    {label:"運営者情報", url:safeUrl(cfg.operatorUrl)},
-    {label:"お問い合わせ", url:safeUrl(cfg.contactUrl)},
-    {label:"プライバシーポリシー", url:safeUrl(cfg.privacyPolicyUrl)}
-  ].filter(l=>l.url);
-  const siteInfoHtml = siteLinks.length ? `<div class="drawer-group">
-      <div class="drawer-group-h">サイト情報</div>
-      ${siteLinks.map(l=>`<a class="drawer-link" href="${esc(l.url)}" target="_self" rel="noopener">${esc(l.label)}</a>`).join("")}
-    </div>` : "";
-  host.innerHTML = groupsHtml + siteInfoHtml;
+  const urlKeyByLinkKey = {operator:"operatorUrl", contact:"contactUrl", privacy:"privacyPolicyUrl"};
+  host.innerHTML = window.SiteNav.accordionHTML({
+    activeGroupKey: activeGroup ? activeGroup.key : null,
+    activeItemKey: activeKey,
+    buildLeafHtml: (it, active) => `<button type="button" class="drawer-link ${active?'active':''}"
+      data-route="${esc(it.key)}"${active?' aria-current="page"':''}>${esc(it.label)}</button>`,
+    resolveSiteLinkUrl: (link) => safeUrl(cfg[urlKeyByLinkKey[link.key]]) || link.url
+  });
 }
 
 /* ===== イベント委譲 ===== */
@@ -1450,6 +1449,16 @@ function homeSection(cls, title, sub, route, bodyHtml){
     ${bodyHtml}
   </section>`;
 }
+/* ホームのニュース/イベント/キャンペーンで共用する横スクロールカルーセルの外枠。
+   矢印は≤720pxのみCSSで表示し、端到達での無効化・クリック時のスクロールはbindCarouselArrows()が配線する。
+   中身が空(emptyMsg)の場合はカルーセル化する意味が無いので、呼び出し側でカード有りの時だけ使う。 */
+function carouselHTML(cardGridHtml){
+  return `<div class="carousel">
+    <button type="button" class="carousel-arrow prev" aria-label="前のカードへ">◀</button>
+    ${cardGridHtml}
+    <button type="button" class="carousel-arrow next" aria-label="次のカードへ">▶</button>
+  </div>`;
+}
 function homeHTML(){
   let newsBody;
   const newsVisible = ND.news.filter(newsIsVisible);
@@ -1457,7 +1466,7 @@ function homeHTML(){
     /* PC(>720px)は先頭3件だけを見せる（CSSで4件目以降を隠す）。
        モバイルは横スクロールカルーセルで6件まで見せるため、ここでは6件描画しておく */
     const topPicks = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,6);
-    newsBody = `<div class="card-grid">${topPicks.map(newsBox).join("")}</div>`;
+    newsBody = carouselHTML(`<div class="card-grid">${topPicks.map(newsBox).join("")}</div>`);
   } else {
     newsBody = emptyMsg(ND.news.length ? "表示対象のニュースがありません。" : NOTION_EMPTY_MSG);
   }
@@ -1469,7 +1478,7 @@ function homeHTML(){
     const upcoming = ND.events.filter(i=>eventDateStatus(i)==="開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
     const picks = active.concat(upcoming).slice(0,3);
     eventsBody = picks.length
-      ? `<div class="card-grid">${picks.map(it=>itemCard(it,"event")).join("")}</div>`
+      ? carouselHTML(`<div class="card-grid">${picks.map(it=>itemCard(it,"event")).join("")}</div>`)
       : emptyMsg("現在、開催中・予定のイベントはありません。");
   } else {
     eventsBody = emptyMsg(NOTION_EMPTY_MSG);
@@ -1479,17 +1488,44 @@ function homeHTML(){
   if(ND.campaigns.length){
     const active = ND.campaigns.filter(i=>i.status==="実施中");
     campsBody = active.length
-      ? `<div class="card-grid">${active.slice(0,3).map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`
+      ? carouselHTML(`<div class="card-grid">${active.slice(0,3).map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`)
       : emptyMsg("現在実施中のキャンペーンはありません。");
   } else {
     campsBody = emptyMsg(NOTION_EMPTY_MSG);
   }
 
-  return quickNavCardHTML("quickWidgetTitleHome", "home-quicknav")
-    + homeSection("hs-news", "📰 最新ニュース", "町に関する報道・記事", "news", newsBody)
-    + homeUdonOpenHTML()
+  /* 並び順：最新ニュース→直近のイベント→実施中のキャンペーン→いま営業中のうどん店（PC・モバイル共通） */
+  return homeSection("hs-news", "📰 最新ニュース", "町に関する報道・記事", "news", newsBody)
     + homeSection("hs-events", "📅 直近のイベント", "今日・これからの催し", "events", eventsBody)
-    + homeSection("hs-camps", "🎁 実施中のキャンペーン", "いま使えるお得情報", "campaigns", campsBody);
+    + homeSection("hs-camps", "🎁 実施中のキャンペーン", "いま使えるお得情報", "campaigns", campsBody)
+    + homeUdonOpenHTML();
+}
+/* ホーム3カルーセル（ニュース/イベント/キャンペーン）共通の矢印配線。render()のたびに呼ぶが、
+   カルーセルはホーム表示時にしかDOMに無いので他タブでは何もしない。
+   カード幅は72vw/max280pxのCSSと二重管理しないよう実測（1枚目の.card-grid直下要素の実幅+gap）で求める。 */
+function bindCarouselArrows(){
+  document.querySelectorAll("#main .carousel").forEach(setUpCarousel);
+}
+function setUpCarousel(carousel){
+  const track = carousel.querySelector(".card-grid");
+  const prevBtn = carousel.querySelector(".carousel-arrow.prev");
+  const nextBtn = carousel.querySelector(".carousel-arrow.next");
+  if(!track || !prevBtn || !nextBtn) return;
+  function cardStep(){
+    const card = track.firstElementChild;
+    if(!card) return track.clientWidth;
+    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "0") || 0;
+    return card.getBoundingClientRect().width + gap;
+  }
+  function updateEdgeState(){
+    const max = track.scrollWidth - track.clientWidth;
+    carousel.classList.toggle("at-start", track.scrollLeft <= 2);
+    carousel.classList.toggle("at-end", track.scrollLeft >= max - 2);
+  }
+  prevBtn.addEventListener("click", ()=> track.scrollBy({left:-cardStep(), behavior:"smooth"}));
+  nextBtn.addEventListener("click", ()=> track.scrollBy({left:cardStep(), behavior:"smooth"}));
+  track.addEventListener("scroll", updateEdgeState, {passive:true});
+  updateEdgeState();
 }
 /* ホーム：いま営業中のうどん店モジュール。schedule を持つ店が1件も無ければ（データ未着時）何も出さない。
    ニュースの直後に置き、主要3セクションより控えめな装いにする。判定は改修Bと同じ営業時間の目安。 */
