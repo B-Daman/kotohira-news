@@ -606,7 +606,9 @@
     /* ハンバーガードロワー（右寄せ。既存.modal-overlayと同じdisplay切替方式） */
     .drawer-overlay.show{display:flex;position:fixed;inset:0;z-index:90;
       background:rgba(30,25,20,.5);justify-content:flex-end}
+    .drawer-build{flex:0 0 auto;padding:6px 16px 12px;font-size:11px;color:var(--sub);text-align:right}
     .drawer-panel{width:82%;max-width:320px;height:100%;background:var(--card);
+      -webkit-text-size-adjust:100%;text-size-adjust:100%;
       display:flex;flex-direction:column;box-shadow:-8px 0 24px rgba(0,0,0,.22)}
     .drawer-head{display:flex;align-items:center;justify-content:space-between;
       padding:14px 16px;border-bottom:1px solid var(--line)}
@@ -746,6 +748,8 @@
       <button class="drawer-close" id="drawerCloseBtn" aria-label="閉じる" type="button">×</button>
     </div>
     <nav class="drawer-nav" id="drawerNav" aria-label="サイトメニュー"></nav>
+    <!-- 実機にどのビルドが届いているかをスクショ1枚で判定するための表示。デバッグ用 -->
+    <div class="drawer-build" aria-hidden="true">v0828-2</div>
   </div>
 </div>
 
