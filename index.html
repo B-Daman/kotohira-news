@@ -343,6 +343,9 @@
     color:var(--ink);font:700 11.5px/1.35 inherit;text-align:left;cursor:pointer}
   .quick-route:hover{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
   .quick-route:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  /* モバイルのホーム最上部に出す「目的から探す」の複製カード。サイドバー版(.sidebar-quicknav)と
+     二重表示にならないよう、PCでは常に非表示（≤720pxの@mediaで出し分ける） */
+  .home-quicknav{display:none}
   .line-content{display:flex;flex-direction:column;gap:10px}
   .line-content>*{margin:0}
   .line-qr{width:120px;height:120px;object-fit:contain;border:1px solid var(--line);border-radius:8px;
@@ -557,6 +560,27 @@
     #eventCalendar .event-mobile-agenda{display:block}
     #eventCalendar .event-week-mobile{display:block}
     #eventCalendar .cal-nav-btn{width:44px;height:44px}
+
+    /* ホーム最上部の「目的から探す」複製カードを表示し、二重表示を避けるためサイドバー側は隠す */
+    .home-quicknav{display:block;margin-bottom:22px}
+    .sidebar-quicknav{display:none}
+
+    /* ホームタブはタブ切替のアクティブ表示と重複するため、ページ名カードを消す
+       （他タブでは残す。ホームのみ view=home の時だけ main が再生成されるため body[data-view]で判定） */
+    body[data-view="home"] .page-title-card{display:none}
+
+    /* セクション見出しの「もっと見る →」を折り返させず見出し行の右端に固定。
+       幅が足りないのでサブテキスト(.hs-sub)はモバイルでは非表示にする */
+    .home-sec-head{flex-wrap:nowrap}
+    .home-sec-head .hs-sub{display:none}
+
+    /* ホーム「最新ニュース」のカードのみ、左に正方形サムネ・右に本文の横並び行にする。
+       .hs-news 配下に絞ることで、同じ .home-box を使うニュースタブのギャラリーには影響しない */
+    .hs-news .card-grid{grid-template-columns:1fr;gap:10px}
+    .hs-news .home-box{flex-direction:row;align-items:center;gap:10px;padding:10px 12px}
+    .hs-news .hb-img{width:96px;height:96px;flex:0 0 96px;aspect-ratio:auto;border-radius:10px}
+    .hs-news .hb-body{padding:0;flex:1;min-width:0}
+    .hs-news .hb-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   }
   @media (max-width:1099px){
     .ad-desktop-only{display:none}
@@ -1273,7 +1297,8 @@ function homeHTML(){
     campsBody = emptyMsg(NOTION_EMPTY_MSG);
   }
 
-  return homeSection("hs-news", "📰 最新ニュース", "町に関する報道・記事", "news", newsBody)
+  return quickNavCardHTML("quickWidgetTitleHome", "home-quicknav")
+    + homeSection("hs-news", "📰 最新ニュース", "町に関する報道・記事", "news", newsBody)
     + homeUdonOpenHTML()
     + homeSection("hs-events", "📅 直近のイベント", "今日・これからの催し", "events", eventsBody)
     + homeSection("hs-camps", "🎁 実施中のキャンペーン", "いま使えるお得情報", "campaigns", campsBody);
@@ -2530,6 +2555,21 @@ function igEmbed(url){
 function xEmbed(url){ return `<blockquote class="twitter-tweet"><a href="${esc(safeUrl(url))}"></a></blockquote>`; }
 
 /* ===== 共通ウィジェット（天気／目的別入口／LINE／地域スポンサー） ===== */
+/* 「目的から探す」クイックナビのカード。サイドバー（常時表示）とホーム最上部（モバイルのみ）の
+   2箇所で共用する。aria-labelledbyのidが重複しないよう呼び出し側でtitleIdを振り分ける。 */
+function quickNavCardHTML(titleId, extraClass){
+  return `<section class="widget-card${extraClass ? " " + extraClass : ""}" aria-labelledby="${titleId}">
+      <span class="widget-kicker">目的から探す</span>
+      <div class="widget-title" id="${titleId}">琴平で何をする？</div>
+      <div class="quick-grid">
+        <button class="quick-route" data-route="events">📅 イベント</button>
+        <button class="quick-route" data-route="udon">🍜 うどん店</button>
+        <button class="quick-route" data-route="experiences">🧭 体験・滞在</button>
+        <button class="quick-route" data-route="sweets">🍧 かき氷・アイス</button>
+        <button class="quick-route" data-route="parking">🅿 駐車場</button>
+      </div>
+    </section>`;
+}
 function renderUtilityWidgets(){
   const host = document.getElementById("utilityWidgets");
   const weather = WIDGETS.weather || {};
@@ -2542,17 +2582,7 @@ function renderUtilityWidgets(){
     </section>` : "";
   host.innerHTML = `<div class="widget-stack">
     ${weatherCard}
-    <section class="widget-card" aria-labelledby="quickWidgetTitle">
-      <span class="widget-kicker">目的から探す</span>
-      <div class="widget-title" id="quickWidgetTitle">琴平で何をする？</div>
-      <div class="quick-grid">
-        <button class="quick-route" data-route="events">📅 イベント</button>
-        <button class="quick-route" data-route="udon">🍜 うどん店</button>
-        <button class="quick-route" data-route="experiences">🧭 体験・滞在</button>
-        <button class="quick-route" data-route="sweets">🍧 かき氷・アイス</button>
-        <button class="quick-route" data-route="parking">🅿 駐車場</button>
-      </div>
-    </section>
+    ${quickNavCardHTML("quickWidgetTitle", "sidebar-quicknav")}
   </div>`;
 }
 
