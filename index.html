@@ -55,6 +55,8 @@
   .brandrow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .brand{font-weight:900;font-size:22px;color:var(--accent-d)}
   .brand small{color:var(--sub);font-weight:500;font-size:13.5px;margin-left:10px}
+  /* ヘッダー右側の天気チップ＋ハンバーガー。PCでは常に非表示（≤720pxの@mediaで出す） */
+  .topbar-actions{display:none}
   .primary-nav{display:flex;gap:7px;padding:10px 0 6px;overflow:visible}
   .primary-nav-item{position:relative;flex:0 0 auto}
   .primary-tab{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);
@@ -527,6 +529,13 @@
   .modal-link.secondary{background:#fff;color:var(--accent-d);border:1px solid var(--line)}
   .modal-link.secondary:hover{background:var(--accent-soft)}
 
+  /* モバイルヘッダー：天気チップ・ハンバーガー・右スライドドロワー（すべて≤720px専用。
+     PCでは常に display:none のままにし、≤720pxの@mediaでのみ見た目・開閉を与える） */
+  .hamburger-btn{display:none}
+  .weather-chip{display:none}
+  .weather-chip-panel{display:none}
+  .drawer-overlay{display:none}
+
   /* 埋め込みグリッド（Instagram/X） */
   .embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(328px,1fr));gap:14px;align-items:start}
   .instagram-media{margin:0 auto !important;min-width:auto !important}
@@ -544,16 +553,13 @@
   }
   @media (max-width:720px){
     body{padding-bottom:0}
+    body.drawer-open{overflow:hidden}
     .topbar-inner{padding:8px 12px 0}
+    .brandrow{align-items:center}
     .brand{font-size:20px}
-    .brand small{display:block;margin:0;font-size:11.5px}
-    .primary-nav{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding-top:8px}
-    .primary-nav-item{position:static;min-width:0}
-    .primary-tab{padding:7px 2px;font-size:11.5px;text-align:center;overflow:hidden;text-overflow:ellipsis}
-    .primary-tab .nav-full{display:none}
-    .primary-tab .nav-short{display:inline}
-    .nav-caret{margin-left:2px;font-size:9px}
-    .nav-dropdown{left:0;right:0;top:100%;width:auto;min-width:0;padding:8px}
+    .brand small{display:none}
+    .topbar-actions{display:flex;align-items:center;gap:8px}
+    .primary-nav{display:none}
     .page-shell{padding:16px 12px 30px;gap:16px}
     .footer-inner{padding:13px 12px}
     #eventCalendar .event-calendar-desktop{display:none}
@@ -561,9 +567,52 @@
     #eventCalendar .event-week-mobile{display:block}
     #eventCalendar .cal-nav-btn{width:44px;height:44px}
 
+    /* ハンバーガーボタン：primary-navの代わりにドロワーを開く */
+    .hamburger-btn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
+      width:38px;height:34px;border:1px solid var(--line);background:#fff;border-radius:8px;
+      font-size:17px;line-height:1;color:var(--ink);cursor:pointer}
+    .hamburger-btn:hover{background:var(--accent-soft);color:var(--accent-d)}
+    .hamburger-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+    /* 天気チップ：取得できた時だけ renderWeatherChip() が .ready を付けて表示する */
+    .weather-chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 11px;
+      align-items:center;gap:4px;font:700 12.5px/1 inherit;color:var(--ink);cursor:pointer;white-space:nowrap}
+    .weather-chip.ready{display:inline-flex}
+    .weather-chip:hover,.weather-chip.open{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
+    .weather-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+    /* 天気チップの展開パネル：ヘッダー直下に既存weatherForecastHTML相当の内容を表示 */
+    .weather-chip-panel.show{display:block;border-top:1px solid var(--line);
+      padding:14px 12px 16px;background:var(--card)}
+
+    /* ハンバーガードロワー（右寄せ。既存.modal-overlayと同じdisplay切替方式） */
+    .drawer-overlay.show{display:flex;position:fixed;inset:0;z-index:90;
+      background:rgba(30,25,20,.5);justify-content:flex-end}
+    .drawer-panel{width:82%;max-width:320px;height:100%;background:var(--card);
+      display:flex;flex-direction:column;box-shadow:-8px 0 24px rgba(0,0,0,.22)}
+    .drawer-head{display:flex;align-items:center;justify-content:space-between;
+      padding:14px 16px;border-bottom:1px solid var(--line)}
+    .drawer-title{font-size:15px;font-weight:900;color:var(--accent-d)}
+    .drawer-close{border:none;background:var(--bg);width:32px;height:32px;border-radius:50%;
+      font-size:18px;line-height:1;cursor:pointer;color:var(--sub)}
+    .drawer-close:hover{background:var(--accent-soft);color:var(--accent-d)}
+    .drawer-nav{flex:1;overflow-y:auto;padding:10px 8px 24px}
+    .drawer-group{margin:14px 0 4px}
+    .drawer-group-h{font-size:11px;font-weight:900;color:var(--sub);letter-spacing:.06em;
+      padding:0 10px;margin:0 0 4px}
+    .drawer-link{display:block;width:100%;text-align:left;border:0;background:none;
+      color:var(--ink);font:700 14px/1.7 inherit;padding:9px 10px;border-radius:8px;
+      cursor:pointer;text-decoration:none}
+    .drawer-link:hover{background:var(--accent-soft);color:var(--accent-d)}
+    .drawer-link.active{background:var(--ink);color:#fff}
+    .drawer-link:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
     /* ホーム最上部の「目的から探す」複製カードを表示し、二重表示を避けるためサイドバー側は隠す */
     .home-quicknav{display:block;margin-bottom:22px}
     .sidebar-quicknav{display:none}
+
+    /* 天気チップと表示が重複するため、サイドバーの天気カードは隠す */
+    .weather-card{display:none}
 
     /* ホームタブはタブ切替のアクティブ表示と重複するため、ページ名カードを消す
        （他タブでは残す。ホームのみ view=home の時だけ main が再生成されるため body[data-view]で判定） */
@@ -574,13 +623,17 @@
     .home-sec-head{flex-wrap:nowrap}
     .home-sec-head .hs-sub{display:none}
 
-    /* ホーム「最新ニュース」のカードのみ、左に正方形サムネ・右に本文の横並び行にする。
-       .hs-news 配下に絞ることで、同じ .home-box を使うニュースタブのギャラリーには影響しない */
-    .hs-news .card-grid{grid-template-columns:1fr;gap:10px}
-    .hs-news .home-box{flex-direction:row;align-items:center;gap:10px;padding:10px 12px}
-    .hs-news .hb-img{width:96px;height:96px;flex:0 0 96px;aspect-ratio:auto;border-radius:10px}
-    .hs-news .hb-body{padding:0;flex:1;min-width:0}
-    .hs-news .hb-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    /* ホーム「最新ニュース」を横スクロールカルーセルに（.hs-news 配下限定でニュースタブのギャラリーには影響しない）。
+       カードはPCと同じ縦型（上サムネ・下本文）のまま、幅だけ狭めて次のカードが覗くようにする */
+    .hs-news .card-grid{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:12px;
+      scroll-snap-type:x mandatory;padding:2px 2px 8px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+    .hs-news .card-grid::-webkit-scrollbar{height:6px}
+    .hs-news .card-grid::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+    .hs-news .card-grid > .home-box{flex:0 0 72vw;max-width:280px;scroll-snap-align:start}
+  }
+  /* PC(721px〜)ではホーム最新ニュースを従来通り3件だけ見せる（データ自体は6件描画している） */
+  @media (min-width:721px){
+    .hs-news .card-grid > .home-box:nth-child(n+4){display:none}
   }
   @media (max-width:1099px){
     .ad-desktop-only{display:none}
@@ -608,8 +661,15 @@
     <div class="topbar-inner">
       <div class="brandrow">
         <div class="brand" id="hTitle">ことひらいふ <small>香川県琴平町の"今"をお届け</small></div>
+        <div class="topbar-actions">
+          <button type="button" class="weather-chip" id="weatherChip" aria-haspopup="true" aria-expanded="false" aria-controls="weatherChipPanel"></button>
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-haspopup="true" aria-expanded="false" aria-controls="drawerPanel" aria-label="メニューを開く">☰</button>
+        </div>
       </div>
       <nav class="primary-nav" id="primaryNav" aria-label="メインメニュー"></nav>
+      <div class="weather-chip-panel" id="weatherChipPanel" aria-label="今日の琴平の天気">
+        <div id="weatherChipPanelBody"></div>
+      </div>
     </div>
   </div>
 
@@ -631,6 +691,16 @@
   <div class="modal-box" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="modalCloseBtn" aria-label="閉じる" type="button">×</button>
     <div id="modalBody"></div>
+  </div>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true">
+  <div class="drawer-panel" id="drawerPanel" role="dialog" aria-modal="true" aria-label="メインメニュー">
+    <div class="drawer-head">
+      <span class="drawer-title">メニュー</span>
+      <button class="drawer-close" id="drawerCloseBtn" aria-label="閉じる" type="button">×</button>
+    </div>
+    <nav class="drawer-nav" id="drawerNav" aria-label="サイトメニュー"></nav>
   </div>
 </div>
 
@@ -763,6 +833,8 @@ let hasRenderedOnce = false;
 let openNavGroup = null;
 let pinnedNavGroup = null;
 let suppressNavFocusOpen = false;
+let drawerLastFocusedEl = null;   // モバイルドロワーを開く直前のフォーカス先（閉じたら戻す）
+let weatherChipState = null;      // {data, cached}|null  loadWeatherWidgetが取得した予報（チップ・展開パネル共用。取得失敗時はnull）
 
 /* ===== 起動 ===== */
 function init(){
@@ -783,24 +855,58 @@ function init(){
     if(e.target === this){ closeDetailModal(); }
   });
   document.getElementById("modalCloseBtn").addEventListener("click", closeDetailModal);
+  document.getElementById("hamburgerBtn").addEventListener("click", function(){
+    const overlay = document.getElementById("drawerOverlay");
+    if(overlay && overlay.classList.contains("show")) closeDrawer(); else openDrawer();
+  });
+  document.getElementById("drawerCloseBtn").addEventListener("click", closeDrawer);
+  document.getElementById("drawerOverlay").addEventListener("click", function(e){
+    if(e.target === this){ closeDrawer(); }
+  });
+  document.getElementById("drawerNav").addEventListener("click", onDrawerNavClick);
+  document.getElementById("weatherChip").addEventListener("click", toggleWeatherChipPanel);
+  document.addEventListener("click", function(e){
+    const panel = document.getElementById("weatherChipPanel");
+    if(!panel || !panel.classList.contains("show")) return;
+    if(e.target.closest("#weatherChipPanel") || e.target.closest("#weatherChip")) return;
+    closeWeatherChipPanel();
+  });
   document.addEventListener("keydown", function(e){
-    const overlay = document.getElementById("modalOverlay");
-    if(!overlay || !overlay.classList.contains("show")) return;
-    if(e.key === "Escape"){
-      e.preventDefault();
-      closeDetailModal();
+    const modalOverlay = document.getElementById("modalOverlay");
+    if(modalOverlay && modalOverlay.classList.contains("show")){
+      if(e.key === "Escape"){ e.preventDefault(); closeDetailModal(); return; }
+      if(e.key !== "Tab") return;
+      const focusable = Array.from(document.getElementById("modalBox").querySelectorAll(
+        'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'
+      )).filter(el=>!el.hasAttribute("hidden") && el.getAttribute("aria-hidden") !== "true");
+      if(!focusable.length){ e.preventDefault(); return; }
+      const first = focusable[0], last = focusable[focusable.length-1];
+      if(e.shiftKey && (document.activeElement === first || !modalOverlay.contains(document.activeElement))){
+        e.preventDefault(); last.focus();
+      } else if(!e.shiftKey && (document.activeElement === last || !modalOverlay.contains(document.activeElement))){
+        e.preventDefault(); first.focus();
+      }
       return;
     }
-    if(e.key !== "Tab") return;
-    const focusable = Array.from(document.getElementById("modalBox").querySelectorAll(
-      'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'
-    )).filter(el=>!el.hasAttribute("hidden") && el.getAttribute("aria-hidden") !== "true");
-    if(!focusable.length){ e.preventDefault(); return; }
-    const first = focusable[0], last = focusable[focusable.length-1];
-    if(e.shiftKey && (document.activeElement === first || !overlay.contains(document.activeElement))){
-      e.preventDefault(); last.focus();
-    } else if(!e.shiftKey && (document.activeElement === last || !overlay.contains(document.activeElement))){
-      e.preventDefault(); first.focus();
+    const drawerOverlay = document.getElementById("drawerOverlay");
+    if(drawerOverlay && drawerOverlay.classList.contains("show")){
+      if(e.key === "Escape"){ e.preventDefault(); closeDrawer(); return; }
+      if(e.key !== "Tab") return;
+      const focusable = Array.from(document.getElementById("drawerPanel").querySelectorAll(
+        'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])'
+      ));
+      if(!focusable.length){ e.preventDefault(); return; }
+      const first = focusable[0], last = focusable[focusable.length-1];
+      if(e.shiftKey && (document.activeElement === first || !drawerOverlay.contains(document.activeElement))){
+        e.preventDefault(); last.focus();
+      } else if(!e.shiftKey && (document.activeElement === last || !drawerOverlay.contains(document.activeElement))){
+        e.preventDefault(); first.focus();
+      }
+      return;
+    }
+    if(e.key === "Escape"){
+      const panel = document.getElementById("weatherChipPanel");
+      if(panel && panel.classList.contains("show")) closeWeatherChipPanel();
     }
   });
   window.addEventListener("hashchange", render);
@@ -825,6 +931,8 @@ function parseHash(){
 
 function render(opt){
   const r = parseHash();
+  closeDrawer();
+  closeWeatherChipPanel();
   renderTabs(r);
   const m = document.getElementById("main");
   document.body.dataset.view = r.view;
@@ -933,6 +1041,38 @@ function renderTabs(r){
       </div>
     </div>`;
   }).join("");
+  renderDrawerNav(activeKey);
+}
+
+/* モバイルのハンバーガードロワーの中身。NAV_GROUPS/TABSからそのまま生成し、
+   ハードコードのタブ一覧を二重管理しない。サイト情報3リンクのみ運営者情報等のURL設定（WIDGETS.footerLinks）を再利用する。 */
+function renderDrawerNav(activeKey){
+  const host = document.getElementById("drawerNav");
+  if(!host) return;
+  const groupsHtml = NAV_GROUPS.map(g=>{
+    if(g.routes.length === 1){
+      const key = g.routes[0];
+      const active = activeKey === key;
+      return `<button type="button" class="drawer-link ${active?'active':''}" data-route="${esc(key)}"${active?' aria-current="page"':''}>${esc(g.label)}</button>`;
+    }
+    const groupTabs = TABS.filter(t=>g.routes.indexOf(t.key) >= 0);
+    return `<div class="drawer-group">
+      <div class="drawer-group-h">${esc(g.label)}</div>
+      ${groupTabs.map(t=>`<button type="button" class="drawer-link ${activeKey===t.key?'active':''}"
+        data-route="${esc(t.key)}"${activeKey===t.key?' aria-current="page"':''}>${esc(t.label)}</button>`).join("")}
+    </div>`;
+  }).join("");
+  const cfg = WIDGETS.footerLinks || {};
+  const siteLinks = [
+    {label:"運営者情報", url:safeUrl(cfg.operatorUrl)},
+    {label:"お問い合わせ", url:safeUrl(cfg.contactUrl)},
+    {label:"プライバシーポリシー", url:safeUrl(cfg.privacyPolicyUrl)}
+  ].filter(l=>l.url);
+  const siteInfoHtml = siteLinks.length ? `<div class="drawer-group">
+      <div class="drawer-group-h">サイト情報</div>
+      ${siteLinks.map(l=>`<a class="drawer-link" href="${esc(l.url)}" target="_self" rel="noopener">${esc(l.label)}</a>`).join("")}
+    </div>` : "";
+  host.innerHTML = groupsHtml + siteInfoHtml;
 }
 
 /* ===== イベント委譲 ===== */
@@ -1236,6 +1376,52 @@ function closeDetailModal(){
   }
   modalLastFocusedEl = null;
 }
+
+/* ===== モバイル：ハンバーガードロワー（サイトマップ） =====
+   開閉は既存の詳細モーダルと同じ方式（#appFrameをinertにして背景を無効化し、閉じたら元のフォーカスへ戻す） */
+function openDrawer(){
+  const overlay = document.getElementById("drawerOverlay");
+  if(!overlay || overlay.classList.contains("show")) return;
+  closeWeatherChipPanel();
+  drawerLastFocusedEl = document.activeElement;
+  overlay.classList.add("show");
+  overlay.setAttribute("aria-hidden", "false");
+  const btn = document.getElementById("hamburgerBtn");
+  if(btn) btn.setAttribute("aria-expanded", "true");
+  const frame = document.getElementById("appFrame");
+  frame.setAttribute("inert", "");
+  frame.setAttribute("aria-hidden", "true");
+  document.body.classList.add("drawer-open");
+  const closeBtn = document.getElementById("drawerCloseBtn");
+  if(closeBtn) closeBtn.focus();
+}
+function closeDrawer(){
+  const overlay = document.getElementById("drawerOverlay");
+  if(!overlay || !overlay.classList.contains("show")) return;
+  overlay.classList.remove("show");
+  overlay.setAttribute("aria-hidden", "true");
+  const btn = document.getElementById("hamburgerBtn");
+  if(btn) btn.setAttribute("aria-expanded", "false");
+  const frame = document.getElementById("appFrame");
+  frame.removeAttribute("inert");
+  frame.removeAttribute("aria-hidden");
+  document.body.classList.remove("drawer-open");
+  if(drawerLastFocusedEl && drawerLastFocusedEl.isConnected && typeof drawerLastFocusedEl.focus === "function"){
+    drawerLastFocusedEl.focus();
+  }
+  drawerLastFocusedEl = null;
+}
+function onDrawerNavClick(e){
+  const link = e.target.closest("[data-route]");
+  if(link){
+    e.preventDefault();
+    closeDrawer();
+    location.hash = "#" + link.dataset.route;
+    return;
+  }
+  if(e.target.closest("a[href]")) closeDrawer(); // サイト情報リンク（target=_self）：遷移前にドロワーを閉じる
+}
+
 /* イベントカレンダーのセル内「+N件」クリック時：その日のイベント一覧を同じモーダルで表示 */
 function openDayEventsModal(dateKey, items){
   modalLastFocusedEl = document.activeElement;
@@ -1268,8 +1454,10 @@ function homeHTML(){
   let newsBody;
   const newsVisible = ND.news.filter(newsIsVisible);
   if(newsVisible.length){
-    const top3 = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,3);
-    newsBody = `<div class="card-grid">${top3.map(newsBox).join("")}</div>`;
+    /* PC(>720px)は先頭3件だけを見せる（CSSで4件目以降を隠す）。
+       モバイルは横スクロールカルーセルで6件まで見せるため、ここでは6件描画しておく */
+    const topPicks = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,6);
+    newsBody = `<div class="card-grid">${topPicks.map(newsBox).join("")}</div>`;
   } else {
     newsBody = emptyMsg(ND.news.length ? "表示対象のニュースがありません。" : NOTION_EMPTY_MSG);
   }
@@ -2788,8 +2976,8 @@ async function loadWeatherWidget(){
   const body = document.getElementById("weatherBody");
   const cfg = WIDGETS.weather || {};
   const dataUrl = safeUrl(cfg.dataUrl);
-  if(!body || cfg.enabled !== true) return;
-  if(!dataUrl){ body.innerHTML = weatherFallbackHTML(); return; }
+  if(!body || cfg.enabled !== true){ renderWeatherChip(null); return; }
+  if(!dataUrl){ body.innerHTML = weatherFallbackHTML(); renderWeatherChip(null); return; }
   const cached = readWeatherCache();
   const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
   const timer = controller ? setTimeout(()=>controller.abort(), 6000) : null;
@@ -2801,17 +2989,58 @@ async function loadWeatherWidget(){
     const normalized = normalizeJmaForecast(await response.json());
     writeWeatherCache(normalized);
     body.innerHTML = weatherForecastHTML(normalized, false);
+    renderWeatherChip({data:normalized, cached:false});
   }catch(err){
     const currentCache = cached && isFreshWeatherCache(cached)
       ? currentWeatherCacheData(cached.data) : null;
     if(currentCache){
       body.innerHTML = weatherForecastHTML(currentCache, true);
+      renderWeatherChip({data:currentCache, cached:true});
     }else{
       body.innerHTML = weatherFallbackHTML();
+      renderWeatherChip(null);
     }
   }finally{
     if(timer) clearTimeout(timer);
   }
+}
+/* ===== モバイル：ヘッダーの天気チップ（サイドバーと同じ取得結果を再利用し、二重fetchしない） =====
+   チップ本体はアイコン＋今日の最高気温のみ。タップで展開するパネルはweatherForecastHTMLをそのまま流用する。 */
+function renderWeatherChip(state){
+  weatherChipState = state;
+  const chip = document.getElementById("weatherChip");
+  if(!chip) return;
+  const day = state && Array.isArray(state.data?.days) ? state.data.days[0] : null;
+  if(!day){
+    chip.classList.remove("ready");
+    chip.innerHTML = "";
+    closeWeatherChipPanel();
+    return;
+  }
+  const tempLabel = (day.max !== null && day.max !== undefined) ? `${esc(day.max)}°` : "--";
+  chip.innerHTML = `<span aria-hidden="true">${weatherIcon(day.weatherCode)}</span><span>${tempLabel}</span>`;
+  chip.classList.add("ready");
+  const panelBody = document.getElementById("weatherChipPanelBody");
+  if(panelBody) panelBody.innerHTML = weatherForecastHTML(state.data, state.cached);
+}
+function toggleWeatherChipPanel(){
+  const panel = document.getElementById("weatherChipPanel");
+  if(panel && panel.classList.contains("show")) closeWeatherChipPanel();
+  else openWeatherChipPanel();
+}
+function openWeatherChipPanel(){
+  if(!weatherChipState) return;
+  const panel = document.getElementById("weatherChipPanel");
+  const chip = document.getElementById("weatherChip");
+  if(!panel) return;
+  panel.classList.add("show");
+  if(chip){ chip.classList.add("open"); chip.setAttribute("aria-expanded", "true"); }
+}
+function closeWeatherChipPanel(){
+  const panel = document.getElementById("weatherChipPanel");
+  const chip = document.getElementById("weatherChip");
+  if(panel) panel.classList.remove("show");
+  if(chip){ chip.classList.remove("open"); chip.setAttribute("aria-expanded", "false"); }
 }
 function readWeatherCache(){
   try{
