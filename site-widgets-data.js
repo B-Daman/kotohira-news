@@ -88,7 +88,8 @@ window.SITE_WIDGETS_DATA = {
 
   footerLinks: {
     privacyPolicyUrl: "privacy.html",
-    operatorUrl: "operator.html"
+    operatorUrl: "operator.html",
+    contactUrl: "contact.html"
   },
 
   /* 広告データは契約・掲載許可が確定したものだけ追加する。 */

@@ -2744,7 +2744,8 @@ function renderFooterLinks(){
   const cfg = WIDGETS.footerLinks || {};
   const links = [
     {label:"プライバシーポリシー", url:safeUrl(cfg.privacyPolicyUrl)},
-    {label:"運営者", url:safeUrl(cfg.operatorUrl)}
+    {label:"運営者", url:safeUrl(cfg.operatorUrl)},
+    {label:"お問い合わせ", url:safeUrl(cfg.contactUrl)}
   ].filter(link=>link.url);
   host.innerHTML = links.map(link=>
     `<a class="footer-link" href="${esc(link.url)}" target="_self" rel="noopener">${esc(link.label)}</a>`
