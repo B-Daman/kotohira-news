@@ -102,7 +102,7 @@ body.drawer-open{overflow:hidden}
 .drawer-group{margin:2px 0}
 /* T-A: index.htmlのドロワーCSSと数値を完全に揃える（16px/1.4/48px、太さのみ900/700で残す） */
 .drawer-group-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;
-  min-height:52px;border:0;background:none;color:var(--ink);font:900 18px/1.4 inherit;
+  min-height:52px;border:0;background:none;color:var(--ink);font-family:inherit;font-weight:900;font-size:18px;line-height:1.4;
   padding:10px 10px;border-radius:8px;cursor:pointer;text-align:left}
 .drawer-group-toggle:hover{background:var(--accent-soft);color:var(--accent-d)}
 .drawer-group-toggle.active{color:var(--accent-d)}
@@ -112,7 +112,7 @@ body.drawer-open{overflow:hidden}
 .drawer-sub{padding:0 4px 6px 14px;display:flex;flex-direction:column}
 .drawer-sub[hidden]{display:none}
 .drawer-link{display:flex;align-items:center;min-height:52px;width:100%;text-align:left;
-  border:0;background:none;color:var(--ink);font:700 18px/1.4 inherit;padding:6px 10px;
+  border:0;background:none;color:var(--ink);font-family:inherit;font-weight:700;font-size:18px;line-height:1.4;padding:6px 10px;
   border-radius:8px;cursor:pointer;text-decoration:none}
 .drawer-link:hover{background:var(--accent-soft);color:var(--accent-d);text-decoration:none}
 .drawer-link.active{background:var(--ink);color:#fff}

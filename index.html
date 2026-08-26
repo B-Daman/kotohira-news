@@ -75,7 +75,7 @@
     background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 28px rgba(44,38,34,.14)}
   .nav-dropdown[hidden]{display:none}
   .nav-dropdown-item{display:block;width:100%;border:0;border-radius:8px;padding:9px 11px;
-    background:#fff;color:var(--ink);text-align:left;white-space:nowrap;font:700 13.5px/1.45 inherit;cursor:pointer}
+    background:#fff;color:var(--ink);text-align:left;white-space:nowrap;font-family:inherit;font-weight:700;font-size:13.5px;line-height:1.45;cursor:pointer}
   .nav-dropdown-item:hover,.nav-dropdown-item:focus-visible{background:var(--accent-soft);color:var(--accent-d);outline:none}
   .nav-dropdown-item.active{background:var(--accent);color:#fff}
   .nav-dropdown-item.active:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -349,7 +349,7 @@
   .weather-fallback{font-size:12.5px;color:var(--sub);line-height:1.65}
   .quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
   .quick-route{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 7px;
-    color:var(--ink);font:700 11.5px/1.35 inherit;text-align:left;cursor:pointer}
+    color:var(--ink);font-family:inherit;font-weight:700;font-size:11.5px;line-height:1.35;text-align:left;cursor:pointer}
   .quick-route:hover{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
   .quick-route:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .line-content{display:flex;flex-direction:column;gap:10px}
@@ -479,7 +479,7 @@
 
   /* イベントカレンダーの月／週切替トグル（イベントカレンダーのみ。cal-nav-btnと調和する小さめのボタン） */
   .cal-view-toggle{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  .cal-view-btn{border:0;background:#fff;color:var(--sub);font:800 12px/1 inherit;font-family:inherit;
+  .cal-view-btn{border:0;background:#fff;color:var(--sub);font-family:inherit;font-weight:800;font-size:12px;line-height:1;font-family:inherit;
     padding:8px 12px;cursor:pointer}
   .cal-view-btn+.cal-view-btn{border-left:1px solid var(--line)}
   .cal-view-btn:hover{background:var(--accent-soft);color:var(--accent-d)}
@@ -594,7 +594,7 @@
 
     /* 天気チップ：取得できた時だけ renderWeatherChip() が .ready を付けて表示する */
     .weather-chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 11px;
-      align-items:center;gap:4px;font:700 12.5px/1 inherit;color:var(--ink);cursor:pointer;white-space:nowrap}
+      align-items:center;gap:4px;font-family:inherit;font-weight:700;font-size:12.5px;line-height:1;color:var(--ink);cursor:pointer;white-space:nowrap}
     .weather-chip.ready{display:inline-flex}
     .weather-chip:hover,.weather-chip.open{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
     .weather-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -627,7 +627,7 @@
        ホーム・大分類トグル・サイト情報見出しが揃い、drawer-nav(8px)+drawer-sub(14px)+
        drawer-link(10px)=32pxで配下リンクが全グループ共通の第二階層インデントになる */
     .drawer-group-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;
-      min-height:52px;border:0;background:none;color:var(--ink);font:900 18px/1.4 inherit;
+      min-height:52px;border:0;background:none;color:var(--ink);font-family:inherit;font-weight:900;font-size:18px;line-height:1.4;
       padding:10px 10px;border-radius:8px;cursor:pointer;text-align:left}
     .drawer-group-toggle:hover{background:var(--accent-soft);color:var(--accent-d)}
     .drawer-group-toggle.active{color:var(--accent-d)}
@@ -637,7 +637,7 @@
     .drawer-sub{padding:0 4px 6px 14px;display:flex;flex-direction:column}
     .drawer-sub[hidden]{display:none}
     .drawer-link{display:flex;align-items:center;min-height:52px;width:100%;text-align:left;
-      border:0;background:none;color:var(--ink);font:700 18px/1.4 inherit;padding:6px 10px;
+      border:0;background:none;color:var(--ink);font-family:inherit;font-weight:700;font-size:18px;line-height:1.4;padding:6px 10px;
       border-radius:8px;cursor:pointer;text-decoration:none}
     .drawer-link:hover{background:var(--accent-soft);color:var(--accent-d)}
     .drawer-link.active{background:var(--ink);color:#fff}
@@ -749,7 +749,7 @@
     </div>
     <nav class="drawer-nav" id="drawerNav" aria-label="サイトメニュー"></nav>
     <!-- 実機にどのビルドが届いているかをスクショ1枚で判定するための表示。デバッグ用 -->
-    <div class="drawer-build" aria-hidden="true">v0828-2</div>
+    <div class="drawer-build" aria-hidden="true">v0828-3</div>
   </div>
 </div>
 
