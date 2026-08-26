@@ -565,10 +565,23 @@
     .primary-nav{display:none}
     .page-shell{padding:16px 12px 30px;gap:16px}
     .footer-inner{padding:13px 12px}
-    #eventCalendar .event-calendar-desktop{display:none}
-    #eventCalendar .event-mobile-agenda{display:block}
-    #eventCalendar .event-week-mobile{display:block}
     #eventCalendar .cal-nav-btn{width:44px;height:44px}
+    /* ◀ 期間ラベル ▶ 月/週トグル が390px幅に収まらず右端が見切れるため、
+       ラベルを少し縮めて足りない時はトグルを2段目に折り返す */
+    .cal-header{flex-wrap:wrap;gap:8px}
+    .cal-month-label{font-size:14px;min-width:0}
+    /* イベントカレンダーはモバイルでもPCと同じ月/週グリッドを使う（アジェンダ一覧は廃止。
+       生成コード自体は残すが、.event-mobile-agenda/.event-week-mobileは元々のbase CSSの
+       display:noneがそのまま効いて常時非表示になる。この@media内で表示に戻す指定はしない）。
+       狭い画面では収まらないので.event-calendar-desktopごと横スクロールにし、
+       グリッドに最低幅を持たせて潰れを防ぐ。
+       週表示は日ごとの列を広めに見せたいので.week-modeだけ最低幅を大きくする（曜日見出し行も
+       同じ最低幅に揃えないと列とヘッダーがズレるため、.cal-weekday-rowにも同じ指定をする） */
+    #eventCalendar .event-calendar-desktop{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    #eventCalendar .cal-weekday-row,
+    #eventCalendar .cal-week{min-width:640px}
+    #eventCalendar .event-calendar-desktop.week-mode .cal-weekday-row,
+    #eventCalendar .event-calendar-desktop.week-mode .cal-week{min-width:1050px}
 
     /* ハンバーガーボタン：primary-navの代わりにドロワーを開く */
     .hamburger-btn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
@@ -604,8 +617,13 @@
        常に見えていて、タップで配下（.drawer-sub）が開閉する。.drawer-subの表示切替はhidden属性で行い、
        ここではdisplayを一切上書きしない（[hidden]の既定挙動をそのまま使う） */
     .drawer-group{margin:2px 0}
+    /* T-A: 全行（ホーム／大分類トグル／配下リンク／サイト情報リンク）でfont-size・line-height・
+       min-heightを完全に統一する（16px/1.4/48px）。太さだけは大分類900・リンク700のまま残し、
+       階層の違いは書体の強さで示す。左位置はdrawer-nav(8px)+自身のpadding(10px)=18pxで
+       ホーム・大分類トグル・サイト情報見出しが揃い、drawer-nav(8px)+drawer-sub(14px)+
+       drawer-link(10px)=32pxで配下リンクが全グループ共通の第二階層インデントになる */
     .drawer-group-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;
-      min-height:44px;border:0;background:none;color:var(--ink);font:900 15.5px/1.3 inherit;
+      min-height:48px;border:0;background:none;color:var(--ink);font:900 16px/1.4 inherit;
       padding:10px 10px;border-radius:8px;cursor:pointer;text-align:left}
     .drawer-group-toggle:hover{background:var(--accent-soft);color:var(--accent-d)}
     .drawer-group-toggle.active{color:var(--accent-d)}
@@ -614,8 +632,8 @@
     .drawer-caret{flex:0 0 auto;font-size:12px;color:var(--sub);margin-left:8px}
     .drawer-sub{padding:0 4px 6px 14px;display:flex;flex-direction:column}
     .drawer-sub[hidden]{display:none}
-    .drawer-link{display:flex;align-items:center;min-height:44px;width:100%;text-align:left;
-      border:0;background:none;color:var(--ink);font:700 15px/1.5 inherit;padding:6px 10px;
+    .drawer-link{display:flex;align-items:center;min-height:48px;width:100%;text-align:left;
+      border:0;background:none;color:var(--ink);font:700 16px/1.4 inherit;padding:6px 10px;
       border-radius:8px;cursor:pointer;text-decoration:none}
     .drawer-link:hover{background:var(--accent-soft);color:var(--accent-d)}
     .drawer-link.active{background:var(--ink);color:#fff}
@@ -624,6 +642,10 @@
     /* 「目的から探す」はハンバーガードロワーに統合したため、サイドバー（天気・クイックナビ）を
        まるごと畳んで空のasideの余白を出さない。PC(>720px)のサイドバー表示はそのまま */
     #utilityWidgets{display:none}
+
+    /* 大型イベント・LINEオープンチャット・広告枠はホームだけの寄り道情報として、
+       他タブ（イベント一覧など、その場で用が済むページ）では出さない。PCは全タブで表示のまま */
+    body:not([data-view="home"]) #communityWidgets{display:none}
 
     /* ホームタブはタブ切替のアクティブ表示と重複するため、ページ名カードを消す
        （他タブでは残す。ホームのみ view=home の時だけ main が再生成されるため body[data-view]で判定） */
@@ -834,7 +856,10 @@ let orgSub = "updates";
 let currentOrgId = null;
 let campaignCalMonth = null;      // {y, mo} キャンペーンカレンダーの表示中の月
 let eventCalMonth = null;         // {y, mo} イベントカレンダーの表示中の月
-let eventCalView = "month";       // "month" | "week" イベントカレンダーの表示モード（既定は月）
+/* "month" | "week" イベントカレンダーの表示モード。初期値はページ読み込み時点の画面幅で決める
+   （モバイルは横スクロールで週を見せたいので「週」、PCは従来通り「月」）。以降はユーザーの
+   月/週ボタン操作でのみ変わり、リサイズでは追従しない（あくまで初期表示の話のため）。 */
+let eventCalView = (window.matchMedia && window.matchMedia("(max-width:720px)").matches) ? "week" : "month";
 let eventCalWeekStart = null;      // Date 週表示の週開始日（月曜。monthGridWeek系と同じ月曜始まり規則）
 let itemRegistry = {};            // slug -> {item, kind}  詳細モーダル表示用のルックアップ
 let dayEventsRegistry = {};       // "y-mo-d" -> [items]  「+N件」の日別一覧モーダル用のルックアップ
@@ -977,6 +1002,7 @@ function render(opt){
   if(r.view !== "org") m.innerHTML = pageTitleCardHTML(r.view) + m.innerHTML;
   insertMobileInlineAds(m, r.view);
   bindCarouselArrows();
+  scrollEventWeekToToday();
   const meta = PAGE_META[r.view];
   const orgTitle = r.view === "org" ? (D.orgs.find(x=>x.id===r.id)?.name || "") : "";
   document.title = orgTitle ? `${orgTitle}｜ことひらいふ`
@@ -1228,6 +1254,20 @@ function weekStartForCurrentMonth(){
   const inMonth = (t.getFullYear() === y && (t.getMonth()+1) === mo);
   return mondayOf(inMonth ? t : new Date(y, mo-1, 1));
 }
+/* イベントカレンダーが週表示のとき、表示中の週に今日が含まれていれば横スクロール領域
+   （.event-calendar-desktop、モバイルでは overflow-x:auto）を今日の列が左端に来る位置まで
+   動かす。月表示のとき・今日がその週に無いとき（calCellClassが.todayを付けない）は何もしない。
+   #eventCalendarの innerHTML を差し替える3箇所（初回描画・月週切替・前後移動）から毎回呼ぶ。 */
+function scrollEventWeekToToday(){
+  if(eventCalView !== "week") return;
+  const calEl = document.getElementById("eventCalendar");
+  const scrollHost = calEl && calEl.querySelector(".event-calendar-desktop");
+  const todayCell = scrollHost && scrollHost.querySelector(".cal-cell.today");
+  if(!scrollHost || !todayCell) return;
+  const hostRect = scrollHost.getBoundingClientRect();
+  const cellRect = todayCell.getBoundingClientRect();
+  scrollHost.scrollLeft += cellRect.left - hostRect.left;
+}
 /* イベントカレンダーの月／週表示の切替。#eventCalendar のみ再描画する（月送りと同じ方式）。 */
 function switchEventCalView(view){
   if((view !== "month" && view !== "week") || view === eventCalView) return;
@@ -1240,6 +1280,7 @@ function switchEventCalView(view){
   const calEl = document.getElementById("eventCalendar");
   if(calEl){
     calEl.innerHTML = eventCalendarInnerHTML(ND.events);
+    scrollEventWeekToToday();
     const activeBtn = calEl.querySelector(`[data-cal-view="${view}"]`);
     if(activeBtn) try{ activeBtn.focus({preventScroll:true}); }catch(e){ activeBtn.focus(); }
   }
@@ -1262,6 +1303,7 @@ function navigateCalendar(target, delta){
     const calEl = document.getElementById("eventCalendar");
     if(calEl){
       calEl.innerHTML = eventCalendarInnerHTML(ND.events);
+      scrollEventWeekToToday();
       const nextNav = calEl.querySelector(`[data-cal-nav="${delta < 0 ? -1 : 1}"]`);
       if(nextNav) try{ nextNav.focus({preventScroll:true}); }catch(e){ nextNav.focus(); }
     }
@@ -1956,7 +1998,7 @@ function eventCalendarWeekHTML(events){
       <button class="cal-nav-btn" data-cal-nav="1" data-cal-target="event" aria-label="次の週">▶</button>
       ${eventCalViewToggleHTML()}
     </div>
-    <div class="event-calendar-desktop">
+    <div class="event-calendar-desktop week-mode">
       ${calWeekdayHeaderHTML()}
       ${eventWeekGridHTML(events, ws)}
     </div>
