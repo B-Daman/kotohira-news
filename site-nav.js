@@ -27,7 +27,8 @@
         items:[
           {key:"experiences", label:"🧭 体験・滞在"},
           {key:"udon", label:"🍜 うどん店"},
-          {key:"sweets", label:"🍧 かき氷・アイス"},
+          /* sweets（かき氷・アイス）は2026-08-28にアーカイブ。#sweets直リンクでページは開けるが
+             メニューには出さない。復活させる場合はここに {key:"sweets", label:"🍧 かき氷・アイス"} を戻す */
           {key:"parking", label:"🅿 駐車場"}
         ]},
       {key:"know", label:"🔗 町を知る", shortLabel:"🔗 町を知る",
