@@ -181,7 +181,7 @@
         <div class="s"><div class="l">画像</div><div class="v">WebP圧縮（参照合計 約12MB）</div></div>
         <div class="s"><div class="l">公開（Pages）</div><div class="v">独自ドメイン公開 2026-08-26<br><a href="https://kotohilife.com/" style="font-size:11px;">サイトを開く</a><br><span style="font-size:10px;">Cloudflare Pages（旧: GitHub Pages 2026-07-19〜）</span></div></div>
       </div>
-      <div class="note warn"><b>当面の残件：</b> 広報ことひら10月号のQR入稿（Web掲載9/24前後まで表示必須）、実機での最終確認（カルーセル左スワイプ・週カレンダー）、広告掲載ルールの確定、旧GitHub Pages併存の扱い決定。<b>検討中：</b> キャンペーンタブの月/週カレンダー統一、PCサイドバーの再設計、イベントチラシ画像の高さ制限（ページ全長さらに圧縮）。</div>
+      <div class="note warn"><b>当面の残件：</b> 広告掲載ルールの確定（低優先）、旧GitHub Pages併存の扱い決定。<b>検討中：</b> キャンペーンタブの月/週カレンダー統一、PCサイドバーの再設計、イベントチラシ画像の高さ制限（ページ全長さらに圧縮）。<b>済：</b> 広報10月号QR入稿（08-28確認）、スマホ実機確認OK（08-28）。</div>
     </div>
 
     <div class="card">
@@ -429,7 +429,7 @@ SITE_NAV = { groups[]（4分類×配下ページ）, siteLinks[]（運営者/問
         <tr><td>2</td><td>運営情報・掲載基準を確定しGitHub Pages公開</td><td><span class="state done">公開済み 07-19</span></td></tr>
         <tr><td>2.5</td><td>独自ドメイン kotohilife.com 取得・Cloudflare Pages移行・画像WebP化</td><td><span class="state done">完了 08-26</span></td></tr>
         <tr><td>2.6</td><td>サイト情報の正式化（運営者・お問い合わせ・プライバシー）＋アクセス解析</td><td><span class="state done">完了 08-27</span></td></tr>
-        <tr><td>2.7</td><td>スマホUXの全面刷新（ヘッダー・ドロワー・カルーセル・週カレンダー）</td><td><span class="state done">完了 08-28・実機最終確認のみ残</span></td></tr>
+        <tr><td>2.7</td><td>スマホUXの全面刷新（ヘッダー・ドロワー・カルーセル・週カレンダー）</td><td><span class="state done">完了 08-28・実機確認OK</span></td></tr>
         <tr><td>3</td><td>生成データの定期自動更新</td><td><span class="state pending">Notion分=達成／RSS分=未</span></td></tr>
         <tr><td>4</td><td>コミュニティ展開（任意）</td><td><span class="state future">構想</span></td></tr>
       </table></div>
@@ -479,7 +479,7 @@ SITE_NAV = { groups[]（4分類×配下ページ）, siteLinks[]（運営者/問
         <li class="done">不具合修正：font:...inherit無効宣言8箇所（4往復の原因）、iOS text-size-adjust、カレンダーヘッダー折返し、ドロワーhidden上書き</li>
         <li class="done">再発防止：scripts/verify_ui_styles.py（算出スタイル実測）新設、AGENTS.mdに検証ルール明文化</li>
         <li class="done">かき氷・アイスをアーカイブ（メニュー除外・#sweets直リンクは維持）</li>
-        <li class="progress">実機最終確認：カルーセル左スワイプ／週カレンダー操作感／ドロワー文字サイズ（v0828-3で修正済み・確認待ち）</li>
+        <li class="done">実機最終確認：カルーセル左スワイプ／週カレンダー／ドロワー文字サイズ（08-28 本人確認でOK）</li>
       </ul>
     </div>
 
@@ -538,10 +538,10 @@ SITE_NAV = { groups[]（4分類×配下ページ）, siteLinks[]（運営者/問
         <li class="done">LINEは名称「ことひらいふ」・参加URL・QR・説明・注記を site-widgets-data.js へ反映済み（2026-07-19掲載開始）。参加ルールURLは当面不要と判断（2026-07-19）</li>
         <li class="todo">広告掲載基準・窓口・掲載料・審査・表示期間を決定（低優先。相談窓口はお問い合わせフォームで受付可能に）</li>
         <li class="todo">うどん店・駐車場の変動情報の定期再確認</li>
-        <li class="progress">実機確認：スマホは08-28刷新分の最終確認待ち（カルーセル・週カレンダー・ドロワー）。キーボード・天気失敗時は未</li>
+        <li class="done">【済 08-28】スマホ実機確認（カルーセル・週カレンダー・ドロワー）。キーボード操作・天気失敗時の確認は運用チェックリストで継続</li>
         <li class="done">公開範囲と個人情報を確認後、公開（07-19 GitHub Pages → 08-26 kotohilife.com）</li>
       </ul>
-      <div class="note info"><b>広報ことひら10月号（QR掲載）：</b> Web掲載は9/24前後の見込み。QRのURLは <code>https://kotohilife.com</code>。入稿前チェックリストは <code>SecondBrain\03_Resources\agent-outputs\kotohira-newsletter\writing\2026-08-25_10月号_Canva移植チェックリスト.md</code>。</div>
+      <div class="note info"><b>広報ことひら10月号（QR掲載）：</b> 入稿済み（08-28確認）。Web掲載は9/24前後の見込み。QRのURLは <code>https://kotohilife.com</code>（掲載後もURL・サイト表示を維持すること）。</div>
     </div>
 
     <div class="card">
@@ -645,7 +645,7 @@ site-widgets-data.js → index.html</code></pre>
         <li class="done">ホーム各最大3件、フッター2リンク、暫定ページnoindex</li>
         <li class="done">スマホの週カレンダー・カルーセル・ドロワーを390px描画で検証（08-28）</li>
         <li class="done"><b>UIスタイル変更時は <code>python scripts/verify_ui_styles.py "セレクタ"</code> で算出スタイルを実測</b>（08-28新設・AGENTS.md明文化）</li>
-        <li class="todo">実機（iPhone）でカルーセル左スワイプ・週カレンダー・ドロワー文字を最終確認</li>
+        <li class="done">実機（iPhone）でカルーセル左スワイプ・週カレンダー・ドロワー文字を確認（08-28 OK）</li>
         <li class="todo">560／1280px、キーボード、モーダル、月移動後のフォーカスを確認</li>
         <li class="todo">天気取得失敗、LINE／広告の無効・有効、外部リンク・地図・画像を確認</li>
         <li class="todo">公開対象の個人情報、広告表示、運営者情報を最終確認</li>
