@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-28 09:10",
+  "fetched": "2026-08-29 08:47",
   "news": [
+    {
+      "id": "3ca0b4e5-ff5b-8128-a358-ea5fd9959e4c",
+      "title": "カラフルな創作いなりずし「さぬきこんぴら785」が金刀比羅宮参道にオープン",
+      "url": "https://news.ksb.co.jp/article/16843350",
+      "summary": "琴平町の金刀比羅宮参道に2026年7月8日にオープンした「さぬきこんぴら785」は、サーモンいくら、エビマヨ、きつねうどんなどユニークな創作いなりずしを提供する店舗。店名は本宮までの石段の数に由来し、日替わりで12～14種類のいなりずしが楽しめる。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-08-28",
+      "thumbnail": "assets/thumbs/3ca0b4e5ff5b8128a358ea5fd9959e4c.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3c80b4e5-ff5b-81d8-96cf-e12ace602819",
+      "title": "第8回 こんぴら秋夜市",
+      "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
+      "summary": "琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
+      "org": "琴平町商工会（Instagram）",
+      "media": "行政",
+      "date": "2026-08-26T17:00",
+      "thumbnail": "assets/thumbs/3c80b4e5ff5b81d896cfe12ace602819.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3c40b4e5-ff5b-811c-a263-dc94860be85d",
       "title": "熊本地震チャリティライブ 高松千春",
@@ -209,32 +235,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3b10b4e5-ff5b-812d-a992-cbf4ce9d5316",
-      "title": "まちづくりワークショップ【若者世代向け・参加者募集】",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/2/11875.html",
-      "summary": "琴平町在住の高校生～20代を対象とした、琴平の未来について考えるワークショップを開催します。琴平町総合センター1階集会室で2時間予定。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-08-03",
-      "thumbnail": "assets/thumbs/3b10b4e5ff5b812da992cbf4ce9d5316.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3b00b4e5-ff5b-8171-bf77-eb68c8d6d9bb",
-      "title": "中讃広域圏がPolimill株式会社と生成AI活用の連携協定を締結",
-      "url": "https://www.instagram.com/p/Dbd1tqwGMuj/",
-      "summary": "中讃広域圏（丸亀市・善通寺市・琴平町・多度津町・まんのう町）がPolimill株式会社と生成AIサービス「コモンズAI」の活用に関する連携協定を締結した。職員のAI活用能力向上、地域課題への取り組み、専用AI開発を柱に進める。複数市町と広域組合が同時に協定を結ぶ形は四国初。",
-      "org": "Instagram（中讃広域圏）",
-      "media": "Webメディア",
-      "date": "2026-08-01",
-      "thumbnail": "assets/thumbs/3b00b4e5ff5b8171bf77eb68c8d6d9bb.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -409,7 +409,7 @@ window.NOTION_DATA = {
       "url": "https://www.facebook.com/sandosandstand/posts/pfbid0BerDypvDZimbnkw8SGSDZUEvPrpDtAjnLn1xDTpLWP4xAhoruQS3DTPqEEw15UVLl",
       "start": "2026-08-29T18:00",
       "end": "2026-08-29T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "HAKOBUNEビル",
       "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
@@ -424,7 +424,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DcRKDSqp2aD/",
       "start": "2026-08-29T17:00",
       "end": "2026-08-29T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "麻心 琴平店",
       "address": "〒766-0001 香川県仲多度郡琴平町621−9",
@@ -439,7 +439,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-440.html",
       "start": "2026-08-29T17:00",
       "end": "2026-08-29T18:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "てんてこ舞",
       "address": "香川県仲多度郡琴平町717",
@@ -454,7 +454,7 @@ window.NOTION_DATA = {
       "url": "https://www.facebook.com/sandosandstand/posts/pfbid0BerDypvDZimbnkw8SGSDZUEvPrpDtAjnLn1xDTpLWP4xAhoruQS3DTPqEEw15UVLl",
       "start": "2026-08-29T11:00",
       "end": "2026-08-29T16:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "HAKOBUNEビル",
       "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
@@ -469,7 +469,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DblawCnmJvJ/",
       "start": "2026-08-29T10:00",
       "end": "2026-08-29T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
       "address": "香川県仲多度郡琴平町806",
@@ -484,7 +484,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-08-29T07:20",
       "end": "2026-08-29T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -499,7 +499,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=5",
       "start": "2026-08-28T18:30",
       "end": "2026-08-28T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1662,21 +1662,6 @@ window.NOTION_DATA = {
       "comment": "会場: 麻心（MAGOKORO） 麻心で日本対ブラジルのワールドカップ決勝トーナメント試合をパブリックビューイングで放映。大画面・大音量で応援できるイベント。",
       "fee": "0",
       "organizer": "麻心"
-    },
-    {
-      "id": "37f0b4e5-ff5b-8171-8276-c4da4dfaa559",
-      "title": "ご飯ついでに、国際交流 〜みんなでカレーを囲みながら世界の人たちと交流〜",
-      "url": "https://www.instagram.com/p/DZZrVDeExsJ/",
-      "start": "2026-06-29T18:30",
-      "end": "2026-06-29T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/manual/20260629.webp",
-      "comment": "会場: コトリ琴平 参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事をしながら交流するイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
-      "fee": "500",
-      "organizer": "Kotori Coworking & Hostel Kotohira"
     }
   ],
   "campaigns": [
