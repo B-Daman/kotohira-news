@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-27 01:11",
+  "fetched": "2026-08-28 09:10",
   "news": [
     {
       "id": "3c40b4e5-ff5b-811c-a263-dc94860be85d",
@@ -499,7 +499,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=5",
       "start": "2026-08-28T18:30",
       "end": "2026-08-28T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -514,7 +514,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
       "start": "2026-08-27T18:00",
       "end": "2026-08-27T19:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -529,7 +529,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DbfDCfxkxR-/",
       "start": "2026-08-27T09:30",
       "end": "2026-08-27T10:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "海の科学館",
       "address": "〒766-0001 香川県仲多度郡琴平町953番地",
@@ -1677,36 +1677,6 @@ window.NOTION_DATA = {
       "comment": "会場: コトリ琴平 参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事をしながら交流するイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "500",
       "organizer": "Kotori Coworking & Hostel Kotohira"
-    },
-    {
-      "id": "38e0b4e5-ff5b-8105-98d6-fa2b02d49e7a",
-      "title": "音浴混浴 - Onyoku Konyoku",
-      "url": "https://www.instagram.com/p/DaF2_mjSVJl/",
-      "start": "2026-06-28T16:00",
-      "end": "2026-06-28T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "HAKOBUNEビル",
-      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
-      "image": "assets/manual/20260628.webp",
-      "comment": "会場: HAKOBUNEビル屋上（香川県仲多度郡琴平町725） 琴平町のHAKOBUNEビル屋上で開催される音楽とテントサウナのイベント。DJパフォーマンス、ビール、ギョーザ、ドリンク、フードが提供される。",
-      "fee": "1500",
-      "organizer": "Onyoku Konyoku"
-    },
-    {
-      "id": "37c0b4e5-ff5b-81d4-9235-faae1a2ed63c",
-      "title": "手作りカリンバワークショップ 2DAYS",
-      "url": "https://www.instagram.com/p/DZWATJvB1aZ/",
-      "start": "2026-06-28T10:00",
-      "end": "2026-06-29T16:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/37c0b4e5ff5b81d49235faae1a2ed63c.webp",
-      "comment": "会場: 麻心琴平店 アフリカ発祥の民族楽器「カリンバ」の手作りワークショップを6月28日～29日に麻心琴平店で開催。世界にたった一つの楽器を作り、心と体を癒す音の旅を体験できる。",
-      "fee": "19800",
-      "organizer": "麻心琴平店"
     }
   ],
   "campaigns": [
