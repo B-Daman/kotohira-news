@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-30 03:04",
+  "fetched": "2026-08-31 03:18",
   "news": [
+    {
+      "id": "3cc0b4e5-ff5b-8145-9073-cdbcc9ae4c15",
+      "title": "こんぴら温泉 日帰り温泉サービス開始",
+      "url": "https://www.instagram.com/reels/Dcn5asDzD6i/",
+      "summary": "こんぴら温泉が日帰り温泉入浴サービスを開始。大人平日700円、子ども400円、幼児無料。土日祝日は300円加算。こんぴら観光の帰りに利用できる。",
+      "org": "Instagram（こんぴら温泉公式）",
+      "media": "Webメディア",
+      "date": "2026-08-29",
+      "thumbnail": "assets/thumbs/3cc0b4e5ff5b81459073cdbcc9ae4c15.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3ca0b4e5-ff5b-8128-a358-ea5fd9959e4c",
       "title": "カラフルな創作いなりずし「さぬきこんぴら785」が金刀比羅宮参道にオープン",
@@ -1587,36 +1600,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "38f0b4e5-ff5b-801b-800e-d93e350f8019",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
-      "start": "2026-07-01T12:00",
-      "end": "2026-07-01T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/38f0b4e5ff5b801b800ed93e350f8019.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3b10b4e5-ff5b-817a-80b9-c9c97a95aae3",
-      "title": "神野（かんの）朝顔の会「絵手紙・切り絵展」",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-492.html",
-      "start": "2026-07-01T09:00",
-      "end": "2026-08-04T17:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ACTことひら",
-      "address": "〒766-0002 香川県仲多度郡琴平町176",
-      "image": "assets/thumbs/3b10b4e5ff5b817a80b9c9c97a95aae3.webp",
-      "comment": "会場: ACTことひら 神野朝顔の会メンバーによる絵手紙・切り絵展がACTことひらで開催中。ことひらの日常生活から文化、イベントまでを題材とした素朴で心温まる芸術展。",
-      "fee": "0",
-      "organizer": "神野（かんの）朝顔の会"
     }
   ],
   "campaigns": [
@@ -1679,21 +1662,6 @@ window.NOTION_DATA = {
       "comment": "琴平グランドホテル桜の抄が、2026年7月24日～8月31日に夏休み限定のディナーバイキングを開催。金刀比羅宮参拝と温泉旅館での家族旅行を組み合わせたプランで、ライブキッチンの魚の解体ショーや露天風呂が特徴。小学生向けの直前割セールプランも用意。",
       "fee": "",
       "organizer": "琴平グランドホテル 桜の抄"
-    },
-    {
-      "id": "3950b4e5-ff5b-80f9-84d4-da7e14a3f79b",
-      "title": "KOTOVEGAS サマーフェア",
-      "url": "https://www.instagram.com/p/Dab1SnID1IT/",
-      "start": "2026-07-01",
-      "end": "2026-07-31",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "呑象ブリューイング",
-      "address": "香川県仲多度郡琴平町182-2",
-      "image": "assets/thumbs/3950b4e5ff5b80f984d4da7e14a3f79b.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
