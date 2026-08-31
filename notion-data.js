@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-08-31 03:18",
+  "fetched": "2026-09-01 05:32",
   "news": [
+    {
+      "id": "3cd0b4e5-ff5b-810d-a72d-e14afa61d54e",
+      "title": "琴平町の将来を考えるワークショップ　高校生・住民が意見交換",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026083100000002700",
+      "summary": "琴平町の町総合センターで、高校生ら若者を対象としたワークショップが開催された。参加者は琴平の自慢できるポイントや、「住み続けたい」「戻ってきたい」と思える町にするための改善点について意見交換した。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-08-31",
+      "thumbnail": "assets/thumbs/3cd0b4e5ff5b810da72de14afa61d54e.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3cc0b4e5-ff5b-8145-9073-cdbcc9ae4c15",
       "title": "こんぴら温泉 日帰り温泉サービス開始",
@@ -235,19 +248,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3b30b4e5-ff5b-8113-8b82-edb967bb61ab",
-      "title": "琴平町立統合小学校及び統合認定こども園の校名と園名を募集",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/11/11864.html",
-      "summary": "令和11年4月開校・開園予定の琴平町立統合小学校・統合認定こども園の校名と園名を募集しています。オンラインフォームまたは手書き用アンケート用紙で応募できます。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-08-04",
-      "thumbnail": "assets/thumbs/3b30b4e5ff5b81138b82edb967bb61ab.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -297,6 +297,36 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3cd0b4e5-ff5b-80a5-b41e-ce2094c5382b",
+      "title": "【定期】琴平町DAOオンラインミーティング",
+      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
+      "start": "2026-09-29T20:00",
+      "end": "2026-09-29T21:00",
+      "status": "実施前",
+      "city": "オンライン",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3cd0b4e5ff5b80a5b41ece2094c5382b.webp",
+      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
+      "id": "3cd0b4e5-ff5b-80f1-897f-dd274584a853",
+      "title": "【定期】琴平町DAOオンラインミーティング",
+      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
+      "start": "2026-09-22T20:00",
+      "end": "2026-09-22T21:00",
+      "status": "実施前",
+      "city": "オンライン",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3cd0b4e5ff5b80f1897fdd274584a853.webp",
+      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
       "title": "第16回「ユルッと楽しく着付けレッスン」",
       "url": "https://www.instagram.com/p/DcJUmy4gUJL/",
@@ -310,6 +340,21 @@ window.NOTION_DATA = {
       "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
       "fee": "500",
       "organizer": "つるや旅館、藤田屋"
+    },
+    {
+      "id": "3cd0b4e5-ff5b-80b5-bf44-c186c4228a75",
+      "title": "【定期】琴平町DAOオンラインミーティング",
+      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
+      "start": "2026-09-15T20:00",
+      "end": "2026-09-15T21:00",
+      "status": "実施前",
+      "city": "オンライン",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3cd0b4e5ff5b80b5bf44c186c4228a75.webp",
+      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
+      "fee": "0",
+      "organizer": ""
     },
     {
       "id": "39e0b4e5-ff5b-8153-842a-c16dbdfaad50",
@@ -387,6 +432,21 @@ window.NOTION_DATA = {
       "organizer": "DONZO Brewing"
     },
     {
+      "id": "3cd0b4e5-ff5b-804e-8747-d727722bca0c",
+      "title": "【定期】琴平町DAOオンラインミーティング",
+      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
+      "start": "2026-09-08T20:00",
+      "end": "2026-09-08T21:00",
+      "status": "実施前",
+      "city": "オンライン",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3cd0b4e5ff5b804e8747d727722bca0c.webp",
+      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "3c80b4e5-ff5b-80bf-8eba-ecd35c85c207",
       "title": "ことひらふれあい音楽祭",
       "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
@@ -415,6 +475,21 @@ window.NOTION_DATA = {
       "comment": "琴平町の金陵の郷で開催される台湾グルメ・文化イベント。台湾屋台グルメの出店、ステージイベント（電音三太子・二胡演奏・トークショー）、町内コラボメニュースタンプラリー、限定ガチャガチャなどが予定されている。",
       "fee": "0",
       "organizer": "琴平町"
+    },
+    {
+      "id": "3cd0b4e5-ff5b-80c1-8a4c-e198e9ff817c",
+      "title": "【定期】琴平町DAOオンラインミーティング",
+      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
+      "start": "2026-09-01T20:00",
+      "end": "2026-09-01T21:00",
+      "status": "実施中",
+      "city": "オンライン",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3cd0b4e5ff5b80c18a4ce198e9ff817c.webp",
+      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
+      "fee": "0",
+      "organizer": ""
     },
     {
       "id": "3b00b4e5-ff5b-8018-a797-c643e42bd9e5",
@@ -1585,21 +1660,6 @@ window.NOTION_DATA = {
       "comment": "会場: つるや旅館 2階大広間（香川県琴平町） 琴平町のつるや旅館で、リユース着物や帯などの和物を販売する蚤の市と着物コーディネート相談会が開催されます。着物の使い方や合わせ方について専門家に相談できます。",
       "fee": "",
       "organizer": "こんぴら路地裏着物レンタル藤田屋、つるや旅館"
-    },
-    {
-      "id": "38f0b4e5-ff5b-806e-a7c6-edc4399778c4",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "",
-      "start": "2026-07-02T18:00",
-      "end": "2026-07-02T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -1624,7 +1684,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DbdNuzlkbu6/?img_index=1",
       "start": "2026-08-01",
       "end": "2026-08-31",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1654,7 +1714,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DakafxpktrA/",
       "start": "2026-07-24",
       "end": "2026-08-31",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平グランドホテル桜の抄",
       "address": "〒766-0001 香川県仲多度郡琴平町977-1",
