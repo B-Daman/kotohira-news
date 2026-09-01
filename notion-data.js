@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-01 05:32",
+  "fetched": "2026-09-02 03:04",
   "news": [
+    {
+      "id": "3ce0b4e5-ff5b-8151-a7f1-e59294594df9",
+      "title": "「琴平の日」で地域交流を　子ども議会　小中生が積極提言",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026090100000000400",
+      "summary": "琴平町の小中学生10人が子ども議員として参加する「子ども議会」が8月27日に町議会本会議場で開かれた。子ども議員が町の活性化策などを町長に提言し、町議との懇談会を通じて町政への理解を深めた。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-09-01",
+      "thumbnail": "assets/thumbs/3ce0b4e5ff5b8151a7f1e59294594df9.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ce0b4e5-ff5b-8181-9913-fba4d15b5c47",
+      "title": "大センダンのある広場の名称募集",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/27/11959.html",
+      "summary": "琴平町が大センダン保存活用計画に基づいて整備している広場について、町民向けに名称を募集する。募集期間は9月1日から9月30日。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-08-31",
+      "thumbnail": "assets/thumbs/3ce0b4e5ff5b81819913fba4d15b5c47.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3cd0b4e5-ff5b-810d-a72d-e14afa61d54e",
       "title": "琴平町の将来を考えるワークショップ　高校生・住民が意見交換",
@@ -11,6 +37,19 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-08-31",
       "thumbnail": "assets/thumbs/3cd0b4e5ff5b810da72de14afa61d54e.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ce0b4e5-ff5b-81d2-a666-ee65653573c4",
+      "title": "秋のこんぴら駆け上がれ　１０月４日石段マラソン　参加者７８５人募集",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026083000000004800",
+      "summary": "金刀比羅宮の石段をマイペースで走る「こんぴら石段マラソン」が10月4日に開かれる。本宮までの石段数にちなみ785人の参加者を募集しており、締め切りは9月7日。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-08-30",
+      "thumbnail": "assets/thumbs/3ce0b4e5ff5b81d2a666ee65653573c4.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -222,32 +261,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3b40b4e5-ff5b-810f-b5c9-cc8698bbd828",
-      "title": "移住者が仕掛ける「お座敷遊び」世界大会　琴平町で開催",
-      "url": "https://www.47news.jp/14746990.html",
-      "summary": "香川県琴平町で6月13日、民謡「こんぴらふねふね」を題材にした第1回世界大会が琴平町公会堂で開かれた。仕掛け人は昨年5月に移住してきたこんぴら観光まちづくり協会事務局長の石田哲也さんで、観光振興の一環として企画した。",
-      "org": "共同通信",
-      "media": "Webメディア",
-      "date": "2026-08-06",
-      "thumbnail": "assets/thumbs/3b40b4e5ff5b810fb5c9cc8698bbd828.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3b30b4e5-ff5b-81b8-b5fa-fb4a7d74ffb6",
-      "title": "まちづくりワークショップ（子育て世代向け）",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/2/11885.html",
-      "summary": "琴平町が子育て世代を対象としたまちづくりワークショップを開催します。子育てしやすいまちづくりについて意見を聞く催しで、琴平町総合センターで実施されます。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-08-05",
-      "thumbnail": "assets/thumbs/3b30b4e5ff5b81b8b5fafb4a7d74ffb6.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -325,6 +338,21 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": ""
+    },
+    {
+      "id": "3ce0b4e5-ff5b-817d-b9ac-c06e7d8b3d2e",
+      "title": "オリジナル着物の半衿を作るワークショップ〜刺繍",
+      "url": "https://www.instagram.com/p/DctUUTtmAPo/",
+      "start": "2026-09-19T10:00",
+      "end": "2026-09-19T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
+      "address": "香川県仲多度郡琴平町806",
+      "image": "assets/thumbs/3ce0b4e5ff5b817db9acc06e7d8b3d2e.webp",
+      "comment": "琴平町のこんぴら路地裏着物レンタル藤田屋で、カンタ刺繍を学びながらオリジナルの着物の半衿を作るワークショップを開催。講師はちくちく針ねずみ。",
+      "fee": "2000",
+      "organizer": "こんぴら路地裏着物レンタル藤田屋"
     },
     {
       "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
@@ -447,6 +475,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3ce0b4e5-ff5b-803e-a576-cadd1eee98cb",
+      "title": "ことウラさんぽ モニターツアー（第二次予備調査）",
+      "url": "",
+      "start": "2026-09-06",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "",
+      "fee": "",
+      "organizer": ""
+    },
+    {
       "id": "3c80b4e5-ff5b-80bf-8eba-ecd35c85c207",
       "title": "ことひらふれあい音楽祭",
       "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
@@ -482,7 +525,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-01T20:00",
       "end": "2026-09-01T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
