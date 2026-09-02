@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-02 03:04",
+  "fetched": "2026-09-03 03:17",
   "news": [
+    {
+      "id": "3cf0b4e5-ff5b-81d4-adad-f2a836f7fb6f",
+      "title": "【延期のお知らせ】第４回台湾フェス・台湾夜市 in 琴平【台風接近】",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-282.html",
+      "summary": "琴平町で台湾グルメと台湾文化体験を楽しむイベント。2026年9月5日に開催予定だったが台風の影響により延期となり、新しい開催日は決まり次第お知らせ予定。",
+      "org": "こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-09-05T15:00",
+      "thumbnail": "assets/thumbs/3cf0b4e5ff5b81d4adadf2a836f7fb6f.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3ce0b4e5-ff5b-8151-a7f1-e59294594df9",
       "title": "「琴平の日」で地域交流を　子ども議会　小中生が積極提言",
@@ -506,7 +519,7 @@ window.NOTION_DATA = {
     },
     {
       "id": "3ab0b4e5-ff5b-815a-ac45-cbf997fdd175",
-      "title": "第4回 台湾フェス・台湾夜市 in 琴平（第四届琴平台湾節・台湾夜市）",
+      "title": "【延期】第4回 台湾フェス・台湾夜市 in 琴平（第四届琴平台湾節・台湾夜市）",
       "url": "https://www.instagram.com/p/DbSN6Pfgej_/",
       "start": "2026-09-05T15:00",
       "end": "2026-09-05T20:00",
@@ -1673,36 +1686,6 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-81f0-a325-d6c54bff595c",
-      "title": "ピックルボール教室",
-      "url": "https://www.instagram.com/p/Dajuk7qkds9/",
-      "start": "2026-07-04T11:30",
-      "end": "2026-07-04T12:45",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ヴィスポことひら",
-      "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
-      "image": "assets/thumbs/39c0b4e5ff5b81f0a325d6c54bff595c.webp",
-      "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
-      "fee": "1650",
-      "organizer": "ヴィスポことひら"
-    },
-    {
-      "id": "3870b4e5-ff5b-81a8-b332-fbdd8b09d00d",
-      "title": "和物蚤の市&着物コーディネートご相談会",
-      "url": "https://www.instagram.com/p/DZyHfDvzr3Q/",
-      "start": "2026-07-04T10:30",
-      "end": "2026-07-04T16:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "つるや旅館",
-      "address": "766-0001 香川県仲多度郡琴平町620",
-      "image": "assets/manual/20260704.webp",
-      "comment": "会場: つるや旅館 2階大広間（香川県琴平町） 琴平町のつるや旅館で、リユース着物や帯などの和物を販売する蚤の市と着物コーディネート相談会が開催されます。着物の使い方や合わせ方について専門家に相談できます。",
-      "fee": "",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋、つるや旅館"
     }
   ],
   "campaigns": [
