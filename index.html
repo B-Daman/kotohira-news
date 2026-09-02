@@ -29,6 +29,7 @@
 <script src="udon-data.js"></script>
 <script src="cool-sweets-data.js"></script>
 <script src="parking-data.js"></script>
+<script src="towncal-data.js"></script>
 <script src="site-widgets-data.js"></script>
 <script src="site-nav.js"></script>
 <!-- Instagram/X の埋め込みスクリプトはここでは読み込まない。表示時にのみ動的注入する（ensureIgScript/ensureTwttrScript） -->
@@ -550,6 +551,15 @@
     border-radius:14px;background:var(--card)}
   .hint{font-size:12px;color:var(--sub);margin:-4px 0 12px}
 
+  /* 🗓 こんぴらカレンダー：誌面画像をそのまま見せるだけのシンプルなカード＋出典表記 */
+  .towncal-img{display:block;width:100%;max-width:640px;border:1px solid var(--line);
+    border-radius:12px;background:#f1ece2}
+  .towncal-notice{background:var(--accent-soft);color:var(--accent-d);border-radius:10px;
+    padding:10px 14px;font-size:13px;font-weight:700;margin-bottom:14px}
+  .towncal-source{font-size:12.5px;color:var(--sub);margin-top:14px;line-height:1.7}
+  .towncal-source a{color:var(--accent-d);font-weight:700}
+  .towncal-source a:hover{text-decoration:underline}
+
   @media (min-width:1100px){
     .page-shell{grid-template-columns:minmax(0,1fr) 300px;
       grid-template-areas:"main utility" "main community";grid-template-rows:max-content 1fr;
@@ -812,6 +822,7 @@ const PAGE_META = {
   udon:{title:"🍜 うどん店"},
   sweets:{title:"🍧 かき氷・アイス"},
   parking:{title:"🅿 駐車場"},
+  towncal:{title:"🗓 こんぴらカレンダー"},
   orgs:{title:"📋 団体"},
   links:{title:"🔗 リンク"}
 };
@@ -965,7 +976,7 @@ function parseHash(){
     try{ return {view:"org", id: decodeURIComponent(h.slice(4))}; }
     catch(e){ return {view:"orgs"}; }
   }
-  if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","links"].indexOf(h) >= 0) return {view:h};
+  if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","towncal","links"].indexOf(h) >= 0) return {view:h};
   return {view:"home"};
 }
 
@@ -998,6 +1009,8 @@ function render(opt){
     m.innerHTML = coolSweetsTabHTML();
   } else if(r.view === "parking"){
     m.innerHTML = parkingTabHTML();
+  } else if(r.view === "towncal"){
+    m.innerHTML = towncalTabHTML();
   } else if(r.view === "links"){
     m.innerHTML = linksTabHTML();
   } else {
@@ -2753,6 +2766,32 @@ function parkingModalHTML(it){
     ${it.note ? `<div class="modal-comment">${esc(it.note)}</div>` : ""}
     ${links}
     ${PARKING.checked ? `<div class="hint" style="margin-top:12px">確認日: ${esc(PARKING.checked)}</div>` : ""}`;
+}
+
+/* ===== 🗓 こんぴらカレンダータブ（広報ことひらのカレンダー面を画像で掲載。towncal-data.js 由来・コード直書き）
+   毎号ページ内テキストを組むのではなく誌面画像をそのまま見せる方式。掲載号が古くなったら
+   TOWNCAL.month を今日の年月と文字列比較し、注記を出す（YYYY-MM同士の比較なので桁数が揃い安全）。 ===== */
+function towncalTabHTML(){
+  if(!window.TOWNCAL) return emptyMsg("こんぴらカレンダーは準備中です。");
+  const T = window.TOWNCAL;
+  const mm = (""+(T.month||"")).match(/^(\d{4})-(\d{2})$/);
+  const monthLabel = mm ? `${+mm[1]}年${+mm[2]}月` : esc(T.month || "");
+  const now = new Date();
+  const thisMonth = `${now.getFullYear()}-${pad2(now.getMonth()+1)}`;
+  const isOld = !!mm && T.month < thisMonth;
+  const imgSrc = safeUrl(T.image);
+  const sourceUrl = safeUrl(T.sourceUrl);
+  return `
+    <p class="hint">琴平町の広報「ことひら」に掲載されている月間カレンダーです。検診・各種相談・教室など、町民のみなさん向けの予定がまとまっています。</p>
+    <h2 class="group-h">🗓 ${esc(monthLabel)}のこんぴらカレンダー</h2>
+    ${isOld ? `<div class="towncal-notice">この号は${esc(monthLabel)}のものです。最新の予定は琴平町ホームページでご確認ください。</div>` : ""}
+    ${imgSrc ? `
+    <a href="${esc(imgSrc)}" target="_blank" rel="noopener">
+      <img class="towncal-img" src="${esc(imgSrc)}" alt="こんぴらカレンダー ${esc(monthLabel)}（検診・相談・教室など町民向けの月間予定表）" loading="lazy">
+    </a>
+    <p class="hint" style="margin-top:8px">画像をタップすると拡大表示できます</p>`
+    : emptyMsg("カレンダー画像は準備中です。")}
+    <p class="towncal-source">出典：${esc(T.sourceName || "広報ことひら（琴平町発行）")}${sourceUrl ? ` <a href="${esc(sourceUrl)}" target="_blank" rel="noopener">${esc(T.sourceLinkLabel || "琴平町ホームページ")} ↗</a>` : ""}<br>詳細・最新情報は琴平町ホームページをご覧ください。</p>`;
 }
 
 /* ===== 🔗 リンクタブ（公式サイトへのリンク集。links-data.js 由来・コード直書き） ===== */

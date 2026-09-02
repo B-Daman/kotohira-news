@@ -15,7 +15,7 @@
   /* ===== ナビ構造の正本 ===== */
   window.SITE_NAV = {
     groups: [
-      {key:"home", label:"🏠 ホーム", shortLabel:"🏠 ホーム",
+      {key:"home", label:"🏠 ホーム", shortLabel:"🏠 ホーム", flat:true,
         items:[{key:"home", label:"🏠 ホーム"}]},
       {key:"now", label:"📰 町の今", shortLabel:"📰 町の今",
         items:[
@@ -31,6 +31,8 @@
              メニューには出さない。復活させる場合はここに {key:"sweets", label:"🍧 かき氷・アイス"} を戻す */
           {key:"parking", label:"🅿 駐車場"}
         ]},
+      {key:"kurashi", label:"🏡 くらし", shortLabel:"🏡 くらし",
+        items:[{key:"towncal", label:"🗓 こんぴらカレンダー"}]},
       {key:"know", label:"🔗 町を知る", shortLabel:"🔗 町を知る",
         items:[
           {key:"orgs", label:"📋 団体"},
@@ -47,8 +49,11 @@
   };
 
   /* ===== ドロワーのアコーディオンHTML生成（index.html・情報3ページ共通） =====
-     大分類は「ホーム/町の今/訪れる・関わる/町を知る/サイト情報」の5つ。
-     itemsが1件だけのグループ（ホーム）はトグル無しの単独リンクにする。
+     大分類は「ホーム/町の今/訪れる・関わる/くらし/町を知る/サイト情報」の6つ。
+     items 1件のグループはデフォルトではトグル付きアコーディオンとして出す（例: くらし ▸ こんぴらカレンダー）。
+     ホームだけは「グループを開いてから選ぶ」動線が冗長なため、flat:true を付けてトグル無しの
+     単独リンクにする（1件グループ＝単独リンクを常時にすると、今後同様の単項目グループを足すたびに
+     意図せずアコーディオンが消えてしまうため、対象をホームに限定する明示フラグにした）。
      leafの実リンクの作り方（ハッシュ遷移 or 実ページへの<a>）だけ呼び出し側のbuildLeafHtmlに委ねる。
      opts: {activeGroupKey, activeItemKey, activeSiteLinkKey, buildLeafHtml(it,active), resolveSiteLinkUrl(link)} */
   function accordionHTML(opts){
@@ -63,7 +68,7 @@
     }]);
     return groups.map(g=>{
       const items = g.items || [];
-      if(items.length === 1 && !items[0].isSiteLink){
+      if(g.flat && items.length === 1 && !items[0].isSiteLink){
         const it = items[0];
         return buildLeafHtml(it, opts.activeItemKey === it.key);
       }

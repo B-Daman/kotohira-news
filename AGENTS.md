@@ -8,7 +8,7 @@
 - データは複数系統あり、それぞれ生成経路が異なる。**手編集せず生成元を経由する**:
   - `registry.json`（団体×媒体の正本）→ `/kotohira-news` スキル経由で `data.js` を再生成
   - Notion 3DB（イベント/キャンペーン/ニュース）→ `scripts/fetch_notion.py` 経由で `notion-data.js` を再生成（GitHub Actions `.github/workflows/update-notion-data.yml` が毎日15:00 UTC＝JST 0:00に自動実行し、コミット・pushまで行う）
-  - `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` は手編集運用（現状把握、生成スクリプトは未確認）
+  - `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` / `towncal-data.js` は手編集運用（現状把握、生成スクリプトは未確認）
 - 画像は長辺1200pxのWebPに揃える。`fetch_notion.py` が取得時に圧縮し、`find_local_thumb` は
   同名ファイルがあれば `.webp` を優先する。手動で `assets/` に画像を足す場合も、
   数MBの原寸ファイルをそのまま置かない（閲覧者の通信量に直結する）
@@ -28,10 +28,12 @@
 
 - `index.html` — 表示部の正本
 - `registry.json` — 団体×媒体データの正本
-- `data.js` / `notion-data.js` / `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` — 表示用データ（生成物または手編集、上記参照）
+- `data.js` / `notion-data.js` / `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` / `towncal-data.js` — 表示用データ（生成物または手編集、上記参照）
 - `scripts/fetch_notion.py` — Notionデータ取得スクリプト
 - `scripts/image_utils.py` — 画像をWebPへ縮小・圧縮する共通処理（Pillowが無ければ無圧縮で続行）
 - `scripts/compress_thumbs.py` — 既存画像を一括でWebP化する一回性スクリプト（2026-08-25実行済み）
+- `scripts/fetch_towncal.py` — 🗓 こんぴらカレンダー月次更新スクリプト。町HPのPDF/画像URLからカレンダー面を取得し、
+  assets/towncal/YYYY-MM.webp に変換保存、towncal-data.js の month/image/sourceName を更新する
 - `assets/` — サムネイル・リンク・体験・手動画像
 - `docs/` — 要件定義書・設計書・ロードマップ
 - `.github/workflows/update-notion-data.yml` — 日次自動更新ワークフロー
