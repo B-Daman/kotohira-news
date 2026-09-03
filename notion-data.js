@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-03 03:17",
+  "fetched": "2026-09-04 03:15",
   "news": [
+    {
+      "id": "3d00b4e5-ff5b-8156-8d39-c034d0b6f78a",
+      "title": "第3回こんぴら観光まちづくり検定",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-540.html",
+      "summary": "一般社団法人こんぴら観光まちづくり協会が主催する第3回検定試験。琴平町の歴史・文化・観光資源に関する初級・中級の2つの受験級を実施する。合格者は協会認定ガイド登録への道が開ける。",
+      "org": "こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-09-03",
+      "thumbnail": "assets/thumbs/3d00b4e5ff5b81568d39c034d0b6f78a.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3d00b4e5-ff5b-81ae-b9ff-d071f83faf89",
+      "title": "夜の琴平に笑顔広がる　アマチュア４人が落語会",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026090300000001400",
+      "summary": "金刀比羅宮の表参道沿いのうどん店「うどん茶屋 てんてこ舞」で、「第2回こんぴらくご」が8月29日に開催された。こんぴら観光まちづくり協会主催で、アマチュア落語家4人による寄席が行われた。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-09-03",
+      "thumbnail": "assets/thumbs/3d00b4e5ff5b81aeb9ffd071f83faf89.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3cf0b4e5-ff5b-81d4-adad-f2a836f7fb6f",
       "title": "【延期のお知らせ】第４回台湾フェス・台湾夜市 in 琴平【台風接近】",
@@ -9,8 +35,21 @@ window.NOTION_DATA = {
       "summary": "琴平町で台湾グルメと台湾文化体験を楽しむイベント。2026年9月5日に開催予定だったが台風の影響により延期となり、新しい開催日は決まり次第お知らせ予定。",
       "org": "こんぴら観光まちづくり協会",
       "media": "Webメディア",
-      "date": "2026-09-05T15:00",
+      "date": "2026-09-02",
       "thumbnail": "assets/thumbs/3cf0b4e5ff5b81d4adadf2a836f7fb6f.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3d00b4e5-ff5b-8118-8a28-c681c1a390d0",
+      "title": "旧金毘羅大芝居の休館について",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/27/11807.html",
+      "summary": "旧金毘羅大芝居がイベント開催のため、2026年11月6日午後から11月8日まで休館となります。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-09-01",
+      "thumbnail": "assets/thumbs/3d00b4e5ff5b81188a28c681c1a390d0.png",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -235,48 +274,24 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3bc0b4e5-ff5b-814e-9bbc-e04209cc1f45",
-      "title": "第58回 こんぴら石段マラソン",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11910.html",
-      "summary": "琴平町で開催される石段マラソン大会。参道から金刀比羅宮御本宮までのコースを走る。定員785名、参加費3,000円。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-08-14",
-      "thumbnail": "assets/thumbs/3bc0b4e5ff5b814e9bbce04209cc1f45.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3bf0b4e5-ff5b-81c2-8154-f81a97438db0",
-      "title": "琴平町共通商品券の新規発行停止とコトカ事業について",
-      "url": "https://www.instagram.com/p/Db7I5kQhRQm/",
-      "summary": "琴平町は令和8年度より共通商品券の新規発行を停止する。既発行分の使用期限は終了しており、加盟店による換金は8月末までに完了する必要がある。コトカ事業の加盟店代金支払いなどの業務は琴平町商工会が担当することになった。",
-      "org": "琴平町商工会（Instagram）",
-      "media": "行政",
-      "date": "2026-08-12",
-      "thumbnail": "assets/thumbs/3bf0b4e5ff5b81c28154f81a97438db0.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3b90b4e5-ff5b-81f1-b092-f5937311250c",
-      "title": "参道えびのあられ揚げ～瀬戸内塩レモン～ 限定販売",
-      "url": "https://news.ksb.co.jp/article/16801729",
-      "summary": "琴平町の金刀比羅宮表参道のエビ専門店「海老乃家」が、瀬戸内産レモンと塩を使った夏季限定新フレーバー「参道えびのあられ揚げ～瀬戸内塩レモン～」を8月12日から発売。700円で平日15個、土日祝30個の限定販売。",
-      "org": "KSB瀬戸内海放送",
-      "media": "テレビ",
-      "date": "2026-08-12",
-      "thumbnail": "assets/thumbs/3b90b4e5ff5b81f1b092f5937311250c.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
+    {
+      "id": "3d00b4e5-ff5b-815b-8074-d95b25c98d21",
+      "title": "第3回こんぴら観光まちづくり検定",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-540.html",
+      "start": "2026-11-29T10:20",
+      "end": "2026-11-29T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町商工会",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井869-5",
+      "image": "assets/thumbs/3d00b4e5ff5b815b8074d95b25c98d21.webp",
+      "comment": "会場: 琴平町商工会館 一般社団法人こんぴら観光まちづくり協会が主催する第3回検定試験。琴平町の歴史・文化・観光資源に関する初級・中級の2つの受験級を実施する。合格者は協会認定ガイド登録への道が開ける。",
+      "fee": "3300",
+      "organizer": "一般社団法人こんぴら観光まちづくり協会"
+    },
     {
       "id": "3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d",
       "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演",
@@ -1656,36 +1671,6 @@ window.NOTION_DATA = {
       "comment": "ハンドパンのパイオニア・ヤマザキヤマトと、アフリカン音楽を牽引する三好東洋による民族楽器ライブ。7月6日に香川県仲多度郡琴平町の麻心で開催。",
       "fee": "",
       "organizer": "麻心"
-    },
-    {
-      "id": "3670b4e5-ff5b-8068-9e2d-e6f3a5ab697d",
-      "title": "第2回 こんぴら観光まちづくり検定",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-157.html",
-      "start": "2026-07-05T10:30",
-      "end": "2026-07-05T15:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町商工会",
-      "address": "〒766-0004 香川県仲多度郡琴平町榎井869-5",
-      "image": "assets/thumbs/3670b4e5ff5b80689e2de6f3a5ab697d.jpg",
-      "comment": "",
-      "fee": "3300",
-      "organizer": ""
-    },
-    {
-      "id": "38f0b4e5-ff5b-8020-abd7-faaa036c7256",
-      "title": "Music Live Hygge",
-      "url": "https://www.instagram.com/kotori.kotohira/p/DaH3tvEk5HS/",
-      "start": "2026-07-05",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "Sando Sand. Stand",
-      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル 1F",
-      "image": "",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -1703,6 +1688,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴参バス琴平線（丸亀市内バス停発着区間） 丸亀市は、丸亀駅⇔琴平駅方面のJR通勤・通学定期券を持つ人を対象に、琴参バスの琴平線を無料で利用できる実証実験を10月1日～12月28日に実施する。鉄道とバスの組み合わせ利用による利便性向上と定住促進が目的。",
       "fee": "0",
       "organizer": "丸亀市、善通寺市、琴平町、多度津町、まんのう町"
+    },
+    {
+      "id": "3d00b4e5-ff5b-8108-bb8e-e933a53410e9",
+      "title": "台湾フェア 2026年9月",
+      "url": "https://www.instagram.com/p/Dcvjuvcj0V3/?img_index=1",
+      "start": "2026-09-01",
+      "end": "2026-09-30",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3d00b4e5ff5b8108bb8ee933a53410e9.webp",
+      "comment": "会場: 琴平町内（DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA） 琴平町のKOTOVEGAS（DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA）で台湾をテーマにした期間限定フェアを開催。台湾パイナップルを使用したメニューや台湾スイーツが提供される。",
+      "fee": "480",
+      "organizer": "DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA"
     },
     {
       "id": "3b00b4e5-ff5b-8100-801e-d571cd9e9dd6",
