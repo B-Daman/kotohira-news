@@ -20,7 +20,7 @@
    placements は "sidebar"（PCサイドバー）または
    "mobile-inline"（スマートフォン本文内）を配列で指定する。 */
 window.SITE_WIDGETS_DATA = {
-  updated: "2026-08-22",
+  updated: "2026-09-04",
 
   /* 気象庁の香川県短期予報をブラウザで自動取得する。
      dataUrl は気象庁サイト内部で利用される公開JSONのため、画面側では構造検証・
@@ -72,7 +72,7 @@ window.SITE_WIDGETS_DATA = {
   featuredEvents: [
     {
       id: "taiwan-fes-2026",
-      enabled: true,
+      enabled: false,  /* 2026-09-04 台風接近のため延期→掲載停止。振替日程の確定後に更新して再有効化 */
       title: "第4回 台湾フェス・台湾夜市 in 琴平",
       dateLabel: "2026年9月5日(土) 15:00〜20:00",
       place: "金陵の郷（琴平町）",
