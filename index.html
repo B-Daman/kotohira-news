@@ -820,12 +820,26 @@ const D = (window.DASHBOARD_DATA && window.DASHBOARD_DATA.orgs)
   ? window.DASHBOARD_DATA
   : { orgs:[] };
 
+/* イベント／キャンペーン共通：開始日時の昇順コンパレータ。fetch_notion.pyのNotion取得は
+   「開催日時（開始）」降順のため、ND構築時にここで一度だけ並べ替え、以後の全表示経路
+   （ホーム・各タブ・月/週グリッド・スマホ一覧・+N件モーダル等）に取得順ではなく正しい
+   開始時刻順を効かせる（バグ修正: 2026-09-05）。
+   start は "YYYY-MM-DD" または "YYYY-MM-DDTHH:MM" でISO順=文字列順に昇順比較できる。
+   同日で時刻なし（終日扱い）の文字列は同日の時刻ありの文字列の前方一致プレフィックスに
+   なるため、文字列比較の自然な挙動として時刻ありより先に来る（意図した挙動）。
+   同値時はタイトルで安定化する。 */
+function byStartAsc(a, b){
+  const sa = a.start || "", sb = b.start || "";
+  if(sa !== sb) return sa < sb ? -1 : 1;
+  return (a.title || "").localeCompare(b.title || "");
+}
+
 const ND_RAW = (window.NOTION_DATA && typeof window.NOTION_DATA === "object") ? window.NOTION_DATA : {};
 const ND = {
   fetched: ND_RAW.fetched || "",
   news: Array.isArray(ND_RAW.news) ? ND_RAW.news : [],
-  events: Array.isArray(ND_RAW.events) ? ND_RAW.events : [],
-  campaigns: Array.isArray(ND_RAW.campaigns) ? ND_RAW.campaigns : [],
+  events: Array.isArray(ND_RAW.events) ? [...ND_RAW.events].sort(byStartAsc) : [],
+  campaigns: Array.isArray(ND_RAW.campaigns) ? [...ND_RAW.campaigns].sort(byStartAsc) : [],
   /* 🏪 お店の営業カレンダー（notion-data.js 由来。fetch_notion.py が表示対象✓かつ画像ありのみ抽出） */
   shops: Array.isArray(ND_RAW.shops) ? ND_RAW.shops : [],
   /* Notion側（notion-data.js）に experiences があればそれを正とし、
@@ -1962,8 +1976,8 @@ function eventCalendarInnerHTML(events){
       dayEventsRegistry[key] = chipsByDay[key];
     }
   });
-  // 同日内のチップは開始時刻の昇順（00:00に近い順）で上から並べる。ND.eventsは開始日時の
-  // 降順で来るため、そのままだと遅い時間のイベントが上に来てしまう。
+  // 同日内のチップは開始時刻の昇順（00:00に近い順）で上から並べる。ND.events自体は既に
+  // byStartAscで昇順整列済みだが、ここでの再ソートは他経路から呼ばれた場合の防御として残す。
   // dayEventsRegistry は同じ配列を参照しているので「+N件」モーダルの並びも揃う。
   Object.keys(chipsByDay).forEach(k=>chipsByDay[k].sort((a,b)=>(a.start||"").localeCompare(b.start||"")));
   assignLanes(barIntervals);
@@ -2133,7 +2147,8 @@ function eventWeekGridHTML(events, weekStart){
       (chipsByDay[key] = chipsByDay[key] || []).push(it);
     }
   });
-  // 単日チップは開始時刻の昇順（ND.eventsは開始日時の降順で来るため並べ直す）
+  // 単日チップは開始時刻の昇順（ND.events自体は既にbyStartAscで昇順整列済みだが、
+  // ここでの再ソートは他経路から呼ばれた場合の防御として残す）
   Object.keys(chipsByDay).forEach(k=>chipsByDay[k].sort((a,b)=>(a.start||"").localeCompare(b.start||"")));
   assignLanes(barIntervals);
   const laneCount = barIntervals.reduce((m,c)=>Math.max(m,c.lane+1), 0);
