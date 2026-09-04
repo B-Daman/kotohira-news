@@ -552,6 +552,8 @@
   .hamburger-btn{display:none}
   .weather-chip{display:none}
   .weather-chip-panel{display:none}
+  .dam-chip{display:none}
+  .dam-chip-panel{display:none}
   .drawer-overlay{display:none}
   .carousel-arrow{display:none}
 
@@ -666,6 +668,16 @@
     .weather-chip-panel.show{display:block;border-top:1px solid var(--line);
       padding:14px 12px 16px;background:var(--card)}
 
+    /* 💧 早明浦ダムチップ：天気チップと完全に同じ見た目・流儀（サイズ・配色・開閉トークンを共用）。
+       390px幅で天気チップ・ハンバーガーと3つ並んでも収まるよう詰め表記「💧8.3%」にする */
+    .dam-chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:5px 11px;
+      align-items:center;gap:4px;font-family:inherit;font-weight:700;font-size:12.5px;line-height:1;color:var(--ink);cursor:pointer;white-space:nowrap}
+    .dam-chip.ready{display:inline-flex}
+    .dam-chip:hover,.dam-chip.open{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
+    .dam-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .dam-chip-panel.show{display:block;border-top:1px solid var(--line);
+      padding:14px 12px 16px;background:var(--card)}
+
     /* ハンバーガードロワー（右寄せ。既存.modal-overlayと同じdisplay切替方式） */
     .drawer-overlay.show{display:flex;position:fixed;inset:0;z-index:90;
       background:rgba(30,25,20,.5);justify-content:flex-end}
@@ -773,12 +785,16 @@
         <div class="brand" id="hTitle">ことひらいふ <small>香川県琴平町の"今"をお届け</small></div>
         <div class="topbar-actions">
           <button type="button" class="weather-chip" id="weatherChip" aria-haspopup="true" aria-expanded="false" aria-controls="weatherChipPanel"></button>
+          <button type="button" class="dam-chip" id="damChip" aria-haspopup="true" aria-expanded="false" aria-controls="damChipPanel"></button>
           <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-haspopup="true" aria-expanded="false" aria-controls="drawerPanel" aria-label="メニューを開く">☰</button>
         </div>
       </div>
       <nav class="primary-nav" id="primaryNav" aria-label="メインメニュー"></nav>
       <div class="weather-chip-panel" id="weatherChipPanel" aria-label="今日の琴平の天気">
         <div id="weatherChipPanelBody"></div>
+      </div>
+      <div class="dam-chip-panel" id="damChipPanel" aria-label="早明浦ダムの貯水状況">
+        <div id="damChipPanelBody"></div>
       </div>
     </div>
   </div>
@@ -991,11 +1007,18 @@ function init(){
   document.getElementById("drawerNav").addEventListener("click", onDrawerNavClick);
   if(window.SiteNav) window.SiteNav.bindAccordionToggles(document.getElementById("drawerNav"));
   document.getElementById("weatherChip").addEventListener("click", toggleWeatherChipPanel);
+  document.getElementById("damChip").addEventListener("click", toggleDamChipPanel);
   document.addEventListener("click", function(e){
     const panel = document.getElementById("weatherChipPanel");
-    if(!panel || !panel.classList.contains("show")) return;
-    if(e.target.closest("#weatherChipPanel") || e.target.closest("#weatherChip")) return;
-    closeWeatherChipPanel();
+    if(panel && panel.classList.contains("show")
+      && !e.target.closest("#weatherChipPanel") && !e.target.closest("#weatherChip")){
+      closeWeatherChipPanel();
+    }
+    const damPanel = document.getElementById("damChipPanel");
+    if(damPanel && damPanel.classList.contains("show")
+      && !e.target.closest("#damChipPanel") && !e.target.closest("#damChip")){
+      closeDamChipPanel();
+    }
   });
   document.addEventListener("keydown", function(e){
     const modalOverlay = document.getElementById("modalOverlay");
@@ -1033,6 +1056,8 @@ function init(){
     if(e.key === "Escape"){
       const panel = document.getElementById("weatherChipPanel");
       if(panel && panel.classList.contains("show")) closeWeatherChipPanel();
+      const damPanel = document.getElementById("damChipPanel");
+      if(damPanel && damPanel.classList.contains("show")) closeDamChipPanel();
     }
   });
   window.addEventListener("hashchange", render);
@@ -1041,6 +1066,7 @@ function init(){
   renderCommunityWidgets();
   renderFooterLinks();
   loadWeatherWidget();
+  renderDamChip();
   render();
 }
 
@@ -1059,6 +1085,7 @@ function render(opt){
   const r = parseHash();
   closeDrawer();
   closeWeatherChipPanel();
+  closeDamChipPanel();
   renderTabs(r);
   const m = document.getElementById("main");
   document.body.dataset.view = r.view;
@@ -1522,6 +1549,7 @@ function openDrawer(){
   const overlay = document.getElementById("drawerOverlay");
   if(!overlay || overlay.classList.contains("show")) return;
   closeWeatherChipPanel();
+  closeDamChipPanel();
   drawerLastFocusedEl = document.activeElement;
   overlay.classList.add("show");
   overlay.setAttribute("aria-hidden", "false");
@@ -3108,31 +3136,51 @@ function renderCommunityWidgets(){
   host.innerHTML = `<div class="widget-stack">${damHTML}${featuredHTML}${lineHTML}${adsHTML}</div>`;
   host.classList.toggle("mobile-empty", !damHTML && !lineHTML && !featuredHTML);
 }
-/* 💧 早明浦ダム 貯水状況ウィジェット（dam-data.js 由来）。DAMが無い/observedAtが不正な形式なら
-   ウィジェットごと非表示にする（homeUdonOpenHTMLのデータ未着パターンを踏襲）。fetch_dam.pyは
-   1日2回しか実行されずリアルタイム値ではないため「○月○日○時時点（速報値）」を必ず添える。
-   欠測値（storage/inflow/outflow/rateがnull）は「—」表示にし、0へ潰さない。 */
-function damWidgetCardHTML(){
-  if(!DAM) return "";
+/* 💧 早明浦ダムの貯水状況データを表示用に整形する。DAMが無い/observedAtが不正な形式なら
+   nullを返す（呼び出し側でサイドバーウィジェット／モバイルヘッダーチップの両方を丸ごと
+   非表示にする＝homeUdonOpenHTMLのデータ未着パターンを踏襲）。fetch_dam.pyは1日2回しか
+   実行されずリアルタイム値ではないため「○月○日○時時点（速報値）」を必ず添える。
+   欠測値（storage/inflow/outflow/rateがnull）は「—」表示にし、0へ潰さない。
+   サイドバーウィジェット(damWidgetCardHTML)とモバイルヘッダーの早明浦ダムチップ
+   (renderDamChip)の両方から呼ばれる共通ロジック（DRY）。 */
+function damContent(){
+  if(!DAM) return null;
   const m = ("" + (DAM.observedAt || "")).match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/);
-  if(!m) return "";
-  const observedLabel = `${+m[2]}月${+m[3]}日 ${+m[4]}時時点（速報値）`;
+  if(!m) return null;
   const fmtNum = (v, digits) => (v === null || v === undefined || v === "" || isNaN(Number(v)))
     ? "—" : Number(v).toFixed(digits);
-  const rateText = fmtNum(DAM.rate, 1);
   const storageUnit = DAM.storageUnit ? (" " + DAM.storageUnit) : "";
-  const sourceUrl = safeUrl(DAM.sourceUrl);
+  return {
+    name: DAM.name || "早明浦ダム",
+    rateText: fmtNum(DAM.rate, 1),
+    rateLabel: DAM.rateLabel || "貯水率",
+    storageText: fmtNum(DAM.storage, 0) + storageUnit,
+    inflowText: fmtNum(DAM.inflow, 1) + " m³/s",
+    outflowText: fmtNum(DAM.outflow, 1) + " m³/s",
+    observedLabel: `${+m[2]}月${+m[3]}日 ${+m[4]}時時点（速報値）`,
+    sourceUrl: safeUrl(DAM.sourceUrl)
+  };
+}
+/* damContent()の中身（貯水率・貯水量等の行・観測時刻注記・出典リンク）だけを組み立てる。
+   カード枠（widget-card）やチップパネルの外枠は呼び出し側が用意する。 */
+function damBodyHTML(c){
+  return `<div class="dam-rate"><span class="dam-rate-num">${esc(c.rateText)}<span class="dam-rate-pct">%</span></span><span class="dam-rate-label">${esc(c.rateLabel)}</span></div>
+    <div class="dam-rows">
+      <div class="dam-row"><span>貯水量</span><span>${esc(c.storageText)}</span></div>
+      <div class="dam-row"><span>流入量</span><span>${esc(c.inflowText)}</span></div>
+      <div class="dam-row"><span>放流量</span><span>${esc(c.outflowText)}</span></div>
+    </div>
+    <p class="widget-note">${esc(c.observedLabel)}</p>
+    ${c.sourceUrl ? `<div class="widget-links"><a class="widget-link" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">出典: 川の防災情報 ↗</a></div>` : ""}`;
+}
+/* 💧 早明浦ダム 貯水状況ウィジェット（PCサイドバー）。 */
+function damWidgetCardHTML(){
+  const c = damContent();
+  if(!c) return "";
   return `<section class="widget-card dam-card" aria-labelledby="damWidgetTitle">
     <span class="widget-kicker">水資源</span>
-    <div class="widget-title" id="damWidgetTitle">💧 ${esc(DAM.name || "早明浦ダム")} 貯水状況</div>
-    <div class="dam-rate"><span class="dam-rate-num">${esc(rateText)}<span class="dam-rate-pct">%</span></span><span class="dam-rate-label">${esc(DAM.rateLabel || "貯水率")}</span></div>
-    <div class="dam-rows">
-      <div class="dam-row"><span>貯水量</span><span>${esc(fmtNum(DAM.storage, 0))}${esc(storageUnit)}</span></div>
-      <div class="dam-row"><span>流入量</span><span>${esc(fmtNum(DAM.inflow, 1))} m³/s</span></div>
-      <div class="dam-row"><span>放流量</span><span>${esc(fmtNum(DAM.outflow, 1))} m³/s</span></div>
-    </div>
-    <p class="widget-note">${esc(observedLabel)}</p>
-    ${sourceUrl ? `<div class="widget-links"><a class="widget-link" href="${esc(sourceUrl)}" target="_blank" rel="noopener">出典: 川の防災情報 ↗</a></div>` : ""}
+    <div class="widget-title" id="damWidgetTitle">💧 ${esc(c.name)} 貯水状況</div>
+    ${damBodyHTML(c)}
   </section>`;
 }
 
@@ -3353,8 +3401,11 @@ function renderWeatherChip(state){
     closeWeatherChipPanel();
     return;
   }
-  const tempLabel = (day.max !== null && day.max !== undefined) ? `${esc(day.max)}°` : "--";
-  chip.innerHTML = `<span aria-hidden="true">${weatherIcon(day.weatherCode)}</span><span>${tempLabel}</span>`;
+  // 最高気温が無い時刻帯（夕方以降など）は絵文字のみへフォールバックする（"--"等のプレースホルダは出さない）
+  const hasMax = day.max !== null && day.max !== undefined;
+  chip.innerHTML = hasMax
+    ? `<span aria-hidden="true">${weatherIcon(day.weatherCode)}</span><span>${esc(day.max)}°</span>`
+    : `<span aria-hidden="true">${weatherIcon(day.weatherCode)}</span>`;
   chip.classList.add("ready");
   const panelBody = document.getElementById("weatherChipPanelBody");
   if(panelBody) panelBody.innerHTML = weatherForecastHTML(state.data, state.cached);
@@ -3366,6 +3417,7 @@ function toggleWeatherChipPanel(){
 }
 function openWeatherChipPanel(){
   if(!weatherChipState) return;
+  closeDamChipPanel(); // 排他: 片方を開いたらもう片方は閉じる（同時に2枚開かない）
   const panel = document.getElementById("weatherChipPanel");
   const chip = document.getElementById("weatherChip");
   if(!panel) return;
@@ -3375,6 +3427,44 @@ function openWeatherChipPanel(){
 function closeWeatherChipPanel(){
   const panel = document.getElementById("weatherChipPanel");
   const chip = document.getElementById("weatherChip");
+  if(panel) panel.classList.remove("show");
+  if(chip){ chip.classList.remove("open"); chip.setAttribute("aria-expanded", "false"); }
+}
+/* 💧 早明浦ダムチップ（モバイルヘッダー）。天気チップと完全に同じ流儀の開閉。DAMはdam-data.js
+   由来で同期的に読み込み済みのため、天気チップと違って非同期fetchは不要（init()から
+   renderDamChip()を1回呼ぶだけでよい）。 */
+function renderDamChip(){
+  const chip = document.getElementById("damChip");
+  if(!chip) return;
+  const c = damContent();
+  if(!c){
+    chip.classList.remove("ready");
+    chip.innerHTML = "";
+    closeDamChipPanel();
+    return;
+  }
+  chip.innerHTML = `<span aria-hidden="true">💧</span><span>${esc(c.rateText)}%</span>`;
+  chip.classList.add("ready");
+  const panelBody = document.getElementById("damChipPanelBody");
+  if(panelBody) panelBody.innerHTML = damBodyHTML(c);
+}
+function toggleDamChipPanel(){
+  const panel = document.getElementById("damChipPanel");
+  if(panel && panel.classList.contains("show")) closeDamChipPanel();
+  else openDamChipPanel();
+}
+function openDamChipPanel(){
+  const chip = document.getElementById("damChip");
+  if(!chip || !chip.classList.contains("ready")) return;
+  closeWeatherChipPanel(); // 排他: 片方を開いたらもう片方は閉じる（同時に2枚開かない）
+  const panel = document.getElementById("damChipPanel");
+  if(!panel) return;
+  panel.classList.add("show");
+  chip.classList.add("open"); chip.setAttribute("aria-expanded", "true");
+}
+function closeDamChipPanel(){
+  const panel = document.getElementById("damChipPanel");
+  const chip = document.getElementById("damChip");
   if(panel) panel.classList.remove("show");
   if(chip){ chip.classList.remove("open"); chip.setAttribute("aria-expanded", "false"); }
 }
