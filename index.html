@@ -885,6 +885,11 @@ const LINKS = (window.LINKS_DATA && Array.isArray(window.LINKS_DATA.categories))
 /* 🍜 うどん店（udon-data.js 由来。CSV＋Web調査を正規化した手編集運用） */
 const UDON = (window.UDON_DATA && typeof window.UDON_DATA === "object")
   ? window.UDON_DATA : { checked: "", kinds: [], items: [] };
+/* うどん店は掲載許可が未取得のため、データは残したまま表示だけ止める（お店の営業カレンダーと
+   同様の判断。2026-09-05 あっきーさん判断）。udon-data.js 自体は一切変更しない。
+   許可が揃ったら true に戻すだけで udonTabHTML・ホームの「いま営業中のうどん店」モジュール・
+   タブ見出しの件数表記の全表示が復活する（ナビのタブ自体は準備中の間も残す）。 */
+const UDON_PUBLISHED = false;
 
 /* 🍧 かき氷・アイス（cool-sweets-data.js 由来。夏の参拝者向け手編集運用） */
 const COOL_SWEETS = (window.COOL_SWEETS_DATA && typeof window.COOL_SWEETS_DATA === "object")
@@ -1176,7 +1181,7 @@ function pageTitleMeta(view){
     events:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
     campaigns:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
     experiences:experienceUpdated ? `更新 ${fmtDate(experienceUpdated)}` : "",
-    udon:[`${(UDON.items || []).filter(x=>x.show !== false).length}件`, UDON.checked ? `確認 ${fmtDate(UDON.checked)}` : ""].filter(Boolean).join(" · "),
+    udon:UDON_PUBLISHED ? [`${(UDON.items || []).filter(x=>x.show !== false).length}件`, UDON.checked ? `確認 ${fmtDate(UDON.checked)}` : ""].filter(Boolean).join(" · ") : "",
     sweets:[`${(COOL_SWEETS.items || []).filter(x=>x.show !== false).length}店`, COOL_SWEETS.checked ? `確認 ${fmtDate(COOL_SWEETS.checked)}` : ""].filter(Boolean).join(" · "),
     parking:[`${(PARKING.items || []).filter(x=>x.show !== false).length}件`, PARKING.checked ? `確認 ${fmtDate(PARKING.checked)}` : ""].filter(Boolean).join(" · "),
     orgs:D.updated ? `更新 ${fmtDate(D.updated)}` : "",
@@ -1725,6 +1730,7 @@ function setUpCarousel(carousel){
 /* ホーム：いま営業中のうどん店モジュール。schedule を持つ店が1件も無ければ（データ未着時）何も出さない。
    ニュースの直後に置き、主要3セクションより控えめな装いにする。判定は改修Bと同じ営業時間の目安。 */
 function homeUdonOpenHTML(){
+  if(!UDON_PUBLISHED) return "";
   const items = (UDON.items || []).filter(x => x.show !== false && x.schedule);
   if(!items.length) return "";
   const np = jstNowParts();
@@ -2602,6 +2608,7 @@ function experienceModalHTML(it){
 
 /* ===== 🍜 うどん店タブ（CSV＋Web調査。種類別カード＋全体マップ＋詳細モーダル） ===== */
 function udonTabHTML(){
+  if(!UDON_PUBLISHED) return emptyMsg("うどん店情報は準備中です。");
   const items = (UDON.items || []).filter(x => x.show !== false);
   if(!items.length) return emptyMsg("うどん店情報が登録されていません。");
 

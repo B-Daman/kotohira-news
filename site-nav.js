@@ -24,6 +24,12 @@
           {key:"events", label:"📅 イベント"},
           {key:"campaigns", label:"🎁 キャンペーン"}
         ]},
+      /* 2026-09-05: 町民向けサイトという性格から、くらしを訪れる・関わるより先に置く（あっきーさん判断） */
+      {key:"kurashi", label:"🏡 くらし", shortLabel:"🏡 くらし",
+        items:[
+          {key:"towncal", label:"🗓 こんぴらカレンダー"},
+          {key:"shopcal", label:"🏪 お店の営業カレンダー"}
+        ]},
       {key:"visit", label:"🧭 訪れる・関わる", shortLabel:"🧭 訪れる",
         items:[
           {key:"experiences", label:"🧭 体験・滞在"},
@@ -31,11 +37,6 @@
           /* sweets（かき氷・アイス）は2026-08-28にアーカイブ。#sweets直リンクでページは開けるが
              メニューには出さない。復活させる場合はここに {key:"sweets", label:"🍧 かき氷・アイス"} を戻す */
           {key:"parking", label:"🅿 駐車場"}
-        ]},
-      {key:"kurashi", label:"🏡 くらし", shortLabel:"🏡 くらし",
-        items:[
-          {key:"towncal", label:"🗓 こんぴらカレンダー"},
-          {key:"shopcal", label:"🏪 お店の営業カレンダー"}
         ]},
       {key:"know", label:"🔗 町を知る", shortLabel:"🔗 町を知る",
         items:[
