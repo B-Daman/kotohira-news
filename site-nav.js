@@ -46,9 +46,9 @@
     /* index.htmlのSPAビュー（#operator等）への通常のハッシュ遷移。groups同様、他のitemsと
        同じ扱いでよくなったため、urlフィールドは持たない（2026-09-05のSPA統合で廃止）。 */
     siteLinks: [
-      {key:"operator", label:"運営者情報"},
-      {key:"contact", label:"お問い合わせ"},
-      {key:"privacy", label:"プライバシーポリシー"}
+      {key:"operator", label:"👤 運営者情報"},
+      {key:"contact", label:"✉️ お問い合わせ"},
+      {key:"privacy", label:"🔒 プライバシーポリシー"}
     ]
   };
 
@@ -70,7 +70,7 @@
       return `<a class="drawer-link${active ? " active" : ""}" href="#${escNav(it.key)}">${escNav(it.label)}</a>`;
     };
     const groups = (window.SITE_NAV.groups || []).concat([{
-      key:"siteinfo", label:"サイト情報",
+      key:"siteinfo", label:"ℹ️ サイト情報",
       items: window.SITE_NAV.siteLinks || []
     }]);
     return groups.map(g=>{

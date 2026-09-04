@@ -361,7 +361,9 @@
   .weather-text{font-size:13.5px;font-weight:900;line-height:1.4;margin-top:1px}
   .weather-meta{display:flex;gap:8px;flex-wrap:wrap;color:#4d4740;font-size:11.5px;margin-top:3px}
   .weather-fallback{font-size:12.5px;color:var(--sub);line-height:1.65}
-  .quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  /* .quick-route: 「目的から探す」カード（2026-09-05削除）の名残だが、home-udon-moreボタンが
+     同じクラスを流用しているため維持する。.quick-grid（4ボタンの2x2グリッド）はカード削除に
+     伴い他に使用箇所が無いため削除済み。 */
   .quick-route{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 7px;
     color:var(--ink);font-family:inherit;font-weight:700;font-size:11.5px;line-height:1.35;text-align:left;cursor:pointer}
   .quick-route:hover{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
@@ -800,9 +802,11 @@
       </div>
       <nav class="primary-nav" id="primaryNav" aria-label="メインメニュー"></nav>
       <div class="weather-chip-panel" id="weatherChipPanel" aria-label="今日の琴平の天気">
+        <div class="widget-title">香川県琴平町の天気</div>
         <div id="weatherChipPanelBody"></div>
       </div>
       <div class="dam-chip-panel" id="damChipPanel" aria-label="早明浦ダムの貯水状況">
+        <div class="widget-title">早明浦ダムの貯水率</div>
         <div id="damChipPanelBody"></div>
       </div>
     </div>
@@ -926,9 +930,9 @@ const PAGE_META = {
   links:{title:"🔗 リンク"},
   /* サイト情報3ページ（2026-09-05にoperator.html等からSPA統合。上部タブグループには入れず、
      ドロワー/フッターの「サイト情報」からのみ遷移する独立ページという性質は維持する） */
-  operator:{title:"運営者情報"},
-  contact:{title:"お問い合わせ"},
-  privacy:{title:"プライバシーポリシー"}
+  operator:{title:"👤 運営者情報"},
+  contact:{title:"✉️ お問い合わせ"},
+  privacy:{title:"🔒 プライバシーポリシー"}
 };
 const MEDIA_CLASS = {
   "note":"note", "Instagram":"instagram", "X":"x", "HP":"website",
@@ -3185,21 +3189,10 @@ function igEmbed(url){
 }
 function xEmbed(url){ return `<blockquote class="twitter-tweet"><a href="${esc(safeUrl(url))}"></a></blockquote>`; }
 
-/* ===== 共通ウィジェット（天気／目的別入口／LINE／地域スポンサー） ===== */
-/* 「目的から探す」クイックナビのカード。サイドバー（常時表示）とホーム最上部（モバイルのみ）の
-   2箇所で共用する。aria-labelledbyのidが重複しないよう呼び出し側でtitleIdを振り分ける。 */
-function quickNavCardHTML(titleId, extraClass){
-  return `<section class="widget-card${extraClass ? " " + extraClass : ""}" aria-labelledby="${titleId}">
-      <span class="widget-kicker">目的から探す</span>
-      <div class="widget-title" id="${titleId}">琴平で何をする？</div>
-      <div class="quick-grid">
-        <button class="quick-route" data-route="events">📅 イベント</button>
-        <button class="quick-route" data-route="udon">🍜 うどん店</button>
-        <button class="quick-route" data-route="experiences">🧭 体験・滞在</button>
-        <button class="quick-route" data-route="parking">🅿 駐車場</button>
-      </div>
-    </section>`;
-}
+/* ===== 共通ウィジェット（天気／LINE／地域スポンサー） =====
+   「目的から探す（琴平で何をする？）」のクイックナビカードは、上部ナビと導線が重複するため
+   2026-09-05にあっきーさん判断で削除した（quickNavCardHTML関数・呼び出し・専用CSSの.quick-grid
+   を削除。ボタン自体のスタイル.quick-routeはhome-udon-more等の別ボタンでも使っているため維持）。 */
 function renderUtilityWidgets(){
   const host = document.getElementById("utilityWidgets");
   const weather = WIDGETS.weather || {};
@@ -3212,7 +3205,6 @@ function renderUtilityWidgets(){
     </section>` : "";
   host.innerHTML = `<div class="widget-stack">
     ${weatherCard}
-    ${quickNavCardHTML("quickWidgetTitle", "sidebar-quicknav")}
   </div>`;
 }
 
