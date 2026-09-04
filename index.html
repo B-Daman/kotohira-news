@@ -42,6 +42,9 @@
        白文字バッジのコントラスト比AA(4.5:1)を満たす調整値。他は初代のまま */
     --note:#258475; --ig:#c13584; --x:#1d1d1f; --web:#3170eb; --yt:#df3047; --ameblo:#298542;
     --media-newspaper:#3a5a80; --media-tv:#a9631e; --media-gov:#458263; --media-webmedia:#7c5cbf; --media-other:#7e756a;
+    /* 🏪 お店の営業カレンダーのSNSバッジ用。既存--web/--igとは別に、Facebook公式ブルーと
+       Threadsの黒系を新規トークンとして持つ（.shop-sns配下でだけ使う。他タブの配色は変えない） */
+    --fb:#1877f2; --threads:#0a0a0a;
   }
   *{box-sizing:border-box}
   /* iOS Safariの文字自動拡大を無効化。放置すると<a>だけ拡大され<button>はされないため、
@@ -570,6 +573,46 @@
   .towncal-source a{color:var(--accent-d);font-weight:700}
   .towncal-source a:hover{text-decoration:underline}
 
+  /* 🏪 お店の営業カレンダー：コンパクトリスト＋詳細モーダル構成（tmp-shopcal-a.htmlの試作を本実装）。
+     警告文言はtowncal-noticeより強い視認性にするためaccent単色背景＋白太字にする */
+  .shop-warn-notice{background:var(--accent);color:#fff;border-radius:10px;padding:12px 16px;
+    font-size:13.5px;font-weight:900;line-height:1.6;margin-bottom:16px;display:flex;gap:8px;align-items:flex-start}
+  .shop-warn-notice .ico{font-size:16px;line-height:1.4}
+  /* ジャンル絞り込みチップ（統合カレンダーのソース切替チップと同じ流儀の単一選択トグル。
+     クラス名は.cal-layer-chipとは独立させ、機能同士を結合させない） */
+  .genre-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+  .genre-chip{display:inline-flex;align-items:center;border:1px solid var(--line);background:#fff;
+    color:var(--sub);border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:700;
+    cursor:pointer;font-family:inherit}
+  .genre-chip:hover{border-color:var(--accent);color:var(--accent-d)}
+  .genre-chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+  .shop-genre{display:inline-block;background:var(--accent-soft);color:var(--accent-d);border-radius:999px;
+    padding:2px 10px;font-size:11px;font-weight:700}
+  .shop-list{border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+  .shop-row{width:100%;display:flex;align-items:center;gap:10px;padding:13px 15px;
+    border:0;border-bottom:1px solid var(--line);background:var(--card);color:var(--ink);
+    text-align:left;font-family:inherit;cursor:pointer}
+  .shop-row:last-child{border-bottom:0}
+  .shop-row:hover{background:var(--accent-soft)}
+  .shop-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .shop-row-name{flex:1;min-width:0;font-size:14px;font-weight:900;overflow:hidden;
+    text-overflow:ellipsis;white-space:nowrap}
+  .shop-row-month{font-size:11.5px;color:var(--sub);font-weight:700;white-space:nowrap}
+  .shop-row-arrow{color:var(--sub);font-size:16px}
+  .old-flag{color:var(--accent-d);font-weight:900}
+  /* 390px幅だと店名(可変)+ジャンルバッジ+月表記+矢印の1行では窮屈で右端がはみ出すため、
+     狭い画面だけ折り返しを許可する（店名は全幅、残りは2行目へ。tmp-shopcal-a/bの試作撮影で
+     headless Chromeの390px未満クランプに引っかかって気づいた実害） */
+  @media (max-width:480px){
+    .shop-row{flex-wrap:wrap;row-gap:5px}
+    .shop-row-name{flex:1 1 100%}
+  }
+  .shop-sns{margin-top:10px}
+  /* Facebook・Threadsは新規トークン。既存.lk.facebook（リンク/団体タブ）とは.shop-sns配下でのみ
+     上書きし、他タブの配色は変えない（Facebookは公式ブルー#1877f2、Threadsは黒系） */
+  .shop-sns .lk.facebook{background:var(--fb)}
+  .shop-sns .lk.threads{background:var(--threads)}
+
   @media (min-width:1100px){
     .page-shell{grid-template-columns:minmax(0,1fr) 300px;
       grid-template-areas:"main utility" "main community";grid-template-rows:max-content 1fr;
@@ -783,6 +826,8 @@ const ND = {
   news: Array.isArray(ND_RAW.news) ? ND_RAW.news : [],
   events: Array.isArray(ND_RAW.events) ? ND_RAW.events : [],
   campaigns: Array.isArray(ND_RAW.campaigns) ? ND_RAW.campaigns : [],
+  /* 🏪 お店の営業カレンダー（notion-data.js 由来。fetch_notion.py が表示対象✓かつ画像ありのみ抽出） */
+  shops: Array.isArray(ND_RAW.shops) ? ND_RAW.shops : [],
   /* Notion側（notion-data.js）に experiences があればそれを正とし、
      未生成（空）なら手編集の experiences-data.js（window.EXPERIENCES_DATA）を使う */
   experiences: (Array.isArray(ND_RAW.experiences) && ND_RAW.experiences.length)
@@ -837,6 +882,7 @@ const PAGE_META = {
   sweets:{title:"🍧 かき氷・アイス"},
   parking:{title:"🅿 駐車場"},
   towncal:{title:"🗓 こんぴらカレンダー"},
+  shopcal:{title:"🏪 お店の営業カレンダー"},
   orgs:{title:"📋 団体"},
   links:{title:"🔗 リンク"}
 };
@@ -899,6 +945,7 @@ let pinnedNavGroup = null;
 let suppressNavFocusOpen = false;
 let drawerLastFocusedEl = null;   // モバイルドロワーを開く直前のフォーカス先（閉じたら戻す）
 let weatherChipState = null;      // {data, cached}|null  loadWeatherWidgetが取得した予報（チップ・展開パネル共用。取得失敗時はnull）
+let shopGenreFilter = "";         // 🏪 お店の営業カレンダーのジャンル絞り込み（単一選択。空="すべて"。ページ内のみ保持）
 
 /* ===== 起動 ===== */
 function init(){
@@ -990,7 +1037,7 @@ function parseHash(){
     try{ return {view:"org", id: decodeURIComponent(h.slice(4))}; }
     catch(e){ return {view:"orgs"}; }
   }
-  if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","towncal","links"].indexOf(h) >= 0) return {view:h};
+  if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","towncal","shopcal","links"].indexOf(h) >= 0) return {view:h};
   return {view:"home"};
 }
 
@@ -1025,6 +1072,8 @@ function render(opt){
     m.innerHTML = parkingTabHTML();
   } else if(r.view === "towncal"){
     m.innerHTML = towncalTabHTML();
+  } else if(r.view === "shopcal"){
+    m.innerHTML = shopcalTabHTML();
   } else if(r.view === "links"){
     m.innerHTML = linksTabHTML();
   } else {
@@ -1268,6 +1317,8 @@ function onMainClick(e){
   if(calView){ switchEventCalView(calView.dataset.calView); return; }
   const calNav = e.target.closest("[data-cal-nav]");
   if(calNav){ navigateCalendar(calNav.dataset.calTarget, parseInt(calNav.dataset.calNav, 10) || 0); return; }
+  const shopGenre = e.target.closest("[data-shop-genre]");
+  if(shopGenre){ setShopGenreFilter(shopGenre.dataset.shopGenre); return; }
 }
 function onMainInput(e){
   if(e.target && e.target.id === "orgSearchInput"){
@@ -1381,6 +1432,7 @@ function registerItem(it, kind){
     : kind === "udon" ? "ud"
     : kind === "sweets" ? "sweet"
     : kind === "parking" ? "pk"
+    : kind === "shop" ? "shop"
     : "camp";
   const slug = contentSlug(prefix, it);
   itemRegistry[slug] = {item: it, kind};
@@ -1397,6 +1449,7 @@ function modalContentHTML(it, kind){
   if(kind === "udon") return udonModalHTML(it);
   if(kind === "sweets") return coolSweetModalHTML(it);
   if(kind === "parking") return parkingModalHTML(it);
+  if(kind === "shop") return shopModalHTML(it);
   const placeParts = [];
   if(it.city && it.city !== "琴平町") placeParts.push(it.city);
   if(it.place) placeParts.push(it.place);
@@ -2806,6 +2859,112 @@ function towncalTabHTML(){
     <p class="hint" style="margin-top:8px">画像をタップすると拡大表示できます</p>`
     : emptyMsg("カレンダー画像は準備中です。")}
     <p class="towncal-source">出典：${esc(T.sourceName || "広報ことひら（琴平町発行）")}${sourceUrl ? ` <a href="${esc(sourceUrl)}" target="_blank" rel="noopener">${esc(T.sourceLinkLabel || "琴平町ホームページ")} ↗</a>` : ""}<br>詳細・最新情報は琴平町ホームページをご覧ください。</p>`;
+}
+
+/* ===== 🏪 お店の営業カレンダータブ（お店DB由来。表示対象✓かつ画像ありのみ。notion-data.js経由・
+   fetch_notion.pyがNotionネイティブアップロードの画像をassets/thumbsへローカル保存する）。
+   構成はコンパクトリスト＋詳細モーダル（tmp-shopcal-a.htmlの試作をあっきーさんが選定・本実装）。
+   ジャンル絞り込みチップの単一選択状態はページ内のみ保持（shopGenreFilter）。 */
+function shopcalTabHTML(){
+  const shops = ND.shops;
+  if(!shops.length) return emptyMsg("お店の営業カレンダーは準備中です。");
+  return `
+    <div class="shop-warn-notice"><span class="ico" aria-hidden="true">⚠</span><span>最新の営業状況は、必ず各お店の公式Instagram・ホームページでご確認ください</span></div>
+    <div id="shopcalListArea">${shopcalListAreaHTML(shops)}</div>`;
+}
+/* データに実在するジャンルだけ列挙する（データ駆動。統合カレンダーのソース切替チップと同じ流儀）。
+   「すべて」＋実在ジャンルの単一選択チップ＋コンパクト行リストをまとめて再生成する。
+   ジャンルチップ切替のたびにこの関数だけ呼び直せばよい（#shopcalListAreaを丸ごと差し替え）。 */
+function shopcalListAreaHTML(shops){
+  shops = shops || ND.shops;
+  const genreSet = new Set();
+  shops.forEach(s => (Array.isArray(s.genres) ? s.genres : []).forEach(g => genreSet.add(g)));
+  const chipKeys = [""].concat(Array.from(genreSet));
+  const chipsHtml = chipKeys.map(key=>{
+    const on = shopGenreFilter === key;
+    return `<button type="button" class="genre-chip" data-shop-genre="${esc(key)}" aria-pressed="${on?'true':'false'}">${esc(key || "すべて")}</button>`;
+  }).join("");
+  const filtered = shopGenreFilter ? shops.filter(s => (s.genres||[]).includes(shopGenreFilter)) : shops;
+  const rowsHtml = filtered.length
+    ? filtered.map(shopRowHTML).join("")
+    : emptyMsg("該当するお店がありません。");
+  return `<div class="genre-chips" role="group" aria-label="ジャンルで絞り込む">${chipsHtml}</div>
+    <div class="shop-list">${rowsHtml}</div>`;
+}
+function shopMonthLabel(month){
+  const mm = ("" + (month||"")).match(/^(\d{4})-(\d{2})$/);
+  return mm ? `${+mm[1]}年${+mm[2]}月版` : "";
+}
+function isShopMonthOld(month){
+  const mm = ("" + (month||"")).match(/^(\d{4})-(\d{2})$/);
+  if(!mm) return false;
+  const now = new Date();
+  const thisMonth = `${now.getFullYear()}-${pad2(now.getMonth()+1)}`;
+  return month < thisMonth;
+}
+/* コンパクト行：店名＋ジャンルバッジ（先頭1件）＋○月版（古ければ⚠付き）＋シェブロン。
+   data-open-detailは既存のonMainClick委譲（[data-open-detail]ハンドラ）にそのまま乗る＝
+   新規のクリック配線は不要（統合カレンダー等と同じregisterItem/openDetailModalインフラを共用）。 */
+function shopRowHTML(shop){
+  const slug = registerItem(shop, "shop");
+  const genre = (Array.isArray(shop.genres) && shop.genres[0]) || "";
+  const isOld = isShopMonthOld(shop.month);
+  return `<button type="button" class="shop-row" data-open-detail="${esc(slug)}" aria-haspopup="dialog">
+    <span class="shop-row-name">${esc(shop.name)}</span>
+    ${genre ? `<span class="shop-genre">${esc(genre)}</span>` : ""}
+    <span class="shop-row-month">${isOld ? '<span class="old-flag" aria-hidden="true">⚠ </span>' : ''}${esc(shopMonthLabel(shop.month))}</span>
+    <span class="shop-row-arrow" aria-hidden="true">›</span>
+  </button>`;
+}
+/* ジャンルチップ切替（onMainClickの[data-shop-genre]から呼ばれる）。切替後は#shopcalListAreaだけ
+   再生成し、押したチップへフォーカスを戻す（toggleEventCalLayerと同じ配慮）。 */
+function setShopGenreFilter(key){
+  shopGenreFilter = key;
+  const host = document.getElementById("shopcalListArea");
+  if(!host) return;
+  host.innerHTML = shopcalListAreaHTML();
+  const btn = Array.from(host.querySelectorAll("[data-shop-genre]")).find(b => b.dataset.shopGenre === key);
+  if(btn) try{ btn.focus({preventScroll:true}); }catch(e){ btn.focus(); }
+}
+/* お店詳細モーダルのSNSバッジ。field=お店データのキー、cls=既存.lkバッジのクラス名（linksタブ・
+   団体タブと共用。hpだけ.lk.websiteに寄せる）、label=表示テキスト */
+const SHOP_SNS = [
+  {field:"instagram", cls:"instagram", label:"Instagram"},
+  {field:"x", cls:"x", label:"X"},
+  {field:"facebook", cls:"facebook", label:"Facebook"},
+  {field:"threads", cls:"threads", label:"Threads"},
+  {field:"hp", cls:"website", label:"HP"}
+];
+/* お店詳細モーダル本体。modalContentHTML(it,"shop")から呼ばれる（既存のopenDetailModal/
+   registerItemインフラに乗せている。イベント・うどん等と同じ「タブ→行/カードクリック→
+   共通モーダル」の流儀）。元の投稿は既存.modal-link（大ボタン）を流用して主役級にする。 */
+function shopModalHTML(shop){
+  const genres = Array.isArray(shop.genres) ? shop.genres : [];
+  const imgSrc = safeUrl(shop.image);
+  const monthLabel = shopMonthLabel(shop.month);
+  const isOld = isShopMonthOld(shop.month);
+  const genresHtml = genres.length
+    ? `<div class="modal-badge-row">${genres.map(g=>`<span class="modal-badge status-upcoming">${esc(g)}</span>`).join("")}</div>`
+    : "";
+  const snsHtml = SHOP_SNS.map(s=>{
+    const u = safeUrl(shop[s.field]);
+    return u ? `<a class="lk ${s.cls}" href="${esc(u)}">${s.label}↗</a>` : "";
+  }).filter(Boolean).join("");
+  const sourcePost = safeUrl(shop.sourcePost);
+  const mapUrl = safeUrl(shop.map);
+  return `
+    <h3 class="modal-title" id="modalTitle">${esc(shop.name)}</h3>
+    ${genresHtml}
+    ${imgSrc ? `
+    <a href="${esc(imgSrc)}" target="_blank" rel="noopener">
+      <img class="modal-img fit-contain" src="${esc(imgSrc)}" alt="${esc(shop.name)}の営業カレンダー${monthLabel ? "（"+esc(monthLabel)+"）" : ""}" loading="lazy" onerror="this.style.display='none'">
+    </a>
+    <div class="hint" style="margin:6px 0 0">画像をタップすると拡大表示できます</div>` : ""}
+    ${monthLabel ? `<div class="hint" style="margin:6px 0 0">${esc(monthLabel)}</div>` : ""}
+    ${isOld ? `<div class="towncal-notice" style="margin-top:8px">この画像は${esc(monthLabel)}です。最新はお店のSNSでご確認ください。</div>` : ""}
+    ${sourcePost ? `<a class="modal-link" href="${esc(sourcePost)}" target="_blank" rel="noopener">元の投稿を見る ↗</a>` : ""}
+    ${snsHtml ? `<div class="links shop-sns" style="margin-top:12px">${snsHtml}</div>` : ""}
+    ${mapUrl ? `<div style="margin-top:10px"><a class="modal-link secondary" href="${esc(mapUrl)}" target="_blank" rel="noopener">地図を見る ↗</a></div>` : ""}`;
 }
 
 /* ===== 🔗 リンクタブ（公式サイトへのリンク集。links-data.js 由来・コード直書き） ===== */

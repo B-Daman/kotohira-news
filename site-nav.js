@@ -32,7 +32,10 @@
           {key:"parking", label:"🅿 駐車場"}
         ]},
       {key:"kurashi", label:"🏡 くらし", shortLabel:"🏡 くらし",
-        items:[{key:"towncal", label:"🗓 こんぴらカレンダー"}]},
+        items:[
+          {key:"towncal", label:"🗓 こんぴらカレンダー"},
+          {key:"shopcal", label:"🏪 お店の営業カレンダー"}
+        ]},
       {key:"know", label:"🔗 町を知る", shortLabel:"🔗 町を知る",
         items:[
           {key:"orgs", label:"📋 団体"},

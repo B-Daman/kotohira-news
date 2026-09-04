@@ -9,6 +9,7 @@
   - `registry.json`（団体×媒体の正本）→ `/kotohira-news` スキル経由で `data.js` を再生成
   - Notion 3DB（イベント/キャンペーン/ニュース）→ `scripts/fetch_notion.py` 経由で `notion-data.js` を再生成（GitHub Actions `.github/workflows/update-notion-data.yml` が毎日15:00 UTC＝JST 0:00に自動実行し、コミット・pushまで行う）
   - 早明浦ダム貯水状況（国交省「川の防災情報」）→ `scripts/fetch_dam.py` 経由で `dam-data.js` を再生成（GitHub Actions `.github/workflows/update-dam-data.yml` が1日2回＝22:00/10:00 UTC〈JST 7:00/19:00〉に自動実行し、コミット・pushまで行う。リアルタイム値ではないため表示側は必ず観測時刻を明示する）
+  - 琴平町お店DB（お店の営業カレンダー）→ Notion 3DBと同じ `scripts/fetch_notion.py` 経由で `notion-data.js` の `shops` キーを再生成（表示対象✓かつ画像ありのみ。画像はNotionネイティブアップロードのためassets/thumbsへローカル保存）
   - `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` / `towncal-data.js` は手編集運用（現状把握、生成スクリプトは未確認）
 - 画像は長辺1200pxのWebPに揃える。`fetch_notion.py` が取得時に圧縮し、`find_local_thumb` は
   同名ファイルがあれば `.webp` を優先する。手動で `assets/` に画像を足す場合も、

@@ -91,10 +91,14 @@ CAMPAIGN_DB_ID = os.environ.get(
 # 環境変数 EXPERIENCE_NOTION_DB_ID にDB IDを設定すると取得対象になる。
 # 未設定の間は取得処理そのものをスキップし、既存3DBの動作に影響を与えない。
 EXPERIENCE_DB_ID = os.environ.get("EXPERIENCE_NOTION_DB_ID", "")
+# 琴平町お店DB（お店の営業カレンダー）。EVENT_DB_ID等と同じくデフォルトを直書きする方式
+# （2026-09-04接続確認済み、読み取り専用インテグレーション）。
+SHOP_DB_ID = os.environ.get("SHOP_NOTION_DB_ID", "3d10b4e5ff5b805caaa3e8ac1feaa083")
 
 NEWS_MAX = 60
 EVENT_MAX = 200
 EXPERIENCE_MAX = 200
+SHOP_MAX = 100
 RECENT_WINDOW_DAYS = 60
 
 THUMBS_DIR = os.path.join(REPO_ROOT, "assets", "thumbs")
@@ -256,6 +260,14 @@ def get_select(properties: dict[str, Any], key: str) -> str:
     if not p or not p.get("select"):
         return ""
     return p["select"].get("name", "")
+
+
+def get_multi_select(properties: dict[str, Any], key: str) -> list[str]:
+    """multi_selectプロパティの選択肢名のリストを返す（未選択は空リスト）。"""
+    p = _prop(properties, key)
+    if not p or not p.get("multi_select"):
+        return []
+    return [o.get("name", "") for o in p["multi_select"] if o.get("name")]
 
 
 def get_checkbox(properties: dict[str, Any], key: str) -> bool:
@@ -775,6 +787,47 @@ def fetch_experiences(database_id: str, token: str) -> list[dict[str, Any]]:
     return [item for item in items if item.get("show")]
 
 
+def parse_shop(page: dict[str, Any]) -> dict[str, Any]:
+    """お店の営業カレンダーDBの1ページを表示用dictへ変換する。
+
+    「今月のカレンダー」はNotionネイティブアップロード（files）で、Notion側の
+    署名付きURLは短時間で失効するため、取得直後に save_images で assets/thumbs
+    へローカル保存する（events/newsのimage/thumbnailと同じ流儀）。「市町村」
+    列は存在しても参照しない（削除予定のため）。
+    """
+    properties = page.get("properties", {})
+    return {
+        "id": page.get("id", ""),
+        "name": get_title(properties, "店名"),
+        "genres": get_multi_select(properties, "ジャンル"),
+        "image": get_files_url(properties, "今月のカレンダー"),
+        "month": get_rich_text(properties, "更新月"),
+        "instagram": get_url(properties, "Instagram"),
+        "x": get_url(properties, "X"),
+        "facebook": get_url(properties, "Facebook"),
+        "threads": get_url(properties, "Threads"),
+        "hp": get_url(properties, "HP"),
+        "sourcePost": get_url(properties, "元投稿URL"),
+        "map": get_url(properties, "GoogleマップURL"),
+        "address": get_rich_text(properties, "住所"),
+        "note": get_rich_text(properties, "備考"),
+        "show": get_checkbox(properties, "表示対象"),
+    }
+
+
+def fetch_shops(token: str) -> list[dict[str, Any]]:
+    """お店DBを取得し、「表示対象」チェック済み かつ 画像ありの項目のみ返す。
+
+    並びは店名の昇順（Notion側ソート）。画像が無い店は営業カレンダーとして
+    掲載する意味が無いためここで弾く（表示対象チェックだけでは防げない）。
+    """
+    dsid = get_data_source_id(SHOP_DB_ID, token)
+    sorts = [{"property": "店名", "direction": "ascending"}]
+    pages = query_data_source(dsid, token, sorts, SHOP_MAX)
+    items = [parse_shop(p) for p in pages]
+    return [item for item in items if item.get("show") and item.get("image")]
+
+
 def load_existing_data() -> dict[str, Any]:
     """既存の notion-data.js があれば window.NOTION_DATA の中身を返す。
 
@@ -825,6 +878,7 @@ def main() -> None:
         ("news", "thumbnail", lambda: fetch_news(token)),
         ("events", "image", lambda: fetch_events(EVENT_DB_ID, token)),
         ("campaigns", "image", lambda: fetch_events(CAMPAIGN_DB_ID, token)),
+        ("shops", "image", lambda: fetch_shops(token)),
     ]
     # 体験・滞在DBは EXPERIENCE_NOTION_DB_ID が設定されている場合のみ取得する。
     if EXPERIENCE_DB_ID:
@@ -854,7 +908,7 @@ def main() -> None:
             errors[key] = type(e).__name__
 
     # 失敗したDBは、既存 notion-data.js に該当キーがあれば温存する
-    result_keys = ["news", "events", "campaigns"]
+    result_keys = ["news", "events", "campaigns", "shops"]
     if EXPERIENCE_DB_ID:
         result_keys.append("experiences")
     for key in result_keys:
@@ -880,6 +934,7 @@ def main() -> None:
         "news": result.get("news", []),
         "events": result.get("events", []),
         "campaigns": result.get("campaigns", []),
+        "shops": result.get("shops", []),
     }
     # 体験・滞在は、DB設定済みか既存データがある場合のみ書き出す（未設定時は
     # キー自体を省略し、既存の体験データがあれば温存する）。
