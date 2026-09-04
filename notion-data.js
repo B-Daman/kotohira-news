@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-04 03:15",
+  "fetched": "2026-09-05 02:56",
   "news": [
+    {
+      "id": "3d10b4e5-ff5b-81bc-960a-f118f20b9dd3",
+      "title": "琴平町の一之橋公園付近で第8回 こんぴら秋夜市のプレイベント「ことひらふれあい音楽祭」が2026年9月5日(土)に開催される",
+      "url": "https://www.marugame2.jp/events/129766",
+      "summary": "早いもので9月に入りましたが、まだまだ夏の夜のにぎやかさが恋しい今日この頃。今回ご紹介するのは、「第8回 こんぴら秋夜市」のプレイベントとして2026年9月5日(土)に琴平町の一之橋公園付近で開催され",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-09-04",
+      "thumbnail": "assets/thumbs/3d10b4e5ff5b81bc960af118f20b9dd3.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3d00b4e5-ff5b-8196-b70c-e69eec376876",
+      "title": "琴平町が地域おこし協力隊員・黒木晶子さんを委嘱",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026090400000002000",
+      "summary": "琴平町は9月1日、福島県出身の黒木晶子さん（65）を新たな地域おこし協力隊員として委嘱した。観光商工課に所属し、観光協会のサポートや観光情報発信に取り組む。任期は最長3年。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-09-03",
+      "thumbnail": "assets/thumbs/3d00b4e5ff5b8196b70ce69eec376876.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3d00b4e5-ff5b-8156-8d39-c034d0b6f78a",
       "title": "第3回こんぴら観光まちづくり検定",
@@ -24,6 +50,19 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-09-03",
       "thumbnail": "assets/thumbs/3d00b4e5ff5b81aeb9ffd071f83faf89.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3d00b4e5-ff5b-8163-a4e1-daa7d735ac45",
+      "title": "【延期】琴平町で「第4回 台湾フェス・台湾夜市 in 琴平」が2026年9月5日(土)に開催される！絶品台湾グルメ＆二胡生演奏が楽しめる♪",
+      "url": "https://www.marugame2.jp/events/129838",
+      "summary": "琴平町と台湾・瑞芳区の友好協定を記念したイベント。台湾屋台グルメ、電音三太子と二胡の生演奏、台湾トークショーなどが楽しめる。9月1日～14日は町内参加店舗で台湾コラボメニュー展開。",
+      "org": "まるつー",
+      "media": "Webメディア",
+      "date": "2026-09-02",
+      "thumbnail": "assets/thumbs/3d00b4e5ff5b8163a4e1daa7d735ac45.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -102,6 +141,19 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-08-30",
       "thumbnail": "assets/thumbs/3ce0b4e5ff5b81d2a666ee65653573c4.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3d00b4e5-ff5b-818c-ac3c-dc98c57d873f",
+      "title": "琴平町新町商店街のアーケード解体工事開始",
+      "url": "https://www.marugame2.jp/topics/129443",
+      "summary": "琴平町の新町商店街（歌舞伎新町）でアーケードの解体工事が始まった。工事期間は2026年8月3日から2027年1月ごろまでで、期間中は一部通行止めになる予定。",
+      "org": "まるつー（丸亀・坂出・善通寺・多度津の地域情報サイト）",
+      "media": "Webメディア",
+      "date": "2026-08-29",
+      "thumbnail": "assets/thumbs/3d00b4e5ff5b818cac3cdc98c57d873f.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -248,35 +300,24 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3bf0b4e5-ff5b-81f2-81a1-e303b7695754",
-      "title": "珈琲ジェリー牛乳本舗 JiJi&Jelly 4周年を迎える",
-      "url": "https://www.instagram.com/p/DcCe7KizX79/",
-      "summary": "珈琲ジェリー牛乳本舗 JiJi&Jellyが2026年8月15日に4周年を迎えた。店主は交通事故による頚椎手術のため入院中だが、リハビリに取り組む予定。",
-      "org": "Instagram（珈琲ジェリー牛乳本舗 JiJi&Jelly）",
-      "media": "Webメディア",
-      "date": "2026-08-15",
-      "thumbnail": "assets/thumbs/3bf0b4e5ff5b81f281a1e303b7695754.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3bf0b4e5-ff5b-8185-bad6-c5c313d21746",
-      "title": "ことウラさんぽ プレモニターツアー開催決定！＆中讃ケーブルテレビ放送のお知らせ",
-      "url": "https://www.instagram.com/p/Db_3rulEx0k/",
-      "summary": "琴平町の橋の物語をめぐるプレモニターツアーが9月6日（日）に開催される。中讃ケーブルテレビで放送される「歴史のみ方」番組の取材内容をもとに、祇園橋、鞘橋、一之橋、栄橋、玄孝橋、大宮橋の6つの橋の歴史を紹介するツアー。",
-      "org": "Instagram（ことウラさんぽ）",
-      "media": "Webメディア",
-      "date": "2026-08-14",
-      "thumbnail": "assets/thumbs/3bf0b4e5ff5b8185bad6c5c313d21746.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
+    {
+      "id": "3d10b4e5-ff5b-8159-9816-c01cbdd2c1cf",
+      "title": "着物でランチ会～つるや旅館～",
+      "url": "https://www.instagram.com/p/Dc1NErYmDwA/",
+      "start": "2026-12-06T12:00",
+      "end": "2026-12-06T14:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "つるや旅館",
+      "address": "766-0001 香川県仲多度郡琴平町620",
+      "image": "assets/thumbs/3d10b4e5ff5b81599816c01cbdd2c1cf.webp",
+      "comment": "こんぴらさんの門前町にある江戸末期創業の老舗旅館つるや旅館で、着物を着用してのランチ会を開催。女将による和食の食べ方講座付き。",
+      "fee": "5500",
+      "organizer": "こんぴら路地裏着物レンタル藤田屋"
+    },
     {
       "id": "3d00b4e5-ff5b-815b-8074-d95b25c98d21",
       "title": "第3回こんぴら観光まちづくり検定",
@@ -523,7 +564,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
       "start": "2026-09-05T17:00",
       "end": "2026-09-05T20:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -538,7 +579,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DbSN6Pfgej_/",
       "start": "2026-09-05T15:00",
       "end": "2026-09-05T20:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -1656,21 +1697,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "3950b4e5-ff5b-810f-a474-ed5867f3436d",
-      "title": "ヤマザキヤマト＆三好東洋 民族打楽器&ハンドパンライブ",
-      "url": "https://www.instagram.com/p/DaR5jLXpXXQ/",
-      "start": "2026-07-06T19:00",
-      "end": "2026-07-06T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/3950b4e5ff5b810fa474ed5867f3436d.webp",
-      "comment": "ハンドパンのパイオニア・ヤマザキヤマトと、アフリカン音楽を牽引する三好東洋による民族楽器ライブ。7月6日に香川県仲多度郡琴平町の麻心で開催。",
-      "fee": "",
-      "organizer": "麻心"
     }
   ],
   "campaigns": [
@@ -1764,5 +1790,6 @@ window.NOTION_DATA = {
       "fee": "",
       "organizer": "うさぎいろ"
     }
-  ]
+  ],
+  "shops": []
 };
