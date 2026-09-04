@@ -135,14 +135,8 @@
   .acct-head .name{font-size:1.25rem;font-weight:900;margin:0 0 4px}
   .acct-head .desc{margin:6px 0 12px;font-size:14px;color:#43403b}
 
-  /* サブタブ 見た目 */
-  .subtabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-  .subtab{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 16px;
-    font-size:13px;font-weight:700;cursor:pointer;color:var(--sub);transition:.12s;font-family:inherit}
-  .subtab:hover{border-color:var(--accent)}
-  .subtab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-
-  /* フィード（団体の更新一覧・ニュースの定例ピックアップ 共用） */
+  /* フィード（ニュースの定例ピックアップで使用。団体詳細は2026-09-05にセクション型へ移行し、
+     home-boxカードに統一したため、団体側の.feed-item生成元だった旧feedItem()は廃止済み） */
   .feed{display:flex;flex-direction:column;gap:10px}
   .feed-item{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;
     padding:11px 14px;align-items:center;text-decoration:none;color:inherit;transition:border-color .12s}
@@ -293,6 +287,11 @@
   .hs-news{--hs:var(--accent)}
   .hs-events{--hs:#3170eb}
   .hs-camps{--hs:#1d8a4e}
+  /* 団体詳細ページ（2026-09-05にサブタブ切替→セクション型スクロールへ移行）の媒体別見出し色。
+     既存の媒体色トークンをそのまま流用する（新規カラーは作らない） */
+  .hs-org-note{--hs:var(--note)} .hs-org-instagram{--hs:var(--ig)} .hs-org-x{--hs:var(--x)}
+  .hs-org-website{--hs:var(--web)} .hs-org-youtube{--hs:var(--yt)} .hs-org-ameblo{--hs:var(--ameblo)}
+  .hs-org-other{--hs:var(--media-other)}
   .home-sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 10px}
   .home-sec-head .group-h{margin:0;color:var(--hs)}
   .hs-sub{flex:1;font-size:12px;color:var(--sub);white-space:nowrap}
@@ -559,8 +558,9 @@
   .drawer-overlay{display:none}
   .carousel-arrow{display:none}
 
-  /* 埋め込みグリッド（Instagram/X） */
-  .embeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(328px,1fr));gap:14px;align-items:start}
+  /* Instagram/X埋め込み：2026-09-05以降は団体詳細のcard-grid（ホームと共通のカルーセル部品）に
+     直接置くため専用グリッドは廃止。幅はcard-gridのカードスロットに合わせて縮められるよう、
+     公式埋め込みの固定min-widthを打ち消す2行だけ残す */
   .instagram-media{margin:0 auto !important;min-width:auto !important}
   .twitter-tweet{margin:0 auto !important}
 
@@ -980,8 +980,6 @@ const JP_HOLIDAYS = new Set(Object.keys(JP_HOLIDAY_NAMES));
 
 /* ===== 画面状態 ===== */
 let orgSearchTerm = "";
-let orgSub = "updates";
-let currentOrgId = null;
 let campaignCalMonth = null;      // {y, mo} キャンペーンカレンダーの表示中の月
 let eventCalMonth = null;         // {y, mo} イベントカレンダーの表示中の月
 /* "month" | "week" イベントカレンダーの表示モード。初期値はページ読み込み時点の画面幅で決める
@@ -1117,9 +1115,7 @@ function render(opt){
   } else if(r.view === "org"){
     const o = D.orgs.find(x=>x.id===r.id);
     if(!o){ location.hash = "#orgs"; return; }
-    if(currentOrgId !== o.id){ orgSub = "updates"; currentOrgId = o.id; }
     m.innerHTML = orgDetailHTML(o);
-    loadEmbedsForOrgSub(orgSub);
   } else if(r.view === "news"){
     m.innerHTML = newsTabHTML();
   } else if(r.view === "events"){
@@ -1152,6 +1148,7 @@ function render(opt){
   if(r.view !== "org") m.innerHTML = pageTitleCardHTML(r.view) + m.innerHTML;
   insertMobileInlineAds(m, r.view);
   bindCarouselArrows();
+  setupOrgEmbedLazyLoad();
   scrollEventWeekToToday();
   const meta = PAGE_META[r.view];
   const orgTitle = r.view === "org" ? (D.orgs.find(x=>x.id===r.id)?.name || "") : "";
@@ -1362,18 +1359,6 @@ function onMainClick(e){
   if(orgRow){ location.hash = "#org=" + encodeURIComponent(orgRow.dataset.orgId); return; }
   const back = e.target.closest("[data-route]");
   if(back){ location.hash = "#" + back.dataset.route; return; }
-  const subBtn = e.target.closest("[data-org-sub]");
-  if(subBtn){
-    orgSub = subBtn.dataset.orgSub;
-    const o = D.orgs.find(x=>x.id===currentOrgId);
-    const sp = document.getElementById("subpanel");
-    if(sp && o){
-      sp.innerHTML = orgSubPanelHTML(o);
-      document.querySelectorAll("[data-org-sub]").forEach(btn=>btn.classList.toggle("active", btn.dataset.orgSub===orgSub));
-      loadEmbedsForOrgSub(orgSub);
-    }
-    return;
-  }
   const openBtn = e.target.closest("[data-open-detail]");
   if(openBtn){
     const entry = itemRegistry[openBtn.dataset.openDetail];
@@ -1506,6 +1491,7 @@ function registerItem(it, kind){
     : kind === "sweets" ? "sweet"
     : kind === "parking" ? "pk"
     : kind === "shop" ? "shop"
+    : kind === "orgfeed" ? "of"
     : "camp";
   const slug = contentSlug(prefix, it);
   itemRegistry[slug] = {item: it, kind};
@@ -1523,6 +1509,7 @@ function modalContentHTML(it, kind){
   if(kind === "sweets") return coolSweetModalHTML(it);
   if(kind === "parking") return parkingModalHTML(it);
   if(kind === "shop") return shopModalHTML(it);
+  if(kind === "orgfeed") return orgFeedModalHTML(it);
   const placeParts = [];
   if(it.city && it.city !== "琴平町") placeParts.push(it.city);
   if(it.place) placeParts.push(it.place);
@@ -1822,12 +1809,12 @@ function lastUpdated(o){
   return dates.length ? fmtDate(dates[dates.length-1]) : "―";
 }
 
-/* ===== 団体詳細（ドリルダウン） ===== */
+/* ===== 団体詳細（2026-09-05: サブタブ切替→1スクロールのセクション型に移行。
+   媒体（note/Ameblo/HP更新などのテキスト系→Instagram→X）ごとに、ホームと同じ
+   home-sec＋carouselHTML部品を並べる。投稿データが無い媒体はセクションごと出さない
+   （ヘッダーのlinkBadgesに導線は残るので迷子にはならない）===== */
 function orgDetailHTML(o){
-  const subtabs = [{key:"updates", label:"📝 更新"}];
-  if((o.instagram||[]).length) subtabs.push({key:"instagram", label:"Instagram"});
-  if((o.x||[]).length) subtabs.push({key:"x", label:"X"});
-  if(!subtabs.some(s=>s.key===orgSub)) orgSub = "updates";
+  const sectionsHtml = orgTextSectionsHTML(o) + orgEmbedSectionHTML("instagram", o) + orgEmbedSectionHTML("x", o);
   return `
     <button class="back-link" data-route="orgs">← 団体一覧にもどる</button>
     <div class="acct-head">
@@ -1835,43 +1822,79 @@ function orgDetailHTML(o){
       <p class="desc">${esc(o.summary||"")}</p>
       <div class="links">${linkBadges(o.links)}</div>
     </div>
-    <div class="subtabs">
-      ${subtabs.map(s=>`<button class="subtab ${orgSub===s.key?'active':''}" data-org-sub="${s.key}">${s.label}</button>`).join("")}
-    </div>
-    <div id="subpanel">${orgSubPanelHTML(o)}</div>`;
+    ${sectionsHtml || emptyMsg("まだ発信がありません。registry.json にRSSや投稿URLを登録すると、ここに媒体ごとのセクションが並びます。")}`;
 }
-function orgSubPanelHTML(o){
-  if(orgSub === "instagram"){
-    const urls = (o.instagram||[]).slice(0,2);
-    return urls.length
-      ? `<div class="hint">Instagram（最大2件）</div><div class="embeds">${urls.map(igEmbed).join("")}</div>`
-      : emptyMsg("Instagram投稿URLが未登録です。投稿URLを登録すると埋め込み表示されます。");
-  }
-  if(orgSub === "x"){
-    const urls = (o.x||[]).slice(0,2);
-    return urls.length
-      ? `<div class="hint">X / 旧Twitter（最大2件）</div><div class="embeds">${urls.map(xEmbed).join("")}</div>`
-      : emptyMsg("X投稿URLが未登録です。");
-  }
-  const items = (o.items||[]).slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));
-  return items.length
-    ? `<div class="feed">${items.map(feedItem).join("")}</div>`
-    : emptyMsg("まだ更新がありません。registry.json にRSSを登録すると、ここに最新記事がサムネ付きで並びます。");
+/* 団体セクションの外枠。ホームのhomeSection()と同じ.home-sec/.home-sec-head/.group-hを流用するが、
+   もっと見る先は内部ルート（data-route）ではなく媒体プロフィールへの外部リンクなので専用に持つ。
+   extraAttrはInstagram/Xセクションの遅延読み込みトリガー（data-embed-lazy）用 */
+function orgSectionHTML(hsCls, title, moreUrl, bodyHtml, extraAttr){
+  const more = moreUrl ? `<a class="more-link" href="${esc(moreUrl)}">もっと見る ↗</a>` : "";
+  return `<section class="home-sec ${hsCls}"${extraAttr||""}>
+    <div class="home-sec-head"><h2 class="group-h">${esc(title)}</h2>${more}</div>
+    ${bodyHtml}
+  </section>`;
 }
-function feedItem(it){
+/* SNS配列の並び順に揃えるための補助。未知のsourceは末尾に回す */
+function orgSourceOrderIndex(key){
+  const i = SNS.findIndex(s=>s.key===key);
+  return i === -1 ? 999 : i;
+}
+/* テキスト系媒体（note/Ameblo/HP更新など）：o.itemsをsource別にグルーピングし、
+   媒体ごとに独立したセクションを作る（1団体がnote+Amebloを両方持つ場合も重複なく並ぶ） */
+function orgTextSectionsHTML(o){
+  const bySource = {};
+  (o.items||[]).forEach(it=>{
+    const key = it.source || "other";
+    (bySource[key] = bySource[key] || []).push(it);
+  });
+  return Object.keys(bySource)
+    .sort((a,b)=> orgSourceOrderIndex(a) - orgSourceOrderIndex(b) || a.localeCompare(b))
+    .map(key=>{
+      const items = bySource[key].slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,3);
+      const known = SNS.find(s=>s.key===key);
+      const hsCls = "hs-org-" + (known ? key : "other");
+      const moreUrl = safeUrl(o.links && o.links[key]);
+      return orgSectionHTML(hsCls, "📝 " + (known ? known.label : key), moreUrl,
+        carouselHTML(`<div class="card-grid">${items.map(orgFeedBox).join("")}</div>`));
+    }).join("");
+}
+/* テキスト系媒体のカード。ホーム最新ニュースのnewsBox()と同じ部品（.home-box/.hb-*）を、
+   団体items側のフィールド名（it.source。it.mediaのようなマッピングを介さずCSSクラス名と直結）に合わせて流用 */
+function orgFeedBox(it){
   const cls = esc(it.source || "other");
-  const letter = esc((it.source||"?").charAt(0));
   const imgSrc = safeUrl(it.thumbnail);
   const img = imgSrc
-    ? `<img src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-    : `<div class="fi-ph ph src ${cls}">${letter}</div>`;
-  const meta = [
-    `<span class="src ${cls}">${esc(it.source||"")}</span>`,
-    `<span>${esc(fmtDate(it.date))}</span>`
-  ].join(" ");
+    ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    : `<div class="hb-img ph src ${cls}">${esc((it.source||"?").charAt(0))}</div>`;
+  const meta = `<span class="src ${cls}">${esc(it.source||"")}</span><span>${esc(fmtDate(it.date))}</span>`;
+  const slug = registerItem(it, "orgfeed");
+  const inner = `${img}<div class="hb-body"><div class="hb-meta">${meta}</div><div class="hb-title">${esc(it.title)}</div></div>`;
+  return `<div class="home-box" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
+}
+/* Instagram/Xセクション。投稿URLが1件も無ければセクションごと出さない（"" を返す） */
+function orgEmbedSectionHTML(kind, o){
+  const isIg = kind === "instagram";
+  const urls = (isIg ? (o.instagram||[]) : (o.x||[])).slice(0,3);
+  if(!urls.length) return "";
+  const cardsHtml = urls.map(isIg ? igEmbed : xEmbed).join("");
+  const moreUrl = safeUrl(o.links && o.links[isIg ? "instagram" : "x"]);
+  return orgSectionHTML(isIg ? "hs-org-instagram" : "hs-org-x", isIg ? "Instagram" : "X", moreUrl,
+    carouselHTML(`<div class="card-grid">${cardsHtml}</div>`),
+    ` data-embed-lazy="${kind}"`);
+}
+function orgFeedModalHTML(it){
+  const cls = esc(it.source || "other");
+  const imgSrc = safeUrl(it.thumbnail);
   const href = safeUrl(it.url);
-  const inner = `${img}<span class="fi-body"><span class="fi-meta">${meta}</span><div class="fi-ttl">${esc(it.title)}</div></span>`;
-  return href ? `<a class="feed-item" href="${esc(href)}">${inner}</a>` : `<div class="feed-item">${inner}</div>`;
+  const meta = [
+    it.source ? `<span class="src ${cls}">${esc(it.source)}</span>` : "",
+    it.date ? `<span>${esc(fmtDate(it.date))}</span>` : ""
+  ].filter(Boolean).join(" ");
+  return `
+    ${imgSrc ? `<img class="modal-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
+    <h3 class="modal-title" id="modalTitle">${esc(it.title)}</h3>
+    <div class="modal-meta">${meta}</div>
+    ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">記事を開く ↗</a>` : ""}`;
 }
 
 /* ===== ニュース：フィード行（定例ピックアップで使用） ===== */
@@ -3171,7 +3194,9 @@ function ensureIgScript(cb){
   if(igScriptState === "loading"){ setTimeout(()=>ensureIgScript(cb), 300); return; }
   igScriptState = "loading";
   const s = document.createElement("script");
-  s.src = "//www.instagram.com/embed.js";
+  /* プロトコル相対URL（//...）だとfile://で開いた検証環境ではfile://解決になり読み込みに失敗する
+     （本番のhttps配信では実害無いが、明示的にhttps://を書いた方が事故がない） */
+  s.src = "https://www.instagram.com/embed.js";
   s.async = true;
   s.onload = function(){ igScriptState = "ready"; cb(); };
   document.head.appendChild(s);
@@ -3186,9 +3211,28 @@ function ensureTwttrScript(cb){
   s.onload = function(){ twttrScriptState = "ready"; cb(); };
   document.head.appendChild(s);
 }
-function loadEmbedsForOrgSub(sub){
-  if(sub === "instagram"){ ensureIgScript(function(){ try{ window.instgrm.Embeds.process(); }catch(e){} }); }
-  else if(sub === "x"){ ensureTwttrScript(function(){ try{ window.twttr.widgets.load(); }catch(e){} }); }
+/* 団体詳細のInstagram/Xセクションは、画面に近づいた時だけ埋め込みスクリプトを起動する
+   （IntersectionObserver。rootMargin分手前で先読みし、1度起動したら監視解除）。render()の
+   たびに呼ぶが、org以外のビューにはdata-embed-lazy要素が無いので何もしない。
+   直前のorg詳細で作ったobserverが残っているとデタッチ済みノードを参照し続けるため、
+   毎回作り直す前に必ずdisconnectする */
+let orgEmbedObserver = null;
+function setupOrgEmbedLazyLoad(){
+  if(orgEmbedObserver){ orgEmbedObserver.disconnect(); orgEmbedObserver = null; }
+  const targets = document.querySelectorAll("#main [data-embed-lazy]");
+  if(!targets.length) return;
+  if(!("IntersectionObserver" in window)){ targets.forEach(triggerOrgEmbed); return; }
+  orgEmbedObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ triggerOrgEmbed(entry.target); orgEmbedObserver.unobserve(entry.target); }
+    });
+  }, {rootMargin:"300px 0px", threshold:0.01});
+  targets.forEach(function(t){ orgEmbedObserver.observe(t); });
+}
+function triggerOrgEmbed(el){
+  const kind = el.dataset.embedLazy;
+  if(kind === "instagram"){ ensureIgScript(function(){ try{ window.instgrm.Embeds.process(); }catch(e){} }); }
+  else if(kind === "x"){ ensureTwttrScript(function(){ try{ window.twttr.widgets.load(); }catch(e){} }); }
 }
 function igEmbed(url){
   return `<blockquote class="instagram-media" data-instgrm-permalink="${esc(safeUrl(url))}" data-instgrm-version="14"
