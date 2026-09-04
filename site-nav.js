@@ -1,8 +1,9 @@
 /* サイトのナビ構造（第一階層グループ×第二階層ページ）とサイト情報3リンクを一元管理する。
-   index.html（SPAのタブ・ハンバーガードロワー）と operator.html/contact.html/privacy.html
-   （ドロワーのみ。PC用タブが無いので☰は常時表示）で共有する。
-   CSSは各ページ側に用意する（index.htmlの<style>内 と site-info.css）。ここではデータと
-   HTML生成・開閉の配線だけを持つ。 */
+   2026-09-05: 運営者情報/お問い合わせ/プライバシーポリシーはindex.htmlのSPAビュー
+   （#operator/#contact/#privacy）へ統合し、旧operator.html/contact.html/privacy.htmlは
+   リダイレクト殻になった。このファイルはindex.htmlのみが使う（site-info.cssも同様に
+   index.html非依存の3ページ専用だったため、3ページ側での参照は無くなっている）。
+   CSSはindex.htmlの<style>内に用意する。ここではデータとHTML生成・開閉の配線だけを持つ。 */
 (function(){
   "use strict";
 
@@ -42,48 +43,46 @@
           {key:"links", label:"🔗 リンク"}
         ]}
     ],
-    /* index.html側はWIDGETS.footerLinksの実URLで上書きするため、ここではファイル名の直書きでよい。
-       operator/contact/privacy.htmlは自分自身からの相対パスとしてこの値をそのまま使う */
+    /* index.htmlのSPAビュー（#operator等）への通常のハッシュ遷移。groups同様、他のitemsと
+       同じ扱いでよくなったため、urlフィールドは持たない（2026-09-05のSPA統合で廃止）。 */
     siteLinks: [
-      {key:"operator", label:"運営者情報", url:"operator.html"},
-      {key:"contact", label:"お問い合わせ", url:"contact.html"},
-      {key:"privacy", label:"プライバシーポリシー", url:"privacy.html"}
+      {key:"operator", label:"運営者情報"},
+      {key:"contact", label:"お問い合わせ"},
+      {key:"privacy", label:"プライバシーポリシー"}
     ]
   };
 
-  /* ===== ドロワーのアコーディオンHTML生成（index.html・情報3ページ共通） =====
+  /* ===== ドロワーのアコーディオンHTML生成 =====
      大分類は「ホーム/町の今/訪れる・関わる/くらし/町を知る/サイト情報」の6つ。
      items 1件のグループはデフォルトではトグル付きアコーディオンとして出す（例: くらし ▸ こんぴらカレンダー）。
      ホームだけは「グループを開いてから選ぶ」動線が冗長なため、flat:true を付けてトグル無しの
      単独リンクにする（1件グループ＝単独リンクを常時にすると、今後同様の単項目グループを足すたびに
      意図せずアコーディオンが消えてしまうため、対象をホームに限定する明示フラグにした）。
-     leafの実リンクの作り方（ハッシュ遷移 or 実ページへの<a>）だけ呼び出し側のbuildLeafHtmlに委ねる。
-     opts: {activeGroupKey, activeItemKey, activeSiteLinkKey, buildLeafHtml(it,active), resolveSiteLinkUrl(link)} */
+     2026-09-05: サイト情報3件（運営者情報等）もSPAの通常ルートになったため、他のitemsと同じ
+     activeItemKey判定・buildLeafHtmlで統一した（以前あったisSiteLink/resolveSiteLinkUrlの
+     別経路は廃止。呼び出し側のindex.htmlがactiveGroupKeyに"siteinfo"を渡せば、この3件を含む
+     グループとして開閉・アクティブ表示される）。
+     leafの実リンクの作り方（ハッシュ遷移等）だけ呼び出し側のbuildLeafHtmlに委ねる。
+     opts: {activeGroupKey, activeItemKey, buildLeafHtml(it,active)} */
   function accordionHTML(opts){
     opts = opts || {};
     const buildLeafHtml = opts.buildLeafHtml || function(it, active){
       return `<a class="drawer-link${active ? " active" : ""}" href="#${escNav(it.key)}">${escNav(it.label)}</a>`;
     };
-    const resolveSiteLinkUrl = opts.resolveSiteLinkUrl || function(link){ return link.url; };
     const groups = (window.SITE_NAV.groups || []).concat([{
       key:"siteinfo", label:"サイト情報",
-      items:(window.SITE_NAV.siteLinks || []).map(l => Object.assign({isSiteLink:true}, l))
+      items: window.SITE_NAV.siteLinks || []
     }]);
     return groups.map(g=>{
       const items = g.items || [];
-      if(g.flat && items.length === 1 && !items[0].isSiteLink){
+      if(g.flat && items.length === 1){
         const it = items[0];
         return buildLeafHtml(it, opts.activeItemKey === it.key);
       }
       const subId = "drawerSub-" + g.key;
       const expanded = g.key === opts.activeGroupKey;
-      const hasActive = items.some(it => it.isSiteLink
-        ? opts.activeSiteLinkKey === it.key
-        : opts.activeItemKey === it.key);
-      const leafHtml = items.map(it => it.isSiteLink
-        ? `<a class="drawer-link${opts.activeSiteLinkKey===it.key?' active':''}" href="${escNav(resolveSiteLinkUrl(it))}" target="_self" rel="noopener"${opts.activeSiteLinkKey===it.key?' aria-current="page"':''}>${escNav(it.label)}</a>`
-        : buildLeafHtml(it, opts.activeItemKey === it.key)
-      ).join("");
+      const hasActive = items.some(it => opts.activeItemKey === it.key);
+      const leafHtml = items.map(it => buildLeafHtml(it, opts.activeItemKey === it.key)).join("");
       return `<div class="drawer-group">
         <button type="button" class="drawer-group-toggle${hasActive?' active':''}" aria-expanded="${expanded?'true':'false'}" aria-controls="${subId}">
           <span class="drawer-group-label">${escNav(g.label)}</span>
@@ -111,100 +110,8 @@
     });
   }
 
-  /* ===== 情報3ページ（operator/contact/privacy.html）専用：ハンバーガー＋ドロワーを自前で組み立てる =====
-     index.htmlは自前のドロワー実装（SPAのハッシュ遷移・#appFrameのinert化と統合済み）を使うため
-     こちらは呼ばない。3ページ側は <script src="site-nav.js"></script> の後に
-     SiteNav.mountInfoDrawer("operator"|"contact"|"privacy") を1回呼ぶだけでよい。 */
-  function mountInfoDrawer(activeSiteLinkKey){
-    const header = document.querySelector(".site-header-inner");
-    if(!header) return;
-
-    const hamburger = document.createElement("button");
-    hamburger.type = "button";
-    hamburger.className = "hamburger-btn";
-    hamburger.id = "hamburgerBtn";
-    hamburger.setAttribute("aria-haspopup", "true");
-    hamburger.setAttribute("aria-expanded", "false");
-    hamburger.setAttribute("aria-controls", "drawerPanel");
-    hamburger.setAttribute("aria-label", "メニューを開く");
-    hamburger.textContent = "☰";
-    header.appendChild(hamburger);
-
-    const overlay = document.createElement("div");
-    overlay.className = "drawer-overlay";
-    overlay.id = "drawerOverlay";
-    overlay.setAttribute("aria-hidden", "true");
-    overlay.innerHTML = `
-      <div class="drawer-panel" id="drawerPanel" role="dialog" aria-modal="true" aria-label="メインメニュー">
-        <div class="drawer-head">
-          <span class="drawer-title">メニュー</span>
-          <button class="drawer-close" id="drawerCloseBtn" aria-label="閉じる" type="button">×</button>
-        </div>
-        <nav class="drawer-nav" id="drawerNav" aria-label="サイトメニュー"></nav>
-      </div>`;
-    document.body.appendChild(overlay);
-
-    const nav = document.getElementById("drawerNav");
-    nav.innerHTML = accordionHTML({
-      activeGroupKey: "siteinfo",
-      activeSiteLinkKey: activeSiteLinkKey,
-      buildLeafHtml: (it) => `<a class="drawer-link" href="index.html#${escNav(it.key)}" target="_self" rel="noopener">${escNav(it.label)}</a>`,
-      resolveSiteLinkUrl: (link) => link.url
-    });
-    bindAccordionToggles(nav);
-
-    let lastFocused = null;
-    function isOpen(){ return overlay.classList.contains("show"); }
-    function setBackgroundInert(inert){
-      document.querySelectorAll("body > header, body > main, body > footer").forEach(el=>{
-        if(inert){ el.setAttribute("inert", ""); el.setAttribute("aria-hidden", "true"); }
-        else { el.removeAttribute("inert"); el.removeAttribute("aria-hidden"); }
-      });
-    }
-    function open(){
-      if(isOpen()) return;
-      lastFocused = document.activeElement;
-      overlay.classList.add("show");
-      overlay.setAttribute("aria-hidden", "false");
-      hamburger.setAttribute("aria-expanded", "true");
-      setBackgroundInert(true);
-      document.body.classList.add("drawer-open");
-      document.getElementById("drawerCloseBtn").focus();
-    }
-    function close(){
-      if(!isOpen()) return;
-      overlay.classList.remove("show");
-      overlay.setAttribute("aria-hidden", "true");
-      hamburger.setAttribute("aria-expanded", "false");
-      setBackgroundInert(false);
-      document.body.classList.remove("drawer-open");
-      if(lastFocused && lastFocused.isConnected && typeof lastFocused.focus === "function") lastFocused.focus();
-      lastFocused = null;
-    }
-    hamburger.addEventListener("click", function(){ isOpen() ? close() : open(); });
-    document.getElementById("drawerCloseBtn").addEventListener("click", close);
-    overlay.addEventListener("click", function(e){ if(e.target === overlay) close(); });
-    nav.addEventListener("click", function(e){ if(e.target.closest("a[href]")) close(); });
-    document.addEventListener("keydown", function(e){
-      if(!isOpen()) return;
-      if(e.key === "Escape"){ e.preventDefault(); close(); return; }
-      if(e.key !== "Tab") return;
-      const focusable = Array.from(document.getElementById("drawerPanel").querySelectorAll(
-        'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])'
-      ));
-      if(!focusable.length){ e.preventDefault(); return; }
-      const first = focusable[0], last = focusable[focusable.length - 1];
-      if(e.shiftKey && (document.activeElement === first || !overlay.contains(document.activeElement))){
-        e.preventDefault(); last.focus();
-      } else if(!e.shiftKey && (document.activeElement === last || !overlay.contains(document.activeElement))){
-        e.preventDefault(); first.focus();
-      }
-    });
-  }
-
   window.SiteNav = {
     accordionHTML: accordionHTML,
-    bindAccordionToggles: bindAccordionToggles,
-    mountInfoDrawer: mountInfoDrawer
+    bindAccordionToggles: bindAccordionToggles
   };
 })();

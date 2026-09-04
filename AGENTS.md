@@ -42,7 +42,9 @@
 - `docs/` — 要件定義書・設計書・ロードマップ
 - `.github/workflows/update-notion-data.yml` — 日次自動更新ワークフロー
 - `.github/workflows/update-dam-data.yml` — 早明浦ダム貯水状況の自動更新ワークフロー（1日2回）
-- `operator.html` / `privacy.html` — 運営者情報・プライバシーページ
+- `operator.html` / `contact.html` / `privacy.html` — 2026-09-05にindex.htmlのSPAビュー（`#operator`/`#contact`/`#privacy`）へ統合済み。
+  本体はこれらではなくindex.html側の`operatorTabHTML`/`contactTabHTML`/`privacyTabHTML`。この3ファイルは
+  旧URL直リンク対策の即時リダイレクト殻（`index.html#xxx`へ`meta refresh`＋JSで転送）として残している
 
 ## Development Notes
 

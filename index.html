@@ -615,6 +615,15 @@
   .shop-sns .lk.facebook{background:var(--fb)}
   .shop-sns .lk.threads{background:var(--threads)}
 
+  /* ℹ️ サイト情報3ページ（運営者情報・お問い合わせ・プライバシーポリシー）。既存の.group-h/.hint
+     を見出し・注記に流用し、新規CSSは運営者情報の基本情報dlと更新日注記の2つだけに絞る */
+  .info-row-list{margin:0 0 4px}
+  .info-row{display:flex;flex-wrap:wrap;gap:4px 14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+  .info-row:last-child{border-bottom:0}
+  .info-row dt{flex:0 0 130px;font-weight:900;color:var(--sub);margin:0}
+  .info-row dd{flex:1;min-width:200px;margin:0}
+  .info-page-note{color:var(--sub);font-size:12px;text-align:right;margin-top:18px}
+
   @media (min-width:1100px){
     .page-shell{grid-template-columns:minmax(0,1fr) 300px;
       grid-template-areas:"main utility" "main community";grid-template-rows:max-content 1fr;
@@ -914,7 +923,12 @@ const PAGE_META = {
   towncal:{title:"🗓 こんぴらカレンダー"},
   shopcal:{title:"🏪 お店の営業カレンダー"},
   orgs:{title:"📋 団体"},
-  links:{title:"🔗 リンク"}
+  links:{title:"🔗 リンク"},
+  /* サイト情報3ページ（2026-09-05にoperator.html等からSPA統合。上部タブグループには入れず、
+     ドロワー/フッターの「サイト情報」からのみ遷移する独立ページという性質は維持する） */
+  operator:{title:"運営者情報"},
+  contact:{title:"お問い合わせ"},
+  privacy:{title:"プライバシーポリシー"}
 };
 const MEDIA_CLASS = {
   "note":"note", "Instagram":"instagram", "X":"x", "HP":"website",
@@ -1077,7 +1091,7 @@ function parseHash(){
     try{ return {view:"org", id: decodeURIComponent(h.slice(4))}; }
     catch(e){ return {view:"orgs"}; }
   }
-  if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","towncal","shopcal","links"].indexOf(h) >= 0) return {view:h};
+  if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","towncal","shopcal","links","operator","contact","privacy"].indexOf(h) >= 0) return {view:h};
   return {view:"home"};
 }
 
@@ -1117,6 +1131,12 @@ function render(opt){
     m.innerHTML = shopcalTabHTML();
   } else if(r.view === "links"){
     m.innerHTML = linksTabHTML();
+  } else if(r.view === "operator"){
+    m.innerHTML = operatorTabHTML();
+  } else if(r.view === "contact"){
+    m.innerHTML = contactTabHTML();
+  } else if(r.view === "privacy"){
+    m.innerHTML = privacyTabHTML();
   } else {
     m.innerHTML = homeHTML();
   }
@@ -1128,7 +1148,7 @@ function render(opt){
   const orgTitle = r.view === "org" ? (D.orgs.find(x=>x.id===r.id)?.name || "") : "";
   document.title = orgTitle ? `${orgTitle}｜ことひらいふ`
     : r.view === "home" ? "ことひらいふ"
-    : meta ? `${meta.title.replace(/^\S+\s*/, "")}｜ことひらいふ` : "ことひらいふ";
+    : meta ? `${stripLeadingEmoji(meta.title)}｜ことひらいふ` : "ことひらいふ";
   if(hasRenderedOnce && !(opt && opt.noScroll)){
     const focusTarget = m.querySelector("h1") || m;
     focusTarget.setAttribute("tabindex", "-1");
@@ -1171,12 +1191,15 @@ function pageTitleCardHTML(view){
 
 function renderTabs(r){
   const activeKey = r.view === "org" ? "orgs" : r.view;
-  const activeGroup = NAV_GROUPS.find(g=>g.routes.indexOf(activeKey) >= 0) || NAV_GROUPS[0];
+  // サイト情報3ページ（運営者情報等）は意図的にどのNAV_GROUPSにも属さない独立ページのため、
+  // 該当グループが見つからない時はnullのままにする（以前はNAV_GROUPS[0]＝ホームへフォール
+  // バックしており、これらのページでホームタブが誤ってアクティブ表示されるバグがあった）。
+  const activeGroup = NAV_GROUPS.find(g=>g.routes.indexOf(activeKey) >= 0) || null;
   const primary = document.getElementById("primaryNav");
   openNavGroup = null;
   pinnedNavGroup = null;
   primary.innerHTML = NAV_GROUPS.map(g=>{
-    const groupActive = activeGroup.key === g.key;
+    const groupActive = !!activeGroup && activeGroup.key === g.key;
     const fullLabel = esc(g.label);
     const shortLabel = esc(g.shortLabel);
     if(g.routes.length === 1){
@@ -1209,15 +1232,15 @@ function renderTabs(r){
 function renderDrawerNav(activeKey){
   const host = document.getElementById("drawerNav");
   if(!host || !window.SiteNav) return;
-  const activeGroup = NAV_GROUPS.find(g=>g.routes.indexOf(activeKey) >= 0);
-  const cfg = WIDGETS.footerLinks || {};
-  const urlKeyByLinkKey = {operator:"operatorUrl", contact:"contactUrl", privacy:"privacyPolicyUrl"};
+  // 運営者情報等のサイト情報3ページはNAV_GROUPSに属さない（意図的に上部タブグループへ入れて
+  // いない）ため、それらを見ている時は「siteinfo」グループをアクティブとして開く。
+  const isSiteInfo = (window.SITE_NAV.siteLinks || []).some(l => l.key === activeKey);
+  const activeGroup = isSiteInfo ? {key:"siteinfo"} : NAV_GROUPS.find(g=>g.routes.indexOf(activeKey) >= 0);
   host.innerHTML = window.SiteNav.accordionHTML({
     activeGroupKey: activeGroup ? activeGroup.key : null,
     activeItemKey: activeKey,
     buildLeafHtml: (it, active) => `<button type="button" class="drawer-link ${active?'active':''}"
-      data-route="${esc(it.key)}"${active?' aria-current="page"':''}>${esc(it.label)}</button>`,
-    resolveSiteLinkUrl: (link) => safeUrl(cfg[urlKeyByLinkKey[link.key]]) || link.url
+      data-route="${esc(it.key)}"${active?' aria-current="page"':''}>${esc(it.label)}</button>`
   });
 }
 
@@ -3046,6 +3069,89 @@ function linkCard(l){
 }
 function prettyUrl(u){ return ("" + u).replace(/^https?:\/\//, "").replace(/\/$/, ""); }
 
+/* ===== ℹ️ サイト情報3ページ（運営者情報・お問い合わせ・プライバシーポリシー） =====
+   2026-09-05: 旧 operator.html/contact.html/privacy.html（別ファイルの独立ページ）から
+   SPAの通常ビューへ統合（あっきーさん指示: 別ファイルに出ると本体とヘッダー・ナビが違う
+   「サイトの外に出た」状態になるのを解消）。上部タブグループには意図的に入れず、ドロワーの
+   「サイト情報」・フッターからのみ遷移する独立ページという性質はそのまま維持する。
+   本文は旧ページの文言を変えずに移植した（内部リンクだけ href="contact.html" 等から
+   href="#contact" 等のハッシュ遷移へ書き換え。<base target="_blank">の影響を受けないよう
+   target="_self"を明示する）。 */
+function operatorTabHTML(){
+  return `
+    <h2 class="group-h">基本情報</h2>
+    <dl class="info-row-list">
+      <div class="info-row"><dt>サイト名</dt><dd>ことひらいふ</dd></div>
+      <div class="info-row"><dt>URL</dt><dd>https://kotohilife.com/</dd></div>
+      <div class="info-row"><dt>運営者</dt><dd>秋吉 一輝（あっきー）</dd></div>
+      <div class="info-row"><dt>運営者の立場</dt><dd>琴平町 地域おこし協力隊</dd></div>
+      <div class="info-row"><dt>開設</dt><dd>2026年7月</dd></div>
+      <div class="info-row"><dt>問い合わせ先</dt><dd><a href="#contact" target="_self">お問い合わせページ</a></dd></div>
+    </dl>
+    <h2 class="group-h">琴平町との関係</h2>
+    <p>運営者は琴平町地域おこし協力隊として活動していますが、本サイトは運営者が個人として制作・運営しているものであり、琴平町の公式サイトではありません。掲載内容を琴平町が保証するものではないため、公式な情報は琴平町および各情報の発表元をご確認ください。</p>
+    <h2 class="group-h">サイトの目的</h2>
+    <p>琴平町で暮らす人に向けたニュース・イベント・キャンペーンと、町を訪れる人や地域に関わりたい人に向けた体験、うどん店、駐車場、団体、関連リンクを、一つの入口にまとめることを目的としています。</p>
+    <h2 class="group-h">情報の掲載方針</h2>
+    <p>ニュース・イベント・キャンペーンの情報は、報道機関・行政・各団体などの公開情報をもとに、毎日自動で収集・更新しています。その他のページも、公開情報や各提供元の案内をもとに整理しています。営業時間、料金、開催状況等は変更される場合があるため、重要な判断の前には掲載先の公式情報もご確認ください。</p>
+    <h2 class="group-h">掲載依頼・情報の訂正</h2>
+    <p>琴平町に関するイベント・キャンペーン・お店・団体などの情報の掲載依頼と、掲載内容の誤りのご指摘を、<a href="#contact" target="_self">お問い合わせページ</a>のフォームで受け付けています。内容によっては掲載できない場合や、確認・反映までお時間をいただく場合があります。</p>
+    <h2 class="group-h">広告の掲載方針</h2>
+    <p>広告を掲載する場合は、広告であることと広告主を分かる形で表示し、編集情報と区別します。広告掲載のご相談も<a href="#contact" target="_self">お問い合わせページ</a>からご連絡ください。</p>
+    <p class="info-page-note">更新日：2026年8月26日</p>`;
+}
+function contactTabHTML(){
+  return `
+    <h2 class="group-h">受け付けている内容</h2>
+    <ul>
+      <li>琴平町のイベント・キャンペーン情報の掲載依頼</li>
+      <li>お店・団体・スポット情報の掲載依頼</li>
+      <li>掲載内容の誤りのご指摘・訂正のご依頼</li>
+      <li>広告掲載のご相談</li>
+      <li>サイトへのご意見・ご感想</li>
+    </ul>
+    <p>掲載のご依頼では、イベント名・日時・場所・内容と、公式の告知先（URLやSNS）をあわせてお書きいただけるとスムーズです。内容によっては掲載できない場合や、確認・反映までお時間をいただく場合があります。</p>
+    <h2 class="group-h">返信について</h2>
+    <p>個人で運営しているため、返信までお時間をいただく場合があります。情報提供のみのご連絡には、返信を省略させていただくことがあります。</p>
+    <h2 class="group-h">お問い合わせフォーム</h2>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSceVVz1gytV_UBl6eYxRJ6tdg7BxhNYXs0CF7NdQCdgLsIqkw/viewform?embedded=true"
+      width="100%"
+      height="1600"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      loading="lazy"
+      title="お問い合わせフォーム"
+      style="border:1px solid var(--line);border-radius:12px;background:var(--card);display:block"
+    >読み込んでいます…</iframe>
+    <p>フォームが表示されない場合は、<a href="https://docs.google.com/forms/d/e/1FAIpQLSceVVz1gytV_UBl6eYxRJ6tdg7BxhNYXs0CF7NdQCdgLsIqkw/viewform" target="_blank" rel="noopener noreferrer">こちらのリンク</a>からご利用ください。</p>
+    <p class="info-page-note">更新日：2026年8月26日</p>`;
+}
+function privacyTabHTML(){
+  return `
+    <h2 class="group-h">このサイトで扱う情報</h2>
+    <p>「ことひらいふ」には、会員登録・購入機能はありません。お問い合わせや掲載依頼は、<a href="#contact" target="_self">お問い合わせページ</a>のGoogleフォームで受け付けており、フォームに入力いただいた内容はお問い合わせへの対応にのみ使用します。団体検索に入力した文字は、表示中のページ内で絞り込みに使われ、サイト独自の保存先には送信・保存しません。お預かりした個人情報は、ご本人の同意がある場合や法令に基づく場合を除き、第三者に提供しません。</p>
+    <h2 class="group-h">天気情報の一時保存</h2>
+    <p>天気ウィジェットは気象庁の公開情報を取得し、表示の安定化のため、予報内容と取得時刻をブラウザのローカルストレージに一時保存します。保存情報は表示上24時間を有効期間とし、個人を識別する情報は含みません。ブラウザのサイトデータ削除機能で消去できます。</p>
+    <h2 class="group-h">外部サービスの利用</h2>
+    <p>表示や外部ページへの案内のため、次のサービスを利用する場合があります。</p>
+    <ul>
+      <li>Google Fonts、Google マップ、Google フォーム（お問い合わせ）</li>
+      <li>気象庁の天気・防災情報</li>
+      <li>Instagram、XなどのSNS埋め込み・外部リンク</li>
+      <li>LINEオープンチャット、広告リンク（掲載を有効にした場合）</li>
+    </ul>
+    <p>これらのサービスでは、各提供者がIPアドレス、ブラウザ情報、Cookie等を取り扱う場合があります。詳細は各提供者の規約・プライバシーポリシーをご確認ください。</p>
+    <h2 class="group-h">Cookie・アクセス解析</h2>
+    <p>アクセス状況の把握のため、Cloudflare Web Analyticsを利用しています。この解析はCookieを使用せず、個人を特定する情報は収集しません。また、本サイトはCloudflare Pages上で公開しており、サービスの提供・保護のために、接続情報等がCloudflare社によって処理される場合があります。このサイト独自のCookieは発行していません。</p>
+    <h2 class="group-h">外部リンク・広告</h2>
+    <p>外部サイトへ移動した後の情報の取り扱いは、移動先の方針に従います。広告を掲載する場合は編集情報と区別し、広告であることを明示します。</p>
+    <h2 class="group-h">内容の変更・お問い合わせ</h2>
+    <p>機能や運営体制の変更に応じて、本ページを改定します。お問い合わせは<a href="#contact" target="_self">お問い合わせページ</a>をご利用ください。</p>
+    <p class="info-page-note">更新日：2026年8月27日</p>`;
+}
+
 /* ===== 埋め込み（Instagram/X）：表示時のみスクリプトを動的注入 ===== */
 let igScriptState = "idle"; // idle | loading | ready
 let twttrScriptState = "idle";
@@ -3341,18 +3447,20 @@ function adCardHTML(ad, visibilityClass){
   </section>`;
 }
 
+/* サイト情報3ページ（運営者情報・お問い合わせ・プライバシーポリシー）はSPAの通常ルートの
+   ため、WIDGETS.footerLinksの外部URL設定には依存せず常にハッシュ遷移で表示する
+   （2026-09-05: operator.html等の別ファイルからのSPA統合に伴い変更）。 */
 function renderFooterLinks(){
   const host = document.getElementById("footerLinks");
-  const cfg = WIDGETS.footerLinks || {};
   const links = [
-    {label:"プライバシーポリシー", url:safeUrl(cfg.privacyPolicyUrl)},
-    {label:"運営者", url:safeUrl(cfg.operatorUrl)},
-    {label:"お問い合わせ", url:safeUrl(cfg.contactUrl)}
-  ].filter(link=>link.url);
+    {label:"プライバシーポリシー", route:"privacy"},
+    {label:"運営者", route:"operator"},
+    {label:"お問い合わせ", route:"contact"}
+  ];
   host.innerHTML = links.map(link=>
-    `<a class="footer-link" href="${esc(link.url)}" target="_self" rel="noopener">${esc(link.label)}</a>`
+    `<a class="footer-link" href="#${esc(link.route)}" target="_self">${esc(link.label)}</a>`
   ).join("");
-  host.hidden = !links.length;
+  host.hidden = false;
 }
 
 const WEATHER_CACHE_KEY = "kotohiralife-weather-v1";
@@ -3811,6 +3919,14 @@ function calWeekdayHeaderHTML(){
     `<div class="cal-weekday${i===6?' sun':i===5?' sat':''}">${w}</div>`).join("")}</div>`;
 }
 function esc(s){ return ("" + (s==null?"":s)).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+/* PAGE_META.titleの先頭絵文字＋空白をdocument.title用に取り除く（例「🏠 ホーム」→「ホーム」）。
+   絵文字が無い/空白が無いタイトル（運営者情報等、絵文字を付けないページ）はマッチせず元の
+   文字列のまま返す（\S+が空白の無い文字列全体を食い切って空文字になる旧実装のバグを修正）。 */
+function stripLeadingEmoji(title){
+  const s = "" + (title || "");
+  const m = s.match(/^\S+\s+(.+)$/);
+  return m ? m[1] : s;
+}
 
 init();
 </script>
