@@ -30,6 +30,7 @@
 <script src="cool-sweets-data.js"></script>
 <script src="parking-data.js"></script>
 <script src="towncal-data.js"></script>
+<script src="dam-data.js"></script>
 <script src="site-widgets-data.js"></script>
 <script src="site-nav.js"></script>
 <!-- Instagram/X の埋め込みスクリプトはここでは読み込まない。表示時にのみ動的注入する（ensureIgScript/ensureTwttrScript） -->
@@ -330,6 +331,7 @@
   .widget-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;min-width:0}
   .widget-card.weather-card{border-top:4px solid #3170eb}
   .widget-card.line-card{border-top:4px solid #148244}
+  .widget-card.dam-card{border-top:4px solid #1d75b3}
   .widget-card.ad-card{padding:10px}
   .widget-kicker{display:block;color:var(--sub);font-size:10.5px;font-weight:900;letter-spacing:.06em;margin-bottom:2px}
   .widget-title{font-size:15px;font-weight:900;line-height:1.45;margin:0 0 8px}
@@ -339,6 +341,14 @@
   .widget-link{font-size:11.5px;font-weight:700;color:var(--accent-d);text-decoration:none}
   .widget-link:hover{text-decoration:underline}
   .widget-loading{font-size:12.5px;color:var(--sub);padding:8px 0}
+  /* 💧 早明浦ダム貯水状況：貯水率を大きく、貯水量・流入量・放流量は控えめな一覧行にする */
+  .dam-rate{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+  .dam-rate-num{font-size:30px;font-weight:900;line-height:1;color:#1d75b3}
+  .dam-rate-pct{font-size:16px;font-weight:900;margin-left:1px}
+  .dam-rate-label{font-size:11px;color:var(--sub);font-weight:700}
+  .dam-rows{display:flex;flex-direction:column;gap:4px}
+  .dam-row{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:#4d4740}
+  .dam-row span:first-child{color:var(--sub)}
   .weather-days{display:flex;flex-direction:column;gap:8px}
   .weather-day{display:grid;grid-template-columns:42px minmax(0,1fr);gap:9px;align-items:center;
     border-top:1px solid var(--line);padding-top:8px}
@@ -800,6 +810,10 @@ const PARKING = (window.PARKING_DATA && typeof window.PARKING_DATA === "object")
 const WIDGETS = (window.SITE_WIDGETS_DATA && typeof window.SITE_WIDGETS_DATA === "object")
   ? window.SITE_WIDGETS_DATA
   : { updated:"", weather:{enabled:false}, lineOpenChats:[], featuredEvents:[], footerLinks:{}, ads:[] };
+
+/* 💧 早明浦ダム貯水状況（dam-data.js 由来。fetch_dam.pyが国交省「川の防災情報」から1日2回取得。
+   データが無い/壊れている時はdamWidgetCardHTML側でウィジェットごと非表示にするため、nullのままでよい） */
+const DAM = (window.DAM_DATA && typeof window.DAM_DATA === "object") ? window.DAM_DATA : null;
 
 const SNS = [
   {key:"note",label:"note"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
@@ -2896,6 +2910,7 @@ function renderUtilityWidgets(){
 
 function renderCommunityWidgets(){
   const host = document.getElementById("communityWidgets");
+  const damHTML = damWidgetCardHTML();
   /* 旧形式（lineOpenChat 単一オブジェクト）のデータでも表示が欠けないよう配列へ寄せる */
   const chats = Array.isArray(WIDGETS.lineOpenChats)
     ? WIDGETS.lineOpenChats
@@ -2916,8 +2931,35 @@ function renderCommunityWidgets(){
         <p class="widget-copy">琴平に関わる事業者・団体の広告枠を準備しています。</p>
       </section>`;
 
-  host.innerHTML = `<div class="widget-stack">${featuredHTML}${lineHTML}${adsHTML}</div>`;
-  host.classList.toggle("mobile-empty", !lineHTML && !featuredHTML);
+  host.innerHTML = `<div class="widget-stack">${damHTML}${featuredHTML}${lineHTML}${adsHTML}</div>`;
+  host.classList.toggle("mobile-empty", !damHTML && !lineHTML && !featuredHTML);
+}
+/* 💧 早明浦ダム 貯水状況ウィジェット（dam-data.js 由来）。DAMが無い/observedAtが不正な形式なら
+   ウィジェットごと非表示にする（homeUdonOpenHTMLのデータ未着パターンを踏襲）。fetch_dam.pyは
+   1日2回しか実行されずリアルタイム値ではないため「○月○日○時時点（速報値）」を必ず添える。
+   欠測値（storage/inflow/outflow/rateがnull）は「—」表示にし、0へ潰さない。 */
+function damWidgetCardHTML(){
+  if(!DAM) return "";
+  const m = ("" + (DAM.observedAt || "")).match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/);
+  if(!m) return "";
+  const observedLabel = `${+m[2]}月${+m[3]}日 ${+m[4]}時時点（速報値）`;
+  const fmtNum = (v, digits) => (v === null || v === undefined || v === "" || isNaN(Number(v)))
+    ? "—" : Number(v).toFixed(digits);
+  const rateText = fmtNum(DAM.rate, 1);
+  const storageUnit = DAM.storageUnit ? (" " + DAM.storageUnit) : "";
+  const sourceUrl = safeUrl(DAM.sourceUrl);
+  return `<section class="widget-card dam-card" aria-labelledby="damWidgetTitle">
+    <span class="widget-kicker">水資源</span>
+    <div class="widget-title" id="damWidgetTitle">💧 ${esc(DAM.name || "早明浦ダム")} 貯水状況</div>
+    <div class="dam-rate"><span class="dam-rate-num">${esc(rateText)}<span class="dam-rate-pct">%</span></span><span class="dam-rate-label">${esc(DAM.rateLabel || "貯水率")}</span></div>
+    <div class="dam-rows">
+      <div class="dam-row"><span>貯水量</span><span>${esc(fmtNum(DAM.storage, 0))}${esc(storageUnit)}</span></div>
+      <div class="dam-row"><span>流入量</span><span>${esc(fmtNum(DAM.inflow, 1))} m³/s</span></div>
+      <div class="dam-row"><span>放流量</span><span>${esc(fmtNum(DAM.outflow, 1))} m³/s</span></div>
+    </div>
+    <p class="widget-note">${esc(observedLabel)}</p>
+    ${sourceUrl ? `<div class="widget-links"><a class="widget-link" href="${esc(sourceUrl)}" target="_blank" rel="noopener">出典: 川の防災情報 ↗</a></div>` : ""}
+  </section>`;
 }
 
 /* LINEオープンチャット1枠分。表示に必須なのは 有効・参加URL・名称 のみ。

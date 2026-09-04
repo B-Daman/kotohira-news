@@ -8,6 +8,7 @@
 - データは複数系統あり、それぞれ生成経路が異なる。**手編集せず生成元を経由する**:
   - `registry.json`（団体×媒体の正本）→ `/kotohira-news` スキル経由で `data.js` を再生成
   - Notion 3DB（イベント/キャンペーン/ニュース）→ `scripts/fetch_notion.py` 経由で `notion-data.js` を再生成（GitHub Actions `.github/workflows/update-notion-data.yml` が毎日15:00 UTC＝JST 0:00に自動実行し、コミット・pushまで行う）
+  - 早明浦ダム貯水状況（国交省「川の防災情報」）→ `scripts/fetch_dam.py` 経由で `dam-data.js` を再生成（GitHub Actions `.github/workflows/update-dam-data.yml` が1日2回＝22:00/10:00 UTC〈JST 7:00/19:00〉に自動実行し、コミット・pushまで行う。リアルタイム値ではないため表示側は必ず観測時刻を明示する）
   - `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` / `towncal-data.js` は手編集運用（現状把握、生成スクリプトは未確認）
 - 画像は長辺1200pxのWebPに揃える。`fetch_notion.py` が取得時に圧縮し、`find_local_thumb` は
   同名ファイルがあれば `.webp` を優先する。手動で `assets/` に画像を足す場合も、
@@ -28,8 +29,10 @@
 
 - `index.html` — 表示部の正本
 - `registry.json` — 団体×媒体データの正本
-- `data.js` / `notion-data.js` / `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` / `towncal-data.js` — 表示用データ（生成物または手編集、上記参照）
+- `data.js` / `notion-data.js` / `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` / `towncal-data.js` / `dam-data.js` — 表示用データ（生成物または手編集、上記参照）
 - `scripts/fetch_notion.py` — Notionデータ取得スクリプト
+- `scripts/fetch_dam.py` — 早明浦ダム貯水状況取得スクリプト（国交省「川の防災情報」から1日2回取得。
+  pip依存なし。www1.river.go.jp のみアクセス許可。列定義の判断根拠はスクリプト冒頭コメント参照）
 - `scripts/image_utils.py` — 画像をWebPへ縮小・圧縮する共通処理（Pillowが無ければ無圧縮で続行）
 - `scripts/compress_thumbs.py` — 既存画像を一括でWebP化する一回性スクリプト（2026-08-25実行済み）
 - `scripts/fetch_towncal.py` — 🗓 こんぴらカレンダー月次更新スクリプト。町HPのPDF/画像URLからカレンダー面を取得し、
@@ -37,6 +40,7 @@
 - `assets/` — サムネイル・リンク・体験・手動画像
 - `docs/` — 要件定義書・設計書・ロードマップ
 - `.github/workflows/update-notion-data.yml` — 日次自動更新ワークフロー
+- `.github/workflows/update-dam-data.yml` — 早明浦ダム貯水状況の自動更新ワークフロー（1日2回）
 - `operator.html` / `privacy.html` — 運営者情報・プライバシーページ
 
 ## Development Notes

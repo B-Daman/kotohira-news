@@ -1,0 +1,44 @@
+# 早明浦ダムの貯水状況（国交省「川の防災情報」）を1日2回取得して dam-data.js を更新し、
+# 差分があればコミット→push→GitHub Pages に自動反映するワークフロー。
+# リアルタイム性は不要という判断（あっきーさん明示）のため、頻度は1日2回にとどめる。
+# 必要なSecretは無し（外部トークン不要。www1.river.go.jp のみへアクセスする）。
+name: Update dam data
+
+on:
+  schedule:
+    # 22:00 UTC（= JST 7:00）と 10:00 UTC（= JST 19:00）。GitHubのcronは数分〜最大1時間程度遅れることがある
+    - cron: "0 22 * * *"
+    - cron: "0 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-dam-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch dam data
+        run: python scripts/fetch_dam.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dam-data.js
+          if git diff --cached --quiet; then
+            echo "No changes; skip commit."
+            exit 0
+          fi
+          git commit -m "chore: update dam data"
+          git push
