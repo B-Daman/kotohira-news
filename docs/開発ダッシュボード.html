@@ -126,6 +126,36 @@
     .status,.two-col{grid-template-columns:1fr}
     .file-grid{grid-template-columns:1fr}
   }
+  /* 全体像タブ専用（2026-09-05刷新）：参考ファイル（kotobus/shift-scheduler/sekkei.html）の
+     KPIタイル・ピラーカード・正本マップ表・ステージ型フロー図の見せ方を移植。他タブのCSSは
+     流用せず新規クラスのみ追加（既存タブへの影響を避ける） */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:12px;margin:14px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .kpi .n{font-size:25px;font-weight:900;color:var(--accent-d);line-height:1.15}
+  .kpi .l{font-size:11.5px;color:var(--sub);margin-top:4px;line-height:1.5}
+
+  .pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:12px}
+  .pillar{background:#fff;border:1px solid var(--line);border-left:4px solid var(--pc,var(--accent));border-radius:12px;padding:13px 16px}
+  .pillar .pn{font-size:14.5px;font-weight:900;color:var(--ink)}
+  .pillar ul{list-style:none;margin:8px 0 0;padding:0;font-size:12.5px;color:#43403b;line-height:1.75}
+  .pillar ul li{position:relative;padding-left:14px}
+  .pillar ul li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--pc,var(--accent))}
+  .pillar .pnote{margin-top:8px;font-size:11px;color:var(--sub);line-height:1.6}
+
+  .stagewrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12.5px;
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-top:12px}
+  .stage{background:var(--soft);color:var(--accent-d);font-weight:800;border-radius:8px;padding:7px 13px;white-space:nowrap}
+  .stage.auto{background:var(--teal-soft);color:var(--teal)}
+  .stage.manual{background:var(--amber-soft);color:var(--amber)}
+  .stage.legacy{background:#eee;color:#767066}
+  .stagearrow{color:#c9beb2;font-weight:700}
+
+  .relation{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:12px 0 4px}
+  .rel-box{flex:1 1 230px;background:var(--soft);border:1px solid #f1ddd2;border-radius:12px;padding:12px 14px;font-size:12.5px;line-height:1.65}
+  .rel-box b{display:block;font-size:13.5px;color:var(--accent-d);margin-bottom:5px}
+  .rel-box small{display:block;color:var(--sub);font-size:11px;line-height:1.6;margin-top:3px}
+  .rel-link{font-family:"JetBrains Mono",monospace;font-weight:800;color:var(--sub);font-size:13px;white-space:nowrap}
+  @media (max-width:720px){.relation{flex-direction:column}.rel-link{transform:rotate(90deg)}}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.page.active{animation:none}}
   @media print{
     body{background:#fff;padding:0;font-size:11pt}
@@ -133,7 +163,7 @@
     main{max-width:none;padding:0}
     .page,.page.active{display:block!important;animation:none;break-before:page}
     .page:first-child{break-before:auto}
-    .hero,.card,pre{break-inside:avoid}
+    .hero,.card,pre,.pillar,.kpi,.rel-box{break-inside:avoid}
     .hero{background:#fff;color:var(--ink);border:1px solid var(--line)}
     .hero .eyebrow,.hero p,.hero .meta{color:var(--sub)}
     footer{display:none}
@@ -169,6 +199,15 @@
       <div class="meta"><span>独自ドメイン kotohilife.com で公開・日次自動更新稼働</span><span>最終更新 2026-09-05</span><span>運用フェーズ</span></div>
     </div>
 
+    <div class="kpis">
+      <div class="kpi"><div class="n">5</div><div class="l">ナビ分類：ホーム／町の今／くらし／訪れる・関わる／町を知る</div></div>
+      <div class="kpi"><div class="n">6</div><div class="l">Notion連携DB：ニュース／イベント／キャンペーン／お店／団体(+投稿)／会場</div></div>
+      <div class="kpi"><div class="n">23／93</div><div class="l">ニュース／イベント 掲載数（notion-data.js実測）</div></div>
+      <div class="kpi"><div class="n">3</div><div class="l">団体（2026-09-05にNotion 2DBへ移行完了）</div></div>
+      <div class="kpi"><div class="n">2系統</div><div class="l">自動更新：Notion夜間0:00 JST／早明浦ダム1日2回</div></div>
+      <div class="kpi"><div class="n">2</div><div class="l">凍結レガシー：registry.json／data.js（更新停止・フォールバック専用）</div></div>
+    </div>
+
     <div class="card ov">
       <h3>現在のステータス</h3>
       <div class="status">
@@ -201,38 +240,74 @@
     </div>
 
     <div class="card">
-      <h3>アーキテクチャ（Notion駆動5DB＋自動2系統＋手編集6ファイル＋凍結レガシー2ファイル）</h3>
-      <pre class="diagram"><code><span class="cmt"># A：Notion駆動（更新生成・fetch_notion.py夜間自動実行）</span>
-Notion 5DB＋会場DB <span class="arr">→</span> <span class="anno">scripts/fetch_notion.py</span> <span class="arr">→</span> <span class="ok">notion-data.js</span>
-  ├─ ニュース／イベント／キャンペーン／体験（Phase 0.5〜）
-  ├─ お店（お店の営業カレンダー。09-05〜）
-  └─ 団体＋投稿（団体DB＋関連団体の投稿DB。09-05に registry.json/data.js から移行）
-                              <span class="arr">└→</span> assets/thumbs/ <span class="cmt"># WebP圧縮保存（image_utils.py・長辺1200px）</span>
-                              <span class="arr">└→</span> note等はプロフィールURLからRSS自動導出（fetch_note_rss）
+      <h3>サイトの全体構成<span class="tag-line" style="font-size:12px;font-weight:500;margin-left:8px;">5分類ナビ＋ページ。俯瞰用（画面構成の詳細は設計タブ参照）</span></h3>
+      <div class="pillars">
+        <div class="pillar" style="--pc:#2c2622"><div class="pn">🏠 ホーム</div>
+          <ul><li>ニュース／イベント／キャンペーンのダイジェスト（各最大3件）</li></ul></div>
+        <div class="pillar" style="--pc:#c8472f"><div class="pn">📰 町の今</div>
+          <ul><li>📰 ニュース</li><li>📅 イベント（同日は開始時刻昇順）</li><li>🎁 キャンペーン</li></ul></div>
+        <div class="pillar" style="--pc:#0d9488"><div class="pn">🏡 くらし</div>
+          <ul><li>🗓 こんぴらカレンダー</li><li>🏪 お店の営業カレンダー</li></ul>
+          <div class="pnote">2026-09-05新設。町民向けサイトという性格から「訪れる・関わる」より前に配置</div></div>
+        <div class="pillar" style="--pc:#3170eb"><div class="pn">🧭 訪れる・関わる</div>
+          <ul><li>🧭 体験・滞在（12件）</li><li>🍜 うどん店（掲載許可待ちで準備中）</li><li>🅿 駐車場（20件）</li></ul></div>
+        <div class="pillar" style="--pc:#7c5cbf"><div class="pn">🔗 町を知る</div>
+          <ul><li>📋 団体（Notion 2DB・3件）</li><li>🔗 リンク（14件）</li></ul></div>
+        <div class="pillar" style="--pc:#767066"><div class="pn">ℹ️ サイト情報</div>
+          <ul><li>運営者情報／お問い合わせ／プライバシー</li></ul>
+          <div class="pnote">2026-09-05にindex.html内のSPAビューへ統合。旧3ファイルはリダイレクト殻のみ</div></div>
+      </div>
 
-<span class="cmt"># B：自動（1日2回・国交省「川の防災情報」）</span>
-早明浦ダム <span class="arr">→</span> <span class="anno">scripts/fetch_dam.py</span> <span class="arr">→</span> <span class="ok">dam-data.js</span> <span class="cmt"># 09-05〜</span>
+      <div class="stagewrap">
+        <span class="stage auto">Notion 5DB＋会場DB</span><span class="stagearrow">→</span>
+        <span class="stage auto">fetch_notion.py（日次0:00自動）</span><span class="stagearrow">→</span>
+        <span class="stage">notion-data.js</span><span class="stagearrow">→</span>
+        <span class="stage">index.html</span><span class="stagearrow">→</span>
+        <span class="stage auto">kotohilife.com（Cloudflare Pages）</span>
+      </div>
+      <div class="stagewrap">
+        <span class="stage auto">早明浦ダム（国交省）</span><span class="stagearrow">→</span>
+        <span class="stage auto">fetch_dam.py（1日2回自動）</span><span class="stagearrow">→</span>
+        <span class="stage">dam-data.js</span><span class="stagearrow">→</span><span class="stage">index.html</span>
+      </div>
+      <div class="stagewrap">
+        <span class="stage manual">こんぴらカレンダー（広報誌面）</span><span class="stagearrow">→</span>
+        <span class="stage manual">fetch_towncal.py（手動・月次）</span><span class="stagearrow">→</span>
+        <span class="stage">towncal-data.js</span><span class="stagearrow">→</span><span class="stage">index.html</span>
+      </div>
+      <div class="stagewrap">
+        <span class="stage legacy">registry.json</span><span class="stagearrow">→</span>
+        <span class="stage legacy">data.js</span><span class="stagearrow">→</span>
+        <span class="stage">notion-data.js の orgs が空の時だけ index.html が読む保険</span>
+      </div>
+    </div>
 
-<span class="cmt"># C：地域案内（人が調査・確認して編集）</span>
-<span class="ok">experiences-data.js</span>  <span class="cmt"># Notionが空のときの体験フォールバック</span>
-<span class="ok">udon-data.js</span>        <span class="cmt"># 琴平町内17件（掲載許可待ちのためUDON_PUBLISHED=falseで一時非表示）</span>
-<span class="ok">parking-data.js</span>     <span class="cmt"># 表示20件</span>
-<span class="ok">links-data.js</span>       <span class="cmt"># 3カテゴリ14件</span>
+    <div class="card">
+      <h3>データ構造<span class="tag-line" style="font-size:12px;font-weight:500;margin-left:8px;">Notion 5DB＋会場DB・生成物JS・更新周期・凍結レガシー（俯瞰。データモデルの詳細は設計タブ参照）</span></h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>データ</th><th>生成元</th><th>更新周期</th><th>格納先・役割</th></tr></thead>
+        <tbody>
+          <tr><td class="ch">ニュースDB</td><td>fetch_notion.py</td><td>日次自動（0:00 JST）</td><td><code>notion-data.js</code> の <code>news</code>（23件）</td></tr>
+          <tr><td class="ch">イベントDB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>events</code>（93件。同日は開始時刻昇順＝byStartAsc）</td></tr>
+          <tr><td class="ch">キャンペーンDB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>campaigns</code></td></tr>
+          <tr><td class="ch">お店DB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>shops</code>（表示対象✓かつ画像ありのみ。現在掲載許可0/8）</td></tr>
+          <tr><td class="ch">団体DB＋投稿DB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>orgs</code>（3件。団体1件×投稿N件のリレーション＝下記参照）</td></tr>
+          <tr><td class="ch">会場DB</td><td>fetch_notion.py</td><td>日次自動</td><td>イベントの開催場所名解決にのみ使用</td></tr>
+          <tr><td class="ch">早明浦ダム（国交省）</td><td>fetch_dam.py</td><td>自動・1日2回</td><td><code>dam-data.js</code>。観測時刻を必ず明示（リアルタイム値ではない）</td></tr>
+          <tr><td class="ch">こんぴらカレンダー（広報誌面）</td><td>fetch_towncal.py</td><td>手動・月次</td><td><code>towncal-data.js</code>。広報の号が変わるたびに実行</td></tr>
+          <tr><td class="ch">手編集6ファイル</td><td>人が直接編集</td><td>随時</td><td>udon/parking/links/experiences/site-widgets/site-nav</td></tr>
+          <tr><td class="ch">凍結レガシー</td><td>—（更新停止）</td><td>—</td><td><code>registry.json</code>／<code>data.js</code>。<code>notion-data.js</code>の<code>orgs</code>が空の時だけのフォールバック</td></tr>
+        </tbody>
+      </table></div>
 
-<span class="cmt"># C'：スクリプト手動実行で生成（月次。GitHub Actionsの自動実行は無く、人が実行するタイミングで更新）</span>
-<span class="ok">towncal-data.js</span>     <span class="cmt"># こんぴらカレンダー（広報の号が変わるたびに scripts/fetch_towncal.py を実行）</span>
+      <div class="relation">
+        <div class="rel-box"><b>団体DB「琴平町関連団体」</b>団体名・説明・表示対象✓<small>note／Instagram／X／HP／Threads／Facebookの各URL</small></div>
+        <div class="rel-link">1 ─── N</div>
+        <div class="rel-box"><b>投稿DB「関連団体の投稿」</b>団体（relation）・投稿URL・投稿日<small>投稿URLのドメインからInstagram／Xを自動判定。noteのテキスト更新は団体DB側のnoteプロフィールURLから別途RSSを自動導出（投稿DBとは独立経路）</small></div>
+      </div>
 
-<span class="cmt"># D：共通UI設定（公開設定のみ）</span>
-<span class="ok">site-widgets-data.js</span> <span class="cmt"># 天気／LINE／広告／フッターリンク</span>
-<span class="ok">site-nav.js</span>          <span class="cmt"># ナビ構造の正本（5分類・ドロワー・サイト情報3ページで共有）</span>
-
-<span class="cmt"># 凍結レガシー（フォールバックのみ。新規団体の追加・更新はNotion側でのみ行う）</span>
-<span class="anno">registry.json</span> <span class="arr">→</span> <span class="anno">/kotohira-news</span> <span class="arr">→</span> <span class="ok">data.js</span> <span class="cmt"># notion-data.jsのorgsが空の時だけ表示側が読む保険</span>
-
-      Notion駆動＋自動＋手編集＋共通設定 <span class="arr">→</span> <span class="ok">index.html</span> <span class="arr">→</span> <span class="ok">https://kotohilife.com</span> <span class="cmt"># Cloudflare Pages・push自動デプロイ</span>
-                              <span class="arr">└→</span> サイト情報（運営者／お問い合わせ／プライバシー）は09-05にindex.html内SPAへ統合。旧3ファイルはリダイレクト殻</code></pre>
-      <div class="note info"><b>設計原則：</b> 表示ロジックとデータを分離し、データごとに更新責任を固定する。個別の調査メモは画面向け紹介文と分ける。団体は2026-09-05にNotion駆動へ移行し、registry.json/data.jsは凍結レガシー（フォールバック専用）とした。</div>
-      <div class="note teal">Notionニュースの収集は別リポジトリ <b>konpie-bot</b>、本リポジトリは読み取り専用。天気だけは閲覧時に気象庁JSONを取得し、24時間キャッシュする。ダムは1日2回の自動取得のためリアルタイム値ではなく、表示側は必ず観測時刻を明示する。</div>
+      <div class="note info"><b>設計原則：</b> 表示ロジックとデータを分離し、データごとに更新責任を固定する。個別の調査メモは画面向け紹介文と分ける。画像はWebP圧縮（image_utils.py・長辺1200px、参照合計 約12MB）で保存し、原寸のまま置かない。</div>
+      <div class="note teal">Notionニュースの収集は別リポジトリ <b>konpie-bot</b>、本リポジトリは読み取り専用トークンで取得するのみ。天気は閲覧時に気象庁JSONを取得し24時間キャッシュする（Notion経由ではない）。</div>
     </div>
 
     <div class="card">
