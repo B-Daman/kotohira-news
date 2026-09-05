@@ -124,6 +124,11 @@
   /* LINE・Facebook・Discord（リンクタブのSNSバッジ用）。ブランド色を白文字AAを満たす暗さに調整 */
   .lk.line{background:#148244} .lk.facebook{background:#14549c} .lk.discord{background:#4b57d9}
   .lk.off{background:none;border:1px solid var(--line);color:#736a60}
+  /* 団体詳細ヘッダー／団体一覧のバッジ用Threads・Facebook（2026-09-05追加）。
+     お店モーダル（.shop-sns）と同じ--threads/--fbトークンを使うが、上の一般.lk.facebook
+     （リンクタブ用#14549c）を上書きしないよう.org-badgesでスコープする
+     （3クラスセレクタなので、CSS内の記述順に関わらず一般定義より優先される） */
+  .org-badges .lk.threads{background:var(--threads)} .org-badges .lk.facebook{background:var(--fb)}
 
   /* 戻るリンク（ボタンだがリンク風） */
   .back-link{display:inline-block;margin-bottom:12px;background:none;border:none;padding:0;
@@ -915,7 +920,12 @@ const DAM = (window.DAM_DATA && typeof window.DAM_DATA === "object") ? window.DA
 
 const SNS = [
   {key:"note",label:"note"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
-  {key:"website",label:"HP"},{key:"youtube",label:"YouTube"},{key:"ameblo",label:"Ameblo"}
+  {key:"website",label:"HP"},{key:"youtube",label:"YouTube"},{key:"ameblo",label:"Ameblo"},
+  /* Threads/Facebookは2026-09-05に団体詳細ヘッダー用として追加（データ自体はfetch_notion.pyの
+     parse_orgが既に取得済みだった）。色は.lk.facebook/.lk.threadsの一般定義ではなく、
+     お店モーダル（SHOP_SNS）と同じ.org-badgesスコープの--fb/--threadsトークンを使う
+     （下記CSS参照。リンクタブの既存.lk.facebook#14549cはそのまま） */
+  {key:"threads",label:"Threads"},{key:"facebook",label:"Facebook"}
 ];
 /* ナビ構造（第一階層グループ×第二階層ページ）はsite-nav.jsのwindow.SITE_NAVを正とし、
    operator/contact/privacy.htmlのドロワーと共有する。ここではrenderTabs/renderDrawerNavの
@@ -1805,7 +1815,7 @@ function orgRowsHTML(filter){
     <tr data-org-id="${esc(o.id)}" tabindex="0" role="link" aria-label="${esc(o.name)}の詳細を見る">
       <td><b>${esc(o.name)}</b></td>
       <td>${esc(o.summary||"")}</td>
-      <td><div class="links">${linkBadges(o.links)}</div></td>
+      <td><div class="links org-badges">${linkBadges(o.links)}</div></td>
       <td class="cnt">${esc(lastUpdated(o))}</td>
     </tr>`).join("") || `<tr><td colspan="4" class="muted">該当する団体がありません。</td></tr>`;
 }
@@ -1825,7 +1835,7 @@ function orgDetailHTML(o){
     <div class="acct-head">
       <h1 class="name">${esc(o.name)}</h1>
       <p class="desc">${esc(o.summary||"")}</p>
-      <div class="links">${linkBadges(o.links)}</div>
+      <div class="links org-badges">${linkBadges(o.links)}</div>
     </div>
     ${sectionsHtml || emptyMsg("まだ発信がありません。registry.json にRSSや投稿URLを登録すると、ここに媒体ごとのセクションが並びます。")}`;
 }
@@ -3240,7 +3250,9 @@ function triggerOrgEmbed(el){
   else if(kind === "x"){ ensureTwttrScript(function(){ try{ window.twttr.widgets.load(); }catch(e){} }); }
 }
 function igEmbed(url){
-  return `<blockquote class="instagram-media" data-instgrm-permalink="${esc(safeUrl(url))}" data-instgrm-version="14"
+  // data-instgrm-captioned: 投稿本文（キャプション）も表示する（写真だけで何の投稿か
+  // 分からないという指摘への対応。2026-09-05）。縦に長くなるのは許容済み
+  return `<blockquote class="instagram-media" data-instgrm-permalink="${esc(safeUrl(url))}" data-instgrm-version="14" data-instgrm-captioned
     style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px rgba(0,0,0,.5),0 1px 10px rgba(0,0,0,.15);margin:0;max-width:540px;min-width:326px;padding:0;width:100%"></blockquote>`;
 }
 function xEmbed(url){ return `<blockquote class="twitter-tweet"><a href="${esc(safeUrl(url))}"></a></blockquote>`; }
