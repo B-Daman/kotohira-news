@@ -40,7 +40,10 @@
 - `scripts/fetch_towncal.py` — 🗓 こんぴらカレンダー月次更新スクリプト。町HPのPDF/画像URLからカレンダー面を取得し、
   assets/towncal/YYYY-MM.webp に変換保存、towncal-data.js の month/image/sourceName を更新する
 - `assets/` — サムネイル・リンク・体験・手動画像
-- `docs/` — 要件定義書・設計書・ロードマップ
+- `docs/` — 要件定義書・設計書・ロードマップ・運用手順・各種調査・統合カレンダー要件定義
+- `docs/開発ダッシュボード.base.html` — 開発ダッシュボードの**編集元**（各文書タブ＝原本md注入マーカー「本文」＋手書きの「追補」）。
+  `python scripts/build_dashboard.py` で `docs/開発ダッシュボード.html`（生成物・直接編集しない）を生成する
+- `scripts/build_dashboard.py` — 開発ダッシュボードのビルド（pip依存なし。base内の `@MD`/`@CODE`/`@BUILT`/`@MTIME` マーカーへ原本・更新日を注入）
 - `.github/workflows/update-notion-data.yml` — 日次自動更新ワークフロー
 - `.github/workflows/update-dam-data.yml` — 早明浦ダム貯水状況の自動更新ワークフロー（1日2回）
 - `operator.html` / `contact.html` / `privacy.html` — 2026-09-05にindex.htmlのSPAビュー（`#operator`/`#contact`/`#privacy`）へ統合済み。
@@ -54,6 +57,7 @@
 - `.env` の値は絶対に読み取らない・出力しない。
 - 旧版HTML（`index-legacy.html` 等）を誤って本番導線に混ぜない。
 - 生成物系のJSファイルを直接編集すると、次回の自動更新やスキル実行で上書きされる。
+- `docs/開発ダッシュボード.html` も生成物。内容を直すときは `docs/開発ダッシュボード.base.html` を編集して再ビルドする（原本mdを直しただけなら再ビルドのみでよい）。
 
 ## Definition of Done
 
