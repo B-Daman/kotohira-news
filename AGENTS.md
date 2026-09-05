@@ -10,7 +10,8 @@
   - 早明浦ダム貯水状況（国交省「川の防災情報」）→ `scripts/fetch_dam.py` 経由で `dam-data.js` を再生成（GitHub Actions `.github/workflows/update-dam-data.yml` が1日2回＝22:00/10:00 UTC〈JST 7:00/19:00〉に自動実行し、コミット・pushまで行う。リアルタイム値ではないため表示側は必ず観測時刻を明示する）
   - 琴平町お店DB（お店の営業カレンダー）→ Notion 3DBと同じ `scripts/fetch_notion.py` 経由で `notion-data.js` の `shops` キーを再生成（表示対象✓かつ画像ありのみ。画像はNotionネイティブアップロードのためassets/thumbsへローカル保存）
   - 団体（2026-09-05にNotionへ移行）→ 団体DB「琴平町関連団体」＋投稿DB「関連団体の投稿」の2DBを同じ `scripts/fetch_notion.py` 経由で取得し、`notion-data.js` の `orgs` キーを再生成する。団体DBの表示対象✓のみ、投稿DBは全行対象（表示対象列が無い）で投稿URLのドメインからinstagram/x等を自動判定、note等のテキスト記事は団体DBのnoteプロフィールURLから自動導出したRSSで別途取得する。表示側（`index.html`のND定義）は`notion-data.js`の`orgs`があればそれを正とし、無ければ`registry.json`→`data.js`（**レガシー・フォールバック。以後は凍結し、新規団体の追加はNotion側でのみ行う**）に落ちる
-  - `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` / `towncal-data.js` は手編集運用（現状把握、生成スクリプトは未確認）
+  - こんぴらカレンダー（広報「ことひら」の誌面）→ `scripts/fetch_towncal.py` を手動実行して `towncal-data.js` を再生成（月次。GitHub Actionsによる自動実行は無く、広報の号が変わるたびに人が実行する）
+  - `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` は手編集運用（現状把握、生成スクリプトは未確認）
 - 画像は長辺1200pxのWebPに揃える。`fetch_notion.py` が取得時に圧縮し、`find_local_thumb` は
   同名ファイルがあれば `.webp` を優先する。手動で `assets/` に画像を足す場合も、
   数MBの原寸ファイルをそのまま置かない（閲覧者の通信量に直結する）
