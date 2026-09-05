@@ -583,7 +583,10 @@
   /* Instagramカード（.embed-card）：高さ上限で3件並びの高さを揃え、下端は白フェードで
      「続きはInstagramで」感を出す（2026-09-05追加）。フェードはpointer-events:noneにして、
      埋め込み自身の「Instagramでもっと見る」リンクが高さ超過で隠れても.embed-moreで代替導線を確保する */
-  .embed-card{position:relative;max-height:600px;overflow:hidden;border-radius:3px}
+  /* 高さ上限：600pxだと縦長画像・リール（4:5等）でキャプションが1行も見えないケースが
+     あったため、実データ（ことウラさんぽの縦長リール投稿）で実測し850pxに調整
+     （2026-09-05）。850pxなら3件とも本文が最低数行は見える */
+  .embed-card{position:relative;max-height:850px;overflow:hidden;border-radius:3px}
   .embed-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;
     background:linear-gradient(rgba(255,255,255,0), #fff 78%);pointer-events:none}
   .embed-more{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:12.5px;
@@ -1827,7 +1830,7 @@ function newsBox(it){
 
 /* ===== 📋 団体タブ ===== */
 function orgsListHTML(filter){
-  return `<p class="hint">琴平町で活動する団体・プロジェクトの紹介と、各団体のSNSでの発信をまとめています。</p>
+  return `<p class="hint">琴平町の事を発信している団体・プロジェクトの紹介と、各団体のSNSでの発信をまとめています。</p>
     <div class="search-box"><input type="search" id="orgSearchInput" aria-label="団体名または概要で絞り込む" placeholder="🔍 団体をさがす" value="${esc(filter)}"></div>
     <div class="table-wrap"><table>
       <thead><tr><th>団体名</th><th>概要</th><th>発信媒体</th><th>最終更新</th></tr></thead>
