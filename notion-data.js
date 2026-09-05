@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-05 02:56",
+  "fetched": "2026-09-05 08:35",
   "news": [
     {
       "id": "3d10b4e5-ff5b-81bc-960a-f118f20b9dd3",
@@ -316,7 +316,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3d10b4e5ff5b81599816c01cbdd2c1cf.webp",
       "comment": "こんぴらさんの門前町にある江戸末期創業の老舗旅館つるや旅館で、着物を着用してのランチ会を開催。女将による和食の食べ方講座付き。",
       "fee": "5500",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋"
+      "organizer": "こんぴら路地裏着物レンタル藤田屋",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3d00b4e5-ff5b-815b-8074-d95b25c98d21",
@@ -331,7 +333,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3d00b4e5ff5b815b8074d95b25c98d21.webp",
       "comment": "会場: 琴平町商工会館 一般社団法人こんぴら観光まちづくり協会が主催する第3回検定試験。琴平町の歴史・文化・観光資源に関する初級・中級の2つの受験級を実施する。合格者は協会認定ガイド登録への道が開ける。",
       "fee": "3300",
-      "organizer": "一般社団法人こんぴら観光まちづくり協会"
+      "organizer": "一般社団法人こんぴら観光まちづくり協会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d",
@@ -346,7 +350,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3a50b4e5ff5b8110b6ecdc2d98a5715d.webp",
       "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
       "fee": "0",
-      "organizer": "公益財団法人中山芳彦香川イタリア交流財団"
+      "organizer": "公益財団法人中山芳彦香川イタリア交流財団",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3bc0b4e5-ff5b-8157-895d-f6bf67704406",
@@ -361,7 +367,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3bc0b4e5ff5b8157895df6bf67704406.webp",
       "comment": "会場: 参道～金刀比羅宮御本宮 琴平町で開催される石段マラソン大会。参道から金刀比羅宮御本宮までのコースを走る。定員785名、参加費3,000円。",
       "fee": "3000",
-      "organizer": "琴平町"
+      "organizer": "琴平町",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-80a5-8568-c7496fa57528",
@@ -376,7 +384,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b80a58568c7496fa57528.webp",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3cd0b4e5-ff5b-80a5-b41e-ce2094c5382b",
@@ -391,7 +401,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3cd0b4e5ff5b80a5b41ece2094c5382b.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3cd0b4e5-ff5b-80f1-897f-dd274584a853",
@@ -406,7 +418,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3cd0b4e5ff5b80f1897fdd274584a853.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3ce0b4e5-ff5b-817d-b9ac-c06e7d8b3d2e",
@@ -421,7 +435,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3ce0b4e5ff5b817db9acc06e7d8b3d2e.webp",
       "comment": "琴平町のこんぴら路地裏着物レンタル藤田屋で、カンタ刺繍を学びながらオリジナルの着物の半衿を作るワークショップを開催。講師はちくちく針ねずみ。",
       "fee": "2000",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋"
+      "organizer": "こんぴら路地裏着物レンタル藤田屋",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
@@ -436,7 +452,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3bf0b4e5ff5b81c09360c0c6944cd93a.webp",
       "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
       "fee": "500",
-      "organizer": "つるや旅館、藤田屋"
+      "organizer": "つるや旅館、藤田屋",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3cd0b4e5-ff5b-80b5-bf44-c186c4228a75",
@@ -451,7 +469,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3cd0b4e5ff5b80b5bf44c186c4228a75.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39e0b4e5-ff5b-8153-842a-c16dbdfaad50",
@@ -466,7 +486,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39e0b4e5ff5b8153842ac16dbdfaad50.webp",
       "comment": "会場: 琴平町内（KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校） 琴平町での出会いや経験を通じて地域や住民の魅力に触れるプロジェクト。KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校での体験プログラムに参加者を募集。",
       "fee": "0",
-      "organizer": "流通科学大学"
+      "organizer": "流通科学大学",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3c80b4e5-ff5b-81a1-bbda-f8ed9895895d",
@@ -481,7 +503,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3c80b4e5ff5b81a1bbdaf8ed9895895d.webp",
       "comment": "会場: 一之橋公園・金陵の郷 琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
       "fee": "0",
-      "organizer": "琴平町商工会"
+      "organizer": "琴平町商工会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3a50b4e5-ff5b-818d-a225-d0048ef3f63f",
@@ -496,7 +520,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3a50b4e5ff5b818da225d0048ef3f63f.webp",
       "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
       "fee": "0",
-      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会"
+      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3c40b4e5-ff5b-8196-85aa-e7b6a784f00c",
@@ -511,7 +537,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3c40b4e5ff5b819685aae7b6a784f00c.webp",
       "comment": "会場: ヴィスポことひら サブアリーナ 熊本地震復興支援を目的とした高松千春によるチャリティライブが琴平町で開催される。入場は無料で、会場での投げ銭募金は全額熊本地震復興支援に寄付される。",
       "fee": "0",
-      "organizer": "株式会社ウエイ（ことひらいとこひペートナーズ）"
+      "organizer": "株式会社ウエイ（ことひらいとこひペートナーズ）",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b90b4e5-ff5b-81aa-becd-efb6408e5110",
@@ -526,7 +554,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b90b4e5ff5b81aabecdefb6408e5110.webp",
       "comment": "会場: DONZO Brewing DONZO Brewingと南イタリア出身シェフによるクラフトビール＆フードペアリングイベント第2弾。全8品のコース料理とクラフトビール3種または4種のマリアージュを楽しむ。要予約。",
       "fee": "3300",
-      "organizer": "DONZO Brewing"
+      "organizer": "DONZO Brewing",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3cd0b4e5-ff5b-804e-8747-d727722bca0c",
@@ -541,7 +571,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3cd0b4e5ff5b804e8747d727722bca0c.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3ce0b4e5-ff5b-803e-a576-cadd1eee98cb",
@@ -556,7 +588,9 @@ window.NOTION_DATA = {
       "image": "",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3c80b4e5-ff5b-80bf-8eba-ecd35c85c207",
@@ -571,7 +605,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3c80b4e5ff5b80bf8ebaecd35c85c207.webp",
       "comment": "会場: 一之橋公園 琴平町で開催される秋の音楽イベント。",
       "fee": "0",
-      "organizer": "琴平町商工会"
+      "organizer": "琴平町商工会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3ab0b4e5-ff5b-815a-ac45-cbf997fdd175",
@@ -586,7 +622,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3ab0b4e5ff5b815aac45cbf997fdd175.webp",
       "comment": "琴平町の金陵の郷で開催される台湾グルメ・文化イベント。台湾屋台グルメの出店、ステージイベント（電音三太子・二胡演奏・トークショー）、町内コラボメニュースタンプラリー、限定ガチャガチャなどが予定されている。",
       "fee": "0",
-      "organizer": "琴平町"
+      "organizer": "琴平町",
+      "calendar": "",
+      "featured": true
     },
     {
       "id": "3cd0b4e5-ff5b-80c1-8a4c-e198e9ff817c",
@@ -601,7 +639,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3cd0b4e5ff5b80c18a4ce198e9ff817c.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8018-a797-c643e42bd9e5",
@@ -616,7 +656,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8018a797c643e42bd9e5.webp",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3c40b4e5-ff5b-81ad-97b9-e28306eada5c",
@@ -631,7 +673,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3c40b4e5ff5b81ad97b9e28306eada5c.webp",
       "comment": "会場: 麻心 琴平店 鍵盤ハーモニカ奏者イシタニタイジュによるライブパフォーマンス。夕暮れ時から夜間にかけて、ピアニカとベースがBGMのように流れるジャズライブ。麻心琴平店での開催。",
       "fee": "0",
-      "organizer": "麻心琴平店"
+      "organizer": "麻心琴平店",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3990b4e5-ff5b-8102-b09a-d41fdbea2905",
@@ -646,7 +690,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3990b4e5ff5b8102b09ad41fdbea2905.webp",
       "comment": "会場: てんてこまい 琴平に連泊して中讃をゆったり周遊する旅を楽しむイベント。ドリンク付きで1,100円。定員30名程度で事前予約・決済による。",
       "fee": "1100",
-      "organizer": "こんぴら観光まちづくり協会"
+      "organizer": "こんぴら観光まちづくり協会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8060-9eca-f93d5bb096c8",
@@ -661,7 +707,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80609ecaf93d5bb096c8.webp",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b30b4e5-ff5b-81c6-bd4b-e3808b81dbff",
@@ -676,7 +724,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b30b4e5ff5b81c6bd4be3808b81dbff.webp",
       "comment": "会場: こんぴら路地裏着物レンタル藤田屋（香川県仲多度郡琴平町806） 琴平町の着物レンタル藤田屋が開催する着物補修ワークショップ。ほつれた着物の修理や脇の補強方法を元和裁師から学べる。初心者向けで、自分の着物を持参して直すことができる。",
       "fee": "1000",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋"
+      "organizer": "こんぴら路地裏着物レンタル藤田屋",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8085-bdbc-f9eafdf51928",
@@ -691,7 +741,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8085bdbcf9eafdf51928.webp",
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-800d-87ce-e92fd8fdeee0",
@@ -706,7 +758,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b800d87cee92fd8fdeee0.webp",
       "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "500",
-      "organizer": "Kotori Coworking & Hostel Kotohira"
+      "organizer": "Kotori Coworking & Hostel Kotohira",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-801c-9945-c88d04c2172d",
@@ -721,7 +775,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b801c9945c88d04c2172d.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-81da-a62d-d10ff71521d3",
@@ -736,7 +792,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b81daa62dd10ff71521d3.webp",
       "comment": "会場: 海の科学館（琴平海洋博物館）、琴平町953番地 琴平町の「ことひらまちじゅう図書館」主催による勉強会。海の科学館（琴平海洋博物館）の館長による説明と、和船のペーパークラフトプレゼントがある。",
       "fee": "0",
-      "organizer": "ことひらまちじゅう図書館"
+      "organizer": "ことひらまちじゅう図書館",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-80c9-befc-ccf0fd3d7692",
@@ -751,7 +809,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80c9befcccf0fd3d7692.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8020-951f-e75cf240c5a4",
@@ -766,7 +826,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8020951fe75cf240c5a4.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-80a9-b01d-ce50dddf331a",
@@ -781,7 +843,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80a9b01dce50dddf331a.webp",
       "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
       "fee": "2000",
-      "organizer": "讃岐おでんプロジェクト"
+      "organizer": "讃岐おでんプロジェクト",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-805b-9fcc-fa224ff7cbec",
@@ -796,7 +860,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b805b9fccfa224ff7cbec.webp",
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-80d9-827d-d8c76114a920",
@@ -811,7 +877,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80d9827dd8c76114a920.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b10b4e5-ff5b-8127-a326-d7c3f2567ba8",
@@ -826,7 +894,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b10b4e5ff5b8127a326d7c3f2567ba8.webp",
       "comment": "会場: 琴平町総合センター 1階 集会室 琴平町在住の高校生～20代を対象とした、琴平の未来について考えるワークショップを開催します。琴平町総合センター1階集会室で2時間予定。",
       "fee": "0",
-      "organizer": "琴平町企画防災課"
+      "organizer": "琴平町企画防災課",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8078-9c86-f2d83ce1759a",
@@ -841,7 +911,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80789c86f2d83ce1759a.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-80bb-9e8c-e04abd2ce35f",
@@ -856,7 +928,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80bb9e8ce04abd2ce35f.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-807b-9ff7-fd5cc1feff18",
@@ -871,7 +945,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b807b9ff7fd5cc1feff18.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3990b4e5-ff5b-81f7-b3e1-d335b962d1b7",
@@ -886,7 +962,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3990b4e5ff5b81f7b3e1d335b962d1b7.webp",
       "comment": "観光業に関心のある高校生を対象としたブートキャンプ。せとうち観光専門職短期大学の主催により、琴平町内で3日間開催される。参加者はUDON na HOTEL琴平に滞在。",
       "fee": "0",
-      "organizer": "せとうち観光専門職短期大学"
+      "organizer": "せとうち観光専門職短期大学",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3960b4e5-ff5b-813c-8ead-e44c30995fab",
@@ -901,7 +979,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3960b4e5ff5b813c8eade44c30995fab.webp",
       "comment": "会場: 琴平町 一之橋公園（香川県仲多度郡琴平町722） 戦没犠牲者の追悼や恒久平和への祈り、ご先祖への供養を目的とした灯ろう流しイベント。金倉川の川面を灯ろうが照らす幻想的な夏の夜の催し。",
       "fee": "500",
-      "organizer": "平和祈願灯ろう流し実行委員会（琴平町観光商工課）"
+      "organizer": "平和祈願灯ろう流し実行委員会（琴平町観光商工課）",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-80fb-8332-cdf5816e6761",
@@ -916,7 +996,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80fb8332cdf5816e6761.webp",
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-808f-a2e8-f409c5aba35f",
@@ -931,7 +1013,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b808fa2e8f409c5aba35f.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8072-adc5-dc2f489041f6",
@@ -946,7 +1030,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8072adc5dc2f489041f6.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-802a-af10-e5a53be52db2",
@@ -961,7 +1047,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b802aaf10e5a53be52db2.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-81a2-838c-ca505a5924ef",
@@ -976,7 +1064,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b81a2838cca505a5924ef.webp",
       "comment": "琴平町の一之橋公園で開催される夏限定のビアガーデン。冷たいビールと美味しいグルメを楽しめるイベント。入場無料。",
       "fee": "0",
-      "organizer": "こんぴら十帖"
+      "organizer": "こんぴら十帖",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-80b0-abd5-e2785fd0d2c4",
@@ -991,7 +1081,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80b0abd5e2785fd0d2c4.webp",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8048-918b-ed78eccfbb20",
@@ -1006,7 +1098,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8048918bed78eccfbb20.webp",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-81ef-9a74-d83ce90ee77a",
@@ -1021,7 +1115,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b81ef9a74d83ce90ee77a.webp",
       "comment": "会場: 琴平町総合センター 2階 大ホール 琴平町の文化財を町全体で守り未来へ繋いでいくための住民説明会。琴平町教育委員会主催で、町内の古い建物や歴史に関する情報を募集し、専門家と共に琴平の文化財について学ぶ機会。",
       "fee": "0",
-      "organizer": "琴平町教育委員会"
+      "organizer": "琴平町教育委員会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-804a-a5f8-dd867150d1ff",
@@ -1036,7 +1132,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b804aa5f8dd867150d1ff.webp",
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-80b2-8b74-c9526c699ddb",
@@ -1051,7 +1149,9 @@ window.NOTION_DATA = {
       "image": "",
       "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の着方や帯結び、着物を着た時の所作を学べる。ドリンクとおやつ付き。",
       "fee": "500",
-      "organizer": "つるや旅館、藤田屋"
+      "organizer": "つるや旅館、藤田屋",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-809f-a518-fa4347d2d5e6",
@@ -1066,7 +1166,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b809fa518fa4347d2d5e6.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3a40b4e5-ff5b-81a0-b846-e7be0a4b5fa6",
@@ -1081,7 +1183,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3a40b4e5ff5b81a0b846e7be0a4b5fa6.webp",
       "comment": "サウンドヒーラーAKIRA IKEDAによるトークセッションとライブ演奏。海の生命への祈りと音の旅をテーマに、映像と言葉でシェアした後、その場のエネルギーを感じながらの音の旅を体験できる。",
       "fee": "4000",
-      "organizer": "麻心琴平"
+      "organizer": "麻心琴平",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3a90b4e5-ff5b-81d4-a130-ffcbf1c1ffa4",
@@ -1096,7 +1200,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3a90b4e5ff5b81d4a130ffcbf1c1ffa4.webp",
       "comment": "会場: QUINTBRIDGE 1階（京橋徒歩5分） 琴平町の地方創生チームが大阪京橋で開催する公開会議。現場の事業者が抱える課題を公開し、参加者とブレインストーミングを行う。トークイベント後に懇親会あり。",
       "fee": "0",
-      "organizer": "琴平地方創生チーム"
+      "organizer": "琴平地方創生チーム",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-80c3-8897-fe4ed5d00241",
@@ -1111,7 +1217,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80c38897fe4ed5d00241.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8075-b807-c442c4d6fb35",
@@ -1126,7 +1234,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8075b807c442c4d6fb35.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3ac0b4e5-ff5b-809b-8b2f-d5aa257f637e",
@@ -1141,7 +1251,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3ac0b4e5ff5b809b8b2fd5aa257f637e.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-8137-bd2d-dd707e370fd9",
@@ -1156,7 +1268,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b8137bd2ddd707e370fd9.webp",
       "comment": "こんぴら路地裏着物レンタル藤田屋の3周年を記念したイベントが8月2日に開催されます。浴衣レンタル・ヘアセット、和物蚤の市、複数のワークショップ（いちごの輝の手作りワークショップ、小春日和のつまみ細工、お庭の時間の虫除けスプレー作り、ちくちく針ねずみのカンタ刺繍コースター体験）が予定されています。",
       "fee": "0",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋"
+      "organizer": "こんぴら路地裏着物レンタル藤田屋",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3ab0b4e5-ff5b-814a-8aad-c15fcbacb097",
@@ -1171,7 +1285,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3ab0b4e5ff5b814a8aadc15fcbacb097.webp",
       "comment": "高齢者の暮らしを支えるロボットについて学ぶフォーラム。日本生まれのLOVOT、ロボットフレンドリー社会、歩行支援ロボットWALK-MAATについての講演と質疑応答が行われる。",
       "fee": "0",
-      "organizer": "NPO ブロードバンドスクール協会"
+      "organizer": "NPO ブロードバンドスクール協会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-804c-8611-f17cf21da961",
@@ -1186,7 +1302,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b804c8611f17cf21da961.webp",
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-8045-81cc-dba0f5666693",
@@ -1201,7 +1319,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b804581ccdba0f5666693.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38f0b4e5-ff5b-8077-8ed4-c8bee33c422c",
@@ -1216,7 +1336,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b80778ed4c8bee33c422c.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-8082-a385-ca01480a68b6",
@@ -1231,7 +1353,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b8082a385ca01480a68b6.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39d0b4e5-ff5b-809f-bab4-e757911c8e72",
@@ -1246,7 +1370,9 @@ window.NOTION_DATA = {
       "image": "assets/manual/konpira_asaichi.webp",
       "comment": "",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-80a0-a3e8-e70b30720cfe",
@@ -1261,7 +1387,9 @@ window.NOTION_DATA = {
       "image": "",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-80e5-9985-e5f3699c2636",
@@ -1276,7 +1404,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b80e59985e5f3699c2636.webp",
       "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
       "fee": "1650",
-      "organizer": "ヴィスポことひら"
+      "organizer": "ヴィスポことひら",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39e0b4e5-ff5b-81ed-992f-f240e9308104",
@@ -1291,7 +1421,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39e0b4e5ff5b81ed992ff240e9308104.webp",
       "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "500",
-      "organizer": "Kotori Coworking & Hostel Kotohira"
+      "organizer": "Kotori Coworking & Hostel Kotohira",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-80eb-90e8-d3c8a5e697fe",
@@ -1306,7 +1438,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b80eb90e8d3c8a5e697fe.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39d0b4e5-ff5b-8156-af11-e51644c43df6",
@@ -1321,7 +1455,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39d0b4e5ff5b8156af11e51644c43df6.webp",
       "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。7月22日に夏向けおでんの研究と試作を行う作戦会議。",
       "fee": "2000",
-      "organizer": "讃岐おでんプロジェクト"
+      "organizer": "讃岐おでんプロジェクト",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38f0b4e5-ff5b-8090-8ccd-fdb45dbc570e",
@@ -1336,7 +1472,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b80908ccdfdb45dbc570e.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-80d1-ba15-c18c3f45fc01",
@@ -1351,7 +1489,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b80d1ba15c18c3f45fc01.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38f0b4e5-ff5b-801c-9860-d7689605e56e",
@@ -1366,7 +1506,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b801c9860d7689605e56e.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39d0b4e5-ff5b-81ba-abd6-f65b1eb4143f",
@@ -1381,7 +1523,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39d0b4e5ff5b81baabd6f65b1eb4143f.webp",
       "comment": "7月19日（日）、香川県琴平町でmetacomi 2026 コアDAYにあわせた交流会場を開設。コアDAYトークセッションの上映、紹介展示、来場者同士の交流を予定。参加無料・申込不要・出入り自由。",
       "fee": "0",
-      "organizer": "株式会社インベーダーズ"
+      "organizer": "株式会社インベーダーズ",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38e0b4e5-ff5b-81d3-9596-e8f4bc77c104",
@@ -1396,7 +1540,9 @@ window.NOTION_DATA = {
       "image": "assets/manual/20260718.webp",
       "comment": "会場: 琴平中学校 運動場 琴平中学校運動場で7月18日に開催されるニュースポーツ交流会。グラウンドゴルフを通じて子どもから大人まで交流できる。参加費無料、当日参加も可能。",
       "fee": "0",
-      "organizer": "琴平町スポーツ推進委員会"
+      "organizer": "琴平町スポーツ推進委員会",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-804e-918b-dca93dfa45e6",
@@ -1411,7 +1557,9 @@ window.NOTION_DATA = {
       "image": "",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-8048-8d82-c1401d0099ae",
@@ -1426,7 +1574,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b80488d82c1401d0099ae.webp",
       "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
       "fee": "1650",
-      "organizer": "ヴィスポことひら"
+      "organizer": "ヴィスポことひら",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38c0b4e5-ff5b-81ea-9ed2-c1332b2d533b",
@@ -1441,7 +1591,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38c0b4e5ff5b81ea9ed2c1332b2d533b.webp",
       "comment": "会場: 琴平町 琴平を舞台にした1泊2日の事業づくり体験プログラム。地域に入り、人を知り、新たなお土産とコンテンツの種を見つけることを目的とする。",
       "fee": "6000",
-      "organizer": "785Launch"
+      "organizer": "785Launch",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-800c-a17a-f22d29bad6cc",
@@ -1456,7 +1608,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b800ca17af22d29bad6cc.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38f0b4e5-ff5b-80d1-956a-ec4c1360606b",
@@ -1471,7 +1625,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b80d1956aec4c1360606b.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-8012-a78d-d51ff0bd1c3a",
@@ -1486,7 +1642,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b8012a78dd51ff0bd1c3a.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38e0b4e5-ff5b-805a-8973-e94fe41a02c0",
@@ -1501,7 +1659,9 @@ window.NOTION_DATA = {
       "image": "assets/manual/20260712.webp",
       "comment": "会場: 藤田屋2階和室（7/11）、五人百姓池商店（7/12） 京都の茶道裏千家準教授・水島宗華先生を迎えた夏のお茶会。7月11日は藤田屋で浴衣茶会、7月12日は五人百姓池商店で琴平学とお茶会を開催。",
       "fee": "4000",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋、五人百姓池商店"
+      "organizer": "こんぴら路地裏着物レンタル藤田屋、五人百姓池商店",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39d0b4e5-ff5b-8019-a599-ceb219285443",
@@ -1516,7 +1676,9 @@ window.NOTION_DATA = {
       "image": "assets/manual/konpira_asaichi.webp",
       "comment": "",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-80c9-b474-d258f32df55c",
@@ -1531,7 +1693,9 @@ window.NOTION_DATA = {
       "image": "",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-801c-b21a-e4b62cc7fa09",
@@ -1546,7 +1710,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b801cb21ae4b62cc7fa09.webp",
       "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
       "fee": "1650",
-      "organizer": "ヴィスポことひら"
+      "organizer": "ヴィスポことひら",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38e0b4e5-ff5b-8155-8726-e575b82f6058",
@@ -1561,7 +1727,9 @@ window.NOTION_DATA = {
       "image": "assets/manual/20260711.webp",
       "comment": "会場: 藤田屋2階和室（7/11）、五人百姓池商店（7/12） 京都の茶道裏千家準教授・水島宗華先生を迎えた夏のお茶会。7月11日は藤田屋で浴衣茶会、7月12日は五人百姓池商店で琴平学とお茶会を開催。",
       "fee": "4000",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋、五人百姓池商店"
+      "organizer": "こんぴら路地裏着物レンタル藤田屋、五人百姓池商店",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-810c-871a-d9fc2b6a9a91",
@@ -1576,7 +1744,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b810c871ad9fc2b6a9a91.webp",
       "comment": "イタリア南部プーリア州出身のシェフ、サルヴァトーレ氏が呑象ブリューイングで本格イタリアンコースを提供する特別イベント。クラフトビールとのペアリングセットも用意されている。",
       "fee": "3300",
-      "organizer": "呑象ブリューイング"
+      "organizer": "呑象ブリューイング",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-8097-b3bc-f5ec434dc2c6",
@@ -1591,7 +1761,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b8097b3bcf5ec434dc2c6.webp",
       "comment": "",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3810b4e5-ff5b-8105-8760-e186eaca7b97",
@@ -1606,7 +1778,9 @@ window.NOTION_DATA = {
       "image": "assets/manual/20260709.webp",
       "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の着方や帯結び、着物を着た時の所作を学べる。ドリンクとおやつ付き。",
       "fee": "500",
-      "organizer": "つるや旅館、藤田屋"
+      "organizer": "つるや旅館、藤田屋",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-80cb-aa3f-e4d6f9f7f383",
@@ -1621,7 +1795,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b80cbaa3fe4d6f9f7f383.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
+      "organizer": "地域おこし協力隊 あっきー",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38f0b4e5-ff5b-8080-8966-c10ffddc164b",
@@ -1636,7 +1812,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b80808966c10ffddc164b.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3960b4e5-ff5b-8184-996f-dd7865e5b0bf",
@@ -1651,7 +1829,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3960b4e5ff5b8184996fdd7865e5b0bf.webp",
       "comment": "県文化功労者で洋画家の谷本重義さん（1929～2022年）の作品展が琴平町のACTことひらで開催中。1970年代から晩年までの油彩画32点が展示され、作風の変遷を鑑賞できる。",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-802d-87eb-cdb1d8f3e1ed",
@@ -1666,7 +1846,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b802d87ebcdb1d8f3e1ed.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3950b4e5-ff5b-81fc-87e6-f5cc4ab28ef3",
@@ -1681,7 +1863,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3950b4e5ff5b81fc87e6f5cc4ab28ef3.webp",
       "comment": "七夕の夜、イギリス出身のNellさんをホストに、願いを込めたミサンガ（ブレスレット）を作るクラフトイベント。初心者から挑戦者向けまで様々な編み方が用意されており、ドリンクやお菓子も楽しめる。",
       "fee": "500",
-      "organizer": "Kotori Cow"
+      "organizer": "Kotori Cow",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "38f0b4e5-ff5b-8032-8c57-eb1bf5f2e4fc",
@@ -1696,7 +1880,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b80328c57eb1bf5f2e4fc.webp",
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
-      "organizer": ""
+      "organizer": "",
+      "calendar": "",
+      "featured": false
     }
   ],
   "campaigns": [
@@ -1713,7 +1899,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3be0b4e5ff5b81f38528f7d075a2da22.webp",
       "comment": "会場: 琴参バス琴平線（丸亀市内バス停発着区間） 丸亀市は、丸亀駅⇔琴平駅方面のJR通勤・通学定期券を持つ人を対象に、琴参バスの琴平線を無料で利用できる実証実験を10月1日～12月28日に実施する。鉄道とバスの組み合わせ利用による利便性向上と定住促進が目的。",
       "fee": "0",
-      "organizer": "丸亀市、善通寺市、琴平町、多度津町、まんのう町"
+      "organizer": "丸亀市、善通寺市、琴平町、多度津町、まんのう町",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3d00b4e5-ff5b-8108-bb8e-e933a53410e9",
@@ -1728,7 +1916,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3d00b4e5ff5b8108bb8ee933a53410e9.webp",
       "comment": "会場: 琴平町内（DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA） 琴平町のKOTOVEGAS（DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA）で台湾をテーマにした期間限定フェアを開催。台湾パイナップルを使用したメニューや台湾スイーツが提供される。",
       "fee": "480",
-      "organizer": "DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA"
+      "organizer": "DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3b00b4e5-ff5b-8100-801e-d571cd9e9dd6",
@@ -1743,7 +1933,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8100801ed571cd9e9dd6.webp",
       "comment": "会場: DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA 琴平町の3店舗（DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA）が合同でハワイフェアを開催。トロピカルな夏限定メニューを提供する。",
       "fee": "",
-      "organizer": "DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA"
+      "organizer": "DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3a40b4e5-ff5b-81a2-8e41-cae65b034d42",
@@ -1758,7 +1950,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3a40b4e5ff5b81a28e41cae65b034d42.webp",
       "comment": "琴参閣では、ご宿泊者限定の夏イベントを開催。8月1日〜21日は子ども向けの夜店（輪投げなど）、8月10日〜14日は恒例のビンゴ大会を実施。",
       "fee": "0",
-      "organizer": "琴参閣"
+      "organizer": "琴参閣",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "39c0b4e5-ff5b-816c-aee3-cf80fcc259d2",
@@ -1773,7 +1967,9 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/39c0b4e5ff5b816caee3cf80fcc259d2.webp",
       "comment": "琴平グランドホテル桜の抄が、2026年7月24日～8月31日に夏休み限定のディナーバイキングを開催。金刀比羅宮参拝と温泉旅館での家族旅行を組み合わせたプランで、ライブキッチンの魚の解体ショーや露天風呂が特徴。小学生向けの直前割セールプランも用意。",
       "fee": "",
-      "organizer": "琴平グランドホテル 桜の抄"
+      "organizer": "琴平グランドホテル 桜の抄",
+      "calendar": "",
+      "featured": false
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
@@ -1788,8 +1984,172 @@ window.NOTION_DATA = {
       "image": "",
       "comment": "うさぎいろで桃大福の販売が本日より開始された。白桃を使用したフルーツ大福。",
       "fee": "",
-      "organizer": "うさぎいろ"
+      "organizer": "うさぎいろ",
+      "calendar": "",
+      "featured": false
     }
   ],
-  "shops": []
+  "shops": [],
+  "orgs": [
+    {
+      "id": "3d10b4e5-ff5b-8048-90fe-e217db69b649",
+      "name": "ことウラさんぽ",
+      "summary": "👩‍🎓令和8年度香川大学公認 琴平町地域活性化プロジェクト 📖 ノートを片手に琴平の「B面」を巡る体験を企画中！ ♥️一番大切にしてほしいのは「あなたの心がどう動いたか」 街のヒミツをナビゲートしながら、参加者が主役になって作り上げる新しい周遊旅です。 🎖️ 香大生「夢チャレンジ」採択事業",
+      "show": true,
+      "links": {
+        "note": "",
+        "instagram": "https://www.instagram.com/ura_kotohira_trip/",
+        "x": "",
+        "website": "",
+        "youtube": "",
+        "ameblo": "",
+        "threads": "",
+        "facebook": ""
+      },
+      "instagram": [
+        "https://www.instagram.com/p/DcmxlYdj0Bg/",
+        "https://www.instagram.com/p/DcdX5dBE2En/",
+        "https://www.instagram.com/p/DcLa19hPpmU/",
+        "https://www.instagram.com/p/DcIuJWMEUif/",
+        "https://www.instagram.com/p/Dbu7VATTbAO/",
+        "https://www.instagram.com/p/DaAwqfuDxTy/"
+      ],
+      "x": [],
+      "items": []
+    },
+    {
+      "id": "3d10b4e5-ff5b-8093-9f77-fe60b68a03d2",
+      "name": "コトコトプロジェクト",
+      "summary": "🏡琴平町 × 流通科学大学 山川ゼミ 📍香川県琴平町 🌿 地域とつながる旅「コトコトプロジェクト」 📸 琴平の魅力とプロジェクト情報を発信中！",
+      "show": true,
+      "links": {
+        "note": "",
+        "instagram": "https://www.instagram.com/kotokoto_project/",
+        "x": "",
+        "website": "",
+        "youtube": "",
+        "ameblo": "",
+        "threads": "",
+        "facebook": ""
+      },
+      "instagram": [
+        "https://www.instagram.com/p/DbIpNKgz5Wb/",
+        "https://www.instagram.com/p/DauldN1E2cQ/",
+        "https://www.instagram.com/p/DafS1vgTrlo/"
+      ],
+      "x": [],
+      "items": []
+    },
+    {
+      "id": "3d10b4e5-ff5b-80f2-8232-ed205c7ea45c",
+      "name": "琴平縁むすびプロジェクト またたび",
+      "summary": "香川大の学生プロジェクト『地元再発見の旅 またたび』。2025年度より琴平にフォーカス。『琴平ビト探訪』など取材記事を発信。2026年に『琴平縁むすびプロジェクト またたび』へ新体制。",
+      "show": true,
+      "links": {
+        "note": "https://note.com/matatabi_tour",
+        "instagram": "https://www.instagram.com/matatabi_saihakken",
+        "x": "https://x.com/matatabi_tour",
+        "website": "https://matatabisaihakken.wixsite.com/kagawa-uni-matatabi",
+        "youtube": "",
+        "ameblo": "",
+        "threads": "",
+        "facebook": "https://www.facebook.com/MataTabi.kagawa/"
+      },
+      "instagram": [
+        "https://www.instagram.com/p/Dc2zmD2DwnQ/",
+        "https://www.instagram.com/p/DcN4T1cyOc5/",
+        "https://www.instagram.com/p/DbFlVOHkh4-/",
+        "https://www.instagram.com/p/DazWURLSaoa/",
+        "https://www.instagram.com/p/DahOmcUyxSd/",
+        "https://www.instagram.com/p/DaZvYQ3Etat/",
+        "https://www.instagram.com/p/DaPImWFyh2i/",
+        "https://www.instagram.com/p/DZ-CItYSQAL/",
+        "https://www.instagram.com/p/DZrLAqcSc0A/",
+        "https://www.instagram.com/p/DZMh8-yvH3D/"
+      ],
+      "x": [],
+      "items": [
+        {
+          "id": "note-d1afb313507e9e48e93c5179",
+          "source": "note",
+          "title": "琴平ビト探訪第12弾〜192段目で出会う「かわいい」の先にある琴平の物語〜",
+          "url": "https://note.com/matatabi_tour/n/n285e1bced919",
+          "date": "2026-09-01",
+          "thumbnail": "assets/thumbs/noted1afb313507e9e48e93c5179.webp"
+        },
+        {
+          "id": "note-b5e3d60a42e42c498a34dc68",
+          "source": "note",
+          "title": "子供から大人まで笑顔になれる場所！「富くじ 元祖こんぴら射的場」が目指す、琴平の\"年中縁日\"構想✨",
+          "url": "https://note.com/matatabi_tour/n/n7bf5e1740a3c",
+          "date": "2026-08-01",
+          "thumbnail": "assets/thumbs/noteb5e3d60a42e42c498a34dc68.webp"
+        },
+        {
+          "id": "note-706b2176c2c4f0675e173472",
+          "source": "note",
+          "title": "【番外編】新メンバーとこんぴら十帖食べ歩きツアー",
+          "url": "https://note.com/matatabi_tour/n/n221f11ef142b",
+          "date": "2026-07-01",
+          "thumbnail": "assets/thumbs/note706b2176c2c4f0675e173472.webp"
+        },
+        {
+          "id": "note-6e87714bc649c3f2d2872089",
+          "source": "note",
+          "title": "【番外編】またたび、22匹(!?)になりました。新メンバー大集合！",
+          "url": "https://note.com/matatabi_tour/n/n62a2531d9c6a",
+          "date": "2026-06-01",
+          "thumbnail": "assets/thumbs/note6e87714bc649c3f2d2872089.webp"
+        },
+        {
+          "id": "note-6080e5a334a1c0b096bafe56",
+          "source": "note",
+          "title": "琴平ビト探訪第10弾〜フルコースを、一本に凝縮。美食の頂点を見てきた男が、辿り着いた「食の原点」～",
+          "url": "https://note.com/matatabi_tour/n/nddfbc45ac246",
+          "date": "2026-05-01",
+          "thumbnail": "assets/thumbs/note6080e5a334a1c0b096bafe56.webp"
+        },
+        {
+          "id": "note-154810c00f5283b6d08397b6",
+          "source": "note",
+          "title": "【番外編】琴平から、アートへ。香川三人の巨匠をめぐる3時間の旅",
+          "url": "https://note.com/matatabi_tour/n/nb161eaa70bbd",
+          "date": "2026-04-01",
+          "thumbnail": "assets/thumbs/note154810c00f5283b6d08397b6.webp"
+        },
+        {
+          "id": "note-051017c28f1437d49174d7a0",
+          "source": "note",
+          "title": "琴平ビト探訪第9弾～参道をぬけたら、甘い香りがした～",
+          "url": "https://note.com/matatabi_tour/n/n7538f5451010",
+          "date": "2026-03-01",
+          "thumbnail": "assets/thumbs/note051017c28f1437d49174d7a0.webp"
+        },
+        {
+          "id": "note-157df9a21479d26970361a1c",
+          "source": "note",
+          "title": "【番外編】香川県大学プロジェクト・新体制スタート！『琴平縁むすびプロジェクト またたび』",
+          "url": "https://note.com/matatabi_tour/n/n347d3a319908",
+          "date": "2026-02-01",
+          "thumbnail": "assets/thumbs/note157df9a21479d26970361a1c.webp"
+        },
+        {
+          "id": "note-67a37e51a45cc4d288fa5313",
+          "source": "note",
+          "title": "またたびの年末詣レポ！こんぴらさんで一年の区切りを",
+          "url": "https://note.com/matatabi_tour/n/n46aedc8b646e",
+          "date": "2026-01-01",
+          "thumbnail": "assets/thumbs/note67a37e51a45cc4d288fa5313.webp"
+        },
+        {
+          "id": "note-7a2768764d3ca109020ee427",
+          "source": "note",
+          "title": "琴平ビト探訪第8弾～「年に一度の常連」が通う町のうどん屋～",
+          "url": "https://note.com/matatabi_tour/n/n2c08f688e3e3",
+          "date": "2025-12-01",
+          "thumbnail": "assets/thumbs/note7a2768764d3ca109020ee427.webp"
+        }
+      ]
+    }
+  ]
 };

@@ -30,6 +30,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import os
@@ -38,7 +39,9 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from typing import Any, Callable
 
 NOTION_VERSION = "2025-09-03"
@@ -94,11 +97,20 @@ EXPERIENCE_DB_ID = os.environ.get("EXPERIENCE_NOTION_DB_ID", "")
 # 琴平町お店DB（お店の営業カレンダー）。EVENT_DB_ID等と同じくデフォルトを直書きする方式
 # （2026-09-04接続確認済み、読み取り専用インテグレーション）。
 SHOP_DB_ID = os.environ.get("SHOP_NOTION_DB_ID", "3d10b4e5ff5b805caaa3e8ac1feaa083")
+# 団体2DB（2026-09-05にregistry.json/data.jsからNotionへ移行）。
+# IDは /search API（filter object=data_source）で「琴平町関連団体」「関連団体の投稿」を
+# 名前で特定した結果を定数化したもの（取得手順は本ファイルのgit履歴・作業ログを参照）。
+ORG_DB_ID = os.environ.get("ORG_NOTION_DB_ID", "3d10b4e5ff5b80c6a922ebfa8ab11ae6")
+ORG_POST_DB_ID = os.environ.get(
+    "ORG_POST_NOTION_DB_ID", "3d10b4e5ff5b8024a440c3162bb6bd00"
+)
 
 NEWS_MAX = 60
 EVENT_MAX = 200
 EXPERIENCE_MAX = 200
 SHOP_MAX = 100
+ORG_MAX = 50
+ORG_POST_MAX = 300
 RECENT_WINDOW_DAYS = 60
 
 THUMBS_DIR = os.path.join(REPO_ROOT, "assets", "thumbs")
@@ -828,6 +840,224 @@ def fetch_shops(token: str) -> list[dict[str, Any]]:
     return [item for item in items if item.get("show") and item.get("image")]
 
 
+# ===== 団体（registry.json/data.jsからNotion 2DBへ移行。2026-09-05） =====
+# 団体DB「琴平町関連団体」→ parse_org。投稿DB「関連団体の投稿」→ fetch_org_posts。
+# 出力は表示側（index.htmlのorgsListHTML/orgDetailHTML）が読むD.orgsと同じ形にする
+# （id/name/summary/links/items[]/instagram[]/x[]）。表示側の改修を最小化するため。
+
+# 投稿URLのドメイン→媒体キー（表示側のSNS配列・CSSクラス名と同じキー）。
+# note.comは「関連団体の投稿」に個別記事URLとして混在することがあるが、noteは別途
+# RSS自動取得（fetch_note_rss）の方が題名・サムネ付きで情報が豊富なため、items生成には
+# 使わず、instagram/x配列（埋め込み用）にのみ投稿DBを使う。ここでの判定はmedia内訳の
+# 集計・報告のためにnote.com等も含めて汎用的に行う。
+MEDIA_DOMAIN_MAP = [
+    ("instagram.com", "instagram"),
+    ("x.com", "x"),
+    ("twitter.com", "x"),
+    ("note.com", "note"),
+    ("youtube.com", "youtube"),
+    ("youtu.be", "youtube"),
+    ("ameblo.jp", "ameblo"),
+]
+
+
+def detect_media(url: str) -> str:
+    """投稿URLのホスト名から媒体キーを判定する。判定できなければ空文字。"""
+    host = urllib.parse.urlparse(url).netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    for domain, key in MEDIA_DOMAIN_MAP:
+        if host == domain or host.endswith("." + domain):
+            return key
+    return ""
+
+
+def parse_org(page: dict[str, Any]) -> dict[str, Any]:
+    properties = page.get("properties", {})
+    return {
+        "id": page.get("id", ""),
+        "name": get_title(properties, "団体名"),
+        "summary": strip_html(get_rich_text(properties, "説明")),
+        "show": get_checkbox(properties, "表示対象"),
+        "links": {
+            "note": get_url(properties, "note"),
+            "instagram": get_url(properties, "Instagram"),
+            "x": get_url(properties, "X"),
+            "website": get_url(properties, "HP"),
+            "youtube": "",
+            "ameblo": "",
+            # threads/facebookは団体DBにはあるが、表示側のSNS配列（linkBadges）が
+            # まだ対応していないため現状バッジには出ない。データとしては保持しておく
+            # （表示側を拡張する時にlinkBadges/SNS/.lk CSSへキーを足すだけで出せる）。
+            "threads": get_url(properties, "Threads"),
+            "facebook": get_url(properties, "Facebook"),
+        },
+    }
+
+
+def fetch_org_posts(token: str) -> tuple[list[dict[str, Any]], dict[str, int], int]:
+    """投稿DBを取得し、団体別の投稿リストと媒体判定の内訳を返す。
+
+    表示対象列が無いため全行を対象とする。並びは投稿日(降順)。投稿日が
+    空の行はcreated_time（Notion行自体の作成日時）を代替に使う。
+    戻り値: (posts, media別件数の内訳dict, 判定不能でスキップした件数)
+    """
+    dsid = get_data_source_id(ORG_POST_DB_ID, token)
+    sorts = [{"property": "投稿日", "direction": "descending"}]
+    pages = query_data_source(dsid, token, sorts, ORG_POST_MAX)
+    posts: list[dict[str, Any]] = []
+    media_counts: dict[str, int] = {}
+    skipped = 0
+    for page in pages:
+        properties = page.get("properties", {})
+        url = get_url(properties, "投稿URL")
+        org_ids = get_relation_ids(properties, "団体")
+        if not url or not org_ids:
+            continue
+        media = detect_media(url)
+        if not media:
+            skipped += 1
+            continue
+        media_counts[media] = media_counts.get(media, 0) + 1
+        date = get_date_start(properties, "投稿日") or (page.get("created_time") or "")[:10]
+        posts.append({"org_id": org_ids[0], "media": media, "url": url, "date": date})
+    # Notion側の並び順（投稿日降順）でも投稿日が空の行の位置は保証されないため、
+    # created_timeフォールバックを反映した実効日付でPython側から確定させる。
+    posts.sort(key=lambda p: p["date"], reverse=True)
+    return posts, media_counts, skipped
+
+
+def note_profile_to_rss(note_url: str) -> str:
+    """noteプロフィールURL（https://note.com/xxx）をRSS URLへ変換する。
+
+    note.com以外のホストが渡された場合は空文字（RSS取得先をnote.comのみに
+    限定するガード。他ホストへは絶対に飛ばさない）。
+    """
+    if not note_url:
+        return ""
+    parsed = urllib.parse.urlparse(note_url)
+    host = parsed.netloc.lower()
+    if host != "note.com" and not host.endswith(".note.com"):
+        return ""
+    path = parsed.path.rstrip("/")
+    if not path or path == "":
+        return ""
+    return f"https://note.com{path}/rss"
+
+
+def rss_pubdate_to_ymd(pub_date: str) -> str:
+    """RSS 2.0のpubDate（RFC822形式）を 'YYYY-MM-DD'（JST換算）に変換する。"""
+    if not pub_date:
+        return ""
+    try:
+        dt = parsedate_to_datetime(pub_date)
+    except (TypeError, ValueError):
+        return ""
+    if dt.tzinfo is not None:
+        dt = dt.astimezone(JST)
+    return dt.strftime("%Y-%m-%d")
+
+
+def fetch_note_rss(note_profile_url: str, max_items: int = 10) -> list[dict[str, Any]]:
+    """noteプロフィールURLから自動導出したRSSを取得し、テキスト系媒体items形式へ変換する。
+
+    標準ライブラリのみ（urllib + xml.etree、feedparser等のpip依存なし）。
+    サムネイルはmedia:thumbnail（RSS 2.0のmedia名前空間）があれば使う。
+    idにはNotionページIDが無いため記事URLのハッシュ値を代替に使い、
+    save_images（file_id="id".replace("-","")）とcontentSlug（it.id優先）の
+    両方が既存の仕組みのまま動くようにする。
+
+    Ameblo等の他テキスト媒体は現DBに該当団体が無いため未実装。導入する場合は
+    ここと同じ要領で「https://ameblo.jp/xxx」→ Ameblo公式のRSS URL規則（要確認）
+    への変換関数を追加し、fetch_orgs側でsource="ameblo"のitemsとして混ぜ込めばよい。
+    """
+    rss_url = note_profile_to_rss(note_profile_url)
+    if not rss_url:
+        return []
+    req = urllib.request.Request(rss_url)
+    req.add_header("User-Agent", DOWNLOAD_USER_AGENT)
+    try:
+        with urllib.request.urlopen(req, timeout=DOWNLOAD_TIMEOUT) as res:
+            raw = res.read()
+    except Exception as e:
+        print(f"[警告] note RSSの取得に失敗しました（{rss_url}）: {type(e).__name__}")
+        return []
+    try:
+        root = ET.fromstring(raw)
+    except ET.ParseError as e:
+        print(f"[警告] note RSSのパースに失敗しました（{rss_url}）: {e}")
+        return []
+
+    ns = {"media": "http://search.yahoo.com/mrss/"}
+    items: list[dict[str, Any]] = []
+    for item in root.findall("./channel/item")[:max_items]:
+        title = (item.findtext("title") or "").strip()
+        link = (item.findtext("link") or "").strip()
+        if not title or not link:
+            continue
+        # note.comの<media:thumbnail>はMediaRSSの標準（url属性）ではなく、
+        # 要素のテキスト内容としてURLを持つ（noteの独自実装。属性ではないので
+        # thumb_el.get("url")では拾えない）
+        thumb_el = item.find("media:thumbnail", ns)
+        thumbnail = (thumb_el.text or "").strip() if thumb_el is not None else ""
+        items.append(
+            {
+                "id": "note-" + hashlib.sha1(link.encode("utf-8")).hexdigest()[:24],
+                "source": "note",
+                "title": html.unescape(title),
+                "url": link,
+                "date": rss_pubdate_to_ymd((item.findtext("pubDate") or "").strip()),
+                "thumbnail": thumbnail,
+            }
+        )
+    return items
+
+
+def fetch_orgs(token: str) -> list[dict[str, Any]]:
+    """団体2DBを取得し、表示側のD.orgsと同じ形の配列を返す。
+
+    団体DBの「表示対象」チェック済みのみを対象とする（旧data.jsに無い団体が
+    新DBに無いのは意図的に許容する＝サイトから消えてよい）。投稿DBは全行対象
+    （表示対象列が無いため）。noteのテキスト記事はDBの個別URLではなく、
+    団体DBのnoteプロフィールURLから自動導出したRSSで取得する。
+    """
+    dsid = get_data_source_id(ORG_DB_ID, token)
+    sorts = [{"property": "団体名", "direction": "ascending"}]
+    pages = query_data_source(dsid, token, sorts, ORG_MAX)
+    orgs = [parse_org(p) for p in pages]
+    orgs = [o for o in orgs if o.get("show")]
+
+    posts, media_counts, skipped = fetch_org_posts(token)
+    print(
+        "関連団体の投稿: 媒体判定内訳 "
+        + (", ".join(f"{k}={v}件" for k, v in media_counts.items()) or "該当なし")
+        + (f" / 判定不能でスキップ={skipped}件" if skipped else "")
+    )
+    posts_by_org: dict[str, list[dict[str, Any]]] = {}
+    for p in posts:
+        posts_by_org.setdefault(p["org_id"], []).append(p)
+
+    note_total = 0
+    for o in orgs:
+        org_posts = posts_by_org.get(o["id"], [])
+        # 投稿DBの並び順（投稿日降順、fetch_org_postsで確定済み）をそのまま使う。
+        # 表示側（orgEmbedSectionHTML）は先頭3件をslice(0,3)するだけで再ソートしない。
+        o["instagram"] = [p["url"] for p in org_posts if p["media"] == "instagram"]
+        o["x"] = [p["url"] for p in org_posts if p["media"] == "x"]
+
+        items: list[dict[str, Any]] = []
+        note_url = o["links"].get("note", "")
+        if note_url:
+            rss_items = fetch_note_rss(note_url)
+            items.extend(rss_items)
+            note_total += len(rss_items)
+        save_images(items, "thumbnail")
+        o["items"] = items
+
+    print(f"note RSS: {note_total}件の記事を取得しました")
+    return orgs
+
+
 def load_existing_data() -> dict[str, Any]:
     """既存の notion-data.js があれば window.NOTION_DATA の中身を返す。
 
@@ -874,11 +1104,15 @@ def main() -> None:
     image_success = 0
     override_total = 0
 
-    tasks: list[tuple[str, str, Callable[[], list[dict[str, Any]]]]] = [
+    tasks: list[tuple[str, str | None, Callable[[], list[dict[str, Any]]]]] = [
         ("news", "thumbnail", lambda: fetch_news(token)),
         ("events", "image", lambda: fetch_events(EVENT_DB_ID, token)),
         ("campaigns", "image", lambda: fetch_events(CAMPAIGN_DB_ID, token)),
         ("shops", "image", lambda: fetch_shops(token)),
+        # 団体はitems（note RSS）内のthumbnailをfetch_orgs内部で個別に保存済みのため、
+        # image_field=None にしてこのループ内の共通apply_image_overrides/save_images
+        # （団体オブジェクト自体にはthumbnailフィールドが無い）をスキップする。
+        ("orgs", None, lambda: fetch_orgs(token)),
     ]
     # 体験・滞在DBは EXPERIENCE_NOTION_DB_ID が設定されている場合のみ取得する。
     if EXPERIENCE_DB_ID:
@@ -890,14 +1124,15 @@ def main() -> None:
         print(f"{key}を取得中...")
         try:
             items = fn()
-            # ローカル画像オーバーライドを最優先で適用（Notionを画像に使わない）
-            applied = apply_image_overrides(items, image_field, overrides)
-            override_total += applied
-            if applied:
-                print(f"{key}: ローカル画像を{applied}件適用（Notion非経由）")
-            t, s = save_images(items, image_field)
-            image_total += t
-            image_success += s
+            if image_field:
+                # ローカル画像オーバーライドを最優先で適用（Notionを画像に使わない）
+                applied = apply_image_overrides(items, image_field, overrides)
+                override_total += applied
+                if applied:
+                    print(f"{key}: ローカル画像を{applied}件適用（Notion非経由）")
+                t, s = save_images(items, image_field)
+                image_total += t
+                image_success += s
             result[key] = items
             print(f"{key}: {len(items)}件取得しました")
         except urllib.error.HTTPError as e:
@@ -908,7 +1143,7 @@ def main() -> None:
             errors[key] = type(e).__name__
 
     # 失敗したDBは、既存 notion-data.js に該当キーがあれば温存する
-    result_keys = ["news", "events", "campaigns", "shops"]
+    result_keys = ["news", "events", "campaigns", "shops", "orgs"]
     if EXPERIENCE_DB_ID:
         result_keys.append("experiences")
     for key in result_keys:
@@ -935,6 +1170,7 @@ def main() -> None:
         "events": result.get("events", []),
         "campaigns": result.get("campaigns", []),
         "shops": result.get("shops", []),
+        "orgs": result.get("orgs", []),
     }
     # 体験・滞在は、DB設定済みか既存データがある場合のみ書き出す（未設定時は
     # キー自体を省略し、既存の体験データがあれば温存する）。

@@ -875,7 +875,12 @@ const ND = {
      未生成（空）なら手編集の experiences-data.js（window.EXPERIENCES_DATA）を使う */
   experiences: (Array.isArray(ND_RAW.experiences) && ND_RAW.experiences.length)
     ? ND_RAW.experiences
-    : (window.EXPERIENCES_DATA?.items || [])
+    : (window.EXPERIENCES_DATA?.items || []),
+  /* 📋 団体（2026-09-05にregistry.json/data.jsからNotion 2DBへ移行）。
+     Notion側（notion-data.js）に orgs があればそれを正とし、未生成（空）なら
+     従来のD.orgs（data.js。レガシー・フォールバック）を使う。experiencesと同じ流儀で、
+     fetch実行→コミットの間も表示が壊れないようにする */
+  orgs: (Array.isArray(ND_RAW.orgs) && ND_RAW.orgs.length) ? ND_RAW.orgs : (D.orgs || [])
 };
 
 /* 🔗 リンク集（links-data.js 由来。コード直書き運用） */
@@ -1113,7 +1118,7 @@ function render(opt){
   if(r.view === "orgs"){
     m.innerHTML = orgsListHTML(orgSearchTerm);
   } else if(r.view === "org"){
-    const o = D.orgs.find(x=>x.id===r.id);
+    const o = ND.orgs.find(x=>x.id===r.id);
     if(!o){ location.hash = "#orgs"; return; }
     m.innerHTML = orgDetailHTML(o);
   } else if(r.view === "news"){
@@ -1151,7 +1156,7 @@ function render(opt){
   setupOrgEmbedLazyLoad();
   scrollEventWeekToToday();
   const meta = PAGE_META[r.view];
-  const orgTitle = r.view === "org" ? (D.orgs.find(x=>x.id===r.id)?.name || "") : "";
+  const orgTitle = r.view === "org" ? (ND.orgs.find(x=>x.id===r.id)?.name || "") : "";
   document.title = orgTitle ? `${orgTitle}｜ことひらいふ`
     : r.view === "home" ? "ことひらいふ"
     : meta ? `${stripLeadingEmoji(meta.title)}｜ことひらいふ` : "ことひらいふ";
@@ -1793,7 +1798,7 @@ function orgsListHTML(filter){
 }
 function orgRowsHTML(filter){
   const f = (filter||"").toLowerCase();
-  const orgs = D.orgs.filter(o => !f
+  const orgs = ND.orgs.filter(o => !f
     || (o.name||"").toLowerCase().includes(f)
     || (o.summary||"").toLowerCase().includes(f));
   return orgs.map(o => `
