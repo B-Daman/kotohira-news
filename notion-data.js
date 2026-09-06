@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-06 02:03",
+  "fetched": "2026-09-07 02:26",
   "news": [
     {
       "id": "3d10b4e5-ff5b-81bc-960a-f118f20b9dd3",
@@ -549,7 +549,7 @@ window.NOTION_DATA = {
       "url": "",
       "start": "2026-09-06",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1622,36 +1622,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "地域おこし協力隊 あっきー"
-    },
-    {
-      "id": "38f0b4e5-ff5b-8080-8966-c10ffddc164b",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
-      "start": "2026-07-08T12:00",
-      "end": "2026-07-08T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/38f0b4e5ff5b80808966c10ffddc164b.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3960b4e5-ff5b-8184-996f-dd7865e5b0bf",
-      "title": "故谷本重義さん作品展",
-      "url": "https://www.shikoku-np.co.jp/dg/amp/article.aspx?id=K2026070800000002500",
-      "start": "2026-07-08",
-      "end": "2026-07-13",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ACTことひら",
-      "address": "〒766-0002 香川県仲多度郡琴平町176",
-      "image": "assets/thumbs/3960b4e5ff5b8184996fdd7865e5b0bf.webp",
-      "comment": "県文化功労者で洋画家の谷本重義さん（1929～2022年）の作品展が琴平町のACTことひらで開催中。1970年代から晩年までの油彩画32点が展示され、作風の変遷を鑑賞できる。",
-      "fee": "0",
-      "organizer": ""
     }
   ],
   "campaigns": [
