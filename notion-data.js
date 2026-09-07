@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-07 02:26",
+  "fetched": "2026-09-08 03:56",
   "news": [
+    {
+      "id": "3d40b4e5-ff5b-81fb-86f7-ea776760917a",
+      "title": "「ふるさと住民登録制度 モニター実証事業」に係るモニター募集",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/11990.html",
+      "summary": "琴平町は総務省が進める「ふるさと住民登録制度」のモニター実証事業に参加し、モニターを募集します。試用版アプリを利用して地域情報検索や担い手活動を体験し、複数回のアンケート調査に協力していただきます。実証期間は2026年10月16日～12月18日予定です。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-09-07",
+      "thumbnail": "assets/thumbs/3d40b4e5ff5b81fb86f7ea776760917a.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3d10b4e5-ff5b-81bc-960a-f118f20b9dd3",
       "title": "琴平町の一之橋公園付近で第8回 こんぴら秋夜市のプレイベント「ことひらふれあい音楽祭」が2026年9月5日(土)に開催される",
@@ -379,6 +392,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3d40b4e5-ff5b-802e-bb1e-fa37f3c55f29",
+      "title": "今日はどこ行く？ランチ会",
+      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
+      "start": "2026-09-30T12:00",
+      "end": "2026-09-30T13:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b802ebb1efa37f3c55f29.webp",
+      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
+      "fee": "",
+      "organizer": ""
+    },
+    {
       "id": "3cd0b4e5-ff5b-80a5-b41e-ce2094c5382b",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -391,6 +419,51 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3cd0b4e5ff5b80a5b41ece2094c5382b.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
+      "organizer": ""
+    },
+    {
+      "id": "3d40b4e5-ff5b-809a-9bf6-d1d241d3411d",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-09-26T07:20",
+      "end": "2026-09-26T09:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b809a9bf6d1d241d3411d.webp",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
+    },
+    {
+      "id": "3d40b4e5-ff5b-80b2-b056-e3f9f0bfc0b9",
+      "title": "ご飯ついでに、国際交流～みんなでカレーを囲みながら世界の人たちと気軽に交流",
+      "url": "https://www.instagram.com/p/Dc-xKBwExgT/",
+      "start": "2026-09-25T18:30",
+      "end": "2026-09-25T21:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b80b2b056e3f9f0bfc0b9.webp",
+      "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
+      "fee": "500",
+      "organizer": "Kotori Coworking & Hostel Kotohira"
+    },
+    {
+      "id": "3d40b4e5-ff5b-805d-91af-ee1c972c47b2",
+      "title": "今日はどこ行く？ランチ会",
+      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
+      "start": "2026-09-23T12:00",
+      "end": "2026-09-23T13:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b805d91afee1c972c47b2.webp",
+      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
+      "fee": "",
       "organizer": ""
     },
     {
@@ -409,6 +482,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3d40b4e5-ff5b-80e1-9208-f5f486857a0e",
+      "title": "第14回 讃岐おでん試作会～夏おでん意見交換回～",
+      "url": "",
+      "start": "2026-09-22T19:00",
+      "end": "2026-09-22T21:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b80e19208f5f486857a0e.webp",
+      "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
+      "fee": "2000",
+      "organizer": "讃岐おでんプロジェクト"
+    },
+    {
       "id": "3ce0b4e5-ff5b-817d-b9ac-c06e7d8b3d2e",
       "title": "オリジナル着物の半衿を作るワークショップ〜刺繍",
       "url": "https://www.instagram.com/p/DctUUTtmAPo/",
@@ -424,6 +512,21 @@ window.NOTION_DATA = {
       "organizer": "こんぴら路地裏着物レンタル藤田屋"
     },
     {
+      "id": "3d40b4e5-ff5b-805e-86aa-ca48f43e34d3",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-09-19T07:20",
+      "end": "2026-09-19T09:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b805e86aaca48f43e34d3.webp",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
+    },
+    {
       "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
       "title": "第16回「ユルッと楽しく着付けレッスン」",
       "url": "https://www.instagram.com/p/DcJUmy4gUJL/",
@@ -437,6 +540,36 @@ window.NOTION_DATA = {
       "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
       "fee": "500",
       "organizer": "つるや旅館、藤田屋"
+    },
+    {
+      "id": "3d40b4e5-ff5b-806e-a74a-f23aa502083b",
+      "title": "今日はどこ行く？ランチ会",
+      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
+      "start": "2026-09-16T12:00",
+      "end": "2026-09-16T13:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b806ea74af23aa502083b.webp",
+      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
+      "fee": "",
+      "organizer": ""
+    },
+    {
+      "id": "3d40b4e5-ff5b-80de-96b9-f43898bc8502",
+      "title": "Play & Doodle w/ Paul",
+      "url": "",
+      "start": "2026-09-16",
+      "end": "",
+      "status": "実施前",
+      "city": "",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "",
+      "fee": "",
+      "organizer": ""
     },
     {
       "id": "3cd0b4e5-ff5b-80b5-bf44-c186c4228a75",
@@ -484,6 +617,21 @@ window.NOTION_DATA = {
       "organizer": "琴平町商工会"
     },
     {
+      "id": "3d40b4e5-ff5b-8062-8850-c9dccebaa7b5",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-09-12T07:20",
+      "end": "2026-09-12T09:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b80628850c9dccebaa7b5.webp",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
+    },
+    {
       "id": "3a50b4e5-ff5b-818d-a225-d0048ef3f63f",
       "title": "四国シェアサミット2026 in 琴平",
       "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
@@ -529,12 +677,42 @@ window.NOTION_DATA = {
       "organizer": "DONZO Brewing"
     },
     {
+      "id": "3d40b4e5-ff5b-8171-a5b3-d984c126c2fa",
+      "title": "ビジョンボード作成ワークショップ",
+      "url": "https://www.instagram.com/p/Dc3DYGXzA93/",
+      "start": "2026-09-09T19:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b8171a5b3d984c126c2fa.webp",
+      "comment": "自分自身と向き合い、未来の目標や必要なものを見つめ直すためのビジョンボード作成ワークショップ。コトリコワーキング＆ホステル琴平のスタッフのぞみが企画し、参加者のモチベーションや視野を広げることを目的としている。",
+      "fee": "500",
+      "organizer": "コトリコワーキング＆ホステル琴平"
+    },
+    {
+      "id": "3d40b4e5-ff5b-80fc-aa3c-eedd6d30f6f5",
+      "title": "今日はどこ行く？ランチ会",
+      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
+      "start": "2026-09-09T12:00",
+      "end": "2026-09-09T13:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b80fcaa3ceedd6d30f6f5.webp",
+      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
+      "fee": "",
+      "organizer": ""
+    },
+    {
       "id": "3cd0b4e5-ff5b-804e-8747-d727722bca0c",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-08T20:00",
       "end": "2026-09-08T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -587,6 +765,51 @@ window.NOTION_DATA = {
       "comment": "琴平町の金陵の郷で開催される台湾グルメ・文化イベント。台湾屋台グルメの出店、ステージイベント（電音三太子・二胡演奏・トークショー）、町内コラボメニュースタンプラリー、限定ガチャガチャなどが予定されている。",
       "fee": "0",
       "organizer": "琴平町"
+    },
+    {
+      "id": "3d40b4e5-ff5b-802e-ba8e-edf2d9b80d40",
+      "title": "琴高祭",
+      "url": "https://www.instagram.com/p/Dc2-DnGRNSi/",
+      "start": "2026-09-05T09:30",
+      "end": "2026-09-05T14:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "琴平高校",
+      "address": "香川県仲多度郡琴平町五條142-2",
+      "image": "assets/thumbs/3d40b4e5ff5b802eba8eedf2d9b80d40.webp",
+      "comment": "",
+      "fee": "",
+      "organizer": ""
+    },
+    {
+      "id": "3d40b4e5-ff5b-80c3-98c8-c9cf290bc357",
+      "title": "朝うどん巡礼ツアー",
+      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
+      "start": "2026-09-05T07:20",
+      "end": "2026-09-05T09:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b80c398c8c9cf290bc357.webp",
+      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
+      "fee": "2800",
+      "organizer": ""
+    },
+    {
+      "id": "3d40b4e5-ff5b-80ff-82ff-f6bf2a25ade2",
+      "title": "今日はどこ行く？ランチ会",
+      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
+      "start": "2026-09-02T12:00",
+      "end": "2026-09-02T13:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3d40b4e5ff5b80ff82fff6bf2a25ade2.webp",
+      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
+      "fee": "",
+      "organizer": ""
     },
     {
       "id": "3cd0b4e5-ff5b-80c1-8a4c-e198e9ff817c",
@@ -1592,36 +1815,6 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "3810b4e5-ff5b-8105-8760-e186eaca7b97",
-      "title": "第14回「ユルッと楽しく着付けレッスン」",
-      "url": "https://www.instagram.com/p/DZmpi6HgDGT/",
-      "start": "2026-07-09T18:30",
-      "end": "2026-07-09T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "つるや旅館",
-      "address": "766-0001 香川県仲多度郡琴平町620",
-      "image": "assets/manual/20260709.webp",
-      "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の着方や帯結び、着物を着た時の所作を学べる。ドリンクとおやつ付き。",
-      "fee": "500",
-      "organizer": "つるや旅館、藤田屋"
-    },
-    {
-      "id": "3950b4e5-ff5b-80cb-aa3f-e4d6f9f7f383",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-07-09T18:00",
-      "end": "2026-07-09T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3950b4e5ff5b80cbaa3fe4d6f9f7f383.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
     }
   ],
   "campaigns": [
@@ -1734,6 +1927,9 @@ window.NOTION_DATA = {
         "facebook": ""
       },
       "instagram": [
+        "https://www.instagram.com/p/Dc8kHt-vhc1/",
+        "https://www.instagram.com/p/Dc7NeQjE1ty/",
+        "https://www.instagram.com/p/Dc5x3vBP9G0/",
         "https://www.instagram.com/p/DcmxlYdj0Bg/",
         "https://www.instagram.com/p/DcdX5dBE2En/",
         "https://www.instagram.com/p/DcLa19hPpmU/",
