@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-08 03:56",
+  "fetched": "2026-09-09 03:12",
   "news": [
     {
       "id": "3d40b4e5-ff5b-81fb-86f7-ea776760917a",
@@ -24,6 +24,19 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-04",
       "thumbnail": "assets/thumbs/3d10b4e5ff5b81bc960af118f20b9dd3.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3d50b4e5-ff5b-81df-8afd-c154850ec2ea",
+      "title": "みんなで楽しむインクルーシブスポーツ ボッチャ教室＆交流大会",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/25/11981.html",
+      "summary": "東京パラリンピックで注目を集めた「ボッチャ」の教室と交流大会を開催します。香川県リハビリテーションセンターから講師を招き、障がいのある方もない方も、年齢や性別を問わず参加できます。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-09-03",
+      "thumbnail": "assets/thumbs/3d50b4e5ff5b81df8afdc154850ec2ea.png",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -287,32 +300,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3bd0b4e5-ff5b-8132-94de-fc3d2a1d46c2",
-      "title": "琴平町が来春採用職員を募集",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026081600000002200",
-      "summary": "琴平町は来春採用の職員を募集している。一般行政3人程度（うち障害者1人）、技能労務（清掃）1人程度、建築2人程度で、いずれも高卒程度。締め切りは8月21日（必着）。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-08-16",
-      "thumbnail": "assets/thumbs/3bd0b4e5ff5b813294defc3d2a1d46c2.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3bd0b4e5-ff5b-813a-9cf3-cba02b5c9f74",
-      "title": "平和祈願灯ろう流し",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026081600000003100",
-      "summary": "終戦記念日の8月15日夜、琴平町の一之橋公園周辺で戦争犠牲者を追悼する灯ろう流しが行われた。約200個の灯籠が金倉川に浮かび、参加者が恒久平和を祈った。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-08-16",
-      "thumbnail": "assets/thumbs/3bd0b4e5ff5b813a9cf3cba02b5c9f74.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -360,6 +347,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
       "fee": "0",
       "organizer": "公益財団法人中山芳彦香川イタリア交流財団"
+    },
+    {
+      "id": "3d50b4e5-ff5b-8152-9bb6-f6ff0c82f387",
+      "title": "みんなで楽しむインクルーシブスポーツ ボッチャ教室＆交流大会",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/25/11981.html",
+      "start": "2026-10-18T10:00",
+      "end": "2026-10-18T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町総合センター",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
+      "image": "",
+      "comment": "会場: 総合センター 2階大ホール 東京パラリンピックで注目を集めた「ボッチャ」の教室と交流大会を開催します。香川県リハビリテーションセンターから講師を招き、障がいのある方もない方も、年齢や性別を問わず参加できます。",
+      "fee": "0",
+      "organizer": "琴平町福祉課・生涯学習課"
     },
     {
       "id": "3bc0b4e5-ff5b-8157-895d-f6bf67704406",
@@ -602,6 +604,21 @@ window.NOTION_DATA = {
       "organizer": "流通科学大学"
     },
     {
+      "id": "3d50b4e5-ff5b-8034-8a48-cf5c59b47878",
+      "title": "四国シェアサミット2026 in 琴平 DAY2",
+      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
+      "start": "2026-09-13T09:45",
+      "end": "2026-09-13T12:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町公会堂",
+      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
+      "image": "assets/thumbs/3d50b4e5ff5b80348a48cf5c59b47878.webp",
+      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
+      "fee": "0",
+      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会"
+    },
+    {
       "id": "3c80b4e5-ff5b-81a1-bbda-f8ed9895895d",
       "title": "第8回 こんぴら秋夜市",
       "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
@@ -615,6 +632,21 @@ window.NOTION_DATA = {
       "comment": "会場: 一之橋公園・金陵の郷 琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
       "fee": "0",
       "organizer": "琴平町商工会"
+    },
+    {
+      "id": "3d50b4e5-ff5b-803a-9771-fd5687c65cd0",
+      "title": "四国シェアサミット2026 in 琴平 DAY1",
+      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
+      "start": "2026-09-12T09:30",
+      "end": "2026-09-12T20:35",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町公会堂",
+      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
+      "image": "assets/thumbs/3d50b4e5ff5b803a9771fd5687c65cd0.webp",
+      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
+      "fee": "0",
+      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会"
     },
     {
       "id": "3d40b4e5-ff5b-8062-8850-c9dccebaa7b5",
@@ -633,10 +665,10 @@ window.NOTION_DATA = {
     },
     {
       "id": "3a50b4e5-ff5b-818d-a225-d0048ef3f63f",
-      "title": "四国シェアサミット2026 in 琴平",
+      "title": "四国シェアサミット2026 in 琴平 前夜祭",
       "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
       "start": "2026-09-11T18:00",
-      "end": "2026-09-13",
+      "end": "",
       "status": "実施前",
       "city": "琴平町",
       "place": "琴平町公会堂",
@@ -682,7 +714,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc3DYGXzA93/",
       "start": "2026-09-09T19:00",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -697,7 +729,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-09-09T12:00",
       "end": "2026-09-09T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -712,7 +744,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-08T20:00",
       "end": "2026-09-08T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -1785,36 +1817,6 @@ window.NOTION_DATA = {
       "comment": "会場: 藤田屋2階和室（7/11）、五人百姓池商店（7/12） 京都の茶道裏千家準教授・水島宗華先生を迎えた夏のお茶会。7月11日は藤田屋で浴衣茶会、7月12日は五人百姓池商店で琴平学とお茶会を開催。",
       "fee": "4000",
       "organizer": "こんぴら路地裏着物レンタル藤田屋、五人百姓池商店"
-    },
-    {
-      "id": "3950b4e5-ff5b-810c-871a-d9fc2b6a9a91",
-      "title": "Italian Special Dinner in DONZO Brewing",
-      "url": "https://www.instagram.com/p/DaSeHnWGTpb/",
-      "start": "2026-07-10T17:00",
-      "end": "2026-07-10T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "呑象ブリューイング",
-      "address": "香川県仲多度郡琴平町182-2",
-      "image": "assets/thumbs/3950b4e5ff5b810c871ad9fc2b6a9a91.webp",
-      "comment": "イタリア南部プーリア州出身のシェフ、サルヴァトーレ氏が呑象ブリューイングで本格イタリアンコースを提供する特別イベント。クラフトビールとのペアリングセットも用意されている。",
-      "fee": "3300",
-      "organizer": "呑象ブリューイング"
-    },
-    {
-      "id": "3950b4e5-ff5b-8097-b3bc-f5ec434dc2c6",
-      "title": "7/10 こんぴら十帖",
-      "url": "",
-      "start": "2026-07-10",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3950b4e5ff5b8097b3bcf5ec434dc2c6.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
