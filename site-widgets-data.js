@@ -20,7 +20,7 @@
    placements は "sidebar"（PCサイドバー）または
    "mobile-inline"（スマートフォン本文内）を配列で指定する。 */
 window.SITE_WIDGETS_DATA = {
-  updated: "2026-09-04",
+  updated: "2026-09-10",
 
   /* 気象庁の香川県短期予報をブラウザで自動取得する。
      dataUrl は気象庁サイト内部で利用される公開JSONのため、画面側では構造検証・
@@ -36,6 +36,21 @@ window.SITE_WIDGETS_DATA = {
     forecastUrl: "https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=370000",
     warningUrl: "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=3740300",
     cacheHours: 24
+  },
+
+  /* 💧 早明浦ダム貯水状況ウィジェットの関連リンク（手編集）。
+     貯水率などの数値は dam-data.js（fetch_dam.py が1日2回自動生成）が正で、ここにはカードの
+     下段に並べる外部リンクだけを置く。上から順に表示し、url が空か http(s) 以外の項目は表示しない。
+     ・ダムのライブカメラ: 水資源機構 吉野川上流総合管理所トップの「各ダムのライブカメラ」欄
+       （早明浦ダム左岸展望台・下流ほか6台）。気になった時に今のダムの様子を画像で辿れる
+     ・ダム周辺の雨量: 国交省「川の防災情報」を早明浦ダム周辺の地図で開く（中心座標・ズーム・
+       表示レイヤーはURLに固定済み）。四国の水がめに雨が降っているかを見る用途。
+       PC版パス(/kawabou/pc/)。スマホでの見え方が窮屈なら /kawabou/sp/ に差し替える（同じパラメータで開ける） */
+  dam: {
+    relatedLinks: [
+      { label: "📷 ダムのライブカメラ", url: "https://www.water.go.jp/yoshino/ikeda/" },
+      { label: "🌧 ダム周辺の雨量", url: "https://www.river.go.jp/kawabou/pc/tm?zm=10&clat=33.720913019358676&clon=133.46122741699222&fld=0&mapType=0&viewGrpStg=0&viewRd=1&viewRW=1&viewRiver=1&viewPoint=1&ext=0&ofcCd=22552&itmkndCd=7&obsCd=4&viewRl=1&viewRn=1" }
+    ]
   },
 
   /* LINEオープンチャット（配列。上から順に表示）。

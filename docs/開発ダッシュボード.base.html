@@ -337,7 +337,7 @@
         <div class="s"><div class="l">表示部</div><div class="v">5分類ナビ・「くらし」新設（かき氷はアーカイブ・#sweets直リンクのみ、うどん店は準備中で非表示）</div></div>
         <div class="s"><div class="l">くらしタブ</div><div class="v">🗓 こんぴらカレンダー（広報誌面・月次更新）＋🏪 お店の営業カレンダー（Notionお店DB）09-03〜05</div></div>
         <div class="s"><div class="l">団体タブ</div><div class="v">Notion 2DB（団体＋投稿）へ移行 09-05。セクション型リニューアル・SNSバッジ8種・IGキャプション表示</div></div>
-        <div class="s"><div class="l">早明浦ダム</div><div class="v">貯水率ウィジェット稼働 09-05（1日2回自動更新・サイドバー＋モバイルヘッダーチップ）</div></div>
+        <div class="s"><div class="l">早明浦ダム</div><div class="v">貯水率ウィジェット稼働 09-05（1日2回自動更新・サイドバー＋モバイルヘッダーチップ）。関連リンク2本（📷 ライブカメラ・🌧 雨量マップ）追加 09-10</div></div>
         <div class="s pending"><div class="l">うどん店</div><div class="v">掲載許可待ちのため一時非表示（UDON_PUBLISHED=false）。許可が揃い次第復活</div></div>
         <div class="s"><div class="l">サイト情報</div><div class="v">運営者情報／お問い合わせ／プライバシーをindex.htmlのSPAへ統合 09-05（旧3ファイルはリダイレクト殻）</div></div>
         <div class="s"><div class="l">データ／設定</div><div class="v">Notion駆動5DB＋会場DB・手編集6ファイル・自動2系統（Notion夜間／ダム1日2回）・凍結レガシー2ファイル</div></div>
@@ -895,6 +895,7 @@ orgsListHTML / orgDetailHTML / newsTabHTML / eventsTabHTML / campaignsTabHTML / 
           <div><h4>早明浦ダム</h4><ul class="b">
             <li><code>damContent()</code>（3507行）が共通ロジック（<code>DAM</code> 無し・<code>observedAt</code> 形式外なら null）→ <code>damBodyHTML</code>（3527行）→ PC は <code>damWidgetCardHTML()</code>（3538行）、スマホは <code>renderDamChip()</code>（3799行、<code>#damChip</code>「💧 NN%」）。同じ <code>damContent()</code> を参照するDRY構成。</li>
             <li>チップパネルは天気と排他（<code>toggleDamChipPanel</code>／<code>openDamChipPanel</code>／<code>closeDamChipPanel</code> 3814〜3833行）。欠測は <code>fmtNum</code>（3511行）が「—」表示（0に潰さない）。</li>
+            <li>関連リンク（09-10追加）：<code>site-widgets-data.js</code> の <code>dam.relatedLinks</code>（{label,url} 配列・手編集）を <code>damContent()</code> が <code>safeUrl</code> で検証して <code>relatedLinks</code> に載せ、<code>damBodyHTML</code> が <code>.widget-links</code> 行に描画（📷 ダムのライブカメラ＝水資源機構 吉野川上流総合管理所トップ、🌧 ダム周辺の雨量＝国交省「川の防災情報」の早明浦ダム周辺地図・PC版パス）。出典リンクは天気と同じく観測時刻の注記行へ移動。PC カードとスマホのチップパネルは同じ <code>damBodyHTML</code> なので両方に出る。数値の <code>dam-data.js</code> は触らない。</li>
           </ul></div>
         </div>
         <pre><code><span class="cmt">// サイドバーの並び（HTML 884〜885行の順 × 関数の連結順）</span>

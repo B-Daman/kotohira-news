@@ -3365,7 +3365,10 @@ function renderCommunityWidgets(){
    実行されずリアルタイム値ではないため「○月○日○時時点（速報値）」を必ず添える。
    欠測値（storage/inflow/outflow/rateがnull）は「—」表示にし、0へ潰さない。
    サイドバーウィジェット(damWidgetCardHTML)とモバイルヘッダーの早明浦ダムチップ
-   (renderDamChip)の両方から呼ばれる共通ロジック（DRY）。 */
+   (renderDamChip)の両方から呼ばれる共通ロジック（DRY）。
+   関連リンク（ライブカメラ・雨量マップ）は生成物のdam-data.jsではなく、手編集の
+   site-widgets-data.js（WIDGETS.dam.relatedLinks＝{label,url}の配列・上から順）から読み、
+   labelが空かurlがhttp(s)以外の項目は落とす。設定が無ければ空配列＝リンク行ごと非表示。 */
 function damContent(){
   if(!DAM) return null;
   const m = ("" + (DAM.observedAt || "")).match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/);
@@ -3373,6 +3376,10 @@ function damContent(){
   const fmtNum = (v, digits) => (v === null || v === undefined || v === "" || isNaN(Number(v)))
     ? "—" : Number(v).toFixed(digits);
   const storageUnit = DAM.storageUnit ? (" " + DAM.storageUnit) : "";
+  const damCfg = (WIDGETS.dam && typeof WIDGETS.dam === "object") ? WIDGETS.dam : {};
+  const relatedLinks = (Array.isArray(damCfg.relatedLinks) ? damCfg.relatedLinks : [])
+    .map(l => ({ label: ("" + ((l && l.label) || "")).trim(), url: safeUrl(l && l.url) }))
+    .filter(l => l.label && l.url);
   return {
     name: DAM.name || "早明浦ダム",
     rateText: fmtNum(DAM.rate, 1),
@@ -3381,10 +3388,13 @@ function damContent(){
     inflowText: fmtNum(DAM.inflow, 1) + " m³/s",
     outflowText: fmtNum(DAM.outflow, 1) + " m³/s",
     observedLabel: `${+m[2]}月${+m[3]}日 ${+m[4]}時時点（速報値）`,
-    sourceUrl: safeUrl(DAM.sourceUrl)
+    sourceUrl: safeUrl(DAM.sourceUrl),
+    relatedLinks
   };
 }
-/* damContent()の中身（貯水率・貯水量等の行・観測時刻注記・出典リンク）だけを組み立てる。
+/* damContent()の中身（貯水率・貯水量等の行・観測時刻＋出典の注記・関連リンク行）だけを組み立てる。
+   出典は天気ウィジェットと同じく注記の行に寄せ、リンク行は「辿りたい先」（ライブカメラ・雨量マップ）
+   だけにする（出典もリンク行に並べると「川の防災情報」が2本並んで区別がつかないため）。
    カード枠（widget-card）やチップパネルの外枠は呼び出し側が用意する。 */
 function damBodyHTML(c){
   return `<div class="dam-rate"><span class="dam-rate-num">${esc(c.rateText)}<span class="dam-rate-pct">%</span></span><span class="dam-rate-label">${esc(c.rateLabel)}</span></div>
@@ -3393,8 +3403,8 @@ function damBodyHTML(c){
       <div class="dam-row"><span>流入量</span><span>${esc(c.inflowText)}</span></div>
       <div class="dam-row"><span>放流量</span><span>${esc(c.outflowText)}</span></div>
     </div>
-    <p class="widget-note">${esc(c.observedLabel)}</p>
-    ${c.sourceUrl ? `<div class="widget-links"><a class="widget-link" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">出典: 川の防災情報 ↗</a></div>` : ""}`;
+    <p class="widget-note">${esc(c.observedLabel)}${c.sourceUrl ? `／出典: <a class="widget-link" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">川の防災情報</a>` : ""}</p>
+    ${c.relatedLinks.length ? `<div class="widget-links">${c.relatedLinks.map(l => `<a class="widget-link" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}`;
 }
 /* 💧 早明浦ダム 貯水状況ウィジェット（PCサイドバー）。 */
 function damWidgetCardHTML(){
