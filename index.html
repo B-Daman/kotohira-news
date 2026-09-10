@@ -45,6 +45,11 @@
     /* 🏪 お店の営業カレンダーのSNSバッジ用。既存--web/--igとは別に、Facebook公式ブルーと
        Threadsの黒系を新規トークンとして持つ（.shop-sns配下でだけ使う。他タブの配色は変えない） */
     --fb:#1877f2; --threads:#0a0a0a;
+    /* 統合カレンダー（Phase 1）のソース別カラー。町のイベント（calendar空）はaccentのまま変更しない。
+       金刀比羅宮＝既存パレットの紫系（--media-webmediaと親戚だが別トークン）と調和させた新色。
+       こんぴらカレンダー＝Phase 2の登録開始時に備えて先に用意しておく緑系 */
+    --cal-konpira:#6b4fa8; --cal-konpira-soft:#efe9f8;
+    --cal-towncal:#1c7a6e; --cal-towncal-soft:#e2f2ef;
   }
   *{box-sizing:border-box}
   /* iOS Safariの文字自動拡大を無効化。放置すると<a>だけ拡大され<button>はされないため、
@@ -468,6 +473,11 @@
   .cal-bar.cont-right{border-top-right-radius:0;border-bottom-right-radius:0}
   .cal-bar:hover{filter:brightness(.95)}
   .cal-bar:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+  /* 統合カレンダー：ソース別の色分け（控えめに。町のイベントは無指定＝現行色のまま）。
+     .cal-bar.upcoming より後に置き、同じ詳細度(0,2,0)の後勝ちでソース色を優先させる */
+  .cal-bar.cal-src-konpira{background:var(--cal-konpira-soft);color:var(--cal-konpira)}
+  .cal-bar.cal-src-towncal{background:var(--cal-towncal-soft);color:var(--cal-towncal)}
+  .cal-bar.cal-src-other{background:#e8e3dc;color:#625a51}
 
   /* イベントカレンダー：単日イベントは開始日セル内のチップで表示（複数日のみバー） */
   .cal-chips{display:flex;flex-direction:column;gap:2px;min-width:0}
@@ -477,6 +487,16 @@
   .cal-chip:hover{filter:brightness(.96)}
   .cal-chip:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
   .cal-chip-more{background:none;color:var(--sub)}
+  /* 統合カレンダー：単日チップのソース色（.cal-chipより詳細度が高いので上書きできる）＋先頭の色ドット */
+  .cal-chip.cal-src-konpira{background:var(--cal-konpira-soft);color:var(--cal-konpira)}
+  .cal-chip.cal-src-towncal{background:var(--cal-towncal-soft);color:var(--cal-towncal)}
+  .cal-chip.cal-src-other{background:#e8e3dc;color:#625a51}
+  .cal-source-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px;
+    vertical-align:middle;flex:0 0 auto}
+  .cal-source-dot.cal-src-town{background:var(--accent)}
+  .cal-source-dot.cal-src-konpira{background:var(--cal-konpira)}
+  .cal-source-dot.cal-src-towncal{background:var(--cal-towncal)}
+  .cal-source-dot.cal-src-other{background:#8a8177}
   /* 週表示（PC）：月グリッドの1週間拡大版。セルを大きくし（min-height 260px。内容に応じて伸びる）、
      チップは折り返しを許可し「HH:MM イベント名」を最大3行まで表示、時刻部分を強調する。 */
   .cal-cells.week-grid .cal-cell{min-height:260px}
@@ -518,6 +538,17 @@
   .cal-view-btn.active{background:var(--accent);color:#fff}
   .cal-view-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
   .cal-week-label{min-width:200px}
+
+  /* 統合カレンダー：ソース切替チップ（イベントタブのカレンダー上部）。cal-view-btnと同じ
+     トグルボタンの流儀（aria-pressed・accent系の配色）だが、複数同時ONの独立トグルなので
+     角丸グループではなく個別のpillにする。データにcalendar非空値が無い間は描画されない */
+  .cal-layer-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  .cal-layer-chip{display:inline-flex;align-items:center;border:1px solid var(--line);background:#fff;
+    color:var(--sub);border-radius:999px;padding:5px 12px 5px 10px;font-size:12px;font-weight:700;
+    font-family:inherit;cursor:pointer}
+  .cal-layer-chip:hover{border-color:var(--accent);color:var(--accent-d)}
+  .cal-layer-chip:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  .cal-layer-chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
   /* 週表示：Googleカレンダーの「スケジュール」ビュー風。全体を1枚のカードにし、日付列とイベント列の
      2列グリッド行を1pxの区切り線だけで縦に並べる（PC・スマホ共通。月表示の出し分けとは別クラス）。 */
   .event-week-view{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--card)}
@@ -556,6 +587,10 @@
   .modal-badge.status-active{background:var(--accent);color:#fff}
   .modal-badge.status-upcoming{background:var(--accent-soft);color:var(--accent-d)}
   .modal-badge.status-ended{background:#d8d0c4;color:#5c554c}
+  /* 統合カレンダー：ソースバッジ（calendar非空のイベントのみ。町のイベントには出さない） */
+  .modal-badge.cal-src-konpira{background:var(--cal-konpira-soft);color:var(--cal-konpira)}
+  .modal-badge.cal-src-towncal{background:var(--cal-towncal-soft);color:var(--cal-towncal)}
+  .modal-badge.cal-src-other{background:#e8e3dc;color:#625a51}
   .modal-row{display:flex;gap:8px;font-size:13.5px;color:var(--ink);margin-bottom:8px;line-height:1.6}
   .modal-row .mr-label{flex:0 0 80px;color:var(--sub);font-weight:700;white-space:nowrap}
   .modal-comment{font-size:13.5px;color:#43403b;margin:12px 0;line-height:1.75;white-space:pre-wrap}
@@ -1029,6 +1064,10 @@ let eventCalMonth = null;         // {y, mo} イベントカレンダーの表�
    月/週ボタン操作でのみ変わり、リサイズでは追従しない（あくまで初期表示の話のため）。 */
 let eventCalView = (window.matchMedia && window.matchMedia("(max-width:720px)").matches) ? "week" : "month";
 let eventCalWeekStart = null;      // Date 週表示の週開始日（月曜。monthGridWeek系と同じ月曜始まり規則）
+/* 統合カレンダーのソース切替状態。キーはイベントのcalendar値（空="町のイベント"）。
+   ここに無いキー（未知の非空値）はisEventLayerOnの既定でON扱いにする。ページ内のみ保持
+   （localStorage永続化はしない。入口別デフォルトとの競合を避けるため当面見送り）。 */
+let eventCalLayers = {"": true, "金刀比羅宮": true, "こんぴらカレンダー": false};
 let itemRegistry = {};            // slug -> {item, kind}  詳細モーダル表示用のルックアップ
 let dayEventsRegistry = {};       // "y-mo-d" -> [items]  「+N件」の日別一覧モーダル用のルックアップ
 let modalLastFocusedEl = null;
@@ -1417,6 +1456,8 @@ function onMainClick(e){
   if(calView){ switchEventCalView(calView.dataset.calView); return; }
   const calNav = e.target.closest("[data-cal-nav]");
   if(calNav){ navigateCalendar(calNav.dataset.calTarget, parseInt(calNav.dataset.calNav, 10) || 0); return; }
+  const calLayer = e.target.closest("[data-cal-layer]");
+  if(calLayer){ toggleEventCalLayer(calLayer.dataset.calLayer); return; }
   const shopGenre = e.target.closest("[data-shop-genre]");
   if(shopGenre){ setShopGenreFilter(shopGenre.dataset.shopGenre); return; }
 }
@@ -1464,7 +1505,7 @@ function switchEventCalView(view){
   eventCalView = view;
   const calEl = document.getElementById("eventCalendar");
   if(calEl){
-    calEl.innerHTML = eventCalendarInnerHTML(ND.events);
+    calEl.innerHTML = eventCalendarInnerHTML(visibleEvents());
     scrollEventWeekToToday();
     const activeBtn = calEl.querySelector(`[data-cal-view="${view}"]`);
     if(activeBtn) try{ activeBtn.focus({preventScroll:true}); }catch(e){ activeBtn.focus(); }
@@ -1487,7 +1528,7 @@ function navigateCalendar(target, delta){
     }
     const calEl = document.getElementById("eventCalendar");
     if(calEl){
-      calEl.innerHTML = eventCalendarInnerHTML(ND.events);
+      calEl.innerHTML = eventCalendarInnerHTML(visibleEvents());
       scrollEventWeekToToday();
       const nextNav = calEl.querySelector(`[data-cal-nav="${delta < 0 ? -1 : 1}"]`);
       if(nextNav) try{ nextNav.focus({preventScroll:true}); }catch(e){ nextNav.focus(); }
@@ -1504,6 +1545,22 @@ function navigateCalendar(target, delta){
       if(nextNav) try{ nextNav.focus({preventScroll:true}); }catch(e){ nextNav.focus(); }
     }
   }
+}
+/* 統合カレンダーのソース切替チップ。切替はカレンダーだけでなく今日・今後カードにも効くため、
+   #eventCalendar単体ではなくイベントタブ本体（タイトルカードを除く#main）を丸ごと再描画する
+   （render()の本体再構築と同じやり方。専用のラップdivは持たない＝insertMobileInlineAdsの
+   アンカー選択に影響を与えない）。switchEventCalViewと同じ配慮で、再描画後は押したチップへ
+   フォーカスを戻す。 */
+function toggleEventCalLayer(key){
+  eventCalLayers[key] = !isEventLayerOn(key);
+  const m = document.getElementById("main");
+  if(!m) return;
+  const titleCard = m.querySelector(".page-title-card");
+  m.innerHTML = (titleCard ? titleCard.outerHTML : "") + eventsTabBodyHTML();
+  insertMobileInlineAds(m, "events");
+  scrollEventWeekToToday();
+  const btn = Array.from(m.querySelectorAll("[data-cal-layer]")).find(b => b.dataset.calLayer === key);
+  if(btn) try{ btn.focus({preventScroll:true}); }catch(e){ btn.focus(); }
 }
 function onMainKeydown(e){
   if(e.key !== "Enter" && e.key !== " ") return;
@@ -1569,12 +1626,19 @@ function modalContentHTML(it, kind){
   if(it.organizer) rows.push(row(isEvent ? "主催" : "🏢 主催", it.organizer));
   // ステータスはカード（クリック前）と一致させる：イベントは開催日から毎回計算した値を使う
   const statusText = isEvent ? eventDateStatus(it) : it.status;
+  const statusBadge = statusText ? `<span class="modal-badge ${statusBadgeClass(statusText)}">${esc(statusText)}</span>` : "";
+  // ソースバッジ：calendar非空のイベントのみ（キャンペーンDBには同プロパティが無いため常に空）
+  const sourceBadge = (isEvent && it.calendar)
+    ? (m => `<span class="modal-badge${calSourceClass(it.calendar)}">${esc(m.emoji)} ${esc(m.label)}</span>`)(eventCalLayerMeta(it.calendar))
+    : "";
+  // 既存イベント（calendar空）は従来どおり単独span。ソースバッジがある時だけmodal-badge-rowで並べる
+  const badgesHtml = sourceBadge ? `<div class="modal-badge-row">${statusBadge}${sourceBadge}</div>` : statusBadge;
   const href = safeUrl(it.url);
   const imgSrc = safeUrl(it.image);
   return `
     ${imgSrc ? `<img class="modal-img" src="${esc(imgSrc)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : ""}
     <h3 class="modal-title" id="modalTitle">${esc(it.title)}</h3>
-    ${statusText ? `<span class="modal-badge ${statusBadgeClass(statusText)}">${esc(statusText)}</span>` : ""}
+    ${badgesHtml}
     ${rows.join("")}
     ${it.comment ? `<div class="modal-comment">${esc(it.comment)}</div>` : ""}
     ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">ホームページを開く ↗</a>` : ""}`;
@@ -1705,9 +1769,13 @@ function homeHTML(){
 
   let eventsBody;
   if(ND.events.length){
-    // イベントタブと同じく開催日から毎回計算して選ぶ（statusは取得時点で固定のため使わない）
-    const active = ND.events.filter(i=>{ const st = eventDateStatus(i); return st === "本日開催" || st === "開催中"; });
-    const upcoming = ND.events.filter(i=>eventDateStatus(i)==="開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
+    // イベントタブと同じく開催日から毎回計算して選ぶ（statusは取得時点で固定のため使わない）。
+    // 外側の空判定はND.events（Notion取得そのものの有無）で行い、homeEvents()（金刀比羅宮の
+    // featured以外を除くフィルタ）が0件でもNOTION_EMPTY_MSGにはせず、下のpicks.lengthフォールバック
+    // （「現在、開催中・予定のイベントはありません。」）に自然に落ちるようにする。
+    const homeEv = homeEvents();
+    const active = homeEv.filter(i=>{ const st = eventDateStatus(i); return st === "本日開催" || st === "開催中"; });
+    const upcoming = homeEv.filter(i=>eventDateStatus(i)==="開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
     const picks = active.concat(upcoming).slice(0,3);
     eventsBody = picks.length
       ? carouselHTML(`<div class="card-grid">${picks.map(it=>itemCard(it,"event")).join("")}</div>`)
@@ -2069,16 +2137,86 @@ function pickupFeatureCard(it){
   return `<div class="pf-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
 }
 
+/* ===== 統合カレンダー：ソース切替（Phase 1） =====
+   イベントDBの calendar select（空="町のイベント"／"金刀比羅宮"／"こんぴらカレンダー"）で
+   カレンダーをGoogleカレンダーのようにON/OFFできるようにする。既定は町のイベント=ON・
+   金刀比羅宮=ON・こんぴらカレンダー=OFF。データにタグ付きイベントが1件も無い間は
+   eventCalLayerChipsHTML()が空文字を返すため、見た目が現状と完全に同一になる。 */
+const EVENT_CAL_LAYER_ORDER = ["", "金刀比羅宮", "こんぴらカレンダー"];
+const EVENT_CAL_LAYER_META = {
+  "": {emoji:"📅", label:"町のイベント"},
+  "金刀比羅宮": {emoji:"⛩", label:"金刀比羅宮"},
+  "こんぴらカレンダー": {emoji:"🗓", label:"こんぴらカレンダー"}
+};
+function eventCalLayerMeta(calendarValue){
+  const key = calendarValue || "";
+  return EVENT_CAL_LAYER_META[key] || {emoji:"🏷", label:key};
+}
+/* 実イベント（cal-chip/cal-bar/モーダルバッジ）向けの色クラス。町のイベント（空）は無指定＝
+   現行の見た目を一切変えない。未知の非空値は中立グレーにフォールバックする。 */
+function calSourceClass(calendarValue){
+  if(calendarValue === "金刀比羅宮") return " cal-src-konpira";
+  if(calendarValue === "こんぴらカレンダー") return " cal-src-towncal";
+  if(calendarValue) return " cal-src-other";
+  return "";
+}
+function calSourceDotHTML(calendarValue){
+  const cls = calSourceClass(calendarValue).trim();
+  return cls ? `<span class="cal-source-dot ${cls}" aria-hidden="true"></span>` : "";
+}
+/* eventCalLayers に無いキー（未知の非空値）は既定ONとして扱う。 */
+function isEventLayerOn(calendarValue){
+  const key = calendarValue || "";
+  return key in eventCalLayers ? eventCalLayers[key] : true;
+}
+function visibleEvents(){
+  return ND.events.filter(it => isEventLayerOn(it.calendar));
+}
+/* ホームの「直近のイベント」だけは統合カレンダーのレイヤー選択と独立した固定ルール:
+   町のイベント全部＋金刀比羅宮のうち「大規模イベント」チェック済みのみ。月次祭等の定例で
+   カルーセル3枠が埋まるのを防ぎつつ、例大祭級はホームにも出す（こんぴらカレンダー・
+   未知の非空値はレイヤーON/OFFに関わらずホームには出さない）。 */
+function homeEvents(){
+  return ND.events.filter(it => !it.calendar || (it.calendar === "金刀比羅宮" && it.featured));
+}
+/* ソース切替チップ群。データに実在するcalendar非空値が1つも無ければ空文字を返す
+   （＝登録前は見た目が現状と完全に同一）。表示順は町のイベント→金刀比羅宮→こんぴらカレンダー→未知値。 */
+function eventCalLayerChipsHTML(){
+  const present = new Set(ND.events.map(it => it.calendar || ""));
+  if(!Array.from(present).some(Boolean)) return "";
+  const known = EVENT_CAL_LAYER_ORDER.filter(k => present.has(k));
+  const unknown = Array.from(present).filter(k => k && EVENT_CAL_LAYER_ORDER.indexOf(k) < 0).sort();
+  const chips = known.concat(unknown).map(key=>{
+    const meta = eventCalLayerMeta(key);
+    const on = isEventLayerOn(key);
+    const dotCls = key === "" ? " cal-src-town" : calSourceClass(key);
+    return `<button type="button" class="cal-layer-chip" data-cal-layer="${esc(key)}" aria-pressed="${on?'true':'false'}">
+      <span class="cal-source-dot${dotCls}" aria-hidden="true"></span>${esc(meta.emoji)} ${esc(meta.label)}
+    </button>`;
+  }).join("");
+  return `<div class="cal-layer-chips" role="group" aria-label="表示するカレンダーを選ぶ">${chips}</div>`;
+}
+
 /* ===== 📅 イベントタブ ===== */
 function eventsTabHTML(){
-  const items = ND.events;
-  if(!items.length) return emptyMsg(NOTION_EMPTY_MSG);
+  if(!ND.events.length) return emptyMsg(NOTION_EMPTY_MSG);
+  return eventsTabBodyHTML();
+}
+/* チップ切替のたびに再生成する本体部分（タイトルカードは含まない）。DRY: 初回描画も
+   toggleEventCalLayerによる再描画もこの1関数を通る。ラップ用divを持たない（.page-title-card + *
+   でモバイル広告の差し込み位置を決めているinsertMobileInlineAdsのアンカー選択を崩さないため。
+   タグ付きイベントが無い現状はこの関数の出力が改修前と1バイトも変わらない）。 */
+function eventsTabBodyHTML(){
+  const items = visibleEvents();
+  let html = eventCalLayerChipsHTML();
+  if(!items.length){
+    return html + emptyMsg("表示中のカレンダーがありません。チップで表示したいカレンダーを選んでください。");
+  }
 
   // statusは自動更新できないため、開催日から毎回計算して仕分ける。過去のイベントはカレンダーから辿る（下部には並べない）
   const todays = items.filter(it => { const st = eventDateStatus(it); return st === "本日開催" || st === "開催中"; });
   const upcoming = items.filter(it => eventDateStatus(it) === "開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
 
-  let html = '';
   html += `<div class="cal-wrap" id="eventCalendar" aria-live="polite">${eventCalendarInnerHTML(items)}</div>`;
   if(todays.length) html += `<h2 class="group-h">🔴 今日のイベント</h2><div class="card-grid">${todays.map(it=>itemCard(it,"event")).join("")}</div>`;
   if(upcoming.length) html += `<h2 class="group-h">🔜 今後の予定</h2><div class="card-grid">${upcoming.map(it=>itemCard(it,"event")).join("")}</div>`;
@@ -2161,8 +2299,8 @@ function eventCalendarInnerHTML(events){
       // チップはイベント名のみ（同日内の開始時刻昇順は上のsortで維持済み。時刻はクリック後のモーダルで確認）
       const chipsHtml = visible.map(it=>{
         const slug = registerItem(it, "event");
-        return `<div class="cal-chip" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"
-          aria-label="${esc(it.title)}の詳細を見る" title="${esc(it.title)}">${esc(it.title)}</div>`;
+        return `<div class="cal-chip${calSourceClass(it.calendar)}" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"
+          aria-label="${esc(it.title)}の詳細を見る" title="${esc(it.title)}">${calSourceDotHTML(it.calendar)}${esc(it.title)}</div>`;
       }).join("");
       const moreHtml = restCount > 0
         ? `<div class="cal-chip cal-chip-more" data-day-more="${esc(key)}" tabindex="0" role="button" aria-haspopup="dialog">+${restCount}件</div>`
@@ -2180,7 +2318,7 @@ function eventCalendarInnerHTML(events){
       const contLeft = iv.startOffset < weekStartOffset;
       const contRight = iv.endOffset > weekStartOffset+6;
       const slug = registerItem(iv.item, "event");
-      return `<div class="cal-bar upcoming${contLeft?' cont-left':''}${contRight?' cont-right':''}"
+      return `<div class="cal-bar upcoming${calSourceClass(iv.item.calendar)}${contLeft?' cont-left':''}${contRight?' cont-right':''}"
         style="grid-column:${colStart+1} / ${colEnd+2};grid-row:${iv.lane+1}"
         data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${esc(iv.item.title)}の詳細を見る"
         title="${esc(iv.item.title)}">${esc(iv.item.title)}</div>`;
@@ -2319,8 +2457,8 @@ function eventWeekGridHTML(events, weekStart){
       const timeLabel = (s && s.h !== null) ? `${pad2(s.h)}:${pad2(s.mi)}` : "";
       const full = (timeLabel ? timeLabel + " " : "") + it.title;
       const timeHtml = timeLabel ? `<span class="cal-chip-time">${esc(timeLabel)}</span> ` : "";
-      return `<div class="cal-chip cal-chip-week" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"
-        aria-label="${esc(full)}の詳細を見る" title="${esc(full)}">${timeHtml}${esc(it.title)}</div>`;
+      return `<div class="cal-chip cal-chip-week${calSourceClass(it.calendar)}" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"
+        aria-label="${esc(full)}の詳細を見る" title="${esc(full)}">${calSourceDotHTML(it.calendar)}${timeHtml}${esc(it.title)}</div>`;
     }).join("");
     const holName = jpHolidayName(d);
     return `<div class="${calCellClass(d, mo, todayKey)}">
@@ -2331,7 +2469,7 @@ function eventWeekGridHTML(events, weekStart){
 
   const barsHtml = barIntervals.map(iv=>{
     const slug = registerItem(iv.item, "event");
-    return `<div class="cal-bar upcoming${iv.contLeft?' cont-left':''}${iv.contRight?' cont-right':''}"
+    return `<div class="cal-bar upcoming${calSourceClass(iv.item.calendar)}${iv.contLeft?' cont-left':''}${iv.contRight?' cont-right':''}"
       style="grid-column:${iv.startOffset+1} / ${iv.endOffset+2};grid-row:${iv.lane+1}"
       data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="${esc(iv.item.title)}の詳細を見る"
       title="${esc(iv.item.title)}">${esc(iv.item.title)}</div>`;
