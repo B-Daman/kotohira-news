@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-12 03:03",
+  "fetched": "2026-09-13 02:34",
   "news": [
     {
       "id": "3d80b4e5-ff5b-816c-adc7-ffc1f2232fb1",
@@ -258,19 +258,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-08-31",
       "thumbnail": "assets/thumbs/3ce0b4e5ff5b81819913fba4d15b5c47.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3cd0b4e5-ff5b-810d-a72d-e14afa61d54e",
-      "title": "琴平町の将来を考えるワークショップ　高校生・住民が意見交換",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026083100000002700",
-      "summary": "琴平町の町総合センターで、高校生ら若者を対象としたワークショップが開催された。参加者は琴平の自慢できるポイントや、「住み続けたい」「戻ってきたい」と思える町にするための改善点について意見交換した。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-08-31",
-      "thumbnail": "assets/thumbs/3cd0b4e5ff5b810da72de14afa61d54e.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -598,7 +585,7 @@ window.NOTION_DATA = {
       "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
       "start": "2026-09-13T09:45",
       "end": "2026-09-13T12:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "琴平町公会堂",
       "address": "〒766-0001 香川県仲多度郡琴平町975−1",
@@ -613,7 +600,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
       "start": "2026-09-12T17:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -628,7 +615,7 @@ window.NOTION_DATA = {
       "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
       "start": "2026-09-12T09:30",
       "end": "2026-09-12T20:35",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平町公会堂",
       "address": "〒766-0001 香川県仲多度郡琴平町975−1",
@@ -643,7 +630,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-09-12T07:20",
       "end": "2026-09-12T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1716,21 +1703,6 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-8012-a78d-d51ff0bd1c3a",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-07-14T20:00",
-      "end": "2026-07-14T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/39c0b4e5ff5b8012a78dd51ff0bd1c3a.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -1755,7 +1727,7 @@ window.NOTION_DATA = {
       "url": "https://x.com/ikesyouten/status/2097270101385064727",
       "start": "2026-09-07",
       "end": "2026-09-12",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
