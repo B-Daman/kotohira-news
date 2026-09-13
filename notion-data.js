@@ -1,7 +1,46 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-13 02:34",
+  "fetched": "2026-09-14 02:48",
   "news": [
+    {
+      "id": "3da0b4e5-ff5b-8195-a98a-ebfab64bc953",
+      "title": "「人口シェア」で活性化　琴平で四国サミット　全国の事業者が意見交換",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091300000004400",
+      "summary": "シェアリングエコノミーをテーマにした「四国シェアサミット2026」が琴平町の町公会堂で開催された。全国のシェアサービス事業者ら約200人が参加し、関係人口や2地域居住などについて意見交換した。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-09-13",
+      "thumbnail": "assets/thumbs/3da0b4e5ff5b8195a98aebfab64bc953.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3da0b4e5-ff5b-8129-8036-fc952dfee11f",
+      "title": "さぬきこんぴら785（ななはこ）7/8にオープン 創作いなり専門店",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091300000001000",
+      "summary": "琴平町に創作いなりの専門店「さぬきこんぴら785」が7/8にオープンした。すし職人だったオーナーが考案した、バラエティー豊かな具材を油揚げで包んだ創作いなりで、観光客向けの食べ歩きメニューとなっている。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-09-13",
+      "thumbnail": "assets/thumbs/3da0b4e5ff5b81298036fc952dfee11f.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3da0b4e5-ff5b-81e3-a512-c400b4babd8a",
+      "title": "World Nomad Conference Fukuoka, Japan 2026",
+      "url": "https://www.kagawabiz-news.media/todayskagawa/13778",
+      "summary": "世界最大級のデジタルノマド国際会議が2026年9月30日に福岡で開催されます。香川県琴平町から琴平バス（Kotori Coworking & Hostel）の今川弥生氏が登壇者として参加し、地方の交通・観光業界の事例を世界的なコミュニティリーダーと共有します。",
+      "org": "香川ビジネスニュース",
+      "media": "Webメディア",
+      "date": "2026-09-12",
+      "thumbnail": "assets/thumbs/3da0b4e5ff5b81e3a512c400b4babd8a.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3d80b4e5-ff5b-816c-adc7-ffc1f2232fb1",
       "title": "【琴平町✖️テック未来】ロボットと暮らす未来 こんぴら表参道で歩行支援ロボット実験 - かがわ経済ニュース",
@@ -232,32 +271,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-09-01",
       "thumbnail": "assets/thumbs/3d00b4e5ff5b81188a28c681c1a390d0.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ce0b4e5-ff5b-8151-a7f1-e59294594df9",
-      "title": "「琴平の日」で地域交流を　子ども議会　小中生が積極提言",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026090100000000400",
-      "summary": "琴平町の小中学生10人が子ども議員として参加する「子ども議会」が8月27日に町議会本会議場で開かれた。子ども議員が町の活性化策などを町長に提言し、町議との懇談会を通じて町政への理解を深めた。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-01",
-      "thumbnail": "assets/thumbs/3ce0b4e5ff5b8151a7f1e59294594df9.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ce0b4e5-ff5b-8181-9913-fba4d15b5c47",
-      "title": "大センダンのある広場の名称募集",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/27/11959.html",
-      "summary": "琴平町が大センダン保存活用計画に基づいて整備している広場について、町民向けに名称を募集する。募集期間は9月1日から9月30日。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-08-31",
-      "thumbnail": "assets/thumbs/3ce0b4e5ff5b81819913fba4d15b5c47.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -585,7 +598,7 @@ window.NOTION_DATA = {
       "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
       "start": "2026-09-13T09:45",
       "end": "2026-09-13T12:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平町公会堂",
       "address": "〒766-0001 香川県仲多度郡琴平町975−1",
@@ -1688,21 +1701,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "地域おこし協力隊 あっきー"
-    },
-    {
-      "id": "38f0b4e5-ff5b-80d1-956a-ec4c1360606b",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
-      "start": "2026-07-15T12:00",
-      "end": "2026-07-15T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/38f0b4e5ff5b80d1956aec4c1360606b.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
