@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-14 02:48",
+  "fetched": "2026-09-15 04:41",
   "news": [
+    {
+      "id": "3db0b4e5-ff5b-81a4-811c-ea36e98e19d4",
+      "title": "果桜軒がホットペッパーグルメでネット予約開始",
+      "url": "https://www.instagram.com/p/DdOO9RLE1tZ/",
+      "summary": "琴平町の居酒屋「果桜軒」がホットペッパーグルメでのネット予約に対応開始。7名以上の予約で奥のお部屋を貸し切りで利用できる。",
+      "org": "Instagram（果桜軒）",
+      "media": "Webメディア",
+      "date": "2026-09-13",
+      "thumbnail": "assets/thumbs/3db0b4e5ff5b81a4811cea36e98e19d4.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3da0b4e5-ff5b-8195-a98a-ebfab64bc953",
       "title": "「人口シェア」で活性化　琴平で四国サミット　全国の事業者が意見交換",
@@ -261,19 +274,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3d00b4e5-ff5b-8118-8a28-c681c1a390d0",
-      "title": "旧金毘羅大芝居の休館について",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/27/11807.html",
-      "summary": "旧金毘羅大芝居がイベント開催のため、2026年11月6日午後から11月8日まで休館となります。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-01",
-      "thumbnail": "assets/thumbs/3d00b4e5ff5b81188a28c681c1a390d0.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -351,6 +351,36 @@ window.NOTION_DATA = {
       "comment": "会場: 総合センター 2階大ホール 東京パラリンピックで注目を集めた「ボッチャ」の教室と交流大会を開催します。香川県リハビリテーションセンターから講師を招き、障がいのある方もない方も、年齢や性別を問わず参加できます。",
       "fee": "0",
       "organizer": "琴平町福祉課・生涯学習課"
+    },
+    {
+      "id": "3db0b4e5-ff5b-8060-9e12-c8bb3853479d",
+      "title": "台湾文化 × 台湾華語 ミニ講座 第3回 旅行で使える台湾華語",
+      "url": "https://www.instagram.com/p/DdIohwNhWd6/",
+      "start": "2026-10-09T18:00",
+      "end": "2026-10-09T19:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3db0b4e5ff5b80609e12c8bb3853479d.webp",
+      "comment": "台湾出身の琴平町地域おこし協力隊 ケリーが主催する台湾文化・台湾華語の3回連続講座。言葉・食文化・旅行用語を学ぶ内容。会場はKOTORI。",
+      "fee": "0",
+      "organizer": "琴平町地域おこし協力隊ケリー"
+    },
+    {
+      "id": "3db0b4e5-ff5b-8023-8820-f1629cd02f83",
+      "title": "台湾文化 × 台湾華語 ミニ講座 第2回 台湾の食文化を知ろう！",
+      "url": "https://www.instagram.com/p/DdIohwNhWd6/",
+      "start": "2026-10-04T10:30",
+      "end": "2026-10-04T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3db0b4e5ff5b80238820f1629cd02f83.webp",
+      "comment": "台湾出身の琴平町地域おこし協力隊 ケリーが主催する台湾文化・台湾華語の3回連続講座。言葉・食文化・旅行用語を学ぶ内容。会場はKOTORI。",
+      "fee": "0",
+      "organizer": "琴平町地域おこし協力隊ケリー"
     },
     {
       "id": "3bc0b4e5-ff5b-8157-895d-f6bf67704406",
@@ -443,6 +473,21 @@ window.NOTION_DATA = {
       "organizer": "Kotori Coworking & Hostel Kotohira"
     },
     {
+      "id": "3db0b4e5-ff5b-8130-8ff0-fffc01bc91a4",
+      "title": "台湾文化 × 台湾華語 ミニ講座 第1回 台湾の言葉を知ろう！",
+      "url": "https://www.instagram.com/p/DdIohwNhWd6/",
+      "start": "2026-09-25T18:00",
+      "end": "2026-09-25T19:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3db0b4e5ff5b81308ff0fffc01bc91a4.webp",
+      "comment": "琴平町地域おこし協力隊が主催する台湾文化・台湾華語の3回連続講座。言葉・食文化・旅行用語を学ぶ内容。会場はKOTORI。",
+      "fee": "0",
+      "organizer": "琴平町地域おこし協力隊ケリー"
+    },
+    {
       "id": "3d40b4e5-ff5b-805d-91af-ee1c972c47b2",
       "title": "今日はどこ行く？ランチ会",
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
@@ -533,6 +578,21 @@ window.NOTION_DATA = {
       "organizer": "つるや旅館、藤田屋"
     },
     {
+      "id": "3db0b4e5-ff5b-8109-88eb-d5b8465a9fdf",
+      "title": "Play and Doodle with Paul - ドローイングワークショップ",
+      "url": "https://www.instagram.com/p/DdIT5r_TBq3/",
+      "start": "2026-09-16T18:30",
+      "end": "2026-09-16T20:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3db0b4e5ff5b810988ebd5b8465a9fdf.webp",
+      "comment": "会場: コトリ琴平 フランスから来たイラストレーターPaulによるドローイングワークショップ。基本的なエクササイズやゲームを通じて、見る・描く・表現する楽しさを学びます。初心者向け。",
+      "fee": "500",
+      "organizer": "Kotori Coworking & Hostel Kotohira"
+    },
+    {
       "id": "3d40b4e5-ff5b-806e-a74a-f23aa502083b",
       "title": "今日はどこ行く？ランチ会",
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
@@ -548,27 +608,12 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
-      "id": "3d40b4e5-ff5b-80de-96b9-f43898bc8502",
-      "title": "Play & Doodle w/ Paul",
-      "url": "",
-      "start": "2026-09-16",
-      "end": "",
-      "status": "実施前",
-      "city": "",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
       "id": "3cd0b4e5-ff5b-80b5-bf44-c186c4228a75",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-15T20:00",
       "end": "2026-09-15T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -583,7 +628,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DauldN1E2cQ/?img_index=1",
       "start": "2026-09-15",
       "end": "2026-09-22",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1686,21 +1731,6 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町 琴平を舞台にした1泊2日の事業づくり体験プログラム。地域に入り、人を知り、新たなお土産とコンテンツの種を見つけることを目的とする。",
       "fee": "6000",
       "organizer": "785Launch"
-    },
-    {
-      "id": "3950b4e5-ff5b-800c-a17a-f22d29bad6cc",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-07-16T18:00",
-      "end": "2026-07-16T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3950b4e5ff5b800ca17af22d29bad6cc.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
     }
   ],
   "campaigns": [
@@ -1718,6 +1748,36 @@ window.NOTION_DATA = {
       "comment": "会場: 琴参バス琴平線（丸亀市内バス停発着区間） 丸亀市は、丸亀駅⇔琴平駅方面のJR通勤・通学定期券を持つ人を対象に、琴参バスの琴平線を無料で利用できる実証実験を10月1日～12月28日に実施する。鉄道とバスの組み合わせ利用による利便性向上と定住促進が目的。",
       "fee": "0",
       "organizer": "丸亀市、善通寺市、琴平町、多度津町、まんのう町"
+    },
+    {
+      "id": "3db0b4e5-ff5b-816b-99c2-c7062fa33f24",
+      "title": "【資生堂】ファンデーションベース肌色測定体験",
+      "url": "https://www.instagram.com/p/DdQWi4hTcux/",
+      "start": "2026-09-28",
+      "end": "2026-10-10",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "大西化粧品店",
+      "address": "〒766-0002 香川県仲多度郡琴平町川東258",
+      "image": "assets/thumbs/3db0b4e5ff5b816b99c2c7062fa33f24.webp",
+      "comment": "会場: 大西化粧品店（琴平駅徒歩約5分） 資生堂のファンデーションベースを対象とした肌色測定体験。肌色診断機器を使用し、個人に合ったベースメイクを提案する約30分のサービス。期間は9月28日から10月10日まで（平日限定、水曜日は定休日）。",
+      "fee": "0",
+      "organizer": "大西化粧品店"
+    },
+    {
+      "id": "3db0b4e5-ff5b-8011-9516-fe5a1354e7a7",
+      "title": "1号店3周年アニバーサリー 富くじ参道店",
+      "url": "https://www.instagram.com/p/DdIzcYOtLBg/",
+      "start": "2026-09-12",
+      "end": "2026-09-13",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "元祖こんぴら射的場 富くじ 参道店",
+      "address": "〒766-0001 香川県仲多度郡琴平町804",
+      "image": "assets/thumbs/3db0b4e5ff5b80119516fe5a1354e7a7.webp",
+      "comment": "",
+      "fee": "500",
+      "organizer": ""
     },
     {
       "id": "3d60b4e5-ff5b-8122-bc85-f9c43ee6daec",
