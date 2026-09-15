@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-15 04:41",
+  "fetched": "2026-09-16 03:37",
   "news": [
     {
       "id": "3db0b4e5-ff5b-81a4-811c-ea36e98e19d4",
@@ -583,7 +583,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdIT5r_TBq3/",
       "start": "2026-09-16T18:30",
       "end": "2026-09-16T20:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -598,7 +598,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-09-16T12:00",
       "end": "2026-09-16T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -613,7 +613,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-15T20:00",
       "end": "2026-09-15T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -1716,21 +1716,6 @@ window.NOTION_DATA = {
       "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
       "fee": "1650",
       "organizer": "ヴィスポことひら"
-    },
-    {
-      "id": "38c0b4e5-ff5b-81ea-9ed2-c1332b2d533b",
-      "title": "785 Launch(ローンチ) 1泊2日 事業づくり体験",
-      "url": "https://785launch.peatix.com/view",
-      "start": "2026-07-17T11:30",
-      "end": "2026-07-18T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/38c0b4e5ff5b81ea9ed2c1332b2d533b.webp",
-      "comment": "会場: 琴平町 琴平を舞台にした1泊2日の事業づくり体験プログラム。地域に入り、人を知り、新たなお土産とコンテンツの種を見つけることを目的とする。",
-      "fee": "6000",
-      "organizer": "785Launch"
     }
   ],
   "campaigns": [
