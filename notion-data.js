@@ -1,7 +1,46 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-16 03:37",
+  "fetched": "2026-09-17 03:35",
   "news": [
+    {
+      "id": "3dd0b4e5-ff5b-8198-8995-c6d041ce3713",
+      "title": "オリジナルフレーム切手「こんぴらさんのおたからさん 金刀比羅宮の神域に集いし 名画たち」販売開始と贈呈式",
+      "url": "https://www.post.japanpost.jp/enjoy/culture/stamp/frame/detail.php?id=3883",
+      "summary": "日本郵便株式会社四国支社が、金刀比羅宮をテーマにしたオリジナルフレーム切手の販売を開始します。9月28日には金刀比羅宮宝物館正面玄関で贈呈式が開催されます。",
+      "org": "日本郵便株式会社四国支社",
+      "media": "Webメディア",
+      "date": "2026-09-16",
+      "thumbnail": "assets/thumbs/3dd0b4e5ff5b81988995c6d041ce3713.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3dd0b4e5-ff5b-81ac-9dab-c98669f41b58",
+      "title": "琴平町「大センダンのある広場」の名前を募集中！どんな名前になると思う？2026年9月30日(水)まで！",
+      "url": "https://www.marugame2.jp/topics/130537",
+      "summary": "樹齢約300年ともいわれる国の天然記念物、そして町のシンボルとしても愛されている「大センダンの木」を中心に、地域のみなさんや観光で訪れるたくさんの人に親しまれる広場を目指して、現在名称 (ネーミング)を募集中",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-09-16",
+      "thumbnail": "assets/thumbs/3dd0b4e5ff5b81ac9dabc98669f41b58.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3dd0b4e5-ff5b-815c-9870-f5c1054f44df",
+      "title": "御宿 敷島館 開業7周年記念プラン",
+      "url": "https://www.instagram.com/p/DdQ0zIPpEbQ/",
+      "summary": "御宿 敷島館が開業7周年を迎え、通常プランより7％OFFの7周年記念プランを販売中。詳細はInstagramプロフィールのURLから確認可能。",
+      "org": "Instagram (@onyado_shikishimakan)",
+      "media": "Webメディア",
+      "date": "2026-09-14",
+      "thumbnail": "assets/thumbs/3dd0b4e5ff5b815c9870f5c1054f44df.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3db0b4e5-ff5b-81a4-811c-ea36e98e19d4",
       "title": "果桜軒がホットペッパーグルメでネット予約開始",
@@ -248,32 +287,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3d00b4e5-ff5b-8163-a4e1-daa7d735ac45",
-      "title": "【延期】琴平町で「第4回 台湾フェス・台湾夜市 in 琴平」が2026年9月5日(土)に開催される！絶品台湾グルメ＆二胡生演奏が楽しめる♪",
-      "url": "https://www.marugame2.jp/events/129838",
-      "summary": "琴平町と台湾・瑞芳区の友好協定を記念したイベント。台湾屋台グルメ、電音三太子と二胡の生演奏、台湾トークショーなどが楽しめる。9月1日～14日は町内参加店舗で台湾コラボメニュー展開。",
-      "org": "まるつー",
-      "media": "Webメディア",
-      "date": "2026-09-02",
-      "thumbnail": "assets/thumbs/3d00b4e5ff5b8163a4e1daa7d735ac45.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3cf0b4e5-ff5b-81d4-adad-f2a836f7fb6f",
-      "title": "【延期のお知らせ】第４回台湾フェス・台湾夜市 in 琴平【台風接近】",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-282.html",
-      "summary": "琴平町で台湾グルメと台湾文化体験を楽しむイベント。2026年9月5日に開催予定だったが台風の影響により延期となり、新しい開催日は決まり次第お知らせ予定。",
-      "org": "こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-09-02",
-      "thumbnail": "assets/thumbs/3cf0b4e5ff5b81d4adadf2a836f7fb6f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -443,6 +456,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3dd0b4e5-ff5b-813e-a469-ed8ce89d16de",
+      "title": "金陵杜氏さんの勉強会〜お酒にまつわるおはなし",
+      "url": "https://www.instagram.com/p/DdTmrX9ziwd/",
+      "start": "2026-09-26T10:00",
+      "end": "2026-09-26T11:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/3dd0b4e5ff5b813ea469ed8ce89d16de.webp",
+      "comment": "会場: 金陵の郷 文化館（琴平町琴平623番地） 琴平町の「金陵の郷」文化館で、江戸時代1789年創業の日本酒蔵「金陵」の杜氏による、お酒の歴史と文化に関する勉強会が開催される。参加は無料で、事前申し込みが必要。",
+      "fee": "0",
+      "organizer": "ことひらまちじゅう図書館"
+    },
+    {
       "id": "3d40b4e5-ff5b-809a-9bf6-d1d241d3411d",
       "title": "朝うどん巡礼ツアー",
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
@@ -568,7 +596,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DcJUmy4gUJL/",
       "start": "2026-09-17T18:30",
       "end": "2026-09-17T20:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "つるや旅館",
       "address": "766-0001 香川県仲多度郡琴平町620",
@@ -583,7 +611,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdIT5r_TBq3/",
       "start": "2026-09-16T18:30",
       "end": "2026-09-16T20:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -598,7 +626,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-09-16T12:00",
       "end": "2026-09-16T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1671,51 +1699,6 @@ window.NOTION_DATA = {
       "comment": "7月19日（日）、香川県琴平町でmetacomi 2026 コアDAYにあわせた交流会場を開設。コアDAYトークセッションの上映、紹介展示、来場者同士の交流を予定。参加無料・申込不要・出入り自由。",
       "fee": "0",
       "organizer": "株式会社インベーダーズ"
-    },
-    {
-      "id": "38e0b4e5-ff5b-81d3-9596-e8f4bc77c104",
-      "title": "ニュースポーツ交流会（グラウンドゴルフ）",
-      "url": "https://www.instagram.com/p/DZ__Lo2PwYJ/",
-      "start": "2026-07-18T19:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平中学校",
-      "address": "香川県仲多度郡琴平町五條654-1",
-      "image": "assets/manual/20260718.webp",
-      "comment": "会場: 琴平中学校 運動場 琴平中学校運動場で7月18日に開催されるニュースポーツ交流会。グラウンドゴルフを通じて子どもから大人まで交流できる。参加費無料、当日参加も可能。",
-      "fee": "0",
-      "organizer": "琴平町スポーツ推進委員会"
-    },
-    {
-      "id": "39c0b4e5-ff5b-804e-918b-dca93dfa45e6",
-      "title": "HAKOBUNE ROOFTOP BEER GARDEN 2026",
-      "url": "https://www.instagram.com/reels/DanbRmgS6kZ/",
-      "start": "2026-07-18T17:00",
-      "end": "2026-07-18T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "HAKOBUNEビル",
-      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
-      "image": "",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-8048-8d82-c1401d0099ae",
-      "title": "ピックルボール教室",
-      "url": "https://www.instagram.com/p/Dajuk7qkds9/",
-      "start": "2026-07-18T11:30",
-      "end": "2026-07-18T12:45",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ヴィスポことひら",
-      "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
-      "image": "assets/thumbs/39c0b4e5ff5b80488d82c1401d0099ae.webp",
-      "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
-      "fee": "1650",
-      "organizer": "ヴィスポことひら"
     }
   ],
   "campaigns": [
