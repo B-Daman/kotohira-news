@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-17 03:35",
+  "fetched": "2026-09-18 03:42",
   "news": [
+    {
+      "id": "3de0b4e5-ff5b-812a-94cc-ddcd726a9e95",
+      "title": "BEAMS JAPANが香川・琴平に10月31日常設店をオープン",
+      "url": "https://prtimes.jp/main/html/rd/p/000000998.000012471.html",
+      "summary": "株式会社ビームスは2026年10月31日、香川・琴平の金刀比羅宮表参道に常設店「ビームス ジャパン 琴平」をオープンする。地域共創型の出店で、琴平町の伝統工芸品や地域産品を取り揃える予定。",
+      "org": "PR TIMES（株式会社ビームス プレスリリース）",
+      "media": "Webメディア",
+      "date": "2026-09-17",
+      "thumbnail": "assets/thumbs/3de0b4e5ff5b812a94ccddcd726a9e95.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3dd0b4e5-ff5b-8198-8995-c6d041ce3713",
       "title": "オリジナルフレーム切手「こんぴらさんのおたからさん 金刀比羅宮の神域に集いし 名画たち」販売開始と贈呈式",
@@ -245,45 +258,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-09-03",
       "thumbnail": "assets/thumbs/3d50b4e5ff5b81df8afdc154850ec2ea.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d00b4e5-ff5b-8196-b70c-e69eec376876",
-      "title": "琴平町が地域おこし協力隊員・黒木晶子さんを委嘱",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026090400000002000",
-      "summary": "琴平町は9月1日、福島県出身の黒木晶子さん（65）を新たな地域おこし協力隊員として委嘱した。観光商工課に所属し、観光協会のサポートや観光情報発信に取り組む。任期は最長3年。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-03",
-      "thumbnail": "assets/thumbs/3d00b4e5ff5b8196b70ce69eec376876.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d00b4e5-ff5b-8156-8d39-c034d0b6f78a",
-      "title": "第3回こんぴら観光まちづくり検定",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-540.html",
-      "summary": "一般社団法人こんぴら観光まちづくり協会が主催する第3回検定試験。琴平町の歴史・文化・観光資源に関する初級・中級の2つの受験級を実施する。合格者は協会認定ガイド登録への道が開ける。",
-      "org": "こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-09-03",
-      "thumbnail": "assets/thumbs/3d00b4e5ff5b81568d39c034d0b6f78a.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d00b4e5-ff5b-81ae-b9ff-d071f83faf89",
-      "title": "夜の琴平に笑顔広がる　アマチュア４人が落語会",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026090300000001400",
-      "summary": "金刀比羅宮の表参道沿いのうどん店「うどん茶屋 てんてこ舞」で、「第2回こんぴらくご」が8月29日に開催された。こんぴら観光まちづくり協会主催で、アマチュア落語家4人による寄席が行われた。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-03",
-      "thumbnail": "assets/thumbs/3d00b4e5ff5b81aeb9ffd071f83faf89.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -591,12 +565,27 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3de0b4e5-ff5b-8126-9e0d-d21a9e36b81e",
+      "title": "KOTOHIRA 785 FOOD LAUNCH オンライン説明会",
+      "url": "https://peatix.com/event/5170585",
+      "start": "2026-09-18T19:00",
+      "end": "2026-09-19T20:00",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "オンライン",
+      "address": "",
+      "image": "assets/thumbs/3de0b4e5ff5b81269e0dd21a9e36b81e.webp",
+      "comment": "会場: オンライン 琴平町での食の事業展開を検討している人向けのオンライン説明会。自分や会社の強みを観光地で選ばれる食体験へ展開することをテーマとしている。",
+      "fee": "78500",
+      "organizer": "KOTOHIRA 785 FOOD LAUNCH"
+    },
+    {
       "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
       "title": "第16回「ユルッと楽しく着付けレッスン」",
       "url": "https://www.instagram.com/p/DcJUmy4gUJL/",
       "start": "2026-09-17T18:30",
       "end": "2026-09-17T20:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "つるや旅館",
       "address": "766-0001 香川県仲多度郡琴平町620",
@@ -1684,21 +1673,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "39d0b4e5-ff5b-81ba-abd6-f65b1eb4143f",
-      "title": "metacomi 2026 コアDAY 琴平リアル交流会場",
-      "url": "https://x.com/invadersjp/status/2076154584997994583",
-      "start": "2026-07-19T12:00",
-      "end": "2026-07-19T17:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/39d0b4e5ff5b81baabd6f65b1eb4143f.webp",
-      "comment": "7月19日（日）、香川県琴平町でmetacomi 2026 コアDAYにあわせた交流会場を開設。コアDAYトークセッションの上映、紹介展示、来場者同士の交流を予定。参加無料・申込不要・出入り自由。",
-      "fee": "0",
-      "organizer": "株式会社インベーダーズ"
     }
   ],
   "campaigns": [
