@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-18 03:42",
+  "fetched": "2026-09-19 02:58",
   "news": [
+    {
+      "id": "3df0b4e5-ff5b-811f-a3e9-f9611ada4770",
+      "title": "こんぴら観光協がガイド研修　検定合格者が心得学ぶ",
+      "url": "https://www.47news.jp/14959761.html",
+      "summary": "こんぴら観光まちづくり協会の認定ガイド養成研修が9月14日、琴平町や周辺の市町で開かれた。同協会の「こんぴら観光まちづくり検定」合格者を対象に、観光地の見どころについて学んだ。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-09-18",
+      "thumbnail": "assets/thumbs/3df0b4e5ff5b811fa3e9f9611ada4770.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3df0b4e5-ff5b-81e1-bff9-e84ca9aa81f5",
+      "title": "かがわ子育てステーションの新婚世帯向けプログラム開始",
+      "url": "https://www.town.kotohira.kagawa.jp/site/ijyuu/12028.html",
+      "summary": "香川県の子育て拠点「かがわ子育てステーション」で、新婚世帯向けのプログラムが開始された。夫婦で暮らしについて対話する30分間のプログラムを提供している。同時に結婚新生活支援事業も実施中で、新居の家賃や引越費用などを補助している。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-09-18",
+      "thumbnail": "assets/thumbs/3df0b4e5ff5b81e1bff9e84ca9aa81f5.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3de0b4e5-ff5b-812a-94cc-ddcd726a9e95",
       "title": "BEAMS JAPANが香川・琴平に10月31日常設店をオープン",
@@ -245,19 +271,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-04",
       "thumbnail": "assets/thumbs/3d10b4e5ff5b81bc960af118f20b9dd3.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d50b4e5-ff5b-81df-8afd-c154850ec2ea",
-      "title": "みんなで楽しむインクルーシブスポーツ ボッチャ教室＆交流大会",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/25/11981.html",
-      "summary": "東京パラリンピックで注目を集めた「ボッチャ」の教室と交流大会を開催します。香川県リハビリテーションセンターから講師を招き、障がいのある方もない方も、年齢や性別を問わず参加できます。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-03",
-      "thumbnail": "assets/thumbs/3d50b4e5ff5b81df8afdc154850ec2ea.png",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -540,7 +553,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DctUUTtmAPo/",
       "start": "2026-09-19T10:00",
       "end": "2026-09-19T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
       "address": "香川県仲多度郡琴平町806",
@@ -555,7 +568,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-09-19T07:20",
       "end": "2026-09-19T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
