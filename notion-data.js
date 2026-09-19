@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-19 02:58",
+  "fetched": "2026-09-20 02:37",
   "news": [
     {
       "id": "3df0b4e5-ff5b-811f-a3e9-f9611ada4770",
@@ -258,19 +258,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-09-07",
       "thumbnail": "assets/thumbs/3d40b4e5ff5b81fb86f7ea776760917a.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d10b4e5-ff5b-81bc-960a-f118f20b9dd3",
-      "title": "琴平町の一之橋公園付近で第8回 こんぴら秋夜市のプレイベント「ことひらふれあい音楽祭」が2026年9月5日(土)に開催される",
-      "url": "https://www.marugame2.jp/events/129766",
-      "summary": "早いもので9月に入りましたが、まだまだ夏の夜のにぎやかさが恋しい今日この頃。今回ご紹介するのは、「第8回 こんぴら秋夜市」のプレイベントとして2026年9月5日(土)に琴平町の一之橋公園付近で開催され",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-04",
-      "thumbnail": "assets/thumbs/3d10b4e5ff5b81bc960af118f20b9dd3.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -553,7 +540,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DctUUTtmAPo/",
       "start": "2026-09-19T10:00",
       "end": "2026-09-19T12:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
       "address": "香川県仲多度郡琴平町806",
@@ -568,7 +555,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-09-19T07:20",
       "end": "2026-09-19T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -583,7 +570,7 @@ window.NOTION_DATA = {
       "url": "https://peatix.com/event/5170585",
       "start": "2026-09-18T19:00",
       "end": "2026-09-19T20:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "オンライン",
       "address": "",
@@ -1655,36 +1642,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b80908ccdfdb45dbc570e.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-80d1-ba15-c18c3f45fc01",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-07-21T20:00",
-      "end": "2026-07-21T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/39c0b4e5ff5b80d1ba15c18c3f45fc01.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "38f0b4e5-ff5b-801c-9860-d7689605e56e",
-      "title": "AIって結局、何に使えるの？",
-      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
-      "start": "2026-07-21T13:30",
-      "end": "2026-07-21T15:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "カフェ 象山",
-      "address": "香川県仲多度郡琴平町榎井553−1",
-      "image": "assets/thumbs/38f0b4e5ff5b801c9860d7689605e56e.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
       "organizer": ""
     }
   ],
