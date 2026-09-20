@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-20 02:37",
+  "fetched": "2026-09-21 02:49",
   "news": [
     {
       "id": "3df0b4e5-ff5b-811f-a3e9-f9611ada4770",
@@ -430,6 +430,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3e00b4e5-ff5b-81bb-a80b-ee1099ba242a",
+      "title": "象郷地区の未来を考える意見交換会",
+      "url": "https://www.instagram.com/p/DdbjuOQEgmx/",
+      "start": "2026-09-27T10:00",
+      "end": "2026-09-27T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "楽集館",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
+      "image": "assets/thumbs/3e00b4e5ff5b81bba80bee1099ba242a.webp",
+      "comment": "会場: 楽集館（琴平町上櫛梨241） 象郷地区の未来について、学校施設の活用アイデアや暮らしの声を集める意見交換会。子ども連れや見学のみの参加も歓迎。",
+      "fee": "0",
+      "organizer": "全国空き家アドバイザー協議会琴平支部"
+    },
+    {
       "id": "3dd0b4e5-ff5b-813e-a469-ed8ce89d16de",
       "title": "金陵杜氏さんの勉強会〜お酒にまつわるおはなし",
       "url": "https://www.instagram.com/p/DdTmrX9ziwd/",
@@ -520,6 +535,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3e00b4e5-ff5b-8199-98d4-f5a6dd6ec311",
+      "title": "THE GORILLA GUERRILLAS ライブ@麻心琴平",
+      "url": "https://www.instagram.com/p/DdYAbwLJyif/",
+      "start": "2026-09-22T19:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
+      "image": "assets/thumbs/3e00b4e5ff5b819998d4f5a6dd6ec311.webp",
+      "comment": "会場: 麻心琴平 リズムマスター4人によるアンサンブルライブ。アフリカ大陸起源の楽器を奏でる太鼓叩き達が琴平に集結。入場無料（投げ銭制）。",
+      "fee": "0",
+      "organizer": "THE GORILLA GUERRILLAS / 音楽で琴平を盛り上げるプロジェクト"
+    },
+    {
       "id": "3d40b4e5-ff5b-80e1-9208-f5f486857a0e",
       "title": "第14回 讃岐おでん試作会～夏おでん意見交換回～",
       "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
@@ -533,6 +563,21 @@ window.NOTION_DATA = {
       "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
       "fee": "2000",
       "organizer": "讃岐おでんプロジェクト"
+    },
+    {
+      "id": "3e00b4e5-ff5b-812f-88a8-de2c5d0bb881",
+      "title": "GHIBLI JAZZ TRIO LIVE",
+      "url": "https://www.instagram.com/p/DdVM0X2pfXx/",
+      "start": "2026-09-21T15:30",
+      "end": "",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
+      "image": "assets/thumbs/3e00b4e5ff5b812f88a8de2c5d0bb881.webp",
+      "comment": "会場: 麻心～まごころ～（香川県仲多度郡琴平町621-9） 愛媛県松山市のジブリジャズ専門ピアニスト野上朝生率いるJAZZトリオが琴平に初来訪。スタジオジブリの名曲をジャズアレンジで演奏するライブイベント。",
+      "fee": "3000",
+      "organizer": "麻心～まごころ～"
     },
     {
       "id": "3ce0b4e5-ff5b-817d-b9ac-c06e7d8b3d2e",
@@ -1613,39 +1658,24 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "地域おこし協力隊 あっきー"
-    },
-    {
-      "id": "39d0b4e5-ff5b-8156-af11-e51644c43df6",
-      "title": "第13回 讃岐おでん試作会～夏おでん意見交換回～",
-      "url": "https://did-event.vercel.app/events/cmpwlu8xz0015dui87mg88h80?ref=cmo0x2dtb01mmf2fr3e4qsctp",
-      "start": "2026-07-22T19:00",
-      "end": "2026-07-22T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/39d0b4e5ff5b8156af11e51644c43df6.webp",
-      "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。7月22日に夏向けおでんの研究と試作を行う作戦会議。",
-      "fee": "2000",
-      "organizer": "讃岐おでんプロジェクト"
-    },
-    {
-      "id": "38f0b4e5-ff5b-8090-8ccd-fdb45dbc570e",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/DaH3tvEk5HS/?img_index=5",
-      "start": "2026-07-22T12:00",
-      "end": "2026-07-22T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/38f0b4e5ff5b80908ccdfdb45dbc570e.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
+    {
+      "id": "3e00b4e5-ff5b-8171-92c1-ca088f58327a",
+      "title": "金刀比羅宮×JR四国コラボ企画「御朱印帳」プレゼント",
+      "url": "https://www.instagram.com/p/DddzKXriVqM/",
+      "start": "2026-10-01",
+      "end": "2027-03-31",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平駅",
+      "address": "香川県仲多度郡琴平町榎井",
+      "image": "assets/thumbs/3e00b4e5ff5b817192c1ca088f58327a.webp",
+      "comment": "会場: JR琴平駅改札口 JR四国と金刀比羅宮のコラボ企画。対象商品を利用した方にオリジナルデザインの「御朱印帳」をプレゼント。琴平駅改札口で引き換え可能。",
+      "fee": "0",
+      "organizer": "JR四国、金刀比羅宮、桜の抄"
+    },
     {
       "id": "3be0b4e5-ff5b-81f3-8528-f7d075a2da22",
       "title": "JR定期券で琴参バス琴平線が無料に　丸亀市が実証実験",
@@ -1800,6 +1830,9 @@ window.NOTION_DATA = {
         "facebook": ""
       },
       "instagram": [
+        "https://www.instagram.com/p/DdbmG1cvyEP/",
+        "https://www.instagram.com/p/DdbgfQKD7lM/",
+        "https://www.instagram.com/p/DdTvn2nDz6r/",
         "https://www.instagram.com/p/Dc8kHt-vhc1/",
         "https://www.instagram.com/p/Dc7NeQjE1ty/",
         "https://www.instagram.com/p/Dc5x3vBP9G0/",
@@ -1852,6 +1885,7 @@ window.NOTION_DATA = {
         "facebook": "https://www.facebook.com/MataTabi.kagawa/"
       },
       "instagram": [
+        "https://www.instagram.com/p/DdVgzBpEjoA/",
         "https://www.instagram.com/p/Dc2zmD2DwnQ/",
         "https://www.instagram.com/p/DcN4T1cyOc5/",
         "https://www.instagram.com/p/DbFlVOHkh4-/",
