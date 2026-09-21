@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-21 02:49",
+  "fetched": "2026-09-22 04:49",
   "news": [
+    {
+      "id": "3e20b4e5-ff5b-81b9-b78b-f4d95f2bf45f",
+      "title": "【こだわりの宿特集 温泉・浴場編】琴平グランドホテル桜の抄（香川県・こんぴら温泉郷）",
+      "url": "https://www.kankokeizai.com/2609202000kks/",
+      "summary": "金刀比羅宮の参道沿いに建つ琴平グランドホテル桜の抄は、プライベートサウナを備えた客室が人気。2024年3月にオープンした「初音スタンダード サウナ&スパルーム」はロウリュサウナや温泉風呂を完備している。",
+      "org": "観光経済新聞",
+      "media": "新聞",
+      "date": "2026-09-20",
+      "thumbnail": "assets/thumbs/3e20b4e5ff5b81b9b78bf4d95f2bf45f.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3df0b4e5-ff5b-811f-a3e9-f9611ada4770",
       "title": "こんぴら観光協がガイド研修　検定合格者が心得学ぶ",
@@ -248,19 +261,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3d40b4e5-ff5b-81fb-86f7-ea776760917a",
-      "title": "「ふるさと住民登録制度 モニター実証事業」に係るモニター募集",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/11990.html",
-      "summary": "琴平町は総務省が進める「ふるさと住民登録制度」のモニター実証事業に参加し、モニターを募集します。試用版アプリを利用して地域情報検索や担い手活動を体験し、複数回のアンケート調査に協力していただきます。実証期間は2026年10月16日～12月18日予定です。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-07",
-      "thumbnail": "assets/thumbs/3d40b4e5ff5b81fb86f7ea776760917a.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -308,6 +308,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
       "fee": "0",
       "organizer": "公益財団法人中山芳彦香川イタリア交流財団"
+    },
+    {
+      "id": "3e20b4e5-ff5b-8138-901d-d098e2cb7a38",
+      "title": "防災・住教育フェス in 一之橋公園",
+      "url": "https://www.instagram.com/p/DdivoGryVr0/",
+      "start": "2026-10-31T10:00",
+      "end": "2026-10-31T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "一之橋公園",
+      "address": "〒766-0001 香川県仲多度郡琴平町722",
+      "image": "assets/thumbs/3e20b4e5ff5b8138901dd098e2cb7a38.webp",
+      "comment": "琴平町の一之橋公園で防災と住教育を学べるファミリア向けイベント。輪投げやスーパーボールすくい、パトカー展示、空き家相談会、ハンディライト作り体験などが行われる。入場無料。",
+      "fee": "0",
+      "organizer": "全国空き家アドバイザー協議会琴平支部・まんのう支部"
     },
     {
       "id": "3d70b4e5-ff5b-80e1-861d-f79bddb0619b",
@@ -525,7 +540,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-22T20:00",
       "end": "2026-09-22T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -540,7 +555,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdYAbwLJyif/",
       "start": "2026-09-22T19:00",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "麻心 琴平店",
       "address": "〒766-0001 香川県仲多度郡琴平町621−9",
@@ -555,7 +570,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
       "start": "2026-09-22T19:00",
       "end": "2026-09-22T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -570,7 +585,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdVM0X2pfXx/",
       "start": "2026-09-21T15:30",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "麻心 琴平店",
       "address": "〒766-0001 香川県仲多度郡琴平町621−9",
@@ -1643,21 +1658,6 @@ window.NOTION_DATA = {
       "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "500",
       "organizer": "Kotori Coworking & Hostel Kotohira"
-    },
-    {
-      "id": "3950b4e5-ff5b-80eb-90e8-d3c8a5e697fe",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-07-23T18:00",
-      "end": "2026-07-23T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3950b4e5ff5b80eb90e8d3c8a5e697fe.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
     }
   ],
   "campaigns": [
@@ -1830,6 +1830,9 @@ window.NOTION_DATA = {
         "facebook": ""
       },
       "instagram": [
+        "https://www.instagram.com/p/DdiF5htjx4U/",
+        "https://www.instagram.com/p/DdiCGGHD50k/",
+        "https://www.instagram.com/reel/DdgfOE-StKS/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
         "https://www.instagram.com/p/DdbmG1cvyEP/",
         "https://www.instagram.com/p/DdbgfQKD7lM/",
         "https://www.instagram.com/p/DdTvn2nDz6r/",
