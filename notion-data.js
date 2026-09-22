@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-22 04:49",
+  "fetched": "2026-09-23 03:26",
   "news": [
+    {
+      "id": "3e30b4e5-ff5b-819e-b06c-dac9c3f0c758",
+      "title": "こんぴらさん表参道77段目にある「小田象麓堂」の店頭に、『うさぎいろ 石段店』が2026年7月からオープン！限定のお酒に合う甘味も登場♪",
+      "url": "https://www.marugame2.jp/stores/130880",
+      "summary": "金刀比羅宮の参道、石段77段目にある「小田象麓堂」の店頭に、フルーツ大福などで人気のスイーツ店「うさぎいろ 石段店」が2026年7月からオープンしています！ 地図だとこちら↓↓↓ 2026年9月17日",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-09-22",
+      "thumbnail": "assets/thumbs/3e30b4e5ff5b819eb06cdac9c3f0c758.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3e20b4e5-ff5b-81b9-b78b-f4d95f2bf45f",
       "title": "【こだわりの宿特集 温泉・浴場編】琴平グランドホテル桜の抄（香川県・こんぴら温泉郷）",
@@ -245,19 +258,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-09",
       "thumbnail": "assets/thumbs/3d60b4e5ff5b8143b1c1f18ea5022657.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d60b4e5-ff5b-811b-8b66-e20d9e254026",
-      "title": "めざましじゃんけん 琴平町特産品セット",
-      "url": "https://x.com/ikesyouten/status/2097270101385064727",
-      "summary": "フジテレビの「めざましじゃんけん」の週間プレゼントに琴平町の特産品セットが登場。五人百姓 池商店がセレクトしたうどん、にんにく商品、恵みのあめなどを詰め合わせたセット。",
-      "org": "五人百姓 池商店（X/Twitter投稿）",
-      "media": "Webメディア",
-      "date": "2026-09-08",
-      "thumbnail": "assets/thumbs/3d60b4e5ff5b811b8b66e20d9e254026.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -525,7 +525,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-09-23T12:00",
       "end": "2026-09-23T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -540,7 +540,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-22T20:00",
       "end": "2026-09-22T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -555,7 +555,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdYAbwLJyif/",
       "start": "2026-09-22T19:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "麻心 琴平店",
       "address": "〒766-0001 香川県仲多度郡琴平町621−9",
@@ -570,7 +570,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
       "start": "2026-09-22T19:00",
       "end": "2026-09-22T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -705,7 +705,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DauldN1E2cQ/?img_index=1",
       "start": "2026-09-15",
       "end": "2026-09-22",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1643,21 +1643,6 @@ window.NOTION_DATA = {
       "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
       "fee": "1650",
       "organizer": "ヴィスポことひら"
-    },
-    {
-      "id": "39e0b4e5-ff5b-81ed-992f-f240e9308104",
-      "title": "ご飯ついでに、国際交流～みんなでカレーを囲みながら世界の人たちと気軽に交流",
-      "url": "https://www.instagram.com/p/DaxE514kxJn/",
-      "start": "2026-07-24T18:30",
-      "end": "2026-07-24T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/39e0b4e5ff5b81ed992ff240e9308104.webp",
-      "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
-      "fee": "500",
-      "organizer": "Kotori Coworking & Hostel Kotohira"
     }
   ],
   "campaigns": [
@@ -1780,21 +1765,6 @@ window.NOTION_DATA = {
       "comment": "琴参閣では、ご宿泊者限定の夏イベントを開催。8月1日〜21日は子ども向けの夜店（輪投げなど）、8月10日〜14日は恒例のビンゴ大会を実施。",
       "fee": "0",
       "organizer": "琴参閣"
-    },
-    {
-      "id": "39c0b4e5-ff5b-816c-aee3-cf80fcc259d2",
-      "title": "夏休み限定ディナーバイキング＆こんぴら参り家族旅行プラン",
-      "url": "https://www.instagram.com/p/DakafxpktrA/",
-      "start": "2026-07-24",
-      "end": "2026-08-31",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平グランドホテル桜の抄",
-      "address": "〒766-0001 香川県仲多度郡琴平町977-1",
-      "image": "assets/thumbs/39c0b4e5ff5b816caee3cf80fcc259d2.webp",
-      "comment": "琴平グランドホテル桜の抄が、2026年7月24日～8月31日に夏休み限定のディナーバイキングを開催。金刀比羅宮参拝と温泉旅館での家族旅行を組み合わせたプランで、ライブキッチンの魚の解体ショーや露天風呂が特徴。小学生向けの直前割セールプランも用意。",
-      "fee": "",
-      "organizer": "琴平グランドホテル 桜の抄"
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
