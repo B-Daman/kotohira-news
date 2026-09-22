@@ -2,13 +2,13 @@
    早明浦ダムの貯水状況（国交省「川の防災情報」より）。速報値のため、観測時刻を必ず併記して表示すること。 */
 window.DAM_DATA = {
   "name": "早明浦ダム",
-  "observedAt": "2026-09-21T23:00",
-  "rate": 14.6,
+  "observedAt": "2026-09-22T09:00",
+  "rate": 14.8,
   "rateLabel": "貯水率",
-  "storage": 39190.0,
+  "storage": 39410.0,
   "storageUnit": "千m³",
-  "inflow": 12.41,
+  "inflow": 3.11,
   "outflow": 0.0,
-  "fetchedAt": "2026-09-22 01:09",
+  "fetchedAt": "2026-09-22 09:38",
   "sourceUrl": "https://www1.river.go.jp/cgi-bin/DspDamData.exe?ID=1368080700010&KIND=3&PAGE=0"
 };
