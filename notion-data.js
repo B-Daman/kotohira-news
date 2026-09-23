@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-23 03:26",
+  "fetched": "2026-09-24 03:45",
   "news": [
+    {
+      "id": "3e40b4e5-ff5b-81dd-afee-d227d3cf2bbb",
+      "title": "ツーリズムEXPOジャパン 2026 琴平町ブース出展",
+      "url": "https://www.kotohirakankou.jp/news/entry-600.html",
+      "summary": "こんぴら観光まちづくり協会は、2026年9月24日～25日に東京ビッグサイトで開催される「ツーリズムEXPOジャパン」に参加。四国ブースで琴平町の新規観光体験やインバウンド対応などを紹介する。",
+      "org": "こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-09-23",
+      "thumbnail": "assets/thumbs/3e40b4e5ff5b81ddafeed227d3cf2bbb.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3e40b4e5-ff5b-81b8-9bc6-c906788be0f0",
+      "title": "琴平町の「喫茶ハニー」跡地に「讃果園 SABORES」が2026年10月にオープン予定！手作りジェラートとカフェのお店ができるみたい",
+      "url": "https://www.marugame2.jp/stores/130905",
+      "summary": "琴平町の「喫茶ハニー」跡地に手作りジェラート＆カフェ「讃果園 SABORES」が2026年10月にオープン予定です。 「喫茶ハニー」閉店に関する記事はこちら↓↓↓ 2026年9月17日(木)の様子 2",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-09-23",
+      "thumbnail": "assets/thumbs/3e40b4e5ff5b81b89bc6c906788be0f0.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3e30b4e5-ff5b-819e-b06c-dac9c3f0c758",
       "title": "こんぴらさん表参道77段目にある「小田象麓堂」の店頭に、『うさぎいろ 石段店』が2026年7月からオープン！限定のお酒に合う甘味も登場♪",
@@ -525,7 +551,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-09-23T12:00",
       "end": "2026-09-23T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1613,36 +1639,6 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-80a0-a3e8-e70b30720cfe",
-      "title": "HAKOBUNE ROOFTOP BEER GARDEN 2026",
-      "url": "https://www.instagram.com/reels/DanbRmgS6kZ/",
-      "start": "2026-07-25T17:00",
-      "end": "2026-07-25T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "HAKOBUNEビル",
-      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
-      "image": "",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-80e5-9985-e5f3699c2636",
-      "title": "ピックルボール教室",
-      "url": "https://www.instagram.com/p/Dajuk7qkds9/",
-      "start": "2026-07-25T11:30",
-      "end": "2026-07-25T12:45",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ヴィスポことひら",
-      "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
-      "image": "assets/thumbs/39c0b4e5ff5b80e59985e5f3699c2636.webp",
-      "comment": "ヴィスポことひらメインアリーナで開催される初心者向けピックルボール教室。7月の毎週土曜日（4日・11日・18日・25日）に11:30～12:45で実施。講師は小笠原みゆき。",
-      "fee": "1650",
-      "organizer": "ヴィスポことひら"
     }
   ],
   "campaigns": [
