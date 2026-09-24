@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-24 03:45",
+  "fetched": "2026-09-25 03:45",
   "news": [
+    {
+      "id": "3e50b4e5-ff5b-8132-a700-ce21fa5d2b63",
+      "title": "秋山豊寛さんの宇宙飛行絵馬が金刀比羅宮に奉納",
+      "url": "https://www.nikkei.com/article/DGXZQOCC2333R0T20C26A9000000/",
+      "summary": "日本人初の宇宙飛行者・秋山豊寛さん（8月84歳で逝去）の絵馬が香川県琴平町の金刀比羅宮に奉納されている。白い宇宙服姿と旧ソ連宇宙船「ソユーズ」打ち上げシーンが描かれた絵馬は、「船の守り神」である同宮との縁を物語るものである。",
+      "org": "日本経済新聞",
+      "media": "新聞",
+      "date": "2026-09-25",
+      "thumbnail": "assets/thumbs/3e50b4e5ff5b8132a700ce21fa5d2b63.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3e50b4e5-ff5b-8176-9b6e-d98dc06d0dc3",
+      "title": "広報ことひら10月号",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/12034.html",
+      "summary": "琴平町の広報紙10月号（vol.590）。町の行政情報、イベント、お知らせなどを掲載したPDF形式の月刊広報誌。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-09-24",
+      "thumbnail": "assets/thumbs/3e50b4e5ff5b81769b6ed98dc06d0dc3.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3e40b4e5-ff5b-81dd-afee-d227d3cf2bbb",
       "title": "ツーリズムEXPOジャパン 2026 琴平町ブース出展",
@@ -274,19 +300,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3d60b4e5-ff5b-8143-b1c1-f18ea5022657",
-      "title": "琴平町の新町商店街にあった豚まんの「Oops」跡地で改装工事が始まってる！ペットと一緒に過ごせるカフェができるみたい。秋以降オープン予定",
-      "url": "https://www.marugame2.jp/stores/130154",
-      "summary": "絶賛アーケードの解体工事が進んでいる琴平町の「新町商店街」。その中で、なにやらお店の改装工事が行われているのを発見しました！ 場所はあの「手作りぶたまんの店 Oops」の跡地 場所は、2017年にオー",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-09",
-      "thumbnail": "assets/thumbs/3d60b4e5ff5b8143b1c1f18ea5022657.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -521,7 +534,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc-xKBwExgT/",
       "start": "2026-09-25T18:30",
       "end": "2026-09-25T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -536,7 +549,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdIohwNhWd6/",
       "start": "2026-09-25T18:00",
       "end": "2026-09-25T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1622,21 +1635,6 @@ window.NOTION_DATA = {
       "address": "",
       "image": "assets/thumbs/39c0b4e5ff5b8082a385ca01480a68b6.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "39d0b4e5-ff5b-809f-bab4-e757911c8e72",
-      "title": "こんぴら朝市",
-      "url": "https://www.k-wel.or.jp/activity/promotion/",
-      "start": "2026-07-26T09:00",
-      "end": "2026-07-26T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/manual/konpira_asaichi.webp",
-      "comment": "",
       "fee": "0",
       "organizer": ""
     }
