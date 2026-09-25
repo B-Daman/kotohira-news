@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-25 03:45",
+  "fetched": "2026-09-26 04:03",
   "news": [
+    {
+      "id": "3e60b4e5-ff5b-819e-aca0-d13461364ebb",
+      "title": "第２弾 街ガチャin琴平町 販売開始",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/11909.html",
+      "summary": "琴平町の街ガチャ第2弾がアクリルめじるしチャーム形式で販売される。善通寺第一高等学校デザイン科の生徒がデザインを担当し、西山食肉店、アタリヤ商店、幸せのおいりソフト、あめがけソフトクリーム、金陵のオブジェの5種類がラインナップに含まれる。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-09-25",
+      "thumbnail": "assets/thumbs/3e60b4e5ff5b819eaca0d13461364ebb.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3e50b4e5-ff5b-8132-a700-ce21fa5d2b63",
       "title": "秋山豊寛さんの宇宙飛行絵馬が金刀比羅宮に奉納",
@@ -504,7 +517,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdTmrX9ziwd/",
       "start": "2026-09-26T10:00",
       "end": "2026-09-26T11:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -519,7 +532,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-09-26T07:20",
       "end": "2026-09-26T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -534,7 +547,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc-xKBwExgT/",
       "start": "2026-09-25T18:30",
       "end": "2026-09-25T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -549,7 +562,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdIohwNhWd6/",
       "start": "2026-09-25T18:00",
       "end": "2026-09-25T19:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
