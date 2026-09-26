@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-26 04:03",
+  "fetched": "2026-09-27 03:11",
   "news": [
     {
       "id": "3e60b4e5-ff5b-819e-aca0-d13461364ebb",
@@ -502,7 +502,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdbjuOQEgmx/",
       "start": "2026-09-27T10:00",
       "end": "2026-09-27T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "楽集館",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
@@ -517,7 +517,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdTmrX9ziwd/",
       "start": "2026-09-26T10:00",
       "end": "2026-09-26T11:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -532,7 +532,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-09-26T07:20",
       "end": "2026-09-26T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -1634,21 +1634,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/38f0b4e5ff5b80778ed4c8bee33c422c.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-8082-a385-ca01480a68b6",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-07-28T20:00",
-      "end": "2026-07-28T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/39c0b4e5ff5b8082a385ca01480a68b6.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
       "organizer": ""
     }
   ],
