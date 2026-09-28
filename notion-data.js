@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-09-28 03:48",
+  "fetched": "2026-09-29 05:58",
   "news": [
+    {
+      "id": "3e90b4e5-ff5b-8174-a34f-cec35c656de7",
+      "title": "香川・琴平町の複合施設「KOTOVEGAS」でハロウィーン限定メニューを提供 - KSBニュース",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9jcXUxYkRXeFRNVkExa0JLTk91YlJPN1FXaG1pYVJaWmJLX1hidTFkV0J2Q0RQbUpsV0tJU3ZFNVVQUzZ3ZFVyd0F3Rm01Y2NB?oc=5",
+      "summary": "香川県琴平町の複合施設「KOTOVEGAS」内の飲食店3店舗で、10月1日から「ハロウィーン」をテーマにした限定メニューが提供されます。 クラフトビールを醸造する「DONZO Brewing」は「魔女の焼き林檎ビア(850円)」販売",
+      "org": "KSBニュース",
+      "media": "テレビ",
+      "date": "2026-09-28",
+      "thumbnail": "assets/thumbs/3e90b4e5ff5b8174a34fcec35c656de7.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3e60b4e5-ff5b-819e-aca0-d13461364ebb",
       "title": "第２弾 街ガチャin琴平町 販売開始",
@@ -287,32 +300,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3d60b4e5-ff5b-81b0-8327-e77e23341d5f",
-      "title": "奥社道 通行止め（令和8年9月9日〜）",
-      "url": "https://www.kotohirakankou.jp/news/entry-564.html",
-      "summary": "9月8日夜の豪雨予想に伴い、9月9日から奥社道を閉鎖する。安全確認後に解除予定。閉鎖期間中は奥社・菅原神社・白峰神社・常磐神社へのお参りができない。",
-      "org": "琴平まるごとNavi（こんぴら観光まちづくり協会）",
-      "media": "Webメディア",
-      "date": "2026-09-09",
-      "thumbnail": "assets/thumbs/3d60b4e5ff5b81b08327e77e23341d5f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d60b4e5-ff5b-810b-9263-c98927114310",
-      "title": "香川岡山正副議長、琴平で公共交通維持について意見交換会",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026090900000001000",
-      "summary": "香川、岡山両県議会の正副議長が県政の課題について話し合う意見交換会が9月7日、琴平町で開催された。人口減少が進む中での地域公共交通の在り方について探った。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-09",
-      "thumbnail": "assets/thumbs/3d60b4e5ff5b810b9263c98927114310.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -487,7 +474,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-09-29T20:00",
       "end": "2026-09-29T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -1605,21 +1592,6 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": ""
-    },
-    {
-      "id": "3950b4e5-ff5b-8045-81cc-dba0f5666693",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-07-30T18:00",
-      "end": "2026-07-30T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3950b4e5ff5b804581ccdba0f5666693.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
     }
   ],
   "campaigns": [
