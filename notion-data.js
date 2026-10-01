@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-01 04:45",
+  "fetched": "2026-10-02 05:00",
   "news": [
+    {
+      "id": "3ec0b4e5-ff5b-818c-81d8-f2a13324af7e",
+      "title": "子どもインフルエンザ予防接種費用の助成",
+      "url": "https://www.town.kotohira.kagawa.jp/site/child/1468.html",
+      "summary": "琴平町に住所がある生後6か月から18歳までの子どもを対象に、インフルエンザ予防接種費用の助成を実施します。町内医療機関での接種は無料、町外での接種は2,000円の償還払いです。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-01",
+      "thumbnail": "assets/thumbs/3ec0b4e5ff5b818c81d8f2a13324af7e.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ec0b4e5-ff5b-819a-9806-dd7323b518bc",
+      "title": "琴平町のこども園2施設が保育ICTサービス「CoDMON」を導入",
+      "url": "https://prtimes.jp/main/html/rd/p/000000073.000040113.html",
+      "summary": "香川県琴平町のこども園2施設が2026年10月1日より保育ICTサービス「CoDMON」を導入する。連絡帳の手書き業務の軽減や保護者の利便性向上を目指すもので、香川県内では計7自治体での普及が進んでいる。",
+      "org": "PR TIMES（株式会社コドモンプレスリリース）",
+      "media": "Webメディア",
+      "date": "2026-10-01",
+      "thumbnail": "assets/thumbs/3ec0b4e5ff5b819a9806dd7323b518bc.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3eb0b4e5-ff5b-81d3-8820-c808ead5bb15",
       "title": "ことでん車内「吊り革絵馬」販売。金刀比羅宮に奉納",
@@ -63,6 +89,19 @@ window.NOTION_DATA = {
       "media": "テレビ",
       "date": "2026-09-28",
       "thumbnail": "assets/thumbs/3e90b4e5ff5b8174a34fcec35c656de7.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3e70b4e5-ff5b-81fa-bfd2-ebbe2deb3729",
+      "title": "琴平町に古民家カフェ「醸-kamosu-」が10月下旬オープン予定！ドーナツとドリンクのお店みたい",
+      "url": "https://www.marugame2.jp/stores/130910",
+      "summary": "琴平町にドーナツとドリンクが楽しめる新しい古民家カフェ「醸-kamosu-」が10月下旬オープン予定です。 地図だとこちら↓↓↓ 2026年9月17日(木)の様子 こんぴら表参道から少し入ったところで",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-09-26",
+      "thumbnail": "assets/thumbs/3e70b4e5ff5b81fabfd2ebbe2deb3729.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -766,7 +805,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-393.html",
       "start": "2026-10-02T16:00",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "春日神社",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井 字籏岡88-1",
@@ -781,7 +820,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-393.html",
       "start": "2026-10-01T19:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平町役場",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817-10",
@@ -796,7 +835,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-393.html",
       "start": "2026-10-01T19:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1944,21 +1983,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-8137-bd2d-dd707e370fd9",
-      "title": "こんぴら路地裏着物レンタル藤田屋 3周年イベント開催",
-      "url": "https://www.instagram.com/p/DavQfIeGJxF/",
-      "start": "2026-08-02T10:00",
-      "end": "2026-08-02T15:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
-      "address": "香川県仲多度郡琴平町806",
-      "image": "assets/thumbs/39c0b4e5ff5b8137bd2ddd707e370fd9.webp",
-      "comment": "こんぴら路地裏着物レンタル藤田屋の3周年を記念したイベントが8月2日に開催されます。浴衣レンタル・ヘアセット、和物蚤の市、複数のワークショップ（いちごの輝の手作りワークショップ、小春日和のつまみ細工、お庭の時間の虫除けスプレー作り、ちくちく針ねずみのカンタ刺繍コースター体験）が予定されています。",
-      "fee": "0",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋"
     }
   ],
   "campaigns": [
@@ -2163,6 +2187,14 @@ window.NOTION_DATA = {
       "x": [],
       "items": [
         {
+          "id": "note-676ed450252abd1e04fd0879",
+          "source": "note",
+          "title": "またたび×うどんタクシー×東大うどん部",
+          "url": "https://note.com/matatabi_tour/n/n9a9dc09b2dc3",
+          "date": "2026-10-01",
+          "thumbnail": "assets/thumbs/note676ed450252abd1e04fd0879.webp"
+        },
+        {
           "id": "note-d1afb313507e9e48e93c5179",
           "source": "note",
           "title": "琴平ビト探訪第12弾〜192段目で出会う「かわいい」の先にある琴平の物語〜",
@@ -2233,14 +2265,6 @@ window.NOTION_DATA = {
           "url": "https://note.com/matatabi_tour/n/n46aedc8b646e",
           "date": "2026-01-01",
           "thumbnail": "assets/thumbs/note67a37e51a45cc4d288fa5313.webp"
-        },
-        {
-          "id": "note-7a2768764d3ca109020ee427",
-          "source": "note",
-          "title": "琴平ビト探訪第8弾～「年に一度の常連」が通う町のうどん屋～",
-          "url": "https://note.com/matatabi_tour/n/n2c08f688e3e3",
-          "date": "2025-12-01",
-          "thumbnail": "assets/thumbs/note7a2768764d3ca109020ee427.webp"
         }
       ]
     }
