@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-02 05:00",
+  "fetched": "2026-10-03 04:42",
   "news": [
+    {
+      "id": "3ed0b4e5-ff5b-81dc-a70b-f7c45cec9545",
+      "title": "象郷・五條地区の鎮守秋祭り（大歳神社、櫛梨神社、石井八幡宮、大井八幡宮、大麻神社）",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "summary": "10月は象郷・五條地区の秋祭りシーズン。各神社で獅子舞や神楽などが奉納される秋季大祭が開催される。大歳神社（10/17-18）、櫛梨神社（10/10-11）、石井八幡宮（10/25）、大井八幡宮（10/10-11）、大麻神社（10/3-4）での開催。",
+      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-02",
+      "thumbnail": "assets/thumbs/3ed0b4e5ff5b81dca70bf7c45cec9545.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3ec0b4e5-ff5b-818c-81d8-f2a13324af7e",
       "title": "子どもインフルエンザ予防接種費用の助成",
@@ -790,7 +803,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-393.html",
       "start": "2026-10-03T18:00",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -800,12 +813,27 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3ed0b4e5-ff5b-8131-be00-c7363033d918",
+      "title": "象郷・五條地区の鎮守秋祭り（大歳神社、櫛梨神社、石井八幡宮、大井八幡宮、大麻神社）",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "start": "2026-10-03",
+      "end": "2026-10-25",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3ed0b4e5ff5b8131be00c7363033d918.webp",
+      "comment": "会場: 大歳神社、櫛梨神社、石井八幡宮、大井八幡宮、大麻神社 10月は象郷・五條地区の秋祭りシーズン。各神社で獅子舞や神楽などが奉納される秋季大祭が開催される。大歳神社（10/17-18）、櫛梨神社（10/10-11）、石井八幡宮（10/25）、大井八幡宮（10/10-11）、大麻神社（10/3-4）での開催。",
+      "fee": "0",
+      "organizer": "各地区の鎮守神社"
+    },
+    {
       "id": "3ea0b4e5-ff5b-803c-a3dd-f5a9787512f2",
       "title": "春日神社例大祭 かきくらべ",
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-393.html",
       "start": "2026-10-02T16:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "春日神社",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井 字籏岡88-1",
