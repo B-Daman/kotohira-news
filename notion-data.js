@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-03 04:42",
+  "fetched": "2026-10-04 03:27",
   "news": [
+    {
+      "id": "3ee0b4e5-ff5b-812c-91d8-de82b6478220",
+      "title": "【ことひらナイト】第３回こんぴらくご",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-549.html",
+      "summary": "琴平町のナイトコンテンツ企画として、高松らくご愛好会メンバーによる落語やマジックを楽しむイベント。2026年11月28日（土）17:00～18:30、てんてこ舞（表参道）で開催。前売チケットは1,100円（税込、ワンドリンク付き）。",
+      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-03",
+      "thumbnail": "assets/thumbs/3ee0b4e5ff5b812c91d8de82b6478220.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ee0b4e5-ff5b-816c-b1f0-cc0c80ebebb4",
+      "title": "金刀比羅宮表参道 提灯ライトアップ",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026100300000001300",
+      "summary": "琴平町の金刀比羅宮表参道の旧とら丸旅館で、子どもたちの将来の夢が描かれた提灯を使ったライトアップが2日に始まった。点灯は3、4、9～11日の午後6時から同7時まで。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-03",
+      "thumbnail": "assets/thumbs/3ee0b4e5ff5b816cb1f0cc0c80ebebb4.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3ed0b4e5-ff5b-81dc-a70b-f7c45cec9545",
       "title": "象郷・五條地区の鎮守秋祭り（大歳神社、櫛梨神社、石井八幡宮、大井八幡宮、大麻神社）",
@@ -513,6 +539,21 @@ window.NOTION_DATA = {
       "organizer": "一般社団法人こんぴら観光まちづくり協会"
     },
     {
+      "id": "3ee0b4e5-ff5b-814c-86dd-fb13438e8d8b",
+      "title": "【ことひらナイト】第３回こんぴらくご",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-549.html",
+      "start": "2026-11-28T17:00",
+      "end": "2026-11-28T18:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "てんてこ舞",
+      "address": "香川県仲多度郡琴平町717",
+      "image": "assets/thumbs/3ee0b4e5ff5b814c86ddfb13438e8d8b.webp",
+      "comment": "会場: てんてこ舞（表参道） 琴平町のナイトコンテンツ企画として、高松らくご愛好会メンバーによる落語やマジックを楽しむイベント。2026年11月28日（土）17:00～18:30、てんてこ舞（表参道）で開催。前売チケットは1,100円（税込、ワンドリンク付き）。",
+      "fee": "1100",
+      "organizer": "こんぴら観光まちづくり協会"
+    },
+    {
       "id": "3ea0b4e5-ff5b-80d6-8f56-db486fb4d258",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -773,7 +814,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdIohwNhWd6/",
       "start": "2026-10-04T10:30",
       "end": "2026-10-04T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -788,7 +829,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11910.html",
       "start": "2026-10-04T10:00",
       "end": "2026-10-04T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -803,7 +844,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-393.html",
       "start": "2026-10-03T18:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1980,36 +2021,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80c38897fe4ed5d00241.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-8075-b807-c442c4d6fb35",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-08-04T20:00",
-      "end": "2026-08-04T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b8075b807c442c4d6fb35.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3ac0b4e5-ff5b-809b-8b2f-d5aa257f637e",
-      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
-      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
-      "start": "2026-08-04T13:30",
-      "end": "2026-08-04T15:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "カフェ 象山",
-      "address": "香川県仲多度郡琴平町榎井553−1",
-      "image": "assets/thumbs/3ac0b4e5ff5b809b8b2fd5aa257f637e.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
       "organizer": ""
     }
   ],
