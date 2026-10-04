@@ -1,7 +1,46 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-04 03:27",
+  "fetched": "2026-10-05 03:29",
   "news": [
+    {
+      "id": "3ee0b4e5-ff5b-81ff-82cb-c6a454f89d50",
+      "title": "象郷地区の未来を考える会",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026100400000002500",
+      "summary": "琴平町象郷地区の地域づくりについて考える「象郷地区の未来を考える会」が開催された。住民ら約30人が参加し、講演会やカードゲームを通じて地域課題を共有し、小学校跡地利用など将来のビジョンについて意見交換した。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-04",
+      "thumbnail": "assets/thumbs/3ee0b4e5ff5b81ff82cbc6a454f89d50.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ee0b4e5-ff5b-81c5-87ca-e7895b00e6ff",
+      "title": "帆船「BLUE OCEAN みらいへ」神戸～門司3泊4日体験航海",
+      "url": "https://funeco.jp/news/news-34338/",
+      "summary": "帆船「BLUE OCEAN みらいへ」が2026年11月10日から13日にかけて神戸港から門司港までを航海する3泊4日の体験航海を実施する。高松港で金刀比羅宮を参拝し航海安全を祈願するほか、大三島でも上陸散策が行われる。",
+      "org": "フネコ（Funeco）",
+      "media": "Webメディア",
+      "date": "2026-10-04",
+      "thumbnail": "assets/thumbs/3ee0b4e5ff5b81c587cae7895b00e6ff.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3ee0b4e5-ff5b-8110-bfd7-f37488ff4b40",
+      "title": "第58回こんぴら石段マラソン（10月4日）開催中止のお知らせ",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/12041.html",
+      "summary": "令和8年10月4日に開催予定だったこんぴら石段マラソンが、天候不良等により中止となった。参加費の返金はなく、参加賞は指定時間に金陵の郷で配布される。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-04",
+      "thumbnail": "assets/thumbs/3ee0b4e5ff5b8110bfd7f37488ff4b40.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3ee0b4e5-ff5b-812c-91d8-de82b6478220",
       "title": "【ことひらナイト】第３回こんぴらくご",
@@ -404,32 +443,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3d70b4e5-ff5b-8127-bac9-c2b5b2d58a83",
-      "title": "イギリスの旅行会社がうどん作り体験 四国の認知度を上げ“誘客を” 香川・琴平町（KSB瀬戸内海放送） - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rOHVtY2R4cE9nZEFudnl1bGJNZzFJUjRlQmI1dXBmMTZhazVVMmpuNGIzdGFldU1mREk5YUROUDN3b1oyVGttd0wtR09pS2dsNVFaQVBaOUxWZ0doQzlDMGtXaUktQVZPYXhJSUNyYVp5YXJscEFWMHA4YlIyaVU?oc=5",
-      "summary": "",
-      "org": "Yahoo!ニュース",
-      "media": "Webメディア",
-      "date": "2026-09-10",
-      "thumbnail": "assets/thumbs/3d70b4e5ff5b8127bac9c2b5b2d58a83.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d70b4e5-ff5b-819e-aae8-daf0b855333f",
-      "title": "熊本地震で３職員派遣　琴平町",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091000000000800",
-      "summary": "琴平町は9月10日から、熊本地震の被災地支援のため職員3人を熊本県宇土市に順次派遣する。派遣職員は同市役所で家屋解体の相談業務などに従事する。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-10",
-      "thumbnail": "assets/thumbs/3d70b4e5ff5b819eaae8daf0b855333f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -507,6 +520,21 @@ window.NOTION_DATA = {
       "comment": "こんぴらさんの門前町にある江戸末期創業の老舗旅館つるや旅館で、着物を着用してのランチ会を開催。女将による和食の食べ方講座付き。",
       "fee": "5500",
       "organizer": "こんぴら路地裏着物レンタル藤田屋"
+    },
+    {
+      "id": "3ef0b4e5-ff5b-8189-aaa3-fc69d9b48512",
+      "title": "コミュニティリーダーズサミット in 琴平 2026（第1回 CLS琴平）",
+      "url": "https://clskotohira01.peatix.com/",
+      "start": "2026-12-05T13:00",
+      "end": "2026-12-05T20:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "HAKOBUNEビル",
+      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
+      "image": "assets/thumbs/3ef0b4e5ff5b8189aaa3fc69d9b48512.webp",
+      "comment": "会場: 琴平 地域課題の解決に取り組むコミュニティリーダーが集まるサミット。点から線へ、人から人へつながる交流の場として、琴平で開催される。",
+      "fee": "3000",
+      "organizer": ""
     },
     {
       "id": "3ea0b4e5-ff5b-80d7-8b2f-cb8e463b9dba",
@@ -704,6 +732,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3ef0b4e5-ff5b-8030-8a16-f006c24aa1d3",
+      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
+      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
+      "start": "2026-10-20T13:30",
+      "end": "2026-10-20T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
+      "image": "",
+      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "3d50b4e5-ff5b-8152-9bb6-f6ff0c82f387",
       "title": "みんなで楽しむインクルーシブスポーツ ボッチャ教室＆交流大会",
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/25/11981.html",
@@ -734,6 +777,51 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3ef0b4e5-ff5b-81d2-ba5c-d3da63a5dc80",
+      "title": "例大祭 御神輿 御旅所発御（お上がり：御旅所→御本宮）",
+      "url": "https://www.konpira.or.jp/QR/02/a.html",
+      "start": "2026-10-11T21:00",
+      "end": "2026-10-11T23:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "御神輿が御旅所（神事場）から御本宮へ還る御還幸。10/12午前0時に御本宮還御、続いて報賽祭。",
+      "fee": "0",
+      "organizer": "金刀比羅宮"
+    },
+    {
+      "id": "3ef0b4e5-ff5b-810f-9dee-e9da968a825a",
+      "title": "例大祭 御神輿 御本宮発御（お下がり：御本宮→御旅所）",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootmap.pdf",
+      "start": "2026-10-10T21:00",
+      "end": "2026-10-10T23:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "年に一度、金刀比羅大神さまが門前町に下りられる「お下がり」。約600名が御本宮から御旅所（神事場）まで約2kmを2時間かけて進む。行列の先頭は乗馬の男子児童2人と駕籠の女子児童2人の「お頭人さん」。10/10 19時〜11日2時は一部道路が歩行者専用。経路地図：https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootmap.pdf",
+      "fee": "0",
+      "organizer": "金刀比羅宮"
+    },
+    {
+      "id": "3ef0b4e5-ff5b-813f-b05d-d037123a2da1",
+      "title": "例大祭 例祭（御本宮）",
+      "url": "https://www.konpira.or.jp/QR/02/a.html",
+      "start": "2026-10-10T10:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "2月の祈年祭・11月の新嘗祭と共に金刀比羅宮の三大祭の一つで、その中でも最も重要な祭典。大和舞を奏進。会場：御本宮",
+      "fee": "0",
+      "organizer": "金刀比羅宮"
+    },
+    {
       "id": "3ea0b4e5-ff5b-8198-9bba-f26abb6d88f5",
       "title": "10/10 こんぴら十帖",
       "url": "https://www.instagram.com/p/Dd2qWiEMw1Q/",
@@ -762,6 +850,21 @@ window.NOTION_DATA = {
       "comment": "台湾出身の琴平町地域おこし協力隊 ケリーが主催する台湾文化・台湾華語の3回連続講座。言葉・食文化・旅行用語を学ぶ内容。会場はKOTORI。",
       "fee": "0",
       "organizer": "琴平町地域おこし協力隊ケリー"
+    },
+    {
+      "id": "3ef0b4e5-ff5b-8171-a9bb-fe6b3992af7d",
+      "title": "例大祭 宵宮祭（御本宮）",
+      "url": "https://www.konpira.or.jp/QR/02/a.html",
+      "start": "2026-10-09T16:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "金刀比羅宮例大祭の初日。お祭の前日を「宵宮」といい、この日に斎行する祭典。八少女舞を奏進。会場：御本宮",
+      "fee": "0",
+      "organizer": "金刀比羅宮"
     },
     {
       "id": "3eb0b4e5-ff5b-810c-be8e-f5dd83b3f133",
@@ -809,12 +912,27 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3ef0b4e5-ff5b-8009-8dd4-f1500bc5e4e6",
+      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
+      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
+      "start": "2026-10-06T13:30",
+      "end": "2026-10-06T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
+      "image": "",
+      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "3db0b4e5-ff5b-8023-8820-f1629cd02f83",
       "title": "台湾文化 × 台湾華語 ミニ講座 第2回 台湾の食文化を知ろう！",
       "url": "https://www.instagram.com/p/DdIohwNhWd6/",
       "start": "2026-10-04T10:30",
       "end": "2026-10-04T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -829,7 +947,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11910.html",
       "start": "2026-10-04T10:00",
       "end": "2026-10-04T12:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -1977,51 +2095,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "地域おこし協力隊 あっきー"
-    },
-    {
-      "id": "3a40b4e5-ff5b-81a0-b846-e7be0a4b5fa6",
-      "title": "AQUA Transmission トークセッション＆Aki-Ra Sound Journey",
-      "url": "https://www.instagram.com/p/Da8I7fAJB1s/",
-      "start": "2026-08-05T18:00",
-      "end": "2026-08-05T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/3a40b4e5ff5b81a0b846e7be0a4b5fa6.webp",
-      "comment": "サウンドヒーラーAKIRA IKEDAによるトークセッションとライブ演奏。海の生命への祈りと音の旅をテーマに、映像と言葉でシェアした後、その場のエネルギーを感じながらの音の旅を体験できる。",
-      "fee": "4000",
-      "organizer": "麻心琴平"
-    },
-    {
-      "id": "3a90b4e5-ff5b-81d4-a130-ffcbf1c1ffa4",
-      "title": "香川県琴平町×困りごと公開会議＠大阪京橋",
-      "url": "https://x.com/uzuki_rin/status/2078767555217670238",
-      "start": "2026-08-05T16:00",
-      "end": "2026-08-05T18:30",
-      "status": "終了",
-      "city": "",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3a90b4e5ff5b81d4a130ffcbf1c1ffa4.webp",
-      "comment": "会場: QUINTBRIDGE 1階（京橋徒歩5分） 琴平町の地方創生チームが大阪京橋で開催する公開会議。現場の事業者が抱える課題を公開し、参加者とブレインストーミングを行う。トークイベント後に懇親会あり。",
-      "fee": "0",
-      "organizer": "琴平地方創生チーム"
-    },
-    {
-      "id": "3b00b4e5-ff5b-80c3-8897-fe4ed5d00241",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
-      "start": "2026-08-05T12:00",
-      "end": "2026-08-05T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b80c38897fe4ed5d00241.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -2069,6 +2142,21 @@ window.NOTION_DATA = {
       "comment": "会場: 大西化粧品店（琴平駅徒歩約5分） 資生堂のファンデーションベースを対象とした肌色測定体験。肌色診断機器を使用し、個人に合ったベースメイクを提案する約30分のサービス。期間は9月28日から10月10日まで（平日限定、水曜日は定休日）。",
       "fee": "0",
       "organizer": "大西化粧品店"
+    },
+    {
+      "id": "3ef0b4e5-ff5b-8161-9dd5-d2b67cfebd18",
+      "title": "GOKAN KOTOHIRA 公式サイト予約限定キャンペーン",
+      "url": "https://www.instagram.com/p/Dd549U3SmjH/",
+      "start": "2026-09-25",
+      "end": "2026-12-20",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3ef0b4e5ff5b81619dd5d2b67cfebd18.webp",
+      "comment": "会場: GOKAN KOTOHIRA（琴平町） GOKAN KOTOHIRAが公式サイト経由の予約に対し、宿泊料金15%OFFのキャンペーンを実施。対象期間は2026年9月25日〜12月20日（一部連休を除く）。クーポンコード「Shikoku15」を使用。",
+      "fee": "",
+      "organizer": "GOKAN KOTOHIRA"
     },
     {
       "id": "3db0b4e5-ff5b-8011-9516-fe5a1354e7a7",
