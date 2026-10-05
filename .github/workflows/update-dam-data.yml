@@ -41,4 +41,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update dam data"
+          # 毎時のNotion更新のpushと重なった場合に備え、先に取り込んでから push する
+          git pull --rebase
           git push

@@ -1,12 +1,13 @@
-# Notionの3DB（ニュース・イベント・キャンペーン）を毎日取得して notion-data.js を更新し、
-# 差分があればコミット→push→GitHub Pages に自動反映するワークフロー。
+# Notionの3DB（ニュース・イベント・キャンペーン）を毎時取得して notion-data.js を更新し、
+# 差分があればコミット→push→Cloudflare Pages に自動反映するワークフロー。
 # 必要なSecret: KOTOHIRA_DASHBOARD_NOTION_TOKEN（読み取り専用トークン。scripts/README.md 参照）
 name: Update Notion data
 
 on:
   schedule:
-    # 毎日 00:00 JST（= 15:00 UTC）。GitHubのcronは数分〜最大1時間程度遅れることがある
-    - cron: "0 15 * * *"
+    # JST 6:30〜翌0:30 の毎時30分（= UTC 21〜23時・0〜15時）。深夜帯は止める。
+    # ダム更新（毎時0分）とずらすため30分に置く。GitHubのcronは数分〜最大1時間程度遅れることがある
+    - cron: "30 21-23,0-15 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -72,5 +73,7 @@ jobs:
             echo "No changes; skip commit."
             exit 0
           fi
-          git commit -m "chore: daily Notion data update"
+          git commit -m "chore: Notion data update"
+          # 実行が遅れてダム更新のpushと重なった場合に備え、先に取り込んでから push する
+          git pull --rebase
           git push

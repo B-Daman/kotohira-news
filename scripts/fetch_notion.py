@@ -1179,6 +1179,19 @@ def main() -> None:
             "experiences", existing.get("experiences", [])
         )
 
+    # 内容が前回と同じで日付も同じなら fetched を据え置き、差分を出さない
+    # （毎時実行でも中身が変わった時だけ commit→デプロイされるようにするため）。
+    # サイトの「更新」表示は日付のみなので、日が変わった最初の実行では更新する。
+    prev_fetched = str(existing.get("fetched", ""))
+    # 既存側はJSONから読んだ値なので、こちらもJSON往復で型をそろえて比較する
+    content = json.loads(
+        json.dumps({k: v for k, v in data.items() if k != "fetched"}, ensure_ascii=False)
+    )
+    prev_content = {k: v for k, v in existing.items() if k != "fetched"}
+    if content == prev_content and prev_fetched[:10] == data["fetched"][:10]:
+        data["fetched"] = prev_fetched
+        print("内容に変化なし（同日）: fetched を据え置きます")
+
     if override_total:
         print(f"画像: ローカル手動画像を{override_total}件適用（Notion非経由）")
     if image_total:
