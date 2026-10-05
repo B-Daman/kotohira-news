@@ -94,7 +94,7 @@ window.SITE_WIDGETS_DATA = {
       note: "期間中は町内で交通規制があります",
       image: "assets/thumbs/3eb0b4e5ff5b815397c5fac00df30859.webp",
       imageAlt: "金刀比羅宮例大祭で御神輿が石段を下りる様子",
-      url: "https://www.town.kotohira.kagawa.jp/soshiki/8/12045.html",
+      url: "https://www.konpira.or.jp/QR/02/a.html",
       startDate: "",
       endDate: "2026-10-11",
       order: 1
