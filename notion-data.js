@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-05 19:01",
+  "fetched": "2026-10-06 04:23",
   "news": [
+    {
+      "id": "3f00b4e5-ff5b-8082-a52c-fac813cbf46d",
+      "title": "第4回 台湾夜市 in 琴平",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-282.html",
+      "summary": "台湾グルメ、ステージイベント、コラボ企画などを楽しめるイベント。台湾屋台グルメの出店、電音三太子や二胡の生演奏、台湾観光PRなどが行われる。",
+      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
+      "media": "行政",
+      "date": "2026-10-05",
+      "thumbnail": "assets/thumbs/3f00b4e5ff5b8082a52cfac813cbf46d.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f00b4e5-ff5b-81d8-8476-ceb40ead6557",
+      "title": "第３回こんぴら観光まちづくり検定試験",
+      "url": "https://www.kotohirakankou.jp/news/entry-617.html",
+      "summary": "第３回こんぴら観光まちづくり検定試験の申し込みが10月5日から開始されました。試験は11月29日（日）に実施され、初級・中級の2つの受験級があります。",
+      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-05",
+      "thumbnail": "assets/thumbs/3f00b4e5ff5b81d88476ceb40ead6557.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f00b4e5-ff5b-81ca-9dd6-e645a76b455b",
       "title": "ことひら表参道に「伝統芸能 猿まわし」が2026年10月9日(金)〜11日(日)に登場するみたい！",
@@ -365,58 +391,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3dd0b4e5-ff5b-815c-9870-f5c1054f44df",
-      "title": "御宿 敷島館 開業7周年記念プラン",
-      "url": "https://www.instagram.com/p/DdQ0zIPpEbQ/",
-      "summary": "御宿 敷島館が開業7周年を迎え、通常プランより7％OFFの7周年記念プランを販売中。詳細はInstagramプロフィールのURLから確認可能。",
-      "org": "Instagram (@onyado_shikishimakan)",
-      "media": "Webメディア",
-      "date": "2026-09-14",
-      "thumbnail": "assets/thumbs/3dd0b4e5ff5b815c9870f5c1054f44df.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3db0b4e5-ff5b-81a4-811c-ea36e98e19d4",
-      "title": "果桜軒がホットペッパーグルメでネット予約開始",
-      "url": "https://www.instagram.com/p/DdOO9RLE1tZ/",
-      "summary": "琴平町の居酒屋「果桜軒」がホットペッパーグルメでのネット予約に対応開始。7名以上の予約で奥のお部屋を貸し切りで利用できる。",
-      "org": "Instagram（果桜軒）",
-      "media": "Webメディア",
-      "date": "2026-09-13",
-      "thumbnail": "assets/thumbs/3db0b4e5ff5b81a4811cea36e98e19d4.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3da0b4e5-ff5b-8195-a98a-ebfab64bc953",
-      "title": "「人口シェア」で活性化　琴平で四国サミット　全国の事業者が意見交換",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091300000004400",
-      "summary": "シェアリングエコノミーをテーマにした「四国シェアサミット2026」が琴平町の町公会堂で開催された。全国のシェアサービス事業者ら約200人が参加し、関係人口や2地域居住などについて意見交換した。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-13",
-      "thumbnail": "assets/thumbs/3da0b4e5ff5b8195a98aebfab64bc953.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3da0b4e5-ff5b-8129-8036-fc952dfee11f",
-      "title": "さぬきこんぴら785（ななはこ）7/8にオープン 創作いなり専門店",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091300000001000",
-      "summary": "琴平町に創作いなりの専門店「さぬきこんぴら785」が7/8にオープンした。すし職人だったオーナーが考案した、バラエティー豊かな具材を油揚げで包んだ創作いなりで、観光客向けの食べ歩きメニューとなっている。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-13",
-      "thumbnail": "assets/thumbs/3da0b4e5ff5b81298036fc952dfee11f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -539,6 +513,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町商工会館 一般社団法人こんぴら観光まちづくり協会が主催する第3回検定試験。琴平町の歴史・文化・観光資源に関する初級・中級の2つの受験級を実施する。合格者は協会認定ガイド登録への道が開ける。",
       "fee": "3300",
       "organizer": "一般社団法人こんぴら観光まちづくり協会"
+    },
+    {
+      "id": "3f00b4e5-ff5b-8179-9d03-f6094a4c4e3a",
+      "title": "第３回こんぴら観光まちづくり検定試験",
+      "url": "https://www.kotohirakankou.jp/news/entry-617.html",
+      "start": "2026-11-29",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "https://www.kotohirakankou.jp/archives/",
+      "comment": "第３回こんぴら観光まちづくり検定試験の申し込みが10月5日から開始されました。試験は11月29日（日）に実施され、初級・中級の2つの受験級があります。",
+      "fee": "",
+      "organizer": "こんぴら観光まちづくり協会"
     },
     {
       "id": "3ee0b4e5-ff5b-814c-86dd-fb13438e8d8b",
@@ -876,7 +865,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-10-06T20:00",
       "end": "2026-10-06T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -891,7 +880,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-10-06T13:30",
       "end": "2026-10-06T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -2039,36 +2028,6 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": ""
-    },
-    {
-      "id": "39c0b4e5-ff5b-80b2-8b74-c9526c699ddb",
-      "title": "第15回「ユルッと楽しく着付けレッスン」",
-      "url": "https://www.instagram.com/reels/DaljXe5yEJ9/",
-      "start": "2026-08-06T18:30",
-      "end": "2026-08-06T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "つるや旅館",
-      "address": "766-0001 香川県仲多度郡琴平町620",
-      "image": "",
-      "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の着方や帯結び、着物を着た時の所作を学べる。ドリンクとおやつ付き。",
-      "fee": "500",
-      "organizer": "つるや旅館、藤田屋"
-    },
-    {
-      "id": "3b00b4e5-ff5b-809f-a518-fa4347d2d5e6",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-08-06T18:00",
-      "end": "2026-08-06T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b809fa518fa4347d2d5e6.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
     }
   ],
   "campaigns": [
