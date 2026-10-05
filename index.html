@@ -377,6 +377,21 @@
   .weather-text{font-size:13.5px;font-weight:900;line-height:1.4;margin-top:1px}
   .weather-meta{display:flex;gap:8px;flex-wrap:wrap;color:#4d4740;font-size:11.5px;margin-top:3px}
   .weather-fallback{font-size:12.5px;color:var(--sub);line-height:1.65}
+  /* 警報・注意報（天気欄の1行＋警報以上の時だけ出るページ上部の帯）。色は気象庁の警戒レベル配色に寄せる */
+  .weather-warning{font-size:12px;line-height:1.6;border-radius:8px;padding:6px 9px;margin:4px 0 8px;
+    background:#f4f1ec;color:#4d4740}
+  .weather-warning strong{font-weight:900}
+  .weather-warning.lv-advisory{background:#fff6cc;color:#5c4a00}
+  .weather-warning.lv-warning{background:#fde3e3;color:#9b111e}
+  .weather-warning.lv-danger{background:#efe3f6;color:#5b1a7a}
+  .weather-warning.lv-special{background:#1f1f1f;color:#fff}
+  .alert-banner{padding:9px 20px;font-size:13.5px;line-height:1.55;color:#fff;background:#c8102e}
+  .alert-banner[hidden]{display:none}
+  .alert-banner.lv-danger{background:#7a1fa2}
+  .alert-banner.lv-special{background:#111}
+  .alert-banner strong{font-weight:900}
+  .alert-banner .alert-note{display:block;font-size:11.5px;opacity:.95}
+  .alert-banner a{color:#fff;font-weight:900;text-decoration:underline;margin-left:6px;white-space:nowrap}
   /* .quick-route: 「目的から探す」カード（2026-09-05削除）の名残だが、home-udon-moreボタンが
      同じクラスを流用しているため維持する。.quick-grid（4ボタンの2x2グリッド）はカード削除に
      伴い他に使用箇所が無いため削除済み。 */
@@ -835,6 +850,7 @@
       <nav class="primary-nav" id="primaryNav" aria-label="メインメニュー"></nav>
       <div class="weather-chip-panel" id="weatherChipPanel" aria-label="今日の琴平の天気">
         <div class="widget-title">香川県琴平町の天気</div>
+        <div class="weather-warning-slot"></div>
         <div id="weatherChipPanelBody"></div>
       </div>
       <div class="dam-chip-panel" id="damChipPanel" aria-label="早明浦ダムの貯水状況">
@@ -842,6 +858,7 @@
         <div id="damChipPanelBody"></div>
       </div>
     </div>
+    <div class="alert-banner" id="alertBanner" role="alert" hidden></div>
   </div>
 
   <div class="page-shell" id="pageShell">
@@ -1129,6 +1146,7 @@ function init(){
   renderCommunityWidgets();
   renderFooterLinks();
   loadWeatherWidget();
+  loadWarningInfo();
   renderDamChip();
   render();
 }
@@ -3326,6 +3344,7 @@ function renderUtilityWidgets(){
     <section class="widget-card weather-card" aria-labelledby="weatherWidgetTitle">
       <span class="widget-kicker">今日の琴平</span>
       <div class="widget-title" id="weatherWidgetTitle">🌤 ${esc(weatherLocation)}周辺の天気</div>
+      <div class="weather-warning-slot"></div>
       <div id="weatherBody" aria-live="polite"><div class="widget-loading">予報を読み込んでいます…</div></div>
     </section>` : "";
   host.innerHTML = `<div class="widget-stack">
@@ -3887,6 +3906,109 @@ function weatherFallbackHTML(){
   const url = safeUrl(cfg.forecastUrl);
   return `<p class="weather-fallback">予報を取得できませんでした。最新情報は気象庁でご確認ください。</p>
     ${url ? `<div class="widget-links"><a class="widget-link" href="${esc(url)}" rel="noopener">気象庁の予報を見る ↗</a></div>` : ""}`;
+}
+
+/* ===== 警報・注意報（気象庁 r8形式JSON、琴平町のみ） =====
+   JSONは種別ごとの直近の報の配列（古い順）。同じコードは発表時刻が新しい報を採り、
+   「解除」「発表警報・注意報はなし」を除いたものを発表中とみなす。JSONにレベルの項目は無いため
+   コードから判定する。コード表は第三者実装（odenoden5/sora-navi）由来で、香川の実データの
+   コードと矛盾が無いことは確認済み・気象庁公式表（jmaxml code.xlsx）とは未照合。
+   表に無いコードは黙って捨てず、番号帯（0x/3x/4x=警報以上、1x/2x=注意報）で扱う。
+   rank: 1=注意報 2=警報(レベル3) 3=危険警報(レベル4) 4=特別警報(レベル5) */
+const JMA_WARNING_CODES = {
+  "02":["暴風雪警報",2], "03":["大雨警報",2,3], "05":["暴風警報",2], "06":["大雪警報",2],
+  "07":["波浪警報",2], "08":["高潮警報",2,3], "09":["土砂災害警報",2,3],
+  "10":["大雨注意報",1,2], "12":["大雪注意報",1], "13":["風雪注意報",1], "14":["雷注意報",1],
+  "15":["強風注意報",1], "16":["波浪注意報",1], "17":["融雪注意報",1], "19":["高潮注意報",1,2],
+  "20":["濃霧注意報",1], "21":["乾燥注意報",1], "22":["なだれ注意報",1], "23":["低温注意報",1],
+  "24":["霜注意報",1], "25":["着氷注意報",1], "26":["着雪注意報",1], "29":["土砂災害注意報",1,2],
+  "32":["暴風雪特別警報",4], "33":["大雨特別警報",4,5], "35":["暴風特別警報",4], "36":["大雪特別警報",4],
+  "37":["波浪特別警報",4], "38":["高潮特別警報",4,5], "39":["土砂災害特別警報",4,5],
+  "43":["大雨危険警報",3,4], "48":["高潮危険警報",3,4], "49":["土砂災害危険警報",3,4]
+};
+const WARNING_RANK_CLASS = {1:"lv-advisory", 2:"lv-warning", 3:"lv-danger", 4:"lv-special"};
+function classifyWarningCode(code){
+  const known = JMA_WARNING_CODES[code];
+  if(known) return {name:known[0], rank:known[1], level:known[2] || null};
+  const n = Number(code);
+  if(n >= 10 && n <= 29) return {name:"その他の注意報", rank:1, level:null};
+  if(n >= 30 && n <= 39) return {name:"その他の特別警報", rank:4, level:null};
+  if(n >= 40 && n <= 49) return {name:"その他の危険警報", rank:3, level:null};
+  return {name:"その他の警報", rank:2, level:null};
+}
+function warningLabel(w){ return w.level ? `レベル${w.level} ${w.name}` : w.name; }
+function computeActiveWarnings(payload, areaCode){
+  if(!Array.isArray(payload)) throw new Error("warning: not array");
+  const latest = {}; // code -> {status, at}
+  let newest = 0;
+  for(const report of payload){
+    const at = Date.parse(report && report.reportDatetime);
+    if(!Number.isFinite(at)) continue;
+    if(at > newest) newest = at;
+    const items = report.warning && Array.isArray(report.warning.class20Items) ? report.warning.class20Items : [];
+    const area = items.find(it=>it && it.areaCode === areaCode);
+    if(!area || !Array.isArray(area.kinds)) continue;
+    for(const k of area.kinds){
+      if(!k || !k.code) continue; // 「発表警報・注意報はなし」はcodeを持たない
+      const code = ("" + k.code).padStart(2, "0");
+      if(!latest[code] || latest[code].at <= at) latest[code] = {status:k.status, at};
+    }
+  }
+  if(!newest) throw new Error("warning: no reportDatetime");
+  const active = Object.keys(latest)
+    .filter(code=>latest[code].status !== "解除" && latest[code].status !== "発表警報・注意報はなし")
+    .map(code=>classifyWarningCode(code))
+    .sort((a,b)=>b.rank - a.rank);
+  return {active, newest};
+}
+async function loadWarningInfo(){
+  const cfg = WIDGETS.weather || {};
+  const dataUrl = safeUrl(cfg.warningDataUrl);
+  const areaCode = ("" + (cfg.warningAreaCode || "")).trim();
+  if(cfg.enabled !== true || !dataUrl || !areaCode) return;
+  const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+  const timer = controller ? setTimeout(()=>controller.abort(), 6000) : null;
+  let state = null; // 失敗時はnull（帯は出さず、天気欄に「取得できず」を出す）
+  try{
+    const response = await fetch(dataUrl, {
+      cache:"no-store", credentials:"omit", signal:controller ? controller.signal : undefined
+    });
+    if(!response.ok) throw new Error("warning http " + response.status);
+    const result = computeActiveWarnings(await response.json(), areaCode);
+    const maxAgeMs = (Number(cfg.warningMaxAgeDays) || 30) * 86400000;
+    if(Date.now() - result.newest > maxAgeMs) throw new Error("warning: stale");
+    state = result;
+  }catch(err){
+    state = null;
+  }finally{
+    if(timer) clearTimeout(timer);
+  }
+  renderWarningInfo(state);
+}
+function renderWarningInfo(state){
+  const cfg = WIDGETS.weather || {};
+  const place = ("" + (cfg.locationLabel || "琴平町")).trim();
+  const url = safeUrl(cfg.warningUrl);
+  const link = url ? `<a href="${esc(url)}" rel="noopener">気象庁で確認 ↗</a>` : "";
+  let line;
+  if(!state){
+    line = `<div class="weather-warning">警報・注意報を取得できませんでした。${link}</div>`;
+  }else if(!state.active.length){
+    line = `<div class="weather-warning">${esc(place)}に警報・注意報は出ていません。</div>`;
+  }else{
+    const top = state.active[0].rank;
+    line = `<div class="weather-warning ${WARNING_RANK_CLASS[top]}">⚠ ${esc(place)}：<strong>${state.active.map(w=>esc(warningLabel(w))).join("・")}</strong> 発表中 ${link}</div>`;
+  }
+  document.querySelectorAll(".weather-warning-slot").forEach(el=>{ el.innerHTML = line; });
+
+  const banner = document.getElementById("alertBanner");
+  if(!banner) return;
+  const severe = state ? state.active.filter(w=>w.rank >= 2) : [];
+  if(!severe.length){ banner.hidden = true; banner.innerHTML = ""; return; }
+  banner.className = `alert-banner ${WARNING_RANK_CLASS[severe[0].rank]}`;
+  banner.innerHTML = `⚠ ${esc(place)}に <strong>${severe.map(w=>esc(warningLabel(w))).join("・")}</strong> が発表されています。${link}
+    <span class="alert-note">避難の判断は町・気象庁の発表で確認してください。</span>`;
+  banner.hidden = false;
 }
 
 /* ===== 共通ユーティリティ ===== */

@@ -35,7 +35,14 @@ window.SITE_WIDGETS_DATA = {
     dataUrl: "https://www.jma.go.jp/bosai/forecast/data/forecast/370000.json",
     forecastUrl: "https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=370000",
     warningUrl: "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=3740300",
-    cacheHours: 24
+    cacheHours: 24,
+    /* 警報・注意報（2026-05-28からの「新しい防災気象情報」形式＝r8）。旧パス
+       /bosai/warning/data/warning/ は5/28で更新が止まったままHTTP 200を返すため使わない。
+       warningAreaCode は琴平町。最新の発表が warningMaxAgeDays より古ければ「取得できず」扱い。
+       警報（レベル3）以上が出ている時だけ、ページ上部に帯を出す。 */
+    warningDataUrl: "https://www.jma.go.jp/bosai/warning/data/r8/370000.json",
+    warningAreaCode: "3740300",
+    warningMaxAgeDays: 30
   },
 
   /* 💧 早明浦ダム貯水状況ウィジェットの関連リンク（手編集）。
