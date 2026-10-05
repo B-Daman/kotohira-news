@@ -86,6 +86,20 @@ window.SITE_WIDGETS_DATA = {
      イベント情報の正はNotionイベントDB（イベントタブ）で、ここは告知枠のみ。 */
   featuredEvents: [
     {
+      id: "reitaisai-2026",
+      enabled: true,
+      title: "令和8年 金刀比羅宮例大祭（お十日）",
+      dateLabel: "2026年10月9日(金)〜11日(日)",
+      place: "金刀比羅宮・御旅所ほか",
+      note: "期間中は町内で交通規制があります",
+      image: "assets/thumbs/3eb0b4e5ff5b815397c5fac00df30859.webp",
+      imageAlt: "金刀比羅宮例大祭で御神輿が石段を下りる様子",
+      url: "https://www.town.kotohira.kagawa.jp/soshiki/8/12045.html",
+      startDate: "",
+      endDate: "2026-10-11",
+      order: 1
+    },
+    {
       id: "taiwan-fes-2026",
       enabled: false,  /* 2026-09-04 台風接近のため延期→掲載停止。振替日程の確定後に更新して再有効化 */
       title: "第4回 台湾フェス・台湾夜市 in 琴平",
