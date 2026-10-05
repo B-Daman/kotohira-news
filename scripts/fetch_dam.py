@@ -248,6 +248,45 @@ def load_existing() -> str | None:
         return f.read()
 
 
+def parse_dam_js(text: str | None) -> dict[str, Any] | None:
+    """dam-data.js（window.DAM_DATA = {...};）の中身を辞書で返す。読めなければ None。"""
+    if not text:
+        return None
+    m = re.search(r"window\.DAM_DATA\s*=\s*(\{.*\})\s*;", text, re.S)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(1))
+    except ValueError:
+        return None
+
+
+# サイトの「直近7日の推移」グラフ用に、観測ごとの貯水率を dam-data.js 自体に貯めておく
+# （ブラウザはgit履歴を読めないため）。最新の観測日から HISTORY_DAYS 日分だけ残す。
+HISTORY_DAYS = 7
+
+
+def merge_history(history: list[dict[str, Any]], observed_at: str, rate: float) -> list[dict[str, Any]]:
+    points = {str(p["t"]): float(p["rate"]) for p in history if p.get("t") and p.get("rate") is not None}
+    points[observed_at] = float(rate)
+    ordered = sorted(points.items())
+    last_day = datetime.fromisoformat(ordered[-1][0]).date()
+    since = last_day - timedelta(days=HISTORY_DAYS - 1)
+    return [
+        {"t": t, "rate": r} for t, r in ordered
+        if datetime.fromisoformat(t).date() >= since
+    ]
+
+
+def render_js(data: dict[str, Any]) -> str:
+    js = "/* 自動生成: scripts/fetch_dam.py が1日2回（GitHub Actions）再生成します。手編集しないでください。\n"
+    js += "   早明浦ダムの貯水状況（国交省「川の防災情報」より）。速報値のため、観測時刻を必ず併記して表示すること。\n"
+    js += "   history は直近7日の観測ごとの貯水率（サイトの推移グラフ用・古い順）。 */\n"
+    js += "window.DAM_DATA = " + json.dumps(data, ensure_ascii=False, indent=2)
+    js += ";\n"
+    return js
+
+
 def main() -> None:
     try:
         obs = fetch_dam_observation()
@@ -270,14 +309,11 @@ def main() -> None:
         "fetchedAt": datetime.now(JST).strftime("%Y-%m-%d %H:%M"),
         "sourceUrl": SOURCE_URL,
     }
+    previous = parse_dam_js(load_existing()) or {}
+    data["history"] = merge_history(previous.get("history") or [], obs["observedAt"], obs["rate"])
 
-    js = "/* 自動生成: scripts/fetch_dam.py が1日2回（GitHub Actions）再生成します。手編集しないでください。\n"
-    js += "   早明浦ダムの貯水状況（国交省「川の防災情報」より）。速報値のため、観測時刻を必ず併記して表示すること。 */\n"
-    js += "window.DAM_DATA = " + json.dumps(data, ensure_ascii=False, indent=2)
-    js += ";\n"
-
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        f.write(js)
+    with open(OUTPUT_PATH, "w", encoding="utf-8", newline="\n") as f:
+        f.write(render_js(data))
 
     print(f"dam-data.js を書き出しました: {OUTPUT_PATH}")
     print(
