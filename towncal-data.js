@@ -8,9 +8,9 @@
    （町ホームページのPDF/画像URLとページ番号を渡すと両方まとめてやってくれる。使い方は
    スクリプト先頭のコメント参照）。 */
 window.TOWNCAL = {
-  month: "2026-09",                          // 掲載中の号（YYYY-MM）
-  image: "assets/towncal/2026-09.webp",
-  sourceName: "広報ことひら 2026年9月号",
+  month: "2026-10",                          // 掲載中の号（YYYY-MM）
+  image: "assets/towncal/2026-10.webp",
+  sourceName: "広報ことひら 2026年10月号",
   sourceUrl: "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
   sourceLinkLabel: "琴平町ホームページ（広報ことひら）"
 };
