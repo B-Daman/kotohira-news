@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-06 10:51",
+  "fetched": "2026-10-06 18:18",
   "news": [
     {
       "id": "3f00b4e5-ff5b-8082-a52c-fac813cbf46d",
@@ -375,19 +375,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-16",
       "thumbnail": "assets/thumbs/3dd0b4e5ff5b81988995c6d041ce3713.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3dd0b4e5-ff5b-81ac-9dab-c98669f41b58",
-      "title": "琴平町「大センダンのある広場」の名前を募集中！どんな名前になると思う？2026年9月30日(水)まで！",
-      "url": "https://www.marugame2.jp/topics/130537",
-      "summary": "樹齢約300年ともいわれる国の天然記念物、そして町のシンボルとしても愛されている「大センダンの木」を中心に、地域のみなさんや観光で訪れるたくさんの人に親しまれる広場を目指して、現在名称 (ネーミング)を募集中",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-16",
-      "thumbnail": "assets/thumbs/3dd0b4e5ff5b81ac9dabc98669f41b58.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
