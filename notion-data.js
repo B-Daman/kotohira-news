@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-06 18:18",
+  "fetched": "2026-10-07 01:11",
   "news": [
     {
       "id": "3f00b4e5-ff5b-8082-a52c-fac813cbf46d",
@@ -852,7 +852,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dd20zwGTzfn/",
       "start": "2026-10-07T18:30",
       "end": "2026-10-07T20:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "名古屋市",
       "place": "",
       "address": "",
@@ -867,7 +867,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-10-06T20:00",
       "end": "2026-10-06T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -882,7 +882,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-10-06T13:30",
       "end": "2026-10-06T15:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
