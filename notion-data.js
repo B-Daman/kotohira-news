@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-07 09:58",
+  "fetched": "2026-10-07 16:40",
   "news": [
     {
       "id": "3f20b4e5-ff5b-813c-a317-e9878f47e9a3",
@@ -10,7 +10,20 @@ window.NOTION_DATA = {
       "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
       "media": "Webメディア",
       "date": "2026-11-08",
-      "thumbnail": "https://www.kotohirakankou.jp/media/005/202610/MDCF.png",
+      "thumbnail": "assets/thumbs/3f20b4e5ff5b813ca317e9878f47e9a3.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f20b4e5-ff5b-818c-98f0-f748865e7b37",
+      "title": "【限定40枠】金刀比羅宮参道365段　石段オーナー権",
+      "url": "https://tokken.alyawmu.com/product/bbe7c1de-2c0c-4af6-9754-ed3bf9fac3e9",
+      "summary": "金刀比羅宮参道の石段1〜365段から希望番号を選択し、個人名または法人名を5年間掲示できる記名権の販売。限定40枠。申込期間は2026年10月7日〜11月20日。",
+      "org": "TOKKEN",
+      "media": "Webメディア",
+      "date": "2026-10-07T12:00",
+      "thumbnail": "assets/thumbs/3f20b4e5ff5b818c98f0f748865e7b37.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -599,7 +612,7 @@ window.NOTION_DATA = {
       "city": "琴平町",
       "place": "琴平小学校",
       "address": "〒766-0002 香川県仲多度郡琴平町145-1",
-      "image": "https://www.kotohirakankou.jp/media/005/202610/MDCF.png",
+      "image": "assets/thumbs/3f20b4e5ff5b8100ababeb9c273dffbc.webp",
       "comment": "会場: 琴平小学校 全国から集まったスーパーカーが琴平に終結するイベント。朝9時に高瀬自動車学校をスタートして中西讃地域を周遊した後、琴平小学校に到着。琴平到着時間は未定。",
       "fee": "",
       "organizer": "こんぴら観光まちづくり協会"
