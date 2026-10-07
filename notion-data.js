@@ -1,7 +1,46 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-07 01:11",
+  "fetched": "2026-10-07 09:58",
   "news": [
+    {
+      "id": "3f20b4e5-ff5b-813c-a317-e9878f47e9a3",
+      "title": "三豊ドリームカーフェスタ2026（ことひら会場）",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-619.html",
+      "summary": "全国から集まったスーパーカーが琴平に終結するイベント。朝9時に高瀬自動車学校をスタートして中西讃地域を周遊した後、琴平小学校に到着。琴平到着時間は未定。",
+      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-11-08",
+      "thumbnail": "https://www.kotohirakankou.jp/media/005/202610/MDCF.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f10b4e5-ff5b-81f6-a200-eb062d99568c",
+      "title": "金刀比羅宮例大祭",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026100700000002800",
+      "summary": "金刀比羅宮（琴平町）の例大祭が9日から11日まで開催される。10日夜には「みこし渡御」が行われるほか、舞の奉納などの行事が催される。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-07",
+      "thumbnail": "assets/thumbs/3f10b4e5ff5b81f6a200eb062d99568c.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f10b4e5-ff5b-80f8-8655-d7e4be1bb333",
+      "title": "観光地ではなく、\"友達ができる町\"でありたい。挑戦を繰り返すバス会社社長が語る、地域再生の本音【琴平バス株式会社 楠木泰二朗 × LoLLL株式会社 森健志郎】",
+      "url": "https://www.youtube.com/watch?v=HtY95C2mp9o",
+      "summary": "「地域の未来をつくる存在になるためには、何から始めればいいのか。」 続く後編では、琴平町が抱える構造的な課題を解決するための具体的なアクションに迫ります。 年間約200万人以上が訪れる琴平町ですが、実は観光客の8割が日帰りで、滞在時間はわずか2時間。地域にお金が落ちないという構造的な課題がありました。 そこから脱却するため、デジタルノマドをターゲットにしたコワーキング＆ホステル「コトリ」の運営や、地域の足を守るAIオンデマンド交通「琴平mobi」など、これまでの常識にとらわれない独自のアプローチを次々と展開していきます。 「日帰り観光だけでは、地域に豊かさが残りにくい。宿泊を促し、旅の中に『余白』を作ることで地域に友達を作ってもらう」 「都市部だと小石を投げてもさざ波しか立たないが、琴平の規模なら小石を投げたら大波がやってくる」 「最初から大きな存在を目指すのではなく、小さなチャレンジを繰り返した結果として、地域の未来をつくる会社になっている」 一生に一度ではなく、何度も訪れたくなる関係人口の創出。 コンパクトな町の規模を活かし、長期目線で地域の未来を切り拓くための、地域と企業の新しい関係性に迫ります。",
+      "org": "",
+      "media": "",
+      "date": "2026-10-06",
+      "thumbnail": "assets/thumbs/3f10b4e5ff5b80f88655d7e4be1bb333.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f00b4e5-ff5b-8082-a52c-fac813cbf46d",
       "title": "第4回 台湾夜市 in 琴平",
@@ -352,32 +391,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3de0b4e5-ff5b-812a-94cc-ddcd726a9e95",
-      "title": "BEAMS JAPANが香川・琴平に10月31日常設店をオープン",
-      "url": "https://prtimes.jp/main/html/rd/p/000000998.000012471.html",
-      "summary": "株式会社ビームスは2026年10月31日、香川・琴平の金刀比羅宮表参道に常設店「ビームス ジャパン 琴平」をオープンする。地域共創型の出店で、琴平町の伝統工芸品や地域産品を取り揃える予定。",
-      "org": "PR TIMES（株式会社ビームス プレスリリース）",
-      "media": "Webメディア",
-      "date": "2026-09-17",
-      "thumbnail": "assets/thumbs/3de0b4e5ff5b812a94ccddcd726a9e95.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3dd0b4e5-ff5b-8198-8995-c6d041ce3713",
-      "title": "オリジナルフレーム切手「こんぴらさんのおたからさん 金刀比羅宮の神域に集いし 名画たち」販売開始と贈呈式",
-      "url": "https://www.post.japanpost.jp/enjoy/culture/stamp/frame/detail.php?id=3883",
-      "summary": "日本郵便株式会社四国支社が、金刀比羅宮をテーマにしたオリジナルフレーム切手の販売を開始します。9月28日には金刀比羅宮宝物館正面玄関で贈呈式が開催されます。",
-      "org": "日本郵便株式会社四国支社",
-      "media": "Webメディア",
-      "date": "2026-09-16",
-      "thumbnail": "assets/thumbs/3dd0b4e5ff5b81988995c6d041ce3713.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -575,6 +588,21 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": ""
+    },
+    {
+      "id": "3f20b4e5-ff5b-8100-abab-eb9c273dffbc",
+      "title": "三豊ドリームカーフェスタ2026（ことひら会場）",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-619.html",
+      "start": "2026-11-08",
+      "end": "2026-11-08",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平小学校",
+      "address": "〒766-0002 香川県仲多度郡琴平町145-1",
+      "image": "https://www.kotohirakankou.jp/media/005/202610/MDCF.png",
+      "comment": "会場: 琴平小学校 全国から集まったスーパーカーが琴平に終結するイベント。朝9時に高瀬自動車学校をスタートして中西讃地域を周遊した後、琴平小学校に到着。琴平到着時間は未定。",
+      "fee": "",
+      "organizer": "こんぴら観光まちづくり協会"
     },
     {
       "id": "3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d",
