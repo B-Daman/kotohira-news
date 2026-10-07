@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-07 16:40",
+  "fetched": "2026-10-08 00:43",
   "news": [
     {
       "id": "3f20b4e5-ff5b-813c-a317-e9878f47e9a3",
@@ -893,7 +893,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dd20zwGTzfn/",
       "start": "2026-10-07T18:30",
       "end": "2026-10-07T20:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "名古屋市",
       "place": "",
       "address": "",
@@ -2025,51 +2025,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80b0abd5e2785fd0d2c4.webp",
       "comment": "",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-8048-918b-ed78eccfbb20",
-      "title": "西川ユウヒスキーLIVE & ビアガーデン",
-      "url": "https://www.facebook.com/sandosandstand/posts/pfbid0BerDypvDZimbnkw8SGSDZUEvPrpDtAjnLn1xDTpLWP4xAhoruQS3DTPqEEw15UVLl",
-      "start": "2026-08-08T18:00",
-      "end": "2026-08-08T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "HAKOBUNEビル",
-      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル",
-      "image": "assets/thumbs/3b00b4e5ff5b8048918bed78eccfbb20.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-81ef-9a74-d83ce90ee77a",
-      "title": "琴平町文化財保存活用地域計画 住民説明会",
-      "url": "https://www.instagram.com/p/DbabPj4E-xN/",
-      "start": "2026-08-08T10:00",
-      "end": "2026-08-08T11:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町総合センター",
-      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
-      "image": "assets/thumbs/3b00b4e5ff5b81ef9a74d83ce90ee77a.webp",
-      "comment": "会場: 琴平町総合センター 2階 大ホール 琴平町の文化財を町全体で守り未来へ繋いでいくための住民説明会。琴平町教育委員会主催で、町内の古い建物や歴史に関する情報を募集し、専門家と共に琴平の文化財について学ぶ機会。",
-      "fee": "0",
-      "organizer": "琴平町教育委員会"
-    },
-    {
-      "id": "3b00b4e5-ff5b-804a-a5f8-dd867150d1ff",
-      "title": "朝うどん巡礼ツアー",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
-      "start": "2026-08-08T07:20",
-      "end": "2026-08-08T09:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b804aa5f8dd867150d1ff.webp",
-      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
-      "fee": "2800",
       "organizer": ""
     }
   ],
