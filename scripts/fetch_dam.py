@@ -70,8 +70,19 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 OUTPUT_PATH = os.path.join(REPO_ROOT, "dam-data.js")
 
-# 属性コード（.dat・HTML共通の意味）。$=欠測、-=未受信。どちらも「値が確定していない」ので欠測扱いにする。
-INVALID_ATTRS = {"$", "-"}
+# 属性コード（.dat）。$=欠測、-=未受信。どちらも「値が確定していない」ので欠測扱いにする。
+# 2026-10-07: ヘッダーに説明の無い「#」が実在した（観測所の停止中、貯水量・流入量・放流量が 0,# になった）。
+# 未知のコードを有効扱いすると 0 を採用してしまうため、属性が空欄以外ならすべて無効として扱う。
+
+
+def is_invalid_attr(attr: str) -> bool:
+    return attr.strip() != ""
+
+
+def has_real_storage(storage: float | None) -> bool:
+    """貯水量が 0 以下の行は観測停止中の値とみなす（早明浦ダムの貯水量が 0 になることは無い。
+    貯水率 0% は渇水で実在し得るため、貯水率ではなく貯水量の方で判定する）。"""
+    return storage is not None and storage > 0
 
 
 def guard_url(url: str) -> str:
@@ -133,7 +144,7 @@ def parse_dat(text: str) -> dict[str, Any] | None:
     rate_label = header_cols[10].strip()
 
     def col(parts: list[str], value_idx: int, attr_idx: int) -> float | None:
-        if attr_idx < len(parts) and parts[attr_idx].strip() in INVALID_ATTRS:
+        if attr_idx < len(parts) and is_invalid_attr(parts[attr_idx]):
             return None
         try:
             return float(parts[value_idx].strip())
@@ -145,7 +156,9 @@ def parse_dat(text: str) -> dict[str, Any] | None:
     for parts in reversed(rows):
         if len(parts) < 12:
             continue
-        if parts[11].strip() in INVALID_ATTRS:
+        if is_invalid_attr(parts[11]):
+            continue
+        if not has_real_storage(col(parts, 4, 5)):
             continue
         date_part = parts[0].strip().replace("/", "-")
         time_part = parts[1].strip()
@@ -200,6 +213,8 @@ def parse_html_table(text: str) -> dict[str, Any] | None:
         rate = cell_value(rate_cell)
         if rate is None:
             continue  # 貯水率が未受信の行はスキップし、値が揃っている直近行を採用する
+        if not has_real_storage(cell_value(storage_cell)):
+            continue  # 観測停止中（貯水量 0）の行は採用しない
         try:
             datetime.strptime(f"{date_part}T{time_part}", "%Y/%m/%dT%H:%M")
         except ValueError:
