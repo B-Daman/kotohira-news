@@ -1,16 +1,16 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-08 00:43",
+  "fetched": "2026-10-08 10:13",
   "news": [
     {
-      "id": "3f20b4e5-ff5b-813c-a317-e9878f47e9a3",
-      "title": "三豊ドリームカーフェスタ2026（ことひら会場）",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-619.html",
-      "summary": "全国から集まったスーパーカーが琴平に終結するイベント。朝9時に高瀬自動車学校をスタートして中西讃地域を周遊した後、琴平小学校に到着。琴平到着時間は未定。",
-      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-11-08",
-      "thumbnail": "assets/thumbs/3f20b4e5ff5b813ca317e9878f47e9a3.webp",
+      "id": "3f20b4e5-ff5b-81f5-a07c-c9f56cdc8d89",
+      "title": "琴平町 琴平町文化会館改修 真鍋に設計委託 - 建通新聞",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYVlGUlp3bFFGSWE3eEItS1VKdG5SRGx2Qk45NTgtT1AtcnB1dFRCeGlKa3hyMEJJYnkzbDdHckM1TWxYZERZUmNKTVRqMXh3VEg0NVg2QWc0Rm5WYzNKbUVPU1I3Nk5NdVcxT0pRd09DNUdUcGVHaTdQSXlNVVE3Ng?oc=5",
+      "summary": "琴平町文化会館の改修工事に向けて、設計業務を真鍋令建築設計事務所に委託する。空調設備の更新と照明設備のLED化を主な内容とし、設計納期は2027年3月19日、早ければ27年度に工事実施予定。",
+      "org": "建通新聞",
+      "media": "新聞",
+      "date": "2026-10-08",
+      "thumbnail": "assets/thumbs/3f20b4e5ff5b81f5a07cc9f56cdc8d89.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -24,6 +24,19 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-10-07T12:00",
       "thumbnail": "assets/thumbs/3f20b4e5ff5b818c98f0f748865e7b37.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f20b4e5-ff5b-813c-a317-e9878f47e9a3",
+      "title": "三豊ドリームカーフェスタ2026（ことひら会場）",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-619.html",
+      "summary": "全国から集まったスーパーカーが琴平に終結するイベント。朝9時に高瀬自動車学校をスタートして中西讃地域を周遊した後、琴平小学校に到着。琴平到着時間は未定。",
+      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-07",
+      "thumbnail": "assets/thumbs/3f20b4e5ff5b813ca317e9878f47e9a3.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -375,32 +388,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-09-20",
       "thumbnail": "assets/thumbs/3e20b4e5ff5b81b9b78bf4d95f2bf45f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3df0b4e5-ff5b-811f-a3e9-f9611ada4770",
-      "title": "こんぴら観光協がガイド研修　検定合格者が心得学ぶ",
-      "url": "https://www.47news.jp/14959761.html",
-      "summary": "こんぴら観光まちづくり協会の認定ガイド養成研修が9月14日、琴平町や周辺の市町で開かれた。同協会の「こんぴら観光まちづくり検定」合格者を対象に、観光地の見どころについて学んだ。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-18",
-      "thumbnail": "assets/thumbs/3df0b4e5ff5b811fa3e9f9611ada4770.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3df0b4e5-ff5b-81e1-bff9-e84ca9aa81f5",
-      "title": "かがわ子育てステーションの新婚世帯向けプログラム開始",
-      "url": "https://www.town.kotohira.kagawa.jp/site/ijyuu/12028.html",
-      "summary": "香川県の子育て拠点「かがわ子育てステーション」で、新婚世帯向けのプログラムが開始された。夫婦で暮らしについて対話する30分間のプログラムを提供している。同時に結婚新生活支援事業も実施中で、新居の家賃や引越費用などを補助している。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-18",
-      "thumbnail": "assets/thumbs/3df0b4e5ff5b81e1bff9e84ca9aa81f5.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
