@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-08 16:55",
+  "fetched": "2026-10-09 00:49",
   "news": [
     {
       "id": "3f30b4e5-ff5b-810e-b3a1-f68e5b89dfdb",
@@ -835,7 +835,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdIohwNhWd6/",
       "start": "2026-10-09T18:00",
       "end": "2026-10-09T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -850,7 +850,7 @@ window.NOTION_DATA = {
       "url": "https://www.konpira.or.jp/QR/02/a.html",
       "start": "2026-10-09T16:00",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
@@ -865,7 +865,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/12045.html",
       "start": "2026-10-09T16:00",
       "end": "2026-10-12T00:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
