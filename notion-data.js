@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-08 10:13",
+  "fetched": "2026-10-08 16:55",
   "news": [
+    {
+      "id": "3f30b4e5-ff5b-810e-b3a1-f68e5b89dfdb",
+      "title": "高松琴平電気鉄道、新型車「2000形」導入",
+      "url": "https://www.sanyonews.jp/article/2001631",
+      "summary": "高松琴平電気鉄道が新型車「2000形」を導入した。瀬戸内海や空をイメージした鮮やかな青色を基調としたデザインで、2編成計4両が琴平線と長尾線を走る。66年ぶりの新型車導入である。",
+      "org": "山陽新聞デジタル",
+      "media": "新聞",
+      "date": "2026-10-08",
+      "thumbnail": "assets/thumbs/3f30b4e5ff5b810eb3a1f68e5b89dfdb.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f30b4e5-ff5b-8165-9609-f93f061b1715",
+      "title": "令和8年度職員採用試験　高校卒業程度（第1次試験）の合格者について",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/4/12072.html",
+      "summary": "琴平町が令和8年9月20日に実施した職員採用試験（高校卒業程度）の第1次試験合格者を発表した。一般行政、一般行政（障がい者）、建築、技能労務（清掃）の区分で合格者を決定した。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-08",
+      "thumbnail": "assets/thumbs/3f30b4e5ff5b81659609f93f061b1715.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f20b4e5-ff5b-81f5-a07c-c9f56cdc8d89",
       "title": "琴平町 琴平町文化会館改修 真鍋に設計委託 - 建通新聞",
@@ -362,32 +388,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-23",
       "thumbnail": "assets/thumbs/3e40b4e5ff5b81b89bc6c906788be0f0.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e30b4e5-ff5b-819e-b06c-dac9c3f0c758",
-      "title": "こんぴらさん表参道77段目にある「小田象麓堂」の店頭に、『うさぎいろ 石段店』が2026年7月からオープン！限定のお酒に合う甘味も登場♪",
-      "url": "https://www.marugame2.jp/stores/130880",
-      "summary": "金刀比羅宮の参道、石段77段目にある「小田象麓堂」の店頭に、フルーツ大福などで人気のスイーツ店「うさぎいろ 石段店」が2026年7月からオープンしています！ 地図だとこちら↓↓↓ 2026年9月17日",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-22",
-      "thumbnail": "assets/thumbs/3e30b4e5ff5b819eb06cdac9c3f0c758.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e20b4e5-ff5b-81b9-b78b-f4d95f2bf45f",
-      "title": "【こだわりの宿特集 温泉・浴場編】琴平グランドホテル桜の抄（香川県・こんぴら温泉郷）",
-      "url": "https://www.kankokeizai.com/2609202000kks/",
-      "summary": "金刀比羅宮の参道沿いに建つ琴平グランドホテル桜の抄は、プライベートサウナを備えた客室が人気。2024年3月にオープンした「初音スタンダード サウナ&スパルーム」はロウリュサウナや温泉風呂を完備している。",
-      "org": "観光経済新聞",
-      "media": "新聞",
-      "date": "2026-09-20",
-      "thumbnail": "assets/thumbs/3e20b4e5ff5b81b9b78bf4d95f2bf45f.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
