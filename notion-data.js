@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-09 16:55",
+  "fetched": "2026-10-10 00:31",
   "news": [
+    {
+      "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
+      "title": "琴電、車内に飾る「つり革絵馬」を販売　半年後こんぴらさんに奉納",
+      "url": "https://www.nikkei.com/article/DGXZQOCC0684S0W6A001C2000000/",
+      "summary": "高松琴平電気鉄道が列車内に飾る「つり革絵馬」の販売を始めた。購入者が記入した願い事を琴平線のラッピング車両「しあわせさん。こんぴらさん。」号に6カ月間設置した後、金刀比羅宮に奉納する。1枠1万2000円、上限60枠で10月末まで応募受付。",
+      "org": "日本経済新聞",
+      "media": "新聞",
+      "date": "2026-10-09",
+      "thumbnail": "assets/thumbs/3f40b4e5ff5b81b382cef18cd2a321e8.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f40b4e5-ff5b-811b-b522-f35268fd57bc",
+      "title": "金刀比羅宮に続く参道に自分の名前刻む「石段オーナー権利」４０段分が早くも定員に【香川・琴平町】 - OHK 岡山放送",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9aeG1zekRUcmxWY3JCR2kwT0lraGg2QlRmMzZQVmJONWtMOXRXMmVtSE8zbVdUbEdiS1VGZmdieGFHcThjVHhqSFNtT29TYzlYd2k3UU5pVklnMzAxbkNITHMwbHQ?oc=5",
+      "summary": "琴平町が金刀比羅宮の参道の石段に自分の名前を5年間刻む「石段オーナー権利」の販売を10月7日に開始した。1回目の募集は40段限定で、わずか27時間で定員に達した。価格は5万円で、購入者にはデジタル証明書が発行される。",
+      "org": "OHK 岡山放送",
+      "media": "テレビ",
+      "date": "2026-10-09",
+      "thumbnail": "assets/thumbs/3f40b4e5ff5b811bb522f35268fd57bc.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f40b4e5-ff5b-812e-890d-ee6f66e6b74c",
       "title": "ことひら由加山交流行事参加者募集",
@@ -352,58 +378,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3e70b4e5-ff5b-81fa-bfd2-ebbe2deb3729",
-      "title": "琴平町に古民家カフェ「醸-kamosu-」が10月下旬オープン予定！ドーナツとドリンクのお店みたい",
-      "url": "https://www.marugame2.jp/stores/130910",
-      "summary": "琴平町にドーナツとドリンクが楽しめる新しい古民家カフェ「醸-kamosu-」が10月下旬オープン予定です。 地図だとこちら↓↓↓ 2026年9月17日(木)の様子 こんぴら表参道から少し入ったところで",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-26",
-      "thumbnail": "assets/thumbs/3e70b4e5ff5b81fabfd2ebbe2deb3729.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e60b4e5-ff5b-819e-aca0-d13461364ebb",
-      "title": "第２弾 街ガチャin琴平町 販売開始",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/11909.html",
-      "summary": "琴平町の街ガチャ第2弾がアクリルめじるしチャーム形式で販売される。善通寺第一高等学校デザイン科の生徒がデザインを担当し、西山食肉店、アタリヤ商店、幸せのおいりソフト、あめがけソフトクリーム、金陵のオブジェの5種類がラインナップに含まれる。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-25",
-      "thumbnail": "assets/thumbs/3e60b4e5ff5b819eaca0d13461364ebb.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e50b4e5-ff5b-8132-a700-ce21fa5d2b63",
-      "title": "秋山豊寛さんの宇宙飛行絵馬が金刀比羅宮に奉納",
-      "url": "https://www.nikkei.com/article/DGXZQOCC2333R0T20C26A9000000/",
-      "summary": "日本人初の宇宙飛行者・秋山豊寛さん（8月84歳で逝去）の絵馬が香川県琴平町の金刀比羅宮に奉納されている。白い宇宙服姿と旧ソ連宇宙船「ソユーズ」打ち上げシーンが描かれた絵馬は、「船の守り神」である同宮との縁を物語るものである。",
-      "org": "日本経済新聞",
-      "media": "新聞",
-      "date": "2026-09-25",
-      "thumbnail": "assets/thumbs/3e50b4e5ff5b8132a700ce21fa5d2b63.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e50b4e5-ff5b-8176-9b6e-d98dc06d0dc3",
-      "title": "広報ことひら10月号",
-      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/12034.html",
-      "summary": "琴平町の広報紙10月号（vol.590）。町の行政情報、イベント、お知らせなどを掲載したPDF形式の月刊広報誌。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-24",
-      "thumbnail": "assets/thumbs/3e50b4e5ff5b81769b6ed98dc06d0dc3.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -678,6 +652,21 @@ window.NOTION_DATA = {
       "organizer": "全国空き家アドバイザー協議会琴平支部・まんのう支部"
     },
     {
+      "id": "3f40b4e5-ff5b-80e3-af30-f76bfc7db50d",
+      "title": "ご飯ついでに、国際交流～みんなでカレーを囲みながら世界の人たちと気軽に交流",
+      "url": "https://www.instagram.com/p/DeQj2igEdrF/",
+      "start": "2026-10-30T18:30",
+      "end": "2026-10-30T21:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/3f40b4e5ff5b80e3af30f76bfc7db50d.webp",
+      "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
+      "fee": "500",
+      "organizer": "Kotori Coworking & Hostel Kotohira"
+    },
+    {
       "id": "3ea0b4e5-ff5b-80d1-954f-f65d907696d6",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -693,6 +682,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3f40b4e5-ff5b-81e8-a76c-f9841fc0a08b",
+      "title": "あゆな酢スタンド限定フードイベント",
+      "url": "https://www.instagram.com/p/DeRPJtctLuk/",
+      "start": "2026-10-26T17:00",
+      "end": "2026-10-26T22:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "呑象ブリューイング",
+      "address": "香川県仲多度郡琴平町182-2",
+      "image": "assets/thumbs/3f40b4e5ff5b81e8a76cf9841fc0a08b.webp",
+      "comment": "会場: 呑象ブリューイング 呑象ブリューイングにおいて、お酢を使ったフードメニューとクラフトビールを楽しむ1日限定イベント。秋の晩酌プレートやお酢のビアカクテルなど特別メニューが登場。予約制。",
+      "fee": "2000",
+      "organizer": "呑象ブリューイング / あゆな酢スタンド"
+    },
+    {
       "id": "3f10b4e5-ff5b-8110-8722-d15e9fa0d5ae",
       "title": "ハロウィンパーティー",
       "url": "https://www.instagram.com/p/DeExJGbREmz/",
@@ -706,6 +710,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町公会堂 大ホール 子育て応援ボランティアグループ415のわが主催するハロウィンパーティー。季節のおはなし会、トリックオアトリートスタンプラリー、フリータイム、ママカフェなどが行われる。仮装有無を問わず参加可能。",
       "fee": "0",
       "organizer": "子育て応援ボランティアグループ415のわ"
+    },
+    {
+      "id": "3f40b4e5-ff5b-8166-a406-e8fc93903987",
+      "title": "石井八幡宮（象郷・苗田）秋祭り",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-620.html",
+      "start": "2026-10-25",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "石井八幡宮",
+      "address": "〒766-0005 香川県仲多度郡琴平町苗田932-1",
+      "image": "assets/thumbs/3f40b4e5ff5b8166a406e8fc93903987.webp",
+      "comment": "会場: 石井八幡宮（象郷・苗田） 10月の最終土日の週末に、苗田（象郷地区）の石井八幡宮で獅子舞、神楽などが奉納される秋祭が開催される。本年は第四週の週末が対象。",
+      "fee": "",
+      "organizer": ""
     },
     {
       "id": "3d70b4e5-ff5b-80e1-861d-f79bddb0619b",
@@ -736,6 +755,21 @@ window.NOTION_DATA = {
       "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
       "fee": "2000",
       "organizer": "讃岐おでんプロジェクト"
+    },
+    {
+      "id": "3f40b4e5-ff5b-816d-882d-f84b213f7419",
+      "title": "第17回「ユルッと楽しく着付けレッスン」",
+      "url": "https://www.instagram.com/p/DeJzOLEADgo/",
+      "start": "2026-10-22T18:30",
+      "end": "2026-10-22T20:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "つるや旅館",
+      "address": "766-0001 香川県仲多度郡琴平町620",
+      "image": "assets/thumbs/3f40b4e5ff5b816d882df84b213f7419.webp",
+      "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学べます。ドリンクとおやつ付き。",
+      "fee": "1000",
+      "organizer": "つるや旅館、藤田屋"
     },
     {
       "id": "3ea0b4e5-ff5b-8097-a313-f7c75e664fda",
@@ -793,14 +827,14 @@ window.NOTION_DATA = {
       "place": "大歳神社",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
       "image": "assets/thumbs/3f40b4e5ff5b80128e2df7593297f163.webp",
-      "comment": "",
+      "comment": "毎年10月の第三週に上櫛梨（象郷地区）の大歳神社で開催される秋祭り。獅子舞や琴平の里神楽が奉納される。地区内外・旅行者の見学も自由。",
       "fee": "0",
       "organizer": ""
     },
     {
       "id": "3f40b4e5-ff5b-80fe-a8c9-e367422ff563",
       "title": "大歳神社秋祭り（秋季大祭）1日目",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-280.html",
       "start": "2026-10-17",
       "end": "2026-10-17",
       "status": "実施前",
@@ -808,7 +842,7 @@ window.NOTION_DATA = {
       "place": "大歳神社",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
       "image": "assets/thumbs/3f40b4e5ff5b80fea8c9e367422ff563.webp",
-      "comment": "",
+      "comment": "毎年10月の第三週に上櫛梨（象郷地区）の大歳神社で開催される秋祭り。獅子舞や琴平の里神楽が奉納される。地区内外・旅行者の見学も自由。",
       "fee": "0",
       "organizer": ""
     },
@@ -862,7 +896,7 @@ window.NOTION_DATA = {
       "title": "櫛梨神社 秋祭り（例大祭）2日目",
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-11",
-      "end": "2026-10-11",
+      "end": "",
       "status": "実施前",
       "city": "琴平町",
       "place": "櫛梨神社",
@@ -878,7 +912,7 @@ window.NOTION_DATA = {
       "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootmap.pdf",
       "start": "2026-10-10T21:00",
       "end": "2026-10-10T23:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -893,7 +927,7 @@ window.NOTION_DATA = {
       "url": "https://www.konpira.or.jp/QR/02/a.html",
       "start": "2026-10-10T10:00",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
@@ -907,8 +941,8 @@ window.NOTION_DATA = {
       "title": "大井八幡宮例大祭 1日目",
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-10",
-      "end": "2026-10-10",
-      "status": "実施前",
+      "end": "",
+      "status": "実施中",
       "city": "琴平町",
       "place": "大井八幡宮",
       "address": "〒766-0003 香川県仲多度郡琴平町五條302",
@@ -922,8 +956,8 @@ window.NOTION_DATA = {
       "title": "櫛梨神社 秋祭り（例大祭）1日目",
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-10",
-      "end": "2026-10-10",
-      "status": "実施前",
+      "end": "",
+      "status": "実施中",
       "city": "琴平町",
       "place": "櫛梨神社",
       "address": "〒766-0007 香川県仲多度郡琴平町下櫛梨280",
@@ -938,7 +972,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dd2qWiEMw1Q/",
       "start": "2026-10-10",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -953,7 +987,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdIohwNhWd6/",
       "start": "2026-10-09T18:00",
       "end": "2026-10-09T19:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -968,7 +1002,7 @@ window.NOTION_DATA = {
       "url": "https://www.konpira.or.jp/QR/02/a.html",
       "start": "2026-10-09T16:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
@@ -2101,36 +2135,6 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": ""
-    },
-    {
-      "id": "3950b4e5-ff5b-81a2-838c-ca505a5924ef",
-      "title": "こんぴら十帖ビアガーデン",
-      "url": "https://www.instagram.com/p/DacFTbnTFL7/",
-      "start": "2026-08-10T16:00",
-      "end": "2026-08-10T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/thumbs/3950b4e5ff5b81a2838cca505a5924ef.webp",
-      "comment": "琴平町の一之橋公園で開催される夏限定のビアガーデン。冷たいビールと美味しいグルメを楽しめるイベント。入場無料。",
-      "fee": "0",
-      "organizer": "こんぴら十帖"
-    },
-    {
-      "id": "3b00b4e5-ff5b-80b0-abd5-e2785fd0d2c4",
-      "title": "8/10 こんぴら十帖",
-      "url": "",
-      "start": "2026-08-10",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b80b0abd5e2785fd0d2c4.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -2335,6 +2339,7 @@ window.NOTION_DATA = {
         "facebook": "https://www.facebook.com/MataTabi.kagawa/"
       },
       "instagram": [
+        "https://www.instagram.com/p/DeLg5QgSDCl/",
         "https://www.instagram.com/p/DdVgzBpEjoA/",
         "https://www.instagram.com/p/Dc2zmD2DwnQ/",
         "https://www.instagram.com/p/DcN4T1cyOc5/",
