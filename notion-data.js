@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-09 10:21",
+  "fetched": "2026-10-09 16:55",
   "news": [
+    {
+      "id": "3f40b4e5-ff5b-812e-890d-ee6f66e6b74c",
+      "title": "ことひら由加山交流行事参加者募集",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-622.html",
+      "summary": "琴平町にゆかりのある町民・在勤・在学者を対象とした「ことひら由加山火渡り大祭交流行事」の参加者募集。こんぴらさんと由加山の両参り文化や歴史的な繋がりを再発見する交流の機会。先着30名、参加費3,000円。",
+      "org": "こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-09",
+      "thumbnail": "assets/thumbs/3f40b4e5ff5b812e890dee6f66e6b74c.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f40b4e5-ff5b-8197-8e45-c390d4a870ba",
       "title": "令和８年度金刀比羅宮例大祭関連行事情報",
@@ -391,32 +404,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3e40b4e5-ff5b-81dd-afee-d227d3cf2bbb",
-      "title": "ツーリズムEXPOジャパン 2026 琴平町ブース出展",
-      "url": "https://www.kotohirakankou.jp/news/entry-600.html",
-      "summary": "こんぴら観光まちづくり協会は、2026年9月24日～25日に東京ビッグサイトで開催される「ツーリズムEXPOジャパン」に参加。四国ブースで琴平町の新規観光体験やインバウンド対応などを紹介する。",
-      "org": "こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-09-23",
-      "thumbnail": "assets/thumbs/3e40b4e5ff5b81ddafeed227d3cf2bbb.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e40b4e5-ff5b-81b8-9bc6-c906788be0f0",
-      "title": "琴平町の「喫茶ハニー」跡地に「讃果園 SABORES」が2026年10月にオープン予定！手作りジェラートとカフェのお店ができるみたい",
-      "url": "https://www.marugame2.jp/stores/130905",
-      "summary": "琴平町の「喫茶ハニー」跡地に手作りジェラート＆カフェ「讃果園 SABORES」が2026年10月にオープン予定です。 「喫茶ハニー」閉店に関する記事はこちら↓↓↓ 2026年9月17日(木)の様子 2",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-23",
-      "thumbnail": "assets/thumbs/3e40b4e5ff5b81b89bc6c906788be0f0.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -661,6 +648,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "3f40b4e5-ff5b-811a-9ca4-cbffe969d3ff",
+      "title": "ことひら由加山交流行事参加者募集",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-622.html",
+      "start": "2026-11-03T09:00",
+      "end": "2026-11-03T17:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町役場",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817-10",
+      "image": "assets/thumbs/3f40b4e5ff5b811a9ca4cbffe969d3ff.webp",
+      "comment": "会場: 由加山（由加神社本宮・蓮台寺） 琴平町にゆかりのある町民・在勤・在学者を対象とした「ことひら由加山火渡り大祭交流行事」の参加者募集。こんぴらさんと由加山の両参り文化や歴史的な繋がりを再発見する交流の機会。先着30名、参加費3,000円。",
+      "fee": "3000",
+      "organizer": "こんぴら観光まちづくり協会"
+    },
+    {
       "id": "3e20b4e5-ff5b-8138-901d-d098e2cb7a38",
       "title": "防災・住教育フェス in 一之橋公園",
       "url": "https://www.instagram.com/p/DdivoGryVr0/",
@@ -781,6 +783,36 @@ window.NOTION_DATA = {
       "organizer": "琴平町福祉課・生涯学習課"
     },
     {
+      "id": "3f40b4e5-ff5b-8012-8e2d-f7593297f163",
+      "title": "大歳神社秋祭り（秋季大祭）2日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "start": "2026-10-18",
+      "end": "2026-10-18",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "大歳神社",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
+      "image": "assets/thumbs/3f40b4e5ff5b80128e2df7593297f163.webp",
+      "comment": "",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
+      "id": "3f40b4e5-ff5b-80fe-a8c9-e367422ff563",
+      "title": "大歳神社秋祭り（秋季大祭）1日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "大歳神社",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
+      "image": "assets/thumbs/3f40b4e5ff5b80fea8c9e367422ff563.webp",
+      "comment": "",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "3ea0b4e5-ff5b-80f1-a57c-e7b5fd22b0dd",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -811,6 +843,36 @@ window.NOTION_DATA = {
       "organizer": "金刀比羅宮"
     },
     {
+      "id": "3f40b4e5-ff5b-80af-a87e-fb23ed265b91",
+      "title": "大井八幡宮例大祭 2日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "大井八幡宮",
+      "address": "〒766-0003 香川県仲多度郡琴平町五條302",
+      "image": "assets/thumbs/3f40b4e5ff5b80afa87efb23ed265b91.webp",
+      "comment": "",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
+      "id": "3f40b4e5-ff5b-8046-b3a4-ce42a7388667",
+      "title": "櫛梨神社 秋祭り（例大祭）2日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "櫛梨神社",
+      "address": "〒766-0007 香川県仲多度郡琴平町下櫛梨280",
+      "image": "assets/thumbs/3f40b4e5ff5b8046b3a4ce42a7388667.webp",
+      "comment": "",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "3ef0b4e5-ff5b-810f-9dee-e9da968a825a",
       "title": "例大祭 御神輿 御本宮発御（お下がり：御本宮→御旅所）",
       "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootmap.pdf",
@@ -839,6 +901,36 @@ window.NOTION_DATA = {
       "comment": "2月の祈年祭・11月の新嘗祭と共に金刀比羅宮の三大祭の一つで、その中でも最も重要な祭典。大和舞を奏進。会場：御本宮",
       "fee": "0",
       "organizer": "金刀比羅宮"
+    },
+    {
+      "id": "3f40b4e5-ff5b-8040-ae92-f737d2aa1efe",
+      "title": "大井八幡宮例大祭 1日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "大井八幡宮",
+      "address": "〒766-0003 香川県仲多度郡琴平町五條302",
+      "image": "assets/thumbs/3f40b4e5ff5b8040ae92f737d2aa1efe.webp",
+      "comment": "",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
+      "id": "3f40b4e5-ff5b-80b5-8b24-fe89257fcc0c",
+      "title": "櫛梨神社 秋祭り（例大祭）1日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "櫛梨神社",
+      "address": "〒766-0007 香川県仲多度郡琴平町下櫛梨280",
+      "image": "assets/thumbs/3f40b4e5ff5b80b58b24fe89257fcc0c.webp",
+      "comment": "",
+      "fee": "0",
+      "organizer": ""
     },
     {
       "id": "3ea0b4e5-ff5b-8198-9bba-f26abb6d88f5",
