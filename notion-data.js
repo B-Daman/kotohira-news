@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-09 00:49",
+  "fetched": "2026-10-09 10:21",
   "news": [
+    {
+      "id": "3f40b4e5-ff5b-8197-8e45-c390d4a870ba",
+      "title": "令和８年度金刀比羅宮例大祭関連行事情報",
+      "url": "https://www.kotohirakankou.jp/news/entry-621.html",
+      "summary": "令和８年度の金刀比羅宮例大祭に関連する行事情報が観光協会ホームページに掲載された。御神輿渡御が行われる10月10日19時以降は町内各地で交通規制が実施される。",
+      "org": "こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-09",
+      "thumbnail": "assets/thumbs/3f40b4e5ff5b81978e45c390d4a870ba.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f40b4e5-ff5b-8164-90b0-d55297d7e2dc",
+      "title": "高付加価値NFT販売事業「石段オーナー権利」第一弾完売のお知らせ",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/2/12076.html",
+      "summary": "琴平町が実施していた高付加価値NFT販売事業「石段オーナー権利」の第一弾が、10月7日の申込受付開始から予定枠40枠に達し、本日受付を終了した。第二弾の実施に向けて検討が進められている。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-08",
+      "thumbnail": "assets/thumbs/3f40b4e5ff5b816490b0d55297d7e2dc.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f30b4e5-ff5b-810e-b3a1-f68e5b89dfdb",
       "title": "高松琴平電気鉄道、新型車「2000形」導入",
