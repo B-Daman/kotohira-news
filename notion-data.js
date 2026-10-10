@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-10 10:09",
+  "fetched": "2026-10-10 16:40",
   "news": [
     {
       "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
@@ -349,19 +349,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-09-30",
       "thumbnail": "assets/thumbs/3eb0b4e5ff5b8169876cff03b595f287.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3eb0b4e5-ff5b-8153-97c5-fac00df30859",
-      "title": "令和8年 金刀比羅宮例大祭",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/12045.html",
-      "summary": "令和8年10月9日(金曜日)から11日(日曜日)まで、金刀比羅宮例大祭が開催されます。例大祭期間中は、奉納行事や奉納演奏、こんぴら舩々おどりなど、さまざまな行事が行われます。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-30",
-      "thumbnail": "assets/thumbs/3eb0b4e5ff5b815397c5fac00df30859.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
