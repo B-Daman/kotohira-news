@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-10 00:31",
+  "fetched": "2026-10-10 10:09",
   "news": [
     {
       "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
@@ -362,19 +362,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-09-30",
       "thumbnail": "assets/thumbs/3eb0b4e5ff5b815397c5fac00df30859.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e90b4e5-ff5b-8174-a34f-cec35c656de7",
-      "title": "香川・琴平町の複合施設「KOTOVEGAS」でハロウィーン限定メニューを提供 - KSBニュース",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9jcXUxYkRXeFRNVkExa0JLTk91YlJPN1FXaG1pYVJaWmJLX1hidTFkV0J2Q0RQbUpsV0tJU3ZFNVVQUzZ3ZFVyd0F3Rm01Y2NB?oc=5",
-      "summary": "香川県琴平町の複合施設「KOTOVEGAS」内の飲食店3店舗で、10月1日から「ハロウィーン」をテーマにした限定メニューが提供されます。 クラフトビールを醸造する「DONZO Brewing」は「魔女の焼き林檎ビア(850円)」販売",
-      "org": "KSBニュース",
-      "media": "テレビ",
-      "date": "2026-09-28",
-      "thumbnail": "assets/thumbs/3e90b4e5ff5b8174a34fcec35c656de7.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
