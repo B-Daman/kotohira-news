@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-11 04:28",
+  "fetched": "2026-10-11 09:23",
   "news": [
     {
       "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
@@ -323,32 +323,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-30",
       "thumbnail": "assets/thumbs/3eb0b4e5ff5b81d38820c808ead5bb15.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3eb0b4e5-ff5b-81f5-9b4b-c4822b6a678d",
-      "title": "令和8年金刀比羅宮例大祭に伴う交通規制のお知らせ",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/9145.html",
-      "summary": "金刀比羅宮例大祭の開催に伴い、琴平町内の一部道路で交通規制が実施される。期間中、周辺道路の通行や駐車場の利用に影響があるため注意が必要。詳細な規制箇所・時間は交通規制図で確認できる。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-30",
-      "thumbnail": "assets/thumbs/3eb0b4e5ff5b81f59b4bc4822b6a678d.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3eb0b4e5-ff5b-8169-876c-ff03b595f287",
-      "title": "令和8年度高齢者インフルエンザ・新型コロナウイルス予防接種",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/15/9091.html",
-      "summary": "琴平町が令和8年10月1日から3月31日まで、65歳以上の高齢者および60～64歳の重度内部障害者を対象に、インフルエンザ予防接種（自己負担1,000円）と新型コロナウイルス予防接種（自己負担4,600円）の費用助成を実施します。香川県内の実施医療機関で接種可能で、非課税世帯・生活保護世帯は自己負担金が免除されます。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-30",
-      "thumbnail": "assets/thumbs/3eb0b4e5ff5b8169876cff03b595f287.png",
       "duplicate": false,
       "pickup": false,
       "show": true
