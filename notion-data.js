@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-11 15:17",
+  "fetched": "2026-10-12 03:23",
   "news": [
     {
       "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
@@ -297,19 +297,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-10-01",
       "thumbnail": "assets/thumbs/3ec0b4e5ff5b818c81d8f2a13324af7e.png",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ec0b4e5-ff5b-819a-9806-dd7323b518bc",
-      "title": "琴平町のこども園2施設が保育ICTサービス「CoDMON」を導入",
-      "url": "https://prtimes.jp/main/html/rd/p/000000073.000040113.html",
-      "summary": "香川県琴平町のこども園2施設が2026年10月1日より保育ICTサービス「CoDMON」を導入する。連絡帳の手書き業務の軽減や保護者の利便性向上を目指すもので、香川県内では計7自治体での普及が進んでいる。",
-      "org": "PR TIMES（株式会社コドモンプレスリリース）",
-      "media": "Webメディア",
-      "date": "2026-10-01",
-      "thumbnail": "assets/thumbs/3ec0b4e5ff5b819a9806dd7323b518bc.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -802,7 +789,7 @@ window.NOTION_DATA = {
       "url": "https://www.konpira.or.jp/QR/02/a.html",
       "start": "2026-10-11T21:00",
       "end": "2026-10-11T23:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -817,7 +804,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-11",
       "end": "2026-10-11",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "大井八幡宮",
       "address": "〒766-0003 香川県仲多度郡琴平町五條302",
@@ -832,7 +819,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-11",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "櫛梨神社",
       "address": "〒766-0007 香川県仲多度郡琴平町下櫛梨280",
@@ -2040,21 +2027,6 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "地域おこし協力隊 あっきー"
-    },
-    {
-      "id": "3b00b4e5-ff5b-8072-adc5-dc2f489041f6",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
-      "start": "2026-08-12T12:00",
-      "end": "2026-08-12T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b8072adc5dc2f489041f6.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
