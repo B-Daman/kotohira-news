@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-11 09:23",
+  "fetched": "2026-10-11 15:17",
   "news": [
     {
       "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
@@ -310,19 +310,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-10-01",
       "thumbnail": "assets/thumbs/3ec0b4e5ff5b819a9806dd7323b518bc.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3eb0b4e5-ff5b-81d3-8820-c808ead5bb15",
-      "title": "ことでん車内「吊り革絵馬」販売。金刀比羅宮に奉納",
-      "url": "https://prtimes.jp/main/html/rd/p/000000355.000091165.html",
-      "summary": "ことでん車内に願いを記した絵馬を6ヶ月間飾れる体験商品「吊り革絵馬」を、NFTプラットフォーム「TOKKEN」で9月30日から販売開始。掲示終了後は金刀比羅宮に納める。限定60枠、価格は12,000円。",
-      "org": "あるやうむ プレスリリース",
-      "media": "Webメディア",
-      "date": "2026-09-30",
-      "thumbnail": "assets/thumbs/3eb0b4e5ff5b81d38820c808ead5bb15.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
