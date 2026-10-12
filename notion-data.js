@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-12 16:54",
+  "fetched": "2026-10-13 03:09",
   "news": [
     {
       "id": "3f70b4e5-ff5b-81f7-bc87-d091402d2e1b",
@@ -774,7 +774,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-10-13T20:00",
       "end": "2026-10-13T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -939,7 +939,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/12045.html",
       "start": "2026-10-09T16:00",
       "end": "2026-10-12T00:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
@@ -2012,21 +2012,6 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-808f-a2e8-f409c5aba35f",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-08-13T18:00",
-      "end": "2026-08-13T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b808fa2e8f409c5aba35f.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
     }
   ],
   "campaigns": [
