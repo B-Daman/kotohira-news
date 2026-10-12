@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-12 03:23",
+  "fetched": "2026-10-12 16:54",
   "news": [
+    {
+      "id": "3f70b4e5-ff5b-81f7-bc87-d091402d2e1b",
+      "title": "ジーーーンと四国！しこくーるフォトコンテスト 秋期募集",
+      "url": "https://news.ksb.co.jp/article/16958376",
+      "summary": "四国ツーリズム創造機構が四国の秋らしい風景やスポットの写真を募集するフォトコンテストを開催。12月10日まで作品を募集し、グランプリには「JTBトラベルギフト10万円」が贈られる。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-10-12",
+      "thumbnail": "assets/thumbs/3f70b4e5ff5b81f7bc87d091402d2e1b.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
       "title": "琴電、車内に飾る「つり革絵馬」を販売　半年後こんぴらさんに奉納",
@@ -284,19 +297,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-10-02",
       "thumbnail": "assets/thumbs/3ed0b4e5ff5b81dca70bf7c45cec9545.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ec0b4e5-ff5b-818c-81d8-f2a13324af7e",
-      "title": "子どもインフルエンザ予防接種費用の助成",
-      "url": "https://www.town.kotohira.kagawa.jp/site/child/1468.html",
-      "summary": "琴平町に住所がある生後6か月から18歳までの子どもを対象に、インフルエンザ予防接種費用の助成を実施します。町内医療機関での接種は無料、町外での接種は2,000円の償還払いです。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-10-01",
-      "thumbnail": "assets/thumbs/3ec0b4e5ff5b818c81d8f2a13324af7e.png",
       "duplicate": false,
       "pickup": false,
       "show": true
