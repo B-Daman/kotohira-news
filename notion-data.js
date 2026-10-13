@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-13 03:09",
+  "fetched": "2026-10-14 03:27",
   "news": [
     {
       "id": "3f70b4e5-ff5b-81f7-bc87-d091402d2e1b",
@@ -774,7 +774,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-10-13T20:00",
       "end": "2026-10-13T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -2015,6 +2015,21 @@ window.NOTION_DATA = {
     }
   ],
   "campaigns": [
+    {
+      "id": "3f80b4e5-ff5b-8161-a731-ef05c8d226d5",
+      "title": "琴平町電子地域通貨コトカ 5%ポイントアップキャンペーン",
+      "url": "https://www.instagram.com/p/Dea9f4UEST0/",
+      "start": "2026-10-01",
+      "end": "2026-10-31",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3f80b4e5ff5b8161a731ef05c8d226d5.webp",
+      "comment": "会場: 琴平町内 琴平町電子通貨コトカのチャージで5%ポイントが貯まるキャンペーン。10月1日～31日の期間中にチャージするとポイント付与上限2,500コトカ（チャージ金額5万円まで）のポイントが11月15日頃に付与される。",
+      "fee": "",
+      "organizer": "琴平町役場"
+    },
     {
       "id": "3e00b4e5-ff5b-8171-92c1-ca088f58327a",
       "title": "金刀比羅宮×JR四国コラボ企画「御朱印帳」プレゼント",
