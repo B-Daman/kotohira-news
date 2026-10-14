@@ -20,7 +20,7 @@
    placements は "sidebar"（PCサイドバー）または
    "mobile-inline"（スマートフォン本文内）を配列で指定する。 */
 window.SITE_WIDGETS_DATA = {
-  updated: "2026-09-10",
+  updated: "2026-10-15",
 
   /* 気象庁の香川県短期予報をブラウザで自動取得する。
      dataUrl は気象庁サイト内部で利用される公開JSONのため、画面側では構造検証・
@@ -108,16 +108,18 @@ window.SITE_WIDGETS_DATA = {
     },
     {
       id: "taiwan-fes-2026",
-      enabled: false,  /* 2026-09-04 台風接近のため延期→掲載停止。振替日程の確定後に更新して再有効化 */
+      /* 2026-09-04 台風接近のため9/5開催を延期→掲載停止。2026-10-15 振替日程（10/24）で再有効化。
+         画像・URLはNotionイベントDBの振替版（新チラシ・新Instagram投稿）に差し替え済み */
+      enabled: true,
       title: "第4回 台湾フェス・台湾夜市 in 琴平",
-      dateLabel: "2026年9月5日(土) 15:00〜20:00",
+      dateLabel: "2026年10月24日(土) 15:00〜20:00",
       place: "金陵の郷（琴平町）",
       note: "入場無料",
-      image: "assets/thumbs/3ab0b4e5ff5b815aac45cbf997fdd175.webp",
-      imageAlt: "第4回 台湾フェス・台湾夜市 in 琴平 の告知画像",
-      url: "https://www.instagram.com/p/DbSN6Pfgej_/",
+      image: "assets/thumbs/3d70b4e5ff5b80e1861df79bddb0619b.webp",
+      imageAlt: "第4回 台湾フェス・台湾夜市 in 琴平（2026年10月24日・金陵の郷）の告知画像",
+      url: "https://www.instagram.com/p/DdDKu6ahjmA/",
       startDate: "",
-      endDate: "2026-09-05",
+      endDate: "2026-10-24",
       order: 1
     }
   ],
