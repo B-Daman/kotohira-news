@@ -309,16 +309,16 @@
       <div class="eyebrow">KOTOHIRA-NEWS ・ DEV DASHBOARD / DESIGN DOCS</div>
       <h1>暮らす人にも、訪れる人にも。琴平町を1か所に。</h1>
       <p>町民向けのニュース・イベント・キャンペーンと、来訪者向けの体験・うどん・駐車場・地域情報を、同じ入口から探せる静的地域ポータル「ことひらいふ」。本書はその開発文書を <b>要件定義 → 基本設計 → 詳細設計 → 実装・運用 → 検討中の案</b> の階層で1か所に集めたポータル。各文書タブに原本の全文と、2026年8月以降の変更を追補として併置している。</p>
-      <div class="meta"><span>独自ドメイン kotohilife.com で公開中（2026-08-26〜）</span><span>Notion日次自動更新・ダム1日2回自動更新 稼働</span><span>運用フェーズ（Phase 2.8 完了・Phase 1 継続）</span><span>最終更新 2026-09-05</span></div>
+      <div class="meta"><span>独自ドメイン kotohilife.com で公開中（2026-08-26〜）</span><span>Notion毎時自動更新（10-05〜）・ダム1日2回自動更新 稼働</span><span>運用フェーズ（Phase 2.8 完了・Phase 1 継続）</span><span>最終更新 2026-09-05</span></div>
     </div>
 
-    <div class="section-title">1. いまの現在地<span class="sub">2026-09-05時点。数値は notion-data.js 実測</span></div>
+    <div class="section-title">1. いまの現在地<span class="sub">2026-10-15時点（09-05版を部分更新）。数値は notion-data.js 実測</span></div>
     <div class="kpis">
       <div class="kpi"><div class="n">F1〜38</div><div class="l">機能要件（29項目：実装済み23／保留6）</div></div>
       <div class="kpi"><div class="n">5</div><div class="l">ナビ分類：ホーム／町の今／くらし／訪れる・関わる／町を知る</div></div>
       <div class="kpi"><div class="n">6</div><div class="l">Notion連携DB：ニュース／イベント／キャンペーン／お店／団体(+投稿)／会場</div></div>
       <div class="kpi"><div class="n">23／93</div><div class="l">ニュース／イベント 掲載数（notion-data.js実測）</div></div>
-      <div class="kpi"><div class="n">2系統</div><div class="l">自動更新：Notion夜間0:00 JST／早明浦ダム1日2回</div></div>
+      <div class="kpi"><div class="n">2系統</div><div class="l">自動更新：Notion毎時（JST 6:30〜翌0:30）／早明浦ダム1日2回</div></div>
       <div class="kpi"><div class="n">Phase 2.8</div><div class="l">完了（09-03〜05）。Phase 1 継続・Phase 3 一部達成</div></div>
     </div>
     <div class="focus">
@@ -340,10 +340,10 @@
         <div class="s"><div class="l">早明浦ダム</div><div class="v">貯水率ウィジェット稼働 09-05（1日2回自動更新・サイドバー＋モバイルヘッダーチップ）。関連リンク2本（📷 ライブカメラ・🌧 雨量マップ）追加 09-10</div></div>
         <div class="s pending"><div class="l">うどん店</div><div class="v">掲載許可待ちのため一時非表示（UDON_PUBLISHED=false）。許可が揃い次第復活</div></div>
         <div class="s"><div class="l">サイト情報</div><div class="v">運営者情報／お問い合わせ／プライバシーをindex.htmlのSPAへ統合 09-05（旧3ファイルはリダイレクト殻）</div></div>
-        <div class="s"><div class="l">データ／設定</div><div class="v">Notion駆動5DB＋会場DB・手編集6ファイル・自動2系統（Notion夜間／ダム1日2回）・凍結レガシー2ファイル</div></div>
-        <div class="s"><div class="l">掲載スナップショット</div><div class="v">ニュース23／イベント93／団体3（notion-data.js実測・日次自動更新）</div></div>
+        <div class="s"><div class="l">データ／設定</div><div class="v">Notion駆動5DB＋会場DB・手編集6ファイル・自動2系統（Notion毎時／ダム1日2回）・凍結レガシー2ファイル</div></div>
+        <div class="s"><div class="l">掲載スナップショット</div><div class="v">ニュース25／イベント114／団体3／お店1（notion-data.js実測 10-15・毎時自動更新）</div></div>
         <div class="s"><div class="l">来訪者向け情報</div><div class="v">体験12／駐車場20（うどんは準備中で非表示）</div></div>
-        <div class="s pending"><div class="l">共通ウィジェット</div><div class="v">天気・ダム・LINE2枠が稼働中／大型イベント枠は実装済みだが現在掲載0件（台風接近で台湾夜市を非掲載）／広告設定待ち</div></div>
+        <div class="s pending"><div class="l">共通ウィジェット</div><div class="v">天気・大型イベント・ダム・LINE2枠が稼働中（大型イベント枠は10-15に台湾夜市 振替10/24で再掲載し、ダムより上へ）／広告設定待ち</div></div>
         <div class="s"><div class="l">画像</div><div class="v">WebP圧縮（参照合計 約12MB）</div></div>
         <div class="s"><div class="l">公開（Pages）</div><div class="v">独自ドメイン公開 2026-08-26<br><a href="https://kotohilife.com/" style="font-size:11px;">サイトを開く</a><br><span style="font-size:10px;">Cloudflare Pages（旧: GitHub Pages 2026-07-19〜）</span></div></div>
       </div>
@@ -393,7 +393,7 @@
           <tr><th>ID</th><th>要件</th><th>状態</th></tr>
           <tr><td>F1–F7</td><td>団体を登録し、媒体別（note/Ameblo等）の更新とInstagram/X埋め込みをセクション型で表示</td><td><span class="state done">Notion移行済み 09-05</span></td></tr>
           <tr><td>F9</td><td>公開（GitHub Pages → 独自ドメイン kotohilife.com ＋ Cloudflare Pages）</td><td><span class="state done">独自ドメイン公開 08-26</span></td></tr>
-          <tr><td>F10</td><td>生成データの定期自動更新</td><td><span class="state pending">notion-data.js（ニュース/イベント/キャンペーン/お店/団体）＝毎日0:00自動／dam-data.js＝1日2回自動／data.js（凍結レガシー）＝更新停止</span></td></tr>
+          <tr><td>F10</td><td>生成データの定期自動更新</td><td><span class="state pending">notion-data.js（ニュース/イベント/キャンペーン/お店/団体）＝毎時自動（10-05〜）／dam-data.js＝1日2回自動／data.js（凍結レガシー）＝更新停止</span></td></tr>
           <tr><td>F11</td><td>Notion情報を読み取り専用で取得し、サムネをローカル保存</td><td><span class="state done">実装済み</span></td></tr>
           <tr><td>F12</td><td>ニュースを「最新1件→直近2か月一覧→ギャラリー」で表示</td><td><span class="state done">実装済み</span></td></tr>
           <tr><td>F13</td><td>イベントはPC・スマホ共通の月/週カレンダー（スマホは週表示が初期・当日列起点の横スクロール）。キャンペーンは月グリッド。同日イベントは開始時刻の昇順で表示</td><td><span class="state done">実装済み 08-28／ソート修正 09-05</span></td></tr>
@@ -411,14 +411,14 @@
           <tr><td>F26</td><td>各ページ先頭は短いタイトルカードとし、大きなヒーロー・長い導入文を置かない（スマホのホームはタイトルカード自体を非表示）</td><td><span class="state done">実装済み</span></td></tr>
           <tr><td>F28</td><td>フッター・ドロワーからプライバシー／運営者情報／お問い合わせへ案内</td><td><span class="state done">SPA統合 09-05（旧3ファイルはリダイレクト殻）</span></td></tr>
           <tr><td>F29</td><td>かき氷・アイス店マップ（「冷たいもの」）</td><td><span class="state pending">アーカイブ 08-28（実装済みだがメニューから除外。#sweets直リンクのみ）</span></td></tr>
-          <tr><td>F30</td><td>サイドバーの大型イベント告知枠（期間内だけ表示・終了翌日に自動非表示）</td><td><span class="state pending">非掲載（台風接近による延期のため09-04に無効化。振替日程確定後に再有効化）</span></td></tr>
+          <tr><td>F30</td><td>サイドバーの大型イベント告知枠（期間内だけ表示・終了翌日に自動非表示）</td><td><span class="state done">掲載中（09-04 台風延期で無効化 → 10-05 金刀比羅宮例大祭で使用 → 10-15 台湾夜市 振替10/24で再有効化。終了翌日に自動非表示）</span></td></tr>
           <tr><td>F31</td><td>サムネイルをWebPへ縮小圧縮して配信（取得時圧縮＋既存一括変換）</td><td><span class="state done">実装済み 08-25</span></td></tr>
           <tr><td>F32</td><td>スマホは1行ヘッダー（ロゴ｜天気チップ｜ダムチップ｜☰）＋トグル式ドロワー（site-nav.jsから生成）</td><td><span class="state done">実装済み 08-28・ダムチップ追加 09-05</span></td></tr>
           <tr><td>F33</td><td>ホームのニュース／イベント／キャンペーンをスマホでは左右矢印付き横スクロールカルーセルに</td><td><span class="state done">実装済み 08-28</span></td></tr>
           <tr><td>F34</td><td>お問い合わせ独立ページ＋専用Googleフォーム（掲載依頼・訂正・広告相談・感想の受付）</td><td><span class="state done">公開 08-27・09-05にSPAビュー化</span></td></tr>
           <tr><td>F35</td><td>アクセス解析（Cloudflare Web Analytics・Cookie不使用）</td><td><span class="state done">稼働中（Pages自動セットアップ）</span></td></tr>
           <tr><td>F36</td><td>くらしタブ：🗓こんぴらカレンダー（広報誌面の月間予定表）</td><td><span class="state done">公開 09-03・scripts/fetch_towncal.pyで月次更新</span></td></tr>
-          <tr><td>F37</td><td>くらしタブ：🏪お店の営業カレンダー（Notionお店DB・リスト＋モーダル・ジャンル絞り込み）</td><td><span class="state pending">実装済み 09-05・掲載許可0/8（許可→表示対象✓で夜間自動掲載）</span></td></tr>
+          <tr><td>F37</td><td>くらしタブ：🏪お店の営業カレンダー（Notionお店DB・画像グリッド＋ページ内拡大ビュー・ジャンル絞り込み）</td><td><span class="state pending">実装済み 09-05・10-14 UI刷新・掲載1店（コトリ）／画像あり14店（許可→表示対象✓で毎時自動掲載）</span></td></tr>
           <tr><td>F38</td><td>団体詳細を媒体別セクション型（更新→note等→Instagram→X）へリニューアル。埋め込みは画面接近時に遅延起動</td><td><span class="state done">実装済み 09-05</span></td></tr>
         </table></div>
         <div class="legend">F8・F15・F27 は本一覧に未掲載（採番は本文側）。<span class="state done">done</span>＝実装済み／<span class="state pending">pending</span>＝保留・条件待ち</div>
@@ -506,9 +506,9 @@
 
     <div class="section-title">1. アーキテクチャ<span class="sub">生成元 → スクリプト → 生成物JS → index.html。色＝更新責任（teal=自動／amber=人が手動実行／灰=凍結）</span></div>
     <div class="stagewrap">
-      <span class="lbl">① Notion（毎日0:00 JST・GitHub Actions）</span>
+      <span class="lbl">① Notion（毎時・GitHub Actions）</span>
       <span class="stage auto">Notion 5DB＋会場DB</span><span class="stagearrow">→</span>
-      <span class="stage auto">fetch_notion.py（日次0:00自動）</span><span class="stagearrow">→</span>
+      <span class="stage auto">fetch_notion.py（毎時自動）</span><span class="stagearrow">→</span>
       <span class="stage">notion-data.js</span><span class="stagearrow">→</span>
       <span class="stage">index.html</span><span class="stagearrow">→</span>
       <span class="stage auto">kotohilife.com（Cloudflare Pages・push自動デプロイ）</span>
@@ -576,7 +576,7 @@
 ├── scripts\compress_thumbs.py              <span class="cmt"># 既存画像の一括変換（08-25実行済み）</span>
 ├── scripts\verify_ui_styles.py             <span class="cmt"># UI変更後の算出スタイル実測（08-28新設・必須手順）</span>
 ├── scripts\build_dashboard.py              <span class="cmt"># 本書のビルド（base.html＋原本md注入）09-05新設</span>
-├── .github\workflows\                      <span class="cmt"># update-notion-data.yml（毎日0:00 JST）／update-dam-data.yml（7:00・19:00 JST）</span>
+├── .github\workflows\                      <span class="cmt"># update-notion-data.yml（毎時30分 JST 6:30〜翌0:30）／update-dam-data.yml（7:00・19:00 JST）</span>
 ├── assets\
 │   ├── thumbs\                             <span class="cmt"># Notionサムネ・note記事サムネ（WebP）</span>
 │   ├── manual\                             <span class="cmt"># 手動差し替え画像（image-overrides.json対応）</span>
@@ -592,12 +592,12 @@
       <div class="table-wrap"><table>
         <thead><tr><th>データ</th><th>生成元</th><th>更新周期</th><th>格納先・役割</th></tr></thead>
         <tbody>
-          <tr><td>ニュースDB</td><td>fetch_notion.py</td><td>日次自動（0:00 JST）</td><td><code>notion-data.js</code> の <code>news</code>（23件。表示対象✓のみ・公開日降順・上限60）</td></tr>
-          <tr><td>イベントDB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>events</code>（93件。終了は開始日60日前まで温存・同日は開始時刻昇順＝byStartAsc・上限200）</td></tr>
-          <tr><td>キャンペーンDB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>campaigns</code>（eventsと同じ変換）</td></tr>
-          <tr><td>お店DB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>shops</code>（表示対象✓かつ画像ありのみ・店名昇順。現在掲載許可0/8）</td></tr>
-          <tr><td>団体DB＋投稿DB</td><td>fetch_notion.py</td><td>日次自動</td><td><code>orgs</code>（3件。団体1件×投稿N件のリレーション＝下記参照）</td></tr>
-          <tr><td>会場DB</td><td>fetch_notion.py</td><td>日次自動</td><td>イベントの開催場所（relation）名の解決にのみ使用（ページIDでキャッシュ）</td></tr>
+          <tr><td>ニュースDB</td><td>fetch_notion.py</td><td>毎時自動（JST 6:30〜翌0:30 の毎時30分・10-05〜）</td><td><code>notion-data.js</code> の <code>news</code>（25件。表示対象✓のみ・公開日降順・上限60）</td></tr>
+          <tr><td>イベントDB</td><td>fetch_notion.py</td><td>毎時自動</td><td><code>events</code>（114件。終了は開始日60日前まで温存・同日は開始時刻昇順＝byStartAsc・上限200）</td></tr>
+          <tr><td>キャンペーンDB</td><td>fetch_notion.py</td><td>毎時自動</td><td><code>campaigns</code>（eventsと同じ変換）</td></tr>
+          <tr><td>お店DB</td><td>fetch_notion.py</td><td>毎時自動</td><td><code>shops</code>（表示対象✓かつ画像ありのみ・店名昇順。現在掲載1店＝コトリ／画像あり14店）</td></tr>
+          <tr><td>団体DB＋投稿DB</td><td>fetch_notion.py</td><td>毎時自動</td><td><code>orgs</code>（3件。団体1件×投稿N件のリレーション＝下記参照）</td></tr>
+          <tr><td>会場DB</td><td>fetch_notion.py</td><td>毎時自動</td><td>イベントの開催場所（relation）名の解決にのみ使用（ページIDでキャッシュ）</td></tr>
           <tr><td>体験・滞在DB</td><td>fetch_notion.py</td><td>（DB ID設定時のみ）</td><td><code>experiences</code>。未設定時は <code>experiences-data.js</code> を表示側が使う</td></tr>
           <tr><td>早明浦ダム（国交省）</td><td>fetch_dam.py</td><td>自動・1日2回</td><td><code>dam-data.js</code>。観測時刻を必ず明示（リアルタイム値ではない）</td></tr>
           <tr><td>こんぴらカレンダー（広報誌面）</td><td>fetch_towncal.py</td><td>手動・月次</td><td><code>towncal-data.js</code>。広報の号が変わるたびに実行</td></tr>
@@ -611,7 +611,7 @@
         <div class="rel-box"><b>投稿DB「関連団体の投稿」</b>団体（relation）・投稿URL・投稿日<small>投稿URLのドメインからInstagram／Xを自動判定。noteのテキスト更新は団体DB側のnoteプロフィールURLから別途RSSを自動導出（投稿DBとは独立経路）</small></div>
       </div>
       <h4>生成物・手編集ファイルのスキーマ</h4>
-      <pre><code><span class="cmt">// notion-data.js（Notion駆動。fetch_notion.pyが毎日0:00に自動更新）</span>
+      <pre><code><span class="cmt">// notion-data.js（Notion駆動。fetch_notion.pyが毎時自動更新。内容が同じ回は書き換えない）</span>
 window.NOTION_DATA = {
   "fetched": "YYYY-MM-DD HH:MM",
   "news":      [ {id,title,url,summary,org,media,date,thumbnail,
@@ -656,7 +656,7 @@ window.DASHBOARD_DATA = { "orgs": [ /* 旧スキーマ。新規追加・更新�
   └─ キャンペーン  <span class="cmt"># 月間グリッド＋カード（週表示なし・別実装）</span>
 <span class="ok">くらし</span>       <span class="cmt"># 09-05新設。町民向け「訪れる・関わる」より先に配置</span>
   ├─ こんぴらカレンダー   <span class="cmt"># 広報誌面の月間予定表（fetch_towncal.pyで月次更新）09-03〜</span>
-  └─ お店の営業カレンダー <span class="cmt"># Notionお店DB・リスト＋モーダル・ジャンル絞り込み 09-05〜</span>
+  └─ お店の営業カレンダー <span class="cmt"># Notionお店DB・画像グリッド＋ページ内拡大ビュー（10-14刷新）・ジャンル絞り込み 09-05〜</span>
 <span class="ok">訪れる・関わる</span>
   ├─ 体験・滞在    <span class="cmt"># 体験・特別な権利／お手伝い／移住</span>
   ├─ うどん店      <span class="cmt"># 準備中（UDON_PUBLISHED=false。掲載許可が揃い次第復活。データ17件は温存）</span>
@@ -672,8 +672,8 @@ window.DASHBOARD_DATA = { "orgs": [ /* 旧スキーマ。新規追加・更新�
     <div class="section-title">5. レイアウトと共通ウィジェット</div>
     <div class="card">
       <div class="two-col">
-        <div><p><b>PC（1100px以上）</b></p><ul class="b"><li>本文＋右300pxサイドバー</li><li>天気 → 早明浦ダム → 大型イベント → LINE（2枠） → 広告（目的別クイックナビは09-05に削除）</li><li>イベントは月間グリッド（初期=月）</li></ul></div>
-        <div><p><b>スマホ（720px以下・08-28刷新／ダムチップは09-05追加）</b></p><ul class="b"><li>1行ヘッダー：ロゴ｜天気チップ｜ダムチップ（各タップで詳細展開・排他）｜☰</li><li>☰＝トグル式サイトマップドロワー（18px・行高52px・現在地強調）</li><li>ホーム3セクションは左右矢印付きカルーセル（ニュース6件）</li><li>イベントは週カレンダー初期表示・当日列起点</li><li>大型イベント・LINE・広告はホームのみ表示。LINEはQRも表示</li><li>サイドバー（天気・ダム）は非表示（ヘッダー・ドロワーが代替）</li></ul></div>
+        <div><p><b>PC（1100px以上）</b></p><ul class="b"><li>本文＋右300pxサイドバー</li><li>天気 → 大型イベント → 早明浦ダム → LINE（2枠） → 広告（10-15 大型イベントをダムより上へ。目的別クイックナビは09-05に削除）</li><li>イベントは月間グリッド（初期=月）</li></ul></div>
+        <div><p><b>スマホ（720px以下・08-28刷新／ダムチップは09-05追加）</b></p><ul class="b"><li>1行ヘッダー：ロゴ｜天気チップ｜ダムチップ（各タップで詳細展開・排他）｜☰</li><li>☰＝トグル式サイトマップドロワー（18px・行高52px・現在地強調）</li><li>ホーム3セクションは左右矢印付きカルーセル（ニュース6件）</li><li>イベントは週カレンダー初期表示・当日列起点</li><li>大型イベント → ダム → LINE → 広告の順でホーム本文の下に表示（10-15 大型イベントをダムより上へ）。LINEはQRも表示</li><li>天気カードは非表示（ヘッダーの天気チップ・ドロワーが代替）</li></ul></div>
       </div>
       <div class="note info">LINEは必須項目がすべて揃うまで非表示。広告は配置別に抽出後、各最大2件を表示し、「広告」「広告主」を明記する。ダムは1日2回取得のリアルタイム値ではないため、チップ・パネルとも観測時刻を明示する。</div>
     </div>
@@ -972,7 +972,7 @@ window.SiteNav = { accordionHTML, bindAccordionToggles };
         <div class="table-wrap"><table>
           <thead><tr><th>ファイル</th><th>種別</th><th>中身・役割</th></tr></thead>
           <tbody>
-            <tr><td><code>notion-data.js</code></td><td>生成物（毎日0:00）</td><td><code>window.NOTION_DATA</code>。fetch_notion.py が再生成。手編集しない</td></tr>
+            <tr><td><code>notion-data.js</code></td><td>生成物（毎時）</td><td><code>window.NOTION_DATA</code>。fetch_notion.py が再生成。手編集しない</td></tr>
             <tr><td><code>dam-data.js</code></td><td>生成物（1日2回）</td><td><code>window.DAM_DATA</code>＝{name, observedAt, rate, rateLabel, storage, storageUnit, inflow, outflow, fetchedAt, sourceUrl}</td></tr>
             <tr><td><code>data.js</code></td><td>凍結レガシー</td><td><code>window.DASHBOARD_DATA</code>（title／updated／orgs[]）。<code>ND.orgs</code> が空の時だけ表示側が読むフォールバック。org＝{id, name, summary, links{note,instagram,x,website,youtube,ameblo}, items[]{source,date,title,url,thumbnail}, instagram[], x[]}</td></tr>
             <tr><td><code>registry.json</code></td><td>スキル入力（現役）</td><td><code>kotohira-news</code> スキル（週次「今週のことひらニュース」草案）の団体・チャンネル台帳（orgs[]{name, summary, channels[]{type,url,rss,auto,verified,note}}・window_days=7・todo_orgs）。<b>index.html の表示経路には使われない</b>。表示用の団体はNotion 2DBが正</td></tr>
@@ -991,7 +991,7 @@ window.SiteNav = { accordionHTML, bindAccordionToggles };
         <div class="table-wrap"><table>
           <thead><tr><th></th><th><code>update-notion-data.yml</code></th><th><code>update-dam-data.yml</code></th></tr></thead>
           <tbody>
-            <tr><td>cron（UTC）</td><td><code>0 15 * * *</code>（毎日 0:00 JST）＋ <code>workflow_dispatch</code></td><td><code>0 22 * * *</code>（7:00 JST）・<code>0 10 * * *</code>（19:00 JST）＋ <code>workflow_dispatch</code></td></tr>
+            <tr><td>cron（UTC）</td><td><code>30 21-23,0-15 * * *</code>（JST 6:30〜翌0:30 の毎時30分・10-05〜）＋ <code>workflow_dispatch</code></td><td><code>0 22 * * *</code>（7:00 JST）・<code>0 10 * * *</code>（19:00 JST）＋ <code>workflow_dispatch</code></td></tr>
             <tr><td>同時実行</td><td><code>concurrency: update-notion-data</code>（cancel-in-progress: false）</td><td><code>concurrency: update-dam-data</code>（同上）</td></tr>
             <tr><td>権限・Secrets</td><td><code>contents: write</code>／<code>KOTOHIRA_DASHBOARD_NOTION_TOKEN</code>（未設定なら <code>::error::</code> で失敗）</td><td><code>contents: write</code>／Secrets なし</td></tr>
             <tr><td>ステップ</td><td>checkout@v4 → setup-python@v5（3.12）→ setup-uv@v5（失敗しても続行）→ <code>uv run --with Pillow scripts/fetch_notion.py</code>（uv不可なら素の python で実行・警告）→ <b>Validate output</b>（Node で notion-data.js を評価し news／events／campaigns が空でないこと）→ 差分があれば <code>git add notion-data.js assets/thumbs</code> → commit「chore: daily Notion data update」→ push</td><td>checkout@v4 → setup-python@v5（3.12）→ <code>python scripts/fetch_dam.py</code> → 差分があれば <code>git add dam-data.js</code> → commit「chore: update dam data」→ push</td></tr>
@@ -1073,7 +1073,7 @@ window.SiteNav = { accordionHTML, bindAccordionToggles };
     <div class="subpanel" data-sub="addendum" data-title="追補 2026-08〜09" hidden>
       <div class="section-title">1. 定期更新の流れ<span class="sub">手順1・2は自動化済み。人が触るのは3〜5</span></div>
       <div class="card">
-        <pre><code><span class="cmt"># 1. Notionのニュース・イベント・キャンペーン・お店・団体（＋投稿）を更新（GitHub Actionsが毎日0:00 JSTに自動実行。手動実行も可）</span>
+        <pre><code><span class="cmt"># 1. Notionのニュース・イベント・キャンペーン・お店・団体（＋投稿）を更新（GitHub Actionsが毎時30分に自動実行。手動実行も可）</span>
 python scripts/fetch_notion.py
 
 <span class="cmt"># 2. 早明浦ダムを更新（GitHub Actionsが1日2回自動実行。手動実行も可）</span>
@@ -1088,7 +1088,7 @@ experiences-data.js / udon-data.js / parking-data.js / links-data.js
 <span class="cmt"># 5. 共通設定と画面を確認</span>
 site-widgets-data.js → index.html</code></pre>
         <div class="note info">一部DBがコネクト漏れ等で404でも、成功したDBだけ更新し失敗DBは既存内容を温存。トークンは <code>.env</code> に設定すれば毎回の環境変数設定は不要。団体（Notion 2DB）もfetch_notion.py側の1タスクとして統合済みのため、手順1だけで済む。</div>
-        <div class="note teal">手順1はGitHub Actionsが毎日0:00 JSTに自動実行（Pillow入り＝サムネはWebP圧縮保存）。手順2はGitHub Actionsが1日2回（7:00/19:00 JST）自動実行。push すると Cloudflare Pages が自動デプロイして <code>kotohilife.com</code> に反映される。手動で <code>assets/</code> へ画像を足すときも数MBの原寸は置かず、WebP化してから置く。手動 <code>git push</code> の前は、自動コミットと衝突しないよう <code>git status</code>／<code>git log</code> を確認する。</div>
+        <div class="note teal">手順1はGitHub Actionsが毎時（JST 6:30〜翌0:30）自動実行（Pillow入り＝サムネはWebP圧縮保存）。手順2はGitHub Actionsが1日2回（7:00/19:00 JST）自動実行。push すると Cloudflare Pages が自動デプロイして <code>kotohilife.com</code> に反映される。手動で <code>assets/</code> へ画像を足すときも数MBの原寸は置かず、WebP化してから置く。手動 <code>git push</code> の前は、自動コミットと衝突しないよう <code>git status</code>／<code>git log</code> を確認する。</div>
       </div>
 
       <div class="section-title">2. 手編集データの責任範囲</div>
@@ -1116,7 +1116,7 @@ site-widgets-data.js → index.html</code></pre>
       <div class="card">
         <div class="two-col">
           <div><p><b>早明浦ダム</b></p><p>GitHub Actionsが1日2回自動更新するため、通常は手動操作不要。表示がおかしい時だけ <code>python scripts/fetch_dam.py</code> を手動実行して <code>dam-data.js</code> を再生成する。</p></div>
-          <div><p><b>お店の営業カレンダー</b></p><p>Notionのお店DBで「表示対象」にチェックが入り、かつ画像（今月のカレンダー）がある店だけが夜間の自動更新で掲載される。現在は掲載許可0/8（許可が取れた店から表示対象✓にする運用）。</p></div>
+          <div><p><b>お店の営業カレンダー</b></p><p>Notionのお店DBで「表示対象」にチェックが入り、かつ画像（今月のカレンダー）がある店だけが毎時の自動更新で掲載される。現在は掲載1店（コトリ コワーキング＆ホステル 琴平・10-14初掲載）／画像あり14店（許可が取れた店から表示対象✓にする運用）。10-14に一覧を画像グリッド＋ページ内拡大ビューへ刷新（別タブを開かない）。</p></div>
         </div>
       </div>
 
@@ -1175,7 +1175,7 @@ docs/開発ダッシュボード.html</code></pre>
         <div class="table-wrap"><table>
           <thead><tr><th>ワークフロー</th><th>実行時刻（JST）</th><th>やること</th><th>生成物</th></tr></thead>
           <tbody>
-            <tr><td><code>update-notion-data.yml</code></td><td>毎日 0:00</td><td>uv＋Pillow を用意 → <code>fetch_notion.py</code> 実行（Notion 5DB＋会場DB・サムネWebP保存）→ 差分があればコミット・push</td><td><code>notion-data.js</code>／<code>assets/thumbs/</code></td></tr>
+            <tr><td><code>update-notion-data.yml</code></td><td>毎時30分（JST 6:30〜翌0:30・10-05〜）<br><span class="sub">※Actions履歴の実測では起動は1日3〜4回にとどまる（GitHubのcronは混雑時に間引かれる。10-15確認）</span></td><td>uv＋Pillow を用意 → <code>fetch_notion.py</code> 実行（Notion 5DB＋会場DB・サムネWebP保存）→ 差分があればコミット・push</td><td><code>notion-data.js</code>／<code>assets/thumbs/</code></td></tr>
             <tr><td><code>update-dam-data.yml</code></td><td>7:00／19:00</td><td><code>fetch_dam.py</code> 実行（国交省「川の防災情報」から早明浦ダムの貯水率）→ 差分があればコミット・push</td><td><code>dam-data.js</code></td></tr>
           </tbody>
         </table></div>
@@ -1280,11 +1280,11 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
           <li class="todo">協力隊・役場・研究室ほか 未登録団体の洗い出し</li>
           <li class="todo"><b>【新規 09-05】琴平町DAOを団体DBに追加</b></li>
           <li class="todo"><b>【新規 09-05】各団体のアイコン追加</b> — 団体DBに画像列を足し、一覧・詳細・切替プルダウン等に表示する想定</li>
-          <li class="todo">お店の営業カレンダーの掲載許可取得（現在0/8。許可が揃った店から表示対象✓で夜間自動掲載）</li>
+          <li class="todo">お店の営業カレンダーの掲載許可取得（現在1店＝コトリ／画像あり14店。許可が揃った店から表示対象✓で毎時自動掲載）</li>
           <li class="todo">うどん店の掲載許可取得（許可が揃い次第 UDON_PUBLISHED=true で復活。データ17件・紹介文は温存済み）</li>
           <li class="todo">ニュースに IG/X 手動アイテムも混ぜるか方針決定</li>
           <li class="todo">かき氷マップ（実装済みだが08-28アーカイブ。再開時はsite-nav.jsの1行復活＋店舗収集体制づくりから）</li>
-          <li class="todo">大型イベント告知枠の再有効化（台湾夜市の振替日程確定後。site-widgets-data.js の featuredEvents[]）</li>
+          <li class="done">大型イベント告知枠の再有効化（10-15 済：台湾夜市 振替10/24で再掲載。site-widgets-data.js の featuredEvents[]）</li>
         </ul>
         <div class="note info">団体データのNotion移行（09-05）に伴い、旧registry.json時代の個別タスク（観光協会Ameblo RSS検証・またたびIG/Xハンドル確定・各団体noteサムネ補完）は解消済み。またたびのInstagram/X/note/HP/Facebookは団体DB側に確定済みで、noteサムネはRSS自動導出で全件取得できている。なお旧data.jsにあった「こんぴら観光まちづくり協会」は新DBに未登録のため、現在サイトから意図的に非表示（あっきーさん判断）。</div>
       </div>
@@ -1404,7 +1404,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         <ul class="chk">
           <li class="done">🗓 こんぴらカレンダー公開（広報誌面画像。scripts/fetch_towncal.pyで月次更新）09-03</li>
           <li class="done">早明浦ダム貯水率ウィジェット（scripts/fetch_dam.py・国交省「川の防災情報」から1日2回自動取得）＋サイドバー・モバイルヘッダーのダムチップ／天気チップ改善（気温表示・パネル見出し）09-05</li>
-          <li class="done">🏪 お店の営業カレンダー（Notionお店DB・リスト＋モーダル型・ジャンル絞り込み・「表示対象✓＝掲載許可」運用）09-05</li>
+          <li class="done">🏪 お店の営業カレンダー（Notionお店DB・ジャンル絞り込み・「表示対象✓＝掲載許可」運用）09-05 → 10-14 画像グリッド＋ページ内拡大ビューへ刷新・コトリ初掲載</li>
           <li class="done">同日イベントの並び順不具合を修正（開催日時の文字列比較だけでは同日イベントの順序が安定しなかった。byStartAsc比較関数を新設しND構築時に一括ソート）09-05</li>
           <li class="done">サイト情報3ページ（運営者情報／お問い合わせ／プライバシー）をindex.htmlのSPAビューへ統合。旧3ファイルは即時リダイレクト殻に。ドロワー・フッターのℹ️アイコン表記を統一09-05</li>
           <li class="done">ナビ順を変更（「くらし」を「訪れる・関わる」より前に配置）。うどん店は掲載許可待ちのため一時非表示化（UDON_PUBLISHED=falseフラグ）。体験タブの「Kotohira Travel」表記統一。PCサイドバーの目的別クイックナビを削除（上部ナビと導線重複のため）09-05</li>
@@ -1479,7 +1479,17 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
     <div class="subpanel" data-sub="log" data-title="決定ログ" hidden>
       <div class="note info" style="margin-top:12px">設計・運用の判断を時系列で残す台帳。新しい月が上。各項目は当時の判断であり、後から覆った判断は「フェーズ・実績」「6. 検討中の案」側に最新状態がある。2026-07-10以前の決定は原本ロードマップ.md の決定ログにもある。</div>
 
-      <div class="section-title">1. 2026年9月<span class="sub">くらし新設・ダム・団体Notion移行・統合カレンダー起案・本書の再構成</span></div>
+      <div class="section-title">1. 2026年10月<span class="sub">毎時更新・警報表示・お店カレンダー初掲載とUI刷新・台湾夜市再掲載</span></div>
+      <div class="card">
+        <ul class="b">
+          <li><b>10-15</b>：大型イベント告知枠に「第4回 台湾フェス・台湾夜市 in 琴平」を振替日程（10/24(土) 15:00〜20:00・金陵の郷）で再掲載。画像・リンク先はNotionイベントDBの振替版（新チラシ・新Instagram投稿）、endDate=10-24 で翌日から自動非表示。ホームのウィジェット列の並びを 大型イベント → ダム → LINE → 広告 に変更（PC・スマホ共通、renderCommunityWidgets 1か所）。</li>
+          <li><b>10-14</b>：🏪お店の営業カレンダーに初掲載（コトリ コワーキング＆ホステル 琴平・2026年10月版）。実物を見て「行→モーダル→別タブ」の3段階が見づらいと判断し、一覧を画像グリッド（スマホ2列・PC3列・4:5枠にcontain＝日付を切らない）＋ページ内拡大ビュー（既存の詳細モーダルを <code>.shop-zoom-mode</code> で拡大・画像を&lt;a&gt;で包まず別タブを開かない）へ刷新。元の投稿・SNS・地図のリンクは拡大ビューの下にまとめた。</li>
+          <li><b>10-08</b>：fetch_dam.py が休止観測所の行（'#'属性・貯水量0）を弾くよう修正。</li>
+          <li><b>10-05</b>：Notion更新ワークフローを毎時（JST 6:30〜翌0:30 の毎時30分）に変更し、内容が同じ回は commit／デプロイしない（Cloudflare Pages 無料枠のビルド上限対策）。気象庁の警報・注意報（r8形式）を天気ウィジェットと上部帯に表示（警報レベル3以上・琴平町のみ）。ダム窓に直近7日の貯水率推移グラフと貯水量・流入量・放流量の3列表示を追加。大型イベント枠に金刀比羅宮例大祭（10/9〜11・公式ガイドへリンク）を掲載。こんぴらカレンダーを10月号へ更新。</li>
+        </ul>
+      </div>
+
+      <div class="section-title">2. 2026年9月<span class="sub">くらし新設・ダム・団体Notion移行・統合カレンダー起案・本書の再構成</span></div>
       <div class="card">
         <ul class="b">
           <li><b>09-05</b>：本書（開発ダッシュボード）を「要件定義 → 基本設計 → 詳細設計 → 実装・運用 → 検討中の案」の文書階層＋原本アーカイブ4タブへ再構成（kotobus/shift-scheduler/sekkei.html と同じ構成）。編集は <code>docs/開発ダッシュボード.base.html</code>、生成は <code>scripts/build_dashboard.py</code>（原本mdをマーカー位置へ注入）。配色・部品は従来の生成り×赤を維持し、構造のみ変更。</li>
@@ -1497,7 +1507,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">2. 2026年8月<span class="sub">独自ドメイン公開・サイト情報正式化・スマホUX刷新</span></div>
+      <div class="section-title">3. 2026年8月<span class="sub">独自ドメイン公開・サイト情報正式化・スマホUX刷新</span></div>
       <div class="card">
         <ul class="b">
           <li><b>08-28</b>：かき氷・アイス（#sweets）をアーカイブ。メニュー（タブ・ドロワー・クイックナビ）から除外し、直リンクとデータは温存。復活はsite-nav.jsの1行。</li>
@@ -1512,7 +1522,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">3. 2026年7月<span class="sub">正本化・地域ポータル化・GitHub Pages公開</span></div>
+      <div class="section-title">4. 2026年7月<span class="sub">正本化・地域ポータル化・GitHub Pages公開</span></div>
       <div class="card">
         <ul class="b">
           <li><b>07-19</b>：うどん営業中バッジを追加（11店・JST判定・4状態）し、ホームに「いま営業中のうどん店」モジュールを追加。LINEウィジェットを公開（縦積み: 説明→QR→参加ボタン、運営表記なし）。GitHub Pagesで公開し、Notionデータ（ニュース・イベント・キャンペーン）の日次自動更新が稼働（初回実行成功）。運用手順を A-1（Notion＝自動）・A-2（RSS＝手動）に改訂。</li>
@@ -1538,7 +1548,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">4. 2026年6月<span class="sub">立ち上げ</span></div>
+      <div class="section-title">5. 2026年6月<span class="sub">立ち上げ</span></div>
       <div class="card">
         <ul class="b">
           <li><b>06-10</b>：独立リポジトリ <code>C:\Users\user\kotohira-news\</code> へ移転。</li>
@@ -1727,7 +1737,7 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>notion-data.js</td><td>Notion 5DB → 表示用データ（毎日0:00自動）</td><td><!--@MTIME notion-data.js--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/notion-data.js">C:\Users\user\kotohira-news\notion-data.js</a></td></tr>
+        <tr><td>notion-data.js</td><td>Notion 5DB → 表示用データ（毎時自動）</td><td><!--@MTIME notion-data.js--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/notion-data.js">C:\Users\user\kotohira-news\notion-data.js</a></td></tr>
         <tr><td>dam-data.js</td><td>早明浦ダム貯水率（1日2回自動）</td><td><!--@MTIME dam-data.js--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/dam-data.js">C:\Users\user\kotohira-news\dam-data.js</a></td></tr>
         <tr><td>towncal-data.js</td><td>こんぴらカレンダー（fetch_towncal.py が月次更新）</td><td><!--@MTIME towncal-data.js--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/towncal-data.js">C:\Users\user\kotohira-news\towncal-data.js</a></td></tr>
         <tr><td>data.js</td><td>凍結レガシー：notion-data.js の orgs が空の時だけ読む団体フォールバック</td><td><!--@MTIME data.js--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/data.js">C:\Users\user\kotohira-news\data.js</a></td></tr>
@@ -1747,7 +1757,7 @@ python scripts/verify_ui_styles.py ".drawer a"
         <tr><td>compress_thumbs.py</td><td>既存画像の一括WebP変換（一回性・08-25実行済み）</td><td><!--@MTIME scripts/compress_thumbs.py--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/compress_thumbs.py">C:\Users\user\kotohira-news\scripts\compress_thumbs.py</a></td></tr>
         <tr><td>verify_ui_styles.py</td><td>UI変更後の算出スタイル実測（headless Chrome）</td><td><!--@MTIME scripts/verify_ui_styles.py--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/verify_ui_styles.py">C:\Users\user\kotohira-news\scripts\verify_ui_styles.py</a></td></tr>
         <tr><td>build_dashboard.py</td><td>本書のビルド（base.html＋原本注入）</td><td><!--@MTIME scripts/build_dashboard.py--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/build_dashboard.py">C:\Users\user\kotohira-news\scripts\build_dashboard.py</a></td></tr>
-        <tr><td>update-notion-data.yml</td><td>毎日0:00 JST に fetch_notion.py → コミット・push</td><td><!--@MTIME .github/workflows/update-notion-data.yml--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/.github/workflows/update-notion-data.yml">C:\Users\user\kotohira-news\.github\workflows\update-notion-data.yml</a></td></tr>
+        <tr><td>update-notion-data.yml</td><td>毎時30分（JST 6:30〜翌0:30）に fetch_notion.py → 差分があればコミット・push</td><td><!--@MTIME .github/workflows/update-notion-data.yml--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/.github/workflows/update-notion-data.yml">C:\Users\user\kotohira-news\.github\workflows\update-notion-data.yml</a></td></tr>
         <tr><td>update-dam-data.yml</td><td>7:00／19:00 JST に fetch_dam.py → コミット・push</td><td><!--@MTIME .github/workflows/update-dam-data.yml--></td><td><a class="path" href="file:///C:/Users/user/kotohira-news/.github/workflows/update-dam-data.yml">C:\Users\user\kotohira-news\.github\workflows\update-dam-data.yml</a></td></tr>
       </tbody>
     </table></div></div>
