@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-14 22:00",
+  "fetched": "2026-10-15 03:08",
   "news": [
     {
       "id": "3f90b4e5-ff5b-81e9-a558-fc6fcbb94b8f",
@@ -2021,36 +2021,6 @@ window.NOTION_DATA = {
       "comment": "観光業に関心のある高校生を対象としたブートキャンプ。せとうち観光専門職短期大学の主催により、琴平町内で3日間開催される。参加者はUDON na HOTEL琴平に滞在。",
       "fee": "0",
       "organizer": "せとうち観光専門職短期大学"
-    },
-    {
-      "id": "3960b4e5-ff5b-813c-8ead-e44c30995fab",
-      "title": "第55回　平和祈願灯ろう流し",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/11791.html",
-      "start": "2026-08-15T18:00",
-      "end": "2026-08-15T20:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/thumbs/3960b4e5ff5b813c8eade44c30995fab.webp",
-      "comment": "会場: 琴平町 一之橋公園（香川県仲多度郡琴平町722） 戦没犠牲者の追悼や恒久平和への祈り、ご先祖への供養を目的とした灯ろう流しイベント。金倉川の川面を灯ろうが照らす幻想的な夏の夜の催し。",
-      "fee": "500",
-      "organizer": "平和祈願灯ろう流し実行委員会（琴平町観光商工課）"
-    },
-    {
-      "id": "3b00b4e5-ff5b-80fb-8332-cdf5816e6761",
-      "title": "朝うどん巡礼ツアー",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
-      "start": "2026-08-15T07:20",
-      "end": "2026-08-15T09:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b80fb8332cdf5816e6761.webp",
-      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
-      "fee": "2800",
-      "organizer": ""
     }
   ],
   "campaigns": [
