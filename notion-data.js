@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-14 11:33",
+  "fetched": "2026-10-14 22:00",
   "news": [
+    {
+      "id": "3f90b4e5-ff5b-81e9-a558-fc6fcbb94b8f",
+      "title": "特別公演「イタリアルネサンス音楽と雅楽」金丸座",
+      "url": "https://news.ksb.co.jp/article/16963416",
+      "summary": "香川県琴平町の金丸座で11月7日と8日、イタリアの古楽アンサンブル「Ludus Orionis」とバレエダンサー、および雅楽の共演による特別公演が開催される。ルネサンス期からバロック期の音楽と伝統音楽によるイタリアと日本の文化交流を図るもの。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-10-14",
+      "thumbnail": "assets/thumbs/3f90b4e5ff5b81e9a558fc6fcbb94b8f.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f90b4e5-ff5b-8142-9f16-cbf794896fd9",
       "title": "琴平町、来年度からこども園にALT常勤配置",
