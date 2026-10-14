@@ -627,7 +627,9 @@
   .towncal-source a{color:var(--accent-d);font-weight:700}
   .towncal-source a:hover{text-decoration:underline}
 
-  /* 🏪 お店の営業カレンダー：コンパクトリスト＋詳細モーダル構成（tmp-shopcal-a.htmlの試作を本実装）。
+  /* 🏪 お店の営業カレンダー：カレンダー画像のグリッド＋ページ内拡大ビュー構成（2026-10-14 本人指示で
+     「コンパクトリスト＋詳細モーダル」から変更。画像そのものが情報なので一覧に画像を並べ、タップで別タブを
+     開かず、既存の詳細モーダルを拡大モードにして画面いっぱいに出す。リンク類は拡大ビューの下に置く）。
      警告文言はtowncal-noticeより強い視認性にするためaccent単色背景＋白太字にする */
   .shop-warn-notice{background:var(--accent);color:#fff;border-radius:10px;padding:12px 16px;
     font-size:13.5px;font-weight:900;line-height:1.6;margin-bottom:16px;display:flex;gap:8px;align-items:flex-start}
@@ -640,27 +642,32 @@
     cursor:pointer;font-family:inherit}
   .genre-chip:hover{border-color:var(--accent);color:var(--accent-d)}
   .genre-chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
-  .shop-genre{display:inline-block;background:var(--accent-soft);color:var(--accent-d);border-radius:999px;
-    padding:2px 10px;font-size:11px;font-weight:700}
-  .shop-list{border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
-  .shop-row{width:100%;display:flex;align-items:center;gap:10px;padding:13px 15px;
-    border:0;border-bottom:1px solid var(--line);background:var(--card);color:var(--ink);
-    text-align:left;font-family:inherit;cursor:pointer}
-  .shop-row:last-child{border-bottom:0}
-  .shop-row:hover{background:var(--accent-soft)}
-  .shop-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-  .shop-row-name{flex:1;min-width:0;font-size:14px;font-weight:900;overflow:hidden;
-    text-overflow:ellipsis;white-space:nowrap}
-  .shop-row-month{font-size:11.5px;color:var(--sub);font-weight:700;white-space:nowrap}
-  .shop-row-arrow{color:var(--sub);font-size:16px}
+  /* 画像グリッド：スマホ2列・PC3列（≥721px＝サイドバーが出る幅と同じ境界）。カードは画像＋店名＋○月版だけに
+     絞り、ジャンルは絞り込みチップと拡大ビューのバッジで示す。画像は縦長4:5の枠にcontainで収め、店ごとに
+     縦横比が違っても日付が切れないようにする（coverで切ると営業日が欠ける） */
+  .shop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  @media (min-width:721px){ .shop-grid{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  .shop-card{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:12px;
+    background:var(--card);color:var(--ink);overflow:hidden;text-align:left;font-family:inherit;cursor:pointer}
+  .shop-card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+  .shop-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .shop-card-img{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;background:#f3efe8}
+  .shop-card-body{padding:8px 10px 10px}
+  .shop-card-name{font-size:13px;font-weight:900;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;
+    -webkit-box-orient:vertical;overflow:hidden}
+  .shop-card-month{margin-top:4px;font-size:11.5px;color:var(--sub);font-weight:700}
   .old-flag{color:var(--accent-d);font-weight:900}
-  /* 390px幅だと店名(可変)+ジャンルバッジ+月表記+矢印の1行では窮屈で右端がはみ出すため、
-     狭い画面だけ折り返しを許可する（店名は全幅、残りは2行目へ。tmp-shopcal-a/bの試作撮影で
-     headless Chromeの390px未満クランプに引っかかって気づいた実害） */
-  @media (max-width:480px){
-    .shop-row{flex-wrap:wrap;row-gap:5px}
-    .shop-row-name{flex:1 1 100%}
-  }
+  /* 拡大ビュー：既存の詳細モーダル（#modalOverlay）をお店のときだけ拡大モードにする（openDetailModalが
+     .shop-zoom-modeを付け、closeDetailModalが外す）。箱を画面幅いっぱい近くまで広げ、画像は高さ72vhまで
+     containで最大化する。画像を<a>で包まないので別タブは開かない（ピンチ拡大はviewportが許可済み） */
+  .modal-overlay.shop-zoom-mode{padding:8px}
+  .modal-overlay.shop-zoom-mode .modal-box{max-width:min(96vw,760px);max-height:96vh;padding:16px 14px 18px}
+  .shop-zoom-img{display:block;width:100%;max-height:72vh;object-fit:contain;border-radius:10px;
+    background:#f3efe8;border:1px solid var(--line)}
+  .shop-zoom-meta{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+  .shop-zoom-meta .modal-badge{margin-bottom:0}
+  .shop-zoom-month{font-size:12.5px;color:var(--sub);font-weight:700}
+  .shop-zoom-links{margin-top:12px}
   .shop-sns{margin-top:10px}
   /* Facebook・Threadsは新規トークン。既存.lk.facebook（リンク/団体タブ）とは.shop-sns配下でのみ
      上書きし、他タブの配色は変えない（Facebookは公式ブルー#1877f2、Threadsは黒系）。
@@ -1606,6 +1613,8 @@ function modalContentHTML(it, kind){
 function openDetailModal(item, kind){
   const overlay = document.getElementById("modalOverlay");
   if(!overlay.classList.contains("show")) modalLastFocusedEl = document.activeElement;
+  /* お店の営業カレンダーだけ拡大ビュー（画像を画面いっぱいに）。closeDetailModalで外す */
+  overlay.classList.toggle("shop-zoom-mode", kind === "shop");
   document.getElementById("modalBody").innerHTML = modalContentHTML(item, kind);
   showDetailModal();
 }
@@ -1624,6 +1633,7 @@ function closeDetailModal(){
   frame.removeAttribute("inert");
   frame.removeAttribute("aria-hidden");
   overlay.classList.remove("show");
+  overlay.classList.remove("shop-zoom-mode");
   overlay.setAttribute("aria-hidden", "true");
   if(modalLastFocusedEl && modalLastFocusedEl.isConnected && typeof modalLastFocusedEl.focus === "function"){
     modalLastFocusedEl.focus();
@@ -3059,7 +3069,8 @@ function towncalTabHTML(){
 
 /* ===== 🏪 お店の営業カレンダータブ（お店DB由来。表示対象✓かつ画像ありのみ。notion-data.js経由・
    fetch_notion.pyがNotionネイティブアップロードの画像をassets/thumbsへローカル保存する）。
-   構成はコンパクトリスト＋詳細モーダル（tmp-shopcal-a.htmlの試作をあっきーさんが選定・本実装）。
+   構成は画像グリッド＋ページ内拡大ビュー（2026-10-14 本人指示。初掲載のコトリで「行→モーダル→別タブ」の
+   3段階が見づらいと判断し、09-05に選定した「リスト＋詳細モーダル」から変更）。
    ジャンル絞り込みチップの単一選択状態はページ内のみ保持（shopGenreFilter）。 */
 function shopcalTabHTML(){
   const shops = ND.shops;
@@ -3069,7 +3080,7 @@ function shopcalTabHTML(){
     <div id="shopcalListArea">${shopcalListAreaHTML(shops)}</div>`;
 }
 /* データに実在するジャンルだけ列挙する（データ駆動。統合カレンダーのソース切替チップと同じ流儀）。
-   「すべて」＋実在ジャンルの単一選択チップ＋コンパクト行リストをまとめて再生成する。
+   「すべて」＋実在ジャンルの単一選択チップ＋画像カードのグリッドをまとめて再生成する。
    ジャンルチップ切替のたびにこの関数だけ呼び直せばよい（#shopcalListAreaを丸ごと差し替え）。 */
 function shopcalListAreaHTML(shops){
   shops = shops || ND.shops;
@@ -3081,11 +3092,11 @@ function shopcalListAreaHTML(shops){
     return `<button type="button" class="genre-chip" data-shop-genre="${esc(key)}" aria-pressed="${on?'true':'false'}">${esc(key || "すべて")}</button>`;
   }).join("");
   const filtered = shopGenreFilter ? shops.filter(s => (s.genres||[]).includes(shopGenreFilter)) : shops;
-  const rowsHtml = filtered.length
-    ? filtered.map(shopRowHTML).join("")
+  const gridHtml = filtered.length
+    ? `<div class="shop-grid">${filtered.map(shopCardHTML).join("")}</div>`
     : emptyMsg("該当するお店がありません。");
   return `<div class="genre-chips" role="group" aria-label="ジャンルで絞り込む">${chipsHtml}</div>
-    <div class="shop-list">${rowsHtml}</div>`;
+    ${gridHtml}`;
 }
 function shopMonthLabel(month){
   const mm = ("" + (month||"")).match(/^(\d{4})-(\d{2})$/);
@@ -3098,18 +3109,21 @@ function isShopMonthOld(month){
   const thisMonth = `${now.getFullYear()}-${pad2(now.getMonth()+1)}`;
   return month < thisMonth;
 }
-/* コンパクト行：店名＋ジャンルバッジ（先頭1件）＋○月版（古ければ⚠付き）＋シェブロン。
-   data-open-detailは既存のonMainClick委譲（[data-open-detail]ハンドラ）にそのまま乗る＝
-   新規のクリック配線は不要（統合カレンダー等と同じregisterItem/openDetailModalインフラを共用）。 */
-function shopRowHTML(shop){
+/* 画像カード：カレンダー画像＋店名＋○月版（古ければ⚠付き）。data-open-detailは既存のonMainClick委譲
+   （[data-open-detail]ハンドラ）にそのまま乗る＝新規のクリック配線は不要（registerItem/openDetailModalの
+   インフラを共用し、kind="shop"のときだけ拡大モードになる）。button要素なのでEnter/Spaceも素で効く。
+   画像のalt""は、同じボタン内の店名テキストが読み上げられるため重複を避ける意図。 */
+function shopCardHTML(shop){
   const slug = registerItem(shop, "shop");
-  const genre = (Array.isArray(shop.genres) && shop.genres[0]) || "";
+  const imgSrc = safeUrl(shop.image);
+  const monthLabel = shopMonthLabel(shop.month);
   const isOld = isShopMonthOld(shop.month);
-  return `<button type="button" class="shop-row" data-open-detail="${esc(slug)}" aria-haspopup="dialog">
-    <span class="shop-row-name">${esc(shop.name)}</span>
-    ${genre ? `<span class="shop-genre">${esc(genre)}</span>` : ""}
-    <span class="shop-row-month">${isOld ? '<span class="old-flag" aria-hidden="true">⚠ </span>' : ''}${esc(shopMonthLabel(shop.month))}</span>
-    <span class="shop-row-arrow" aria-hidden="true">›</span>
+  return `<button type="button" class="shop-card" data-open-detail="${esc(slug)}" aria-haspopup="dialog">
+    ${imgSrc ? `<img class="shop-card-img" src="${esc(imgSrc)}" alt="" loading="lazy" onerror="this.style.display='none'">` : ""}
+    <div class="shop-card-body">
+      <div class="shop-card-name">${esc(shop.name)}</div>
+      ${monthLabel ? `<div class="shop-card-month">${isOld ? '<span class="old-flag" aria-hidden="true">⚠ </span>' : ''}${esc(monthLabel)}</div>` : ""}
+    </div>
   </button>`;
 }
 /* ジャンルチップ切替（onMainClickの[data-shop-genre]から呼ばれる）。切替後は#shopcalListAreaだけ
@@ -3131,16 +3145,16 @@ const SHOP_SNS = [
   {field:"threads", cls:"threads", label:"Threads"},
   {field:"hp", cls:"website", label:"HP"}
 ];
-/* お店詳細モーダル本体。modalContentHTML(it,"shop")から呼ばれる（既存のopenDetailModal/
-   registerItemインフラに乗せている。イベント・うどん等と同じ「タブ→行/カードクリック→
-   共通モーダル」の流儀）。元の投稿は既存.modal-link（大ボタン）を流用して主役級にする。 */
+/* お店の拡大ビュー本体。modalContentHTML(it,"shop")から呼ばれ、openDetailModalが#modalOverlayに
+   .shop-zoom-modeを付けて箱を広げる。画像は<a>で包まず別タブを開かない（2026-10-14 本人指示）。
+   リンク類（元の投稿＝既存.modal-link大ボタン・SNSバッジ・地図）は画像の下にまとめる。 */
 function shopModalHTML(shop){
   const genres = Array.isArray(shop.genres) ? shop.genres : [];
   const imgSrc = safeUrl(shop.image);
   const monthLabel = shopMonthLabel(shop.month);
   const isOld = isShopMonthOld(shop.month);
-  const genresHtml = genres.length
-    ? `<div class="modal-badge-row">${genres.map(g=>`<span class="modal-badge status-upcoming">${esc(g)}</span>`).join("")}</div>`
+  const metaHtml = (genres.length || monthLabel)
+    ? `<div class="shop-zoom-meta">${genres.map(g=>`<span class="modal-badge status-upcoming">${esc(g)}</span>`).join("")}${monthLabel ? `<span class="shop-zoom-month">${esc(monthLabel)}</span>` : ""}</div>`
     : "";
   const snsHtml = SHOP_SNS.map(s=>{
     const u = safeUrl(shop[s.field]);
@@ -3148,19 +3162,19 @@ function shopModalHTML(shop){
   }).filter(Boolean).join("");
   const sourcePost = safeUrl(shop.sourcePost);
   const mapUrl = safeUrl(shop.map);
+  const linksHtml = (sourcePost || snsHtml || mapUrl)
+    ? `<div class="shop-zoom-links">
+      ${sourcePost ? `<a class="modal-link" href="${esc(sourcePost)}" target="_blank" rel="noopener">元の投稿を見る ↗</a>` : ""}
+      ${snsHtml ? `<div class="links shop-sns">${snsHtml}</div>` : ""}
+      ${mapUrl ? `<div style="margin-top:10px"><a class="modal-link secondary" href="${esc(mapUrl)}" target="_blank" rel="noopener">地図を見る ↗</a></div>` : ""}
+    </div>`
+    : "";
   return `
     <h3 class="modal-title" id="modalTitle">${esc(shop.name)}</h3>
-    ${genresHtml}
-    ${imgSrc ? `
-    <a href="${esc(imgSrc)}" target="_blank" rel="noopener">
-      <img class="modal-img fit-contain" src="${esc(imgSrc)}" alt="${esc(shop.name)}の営業カレンダー${monthLabel ? "（"+esc(monthLabel)+"）" : ""}" loading="lazy" onerror="this.style.display='none'">
-    </a>
-    <div class="hint" style="margin:6px 0 0">画像をタップすると拡大表示できます</div>` : ""}
-    ${monthLabel ? `<div class="hint" style="margin:6px 0 0">${esc(monthLabel)}</div>` : ""}
+    ${metaHtml}
+    ${imgSrc ? `<img class="shop-zoom-img" src="${esc(imgSrc)}" alt="${esc(shop.name)}の営業カレンダー${monthLabel ? "（"+esc(monthLabel)+"）" : ""}" onerror="this.style.display='none'">` : ""}
     ${isOld ? `<div class="towncal-notice" style="margin-top:8px">この画像は${esc(monthLabel)}です。最新はお店のSNSでご確認ください。</div>` : ""}
-    ${sourcePost ? `<a class="modal-link" href="${esc(sourcePost)}" target="_blank" rel="noopener">元の投稿を見る ↗</a>` : ""}
-    ${snsHtml ? `<div class="links shop-sns" style="margin-top:12px">${snsHtml}</div>` : ""}
-    ${mapUrl ? `<div style="margin-top:10px"><a class="modal-link secondary" href="${esc(mapUrl)}" target="_blank" rel="noopener">地図を見る ↗</a></div>` : ""}`;
+    ${linksHtml}`;
 }
 
 /* ===== 🔗 リンクタブ（公式サイトへのリンク集。links-data.js 由来・コード直書き） ===== */
