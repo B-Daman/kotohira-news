@@ -3395,7 +3395,9 @@ function renderCommunityWidgets(){
         <p class="widget-copy">琴平に関わる事業者・団体の広告枠を準備しています。</p>
       </section>`;
 
-  host.innerHTML = `<div class="widget-stack">${damHTML}${featuredHTML}${lineHTML}${adsHTML}</div>`;
+  /* 並び順：大型イベント→ダム→LINE→広告。告知枠はダムより上に置く（2026-10-15 本人指示。PC・スマホとも
+     同じこの関数で描画しているため、ここを変えれば両方に効く） */
+  host.innerHTML = `<div class="widget-stack">${featuredHTML}${damHTML}${lineHTML}${adsHTML}</div>`;
   host.classList.toggle("mobile-empty", !damHTML && !lineHTML && !featuredHTML);
 }
 /* 💧 早明浦ダムの貯水状況データを表示用に整形する。DAMが無い/observedAtが不正な形式なら
