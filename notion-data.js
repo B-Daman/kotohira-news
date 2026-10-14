@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-14 03:27",
+  "fetched": "2026-10-14 11:33",
   "news": [
+    {
+      "id": "3f90b4e5-ff5b-8142-9f16-cbf794896fd9",
+      "title": "琴平町、来年度からこども園にALT常勤配置",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026101400000001000",
+      "summary": "琴平町は来年度から町内2カ所の認定こども園に外国語指導助手（ALT）を常勤させる。臨時議会で165万円の関連予算案が可決された。県内の公立こども園でALTが常勤するのは珍しいという。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-14",
+      "thumbnail": "assets/thumbs/3f90b4e5ff5b81429f16cbf794896fd9.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f70b4e5-ff5b-81f7-bc87-d091402d2e1b",
       "title": "ジーーーンと四国！しこくーるフォトコンテスト 秋期募集",
@@ -11,6 +24,19 @@ window.NOTION_DATA = {
       "media": "テレビ",
       "date": "2026-10-12",
       "thumbnail": "assets/thumbs/3f70b4e5ff5b81f7bc87d091402d2e1b.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3f60b4e5-ff5b-817f-b0ba-f61476dd7c90",
+      "title": "みこし渡御、厳かに　金刀比羅宮例大祭",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026101100000012400",
+      "summary": "金刀比羅宮の例大祭において、10月10日夜に最大の呼び物「みこし渡御」が営まれた。伝統の衣装に身を包んだ総勢約600人の大行列が本宮からの石段をゆっくり下った。",
+      "org": "四国新聞WEB朝刊",
+      "media": "新聞",
+      "date": "2026-10-11",
+      "thumbnail": "assets/thumbs/3f60b4e5ff5b817fb0baf61476dd7c90.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2151,7 +2177,27 @@ window.NOTION_DATA = {
       "organizer": "うさぎいろ"
     }
   ],
-  "shops": [],
+  "shops": [
+    {
+      "id": "4ef0b4e5-ff5b-836a-8eb2-816c13b0f247",
+      "name": "コトリ コワーキング＆ホステル 琴平",
+      "genres": [
+        "🏷 その他"
+      ],
+      "image": "assets/thumbs/4ef0b4e5ff5b836a8eb2816c13b0f247.webp",
+      "month": "2026-10",
+      "instagram": "https://www.instagram.com/kotori.kotohira/",
+      "x": "https://x.com/kotori_kotohira",
+      "facebook": "",
+      "threads": "https://www.threads.com/@kotori.kotohira",
+      "hp": "https://www.kotori-japan.com/",
+      "sourcePost": "https://www.instagram.com/p/Dd8dobuTu8J/",
+      "map": "https://maps.app.goo.gl/ZYGeM7G3zC6kcck67",
+      "address": "香川県仲多度郡琴平町720−15",
+      "note": "",
+      "show": true
+    }
+  ],
   "orgs": [
     {
       "id": "3d10b4e5-ff5b-8048-90fe-e217db69b649",
@@ -2169,6 +2215,11 @@ window.NOTION_DATA = {
         "facebook": ""
       },
       "instagram": [
+        "https://www.instagram.com/p/DeX_tskPLrC/",
+        "https://www.instagram.com/p/DeV8jS8EUvC/?img_index=9",
+        "https://www.instagram.com/p/DeJ9o5YjzpO/?img_index=1",
+        "https://www.instagram.com/p/DeDS__tj8Rx/?img_index=1",
+        "https://www.instagram.com/p/Dd41TR8zQCr/",
         "https://www.instagram.com/p/DdyZlrbj7A3/?img_index=1",
         "https://www.instagram.com/p/Ddv0yCPD6k-/?img_index=1",
         "https://www.instagram.com/p/DdqchUSS8dK/",
