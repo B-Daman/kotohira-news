@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-15 19:14",
+  "fetched": "2026-10-16 00:17",
   "news": [
     {
       "id": "3f90b4e5-ff5b-81e9-a558-fc6fcbb94b8f",
