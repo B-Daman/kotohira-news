@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-15 09:02",
+  "fetched": "2026-10-15 19:14",
   "news": [
     {
       "id": "3f90b4e5-ff5b-81e9-a558-fc6fcbb94b8f",
@@ -310,19 +310,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-10-03",
       "thumbnail": "assets/thumbs/3ee0b4e5ff5b812c91d8de82b6478220.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ee0b4e5-ff5b-816c-b1f0-cc0c80ebebb4",
-      "title": "金刀比羅宮表参道 提灯ライトアップ",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026100300000001300",
-      "summary": "琴平町の金刀比羅宮表参道の旧とら丸旅館で、子どもたちの将来の夢が描かれた提灯を使ったライトアップが2日に始まった。点灯は3、4、9～11日の午後6時から同7時まで。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-10-03",
-      "thumbnail": "assets/thumbs/3ee0b4e5ff5b816cb1f0cc0c80ebebb4.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
