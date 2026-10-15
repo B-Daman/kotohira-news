@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-15 03:08",
+  "fetched": "2026-10-15 09:02",
   "news": [
     {
       "id": "3f90b4e5-ff5b-81e9-a558-fc6fcbb94b8f",
@@ -323,19 +323,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-10-03",
       "thumbnail": "assets/thumbs/3ee0b4e5ff5b816cb1f0cc0c80ebebb4.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ed0b4e5-ff5b-81dc-a70b-f7c45cec9545",
-      "title": "象郷・五條地区の鎮守秋祭り（大歳神社、櫛梨神社、石井八幡宮、大井八幡宮、大麻神社）",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
-      "summary": "10月は象郷・五條地区の秋祭りシーズン。各神社で獅子舞や神楽などが奉納される秋季大祭が開催される。大歳神社（10/17-18）、櫛梨神社（10/10-11）、石井八幡宮（10/25）、大井八幡宮（10/10-11）、大麻神社（10/3-4）での開催。",
-      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-10-02",
-      "thumbnail": "assets/thumbs/3ed0b4e5ff5b81dca70bf7c45cec9545.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
