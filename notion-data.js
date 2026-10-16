@@ -1,7 +1,59 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-16 00:17",
+  "fetched": "2026-10-16 13:53",
   "news": [
+    {
+      "id": "3fb0b4e5-ff5b-816d-9292-c91fdffc72db",
+      "title": "２７年春の「四国こんぴら歌舞伎大芝居」に片岡仁左衛門さんの出演が決定",
+      "url": "https://topics.smt.docomo.ne.jp/article/ohk/region/ohk-33537?fm=latestnews",
+      "summary": "香川県琴平町の金丸座で２０２７年４月９日から２５日まで開催される「第四十回記念 四国こんぴら歌舞伎大芝居」に、片岡仁左衛門さんが出演することが決定した。１０月１６日にこんぴら歌舞伎のオフィシャルサイトで発表された。",
+      "org": "岡山香川ニュースOHK",
+      "media": "テレビ",
+      "date": "2026-10-16",
+      "thumbnail": "assets/thumbs/3fb0b4e5ff5b816d9292c91fdffc72db.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3fb0b4e5-ff5b-814f-986b-d7d5af903cf8",
+      "title": "琴平観光物産展 in 台湾瑞芳",
+      "url": "https://www.kotohirakankou.jp/news/entry-631.html",
+      "summary": "琴平町とこんぴら観光まちづくり協会が、台湾新北市瑞芳区にて琴平町の観光・特産品を紹介する物産展を開催。商談会、試食販売、文化交流を目的とする。",
+      "org": "こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-16",
+      "thumbnail": "assets/thumbs/3fb0b4e5ff5b814f986bd7d5af903cf8.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3fb0b4e5-ff5b-810d-857d-dd48e24f9a5a",
+      "title": "ことひらナイト・台湾夜市in琴平",
+      "url": "https://news.yahoo.co.jp/articles/74157af8213b05f6cf15cafb728519bbfbab8536",
+      "summary": "香川県琴平町で台湾グルメと文化が楽しめる「ことひらナイト・台湾夜市in琴平」が開催される。9月5日の開催予定が台風延期により24日に変更。オリジナルコラボカプセルの販売やステージイベントを実施。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-10-15",
+      "thumbnail": "assets/thumbs/3fb0b4e5ff5b810d857ddd48e24f9a5a.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "3fa0b4e5-ff5b-8171-aa38-cef6f8bc2b2b",
+      "title": "台風で延期した「台湾夜市」 24日開催へ 香川・琴平町（KSB瀬戸内海放送） - Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBBbnU1aXVkbmFfLWt5bEt0QTZfWmtlbEpvOGRldERwR055c1ZUVnJYQ0Y5WllSN2VNTVNnZTg1X2FOd2N6SnZVQzlkRzI5R1RyeXlMU0ZiNHVjVmVRYjZtSEN6cFdDNXpOMk14d2ZUeTJCa2dCeU5yQ1JONXV4UEk?oc=5",
+      "summary": "香川県琴平町で台湾グルメと文化が楽しめる「台湾夜市」が開催される。当初9月5日予定だったが台風により延期されたもの。ステージでは二胡演奏や台湾の伝統文化が紹介される。",
+      "org": "Yahoo!ニュース",
+      "media": "Webメディア",
+      "date": "2026-10-15",
+      "thumbnail": "assets/thumbs/3fa0b4e5ff5b8171aa38cef6f8bc2b2b.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3f90b4e5-ff5b-81e9-a558-fc6fcbb94b8f",
       "title": "特別公演「イタリアルネサンス音楽と雅楽」金丸座",
@@ -271,45 +323,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-10-04",
       "thumbnail": "assets/thumbs/3ee0b4e5ff5b81ff82cbc6a454f89d50.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ee0b4e5-ff5b-81c5-87ca-e7895b00e6ff",
-      "title": "帆船「BLUE OCEAN みらいへ」神戸～門司3泊4日体験航海",
-      "url": "https://funeco.jp/news/news-34338/",
-      "summary": "帆船「BLUE OCEAN みらいへ」が2026年11月10日から13日にかけて神戸港から門司港までを航海する3泊4日の体験航海を実施する。高松港で金刀比羅宮を参拝し航海安全を祈願するほか、大三島でも上陸散策が行われる。",
-      "org": "フネコ（Funeco）",
-      "media": "Webメディア",
-      "date": "2026-10-04",
-      "thumbnail": "assets/thumbs/3ee0b4e5ff5b81c587cae7895b00e6ff.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ee0b4e5-ff5b-8110-bfd7-f37488ff4b40",
-      "title": "第58回こんぴら石段マラソン（10月4日）開催中止のお知らせ",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/8/12041.html",
-      "summary": "令和8年10月4日に開催予定だったこんぴら石段マラソンが、天候不良等により中止となった。参加費の返金はなく、参加賞は指定時間に金陵の郷で配布される。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-10-04",
-      "thumbnail": "assets/thumbs/3ee0b4e5ff5b8110bfd7f37488ff4b40.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ee0b4e5-ff5b-812c-91d8-de82b6478220",
-      "title": "【ことひらナイト】第３回こんぴらくご",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-549.html",
-      "summary": "琴平町のナイトコンテンツ企画として、高松らくご愛好会メンバーによる落語やマジックを楽しむイベント。2026年11月28日（土）17:00～18:30、てんてこ舞（表参道）で開催。前売チケットは1,100円（税込、ワンドリンク付き）。",
-      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-10-03",
-      "thumbnail": "assets/thumbs/3ee0b4e5ff5b812c91d8de82b6478220.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -707,6 +720,21 @@ window.NOTION_DATA = {
       "organizer": "つるや旅館、藤田屋"
     },
     {
+      "id": "3fb0b4e5-ff5b-80ba-abab-d9d30b61066f",
+      "title": "琴平観光物産展 in 台湾瑞芳（2日目）",
+      "url": "https://www.kotohirakankou.jp/news/entry-631.html",
+      "start": "2026-10-21T10:00",
+      "end": "2026-10-21T15:00",
+      "status": "実施前",
+      "city": "台湾 新北市瑞芳区",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3fb0b4e5ff5b80baababd9d30b61066f.webp",
+      "comment": "会場: 新北市瑞芳區區民廣場（台湾新北市瑞芳区明燈路三段） 琴平町とこんぴら観光まちづくり協会が、台湾新北市瑞芳区にて琴平町の観光・特産品を紹介する物産展を開催。商談会、試食販売、文化交流を目的とする。",
+      "fee": "0",
+      "organizer": "琴平町商工会、琴平町、こんぴら観光まちづくり協会"
+    },
+    {
       "id": "3ea0b4e5-ff5b-8097-a313-f7c75e664fda",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -735,6 +763,21 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": ""
+    },
+    {
+      "id": "3fb0b4e5-ff5b-8159-b6b9-d8c4212af449",
+      "title": "琴平観光物産展 in 台湾瑞芳（1日目）",
+      "url": "https://www.kotohirakankou.jp/news/entry-631.html",
+      "start": "2026-10-20T12:00",
+      "end": "2026-10-20T16:00",
+      "status": "実施前",
+      "city": "台湾 新北市瑞芳区",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/3fb0b4e5ff5b8159b6b9d8c4212af449.webp",
+      "comment": "会場: 新北市瑞芳區區民廣場（台湾新北市瑞芳区明燈路三段） 琴平町とこんぴら観光まちづくり協会が、台湾新北市瑞芳区にて琴平町の観光・特産品を紹介する物産展を開催。商談会、試食販売、文化交流を目的とする。",
+      "fee": "0",
+      "organizer": "琴平町商工会、琴平町、こんぴら観光まちづくり協会"
     },
     {
       "id": "3d50b4e5-ff5b-8152-9bb6-f6ff0c82f387",
