@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-16 19:03",
+  "fetched": "2026-10-17 03:57",
   "news": [
     {
       "id": "3fb0b4e5-ff5b-816d-9292-c91fdffc72db",
@@ -802,7 +802,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-280.html",
       "start": "2026-10-17",
       "end": "2026-10-17",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "大歳神社",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
