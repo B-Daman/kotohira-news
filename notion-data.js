@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-16 13:53",
+  "fetched": "2026-10-16 19:03",
   "news": [
     {
       "id": "3fb0b4e5-ff5b-816d-9292-c91fdffc72db",
@@ -310,19 +310,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-10-05",
       "thumbnail": "assets/thumbs/3f00b4e5ff5b818c80fbee2a778ef30d.jpg",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3ee0b4e5-ff5b-81ff-82cb-c6a454f89d50",
-      "title": "象郷地区の未来を考える会",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026100400000002500",
-      "summary": "琴平町象郷地区の地域づくりについて考える「象郷地区の未来を考える会」が開催された。住民ら約30人が参加し、講演会やカードゲームを通じて地域課題を共有し、小学校跡地利用など将来のビジョンについて意見交換した。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-10-04",
-      "thumbnail": "assets/thumbs/3ee0b4e5ff5b81ff82cbc6a454f89d50.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
