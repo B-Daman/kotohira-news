@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-17 03:57",
+  "fetched": "2026-10-18 02:29",
   "news": [
     {
       "id": "3fb0b4e5-ff5b-816d-9292-c91fdffc72db",
@@ -772,7 +772,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/25/11981.html",
       "start": "2026-10-18T10:00",
       "end": "2026-10-18T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "琴平町総合センター",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
@@ -787,7 +787,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-18",
       "end": "2026-10-18",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "大歳神社",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
@@ -802,7 +802,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-280.html",
       "start": "2026-10-17",
       "end": "2026-10-17",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "大歳神社",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
@@ -1980,51 +1980,6 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-80bb-9e8c-e04abd2ce35f",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-08-18T20:00",
-      "end": "2026-08-18T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b80bb9e8ce04abd2ce35f.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-807b-9ff7-fd5cc1feff18",
-      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
-      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
-      "start": "2026-08-18T13:30",
-      "end": "2026-08-18T15:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "カフェ 象山",
-      "address": "香川県仲多度郡琴平町榎井553−1",
-      "image": "assets/thumbs/3b00b4e5ff5b807b9ff7fd5cc1feff18.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3990b4e5-ff5b-81f7-b3e1-d335b962d1b7",
-      "title": "かがわローカルツーリズムブートキャンプ",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-466.html",
-      "start": "2026-08-18T13:00",
-      "end": "2026-08-20T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "UDON na HOTEL 琴平",
-      "address": "〒766-0001 香川県仲多度郡琴平町字川西 796-1",
-      "image": "assets/thumbs/3990b4e5ff5b81f7b3e1d335b962d1b7.webp",
-      "comment": "観光業に関心のある高校生を対象としたブートキャンプ。せとうち観光専門職短期大学の主催により、琴平町内で3日間開催される。参加者はUDON na HOTEL琴平に滞在。",
-      "fee": "0",
-      "organizer": "せとうち観光専門職短期大学"
     }
   ],
   "campaigns": [
