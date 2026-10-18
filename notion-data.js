@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-18 02:29",
+  "fetched": "2026-10-19 01:05",
   "news": [
     {
       "id": "3fb0b4e5-ff5b-816d-9292-c91fdffc72db",
@@ -772,7 +772,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/soshiki/25/11981.html",
       "start": "2026-10-18T10:00",
       "end": "2026-10-18T12:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平町総合センター",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
@@ -787,7 +787,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-18",
       "end": "2026-10-18",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "大歳神社",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨1261",
@@ -1965,21 +1965,6 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町総合センター 1階 集会室 琴平町在住の高校生～20代を対象とした、琴平の未来について考えるワークショップを開催します。琴平町総合センター1階集会室で2時間予定。",
       "fee": "0",
       "organizer": "琴平町企画防災課"
-    },
-    {
-      "id": "3b00b4e5-ff5b-8078-9c86-f2d83ce1759a",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
-      "start": "2026-08-19T12:00",
-      "end": "2026-08-19T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b80789c86f2d83ce1759a.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
