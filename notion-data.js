@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-19 01:05",
+  "fetched": "2026-10-19 08:34",
   "news": [
+    {
+      "id": "3fd0b4e5-ff5b-8113-b87d-e212e568ba3f",
+      "title": "讃果園 SABORES『Voice de GO』の収録取材を受ける",
+      "url": "https://www.instagram.com/p/DeojIARE0wU/?img_index=1",
+      "summary": "山陽放送のグルメ番組『Voice de GO』の収録が行われ、福田アナが訪問。さぬきゴールドのジェラートやソーダーを試食。番組は11月11日午後7時にオンエア予定。",
+      "org": "山陽放送",
+      "media": "テレビ",
+      "date": "2026-10-18",
+      "thumbnail": "assets/thumbs/3fd0b4e5ff5b8113b87de212e568ba3f.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3fb0b4e5-ff5b-816d-9292-c91fdffc72db",
       "title": "２７年春の「四国こんぴら歌舞伎大芝居」に片岡仁左衛門さんの出演が決定",
