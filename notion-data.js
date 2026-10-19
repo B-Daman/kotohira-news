@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-19 08:34",
+  "fetched": "2026-10-20 02:42",
   "news": [
     {
       "id": "3fd0b4e5-ff5b-8113-b87d-e212e568ba3f",
@@ -740,7 +740,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-10-20T20:00",
       "end": "2026-10-20T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -755,7 +755,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-10-20T13:30",
       "end": "2026-10-20T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -770,7 +770,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/news/entry-631.html",
       "start": "2026-10-20T12:00",
       "end": "2026-10-20T16:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "台湾 新北市瑞芳区",
       "place": "",
       "address": "",
@@ -1948,36 +1948,6 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-80d9-827d-d8c76114a920",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-08-20T18:00",
-      "end": "2026-08-20T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b80d9827dd8c76114a920.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
-    },
-    {
-      "id": "3b10b4e5-ff5b-8127-a326-d7c3f2567ba8",
-      "title": "まちづくりワークショップ【若者世代向け・参加者募集】",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/2/11875.html",
-      "start": "2026-08-20T10:30",
-      "end": "2026-08-20T12:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町総合センター",
-      "address": "〒766-0004 香川県仲多度郡琴平町榎井817−9",
-      "image": "assets/thumbs/3b10b4e5ff5b8127a326d7c3f2567ba8.webp",
-      "comment": "会場: 琴平町総合センター 1階 集会室 琴平町在住の高校生～20代を対象とした、琴平の未来について考えるワークショップを開催します。琴平町総合センター1階集会室で2時間予定。",
-      "fee": "0",
-      "organizer": "琴平町企画防災課"
     }
   ],
   "campaigns": [
