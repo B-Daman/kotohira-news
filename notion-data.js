@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-21 02:27",
+  "fetched": "2026-10-22 01:04",
   "news": [
+    {
+      "id": "4000b4e5-ff5b-8187-aec7-df7468989641",
+      "title": "ふるさとチョイスへの不正アクセスに伴う個人情報流出と注意喚起",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/12099.html",
+      "summary": "ふるさと納税ポータルサイト「ふるさとチョイス」を運営する株式会社トラストバンクが不正アクセスを受け、会員情報約445万件が流出したことが公表されました。琴平町は関連サイトへのアクセスができない状況と、パスワード変更や不審なメール警戒を呼びかけています。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-21",
+      "thumbnail": "assets/thumbs/4000b4e5ff5b8187aec7df7468989641.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "3ff0b4e5-ff5b-81a8-b62e-cc0933ed35db",
       "title": "ALL KOTOHIRA ENGLISH PROJECT 企画書",
@@ -310,19 +323,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-10-05",
       "thumbnail": "assets/thumbs/3f00b4e5ff5b8082a52cfac813cbf46d.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f00b4e5-ff5b-81d8-8476-ceb40ead6557",
-      "title": "第３回こんぴら観光まちづくり検定試験",
-      "url": "https://www.kotohirakankou.jp/news/entry-617.html",
-      "summary": "第３回こんぴら観光まちづくり検定試験の申し込みが10月5日から開始されました。試験は11月29日（日）に実施され、初級・中級の2つの受験級があります。",
-      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-10-05",
-      "thumbnail": "assets/thumbs/3f00b4e5ff5b81d88476ceb40ead6557.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -695,7 +695,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
       "start": "2026-10-22T19:00",
       "end": "2026-10-22T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -710,7 +710,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DeJzOLEADgo/",
       "start": "2026-10-22T18:30",
       "end": "2026-10-22T20:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "つるや旅館",
       "address": "766-0001 香川県仲多度郡琴平町620",
@@ -725,7 +725,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/news/entry-631.html",
       "start": "2026-10-21T10:00",
       "end": "2026-10-21T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "台湾 新北市瑞芳区",
       "place": "",
       "address": "",
@@ -1917,36 +1917,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b8020951fe75cf240c5a4.webp",
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
-      "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-80a9-b01d-ce50dddf331a",
-      "title": "第14回 讃岐おでん試作会～夏おでん意見交換回～",
-      "url": "https://did-event.vercel.app/events/cmpwlu8zg0016dui8nwxvoqjf",
-      "start": "2026-08-22T19:00",
-      "end": "2026-08-22T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b80a9b01dce50dddf331a.webp",
-      "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
-      "fee": "2000",
-      "organizer": "讃岐おでんプロジェクト"
-    },
-    {
-      "id": "3b00b4e5-ff5b-805b-9fcc-fa224ff7cbec",
-      "title": "朝うどん巡礼ツアー",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
-      "start": "2026-08-22T07:20",
-      "end": "2026-08-22T09:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b805b9fccfa224ff7cbec.webp",
-      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
-      "fee": "2800",
       "organizer": ""
     }
   ],
