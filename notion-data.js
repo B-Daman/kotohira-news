@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-22 01:04",
+  "fetched": "2026-10-22 19:31",
   "news": [
+    {
+      "id": "4010b4e5-ff5b-8197-83b7-e448eb243783",
+      "title": "セキュリティ対策に伴うホームページメンテナンスのお知らせ",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/12112.html",
+      "summary": "琴平町公式ホームページは、プログラミング言語「PHP」のセキュリティ脆弱性に対応するため、一部機能を一時停止してメンテナンスを実施しています。安全性の確認が完了するまで、メールお問い合わせ、アンケート機能、イベントカレンダーなどのサービスが利用できません。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-22",
+      "thumbnail": "assets/thumbs/4010b4e5ff5b819783b7e448eb243783.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4010b4e5-ff5b-8117-ba87-c2105dad4168",
+      "title": "第4回台湾夜市in琴平",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026102200000001000",
+      "summary": "台湾の食や文化を紹介するイベント「第4回台湾夜市in琴平」が琴平町の金陵の郷で開催される。台湾出身の地域おこし協力隊員が企画した催事で、台湾旅行の気分を味わえる。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-22",
+      "thumbnail": "assets/thumbs/4010b4e5ff5b8117ba87c2105dad4168.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4000b4e5-ff5b-8187-aec7-df7468989641",
       "title": "ふるさとチョイスへの不正アクセスに伴う個人情報流出と注意喚起",
@@ -310,19 +336,6 @@ window.NOTION_DATA = {
       "media": "",
       "date": "2026-10-06",
       "thumbnail": "assets/thumbs/3f10b4e5ff5b80f88655d7e4be1bb333.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f00b4e5-ff5b-8082-a52c-fac813cbf46d",
-      "title": "第4回 台湾夜市 in 琴平",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-282.html",
-      "summary": "台湾グルメ、ステージイベント、コラボ企画などを楽しめるイベント。台湾屋台グルメの出店、電音三太子や二胡の生演奏、台湾観光PRなどが行われる。",
-      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
-      "media": "行政",
-      "date": "2026-10-05",
-      "thumbnail": "assets/thumbs/3f00b4e5ff5b8082a52cfac813cbf46d.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
