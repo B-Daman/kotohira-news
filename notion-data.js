@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-22 19:31",
+  "fetched": "2026-10-23 00:59",
   "news": [
     {
       "id": "4010b4e5-ff5b-8197-83b7-e448eb243783",
@@ -708,7 +708,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
       "start": "2026-10-22T19:00",
       "end": "2026-10-22T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -723,7 +723,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DeJzOLEADgo/",
       "start": "2026-10-22T18:30",
       "end": "2026-10-22T20:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "つるや旅館",
       "address": "766-0001 香川県仲多度郡琴平町620",
