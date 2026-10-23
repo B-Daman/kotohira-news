@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-23 14:14",
+  "fetched": "2026-10-24 00:25",
   "news": [
+    {
+      "id": "4020b4e5-ff5b-8194-b775-f66527e55f59",
+      "title": "JR四国冬の臨時列車運転 金刀比羅宮初詣列車・サンライズ瀬戸延長運転",
+      "url": "https://news.yahoo.co.jp/articles/3c08780e930a72a3edb3de7314c2631c73f2247f",
+      "summary": "JR四国は12月から2月の冬期間、年末年始の帰省に便利な臨時列車を運転する。金刀比羅宮への初詣に便利な臨時普通列車が元日に高松～琴平間で3本運転される。また寝台特急「サンライズ瀬戸」も同期間の金曜日・休前日に琴平駅まで延長運転される。",
+      "org": "OHK岡山放送",
+      "media": "テレビ",
+      "date": "2026-10-23",
+      "thumbnail": "assets/thumbs/4020b4e5ff5b8194b775f66527e55f59.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4020b4e5-ff5b-8199-afc5-ff3ed2e6fcf8",
+      "title": "香川琴平の魅力の新たな発信拠点 「ビームス ジャパン 琴平」が10月31日（土）にオープン",
+      "url": "https://www.pref.kagawa.lg.jp/kensanpin/hanro/beamsjapan20261023.html",
+      "summary": "",
+      "org": "香川県庁",
+      "media": "行政",
+      "date": "2026-10-23",
+      "thumbnail": "assets/thumbs/4020b4e5ff5b8199afc5ff3ed2e6fcf8.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4010b4e5-ff5b-8197-83b7-e448eb243783",
       "title": "セキュリティ対策に伴うホームページメンテナンスのお知らせ",
@@ -297,32 +323,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-10-07T12:00",
       "thumbnail": "assets/thumbs/3f20b4e5ff5b818c98f0f748865e7b37.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f20b4e5-ff5b-813c-a317-e9878f47e9a3",
-      "title": "三豊ドリームカーフェスタ2026（ことひら会場）",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-619.html",
-      "summary": "全国から集まったスーパーカーが琴平に終結するイベント。朝9時に高瀬自動車学校をスタートして中西讃地域を周遊した後、琴平小学校に到着。琴平到着時間は未定。",
-      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-10-07",
-      "thumbnail": "assets/thumbs/3f20b4e5ff5b813ca317e9878f47e9a3.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f10b4e5-ff5b-81f6-a200-eb062d99568c",
-      "title": "金刀比羅宮例大祭",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026100700000002800",
-      "summary": "金刀比羅宮（琴平町）の例大祭が9日から11日まで開催される。10日夜には「みこし渡御」が行われるほか、舞の奉納などの行事が催される。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-10-07",
-      "thumbnail": "assets/thumbs/3f10b4e5ff5b81f6a200eb062d99568c.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -680,7 +680,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdDKu6ahjmA/",
       "start": "2026-10-24T15:00",
       "end": "2026-10-24T20:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
