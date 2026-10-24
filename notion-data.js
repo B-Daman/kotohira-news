@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-24 13:56",
+  "fetched": "2026-10-25 02:32",
   "news": [
     {
       "id": "4030b4e5-ff5b-8175-a885-d396b3f45015",
@@ -676,7 +676,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DeExJGbREmz/",
       "start": "2026-10-25T14:00",
       "end": "2026-10-25T16:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "琴平町公会堂",
       "address": "〒766-0001 香川県仲多度郡琴平町975−1",
@@ -691,7 +691,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-620.html",
       "start": "2026-10-25",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "石井八幡宮",
       "address": "〒766-0005 香川県仲多度郡琴平町苗田932-1",
@@ -706,7 +706,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdDKu6ahjmA/",
       "start": "2026-10-24T15:00",
       "end": "2026-10-24T20:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -1928,21 +1928,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3b00b4e5ff5b80c9befcccf0fd3d7692.webp",
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-8020-951f-e75cf240c5a4",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-08-25T20:00",
-      "end": "2026-08-25T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b8020951fe75cf240c5a4.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
       "organizer": ""
     }
   ],
