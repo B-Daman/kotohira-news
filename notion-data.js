@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-24 00:25",
+  "fetched": "2026-10-24 13:56",
   "news": [
+    {
+      "id": "4030b4e5-ff5b-8175-a885-d396b3f45015",
+      "title": "第2弾街ガチャin琴平町 販売開始",
+      "url": "https://www.shikoku-np.co.jp/dg/amp/article.aspx?id=K2026102400000003700",
+      "summary": "善通寺一高校の生徒が琴平町内の観光名所や琴平らしい意匠をカプセルトイにした「第2弾街ガチャin琴平町」の販売が10月23日にスタート。町内の名物や名店の看板など11種類のチャームを用意している。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-24",
+      "thumbnail": "assets/thumbs/4030b4e5ff5b8175a885d396b3f45015.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4030b4e5-ff5b-8168-bcb2-e002080d1021",
+      "title": "第４回台湾夜市 in 琴平",
+      "url": "https://www.kotohirakankou.jp/news/entry-639.html",
+      "summary": "琴平町の金陵の郷で台湾夜市が開催されます。台湾グルメや文化体験が楽しめる秋の定例行事で、入場料は無料です。",
+      "org": "琴平まるごとNavi / こんぴら観光まちづくり協会",
+      "media": "Webメディア",
+      "date": "2026-10-24",
+      "thumbnail": "assets/thumbs/4030b4e5ff5b8168bcb2e002080d1021.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4020b4e5-ff5b-8194-b775-f66527e55f59",
       "title": "JR四国冬の臨時列車運転 金刀比羅宮初詣列車・サンライズ瀬戸延長運転",
