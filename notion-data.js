@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-25 23:32",
+  "fetched": "2026-10-26 03:32",
   "news": [
     {
       "id": "4040b4e5-ff5b-81fa-8184-fc4c329ba366",
@@ -749,7 +749,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DeRPJtctLuk/",
       "start": "2026-10-26T17:00",
       "end": "2026-10-26T22:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "呑象ブリューイング",
       "address": "香川県仲多度郡琴平町182-2",
@@ -764,7 +764,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DeExJGbREmz/",
       "start": "2026-10-25T14:00",
       "end": "2026-10-25T16:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平町公会堂",
       "address": "〒766-0001 香川県仲多度郡琴平町975−1",
@@ -779,7 +779,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-620.html",
       "start": "2026-10-25",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "石井八幡宮",
       "address": "〒766-0005 香川県仲多度郡琴平町苗田932-1",
@@ -1214,7 +1214,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-528.html",
       "start": "2026-10-03",
       "end": "2026-10-25",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2002,21 +2002,6 @@ window.NOTION_DATA = {
       "comment": "会場: 海の科学館（琴平海洋博物館）、琴平町953番地 琴平町の「ことひらまちじゅう図書館」主催による勉強会。海の科学館（琴平海洋博物館）の館長による説明と、和船のペーパークラフトプレゼントがある。",
       "fee": "0",
       "organizer": "ことひらまちじゅう図書館"
-    },
-    {
-      "id": "3b00b4e5-ff5b-80c9-befc-ccf0fd3d7692",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=3",
-      "start": "2026-08-26T12:00",
-      "end": "2026-08-26T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b80c9befcccf0fd3d7692.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": ""
     }
   ],
   "campaigns": [
