@@ -3,20 +3,16 @@
    history は直近7日の観測ごとの貯水率（サイトの推移グラフ用・古い順）。 */
 window.DAM_DATA = {
   "name": "早明浦ダム",
-  "observedAt": "2026-10-25T22:00",
-  "rate": 34.2,
+  "observedAt": "2026-10-26T08:00",
+  "rate": 34.4,
   "rateLabel": "貯水率",
-  "storage": 75070.0,
+  "storage": 75440.0,
   "storageUnit": "千m³",
-  "inflow": 13.17,
+  "inflow": 6.43,
   "outflow": 0.0,
-  "fetchedAt": "2026-10-25 23:03",
+  "fetchedAt": "2026-10-26 08:56",
   "sourceUrl": "https://www1.river.go.jp/cgi-bin/DspDamData.exe?ID=1368080700010&KIND=3&PAGE=0",
   "history": [
-    {
-      "t": "2026-10-19T08:00",
-      "rate": 30.5
-    },
     {
       "t": "2026-10-20T01:00",
       "rate": 31.0
@@ -68,6 +64,10 @@ window.DAM_DATA = {
     {
       "t": "2026-10-25T22:00",
       "rate": 34.2
+    },
+    {
+      "t": "2026-10-26T08:00",
+      "rate": 34.4
     }
   ]
 };
