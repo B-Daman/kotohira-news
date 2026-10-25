@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-25 02:32",
+  "fetched": "2026-10-25 23:32",
   "news": [
+    {
+      "id": "4040b4e5-ff5b-81fa-8184-fc4c329ba366",
+      "title": "ことウラさんぽ モニター参加者募集",
+      "url": "https://www.instagram.com/p/DerDE-6kUdE/",
+      "summary": "香川大学地域マネジメント研究科による琴平町の実証実験プロジェクト。参加者は事前に琴平文具店でカスタマイズしたノートを受け取り、琴平のB面（知られざる魅力）を街歩きしながらノートに記録し、最後に感想をシェアする体験イベント。参加費無料、3000円相当の特製ノートをプレゼント。",
+      "org": "香川大学大学院 地域マネジメント研究科",
+      "media": "Webメディア",
+      "date": "2026-10-25",
+      "thumbnail": "assets/thumbs/4040b4e5ff5b81fa8184fc4c329ba366.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4040b4e5-ff5b-81ba-9464-ed2e00037de7",
+      "title": "第52回ことひら社協チャリティー作品即売展（Bazar）",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-519.html",
+      "summary": "琴平町の冬の一大イベント。チャリティー作品の即売会が12月5日（土）と6日（日）に琴平町役場前駐車場と琴平町総合センターで開催される。",
+      "org": "琴平まるごとNavi（こんぴら観光まちづくり協会）",
+      "media": "Webメディア",
+      "date": "2026-10-25",
+      "thumbnail": "assets/thumbs/4040b4e5ff5b81ba9464ed2e00037de7.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4030b4e5-ff5b-8175-a885-d396b3f45015",
       "title": "第2弾街ガチャin琴平町 販売開始",
@@ -76,6 +102,19 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-10-22",
       "thumbnail": "assets/thumbs/4010b4e5ff5b8117ba87c2105dad4168.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4040b4e5-ff5b-8171-a96c-e6adf0166187",
+      "title": "七五三スペシャルイベント撮影会",
+      "url": "https://www.instagram.com/p/DewCVaYoE_g/",
+      "summary": "12/5に開催される藤田屋・MIYUKI・蔵六写真館による1日限定の七五三撮影イベント。金陵の郷周辺（琴平）の風情ある街並みでお着物・ヘアメイク・撮影を楽しめます。",
+      "org": "Instagram（kura_roku）",
+      "media": "Webメディア",
+      "date": "2026-10-21",
+      "thumbnail": "assets/thumbs/4040b4e5ff5b8171a96ce6adf0166187.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -326,32 +365,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3f20b4e5-ff5b-81f5-a07c-c9f56cdc8d89",
-      "title": "琴平町 琴平町文化会館改修 真鍋に設計委託 - 建通新聞",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYVlGUlp3bFFGSWE3eEItS1VKdG5SRGx2Qk45NTgtT1AtcnB1dFRCeGlKa3hyMEJJYnkzbDdHckM1TWxYZERZUmNKTVRqMXh3VEg0NVg2QWc0Rm5WYzNKbUVPU1I3Nk5NdVcxT0pRd09DNUdUcGVHaTdQSXlNVVE3Ng?oc=5",
-      "summary": "琴平町文化会館の改修工事に向けて、設計業務を真鍋令建築設計事務所に委託する。空調設備の更新と照明設備のLED化を主な内容とし、設計納期は2027年3月19日、早ければ27年度に工事実施予定。",
-      "org": "建通新聞",
-      "media": "新聞",
-      "date": "2026-10-08",
-      "thumbnail": "assets/thumbs/3f20b4e5ff5b81f5a07cc9f56cdc8d89.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f20b4e5-ff5b-818c-98f0-f748865e7b37",
-      "title": "【限定40枠】金刀比羅宮参道365段　石段オーナー権",
-      "url": "https://tokken.alyawmu.com/product/bbe7c1de-2c0c-4af6-9754-ed3bf9fac3e9",
-      "summary": "金刀比羅宮参道の石段1〜365段から希望番号を選択し、個人名または法人名を5年間掲示できる記名権の販売。限定40枠。申込期間は2026年10月7日〜11月20日。",
-      "org": "TOKKEN",
-      "media": "Webメディア",
-      "date": "2026-10-07T12:00",
-      "thumbnail": "assets/thumbs/3f20b4e5ff5b818c98f0f748865e7b37.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -431,6 +444,21 @@ window.NOTION_DATA = {
       "organizer": "こんぴら路地裏着物レンタル藤田屋"
     },
     {
+      "id": "4040b4e5-ff5b-80c0-96f6-e86fe97f5fc0",
+      "title": "第52回ことひら社協チャリティー作品即売展（Bazar）2日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-519.html",
+      "start": "2026-12-06T09:00",
+      "end": "2026-12-06T16:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町役場",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817-10",
+      "image": "assets/thumbs/4040b4e5ff5b80c096f6e86fe97f5fc0.webp",
+      "comment": "会場: 琴平町役場前駐車場、琴平町総合センター 琴平町の冬の一大イベント。チャリティー作品の即売会が12月5日（土）と6日（日）に琴平町役場前駐車場と琴平町総合センターで開催される。",
+      "fee": "",
+      "organizer": "ことひら社協"
+    },
+    {
       "id": "3ef0b4e5-ff5b-8189-aaa3-fc69d9b48512",
       "title": "コミュニティリーダーズサミット in 琴平 2026（第1回 CLS琴平）",
       "url": "https://clskotohira01.peatix.com/",
@@ -444,6 +472,36 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平 地域課題の解決に取り組むコミュニティリーダーが集まるサミット。点から線へ、人から人へつながる交流の場として、琴平で開催される。",
       "fee": "3000",
       "organizer": ""
+    },
+    {
+      "id": "4040b4e5-ff5b-8155-b7e8-d9deb9bc94aa",
+      "title": "七五三スペシャルイベント撮影会 in こんぴら",
+      "url": "https://www.instagram.com/p/DewCVaYoE_g/",
+      "start": "2026-12-05",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/4040b4e5ff5b8155b7e8d9deb9bc94aa.webp",
+      "comment": "会場: 金陵の郷周辺（琴平） 藤田屋・MIYUKI・蔵六写真館がコラボした、1日限定の七五三撮影会。琴平の金陵の郷周辺で、着物レンタル・着付け・ヘアメイク・撮影がセットになったプランを提供する。",
+      "fee": "42000",
+      "organizer": "藤田屋・MIYUKI・蔵六写真館"
+    },
+    {
+      "id": "4040b4e5-ff5b-8127-baaf-cec8df2164fc",
+      "title": "第52回ことひら社協チャリティー作品即売展（Bazar）1日目",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-519.html",
+      "start": "2026-12-05T09:00",
+      "end": "2026-12-05T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平町役場",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井817-10",
+      "image": "assets/thumbs/4040b4e5ff5b8127baafcec8df2164fc.webp",
+      "comment": "会場: 琴平町役場前駐車場、琴平町総合センター 琴平町の冬の一大イベント。チャリティー作品の即売会が12月5日（土）と6日（日）に琴平町役場前駐車場と琴平町総合センターで開催される。",
+      "fee": "",
+      "organizer": "ことひら社協"
     },
     {
       "id": "3ea0b4e5-ff5b-80d7-8b2f-cb8e463b9dba",
@@ -474,6 +532,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町商工会館 一般社団法人こんぴら観光まちづくり協会が主催する第3回検定試験。琴平町の歴史・文化・観光資源に関する初級・中級の2つの受験級を実施する。合格者は協会認定ガイド登録への道が開ける。",
       "fee": "3300",
       "organizer": "一般社団法人こんぴら観光まちづくり協会"
+    },
+    {
+      "id": "4040b4e5-ff5b-81dd-966f-f167c6fef95d",
+      "title": "ことウラさんぽ モニター参加者募集",
+      "url": "https://www.instagram.com/p/DerDE-6kUdE/",
+      "start": "2026-11-29T10:00",
+      "end": "2026-11-29T13:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/4040b4e5ff5b81dd966ff167c6fef95d.webp",
+      "comment": "会場: 香川県琴平町（詳細は当選者へご案内） 香川大学地域マネジメント研究科による琴平町の実証実験プロジェクト。参加者は事前に琴平文具店でカスタマイズしたノートを受け取り、琴平のB面（知られざる魅力）を街歩きしながらノートに記録し、最後に感想をシェアする体験イベント。参加費無料、3000円相当の特製ノートをプレゼント。",
+      "fee": "0",
+      "organizer": "香川大学大学院 地域マネジメント研究科"
     },
     {
       "id": "3f00b4e5-ff5b-8179-9d03-f6094a4c4e3a",
@@ -624,6 +697,21 @@ window.NOTION_DATA = {
       "comment": "琴平町の一之橋公園で防災と住教育を学べるファミリア向けイベント。輪投げやスーパーボールすくい、パトカー展示、空き家相談会、ハンディライト作り体験などが行われる。入場無料。",
       "fee": "0",
       "organizer": "全国空き家アドバイザー協議会琴平支部・まんのう支部"
+    },
+    {
+      "id": "4040b4e5-ff5b-8150-806d-cf14daab6de3",
+      "title": "果桜軒 秋のワイン会",
+      "url": "https://www.instagram.com/p/De068n9MT3j/",
+      "start": "2026-10-30T18:30",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "ことひら 果桜軒",
+      "address": "〒766-0002 香川県 仲多度郡琴平町266",
+      "image": "assets/thumbs/4040b4e5ff5b8150806dcf14daab6de3.webp",
+      "comment": "会場: 黒桜軒（KAOHKEN） 黒桜軒で開催される秋のワイン会。美味しい料理とワイン4種類、ソフトドリンク飲み放題でお楽しみいただけます。",
+      "fee": "8800",
+      "organizer": "黒桜軒"
     },
     {
       "id": "3f40b4e5-ff5b-80e3-af30-f76bfc7db50d",
@@ -1933,6 +2021,21 @@ window.NOTION_DATA = {
   ],
   "campaigns": [
     {
+      "id": "4040b4e5-ff5b-819b-959d-c7bd63cde01b",
+      "title": "Happy Halloween！ご宿泊のお客様へハロウィンお菓子プレゼント",
+      "url": "https://www.instagram.com/p/Detj4TWDwtL/?img_index=1",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "UDON na HOTEL 琴平",
+      "address": "〒766-0001 香川県仲多度郡琴平町字川西 796-1",
+      "image": "assets/thumbs/4040b4e5ff5b819b959dc7bd63cde01b.webp",
+      "comment": "会場: UDON na HOTEL 琴平 UDON na HOTEL 琴平では館内をハロウィン装飾で飾り、10月31日にご宿泊のお客様へハロウィンのお菓子をプレゼントするキャンペーンを開催中。",
+      "fee": "",
+      "organizer": "UDON na HOTEL 琴平"
+    },
+    {
       "id": "3f80b4e5-ff5b-8161-a731-ef05c8d226d5",
       "title": "琴平町電子地域通貨コトカ 5%ポイントアップキャンペーン",
       "url": "https://www.instagram.com/p/Dea9f4UEST0/",
@@ -2106,6 +2209,12 @@ window.NOTION_DATA = {
         "facebook": ""
       },
       "instagram": [
+        "https://www.instagram.com/reel/DewMp6TTi2j/",
+        "https://www.instagram.com/reel/Detn0SqTpJ-/",
+        "https://www.instagram.com/reel/DeqPjvgzTys/",
+        "https://www.instagram.com/reel/DeoePHoKvQ6/",
+        "https://www.instagram.com/reel/Del5cbAz0uM/",
+        "https://www.instagram.com/reel/DejUpGIT3gA/",
         "https://www.instagram.com/p/DeX_tskPLrC/",
         "https://www.instagram.com/p/DeV8jS8EUvC/?img_index=9",
         "https://www.instagram.com/p/DeJ9o5YjzpO/?img_index=1",
