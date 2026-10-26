@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-26 17:03",
+  "fetched": "2026-10-27 00:24",
   "news": [
     {
       "id": "4050b4e5-ff5b-81ea-9d72-ece21a835a01",
@@ -734,7 +734,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-10-27T20:00",
       "end": "2026-10-27T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -749,7 +749,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DeRPJtctLuk/",
       "start": "2026-10-26T17:00",
       "end": "2026-10-26T22:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "呑象ブリューイング",
       "address": "香川県仲多度郡琴平町182-2",
@@ -1972,36 +1972,6 @@ window.NOTION_DATA = {
       "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "500",
       "organizer": "Kotori Coworking & Hostel Kotohira"
-    },
-    {
-      "id": "3b00b4e5-ff5b-801c-9945-c88d04c2172d",
-      "title": "もくもくAI作業会（ことひらAI会）",
-      "url": "https://discord.com/events/1303754853855793263/1522072865883557958",
-      "start": "2026-08-27T18:00",
-      "end": "2026-08-27T19:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3b00b4e5ff5b801c9945c88d04c2172d.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "地域おこし協力隊 あっきー"
-    },
-    {
-      "id": "3b00b4e5-ff5b-81da-a62d-d10ff71521d3",
-      "title": "ことひらまちじゅう勉強会①～海の化学館（琴平海洋博物館）に行ってみよう！",
-      "url": "https://www.instagram.com/p/DbfDCfxkxR-/",
-      "start": "2026-08-27T09:30",
-      "end": "2026-08-27T10:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "海の科学館",
-      "address": "〒766-0001 香川県仲多度郡琴平町953番地",
-      "image": "assets/thumbs/3b00b4e5ff5b81daa62dd10ff71521d3.webp",
-      "comment": "会場: 海の科学館（琴平海洋博物館）、琴平町953番地 琴平町の「ことひらまちじゅう図書館」主催による勉強会。海の科学館（琴平海洋博物館）の館長による説明と、和船のペーパークラフトプレゼントがある。",
-      "fee": "0",
-      "organizer": "ことひらまちじゅう図書館"
     }
   ],
   "campaigns": [
