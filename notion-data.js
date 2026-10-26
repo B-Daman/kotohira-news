@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-26 03:32",
+  "fetched": "2026-10-26 17:03",
   "news": [
+    {
+      "id": "4050b4e5-ff5b-81ea-9d72-ece21a835a01",
+      "title": "広報ことひら11月号",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/12119.html",
+      "summary": "琴平町の公式広報誌2026年11月号（vol.591）が公開されました。PDFファイルで町からのお知らせや情報が掲載されています。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-26",
+      "thumbnail": "assets/thumbs/4050b4e5ff5b81ea9d72ece21a835a01.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4050b4e5-ff5b-81c2-88d3-f6dc7e22291e",
+      "title": "「石段オーナー」大人気、金刀比羅宮参道2日で完売",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026102600000002400",
+      "summary": "琴平町が金刀比羅宮へ向かう石段に個人や法人の名前を掲示できる「石段オーナー権利」を販売し、受け付けた40枠がわずか2日で完売した。5万円で5年間の記名権が得られる。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-26",
+      "thumbnail": "assets/thumbs/4050b4e5ff5b81c288d3f6dc7e22291e.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4040b4e5-ff5b-81fa-8184-fc4c329ba366",
       "title": "ことウラさんぽ モニター参加者募集",
@@ -336,32 +362,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-10-08",
       "thumbnail": "assets/thumbs/3f40b4e5ff5b816490b0d55297d7e2dc.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f30b4e5-ff5b-810e-b3a1-f68e5b89dfdb",
-      "title": "高松琴平電気鉄道、新型車「2000形」導入",
-      "url": "https://www.sanyonews.jp/article/2001631",
-      "summary": "高松琴平電気鉄道が新型車「2000形」を導入した。瀬戸内海や空をイメージした鮮やかな青色を基調としたデザインで、2編成計4両が琴平線と長尾線を走る。66年ぶりの新型車導入である。",
-      "org": "山陽新聞デジタル",
-      "media": "新聞",
-      "date": "2026-10-08",
-      "thumbnail": "assets/thumbs/3f30b4e5ff5b810eb3a1f68e5b89dfdb.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f30b4e5-ff5b-8165-9609-f93f061b1715",
-      "title": "令和8年度職員採用試験　高校卒業程度（第1次試験）の合格者について",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/4/12072.html",
-      "summary": "琴平町が令和8年9月20日に実施した職員採用試験（高校卒業程度）の第1次試験合格者を発表した。一般行政、一般行政（障がい者）、建築、技能労務（清掃）の区分で合格者を決定した。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-10-08",
-      "thumbnail": "assets/thumbs/3f30b4e5ff5b81659609f93f061b1715.png",
       "duplicate": false,
       "pickup": false,
       "show": true
