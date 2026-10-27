@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-27 09:42",
+  "fetched": "2026-10-28 04:34",
   "news": [
     {
       "id": "4050b4e5-ff5b-81ea-9d72-ece21a835a01",
@@ -721,7 +721,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-10-27T20:00",
       "end": "2026-10-27T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -1944,21 +1944,6 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": ""
-    },
-    {
-      "id": "3b00b4e5-ff5b-800d-87ce-e92fd8fdeee0",
-      "title": "ご飯ついでに、国際交流～みんなでカレーを囲みながら世界の人たちと気軽に交流",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=5",
-      "start": "2026-08-28T18:30",
-      "end": "2026-08-28T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3b00b4e5ff5b800d87cee92fd8fdeee0.webp",
-      "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
-      "fee": "500",
-      "organizer": "Kotori Coworking & Hostel Kotohira"
     }
   ],
   "campaigns": [
