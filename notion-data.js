@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-28 16:16",
+  "fetched": "2026-10-28 23:22",
   "news": [
+    {
+      "id": "4070b4e5-ff5b-8174-b58f-ff58d7620760",
+      "title": "1070形1073×1074号引退記念イベント",
+      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
+      "summary": "琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
+      "org": "琴電（高松琴平電気鉄道）",
+      "media": "Webメディア",
+      "date": "2026-11-14",
+      "thumbnail": "assets/thumbs/4070b4e5ff5b8174b58fff58d7620760.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4070b4e5-ff5b-8151-ab73-eb3ffa171c28",
+      "title": "琴平町と善通寺市の観光協会が連携協定を締結",
+      "url": "https://news.ksb.co.jp/article/17000348",
+      "summary": "琴平町の「こんぴら観光まちづくり協会」と善通寺市観光協会が28日、観光振興を目的とした連携協定を結びました。共同で観光プロモーション情報の発信と、両地域の特産品を活用した新たな土産物の開発を行います。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-10-28",
+      "thumbnail": "assets/thumbs/4070b4e5ff5b8151ab73eb3ffa171c28.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4070b4e5-ff5b-8135-920c-f269b1983969",
       "title": "寝台特急「サンライズ瀬戸」2026年秋冬の琴平延長運転",
@@ -326,45 +352,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3f40b4e5-ff5b-811b-b522-f35268fd57bc",
-      "title": "金刀比羅宮に続く参道に自分の名前刻む「石段オーナー権利」４０段分が早くも定員に【香川・琴平町】 - OHK 岡山放送",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9aeG1zekRUcmxWY3JCR2kwT0lraGg2QlRmMzZQVmJONWtMOXRXMmVtSE8zbVdUbEdiS1VGZmdieGFHcThjVHhqSFNtT29TYzlYd2k3UU5pVklnMzAxbkNITHMwbHQ?oc=5",
-      "summary": "琴平町が金刀比羅宮の参道の石段に自分の名前を5年間刻む「石段オーナー権利」の販売を10月7日に開始した。1回目の募集は40段限定で、わずか27時間で定員に達した。価格は5万円で、購入者にはデジタル証明書が発行される。",
-      "org": "OHK 岡山放送",
-      "media": "テレビ",
-      "date": "2026-10-09",
-      "thumbnail": "assets/thumbs/3f40b4e5ff5b811bb522f35268fd57bc.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f40b4e5-ff5b-812e-890d-ee6f66e6b74c",
-      "title": "ことひら由加山交流行事参加者募集",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-622.html",
-      "summary": "琴平町にゆかりのある町民・在勤・在学者を対象とした「ことひら由加山火渡り大祭交流行事」の参加者募集。こんぴらさんと由加山の両参り文化や歴史的な繋がりを再発見する交流の機会。先着30名、参加費3,000円。",
-      "org": "こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-10-09",
-      "thumbnail": "assets/thumbs/3f40b4e5ff5b812e890dee6f66e6b74c.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f40b4e5-ff5b-8197-8e45-c390d4a870ba",
-      "title": "令和８年度金刀比羅宮例大祭関連行事情報",
-      "url": "https://www.kotohirakankou.jp/news/entry-621.html",
-      "summary": "令和８年度の金刀比羅宮例大祭に関連する行事情報が観光協会ホームページに掲載された。御神輿渡御が行われる10月10日19時以降は町内各地で交通規制が実施される。",
-      "org": "こんぴら観光まちづくり協会",
-      "media": "Webメディア",
-      "date": "2026-10-09",
-      "thumbnail": "assets/thumbs/3f40b4e5ff5b81978e45c390d4a870ba.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -594,6 +581,36 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "4070b4e5-ff5b-8033-bc82-ef0003dc545c",
+      "title": "1070形1073×1074号引退記念イベント 連結相手組み換え 不協和音満喫ツアー",
+      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/4070b4e5ff5b8033bc82ef0003dc545c.webp",
+      "comment": "会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
+      "fee": "30000",
+      "organizer": "琴電運輸サービス部・地域開発部"
+    },
+    {
+      "id": "4070b4e5-ff5b-80d4-8b16-e4dd41a6325f",
+      "title": "1070形1073×1074号引退記念イベント 1070形4両編成乗車 & 全車両録音ツアー",
+      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/4070b4e5ff5b80d48b16e4dd41a6325f.webp",
+      "comment": "会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
+      "fee": "20000",
+      "organizer": "琴電運輸サービス部・地域開発部"
+    },
+    {
       "id": "3ea0b4e5-ff5b-806e-940b-e1af3307618f",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -607,6 +624,21 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": ""
+    },
+    {
+      "id": "4070b4e5-ff5b-81c6-983c-dce39c5878ae",
+      "title": "1070形1073×1074号引退記念イベント 定期列車最終運用 + 記念きっぷ発売 + 公募写真展開催",
+      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/4070b4e5ff5b81c6983cdce39c5878ae.webp",
+      "comment": "会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
+      "fee": "",
+      "organizer": "琴電運輸サービス部・地域開発部"
     },
     {
       "id": "3ea0b4e5-ff5b-8099-901d-c987214c2815",
