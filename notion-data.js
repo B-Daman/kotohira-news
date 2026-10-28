@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-28 04:34",
+  "fetched": "2026-10-28 16:16",
   "news": [
+    {
+      "id": "4070b4e5-ff5b-8135-920c-f269b1983969",
+      "title": "寝台特急「サンライズ瀬戸」2026年秋冬の琴平延長運転",
+      "url": "https://news.livedoor.com/article/detail/32674188/",
+      "summary": "寝台特急「サンライズ瀬戸」が2026年秋（10月30日～11月28日発の12本）と冬期（12月～2027年2月の30本）に琴平駅まで延長運転される。東京駅21時26分発で翌朝8時39分に琴平着となり、金刀比羅宮参拝や讃岐うどんが楽しめる。",
+      "org": "ライブドアニュース",
+      "media": "Webメディア",
+      "date": "2026-10-28",
+      "thumbnail": "assets/thumbs/4070b4e5ff5b8135920cf269b1983969.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4050b4e5-ff5b-81ea-9d72-ece21a835a01",
       "title": "広報ことひら11月号",
