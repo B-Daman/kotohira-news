@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-29 04:47",
+  "fetched": "2026-10-29 16:36",
   "news": [
     {
       "id": "4070b4e5-ff5b-8174-b58f-ff58d7620760",
@@ -336,19 +336,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-10-11",
       "thumbnail": "assets/thumbs/3f60b4e5ff5b817fb0baf61476dd7c90.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f40b4e5-ff5b-81b3-82ce-f18cd2a321e8",
-      "title": "琴電、車内に飾る「つり革絵馬」を販売　半年後こんぴらさんに奉納",
-      "url": "https://www.nikkei.com/article/DGXZQOCC0684S0W6A001C2000000/",
-      "summary": "高松琴平電気鉄道が列車内に飾る「つり革絵馬」の販売を始めた。購入者が記入した願い事を琴平線のラッピング車両「しあわせさん。こんぴらさん。」号に6カ月間設置した後、金刀比羅宮に奉納する。1枠1万2000円、上限60枠で10月末まで応募受付。",
-      "org": "日本経済新聞",
-      "media": "新聞",
-      "date": "2026-10-09",
-      "thumbnail": "assets/thumbs/3f40b4e5ff5b81b382cef18cd2a321e8.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
