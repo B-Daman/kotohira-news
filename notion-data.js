@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-29 16:36",
+  "fetched": "2026-10-30 00:28",
   "news": [
     {
       "id": "4070b4e5-ff5b-8174-b58f-ff58d7620760",
@@ -723,7 +723,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/De068n9MT3j/",
       "start": "2026-10-30T18:30",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "ことひら 果桜軒",
       "address": "〒766-0002 香川県 仲多度郡琴平町266",
@@ -738,7 +738,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DeQj2igEdrF/",
       "start": "2026-10-30T18:30",
       "end": "2026-10-30T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
