@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-30 10:18",
+  "fetched": "2026-10-30 16:40",
   "news": [
+    {
+      "id": "4090b4e5-ff5b-8111-95a3-c89ed0b559e7",
+      "title": "入札参加資格審査申請を電子化します",
+      "url": "https://www.town.kotohira.kagawa.jp/site/nyusatukeiyaku/12128.html",
+      "summary": "琴平町が令和9・10年度登録分から、入札参加資格審査申請を紙申請から電子申請へ変更する。申請受付期間は令和9年1月中旬から2月末までを予定し、詳細は12月中旬頃にホームページで公表予定。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-30",
+      "thumbnail": "assets/thumbs/4090b4e5ff5b811195a3c89ed0b559e7.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4090b4e5-ff5b-8169-875d-c7039052839f",
+      "title": "イノシシ出没注意！",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/9/1068.html",
+      "summary": "琴平町内でイノシシの目撃・被害情報が増加しており、特に10月から12月の繁殖期前に市街地への出没が増える時期である。イノシシに遭遇した際の対応方法と、出会わないための予防策、被害防止策が説明されている。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-10-30",
+      "thumbnail": "assets/thumbs/4090b4e5ff5b8169875dc7039052839f.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4090b4e5-ff5b-8126-814b-ca4eb25aca7a",
       "title": "台湾グルメ、二胡演奏満喫　琴平で夜市　地域おこし隊ら企画",
