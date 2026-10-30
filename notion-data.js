@@ -1,16 +1,16 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-30 00:28",
+  "fetched": "2026-10-30 10:18",
   "news": [
     {
-      "id": "4070b4e5-ff5b-8174-b58f-ff58d7620760",
-      "title": "1070形1073×1074号引退記念イベント",
-      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
-      "summary": "琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
-      "org": "琴電（高松琴平電気鉄道）",
-      "media": "Webメディア",
-      "date": "2026-11-14",
-      "thumbnail": "assets/thumbs/4070b4e5ff5b8174b58fff58d7620760.webp",
+      "id": "4090b4e5-ff5b-8126-814b-ca4eb25aca7a",
+      "title": "台湾グルメ、二胡演奏満喫　琴平で夜市　地域おこし隊ら企画",
+      "url": "https://www.shikoku-np.co.jp/dg/amp/article.aspx?id=K2026103000000001300",
+      "summary": "台湾の食や文化を体験する「台湾夜市in琴平」が琴平町の金陵の郷で開催された。台湾グルメや伝統楽器の二胡演奏などが行われ、大勢の観光客が参加した。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-30",
+      "thumbnail": "assets/thumbs/4090b4e5ff5b8126814bca4eb25aca7a.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -24,6 +24,19 @@ window.NOTION_DATA = {
       "media": "テレビ",
       "date": "2026-10-28",
       "thumbnail": "assets/thumbs/4070b4e5ff5b8151ab73eb3ffa171c28.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4070b4e5-ff5b-8174-b58f-ff58d7620760",
+      "title": "1070形1073×1074号引退記念イベント",
+      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
+      "summary": "琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
+      "org": "琴電（高松琴平電気鉄道）",
+      "media": "Webメディア",
+      "date": "2026-10-28",
+      "thumbnail": "assets/thumbs/4070b4e5ff5b8174b58fff58d7620760.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
