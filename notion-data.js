@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-31 22:49",
+  "fetched": "2026-11-01 03:41",
   "news": [
     {
       "id": "40a0b4e5-ff5b-819b-adb7-dc7ddd0305ed",
@@ -786,7 +786,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DdivoGryVr0/",
       "start": "2026-10-31T10:00",
       "end": "2026-10-31T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -1949,21 +1949,6 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": ""
-    },
-    {
-      "id": "3cd0b4e5-ff5b-80c1-8a4c-e198e9ff817c",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-09-01T20:00",
-      "end": "2026-09-01T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3cd0b4e5ff5b80c18a4ce198e9ff817c.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": ""
     }
   ],
   "campaigns": [
@@ -1973,7 +1958,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Detj4TWDwtL/?img_index=1",
       "start": "2026-10-31",
       "end": "2026-10-31",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "UDON na HOTEL 琴平",
       "address": "〒766-0001 香川県仲多度郡琴平町字川西 796-1",
@@ -1988,7 +1973,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dea9f4UEST0/",
       "start": "2026-10-01",
       "end": "2026-10-31",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2086,21 +2071,6 @@ window.NOTION_DATA = {
       "comment": "フジテレビの「めざましじゃんけん」の週間プレゼントに琴平町の特産品セットが登場。五人百姓 池商店がセレクトしたうどん、にんにく商品、恵みのあめなどを詰め合わせたセット。",
       "fee": "",
       "organizer": "五人百姓 池商店"
-    },
-    {
-      "id": "3d00b4e5-ff5b-8108-bb8e-e933a53410e9",
-      "title": "台湾フェア 2026年9月",
-      "url": "https://www.instagram.com/p/Dcvjuvcj0V3/?img_index=1",
-      "start": "2026-09-01",
-      "end": "2026-09-30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3d00b4e5ff5b8108bb8ee933a53410e9.webp",
-      "comment": "会場: 琴平町内（DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA） 琴平町のKOTOVEGAS（DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA）で台湾をテーマにした期間限定フェアを開催。台湾パイナップルを使用したメニューや台湾スイーツが提供される。",
-      "fee": "480",
-      "organizer": "DONZO Brewing、Bagel House KOTOHIRA、The TeaRoom KOTOHIRA"
     },
     {
       "id": "3870b4e5-ff5b-817c-ac71-ce40e60cd1e2",
