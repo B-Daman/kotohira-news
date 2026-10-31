@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-31 16:26",
+  "fetched": "2026-10-31 22:49",
   "news": [
     {
       "id": "40a0b4e5-ff5b-819b-adb7-dc7ddd0305ed",
@@ -414,19 +414,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-10-14",
       "thumbnail": "assets/thumbs/3f90b4e5ff5b81429f16cbf794896fd9.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f70b4e5-ff5b-81f7-bc87-d091402d2e1b",
-      "title": "ジーーーンと四国！しこくーるフォトコンテスト 秋期募集",
-      "url": "https://news.ksb.co.jp/article/16958376",
-      "summary": "四国ツーリズム創造機構が四国の秋らしい風景やスポットの写真を募集するフォトコンテストを開催。12月10日まで作品を募集し、グランプリには「JTBトラベルギフト10万円」が贈られる。",
-      "org": "KSB瀬戸内海放送",
-      "media": "テレビ",
-      "date": "2026-10-12",
-      "thumbnail": "assets/thumbs/3f70b4e5ff5b81f7bc87d091402d2e1b.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
