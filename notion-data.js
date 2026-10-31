@@ -1,7 +1,46 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-10-31 00:15",
+  "fetched": "2026-10-31 16:26",
   "news": [
+    {
+      "id": "40a0b4e5-ff5b-819b-adb7-dc7ddd0305ed",
+      "title": "金刀比羅宮例大祭で献馬式　熊沢元騎手が神馬を引く",
+      "url": "https://www.47news.jp/15164778.html",
+      "summary": "琴平町の金刀比羅宮例大祭で行われた献馬式に、JRA元騎手の熊沢重文さん（58）が神馬を引く「口取り」を務めた。大勢の見物客の注目を集めた。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-10-31",
+      "thumbnail": "assets/thumbs/40a0b4e5ff5b819badb7dc7ddd0305ed.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "40a0b4e5-ff5b-81a1-847d-c17bb9065e76",
+      "title": "こんぴらさんの参道にビームス新店舗がオープン",
+      "url": "https://www.asahi.com/articles/ASVBZ4FXMVBZPLXB001M.html?iref=_area_area_list_n",
+      "summary": "金刀比羅宮の表参道沿いに「ビームスジャパン琴平」が10月31日にオープンする。ビームスが日本の魅力を発信するために立ち上げたブランドで、四国では初出店。県内特産の工芸品などを販売する。",
+      "org": "朝日新聞",
+      "media": "新聞",
+      "date": "2026-10-31",
+      "thumbnail": "assets/thumbs/40a0b4e5ff5b81a1847dc17bb9065e76.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "40a0b4e5-ff5b-81fd-aa58-c2a1a472996b",
+      "title": "ビームスジャパン琴平、参道沿いにオープン　県工芸品を発信",
+      "url": "https://www.yomiuri.co.jp/local/kagawa/news/20261030-GYTNT00165/",
+      "summary": "琴平町の金刀比羅宮参道に10月31日、セレクトショップ「ビームスジャパン琴平」がオープンする。約400種類の雑貨や工芸品を販売し、約50種類は香川県の伝統工芸品と連携した限定商品。四国初の常設店で、外国人観光客に日本の魅力と香川の文化を発信する。",
+      "org": "読売新聞",
+      "media": "新聞",
+      "date": "2026-10-31",
+      "thumbnail": "assets/thumbs/40a0b4e5ff5b81fdaa58c2a1a472996b.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4090b4e5-ff5b-818d-be7b-f75b90743e1f",
       "title": "セレクトショップ「ビームスジャパン」四国初の常設店舗が琴平町にオープン",
@@ -388,19 +427,6 @@ window.NOTION_DATA = {
       "media": "テレビ",
       "date": "2026-10-12",
       "thumbnail": "assets/thumbs/3f70b4e5ff5b81f7bc87d091402d2e1b.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f60b4e5-ff5b-817f-b0ba-f61476dd7c90",
-      "title": "みこし渡御、厳かに　金刀比羅宮例大祭",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026101100000012400",
-      "summary": "金刀比羅宮の例大祭において、10月10日夜に最大の呼び物「みこし渡御」が営まれた。伝統の衣装に身を包んだ総勢約600人の大行列が本宮からの石段をゆっくり下った。",
-      "org": "四国新聞WEB朝刊",
-      "media": "新聞",
-      "date": "2026-10-11",
-      "thumbnail": "assets/thumbs/3f60b4e5ff5b817fb0baf61476dd7c90.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
