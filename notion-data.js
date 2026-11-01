@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-01 03:41",
+  "fetched": "2026-11-01 09:20",
   "news": [
+    {
+      "id": "40a0b4e5-ff5b-8123-a1c0-e80a4edd81b9",
+      "title": "第3回こんぴら観光まちづくり検定",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026110100000001000",
+      "summary": "こんぴら観光まちづくり協会が琴平町の歴史や文化に関する検定試験を実施する。合格者には認定証を贈り、希望者は認定ガイドとして活躍できる。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-11-01",
+      "thumbnail": "assets/thumbs/40a0b4e5ff5b8123a1c0e80a4edd81b9.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "40a0b4e5-ff5b-819b-adb7-dc7ddd0305ed",
       "title": "金刀比羅宮例大祭で献馬式　熊沢元騎手が神馬を引く",
