@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-01 09:20",
+  "fetched": "2026-11-01 23:27",
   "news": [
     {
       "id": "40a0b4e5-ff5b-8123-a1c0-e80a4edd81b9",
@@ -2228,6 +2228,14 @@ window.NOTION_DATA = {
       "x": [],
       "items": [
         {
+          "id": "note-bd32f53efe4ed851360a329e",
+          "source": "note",
+          "title": "琴平の街で出会う、懐かしくて新しいプリン🍮✨ こんぴらプリンの魅力に迫る！",
+          "url": "https://note.com/matatabi_tour/n/n061cedbc157d",
+          "date": "2026-11-01",
+          "thumbnail": "assets/thumbs/notebd32f53efe4ed851360a329e.webp"
+        },
+        {
           "id": "note-676ed450252abd1e04fd0879",
           "source": "note",
           "title": "またたび×うどんタクシー×東大うどん部",
@@ -2298,14 +2306,6 @@ window.NOTION_DATA = {
           "url": "https://note.com/matatabi_tour/n/n347d3a319908",
           "date": "2026-02-01",
           "thumbnail": "assets/thumbs/note157df9a21479d26970361a1c.webp"
-        },
-        {
-          "id": "note-67a37e51a45cc4d288fa5313",
-          "source": "note",
-          "title": "またたびの年末詣レポ！こんぴらさんで一年の区切りを",
-          "url": "https://note.com/matatabi_tour/n/n46aedc8b646e",
-          "date": "2026-01-01",
-          "thumbnail": "assets/thumbs/note67a37e51a45cc4d288fa5313.webp"
         }
       ]
     }
