@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-01 23:27",
+  "fetched": "2026-11-02 04:07",
   "news": [
     {
       "id": "40a0b4e5-ff5b-8123-a1c0-e80a4edd81b9",
@@ -1946,21 +1946,6 @@ window.NOTION_DATA = {
       "image": "assets/thumbs/3d40b4e5ff5b80c398c8c9cf290bc357.webp",
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
-      "organizer": ""
-    },
-    {
-      "id": "3d40b4e5-ff5b-80ff-82ff-f6bf2a25ade2",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
-      "start": "2026-09-02T12:00",
-      "end": "2026-09-02T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b80ff82fff6bf2a25ade2.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
       "organizer": ""
     }
   ],
