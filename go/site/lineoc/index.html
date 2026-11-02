@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 生成物: scripts/build_routes.py が routes.json から作る。直接編集しない。
+     出どころ: LINE オープンチャット「ことひらいふ」の使い方ノート → 行き先: ことひらいふ
+     1200 ms 後に自動転送（Cloudflare Web Analytics のビーコンが先に飛ぶ時間を確保）。 -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="origin">
+<title>ことひらいふ へ移動します｜ことひらいふ</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ことひらいふ">
+<meta property="og:title" content="ことひらいふ">
+<meta property="og:description" content="琴平の“いま”をまとめて見たい方へ ニュース・イベント・キャンペーンを毎日自動更新でまとめています。">
+<meta property="og:url" content="https://kotohilife.com/go/site/lineoc/">
+<meta property="og:image" content="https://kotohilife.com/assets/brand/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="refresh" content="3; url=https://kotohilife.com/">
+<style>
+  :root { --bg:#faf8f3; --text:#2b2b2b; --muted:#6b6b6b; --accent:#b23a3a; --card:#ffffff; --border:#e8e3d8; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
+          font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+  .card { width:100%; max-width:520px; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px 24px; text-align:center; }
+  .brand { font-size:12px; letter-spacing:.08em; color:var(--muted); margin-bottom:10px; }
+  h1 { font-size:20px; margin:0 0 10px; line-height:1.4; }
+  .who { font-weight:700; margin:0 0 4px; }
+  .what { color:var(--muted); font-size:14px; margin:0 0 18px; }
+  .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:12px 24px; border-radius:999px; font-size:15px; }
+  .btn:hover { opacity:.9; }
+  .note { font-size:12px; color:var(--muted); margin:14px 0 0; }
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="brand">ことひらいふ</div>
+  <h1>ことひらいふ へ移動します</h1>
+  <p class="who">琴平の“いま”をまとめて見たい方へ</p>
+  <p class="what">ニュース・イベント・キャンペーンを毎日自動更新でまとめています。</p>
+  <a class="btn" id="go" href="https://kotohilife.com/" rel="noopener">ことひらいふを見る</a>
+  <p class="note">自動的に切り替わらない場合は、上のボタンを押してください。</p>
+</main>
+<script>
+  // 計測ビーコンが先に飛ぶよう少し待ってから転送する。履歴に中継ページを残さない（replace）。
+  setTimeout(function () { location.replace("https://kotohilife.com/"); }, 1200);
+</script>
+</body>
+</html>

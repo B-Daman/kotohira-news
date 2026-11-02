@@ -57,12 +57,18 @@
     "lineoc": "LINE オープンチャット「ことひらいふ」の使い方ノート",
     "suki": "LINE オープンチャット「#好きがコトひらく町」（本人が投稿する時だけ）",
     "fb": "Facebook グループ KOTOHIRA EMPOWERMENT（本人が投稿する時だけ）",
-    "dc": "Discord「はじめに」の固定メッセージ"
+    "dc": "Discord「はじめに」の固定メッセージ・リンク集",
+    "note": "note @akkey_nft のプロフィールと各記事の末尾"
   },
   "routes": [
     { "dest": "site", "src": "x", "placed": null, "note": "X の Web 欄に設定（本人作業）" },
     { "dest": "site", "src": "th", "placed": null, "note": "Threads のプロフィールのリンクに設定（本人作業）" },
     { "dest": "site", "src": "ig", "placed": null, "note": "Instagram のプロフィールのリンクに設定（本人作業）" },
+    { "dest": "site", "src": "note", "placed": null, "note": "note のプロフィール URL（本人作業。2026-11-03 本人「note のプロフィールからは何の導線も無い」）" },
+    { "dest": "site", "src": "dc", "placed": null, "note": "Discord のリンク集メッセージ（本人作業）" },
+    { "dest": "site", "src": "lineoc", "placed": null, "note": "LINE OC ことひらいふ の使い方ノート（本人作業）" },
+    { "dest": "discord", "src": "note", "placed": null, "note": "note 記事末尾の琴平町DAO リンク（dao-minutes の note 版テンプレート）" },
+    { "dest": "line-suki", "src": "note", "placed": null, "note": "note 記事末尾（琴平が好きな読者向け。使うかは本人判断）" },
     { "dest": "line-kotohilife", "src": "site", "placed": "2026-11-03", "note": "サイドバーの LINE カード（site-widgets-data.js）" },
     { "dest": "line-kotohilife", "src": "post", "placed": null, "note": "投稿のリプ欄（sns-drafter が書く URL）" },
     { "dest": "line-kotohilife", "src": "paper", "placed": null, "note": "広報ことひら の QR（次号から）" },
