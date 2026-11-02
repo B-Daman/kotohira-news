@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-02 17:08",
+  "fetched": "2026-11-03 03:45",
   "news": [
     {
       "id": "40c0b4e5-ff5b-8142-9a5f-c7e5e03fb522",
@@ -769,7 +769,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-11-03T20:00",
       "end": "2026-11-03T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -784,7 +784,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-622.html",
       "start": "2026-11-03T09:00",
       "end": "2026-11-03T17:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "琴平町役場",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817-10",
