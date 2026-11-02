@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-02 04:07",
+  "fetched": "2026-11-02 17:08",
   "news": [
+    {
+      "id": "40c0b4e5-ff5b-8142-9a5f-c7e5e03fb522",
+      "title": "ことウラさんぽ モニターツアー",
+      "url": "https://www.kagawa-u.ac.jp/b-11-29/",
+      "summary": "香川大学地域マネジメント研究科の学生プロジェクト「ことウラさんぽ」が、琴平町の観光ガイドに載らない魅力を発見するまち歩き体験のモニターツアーを開催。参加者は事前に作成したオリジナルノートを持ち、まちを巡りながら発見や感動を記録する。",
+      "org": "香川大学",
+      "media": "Webメディア",
+      "date": "2026-11-02",
+      "thumbnail": "assets/thumbs/40c0b4e5ff5b81429a5fc7e5e03fb522.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "40a0b4e5-ff5b-8123-a1c0-e80a4edd81b9",
       "title": "第3回こんぴら観光まちづくり検定",
@@ -414,19 +427,6 @@ window.NOTION_DATA = {
       "media": "テレビ",
       "date": "2026-10-14",
       "thumbnail": "assets/thumbs/3f90b4e5ff5b81e9a558fc6fcbb94b8f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3f90b4e5-ff5b-8142-9f16-cbf794896fd9",
-      "title": "琴平町、来年度からこども園にALT常勤配置",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026101400000001000",
-      "summary": "琴平町は来年度から町内2カ所の認定こども園に外国語指導助手（ALT）を常勤させる。臨時議会で165万円の関連予算案が可決された。県内の公立こども園でALTが常勤するのは珍しいという。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-10-14",
-      "thumbnail": "assets/thumbs/3f90b4e5ff5b81429f16cbf794896fd9.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
