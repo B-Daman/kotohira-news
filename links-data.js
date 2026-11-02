@@ -152,7 +152,7 @@ window.LINKS_DATA = {
           note: "地域おこし協力隊発のまちづくりコミュニティ。Discordから参加できます",
           image: "assets/links/kotohira-dao.png",
           sns: {
-            discord: "https://discord.gg/DBKp7WCyJ9"
+            discord: "https://kotohilife.com/go/discord/site/" /* 2026-11-03 導線計測: 中継ページ経由（routes.json）。招待そのものは discord.gg/DBKp7WCyJ9 */
           }
         },
         {
@@ -161,7 +161,7 @@ window.LINKS_DATA = {
           note: "琴平バスが運営する“デジタル町民”の取り組み。LINEから参加できます",
           image: "assets/links/digital-chomin.png",
           sns: {
-            line: "https://line.me/R/ti/p/@997qsntl",
+            line: "https://kotohilife.com/go/chomin/site/", /* 2026-11-03 導線計測: 中継ページ経由（routes.json）。行き先は LINE 公式 @997qsntl */
             instagram: "https://www.instagram.com/kotohiradigitaltownresidents/",
             x: "https://x.com/kotohiradigital"
           }

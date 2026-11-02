@@ -3232,6 +3232,9 @@ function operatorTabHTML(){
       <div class="info-row"><dt>開設</dt><dd>2026年7月</dd></div>
       <div class="info-row"><dt>問い合わせ先</dt><dd><a href="#contact" target="_self">お問い合わせページ</a></dd></div>
     </dl>
+    <h2 class="group-h">公式アカウント</h2>
+    <p>琴平の“いま”は、X・Threads・Instagram でも流しています。</p>
+    <ul>${snsAccountsList().map(s => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.label)}（@kotohilife）↗</a></li>`).join("")}</ul>
     <h2 class="group-h">琴平町との関係</h2>
     <p>運営者は琴平町地域おこし協力隊として活動していますが、本サイトは運営者が個人として制作・運営しているものであり、琴平町の公式サイトではありません。掲載内容を琴平町が保証するものではないため、公式な情報は琴平町および各情報の発表元をご確認ください。</p>
     <h2 class="group-h">サイトの目的</h2>
@@ -3395,9 +3398,9 @@ function renderCommunityWidgets(){
         <p class="widget-copy">琴平に関わる事業者・団体の広告枠を準備しています。</p>
       </section>`;
 
-  /* 並び順：大型イベント→ダム→LINE→広告。告知枠はダムより上に置く（2026-10-15 本人指示。PC・スマホとも
-     同じこの関数で描画しているため、ここを変えれば両方に効く） */
-  host.innerHTML = `<div class="widget-stack">${featuredHTML}${damHTML}${lineHTML}${adsHTML}</div>`;
+  /* 並び順：大型イベント→ダム→LINE→SNS→広告。告知枠はダムより上に置く（2026-10-15 本人指示。PC・スマホとも
+     同じこの関数で描画しているため、ここを変えれば両方に効く）。SNS カードは 2026-11-03 追加 */
+  host.innerHTML = `<div class="widget-stack">${featuredHTML}${damHTML}${lineHTML}${snsFollowCardHTML()}${adsHTML}</div>`;
   host.classList.toggle("mobile-empty", !damHTML && !lineHTML && !featuredHTML);
 }
 /* 💧 早明浦ダムの貯水状況データを表示用に整形する。DAMが無い/observedAtが不正な形式なら
@@ -3525,6 +3528,24 @@ function lineOpenChatCardHTML(line, i){
     </div>
     ${line.disclaimer ? `<p class="widget-note">${esc(line.disclaimer)}</p>` : ""}
     ${rules ? `<div class="widget-links"><a class="widget-link" href="${esc(rules)}" rel="noopener">参加前にルールを確認 ↗</a></div>` : ""}
+  </section>`;
+}
+
+/* ことひらいふの SNS（2026-11-03 本人裁定「サイトに X・Threads・Instagram を置く」）。
+   データは site-widgets-data.js の snsAccounts（label・url）。無ければ何も出さない。
+   置き場はサイドバーの LINE カードの下（PC は全ページ、スマホはホームだけ＝LINE カードと同じ）と運営者情報。 */
+function snsAccountsList(){
+  const list = Array.isArray(WIDGETS.snsAccounts) ? WIDGETS.snsAccounts : [];
+  return list.map(s => ({ label: ("" + (s.label || "")).trim(), url: safeUrl(s.url) })).filter(s => s.label && s.url);
+}
+function snsFollowCardHTML(){
+  const sns = snsAccountsList();
+  if(!sns.length) return "";
+  return `<section class="widget-card sns-card" aria-labelledby="snsWidgetTitle">
+    <span class="widget-kicker">SNS</span>
+    <div class="widget-title" id="snsWidgetTitle">📣 ことひらいふの SNS</div>
+    <p class="widget-copy">琴平の“いま”を、X・Threads・Instagram でも流しています。</p>
+    <div class="widget-links">${sns.map(s => `<a class="widget-link" href="${esc(s.url)}" rel="noopener">${esc(s.label)} ↗</a>`).join("")}</div>
   </section>`;
 }
 

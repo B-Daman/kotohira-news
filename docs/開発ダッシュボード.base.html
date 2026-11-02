@@ -1479,7 +1479,14 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
     <div class="subpanel" data-sub="log" data-title="決定ログ" hidden>
       <div class="note info" style="margin-top:12px">設計・運用の判断を時系列で残す台帳。新しい月が上。各項目は当時の判断であり、後から覆った判断は「フェーズ・実績」「6. 検討中の案」側に最新状態がある。2026-07-10以前の決定は原本ロードマップ.md の決定ログにもある。</div>
 
-      <div class="section-title">1. 2026年10月<span class="sub">毎時更新・警報表示・お店カレンダー初掲載とUI刷新・台湾夜市再掲載</span></div>
+      <div class="section-title">1. 2026年11月<span class="sub">SNS 導線の中継ページ・公式 SNS リンク</span></div>
+      <div class="card">
+        <ul class="b">
+          <li><b>11-03</b>：SNS 導線の中継ページを実装（<code>routes.json</code> 正本・<code>scripts/build_routes.py</code> 生成・<code>go/{行き先}/{出どころ}/</code> 18枚・1.2秒後に自動転送・noindex）。出どころをパスで分け、Cloudflare Web Analytics のページ別閲覧数で「どこから押されたか」を数える（集計は sns-hub の site.mjs）。サイト側はサイドバーの LINE カード「ことひらいふ」、リンク集の琴平町DAO・琴平デジタル町民のリンクを <code>/go/…/site/</code> 経由に差し替え（QR 画像は参加URLのままなので QR 経由は数えない）。本人裁定（11-02）：#好きがコトひらく町を行き先に含める／デジタル町民の入口は LINE 公式 @997qsntl／プロフィールの Web 欄は <code>/go/site/{x|th|ig}/</code> の自動転送（出どころ別リンク集 /l/ は1タップ増えるので作らない）／Discord の招待は1本のまま（出どころ別5本は母数不足と管理の重さで見送り）／投稿に貼る URL は X・Threads 共通で出どころ post の1つ／無料AI体験会 OC は行き先に含めずカードだけ／サイトにことひらいふの X・Threads・Instagram を置く（サイドバーに SNS カード、運営者情報に「公式アカウント」の節）。設計: SecondBrain/03_Resources/agent-outputs/activity-os-map/plan/2026-10-31_SNS導線設計_v1.md §3・§7。</li>
+        </ul>
+      </div>
+
+      <div class="section-title">2. 2026年10月<span class="sub">毎時更新・警報表示・お店カレンダー初掲載とUI刷新・台湾夜市再掲載</span></div>
       <div class="card">
         <ul class="b">
           <li><b>10-15</b>：大型イベント告知枠に「第4回 台湾フェス・台湾夜市 in 琴平」を振替日程（10/24(土) 15:00〜20:00・金陵の郷）で再掲載。画像・リンク先はNotionイベントDBの振替版（新チラシ・新Instagram投稿）、endDate=10-24 で翌日から自動非表示。ホームのウィジェット列の並びを 大型イベント → ダム → LINE → 広告 に変更（PC・スマホ共通、renderCommunityWidgets 1か所）。</li>
@@ -1489,7 +1496,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">2. 2026年9月<span class="sub">くらし新設・ダム・団体Notion移行・統合カレンダー起案・本書の再構成</span></div>
+      <div class="section-title">3. 2026年9月<span class="sub">くらし新設・ダム・団体Notion移行・統合カレンダー起案・本書の再構成</span></div>
       <div class="card">
         <ul class="b">
           <li><b>09-05</b>：本書（開発ダッシュボード）を「要件定義 → 基本設計 → 詳細設計 → 実装・運用 → 検討中の案」の文書階層＋原本アーカイブ4タブへ再構成（kotobus/shift-scheduler/sekkei.html と同じ構成）。編集は <code>docs/開発ダッシュボード.base.html</code>、生成は <code>scripts/build_dashboard.py</code>（原本mdをマーカー位置へ注入）。配色・部品は従来の生成り×赤を維持し、構造のみ変更。</li>
@@ -1507,7 +1514,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">3. 2026年8月<span class="sub">独自ドメイン公開・サイト情報正式化・スマホUX刷新</span></div>
+      <div class="section-title">4. 2026年8月<span class="sub">独自ドメイン公開・サイト情報正式化・スマホUX刷新</span></div>
       <div class="card">
         <ul class="b">
           <li><b>08-28</b>：かき氷・アイス（#sweets）をアーカイブ。メニュー（タブ・ドロワー・クイックナビ）から除外し、直リンクとデータは温存。復活はsite-nav.jsの1行。</li>
@@ -1522,7 +1529,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">4. 2026年7月<span class="sub">正本化・地域ポータル化・GitHub Pages公開</span></div>
+      <div class="section-title">5. 2026年7月<span class="sub">正本化・地域ポータル化・GitHub Pages公開</span></div>
       <div class="card">
         <ul class="b">
           <li><b>07-19</b>：うどん営業中バッジを追加（11店・JST判定・4状態）し、ホームに「いま営業中のうどん店」モジュールを追加。LINEウィジェットを公開（縦積み: 説明→QR→参加ボタン、運営表記なし）。GitHub Pagesで公開し、Notionデータ（ニュース・イベント・キャンペーン）の日次自動更新が稼働（初回実行成功）。運用手順を A-1（Notion＝自動）・A-2（RSS＝手動）に改訂。</li>
@@ -1548,7 +1555,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">5. 2026年6月<span class="sub">立ち上げ</span></div>
+      <div class="section-title">6. 2026年6月<span class="sub">立ち上げ</span></div>
       <div class="card">
         <ul class="b">
           <li><b>06-10</b>：独立リポジトリ <code>C:\Users\user\kotohira-news\</code> へ移転。</li>

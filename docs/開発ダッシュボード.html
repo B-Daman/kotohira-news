@@ -1068,12 +1068,17 @@ python scripts/fetch_towncal.py &lt;url&gt; &lt;YYYY-MM&gt; [--page N]</code></p
           </ul></div>
         </div>
       </div>
-    <div class="section-title" id="doc-readme-e401e10e">scripts/fetch_notion.py<span class="sub">scripts/README.md・更新 2026-08-25</span></div>
+    <div class="section-title" id="doc-readme-e401e10e">scripts/fetch_notion.py<span class="sub">scripts/README.md・更新 2026-11-03</span></div>
 <div class="doc-src">原本: <a href="file:///C:/Users/user/kotohira-news/scripts/README.md">scripts/README.md</a>（本タブは原本の写し。編集は原本側で）</div>
 <div class="doc">
 <p>Notionの「ニュースDB」「イベントDB」「キャンペーンDB」の3つを読み取り、 ダッシュボード表示用の <code>notion-data.js</code>（<code>window.NOTION_DATA</code>）を生成するスクリプトです。</p>
 <p>pip依存なし（Python標準ライブラリのみ）で動作します。</p>
 <p>Pillow が入っている環境では、サムネイル保存時に長辺1200pxへ縮小してWebPへ圧縮します。 入っていなければ圧縮せず原寸のまま保存するため、動作自体は変わりません。 GitHub Actions では uv 経由で Pillow を用意しています（<code>uv run --with Pillow</code>）。</p>
+<h2>scripts/build_routes.py（SNS 導線の中継ページ・2026-11-03 追加）</h2>
+<p><code>routes.json</code>（正本: 行き先・出どころ・置いた導線）から <code>go/{dest}/{src}/index.html</code> を生成します。 中継ページは「{行き先} へ移動します」の 1 画面で、1.2 秒後に行き先へ自動転送します。出どころをパスで分けているので、 Cloudflare Web Analytics のページ別閲覧数がそのまま「その出どころから押された数」になります（sns-hub の <code>collectors/site.mjs</code> が集計）。 <code>_redirects</code> の即時 302 だと計測ビーコンが飛ばないので、静的 HTML ＋ JS の遅延転送にしています。pip 依存なし。</p>
+<pre><code>python -X utf8 scripts/build_routes.py          # 生成（上書き。削除はしない）
+python -X utf8 scripts/build_routes.py --list   # 置き場ごとの URL 一覧（本人作業用）</code></pre>
+<ul><li>行を足す・文言を直す → <code>routes.json</code> を編集 → 生成 → <code>go/</code> ごとコミット。生成物は直接編集しない。</li><li>出どころの鍵: <code>x</code>・<code>th</code>・<code>ig</code>（プロフィール）・<code>site</code>（サイト内）・<code>post</code>（X と Threads の投稿、共通）・<code>paper</code>・<code>flyer</code>・<code>lineoc</code>・<code>suki</code>・<code>fb</code>・<code>dc</code>。</li><li>行き先の鍵: <code>site</code>・<code>line-kotohilife</code>・<code>line-suki</code>・<code>discord</code>・<code>chomin</code>。Discord の招待は 1 本のまま（出どころ別の招待は 2026-11-02 に見送り）。</li><li>設計: <code>SecondBrain/03_Resources/agent-outputs/activity-os-map/plan/2026-10-31_SNS導線設計_v1.md</code> §3・§7-3。</li></ul>
 <h2>scripts/compress_thumbs.py</h2>
 <p>圧縮機能を入れる前に保存された既存画像（<code>assets/thumbs/</code> と <code>assets/manual/</code>）を、 まとめてWebPへ変換する一回性のスクリプトです。2026-08-25 に実行済みで、 参照中の画像は約90MBから11.8MBになりました。</p>
 <p>元ファイルは削除せず、変換で不要になった一覧を <code>scripts/unused-images.txt</code> に出力します。 削除するかどうかは中身を確認したうえで判断してください。</p>
@@ -1975,7 +1980,14 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
     <div class="subpanel" data-sub="log" data-title="決定ログ" hidden>
       <div class="note info" style="margin-top:12px">設計・運用の判断を時系列で残す台帳。新しい月が上。各項目は当時の判断であり、後から覆った判断は「フェーズ・実績」「6. 検討中の案」側に最新状態がある。2026-07-10以前の決定は原本ロードマップ.md の決定ログにもある。</div>
 
-      <div class="section-title">1. 2026年10月<span class="sub">毎時更新・警報表示・お店カレンダー初掲載とUI刷新・台湾夜市再掲載</span></div>
+      <div class="section-title">1. 2026年11月<span class="sub">SNS 導線の中継ページ・公式 SNS リンク</span></div>
+      <div class="card">
+        <ul class="b">
+          <li><b>11-03</b>：SNS 導線の中継ページを実装（<code>routes.json</code> 正本・<code>scripts/build_routes.py</code> 生成・<code>go/{行き先}/{出どころ}/</code> 18枚・1.2秒後に自動転送・noindex）。出どころをパスで分け、Cloudflare Web Analytics のページ別閲覧数で「どこから押されたか」を数える（集計は sns-hub の site.mjs）。サイト側はサイドバーの LINE カード「ことひらいふ」、リンク集の琴平町DAO・琴平デジタル町民のリンクを <code>/go/…/site/</code> 経由に差し替え（QR 画像は参加URLのままなので QR 経由は数えない）。本人裁定（11-02）：#好きがコトひらく町を行き先に含める／デジタル町民の入口は LINE 公式 @997qsntl／プロフィールの Web 欄は <code>/go/site/{x|th|ig}/</code> の自動転送（出どころ別リンク集 /l/ は1タップ増えるので作らない）／Discord の招待は1本のまま（出どころ別5本は母数不足と管理の重さで見送り）／投稿に貼る URL は X・Threads 共通で出どころ post の1つ／無料AI体験会 OC は行き先に含めずカードだけ／サイトにことひらいふの X・Threads・Instagram を置く（サイドバーに SNS カード、運営者情報に「公式アカウント」の節）。設計: SecondBrain/03_Resources/agent-outputs/activity-os-map/plan/2026-10-31_SNS導線設計_v1.md §3・§7。</li>
+        </ul>
+      </div>
+
+      <div class="section-title">2. 2026年10月<span class="sub">毎時更新・警報表示・お店カレンダー初掲載とUI刷新・台湾夜市再掲載</span></div>
       <div class="card">
         <ul class="b">
           <li><b>10-15</b>：大型イベント告知枠に「第4回 台湾フェス・台湾夜市 in 琴平」を振替日程（10/24(土) 15:00〜20:00・金陵の郷）で再掲載。画像・リンク先はNotionイベントDBの振替版（新チラシ・新Instagram投稿）、endDate=10-24 で翌日から自動非表示。ホームのウィジェット列の並びを 大型イベント → ダム → LINE → 広告 に変更（PC・スマホ共通、renderCommunityWidgets 1か所）。</li>
@@ -1985,7 +1997,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">2. 2026年9月<span class="sub">くらし新設・ダム・団体Notion移行・統合カレンダー起案・本書の再構成</span></div>
+      <div class="section-title">3. 2026年9月<span class="sub">くらし新設・ダム・団体Notion移行・統合カレンダー起案・本書の再構成</span></div>
       <div class="card">
         <ul class="b">
           <li><b>09-05</b>：本書（開発ダッシュボード）を「要件定義 → 基本設計 → 詳細設計 → 実装・運用 → 検討中の案」の文書階層＋原本アーカイブ4タブへ再構成（kotobus/shift-scheduler/sekkei.html と同じ構成）。編集は <code>docs/開発ダッシュボード.base.html</code>、生成は <code>scripts/build_dashboard.py</code>（原本mdをマーカー位置へ注入）。配色・部品は従来の生成り×赤を維持し、構造のみ変更。</li>
@@ -2003,7 +2015,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">3. 2026年8月<span class="sub">独自ドメイン公開・サイト情報正式化・スマホUX刷新</span></div>
+      <div class="section-title">4. 2026年8月<span class="sub">独自ドメイン公開・サイト情報正式化・スマホUX刷新</span></div>
       <div class="card">
         <ul class="b">
           <li><b>08-28</b>：かき氷・アイス（#sweets）をアーカイブ。メニュー（タブ・ドロワー・クイックナビ）から除外し、直リンクとデータは温存。復活はsite-nav.jsの1行。</li>
@@ -2018,7 +2030,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">4. 2026年7月<span class="sub">正本化・地域ポータル化・GitHub Pages公開</span></div>
+      <div class="section-title">5. 2026年7月<span class="sub">正本化・地域ポータル化・GitHub Pages公開</span></div>
       <div class="card">
         <ul class="b">
           <li><b>07-19</b>：うどん営業中バッジを追加（11店・JST判定・4状態）し、ホームに「いま営業中のうどん店」モジュールを追加。LINEウィジェットを公開（縦積み: 説明→QR→参加ボタン、運営表記なし）。GitHub Pagesで公開し、Notionデータ（ニュース・イベント・キャンペーン）の日次自動更新が稼働（初回実行成功）。運用手順を A-1（Notion＝自動）・A-2（RSS＝手動）に改訂。</li>
@@ -2044,7 +2056,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
         </ul>
       </div>
 
-      <div class="section-title">5. 2026年6月<span class="sub">立ち上げ</span></div>
+      <div class="section-title">6. 2026年6月<span class="sub">立ち上げ</span></div>
       <div class="card">
         <ul class="b">
           <li><b>06-10</b>：独立リポジトリ <code>C:\Users\user\kotohira-news\</code> へ移転。</li>
@@ -2608,7 +2620,7 @@ python scripts/verify_ui_styles.py ".drawer a"
       <tbody>
         <tr><td>AGENTS.md</td><td>作業規約・正本の所在・検証ルール（CLAUDE.md はこれへの転送）</td><td>2026-09-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/AGENTS.md">C:\Users\user\kotohira-news\AGENTS.md</a></td></tr>
         <tr><td>README.md</td><td>リポジトリ概要</td><td>2026-07-14</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/README.md">C:\Users\user\kotohira-news\README.md</a></td></tr>
-        <tr><td>scripts/README.md</td><td>取得スクリプトの使い方（→ 4. 詳細設計書 › 取得スクリプト）</td><td>2026-08-25</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/README.md">C:\Users\user\kotohira-news\scripts\README.md</a></td></tr>
+        <tr><td>scripts/README.md</td><td>取得スクリプトの使い方（→ 4. 詳細設計書 › 取得スクリプト）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/README.md">C:\Users\user\kotohira-news\scripts\README.md</a></td></tr>
       </tbody>
     </table></div></div>
 
@@ -2616,10 +2628,10 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>index.html</td><td>表示部の正本（5分類ナビ・SPAビュー・カレンダー・モーダル）</td><td>2026-10-15</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/index.html">C:\Users\user\kotohira-news\index.html</a></td></tr>
+        <tr><td>index.html</td><td>表示部の正本（5分類ナビ・SPAビュー・カレンダー・モーダル）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/index.html">C:\Users\user\kotohira-news\index.html</a></td></tr>
         <tr><td>site-nav.js</td><td>ナビ構造の正本（5分類・ドロワー・サイト情報）</td><td>2026-09-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/site-nav.js">C:\Users\user\kotohira-news\site-nav.js</a></td></tr>
-        <tr><td>site-widgets-data.js</td><td>天気・LINE・大型イベント・広告・フッターの設定</td><td>2026-10-15</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/site-widgets-data.js">C:\Users\user\kotohira-news\site-widgets-data.js</a></td></tr>
-        <tr><td>links-data.js</td><td>リンク集（3分類14件）</td><td>2026-07-10</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/links-data.js">C:\Users\user\kotohira-news\links-data.js</a></td></tr>
+        <tr><td>site-widgets-data.js</td><td>天気・LINE・大型イベント・広告・フッターの設定</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/site-widgets-data.js">C:\Users\user\kotohira-news\site-widgets-data.js</a></td></tr>
+        <tr><td>links-data.js</td><td>リンク集（3分類14件）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/links-data.js">C:\Users\user\kotohira-news\links-data.js</a></td></tr>
         <tr><td>experiences-data.js</td><td>体験・滞在（Notion未接続時のフォールバック）</td><td>2026-09-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/experiences-data.js">C:\Users\user\kotohira-news\experiences-data.js</a></td></tr>
         <tr><td>udon-data.js</td><td>うどん店17件（UDON_PUBLISHED=false で非表示中）</td><td>2026-07-16</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/udon-data.js">C:\Users\user\kotohira-news\udon-data.js</a></td></tr>
         <tr><td>parking-data.js</td><td>駐車場20件</td><td>2026-07-16</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/parking-data.js">C:\Users\user\kotohira-news\parking-data.js</a></td></tr>
@@ -2633,8 +2645,8 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>notion-data.js</td><td>Notion 5DB → 表示用データ（毎時自動）</td><td>2026-10-15</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/notion-data.js">C:\Users\user\kotohira-news\notion-data.js</a></td></tr>
-        <tr><td>dam-data.js</td><td>早明浦ダム貯水率（1日2回自動）</td><td>2026-10-15</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/dam-data.js">C:\Users\user\kotohira-news\dam-data.js</a></td></tr>
+        <tr><td>notion-data.js</td><td>Notion 5DB → 表示用データ（毎時自動）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/notion-data.js">C:\Users\user\kotohira-news\notion-data.js</a></td></tr>
+        <tr><td>dam-data.js</td><td>早明浦ダム貯水率（1日2回自動）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/dam-data.js">C:\Users\user\kotohira-news\dam-data.js</a></td></tr>
         <tr><td>towncal-data.js</td><td>こんぴらカレンダー（fetch_towncal.py が月次更新）</td><td>2026-10-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/towncal-data.js">C:\Users\user\kotohira-news\towncal-data.js</a></td></tr>
         <tr><td>data.js</td><td>凍結レガシー：notion-data.js の orgs が空の時だけ読む団体フォールバック</td><td>2026-06-26</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/data.js">C:\Users\user\kotohira-news\data.js</a></td></tr>
         <tr><td>registry.json</td><td>kotohira-news スキル（週次ニュース草案）の団体台帳。表示には使わない</td><td>2026-06-26</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/registry.json">C:\Users\user\kotohira-news\registry.json</a></td></tr>
@@ -2662,8 +2674,8 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>開発ダッシュボード.base.html</td><td>編集元（要約・追補の本文＋原本注入マーカー）</td><td>2026-10-15</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.base.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.base.html</a></td></tr>
-        <tr><td>開発ダッシュボード.html</td><td>生成物（python scripts/build_dashboard.py で再生成）</td><td>2026-09-10</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.html</a></td></tr>
+        <tr><td>開発ダッシュボード.base.html</td><td>編集元（要約・追補の本文＋原本注入マーカー）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.base.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.base.html</a></td></tr>
+        <tr><td>開発ダッシュボード.html</td><td>生成物（python scripts/build_dashboard.py で再生成）</td><td>2026-10-15</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.html</a></td></tr>
       </tbody>
     </table></div></div>
 
@@ -2688,7 +2700,7 @@ python scripts/verify_ui_styles.py ".drawer a"
 </div>
 
 <footer>
-  kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-09-05（ビルド 2026-10-15 02:00） ／ ローカルHTML・公開対象外<br>
+  kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-09-05（ビルド 2026-11-03 02:57） ／ ローカルHTML・公開対象外<br>
   各文書タブ＝本文（原本md全文）＋追補。編集は base 側、原本は各mdで。表示部の正本＝index.html ／ データは各生成スクリプト経由でのみ更新（生成物JSを手編集しない）
 </footer>
 

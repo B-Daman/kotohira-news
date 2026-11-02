@@ -70,7 +70,9 @@ window.SITE_WIDGETS_DATA = {
       enabled: true,
       name: "ことひらいふ",
       description: "琴平町の“今”を語り合うLINEオープンチャットです。イベント情報や町の話題をゆるく共有しています。",
-      joinUrl: "https://line.me/ti/g2/LcgsGouflXLtNbOlOtrBcxeeNQJ1nADVrqhj-w?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
+      /* 2026-11-03 導線計測: ボタンは中継ページ /go/line-kotohilife/site/ 経由（routes.json）。
+         行き先は line.me/ti/g2/LcgsGouflXLtNbOlOtrBcxeeNQJ1nADVrqhj-w。QR 画像は参加URLそのものなので QR 経由は数えない */
+      joinUrl: "https://kotohilife.com/go/line-kotohilife/site/",
       qrImage: "assets/line-openchat-qr.jpg",
       rulesUrl: "",
       disclaimer: "参加・退会は自由です。個人情報の書き込みはお控えください。"
@@ -85,6 +87,14 @@ window.SITE_WIDGETS_DATA = {
       rulesUrl: "",
       disclaimer: "参加・退会は自由です。個人情報の書き込みはお控えください。"
     }
+  ],
+
+  /* ことひらいふの SNS（2026-11-03 本人裁定「サイトに X・Threads・Instagram を置く」）。
+     サイドバーの LINE カードの下と、運営者情報の「公式アカウント」に出す。label と url だけ。 */
+  snsAccounts: [
+    { label: "X", url: "https://x.com/kotohilife" },
+    { label: "Threads", url: "https://www.threads.com/@kotohilife" },
+    { label: "Instagram", url: "https://www.instagram.com/kotohilife/" }
   ],
 
   /* 大型イベント告知枠（サイドバー最上段）。表示は enabled:true かつ掲載期間内のみ

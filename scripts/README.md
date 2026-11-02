@@ -9,6 +9,23 @@ Pillow が入っている環境では、サムネイル保存時に長辺1200px�
 入っていなければ圧縮せず原寸のまま保存するため、動作自体は変わりません。
 GitHub Actions では uv 経由で Pillow を用意しています（`uv run --with Pillow`）。
 
+## scripts/build_routes.py（SNS 導線の中継ページ・2026-11-03 追加）
+
+`routes.json`（正本: 行き先・出どころ・置いた導線）から `go/{dest}/{src}/index.html` を生成します。
+中継ページは「{行き先} へ移動します」の 1 画面で、1.2 秒後に行き先へ自動転送します。出どころをパスで分けているので、
+Cloudflare Web Analytics のページ別閲覧数がそのまま「その出どころから押された数」になります（sns-hub の `collectors/site.mjs` が集計）。
+`_redirects` の即時 302 だと計測ビーコンが飛ばないので、静的 HTML ＋ JS の遅延転送にしています。pip 依存なし。
+
+```bash
+python -X utf8 scripts/build_routes.py          # 生成（上書き。削除はしない）
+python -X utf8 scripts/build_routes.py --list   # 置き場ごとの URL 一覧（本人作業用）
+```
+
+- 行を足す・文言を直す → `routes.json` を編集 → 生成 → `go/` ごとコミット。生成物は直接編集しない。
+- 出どころの鍵: `x`・`th`・`ig`（プロフィール）・`site`（サイト内）・`post`（X と Threads の投稿、共通）・`paper`・`flyer`・`lineoc`・`suki`・`fb`・`dc`。
+- 行き先の鍵: `site`・`line-kotohilife`・`line-suki`・`discord`・`chomin`。Discord の招待は 1 本のまま（出どころ別の招待は 2026-11-02 に見送り）。
+- 設計: `SecondBrain/03_Resources/agent-outputs/activity-os-map/plan/2026-10-31_SNS導線設計_v1.md` §3・§7-3。
+
 ## scripts/compress_thumbs.py
 
 圧縮機能を入れる前に保存された既存画像（`assets/thumbs/` と `assets/manual/`）を、

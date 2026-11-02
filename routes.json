@@ -1,0 +1,82 @@
+{
+  "_doc": [
+    "SNS 導線の正本（2026-11-03）。scripts/build_routes.py が go/{dest}/{src}/index.html（中継ページ）を生成する。",
+    "設計: SecondBrain/03_Resources/agent-outputs/activity-os-map/plan/2026-10-31_SNS導線設計_v1.md §3・§7-3。",
+    "規則: パスで出どころを分け、クエリは使わない。置き場が固定のものだけ出どころを分け、投稿（X・Threads 共通）は post の 1 つ。",
+    "数え方: Cloudflare Web Analytics のページ別閲覧（sns-hub collectors/site.mjs の topPages）。中継ページは 1.2 秒後に行き先へ自動転送する。",
+    "行を足したら python scripts/build_routes.py を実行して生成し、go/ ごとコミットする。生成物は手で直さない。"
+  ],
+  "site_origin": "https://kotohilife.com",
+  "delay_ms": 1200,
+  "og_image": "https://kotohilife.com/assets/brand/og-image.jpg",
+  "dests": {
+    "site": {
+      "name": "ことひらいふ",
+      "url": "https://kotohilife.com/",
+      "who": "琴平の“いま”をまとめて見たい方へ",
+      "what": "ニュース・イベント・キャンペーンを毎日自動更新でまとめています。",
+      "button": "ことひらいふを見る"
+    },
+    "line-kotohilife": {
+      "name": "LINE オープンチャット「ことひらいふ」",
+      "url": "https://line.me/ti/g2/LcgsGouflXLtNbOlOtrBcxeeNQJ1nADVrqhj-w",
+      "who": "琴平町内でくらす方へ",
+      "what": "町の情報交換と、ゆるい雑談の場です。トークルーム専用のニックネームで参加できます。",
+      "button": "LINE で参加する"
+    },
+    "line-suki": {
+      "name": "LINE オープンチャット「#好きがコトひらく町」",
+      "url": "https://line.me/ti/g2/7fGmNaUwXRuLF-VSLMzTfRB6RpywqQ8io0QD4w",
+      "who": "琴平が好きな方へ（町外の方も）",
+      "what": "琴平が好きな人が集まるトークルームです。トークルーム専用のニックネームで参加できます。",
+      "button": "LINE で参加する"
+    },
+    "discord": {
+      "name": "Discord「琴平町DAO」",
+      "url": "https://discord.gg/DBKp7WCyJ9",
+      "who": "琴平のことを一緒に動かしたい方へ",
+      "what": "毎週火曜のオンライン定例と、プロジェクトごとの部屋があります。見るだけの参加もできます。",
+      "button": "Discord に参加する"
+    },
+    "chomin": {
+      "name": "NEO琴平デジタル町民",
+      "url": "https://line.me/R/ti/p/@997qsntl",
+      "who": "遠くから琴平の町民になりたい方へ",
+      "what": "琴平バスが運営する“デジタル町民”の取り組みです。LINE 公式アカウントから参加できます。",
+      "button": "LINE で登録する"
+    }
+  },
+  "srcs": {
+    "x": "X @kotohilife のプロフィール Web 欄",
+    "th": "Threads @kotohilife のプロフィールのリンク",
+    "ig": "Instagram @kotohilife のプロフィールのリンク",
+    "site": "サイト kotohilife.com（サイドバーのカード・リンク集）",
+    "post": "X・Threads の投稿のリプ欄（両方で同じ URL）",
+    "paper": "広報ことひら 協力隊コーナーの QR",
+    "flyer": "チラシ・火曜の会の QR",
+    "lineoc": "LINE オープンチャット「ことひらいふ」の使い方ノート",
+    "suki": "LINE オープンチャット「#好きがコトひらく町」（本人が投稿する時だけ）",
+    "fb": "Facebook グループ KOTOHIRA EMPOWERMENT（本人が投稿する時だけ）",
+    "dc": "Discord「はじめに」の固定メッセージ"
+  },
+  "routes": [
+    { "dest": "site", "src": "x", "placed": null, "note": "X の Web 欄に設定（本人作業）" },
+    { "dest": "site", "src": "th", "placed": null, "note": "Threads のプロフィールのリンクに設定（本人作業）" },
+    { "dest": "site", "src": "ig", "placed": null, "note": "Instagram のプロフィールのリンクに設定（本人作業）" },
+    { "dest": "line-kotohilife", "src": "site", "placed": "2026-11-03", "note": "サイドバーの LINE カード（site-widgets-data.js）" },
+    { "dest": "line-kotohilife", "src": "post", "placed": null, "note": "投稿のリプ欄（sns-drafter が書く URL）" },
+    { "dest": "line-kotohilife", "src": "paper", "placed": null, "note": "広報ことひら の QR（次号から）" },
+    { "dest": "line-kotohilife", "src": "flyer", "placed": null, "note": "チラシ・火曜の会の QR" },
+    { "dest": "line-kotohilife", "src": "dc", "placed": null, "note": "Discord「はじめに」の固定（本人作業）" },
+    { "dest": "line-suki", "src": "site", "placed": null, "note": "サイトの固定 CTA（D で実装）" },
+    { "dest": "line-suki", "src": "post", "placed": null, "note": "投稿のリプ欄" },
+    { "dest": "line-suki", "src": "paper", "placed": null, "note": "広報ことひら の QR（次号から）" },
+    { "dest": "discord", "src": "site", "placed": "2026-11-03", "note": "リンク集の琴平町DAO カード（links-data.js）" },
+    { "dest": "discord", "src": "post", "placed": null, "note": "投稿のリプ欄（DAO の話題の時だけ）" },
+    { "dest": "discord", "src": "lineoc", "placed": null, "note": "LINE OC ことひらいふ の使い方ノート（本人作業）" },
+    { "dest": "discord", "src": "suki", "placed": null, "note": "#好きがコトひらく町 に本人が投稿する時だけ" },
+    { "dest": "discord", "src": "fb", "placed": null, "note": "Facebook グループに本人が投稿する時だけ" },
+    { "dest": "chomin", "src": "site", "placed": "2026-11-03", "note": "リンク集の琴平デジタル町民カード（links-data.js）" },
+    { "dest": "chomin", "src": "dc", "placed": null, "note": "Discord「はじめに」の固定（本人作業）" }
+  ]
+}
