@@ -120,6 +120,7 @@
   .lk{display:inline-block;border-radius:6px;padding:3px 9px;font-size:12px;font-weight:700;
     color:#fff;text-decoration:none;white-space:nowrap}
   .lk.note{background:var(--note)} .lk.instagram{background:var(--ig)} .lk.x{background:var(--x)}
+  .lk.threads{background:var(--threads)} /* 2026-11-03 リンク集の「ことひらいふ」カード用（既存の .org-badges/.shop-sns の Threads と同じ黒系） */
   .lk.website{background:var(--web)} .lk.youtube{background:var(--yt)} .lk.ameblo{background:var(--ameblo)}
   /* LINE・Facebook・Discord（リンクタブのSNSバッジ用）。ブランド色を白文字AAを満たす暗さに調整 */
   .lk.line{background:#148244} .lk.facebook{background:#14549c} .lk.discord{background:#4b57d9}
@@ -3189,7 +3190,7 @@ function linksTabHTML(){
 }
 /* リンクカードに出すSNSバッジの種類と表示順（linkCard用） */
 const LINK_SNS = [
-  {key:"line",label:"LINE"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},
+  {key:"line",label:"LINE"},{key:"instagram",label:"Instagram"},{key:"x",label:"X"},{key:"threads",label:"Threads"} /* threads は 2026-11-03 追加 */,
   {key:"youtube",label:"YouTube"},{key:"facebook",label:"Facebook"},{key:"discord",label:"Discord"}
 ];
 function linkCard(l){

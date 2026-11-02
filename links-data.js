@@ -118,6 +118,19 @@ window.LINKS_DATA = {
       name: "📣 まちの発信・コミュニティ",
       links: [
         {
+          /* 2026-11-03 本人裁定「サイトにことひらいふの X・Threads・Instagram を置く」。LINE は町内向けオープンチャット（中継ページ経由） */
+          name: "ことひらいふ",
+          url: "",
+          note: "このサイトの SNS。琴平の“いま”を X・Threads・Instagram でも流しています。LINE は町内向けのオープンチャットです",
+          image: "assets/brand/og-image.jpg",
+          sns: {
+            line: "https://kotohilife.com/go/line-kotohilife/site/",
+            instagram: "https://www.instagram.com/kotohilife/",
+            x: "https://x.com/kotohilife",
+            threads: "https://www.threads.com/@kotohilife"
+          }
+        },
+        {
           name: "琴平町長 片岡英樹",
           url: "https://ameblo.jp/kataoka-hideki/",
           note: "町長本人のブログとX。町政の動きを本人の言葉で発信しています",
