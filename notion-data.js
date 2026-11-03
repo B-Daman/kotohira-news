@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-03 20:15",
+  "fetched": "2026-11-04 03:38",
   "news": [
     {
       "id": "40d0b4e5-ff5b-8123-8c6d-ca6cd57428d3",
@@ -874,7 +874,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-11-04T13:30",
       "end": "2026-11-04T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -889,7 +889,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-11-03T20:00",
       "end": "2026-11-03T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -904,7 +904,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-622.html",
       "start": "2026-11-03T09:00",
       "end": "2026-11-03T17:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平町役場",
       "address": "〒766-0004 香川県仲多度郡琴平町榎井817-10",
