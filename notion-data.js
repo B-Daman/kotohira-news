@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-03 03:45",
+  "fetched": "2026-11-03 20:15",
   "news": [
+    {
+      "id": "40d0b4e5-ff5b-8123-8c6d-ca6cd57428d3",
+      "title": "ビームスジャパン琴平、金刀比羅宮表参道にオープン",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026110300000003200",
+      "summary": "琴平町の金刀比羅宮表参道に10月31日、雑貨や銘品を扱う「ビームスジャパン琴平」がオープンした。香川の伝統工芸品とのコラボ商品を含む約400品目を販売し、香川・琴平の魅力発信拠点を目指す。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-11-03",
+      "thumbnail": "assets/thumbs/40d0b4e5ff5b81238c6dca6cd57428d3.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "40c0b4e5-ff5b-8142-9a5f-c7e5e03fb522",
       "title": "ことウラさんぽ モニターツアー",
@@ -417,19 +430,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3f90b4e5-ff5b-81e9-a558-fc6fcbb94b8f",
-      "title": "特別公演「イタリアルネサンス音楽と雅楽」金丸座",
-      "url": "https://news.ksb.co.jp/article/16963416",
-      "summary": "香川県琴平町の金丸座で11月7日と8日、イタリアの古楽アンサンブル「Ludus Orionis」とバレエダンサー、および雅楽の共演による特別公演が開催される。ルネサンス期からバロック期の音楽と伝統音楽によるイタリアと日本の文化交流を図るもの。",
-      "org": "KSB瀬戸内海放送",
-      "media": "テレビ",
-      "date": "2026-10-14",
-      "thumbnail": "assets/thumbs/3f90b4e5ff5b81e9a558fc6fcbb94b8f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -464,6 +464,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "40d0b4e5-ff5b-812a-8233-c3dd4feb2b6d",
+      "title": "香川だョ！全員集合2026 ZUMBA®100分スペシャル",
+      "url": "https://www.threads.com/@toshimasa_tai/post/DfLoOJKlJNZ",
+      "start": "2026-12-20T14:15",
+      "end": "2026-12-20T16:40",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平中学校",
+      "address": "香川県仲多度郡琴平町五條654-1",
+      "image": "assets/thumbs/40d0b4e5ff5b812a8233c3dd4feb2b6d.webp",
+      "comment": "会場: 琴平中学校体育館 SundaySevenプレゼンツによるZUMBA®フィットネスダンスイベント。総勢10名のインストラクターが出演し、クリスマスシーズンを楽しむ催事。",
+      "fee": "3000",
+      "organizer": "SundaySeven"
+    },
+    {
       "id": "3ea0b4e5-ff5b-80ad-be0f-d43d5ca1bf70",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -477,6 +492,36 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": ""
+    },
+    {
+      "id": "40d0b4e5-ff5b-803b-b4ce-e74379649651",
+      "title": "第4回カブフェス演劇フェスティバルin琴平 2日目",
+      "url": "https://www.instagram.com/p/DfDMCVLSzRb/",
+      "start": "2026-12-13T11:00",
+      "end": "2026-12-13T17:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/40d0b4e5ff5b803bb4cee74379649651.webp",
+      "comment": "会場: 琴平町・表参道エリア周辺 琴平町の表参道エリアで12月12日・13日に開催される演劇フェスティバル。全国から劇団・アーティストが集まり、短編演劇の上演と町歩きを通じて物語に出会う企画。妖怪人狼、即興演劇バトル、ゴーストビルディングなどが開催される。",
+      "fee": "2500",
+      "organizer": "株式劇団マエカブ、カブフェス実行委員会"
+    },
+    {
+      "id": "40d0b4e5-ff5b-8134-83a1-fef280fd68dd",
+      "title": "第4回カブフェス演劇フェスティバルin琴平 1日目",
+      "url": "https://www.instagram.com/p/DfDMCVLSzRb/",
+      "start": "2026-12-12T13:00",
+      "end": "2026-12-12T20:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "コトリ コワーキング＆ホステル 琴平",
+      "address": "香川県仲多度郡琴平町720−15",
+      "image": "assets/thumbs/40d0b4e5ff5b813483a1fef280fd68dd.webp",
+      "comment": "会場: 琴平町・表参道エリア周辺 琴平町の表参道エリアで12月12日・13日に開催される演劇フェスティバル。全国から劇団・アーティストが集まり、短編演劇の上演と町歩きを通じて物語に出会う企画。妖怪人狼、即興演劇バトル、ゴーストビルディングなどが開催される。",
+      "fee": "2500",
+      "organizer": "株式劇団マエカブ、カブフェス実行委員会"
     },
     {
       "id": "3ea0b4e5-ff5b-8025-ad52-e893b25290c4",
@@ -659,6 +704,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "40d0b4e5-ff5b-800c-b922-ecc4c69a55bf",
+      "title": "第23回 祝宴 金陵初しぼり 2日目",
+      "url": "https://www.nishino-kinryo.co.jp/news/year2026/news0930.html",
+      "start": "2026-11-22T09:30",
+      "end": "2026-11-22T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/40d0b4e5ff5b800cb922ecc4c69a55bf.webp",
+      "comment": "会場: 金陵の郷（こんぴらさんの参道口）、香川県仲多度郡琴平町623 琴平町の金陵の郷で、初しぼりの販売を記念した祝宴を開催。初しぼり鏡開き・振舞い酒（無料）、グルメコーナー、備前焼展示販売などが行われる。",
+      "fee": "0",
+      "organizer": "西野金陵株式会社"
+    },
+    {
       "id": "4070b4e5-ff5b-8033-bc82-ef0003dc545c",
       "title": "1070形1073×1074号引退記念イベント 連結相手組み換え 不協和音満喫ツアー",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
@@ -687,6 +747,21 @@ window.NOTION_DATA = {
       "comment": "会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
       "fee": "20000",
       "organizer": "琴電運輸サービス部・地域開発部"
+    },
+    {
+      "id": "40d0b4e5-ff5b-8105-97b0-ed52d75e5bed",
+      "title": "第23回 祝宴 金陵初しぼり 1日目",
+      "url": "https://www.nishino-kinryo.co.jp/news/year2026/news0930.html",
+      "start": "2026-11-21T09:30",
+      "end": "2026-11-21T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/40d0b4e5ff5b810597b0ed52d75e5bed.webp",
+      "comment": "会場: 金陵の郷（こんぴらさんの参道口）、香川県仲多度郡琴平町623 琴平町の金陵の郷で、初しぼりの販売を記念した祝宴を開催。初しぼり鏡開き・振舞い酒（無料）、グルメコーナー、備前焼展示販売などが行われる。",
+      "fee": "0",
+      "organizer": "西野金陵株式会社"
     },
     {
       "id": "3ea0b4e5-ff5b-806e-940b-e1af3307618f",
@@ -734,11 +809,26 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "40d0b4e5-ff5b-8073-bb9b-e4e7fe918754",
+      "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演 2日目",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100",
+      "start": "2026-11-08T14:00",
+      "end": "2026-11-08T16:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "旧金毘羅大芝居(金丸座)",
+      "address": "〒766-0001 香川県仲多度郡琴平町乙1241",
+      "image": "assets/thumbs/40d0b4e5ff5b8073bb9be4e7fe918754.webp",
+      "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
+      "fee": "10000",
+      "organizer": "公益財団法人中山芳彦香川イタリア交流財団"
+    },
+    {
       "id": "3f20b4e5-ff5b-8100-abab-eb9c273dffbc",
       "title": "三豊ドリームカーフェスタ2026（ことひら会場）",
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-619.html",
-      "start": "2026-11-08",
-      "end": "2026-11-08",
+      "start": "2026-11-08T10:00",
+      "end": "2026-11-08T11:30",
       "status": "実施前",
       "city": "琴平町",
       "place": "琴平小学校",
@@ -750,18 +840,48 @@ window.NOTION_DATA = {
     },
     {
       "id": "3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d",
-      "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演",
+      "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演 1日目",
       "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100",
-      "start": "2026-11-07",
-      "end": "2026-11-08",
+      "start": "2026-11-07T14:00",
+      "end": "2026-11-07T16:00",
       "status": "実施前",
       "city": "琴平町",
       "place": "旧金毘羅大芝居(金丸座)",
       "address": "〒766-0001 香川県仲多度郡琴平町乙1241",
       "image": "assets/thumbs/3a50b4e5ff5b8110b6ecdc2d98a5715d.webp",
       "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
-      "fee": "0",
+      "fee": "10000",
       "organizer": "公益財団法人中山芳彦香川イタリア交流財団"
+    },
+    {
+      "id": "40d0b4e5-ff5b-8151-be78-edc00a6e96ed",
+      "title": "台湾文化×台湾華語 ミニ講座「台湾漫遊鉄道のふたりから見る台湾の食文化」",
+      "url": "https://www.instagram.com/p/DfOBXHEhxEb/",
+      "start": "2026-11-07T10:30",
+      "end": "2026-11-07T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平中学校",
+      "address": "香川県仲多度郡琴平町五條654-1",
+      "image": "assets/thumbs/40d0b4e5ff5b8151be78edc00a6e96ed.webp",
+      "comment": "会場: 琴平中学校 図書館 国際ブッカー賞受賞作『台湾漫遊鉄道のふたり』に登場する料理を入り口に、台湾の食文化や暮らしを紹介し、食べ物にまつわる台湾華語を学ぶミニ講座。琴平中学校図書館で開催。",
+      "fee": "0",
+      "organizer": "琴平町地域おこし協力隊 ケリー"
+    },
+    {
+      "id": "40d0b4e5-ff5b-8081-874b-ee00da8c2eb6",
+      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
+      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
+      "start": "2026-11-04T13:30",
+      "end": "2026-11-04T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
+      "image": "assets/thumbs/40d0b4e5ff5b8081874bee00da8c2eb6.webp",
+      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
+      "fee": "0",
+      "organizer": ""
     },
     {
       "id": "3ea0b4e5-ff5b-803c-adb4-c1c7c8557d15",
@@ -2197,6 +2317,8 @@ window.NOTION_DATA = {
         "facebook": "https://www.facebook.com/MataTabi.kagawa/"
       },
       "instagram": [
+        "https://www.instagram.com/p/DfBhvUIy-9S/",
+        "https://www.instagram.com/p/DevfiRbylko/",
         "https://www.instagram.com/p/DeLg5QgSDCl/",
         "https://www.instagram.com/p/DdVgzBpEjoA/",
         "https://www.instagram.com/p/Dc2zmD2DwnQ/",
