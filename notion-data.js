@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-04 03:38",
+  "fetched": "2026-11-05 03:11",
   "news": [
     {
       "id": "40d0b4e5-ff5b-8123-8c6d-ca6cd57428d3",
@@ -779,6 +779,21 @@ window.NOTION_DATA = {
       "organizer": ""
     },
     {
+      "id": "40e0b4e5-ff5b-80e8-8f20-fb485c54f48c",
+      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
+      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
+      "start": "2026-11-17T13:30",
+      "end": "2026-11-17T15:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "カフェ 象山",
+      "address": "香川県仲多度郡琴平町榎井553−1",
+      "image": "assets/thumbs/40e0b4e5ff5b80e88f20fb485c54f48c.webp",
+      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
+      "fee": "0",
+      "organizer": ""
+    },
+    {
       "id": "4070b4e5-ff5b-81c6-983c-dce39c5878ae",
       "title": "1070形1073×1074号引退記念イベント 定期列車最終運用 + 記念きっぷ発売 + 公募写真展開催",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
@@ -874,7 +889,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-11-04T13:30",
       "end": "2026-11-04T15:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -2006,66 +2021,6 @@ window.NOTION_DATA = {
       "image": "",
       "comment": "",
       "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3c80b4e5-ff5b-80bf-8eba-ecd35c85c207",
-      "title": "ことひらふれあい音楽祭",
-      "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
-      "start": "2026-09-05T17:00",
-      "end": "2026-09-05T20:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/thumbs/3c80b4e5ff5b80bf8ebaecd35c85c207.webp",
-      "comment": "会場: 一之橋公園 琴平町で開催される秋の音楽イベント。",
-      "fee": "0",
-      "organizer": "琴平町商工会"
-    },
-    {
-      "id": "3ab0b4e5-ff5b-815a-ac45-cbf997fdd175",
-      "title": "【延期】第4回 台湾フェス・台湾夜市 in 琴平（第四届琴平台湾節・台湾夜市）",
-      "url": "https://www.instagram.com/p/DbSN6Pfgej_/",
-      "start": "2026-09-05T15:00",
-      "end": "2026-09-05T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "金陵の郷",
-      "address": "〒766-0001 香川県仲多度郡琴平町 623",
-      "image": "assets/thumbs/3ab0b4e5ff5b815aac45cbf997fdd175.webp",
-      "comment": "琴平町の金陵の郷で開催される台湾グルメ・文化イベント。台湾屋台グルメの出店、ステージイベント（電音三太子・二胡演奏・トークショー）、町内コラボメニュースタンプラリー、限定ガチャガチャなどが予定されている。",
-      "fee": "0",
-      "organizer": "琴平町"
-    },
-    {
-      "id": "3d40b4e5-ff5b-802e-ba8e-edf2d9b80d40",
-      "title": "琴高祭",
-      "url": "https://www.instagram.com/p/Dc2-DnGRNSi/",
-      "start": "2026-09-05T09:30",
-      "end": "2026-09-05T14:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平高校",
-      "address": "香川県仲多度郡琴平町五條142-2",
-      "image": "assets/thumbs/3d40b4e5ff5b802eba8eedf2d9b80d40.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": ""
-    },
-    {
-      "id": "3d40b4e5-ff5b-80c3-98c8-c9cf290bc357",
-      "title": "朝うどん巡礼ツアー",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
-      "start": "2026-09-05T07:20",
-      "end": "2026-09-05T09:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b80c398c8c9cf290bc357.webp",
-      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
-      "fee": "2800",
       "organizer": ""
     }
   ],
