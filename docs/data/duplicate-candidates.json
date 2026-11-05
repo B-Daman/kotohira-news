@@ -1,27 +1,27 @@
 {
   "generated_date": "2026-11-05",
   "since": "2026-09-06",
-  "total_events": 872,
+  "total_events": 942,
   "count": 1,
   "pairs": [
     {
-      "score": 0.941,
+      "score": 0.8,
       "pages": [
         {
-          "id": "3d00b4e5-ff5b-815b-8074-d95b25c98d21",
-          "title": "第3回こんぴら観光まちづくり検定",
-          "start": "2026-11-29",
-          "created": "2026-09-03",
-          "src": "https://www.kotohirakankou.jp/event/normal-event/entry-540.html",
-          "url": "https://app.notion.com/p/3-3d00b4e5ff5b815b8074d95b25c98d21"
+          "id": "40f0b4e5-ff5b-8105-92a1-d17ee3bd502d",
+          "title": "元気力アップ教室",
+          "start": "2026-10-06",
+          "created": "2026-11-05",
+          "src": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+          "url": "https://app.notion.com/p/40f0b4e5ff5b810592a1d17ee3bd502d"
         },
         {
-          "id": "3f00b4e5-ff5b-8179-9d03-f6094a4c4e3a",
-          "title": "第３回こんぴら観光まちづくり検定試験",
-          "start": "2026-11-29",
-          "created": "2026-10-05",
-          "src": "https://www.kotohirakankou.jp/news/entry-617.html",
-          "url": "https://app.notion.com/p/3f00b4e5ff5b81799d03f6094a4c4e3a"
+          "id": "40f0b4e5-ff5b-8117-a2eb-d1596a54d462",
+          "title": "元気力キープ教室",
+          "start": "2026-10-06",
+          "created": "2026-11-05",
+          "src": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+          "url": "https://app.notion.com/p/40f0b4e5ff5b8117a2ebd1596a54d462"
         }
       ]
     }

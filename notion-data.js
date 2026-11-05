@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-05 16:41",
+  "fetched": "2026-11-05 19:53",
   "news": [
     {
       "id": "40f0b4e5-ff5b-8163-9923-c1dc14b33bca",
@@ -789,21 +789,21 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
-      "id": "3f00b4e5-ff5b-8179-9d03-f6094a4c4e3a",
-      "title": "第３回こんぴら観光まちづくり検定試験",
-      "url": "https://www.kotohirakankou.jp/news/entry-617.html",
-      "start": "2026-11-29",
+      "id": "40f0b4e5-ff5b-813f-ba46-ea740a44ed35",
+      "title": "クリーン作戦",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-29T09:00",
       "end": "",
       "status": "実施前",
       "city": "琴平町",
       "place": "",
       "address": "",
-      "image": "https://www.kotohirakankou.jp/archives/",
-      "comment": "第３回こんぴら観光まちづくり検定試験の申し込みが10月5日から開始されました。試験は11月29日（日）に実施され、初級・中級の2つの受験級があります。",
+      "image": "",
+      "comment": "場所: 各所 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
       "fee": "",
-      "organizer": "こんぴら観光まちづくり協会",
+      "organizer": "",
       "calendar": [
-        "基本のイベント"
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -827,6 +827,139 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-816d-ad24-c71bdaf2df85",
+      "title": "肺がん検診",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-28T09:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 時間: 9:00〜11:30・13:30〜15:00 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81b2-ae01-f3c055fe5857",
+      "title": "集団検診",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-28T08:45",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 時間: 8:45〜11:30・13:00〜15:00 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-810a-be1e-c7625ab0576d",
+      "title": "バランスの美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-27T10:00",
+      "end": "2026-11-27T11:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8166-a855-e959ca441689",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-26T10:30",
+      "end": "2026-11-26T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8113-a534-c9f2b8aaedd0",
+      "title": "障がい者・児童生活支援相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-26T09:00",
+      "end": "2026-11-26T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8124-8c2b-ee39cad5ecbb",
+      "title": "おれんじカフェ「わ」",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-25T13:30",
+      "end": "2026-11-25T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 楽集館 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8165-ba0a-c09813b32ab1",
+      "title": "スマホサロン",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-25T09:00",
+      "end": "2026-11-25T11:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-80d6-8f56-db486fb4d258",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -842,6 +975,44 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c0-a030-f0ddd98f2945",
+      "title": "ピヨピヨ広場",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-24T10:00",
+      "end": "2026-11-24T16:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ふれあい交流館 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-817b-b7b4-f1d884ea7bc3",
+      "title": "可燃ごみ臨時収集",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-23",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 月・木曜日収集地区 / 備考: 勤労感謝の日 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -880,6 +1051,25 @@ window.NOTION_DATA = {
       "organizer": "西野金陵株式会社",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81ad-97c0-df9d31d3ec23",
+      "title": "こんぴらマルシェ SHUKAKU祭（こんぴら朝市）",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-22T09:00",
+      "end": "2026-11-22T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/manual/konpira_asaichi.webp",
+      "comment": "場所: 一之橋公園 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -941,6 +1131,82 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-815f-8062-d90b7b896dc7",
+      "title": "とっと相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-20T15:00",
+      "end": "2026-11-20T17:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ふれあい交流館 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81e0-90d4-c9bc8f27dcac",
+      "title": "弁護士相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-20T13:00",
+      "end": "2026-11-20T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 地域福祉ステーション / 要予約 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81b9-a605-e00fa2219e60",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-19T10:30",
+      "end": "2026-11-19T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8132-9beb-cecffebb8674",
+      "title": "糖尿病予防の運動教室",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-18T10:00",
+      "end": "2026-11-18T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-806e-940b-e1af3307618f",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -956,6 +1222,25 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81a7-aaf1-e4291126b2fe",
+      "title": "おれんじカフェ「わ」",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-17T13:30",
+      "end": "2026-11-17T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 楽集館 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -979,6 +1264,44 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-81e9-b2b1-d9559ec59832",
+      "title": "動きの美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-17T10:00",
+      "end": "2026-11-17T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81d8-a76a-c0f8babf43fa",
+      "title": "頭の美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-16T10:00",
+      "end": "2026-11-16T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "4070b4e5-ff5b-81c6-983c-dce39c5878ae",
       "title": "1070形1073×1074号引退記念イベント 定期列車最終運用 + 記念きっぷ発売 + 公募写真展開催",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
@@ -998,6 +1321,139 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-81b7-a78e-dfbe85ef36bf",
+      "title": "健康相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-13T10:00",
+      "end": "2026-11-13T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ちょっとこ場 / 要予約 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81a7-ad93-c3d163daa8c6",
+      "title": "ボッチャ同好会",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-12T13:30",
+      "end": "2026-11-12T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c3-861c-e53b1d6575ba",
+      "title": "成年後見相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-12T13:00",
+      "end": "2026-11-12T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 地域福祉ステーション / 要予約 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81de-a821-e0f81876f72b",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-12T10:30",
+      "end": "2026-11-12T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8109-a140-fced02c20b33",
+      "title": "男性の料理教室",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-12T10:00",
+      "end": "2026-11-12T13:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 要予約 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81df-8448-d29c8d84cb6e",
+      "title": "全国一斉Jアラート情報伝達訓練",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-11T11:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 町内全域 / 備考: 訓練放送が流れます / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-810e-a13c-efd526aa2196",
+      "title": "スマホサロン",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-11T09:00",
+      "end": "2026-11-11T11:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-8099-901d-c987214c2815",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -1013,6 +1469,44 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-819b-8992-ebbf8e1fe6da",
+      "title": "行政相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-10T10:00",
+      "end": "2026-11-10T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81bd-8f2b-d463d97613e0",
+      "title": "親子のわんわん教室",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-10T09:30",
+      "end": "2026-11-10T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: かりん健康センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1074,6 +1568,44 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-81dc-93de-f4b7a238d746",
+      "title": "総合防災訓練",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-08T09:00",
+      "end": "2026-11-08T11:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 琴平中学校 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81e5-9f72-fa7af006ef88",
+      "title": "こんぴら朝市",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-08T09:00",
+      "end": "2026-11-08T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/manual/konpira_asaichi.webp",
+      "comment": "場所: 一之橋公園 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d",
       "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演 1日目",
       "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100",
@@ -1108,6 +1640,82 @@ window.NOTION_DATA = {
       "organizer": "琴平町地域おこし協力隊 ケリー",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81e0-b65c-cb012f852605",
+      "title": "琴中図書館一般開放",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-07T10:00",
+      "end": "2026-11-07T15:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 琴平中学校 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-814a-907c-e777108f3fb0",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-05T10:30",
+      "end": "2026-11-05T11:30",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8179-bc93-dcb1dfe18280",
+      "title": "姿勢の美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-05T10:00",
+      "end": "2026-11-05T11:00",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8183-ad06-e897ff32b5bc",
+      "title": "全国一斉緊急地震速報訓練",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-05T10:00",
+      "end": "",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 町内全域 / 時間: 10:00頃 / 備考: 訓練放送が流れます / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1150,6 +1758,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-8128-a773-ffb3fe76bb42",
+      "title": "可燃ごみ臨時収集",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-03",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 火・金曜日収集地区 / 備考: 文化の日 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-8192-bc7d-c76c3273e161",
       "title": "明治祭",
       "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
@@ -1184,6 +1811,25 @@ window.NOTION_DATA = {
       "organizer": "こんぴら観光まちづくり協会",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-812f-8431-d8206944052f",
+      "title": "町民体育祭",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-11-01T08:30",
+      "end": "2026-11-01T12:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ヴィスポことひら メインアリーナ / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年11月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1245,6 +1891,101 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-811e-bdfb-c8c2f7a92b6d",
+      "title": "戦没者追悼式",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-30T14:00",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8126-99d7-c94ddce0af7c",
+      "title": "地域づくり懇談会（象郷）",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-29T14:00",
+      "end": "2026-10-29T15:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 農業構造改善センター / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-811f-ad50-d2de58b2edda",
+      "title": "地域づくり懇談会（五條）",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-28T13:30",
+      "end": "2026-10-28T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 南部開拓 / 備考: 会場名は誌面の文字が小さく要確認 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-815c-baba-f45076a8fbd9",
+      "title": "おれんじカフェ「わ」",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-28T13:30",
+      "end": "2026-10-28T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 楽集館 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-815e-8189-eb1c6810b203",
+      "title": "スマホサロン",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-28T09:00",
+      "end": "2026-10-28T11:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-80d1-954f-f65d907696d6",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -1260,6 +2001,63 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81ba-a767-d2ee0900b713",
+      "title": "地域づくり懇談会（琴平）",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-27T14:00",
+      "end": "2026-10-27T15:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 文化会館 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8127-bd52-d9998680dc61",
+      "title": "ことばと子育て相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-27T10:00",
+      "end": "2026-10-27T16:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ふれあい交流館 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-814c-a8e7-cc38f4a66d19",
+      "title": "ピヨピヨ広場",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-27T10:00",
+      "end": "2026-10-27T16:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ふれあい交流館 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1283,6 +2081,44 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-8187-af70-cc791758876a",
+      "title": "地域づくり懇談会（榎井）",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-26T15:30",
+      "end": "2026-10-26T16:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8152-9b60-da14084c91b9",
+      "title": "頭の美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-26T10:00",
+      "end": "2026-10-26T11:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3f10b4e5-ff5b-8110-8722-d15e9fa0d5ae",
       "title": "ハロウィンパーティー",
       "url": "https://www.instagram.com/p/DeExJGbREmz/",
@@ -1298,6 +2134,25 @@ window.NOTION_DATA = {
       "organizer": "子育て応援ボランティアグループ415のわ",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81d4-8120-d880f5c9d594",
+      "title": "こんぴら朝市",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-25T09:00",
+      "end": "2026-10-25T12:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/manual/konpira_asaichi.webp",
+      "comment": "場所: 一之橋公園 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1340,6 +2195,25 @@ window.NOTION_DATA = {
       "featured": true
     },
     {
+      "id": "40f0b4e5-ff5b-81fe-b8ec-fe6daee06c57",
+      "title": "街ガチャ第2弾 発売",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-23",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-80f7-bc2a-fe81311889bc",
       "title": "第15回 讃岐おでん試作会～夏おでん意見交換回～",
       "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
@@ -1374,6 +2248,44 @@ window.NOTION_DATA = {
       "organizer": "つるや旅館、藤田屋",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-811e-88d5-c94b7b2d7c8d",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-22T10:30",
+      "end": "2026-10-22T11:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8169-b88c-f743fec7572f",
+      "title": "障がい者・児童生活支援相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-22T09:00",
+      "end": "2026-10-22T12:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1416,6 +2328,44 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-8178-b331-c79085650e49",
+      "title": "国保健康教室（骨折予防）",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-20T14:00",
+      "end": "2026-10-20T15:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-816a-8bf6-f955f765058b",
+      "title": "おれんじカフェ「わ」",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-20T13:30",
+      "end": "2026-10-20T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 楽集館 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ef0b4e5-ff5b-8030-8a16-f006c24aa1d3",
       "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
@@ -1450,6 +2400,44 @@ window.NOTION_DATA = {
       "organizer": "琴平町商工会、琴平町、こんぴら観光まちづくり協会",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81a3-8a53-eca3e326cc2a",
+      "title": "行政相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-20T10:00",
+      "end": "2026-10-20T12:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 文化会館 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8138-bc64-cf0ca69860e8",
+      "title": "動きの美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-20T10:00",
+      "end": "2026-10-20T11:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1530,6 +2518,120 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-811a-bda3-c3e2884c5704",
+      "title": "弁護士相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-16T13:00",
+      "end": "2026-10-16T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 地域福祉ステーション / 要予約 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-814c-9c26-d93b1e1587ff",
+      "title": "バランスの美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-16T10:00",
+      "end": "2026-10-16T11:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8168-95fd-c5accbc2a5ec",
+      "title": "特設人権相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-16T09:00",
+      "end": "2026-10-16T12:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8160-a6b3-fe4a8abd6e11",
+      "title": "3歳児健診",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-15T14:15",
+      "end": "2026-10-15T14:40",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81ec-8ed0-c1a79813e788",
+      "title": "1歳6か月児健診",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-15T13:00",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-810d-a824-c21df77d1cbc",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-15T10:30",
+      "end": "2026-10-15T11:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-81a7-9616-f85c4841151b",
       "title": "焼払神事",
       "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
@@ -1545,6 +2647,44 @@ window.NOTION_DATA = {
       "organizer": "金刀比羅宮",
       "calendar": [
         "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8173-b9f3-ec10c0f5cc30",
+      "title": "交通事故相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-14T10:00",
+      "end": "2026-10-14T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 要予約 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81f7-aa8f-eb0563cf63e8",
+      "title": "スマホサロン",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-14T09:00",
+      "end": "2026-10-14T11:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1583,6 +2723,82 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c4-a551-dbd58775284c",
+      "title": "健康と生きがいづくりに役立つ笑いの力",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-13T14:00",
+      "end": "2026-10-13T15:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8153-a3ee-e569d92ca1ce",
+      "title": "行政相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-13T10:00",
+      "end": "2026-10-13T12:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8187-a23a-ea135b80b83d",
+      "title": "親子のわんわん教室",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-13T09:30",
+      "end": "2026-10-13T11:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c6-acf5-f12935769f99",
+      "title": "可燃ごみ臨時収集",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-12",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 月・木曜日収集地区 / 備考: スポーツの日 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1934,6 +3150,101 @@ window.NOTION_DATA = {
       "featured": true
     },
     {
+      "id": "40f0b4e5-ff5b-815e-a97f-f5dcda814db2",
+      "title": "胃がん検診",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-09T08:15",
+      "end": "2026-10-09T11:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 要予約 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81da-9edd-c1d382baf0ae",
+      "title": "歯医者さんの講演会",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-08T14:00",
+      "end": "2026-10-08T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 要予約 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8156-b335-e25045abfb23",
+      "title": "ボッチャ同好会",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-08T13:30",
+      "end": "2026-10-08T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-819f-88db-edb865ee4a1f",
+      "title": "成年後見相談",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-08T13:00",
+      "end": "2026-10-08T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 地域福祉ステーション / 要予約 / 区分: 相談（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-819a-b6a1-dbc7e4e795dd",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-08T10:30",
+      "end": "2026-10-08T11:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-8167-899c-f0d3820d9669",
       "title": "NAGONO LOCAL MEETS「琴平 -KOTOHIRA-」",
       "url": "https://www.instagram.com/p/Dd20zwGTzfn/",
@@ -1991,6 +3302,44 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-8117-a2eb-d1596a54d462",
+      "title": "元気力キープ教室",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-06T11:00",
+      "end": "2026-10-06T11:45",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ヴィスポことひら / 要予約 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8105-92a1-d17ee3bd502d",
+      "title": "元気力アップ教室",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-06T10:00",
+      "end": "2026-10-06T10:45",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: ヴィスポことひら / 要予約 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-8198-8e6b-f328133dfcc3",
       "title": "指合神事",
       "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
@@ -2006,6 +3355,44 @@ window.NOTION_DATA = {
       "organizer": "金刀比羅宮",
       "calendar": [
         "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8192-bf0d-ddac843260c9",
+      "title": "大腸がん検診",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-05T08:30",
+      "end": "2026-10-05T11:45",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8196-8016-d2388ef267b4",
+      "title": "胃がん検診",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-05T08:15",
+      "end": "2026-10-05T11:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 要予約 / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -2043,7 +3430,8 @@ window.NOTION_DATA = {
       "fee": "3000",
       "organizer": "琴平町",
       "calendar": [
-        "基本のイベント"
+        "基本のイベント",
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -2063,6 +3451,25 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81a5-bbf1-e4cbf7a08916",
+      "title": "琴中図書館一般開放",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-03T10:00",
+      "end": "2026-10-03T15:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 琴平中学校 / 区分: その他（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -2139,6 +3546,44 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81bf-ae9a-e0b5beb5b17d",
+      "title": "ほっとひといき琴平",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-01T10:30",
+      "end": "2026-10-01T11:30",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8196-8d89-c75fb1e88ef6",
+      "title": "姿勢の美男美女",
+      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
+      "start": "2026-10-01T10:00",
+      "end": "2026-10-01T11:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -2802,120 +4247,6 @@ window.NOTION_DATA = {
       "comment": "自分自身と向き合い、未来の目標や必要なものを見つめ直すためのビジョンボード作成ワークショップ。コトリコワーキング＆ホステル琴平のスタッフのぞみが企画し、参加者のモチベーションや視野を広げることを目的としている。",
       "fee": "500",
       "organizer": "コトリコワーキング＆ホステル琴平",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-80fc-aa3c-eedd6d30f6f5",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
-      "start": "2026-09-09T12:00",
-      "end": "2026-09-09T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b80fcaa3ceedd6d30f6f5.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-8194-b160-ea50462a7d22",
-      "title": "竃祓祭・御幣立神事",
-      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
-      "start": "2026-09-09",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "場所: 神事場 / 年間行事ページでは「祝舎御幣立神事」 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
-      "fee": "",
-      "organizer": "金刀比羅宮",
-      "calendar": [
-        "金刀比羅宮"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3cd0b4e5-ff5b-804e-8747-d727722bca0c",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-09-08T20:00",
-      "end": "2026-09-08T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3cd0b4e5ff5b804e8747d727722bca0c.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-81c5-95bb-ca5fd7d39230",
-      "title": "潮川神事",
-      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
-      "start": "2026-09-08T18:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "場所: 金倉川に臨む神事場の斎館 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
-      "fee": "",
-      "organizer": "金刀比羅宮",
-      "calendar": [
-        "金刀比羅宮"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-819e-aefb-deece6abeb05",
-      "title": "潮汲藻刈神事",
-      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
-      "start": "2026-09-08",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "場所: 多度津金刀比羅神社(熊手八幡宮) / 時刻: 午前中 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
-      "fee": "",
-      "organizer": "金刀比羅宮",
-      "calendar": [
-        "金刀比羅宮"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3ce0b4e5-ff5b-803e-a576-cadd1eee98cb",
-      "title": "ことウラさんぽ モニターツアー（第二次予備調査）",
-      "url": "",
-      "start": "2026-09-06",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "",
-      "fee": "",
-      "organizer": "",
       "calendar": [
         "基本のイベント"
       ],
