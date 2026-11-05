@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-05 21:16",
+  "fetched": "2026-11-06 03:13",
   "news": [
     {
       "id": "40f0b4e5-ff5b-8163-9923-c1dc14b33bca",
@@ -447,6 +447,272 @@ window.NOTION_DATA = {
   ],
   "events": [
     {
+      "id": "40f0b4e5-ff5b-8134-b7fa-e1c623644544",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-02-01T09:00",
+      "end": "2027-02-01T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81a4-b3de-f3d07c5adc34",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-26T09:00",
+      "end": "2027-01-26T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8141-9284-c4ce1247b0ba",
+      "title": "初十日祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-10T10:00",
+      "end": "2027-01-10T11:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "1月10日、御本宮にて「初十日祭」を斎行いたします。 〝こんぴらさん〟のご縁日は毎月10日です。1年の最初のご縁日〝初こんぴら〟の日に斎行する初十日祭は正月最大のお祭りです。その起源は桜町天皇の御代に始まると伝えられ、この日にお祈りすれば特別なご利益が授かるとされています。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8104-815a-e747422b52a4",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-10T09:00",
+      "end": "2027-01-10T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-819f-824f-d00ab4323372",
+      "title": "斎籠神事 竟祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-07T14:00",
+      "end": "2027-01-07T14:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "斎籠神事は、皇室の弥栄（いやさか）・国家の隆昌・五穀豊穣を祈願するお祭りです。 神職全員が参籠潔斎（さんろうけっさい）して朝夕の祭典を奉仕し、全国の皆さまから寄せられた「新春こんぴら初祈祷」の願い事や、元日から4日までに御本宮にてご祈祷をなされた皆さまの願い事に、二夜三日かけて念には念を入れて祈祷を行い、皆さまの幸せを金刀比羅の大神さまに取り次ぎます。 この二夜三日祈祷は、金刀比羅宮が大権現の時代から秘儀として今に受け継いできた〝こんぴらさん〟の特別祈祷です。 最終日の7日は「竟祭（はてのまつり）」を斎行、「浦安舞」を奏進します。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8181-8c3c-faa83c87cad2",
+      "title": "斎籠神事 朝祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-07T09:00",
+      "end": "2027-01-07T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "斎籠神事は、皇室の弥栄（いやさか）・国家の隆昌・五穀豊穣を祈願するお祭りです。 神職全員が参籠潔斎（さんろうけっさい）して朝夕の祭典を奉仕し、全国の皆さまから寄せられた「新春こんぴら初祈祷」の願い事や、元日から4日までに御本宮にてご祈祷をなされた皆さまの願い事に、二夜三日かけて念には念を入れて祈祷を行い、皆さまの幸せを金刀比羅の大神さまに取り次ぎます。 この二夜三日祈祷は、金刀比羅宮が大権現の時代から秘儀として今に受け継いできた〝こんぴらさん〟の特別祈祷です。 最終日の7日は「竟祭（はてのまつり）」を斎行、「浦安舞」を奏進します。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8143-85f4-c2076dd9ffcb",
+      "title": "斎籠神事 夕祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-06T16:00",
+      "end": "2027-01-06T16:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "斎籠神事は、皇室の弥栄（いやさか）・国家の隆昌・五穀豊穣を祈願するお祭りです。 神職全員が参籠潔斎（さんろうけっさい）して朝夕の祭典を奉仕し、全国の皆さまから寄せられた「新春こんぴら初祈祷」の願い事や、元日から4日までに御本宮にてご祈祷をなされた皆さまの願い事に、二夜三日かけて念には念を入れて祈祷を行い、皆さまの幸せを金刀比羅の大神さまに取り次ぎます。 この二夜三日祈祷は、金刀比羅宮が大権現の時代から秘儀として今に受け継いできた〝こんぴらさん〟の特別祈祷です。 最終日の7日は「竟祭（はてのまつり）」を斎行、「浦安舞」を奏進します。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81da-a127-e5f87a811e3f",
+      "title": "厳魂神社（奥社）例祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-06T11:00",
+      "end": "2027-01-06T12:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "嚴魂神社（奥社）",
+      "address": "〒766-8501 香川県仲多度郡琴平町892-1（石段1368段目）",
+      "image": "",
+      "comment": "厳魂神社（奥社）の御祭神である厳魂彦命の御命日である1月6日、「厳魂神社大祭」を斎行いたします。 厳魂彦命は、金毘羅大権現第4代別当、今日も金刀比羅本教教祖として慕われる金光院（金剛坊）宥盛であり、金刀比羅本教においても祭典を斎行いたします。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8130-baeb-e1bcadbc2747",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-06T09:00",
+      "end": "2027-01-06T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "嚴魂神社（奥社）",
+      "address": "〒766-8501 香川県仲多度郡琴平町892-1（石段1368段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-819c-a489-c1baafbbc1bc",
+      "title": "斎籠神事 朝祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-06T09:00",
+      "end": "2027-01-06T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "斎籠神事は、皇室の弥栄（いやさか）・国家の隆昌・五穀豊穣を祈願するお祭りです。 神職全員が参籠潔斎（さんろうけっさい）して朝夕の祭典を奉仕し、全国の皆さまから寄せられた「新春こんぴら初祈祷」の願い事や、元日から4日までに御本宮にてご祈祷をなされた皆さまの願い事に、二夜三日かけて念には念を入れて祈祷を行い、皆さまの幸せを金刀比羅の大神さまに取り次ぎます。 この二夜三日祈祷は、金刀比羅宮が大権現の時代から秘儀として今に受け継いできた〝こんぴらさん〟の特別祈祷です。 最終日の7日は「竟祭（はてのまつり）」を斎行、「浦安舞」を奏進します。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-812e-be47-cf395ae76a1d",
+      "title": "斎籠神事 夕祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-05T16:00",
+      "end": "2027-01-05T16:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "斎籠神事は、皇室の弥栄（いやさか）・国家の隆昌・五穀豊穣を祈願するお祭りです。 神職全員が参籠潔斎（さんろうけっさい）して朝夕の祭典を奉仕し、全国の皆さまから寄せられた「新春こんぴら初祈祷」の願い事や、元日から4日までに御本宮にてご祈祷をなされた皆さまの願い事に、二夜三日かけて念には念を入れて祈祷を行い、皆さまの幸せを金刀比羅の大神さまに取り次ぎます。 この二夜三日祈祷は、金刀比羅宮が大権現の時代から秘儀として今に受け継いできた〝こんぴらさん〟の特別祈祷です。 最終日の7日は「竟祭（はてのまつり）」を斎行、「浦安舞」を奏進します。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81bd-955f-fdd0d61d3448",
+      "title": "斎籠神事 朝祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-05T09:00",
+      "end": "2027-01-05T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "斎籠神事は、皇室の弥栄（いやさか）・国家の隆昌・五穀豊穣を祈願するお祭りです。 神職全員が参籠潔斎（さんろうけっさい）して朝夕の祭典を奉仕し、全国の皆さまから寄せられた「新春こんぴら初祈祷」の願い事や、元日から4日までに御本宮にてご祈祷をなされた皆さまの願い事に、二夜三日かけて念には念を入れて祈祷を行い、皆さまの幸せを金刀比羅の大神さまに取り次ぎます。 この二夜三日祈祷は、金刀比羅宮が大権現の時代から秘儀として今に受け継いできた〝こんぴらさん〟の特別祈祷です。 最終日の7日は「竟祭（はてのまつり）」を斎行、「浦安舞」を奏進します。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8152-baf7-f6beeb83334d",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-01T09:00",
+      "end": "2027-01-01T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c0-a993-c38f36626e72",
+      "title": "歳旦祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-01-01T00:00",
+      "end": "2027-01-01T00:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "新しい年の始まりを祝う祭典です。 諸災を消除するとされる「計歌」（かぞえうた）を奏進します。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-81ed-8be6-fd0d3a88ae8d",
       "title": "大祓奏上祭・大祓式・道饗祭・鎮火祭・除夜祭",
       "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
@@ -454,8 +720,8 @@ window.NOTION_DATA = {
       "end": "2026-12-31T19:00",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
-      "address": "",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
       "image": "",
       "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
       "fee": "",
@@ -496,6 +762,25 @@ window.NOTION_DATA = {
       "address": "",
       "image": "",
       "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8162-90d6-cb690422e82d",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2026-12-26T09:00",
+      "end": "2026-12-26T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
       "fee": "",
       "organizer": "金刀比羅宮",
       "calendar": [
@@ -618,6 +903,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-81ce-aee7-d1cfdea3552e",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2026-12-10T09:00",
+      "end": "2026-12-10T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-8025-ad52-e893b25290c4",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -652,6 +956,25 @@ window.NOTION_DATA = {
       "organizer": "こんぴら路地裏着物レンタル藤田屋",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8115-8bb3-fe9279e1987b",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2026-12-06T09:00",
+      "end": "2026-12-06T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "嚴魂神社（奥社）",
+      "address": "〒766-8501 香川県仲多度郡琴平町892-1（石段1368段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
       ],
       "featured": false
     },
@@ -747,6 +1070,25 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8166-9fe1-fd1782847f91",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2026-12-01T09:00",
+      "end": "2026-12-01T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
       ],
       "featured": false
     },
@@ -899,6 +1241,25 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8151-b6ae-f2a0d7331b5c",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2026-11-26T09:00",
+      "end": "2026-11-26T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
       ],
       "featured": false
     },
@@ -1499,8 +1860,8 @@ window.NOTION_DATA = {
       "end": "2026-11-10T10:30",
       "status": "実施前",
       "city": "琴平町",
-      "place": "",
-      "address": "",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
       "image": "",
       "comment": "場所: 御本宮 / 紅葉の枝の太玉串の御行列は取りやめ(カレンダーページ) / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
       "fee": "",
@@ -1606,6 +1967,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-8176-843b-e31e487964c7",
+      "title": "愛宕神社例祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2026-11-07T14:00",
+      "end": "2026-11-07T14:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 菅原神社 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d",
       "title": "イタリア古楽×雅楽共演 琴平・金丸座特別公演 1日目",
       "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100",
@@ -1663,12 +2043,31 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-81af-9f2b-fae0c5b381ad",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2026-11-06T09:00",
+      "end": "2026-11-06T09:30",
+      "status": "実施中",
+      "city": "琴平町",
+      "place": "嚴魂神社（奥社）",
+      "address": "〒766-8501 香川県仲多度郡琴平町892-1（石段1368段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-814a-907c-e777108f3fb0",
       "title": "ほっとひといき琴平",
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-05T10:30",
       "end": "2026-11-05T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1687,7 +2086,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-05T10:00",
       "end": "2026-11-05T11:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -1706,7 +2105,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-05T10:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2906,8 +3305,8 @@ window.NOTION_DATA = {
       "end": "",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
-      "address": "",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
       "image": "",
       "comment": "場所: 御本宮 / 時刻: 深夜 / 突合で追加。年間行事ページは11日欄。例大祭ページは御神輿の御還幸後の深夜(日付の明記なし)で、金幣式・五人百姓の供応・解斎歌を行う / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
       "fee": "",
@@ -3022,8 +3421,8 @@ window.NOTION_DATA = {
       "end": "",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
-      "address": "",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
       "image": "",
       "comment": "場所: 御本宮 / 突合で追加。例大祭ページで例祭の後に御本宮でお頭人さんの金幣式を行う。時刻の記載なし / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
       "fee": "",
@@ -3614,8 +4013,8 @@ window.NOTION_DATA = {
       "end": "",
       "status": "終了",
       "city": "琴平町",
-      "place": "",
-      "address": "",
+      "place": "金刀比羅宮神事場",
+      "address": "〒766-0002 香川県仲多度郡琴平町",
       "image": "",
       "comment": "場所: 神事場 / 例大祭ページに記載。年間行事ページには無い / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
       "fee": "",
@@ -3848,405 +4247,6 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3e00b4e5-ff5b-8199-98d4-f5a6dd6ec311",
-      "title": "THE GORILLA GUERRILLAS ライブ@麻心琴平",
-      "url": "https://www.instagram.com/p/DdYAbwLJyif/",
-      "start": "2026-09-22T19:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/3e00b4e5ff5b819998d4f5a6dd6ec311.webp",
-      "comment": "会場: 麻心琴平 リズムマスター4人によるアンサンブルライブ。アフリカ大陸起源の楽器を奏でる太鼓叩き達が琴平に集結。入場無料（投げ銭制）。",
-      "fee": "0",
-      "organizer": "THE GORILLA GUERRILLAS / 音楽で琴平を盛り上げるプロジェクト",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-80e1-9208-f5f486857a0e",
-      "title": "第14回 讃岐おでん試作会～夏おでん意見交換回～",
-      "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
-      "start": "2026-09-22T19:00",
-      "end": "2026-09-22T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b80e19208f5f486857a0e.webp",
-      "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
-      "fee": "2000",
-      "organizer": "讃岐おでんプロジェクト",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3e00b4e5-ff5b-812f-88a8-de2c5d0bb881",
-      "title": "GHIBLI JAZZ TRIO LIVE",
-      "url": "https://www.instagram.com/p/DdVM0X2pfXx/",
-      "start": "2026-09-21T15:30",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/3e00b4e5ff5b812f88a8de2c5d0bb881.webp",
-      "comment": "会場: 麻心～まごころ～（香川県仲多度郡琴平町621-9） 愛媛県松山市のジブリジャズ専門ピアニスト野上朝生率いるJAZZトリオが琴平に初来訪。スタジオジブリの名曲をジャズアレンジで演奏するライブイベント。",
-      "fee": "3000",
-      "organizer": "麻心～まごころ～",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3ce0b4e5-ff5b-817d-b9ac-c06e7d8b3d2e",
-      "title": "オリジナル着物の半衿を作るワークショップ〜刺繍",
-      "url": "https://www.instagram.com/p/DctUUTtmAPo/",
-      "start": "2026-09-19T10:00",
-      "end": "2026-09-19T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
-      "address": "香川県仲多度郡琴平町806",
-      "image": "assets/thumbs/3ce0b4e5ff5b817db9acc06e7d8b3d2e.webp",
-      "comment": "琴平町のこんぴら路地裏着物レンタル藤田屋で、カンタ刺繍を学びながらオリジナルの着物の半衿を作るワークショップを開催。講師はちくちく針ねずみ。",
-      "fee": "2000",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-805e-86aa-ca48f43e34d3",
-      "title": "朝うどん巡礼ツアー",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
-      "start": "2026-09-19T07:20",
-      "end": "2026-09-19T09:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b805e86aaca48f43e34d3.webp",
-      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
-      "fee": "2800",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3de0b4e5-ff5b-8126-9e0d-d21a9e36b81e",
-      "title": "KOTOHIRA 785 FOOD LAUNCH オンライン説明会",
-      "url": "https://peatix.com/event/5170585",
-      "start": "2026-09-18T19:00",
-      "end": "2026-09-19T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3de0b4e5ff5b81269e0dd21a9e36b81e.webp",
-      "comment": "会場: オンライン 琴平町での食の事業展開を検討している人向けのオンライン説明会。自分や会社の強みを観光地で選ばれる食体験へ展開することをテーマとしている。",
-      "fee": "78500",
-      "organizer": "KOTOHIRA 785 FOOD LAUNCH",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
-      "title": "第16回「ユルッと楽しく着付けレッスン」",
-      "url": "https://www.instagram.com/p/DcJUmy4gUJL/",
-      "start": "2026-09-17T18:30",
-      "end": "2026-09-17T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "つるや旅館",
-      "address": "766-0001 香川県仲多度郡琴平町620",
-      "image": "assets/thumbs/3bf0b4e5ff5b81c09360c0c6944cd93a.webp",
-      "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
-      "fee": "500",
-      "organizer": "つるや旅館、藤田屋",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3db0b4e5-ff5b-8109-88eb-d5b8465a9fdf",
-      "title": "Play and Doodle with Paul - ドローイングワークショップ",
-      "url": "https://www.instagram.com/p/DdIT5r_TBq3/",
-      "start": "2026-09-16T18:30",
-      "end": "2026-09-16T20:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3db0b4e5ff5b810988ebd5b8465a9fdf.webp",
-      "comment": "会場: コトリ琴平 フランスから来たイラストレーターPaulによるドローイングワークショップ。基本的なエクササイズやゲームを通じて、見る・描く・表現する楽しさを学びます。初心者向け。",
-      "fee": "500",
-      "organizer": "Kotori Coworking & Hostel Kotohira",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-806e-a74a-f23aa502083b",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
-      "start": "2026-09-16T12:00",
-      "end": "2026-09-16T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b806ea74af23aa502083b.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3cd0b4e5-ff5b-80b5-bf44-c186c4228a75",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-09-15T20:00",
-      "end": "2026-09-15T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3cd0b4e5ff5b80b5bf44c186c4228a75.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3ea0b4e5-ff5b-80f8-adbc-cf8eb1842479",
-      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
-      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
-      "start": "2026-09-15T13:30",
-      "end": "2026-09-15T15:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "カフェ 象山",
-      "address": "香川県仲多度郡琴平町榎井553−1",
-      "image": "assets/thumbs/3ea0b4e5ff5b80f8adbccf8eb1842479.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "39e0b4e5-ff5b-8153-842a-c16dbdfaad50",
-      "title": "第3回コトコトプロジェクト 琴平での8日間体験プログラム",
-      "url": "https://www.instagram.com/p/DauldN1E2cQ/?img_index=1",
-      "start": "2026-09-15",
-      "end": "2026-09-22",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/39e0b4e5ff5b8153842ac16dbdfaad50.webp",
-      "comment": "会場: 琴平町内（KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校） 琴平町での出会いや経験を通じて地域や住民の魅力に触れるプロジェクト。KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校での体験プログラムに参加者を募集。",
-      "fee": "0",
-      "organizer": "流通科学大学",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d50b4e5-ff5b-8034-8a48-cf5c59b47878",
-      "title": "四国シェアサミット2026 in 琴平 DAY2",
-      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
-      "start": "2026-09-13T09:45",
-      "end": "2026-09-13T12:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町公会堂",
-      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
-      "image": "assets/thumbs/3d50b4e5ff5b80348a48cf5c59b47878.webp",
-      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
-      "fee": "0",
-      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3c80b4e5-ff5b-81a1-bbda-f8ed9895895d",
-      "title": "第8回 こんぴら秋夜市",
-      "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
-      "start": "2026-09-12T17:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/thumbs/3c80b4e5ff5b81a1bbdaf8ed9895895d.webp",
-      "comment": "会場: 一之橋公園・金陵の郷 琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
-      "fee": "0",
-      "organizer": "琴平町商工会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d50b4e5-ff5b-803a-9771-fd5687c65cd0",
-      "title": "四国シェアサミット2026 in 琴平 DAY1",
-      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
-      "start": "2026-09-12T09:30",
-      "end": "2026-09-12T20:35",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町公会堂",
-      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
-      "image": "assets/thumbs/3d50b4e5ff5b803a9771fd5687c65cd0.webp",
-      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
-      "fee": "0",
-      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-8062-8850-c9dccebaa7b5",
-      "title": "朝うどん巡礼ツアー",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
-      "start": "2026-09-12T07:20",
-      "end": "2026-09-12T09:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b80628850c9dccebaa7b5.webp",
-      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
-      "fee": "2800",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3a50b4e5-ff5b-818d-a225-d0048ef3f63f",
-      "title": "四国シェアサミット2026 in 琴平 前夜祭",
-      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
-      "start": "2026-09-11T18:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町公会堂",
-      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
-      "image": "assets/thumbs/3a50b4e5ff5b818da225d0048ef3f63f.webp",
-      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
-      "fee": "0",
-      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3c40b4e5-ff5b-8196-85aa-e7b6a784f00c",
-      "title": "熊本地震チャリティライブ 高松千春",
-      "url": "https://www.instagram.com/p/DcKx2kkkfsd/",
-      "start": "2026-09-11T16:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "ヴィスポことひら",
-      "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
-      "image": "assets/thumbs/3c40b4e5ff5b819685aae7b6a784f00c.webp",
-      "comment": "会場: ヴィスポことひら サブアリーナ 熊本地震復興支援を目的とした高松千春によるチャリティライブが琴平町で開催される。入場は無料で、会場での投げ銭募金は全額熊本地震復興支援に寄付される。",
-      "fee": "0",
-      "organizer": "株式会社ウエイ（ことひらいとこひペートナーズ）",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3b90b4e5-ff5b-81aa-becd-efb6408e5110",
-      "title": "Craft Beer & Food Event - DONZO Brewing × イタリアンシェフペアリング",
-      "url": "https://www.instagram.com/p/DbxXdG1s96-/",
-      "start": "2026-09-10T17:00",
-      "end": "2026-09-10T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "呑象ブリューイング",
-      "address": "香川県仲多度郡琴平町182-2",
-      "image": "assets/thumbs/3b90b4e5ff5b81aabecdefb6408e5110.webp",
-      "comment": "会場: DONZO Brewing DONZO Brewingと南イタリア出身シェフによるクラフトビール＆フードペアリングイベント第2弾。全8品のコース料理とクラフトビール3種または4種のマリアージュを楽しむ。要予約。",
-      "fee": "3300",
-      "organizer": "DONZO Brewing",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-81b2-92b7-fde1ca7aeab1",
-      "title": "入宿神事",
-      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
-      "start": "2026-09-10",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "場所: 祝舎 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
-      "fee": "",
-      "organizer": "金刀比羅宮",
-      "calendar": [
-        "金刀比羅宮"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-8171-a5b3-d984c126c2fa",
-      "title": "ビジョンボード作成ワークショップ",
-      "url": "https://www.instagram.com/p/Dc3DYGXzA93/",
-      "start": "2026-09-09T19:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b8171a5b3d984c126c2fa.webp",
-      "comment": "自分自身と向き合い、未来の目標や必要なものを見つめ直すためのビジョンボード作成ワークショップ。コトリコワーキング＆ホステル琴平のスタッフのぞみが企画し、参加者のモチベーションや視野を広げることを目的としている。",
-      "fee": "500",
-      "organizer": "コトリコワーキング＆ホステル琴平",
       "calendar": [
         "基本のイベント"
       ],
