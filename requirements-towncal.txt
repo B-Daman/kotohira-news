@@ -1,0 +1,3 @@
+# scripts/fetch_towncal.py --auto 用（GitHub Actions の update-notion-data.yml が pip install する）
+pymupdf
+pillow

@@ -1490,6 +1490,8 @@ function onMainClick(e){
   if(calNav){ navigateCalendar(calNav.dataset.calTarget, parseInt(calNav.dataset.calNav, 10) || 0); return; }
   const calLayer = e.target.closest("[data-cal-layer]");
   if(calLayer){ toggleEventCalLayer(calLayer.dataset.calLayer); return; }
+  const towncalView = e.target.closest("[data-towncal-view]");
+  if(towncalView){ setTowncalView(towncalView.dataset.towncalView); return; }
   const shopGenre = e.target.closest("[data-shop-genre]");
   if(shopGenre){ setShopGenreFilter(shopGenre.dataset.shopGenre); return; }
 }
@@ -3196,19 +3198,40 @@ function parkingModalHTML(it){
 /* ===== 🗓 こんぴらカレンダータブ（広報ことひらのカレンダー面を画像で掲載。towncal-data.js 由来・コード直書き）
    毎号ページ内テキストを組むのではなく誌面画像をそのまま見せる方式。掲載号が古くなったら
    TOWNCAL.month を今日の年月と文字列比較し、注記を出す（YYYY-MM同士の比較なので桁数が揃い安全）。 ===== */
-function towncalTabHTML(){
-  if(!window.TOWNCAL) return emptyMsg("こんぴらカレンダーは準備中です。");
-  const T = window.TOWNCAL;
-  const mm = (""+(T.month||"")).match(/^(\d{4})-(\d{2})$/);
-  const monthLabel = mm ? `${+mm[1]}年${+mm[2]}月` : esc(T.month || "");
-  const now = new Date();
-  const thisMonth = `${now.getFullYear()}-${pad2(now.getMonth()+1)}`;
-  const isOld = !!mm && T.month < thisMonth;
-  const imgSrc = safeUrl(T.image);
+/* 掲載する号を決める。今日の年月と同じ号、無ければ最新（issues[]は新しい順）。
+   翌月号があれば「来月号を見る」で切り替えられる（翌月号は前月20日過ぎに届くため）。 */
+let towncalShown = "";        // 切り替えで選んだ号（YYYY-MM。空=既定の号。ページ内のみ保持）
+function towncalMonthOf(d, add){
+  const x = new Date(d.getFullYear(), d.getMonth() + (add||0), 1);
+  return `${x.getFullYear()}-${pad2(x.getMonth()+1)}`;
+}
+function towncalIssues(){
+  const T = window.TOWNCAL || {};
+  return Array.isArray(T.issues) ? T.issues.filter(i => i && /^\d{4}-\d{2}$/.test(i.month || "")) : [];
+}
+function towncalDefaultIssue(issues){
+  const thisMonth = towncalMonthOf(new Date(), 0);
+  return issues.find(i => i.month === thisMonth) || issues[0] || null;
+}
+function towncalAreaHTML(){
+  const T = window.TOWNCAL || {};
+  const issues = towncalIssues();
+  const base = towncalDefaultIssue(issues);
+  if(!base) return emptyMsg("カレンダー画像は準備中です。");
+  const thisMonth = towncalMonthOf(new Date(), 0);
+  const nextMonth = towncalMonthOf(new Date(), 1);
+  const nextIssue = issues.find(i => i.month === nextMonth);
+  const canSwitch = base.month === thisMonth && !!nextIssue;
+  const it = (canSwitch && towncalShown === nextMonth) ? nextIssue : base;
+  const mm = it.month.match(/^(\d{4})-(\d{2})$/);
+  const monthLabel = `${+mm[1]}年${+mm[2]}月`;
+  const isOld = it.month < thisMonth;
+  const imgSrc = safeUrl(it.image);
   const sourceUrl = safeUrl(T.sourceUrl);
+  const toggle = canSwitch ? `<div class="cal-view-toggle" style="margin-bottom:10px"><button type="button" class="cal-view-btn" data-towncal-view="${it === nextIssue ? "current" : "next"}">${it === nextIssue ? "今月号に戻る" : "来月号を見る"}</button></div>` : "";
   return `
-    <p class="hint">琴平町の広報「ことひら」に掲載されている月間カレンダーです。検診・各種相談・教室など、町民のみなさん向けの予定がまとまっています。</p>
     <h2 class="group-h">🗓 ${esc(monthLabel)}のこんぴらカレンダー</h2>
+    ${toggle}
     ${isOld ? `<div class="towncal-notice">この号は${esc(monthLabel)}のものです。最新の予定は琴平町ホームページでご確認ください。</div>` : ""}
     ${imgSrc ? `
     <a href="${esc(imgSrc)}" target="_blank" rel="noopener">
@@ -3216,7 +3239,22 @@ function towncalTabHTML(){
     </a>
     <p class="hint" style="margin-top:8px">画像をタップすると拡大表示できます</p>`
     : emptyMsg("カレンダー画像は準備中です。")}
-    <p class="towncal-source">出典：${esc(T.sourceName || "広報ことひら（琴平町発行）")}${sourceUrl ? ` <a href="${esc(sourceUrl)}" target="_blank" rel="noopener">${esc(T.sourceLinkLabel || "琴平町ホームページ")} ↗</a>` : ""}<br>詳細・最新情報は琴平町ホームページをご覧ください。</p>`;
+    <p class="towncal-source">出典：${esc(it.sourceName || "広報ことひら（琴平町発行）")}${sourceUrl ? ` <a href="${esc(sourceUrl)}" target="_blank" rel="noopener">${esc(T.sourceLinkLabel || "琴平町ホームページ")} ↗</a>` : ""}<br>詳細・最新情報は琴平町ホームページをご覧ください。</p>`;
+}
+function towncalTabHTML(){
+  if(!window.TOWNCAL) return emptyMsg("こんぴらカレンダーは準備中です。");
+  return `
+    <p class="hint">琴平町の広報「ことひら」に掲載されている月間カレンダーです。検診・各種相談・教室など、町民のみなさん向けの予定がまとまっています。</p>
+    <div id="towncalArea">${towncalAreaHTML()}</div>`;
+}
+/* 「来月号を見る／今月号に戻る」（onMainClickの[data-towncal-view]から呼ばれる） */
+function setTowncalView(which){
+  towncalShown = which === "next" ? towncalMonthOf(new Date(), 1) : "";
+  const host = document.getElementById("towncalArea");
+  if(!host) return;
+  host.innerHTML = towncalAreaHTML();
+  const btn = host.querySelector("[data-towncal-view]");
+  if(btn) try{ btn.focus({preventScroll:true}); }catch(e){ btn.focus(); }
 }
 
 /* ===== 🏪 お店の営業カレンダータブ（お店DB由来。表示対象✓かつ画像ありのみ。notion-data.js経由・

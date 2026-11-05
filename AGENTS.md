@@ -10,7 +10,7 @@
   - 早明浦ダム貯水状況（国交省「川の防災情報」）→ `scripts/fetch_dam.py` 経由で `dam-data.js` を再生成（GitHub Actions `.github/workflows/update-dam-data.yml` が1日2回＝22:00/10:00 UTC〈JST 7:00/19:00〉に自動実行し、コミット・pushまで行う。リアルタイム値ではないため表示側は必ず観測時刻を明示する）
   - 琴平町お店DB（お店の営業カレンダー）→ Notion 3DBと同じ `scripts/fetch_notion.py` 経由で `notion-data.js` の `shops` キーを再生成（表示対象✓かつ画像ありのみ。画像はNotionネイティブアップロードのためassets/thumbsへローカル保存）
   - 団体（2026-09-05にNotionへ移行）→ 団体DB「琴平町関連団体」＋投稿DB「関連団体の投稿」の2DBを同じ `scripts/fetch_notion.py` 経由で取得し、`notion-data.js` の `orgs` キーを再生成する。団体DBの表示対象✓のみ、投稿DBは全行対象（表示対象列が無い）で投稿URLのドメインからinstagram/x等を自動判定、note等のテキスト記事は団体DBのnoteプロフィールURLから自動導出したRSSで別途取得する。表示側（`index.html`のND定義）は`notion-data.js`の`orgs`があればそれを正とし、無ければ`registry.json`→`data.js`（**レガシー・フォールバック。以後は凍結し、新規団体の追加はNotion側でのみ行う**）に落ちる
-  - こんぴらカレンダー（広報「ことひら」の誌面）→ `scripts/fetch_towncal.py` を手動実行して `towncal-data.js` を再生成（月次。GitHub Actionsによる自動実行は無く、広報の号が変わるたびに人が実行する）
+  - こんぴらカレンダー（広報「ことひら」の誌面）→ `scripts/fetch_towncal.py --auto` が `update-notion-data.yml` の1段として毎月20日以降の09:00 JSTに翌月号を取り込み `towncal-data.js` の `issues[]` に追加（失敗時のみ人が手動実行）。行事CSV（`assets/towncal/events-YYYY-MM.csv`）は日曜の週次ランが `scripts/towncal_csv.py` で転記。詳細は `docs/こんぴらカレンダー自動更新_要件定義.md`
   - `udon-data.js` / `parking-data.js` / `links-data.js` / `experiences-data.js` / `cool-sweets-data.js` / `site-widgets-data.js` は手編集運用（現状把握、生成スクリプトは未確認）
 - 画像は長辺1200pxのWebPに揃える。`fetch_notion.py` が取得時に圧縮し、`find_local_thumb` は
   同名ファイルがあれば `.webp` を優先する。手動で `assets/` に画像を足す場合も、
@@ -38,7 +38,7 @@
 - `scripts/image_utils.py` — 画像をWebPへ縮小・圧縮する共通処理（Pillowが無ければ無圧縮で続行）
 - `scripts/compress_thumbs.py` — 既存画像を一括でWebP化する一回性スクリプト（2026-08-25実行済み）
 - `scripts/fetch_towncal.py` — 🗓 こんぴらカレンダー月次更新スクリプト。町HPのPDF/画像URLからカレンダー面を取得し、
-  assets/towncal/YYYY-MM.webp に変換保存、towncal-data.js の month/image/sourceName を更新する
+  assets/towncal/YYYY-MM.webp に変換保存、towncal-data.js の issues[] に追加する（--auto で広報一覧から自動判定）。`scripts/towncal_csv.py` は誌面画像から行事CSVを転記
 - `assets/` — サムネイル・リンク・体験・手動画像
 - `docs/` — 要件定義書・設計書・ロードマップ・運用手順・各種調査・統合カレンダー要件定義
 - `docs/開発ダッシュボード.base.html` — 開発ダッシュボードの**編集元**（各文書タブ＝原本md注入マーカー「本文」＋手書きの「追補」）。
