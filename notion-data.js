@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-05 19:53",
+  "fetched": "2026-11-05 21:16",
   "news": [
     {
       "id": "40f0b4e5-ff5b-8163-9923-c1dc14b33bca",
@@ -450,8 +450,8 @@ window.NOTION_DATA = {
       "id": "40f0b4e5-ff5b-81ed-8be6-fd0d3a88ae8d",
       "title": "大祓奏上祭・大祓式・道饗祭・鎮火祭・除夜祭",
       "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
-      "start": "2026-12-31",
-      "end": "",
+      "start": "2026-12-31T17:00",
+      "end": "2026-12-31T19:00",
       "status": "実施前",
       "city": "琴平町",
       "place": "",
@@ -998,6 +998,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-81e4-ac28-f3c110191fb5",
+      "title": "新嘗祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-11-23T10:00",
+      "end": "2026-11-23T11:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-817b-b7b4-f1d884ea7bc3",
       "title": "可燃ごみ臨時収集",
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
@@ -1013,25 +1032,6 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "こんぴらカレンダー"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-81e4-ac28-f3c110191fb5",
-      "title": "新嘗祭",
-      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
-      "start": "2026-11-23",
-      "end": "",
-      "status": "実施前",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
-      "fee": "",
-      "organizer": "金刀比羅宮",
-      "calendar": [
-        "金刀比羅宮"
       ],
       "featured": false
     },
@@ -1492,6 +1492,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-81cd-aa5d-fb6b2c60733d",
+      "title": "紅葉祭",
+      "url": "http://www.konpira.or.jp/?language=JAPANESE&stageID=hp_calendar",
+      "start": "2026-11-10T10:00",
+      "end": "2026-11-10T10:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 御本宮 / 紅葉の枝の太玉串の御行列は取りやめ(カレンダーページ) / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-81bd-8f2b-d463d97613e0",
       "title": "親子のわんわん教室",
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
@@ -1507,25 +1526,6 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "こんぴらカレンダー"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-81cd-aa5d-fb6b2c60733d",
-      "title": "紅葉祭",
-      "url": "http://www.konpira.or.jp/?language=JAPANESE&stageID=hp_calendar",
-      "start": "2026-11-10",
-      "end": "",
-      "status": "実施前",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "場所: 御本宮 / 紅葉の枝の太玉串の御行列は取りやめ(カレンダーページ) / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
-      "fee": "",
-      "organizer": "金刀比羅宮",
-      "calendar": [
-        "金刀比羅宮"
       ],
       "featured": false
     },
@@ -1780,8 +1780,8 @@ window.NOTION_DATA = {
       "id": "40f0b4e5-ff5b-8192-bc7d-c76c3273e161",
       "title": "明治祭",
       "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
-      "start": "2026-11-03",
-      "end": "",
+      "start": "2026-11-03T09:00",
+      "end": "2026-11-03T09:30",
       "status": "終了",
       "city": "琴平町",
       "place": "",
@@ -2483,8 +2483,8 @@ window.NOTION_DATA = {
       "id": "40f0b4e5-ff5b-8106-b3ed-d37b7153d909",
       "title": "神嘗奉祝祭",
       "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
-      "start": "2026-10-17",
-      "end": "",
+      "start": "2026-10-17T09:00",
+      "end": "2026-10-17T10:00",
       "status": "終了",
       "city": "琴平町",
       "place": "",
@@ -3588,6 +3588,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "40f0b4e5-ff5b-8147-b054-fa193ec9e793",
+      "title": "氏子祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-10-01T10:00",
+      "end": "2026-10-01T11:00",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "40f0b4e5-ff5b-81c0-8cfa-e0713d07b401",
       "title": "御厩神事",
       "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
@@ -3599,25 +3618,6 @@ window.NOTION_DATA = {
       "address": "",
       "image": "",
       "comment": "場所: 神事場 / 例大祭ページに記載。年間行事ページには無い / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
-      "fee": "",
-      "organizer": "金刀比羅宮",
-      "calendar": [
-        "金刀比羅宮"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-8147-b054-fa193ec9e793",
-      "title": "氏子祭",
-      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
-      "start": "2026-10-01",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
       "fee": "",
       "organizer": "金刀比羅宮",
       "calendar": [
@@ -3819,8 +3819,8 @@ window.NOTION_DATA = {
       "id": "40f0b4e5-ff5b-8166-bcf7-dbd4d8691566",
       "title": "秋分祭・秋季大霊神祭",
       "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
-      "start": "2026-09-23",
-      "end": "",
+      "start": "2026-09-23T09:00",
+      "end": "2026-09-23T09:30",
       "status": "終了",
       "city": "琴平町",
       "place": "",
