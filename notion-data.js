@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-05 16:08",
+  "fetched": "2026-11-05 16:41",
   "news": [
     {
       "id": "40f0b4e5-ff5b-8163-9923-c1dc14b33bca",
@@ -447,6 +447,25 @@ window.NOTION_DATA = {
   ],
   "events": [
     {
+      "id": "40f0b4e5-ff5b-81ed-8be6-fd0d3a88ae8d",
+      "title": "大祓奏上祭・大祓式・道饗祭・鎮火祭・除夜祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-12-31",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
       "id": "3ea0b4e5-ff5b-8088-a386-c4de0821fba8",
       "title": "【定期】琴平町DAOオンラインミーティング",
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
@@ -460,7 +479,28 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c9-b5cc-cea3e46e8161",
+      "title": "竈神祭・井神祭・門神祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-12-28",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -477,7 +517,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -494,7 +536,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平中学校体育館 SundaySevenプレゼンツによるZUMBA®フィットネスダンスイベント。総勢10名のインストラクターが出演し、クリスマスシーズンを楽しむ催事。",
       "fee": "3000",
       "organizer": "SundaySeven",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -511,7 +555,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -528,7 +574,28 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町・表参道エリア周辺 琴平町の表参道エリアで12月12日・13日に開催される演劇フェスティバル。全国から劇団・アーティストが集まり、短編演劇の上演と町歩きを通じて物語に出会う企画。妖怪人狼、即興演劇バトル、ゴーストビルディングなどが開催される。",
       "fee": "2500",
       "organizer": "株式劇団マエカブ、カブフェス実行委員会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81a0-b95d-d7df913803ad",
+      "title": "煤払式・御年木伐神事",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-12-13",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -545,7 +612,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町・表参道エリア周辺 琴平町の表参道エリアで12月12日・13日に開催される演劇フェスティバル。全国から劇団・アーティストが集まり、短編演劇の上演と町歩きを通じて物語に出会う企画。妖怪人狼、即興演劇バトル、ゴーストビルディングなどが開催される。",
       "fee": "2500",
       "organizer": "株式劇団マエカブ、カブフェス実行委員会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -562,7 +631,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -579,7 +650,9 @@ window.NOTION_DATA = {
       "comment": "こんぴらさんの門前町にある江戸末期創業の老舗旅館つるや旅館で、着物を着用してのランチ会を開催。女将による和食の食べ方講座付き。",
       "fee": "5500",
       "organizer": "こんぴら路地裏着物レンタル藤田屋",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -596,7 +669,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町役場前駐車場、琴平町総合センター 琴平町の冬の一大イベント。チャリティー作品の即売会が12月5日（土）と6日（日）に琴平町役場前駐車場と琴平町総合センターで開催される。",
       "fee": "",
       "organizer": "ことひら社協",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -613,7 +688,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平 地域課題の解決に取り組むコミュニティリーダーが集まるサミット。点から線へ、人から人へつながる交流の場として、琴平で開催される。",
       "fee": "3000",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -630,7 +707,9 @@ window.NOTION_DATA = {
       "comment": "会場: 金陵の郷周辺（琴平） 藤田屋・MIYUKI・蔵六写真館がコラボした、1日限定の七五三撮影会。琴平の金陵の郷周辺で、着物レンタル・着付け・ヘアメイク・撮影がセットになったプランを提供する。",
       "fee": "42000",
       "organizer": "藤田屋・MIYUKI・蔵六写真館",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -647,7 +726,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町役場前駐車場、琴平町総合センター 琴平町の冬の一大イベント。チャリティー作品の即売会が12月5日（土）と6日（日）に琴平町役場前駐車場と琴平町総合センターで開催される。",
       "fee": "",
       "organizer": "ことひら社協",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -664,7 +745,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -681,7 +764,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町商工会館 一般社団法人こんぴら観光まちづくり協会が主催する第3回検定試験。琴平町の歴史・文化・観光資源に関する初級・中級の2つの受験級を実施する。合格者は協会認定ガイド登録への道が開ける。",
       "fee": "3300",
       "organizer": "一般社団法人こんぴら観光まちづくり協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -698,7 +783,9 @@ window.NOTION_DATA = {
       "comment": "会場: 香川県琴平町（詳細は当選者へご案内） 香川大学地域マネジメント研究科による琴平町の実証実験プロジェクト。参加者は事前に琴平文具店でカスタマイズしたノートを受け取り、琴平のB面（知られざる魅力）を街歩きしながらノートに記録し、最後に感想をシェアする体験イベント。参加費無料、3000円相当の特製ノートをプレゼント。",
       "fee": "0",
       "organizer": "香川大学大学院 地域マネジメント研究科",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -715,7 +802,9 @@ window.NOTION_DATA = {
       "comment": "第３回こんぴら観光まちづくり検定試験の申し込みが10月5日から開始されました。試験は11月29日（日）に実施され、初級・中級の2つの受験級があります。",
       "fee": "",
       "organizer": "こんぴら観光まちづくり協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -732,7 +821,9 @@ window.NOTION_DATA = {
       "comment": "会場: てんてこ舞（表参道） 琴平町のナイトコンテンツ企画として、高松らくご愛好会メンバーによる落語やマジックを楽しむイベント。2026年11月28日（土）17:00～18:30、てんてこ舞（表参道）で開催。前売チケットは1,100円（税込、ワンドリンク付き）。",
       "fee": "1100",
       "organizer": "こんぴら観光まちづくり協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -749,7 +840,28 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81e4-ac28-f3c110191fb5",
+      "title": "新嘗祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-11-23",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -766,7 +878,9 @@ window.NOTION_DATA = {
       "comment": "会場: 金陵の郷（こんぴらさんの参道口）、香川県仲多度郡琴平町623 琴平町の金陵の郷で、初しぼりの販売を記念した祝宴を開催。初しぼり鏡開き・振舞い酒（無料）、グルメコーナー、備前焼展示販売などが行われる。",
       "fee": "0",
       "organizer": "西野金陵株式会社",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -783,7 +897,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
       "fee": "30000",
       "organizer": "琴電運輸サービス部・地域開発部",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -800,7 +916,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
       "fee": "20000",
       "organizer": "琴電運輸サービス部・地域開発部",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -817,7 +935,9 @@ window.NOTION_DATA = {
       "comment": "会場: 金陵の郷（こんぴらさんの参道口）、香川県仲多度郡琴平町623 琴平町の金陵の郷で、初しぼりの販売を記念した祝宴を開催。初しぼり鏡開き・振舞い酒（無料）、グルメコーナー、備前焼展示販売などが行われる。",
       "fee": "0",
       "organizer": "西野金陵株式会社",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -834,7 +954,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -851,7 +973,9 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -868,7 +992,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴平線で運行していた1070形1073×1074号の引退を記念し、11月14日の最終運用から11月23日までの期間、撮影会、乗車ツアー、記念イベントが開催される。",
       "fee": "",
       "organizer": "琴電運輸サービス部・地域開発部",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -885,7 +1011,28 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81cd-aa5d-fb6b2c60733d",
+      "title": "紅葉祭",
+      "url": "http://www.konpira.or.jp/?language=JAPANESE&stageID=hp_calendar",
+      "start": "2026-11-10",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 御本宮 / 紅葉の枝の太玉串の御行列は取りやめ(カレンダーページ) / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -902,7 +1049,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
       "fee": "10000",
       "organizer": "公益財団法人中山芳彦香川イタリア交流財団",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -919,7 +1068,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平小学校 全国から集まったスーパーカーが琴平に終結するイベント。朝9時に高瀬自動車学校をスタートして中西讃地域を周遊した後、琴平小学校に到着。琴平到着時間は未定。",
       "fee": "",
       "organizer": "こんぴら観光まちづくり協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -936,7 +1087,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町 旧金毘羅大芝居・金丸座 公益財団法人中山芳彦香川イタリア交流財団が11月7、8日に琴平町の金丸座でイタリア古楽と雅楽の共演公演を開催。小学生～高校生200人を無料招待する。",
       "fee": "10000",
       "organizer": "公益財団法人中山芳彦香川イタリア交流財団",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -953,7 +1106,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平中学校 図書館 国際ブッカー賞受賞作『台湾漫遊鉄道のふたり』に登場する料理を入り口に、台湾の食文化や暮らしを紹介し、食べ物にまつわる台湾華語を学ぶミニ講座。琴平中学校図書館で開催。",
       "fee": "0",
       "organizer": "琴平町地域おこし協力隊 ケリー",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -989,7 +1144,28 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8192-bc7d-c76c3273e161",
+      "title": "明治祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-11-03",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1006,7 +1182,9 @@ window.NOTION_DATA = {
       "comment": "会場: 由加山（由加神社本宮・蓮台寺） 琴平町にゆかりのある町民・在勤・在学者を対象とした「ことひら由加山火渡り大祭交流行事」の参加者募集。こんぴらさんと由加山の両参り文化や歴史的な繋がりを再発見する交流の機会。先着30名、参加費3,000円。",
       "fee": "3000",
       "organizer": "こんぴら観光まちづくり協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1023,7 +1201,9 @@ window.NOTION_DATA = {
       "comment": "琴平町の一之橋公園で防災と住教育を学べるファミリア向けイベント。輪投げやスーパーボールすくい、パトカー展示、空き家相談会、ハンディライト作り体験などが行われる。入場無料。",
       "fee": "0",
       "organizer": "全国空き家アドバイザー協議会琴平支部・まんのう支部",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1040,7 +1220,9 @@ window.NOTION_DATA = {
       "comment": "会場: 黒桜軒（KAOHKEN） 黒桜軒で開催される秋のワイン会。美味しい料理とワイン4種類、ソフトドリンク飲み放題でお楽しみいただけます。",
       "fee": "8800",
       "organizer": "黒桜軒",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1057,7 +1239,9 @@ window.NOTION_DATA = {
       "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "500",
       "organizer": "Kotori Coworking & Hostel Kotohira",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1074,7 +1258,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1091,7 +1277,9 @@ window.NOTION_DATA = {
       "comment": "会場: 呑象ブリューイング 呑象ブリューイングにおいて、お酢を使ったフードメニューとクラフトビールを楽しむ1日限定イベント。秋の晩酌プレートやお酢のビアカクテルなど特別メニューが登場。予約制。",
       "fee": "2000",
       "organizer": "呑象ブリューイング / あゆな酢スタンド",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1108,7 +1296,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町公会堂 大ホール 子育て応援ボランティアグループ415のわが主催するハロウィンパーティー。季節のおはなし会、トリックオアトリートスタンプラリー、フリータイム、ママカフェなどが行われる。仮装有無を問わず参加可能。",
       "fee": "0",
       "organizer": "子育て応援ボランティアグループ415のわ",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1125,7 +1315,9 @@ window.NOTION_DATA = {
       "comment": "会場: 石井八幡宮（象郷・苗田） 10月の最終土日の週末に、苗田（象郷地区）の石井八幡宮で獅子舞、神楽などが奉納される秋祭が開催される。本年は第四週の週末が対象。",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1142,7 +1334,9 @@ window.NOTION_DATA = {
       "comment": "琴平町の金陵の郷で開催される台湾グルメ・文化イベント。台湾屋台グルメの出店、ステージイベント（電音三太子・二胡演奏・トークショー）、町内コラボメニュースタンプラリー、限定ガチャガチャなどが予定されている。",
       "fee": "0",
       "organizer": "琴平町",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": true
     },
     {
@@ -1159,7 +1353,9 @@ window.NOTION_DATA = {
       "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
       "fee": "2000",
       "organizer": "讃岐おでんプロジェクト",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1176,7 +1372,9 @@ window.NOTION_DATA = {
       "comment": "会場: つるや旅館 琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学べます。ドリンクとおやつ付き。",
       "fee": "1000",
       "organizer": "つるや旅館、藤田屋",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1193,7 +1391,9 @@ window.NOTION_DATA = {
       "comment": "会場: 新北市瑞芳區區民廣場（台湾新北市瑞芳区明燈路三段） 琴平町とこんぴら観光まちづくり協会が、台湾新北市瑞芳区にて琴平町の観光・特産品を紹介する物産展を開催。商談会、試食販売、文化交流を目的とする。",
       "fee": "0",
       "organizer": "琴平町商工会、琴平町、こんぴら観光まちづくり協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1210,7 +1410,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1227,7 +1429,9 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1244,7 +1448,9 @@ window.NOTION_DATA = {
       "comment": "会場: 新北市瑞芳區區民廣場（台湾新北市瑞芳区明燈路三段） 琴平町とこんぴら観光まちづくり協会が、台湾新北市瑞芳区にて琴平町の観光・特産品を紹介する物産展を開催。商談会、試食販売、文化交流を目的とする。",
       "fee": "0",
       "organizer": "琴平町商工会、琴平町、こんぴら観光まちづくり協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1261,7 +1467,9 @@ window.NOTION_DATA = {
       "comment": "会場: 総合センター 2階大ホール 東京パラリンピックで注目を集めた「ボッチャ」の教室と交流大会を開催します。香川県リハビリテーションセンターから講師を招き、障がいのある方もない方も、年齢や性別を問わず参加できます。",
       "fee": "0",
       "organizer": "琴平町福祉課・生涯学習課",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1278,7 +1486,28 @@ window.NOTION_DATA = {
       "comment": "毎年10月の第三週に上櫛梨（象郷地区）の大歳神社で開催される秋祭り。獅子舞や琴平の里神楽が奉納される。地区内外・旅行者の見学も自由。",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8106-b3ed-d37b7153d909",
+      "title": "神嘗奉祝祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-10-17",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1295,7 +1524,47 @@ window.NOTION_DATA = {
       "comment": "毎年10月の第三週に上櫛梨（象郷地区）の大歳神社で開催される秋祭り。獅子舞や琴平の里神楽が奉納される。地区内外・旅行者の見学も自由。",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81a7-9616-f85c4841151b",
+      "title": "焼払神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-15",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所は公式に記載なし。祝舎の建物を取り壊し、用材や御幣を焼き払う。46日間の例大祭の終了 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-819f-bac9-ce9adc98d449",
+      "title": "頭人三日詣",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-14",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1312,7 +1581,28 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81d4-8731-c505ed2aa1a2",
+      "title": "御幣下神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-12",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 祝舎 / 時刻: 1:00頃 / 例大祭ページは「10月12日、午前1時頃より祝舎にて」。年間行事ページの欄は12日(スポーツの日と併記、連動の記載なし) ／ 祝日（成人の日・スポーツの日）の欄に記載。年次確認の対象として連動扱い（2026-11-05 Fable 判断） / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1329,7 +1619,86 @@ window.NOTION_DATA = {
       "comment": "御神輿が御旅所（神事場）から御本宮へ還る御還幸。10/12午前0時に御本宮還御、続いて報賽祭。",
       "fee": "0",
       "organizer": "金刀比羅宮",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント",
+        "金刀比羅宮"
+      ],
+      "featured": true
+    },
+    {
+      "id": "40f0b4e5-ff5b-81bc-a144-ff0f33b54269",
+      "title": "例大祭 還幸祭",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-11T16:00",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "例大祭ページは午後4時、場所の記載なし。御神輿の御旅所発御は21時で、還幸祭が先。年間行事ページは11日欄で時刻なし / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8154-af09-f1073be9ff40",
+      "title": "例大祭 講社祭",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-11T14:00",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所の記載なし / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-810c-9f4e-fe655cefaac1",
+      "title": "例大祭 朝祭・献馬式(行宮朝祭)",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-11T10:00",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 行宮 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c3-9d01-d26cd9c3d9cb",
+      "title": "例大祭 報賽祭",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-11",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 御本宮 / 時刻: 深夜 / 突合で追加。年間行事ページは11日欄。例大祭ページは御神輿の御還幸後の深夜(日付の明記なし)で、金幣式・五人百姓の供応・解斎歌を行う / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1346,7 +1715,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1363,7 +1734,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1380,8 +1753,11 @@ window.NOTION_DATA = {
       "comment": "年に一度、金刀比羅大神さまが門前町に下りられる「お下がり」。約600名が御本宮から御旅所（神事場）まで約2kmを2時間かけて進む。行列の先頭は乗馬の男子児童2人と駕籠の女子児童2人の「お頭人さん」。10/10 19時〜11日2時は一部道路が歩行者専用。経路地図：https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootmap.pdf",
       "fee": "0",
       "organizer": "金刀比羅宮",
-      "calendar": [],
-      "featured": false
+      "calendar": [
+        "基本のイベント",
+        "金刀比羅宮"
+      ],
+      "featured": true
     },
     {
       "id": "3ef0b4e5-ff5b-813f-b05d-d037123a2da1",
@@ -1397,7 +1773,48 @@ window.NOTION_DATA = {
       "comment": "2月の祈年祭・11月の新嘗祭と共に金刀比羅宮の三大祭の一つで、その中でも最も重要な祭典。大和舞を奏進。会場：御本宮",
       "fee": "0",
       "organizer": "金刀比羅宮",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント",
+        "金刀比羅宮"
+      ],
+      "featured": true
+    },
+    {
+      "id": "40f0b4e5-ff5b-818b-8921-ce8ed9f381b8",
+      "title": "例大祭 行宮着御祭",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-10",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "【要確認】場所: 神事場の行宮 / 時刻: 深夜 / 年間行事ページは11日欄に記載、例大祭ページは10日の御神輿渡御の後の「深夜」(日付の明記なし)で食い違い。両方を併記 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8150-a92b-fda14874c9c5",
+      "title": "例大祭 金幣式",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-10",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 御本宮 / 突合で追加。例大祭ページで例祭の後に御本宮でお頭人さんの金幣式を行う。時刻の記載なし / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1414,7 +1831,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1431,7 +1850,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1448,7 +1869,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町・こんぴら十帖加盟店舗（複数店） こんぴら十帖に参加する複数店舗が、毎月十日の参詣者向けに限定メニューを提供する。10月のメニューは各店舗で異なり、数量限定・予約制の店舗もある。",
       "fee": "",
       "organizer": "こんぴら十帖",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1465,7 +1888,9 @@ window.NOTION_DATA = {
       "comment": "台湾出身の琴平町地域おこし協力隊 ケリーが主催する台湾文化・台湾華語の3回連続講座。言葉・食文化・旅行用語を学ぶ内容。会場はKOTORI。",
       "fee": "0",
       "organizer": "琴平町地域おこし協力隊ケリー",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1482,8 +1907,11 @@ window.NOTION_DATA = {
       "comment": "金刀比羅宮例大祭の初日。お祭の前日を「宵宮」といい、この日に斎行する祭典。八少女舞を奏進。会場：御本宮",
       "fee": "0",
       "organizer": "金刀比羅宮",
-      "calendar": [],
-      "featured": false
+      "calendar": [
+        "基本のイベント",
+        "金刀比羅宮"
+      ],
+      "featured": true
     },
     {
       "id": "3eb0b4e5-ff5b-810c-be8e-f5dd83b3f133",
@@ -1499,8 +1927,11 @@ window.NOTION_DATA = {
       "comment": "会場: 金刀比羅宮 令和8年10月9日(金曜日)から11日(日曜日)まで、金刀比羅宮例大祭が開催されます。例大祭期間中は、奉納行事や奉納演奏、こんぴら舩々おどりなど、さまざまな行事が行われます。",
       "fee": "0",
       "organizer": "金刀比羅宮",
-      "calendar": [],
-      "featured": false
+      "calendar": [
+        "基本のイベント",
+        "金刀比羅宮"
+      ],
+      "featured": true
     },
     {
       "id": "3ea0b4e5-ff5b-8167-899c-f0d3820d9669",
@@ -1516,7 +1947,9 @@ window.NOTION_DATA = {
       "comment": "会場: なごのキャンパス（名古屋駅・桜通口から徒歩8分） 琴平との二地域居住・関係人口をテーマにしたトークイベント。琴平バスでつながる全国5都市でのツアー第1回。琴平の最近の変化や挑戦、滞在型ワークと表現活動の取り組みについて紹介される。",
       "fee": "0",
       "organizer": "琴平町 / なごのキャンパス",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1533,7 +1966,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1550,7 +1985,28 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8198-8e6b-f328133dfcc3",
+      "title": "指合神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-06",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 祝舎 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1567,7 +2023,9 @@ window.NOTION_DATA = {
       "comment": "台湾出身の琴平町地域おこし協力隊 ケリーが主催する台湾文化・台湾華語の3回連続講座。言葉・食文化・旅行用語を学ぶ内容。会場はKOTORI。",
       "fee": "0",
       "organizer": "琴平町地域おこし協力隊ケリー",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1584,7 +2042,9 @@ window.NOTION_DATA = {
       "comment": "会場: 参道～金刀比羅宮御本宮 琴平町で開催される石段マラソン大会。参道から金刀比羅宮御本宮までのコースを走る。定員785名、参加費3,000円。",
       "fee": "3000",
       "organizer": "琴平町",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1601,7 +2061,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1618,7 +2080,9 @@ window.NOTION_DATA = {
       "comment": "会場: 大歳神社、櫛梨神社、石井八幡宮、大井八幡宮、大麻神社 10月は象郷・五條地区の秋祭りシーズン。各神社で獅子舞や神楽などが奉納される秋季大祭が開催される。大歳神社（10/17-18）、櫛梨神社（10/10-11）、石井八幡宮（10/25）、大井八幡宮（10/10-11）、大麻神社（10/3-4）での開催。",
       "fee": "0",
       "organizer": "各地区の鎮守神社",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1635,7 +2099,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1652,7 +2118,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1669,7 +2137,47 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c0-8cfa-e0713d07b401",
+      "title": "御厩神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-10-01",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 神事場 / 例大祭ページに記載。年間行事ページには無い / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8147-b054-fa193ec9e793",
+      "title": "氏子祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-10-01",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1686,7 +2194,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1703,7 +2213,9 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1720,7 +2232,9 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1737,7 +2251,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1754,7 +2270,9 @@ window.NOTION_DATA = {
       "comment": "会場: 楽集館（琴平町上櫛梨241） 象郷地区の未来について、学校施設の活用アイデアや暮らしの声を集める意見交換会。子ども連れや見学のみの参加も歓迎。",
       "fee": "0",
       "organizer": "全国空き家アドバイザー協議会琴平支部",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1771,7 +2289,9 @@ window.NOTION_DATA = {
       "comment": "会場: 金陵の郷 文化館（琴平町琴平623番地） 琴平町の「金陵の郷」文化館で、江戸時代1789年創業の日本酒蔵「金陵」の杜氏による、お酒の歴史と文化に関する勉強会が開催される。参加は無料で、事前申し込みが必要。",
       "fee": "0",
       "organizer": "ことひらまちじゅう図書館",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1788,7 +2308,9 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1805,7 +2327,9 @@ window.NOTION_DATA = {
       "comment": "参加者が持ち寄った具材やトッピングで「世界にひとつだけのカレー」を作り、国際色豊かな雰囲気の中で食事と交流を楽しむイベント。予約制で、お惣菜一品持参は500円、持参なしは800円。",
       "fee": "500",
       "organizer": "Kotori Coworking & Hostel Kotohira",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1822,7 +2346,9 @@ window.NOTION_DATA = {
       "comment": "琴平町地域おこし協力隊が主催する台湾文化・台湾華語の3回連続講座。言葉・食文化・旅行用語を学ぶ内容。会場はKOTORI。",
       "fee": "0",
       "organizer": "琴平町地域おこし協力隊ケリー",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1839,7 +2365,28 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8166-bcf7-dbd4d8691566",
+      "title": "秋分祭・秋季大霊神祭",
+      "url": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+      "start": "2026-09-23",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "年間行事ページに「23日 秋分の日」と併記 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -1856,7 +2403,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1873,7 +2422,9 @@ window.NOTION_DATA = {
       "comment": "会場: 麻心琴平 リズムマスター4人によるアンサンブルライブ。アフリカ大陸起源の楽器を奏でる太鼓叩き達が琴平に集結。入場無料（投げ銭制）。",
       "fee": "0",
       "organizer": "THE GORILLA GUERRILLAS / 音楽で琴平を盛り上げるプロジェクト",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1890,7 +2441,9 @@ window.NOTION_DATA = {
       "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
       "fee": "2000",
       "organizer": "讃岐おでんプロジェクト",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1907,7 +2460,9 @@ window.NOTION_DATA = {
       "comment": "会場: 麻心～まごころ～（香川県仲多度郡琴平町621-9） 愛媛県松山市のジブリジャズ専門ピアニスト野上朝生率いるJAZZトリオが琴平に初来訪。スタジオジブリの名曲をジャズアレンジで演奏するライブイベント。",
       "fee": "3000",
       "organizer": "麻心～まごころ～",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1924,7 +2479,9 @@ window.NOTION_DATA = {
       "comment": "琴平町のこんぴら路地裏着物レンタル藤田屋で、カンタ刺繍を学びながらオリジナルの着物の半衿を作るワークショップを開催。講師はちくちく針ねずみ。",
       "fee": "2000",
       "organizer": "こんぴら路地裏着物レンタル藤田屋",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1941,7 +2498,9 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1958,7 +2517,9 @@ window.NOTION_DATA = {
       "comment": "会場: オンライン 琴平町での食の事業展開を検討している人向けのオンライン説明会。自分や会社の強みを観光地で選ばれる食体験へ展開することをテーマとしている。",
       "fee": "78500",
       "organizer": "KOTOHIRA 785 FOOD LAUNCH",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1975,7 +2536,9 @@ window.NOTION_DATA = {
       "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
       "fee": "500",
       "organizer": "つるや旅館、藤田屋",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -1992,7 +2555,9 @@ window.NOTION_DATA = {
       "comment": "会場: コトリ琴平 フランスから来たイラストレーターPaulによるドローイングワークショップ。基本的なエクササイズやゲームを通じて、見る・描く・表現する楽しさを学びます。初心者向け。",
       "fee": "500",
       "organizer": "Kotori Coworking & Hostel Kotohira",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2009,7 +2574,9 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2026,7 +2593,9 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2043,7 +2612,9 @@ window.NOTION_DATA = {
       "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2060,7 +2631,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町内（KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校） 琴平町での出会いや経験を通じて地域や住民の魅力に触れるプロジェクト。KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校での体験プログラムに参加者を募集。",
       "fee": "0",
       "organizer": "流通科学大学",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2077,7 +2650,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
       "fee": "0",
       "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2094,7 +2669,9 @@ window.NOTION_DATA = {
       "comment": "会場: 一之橋公園・金陵の郷 琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
       "fee": "0",
       "organizer": "琴平町商工会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2111,7 +2688,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
       "fee": "0",
       "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2128,7 +2707,9 @@ window.NOTION_DATA = {
       "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
       "fee": "2800",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2145,7 +2726,9 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
       "fee": "0",
       "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2162,7 +2745,9 @@ window.NOTION_DATA = {
       "comment": "会場: ヴィスポことひら サブアリーナ 熊本地震復興支援を目的とした高松千春によるチャリティライブが琴平町で開催される。入場は無料で、会場での投げ銭募金は全額熊本地震復興支援に寄付される。",
       "fee": "0",
       "organizer": "株式会社ウエイ（ことひらいとこひペートナーズ）",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2179,7 +2764,28 @@ window.NOTION_DATA = {
       "comment": "会場: DONZO Brewing DONZO Brewingと南イタリア出身シェフによるクラフトビール＆フードペアリングイベント第2弾。全8品のコース料理とクラフトビール3種または4種のマリアージュを楽しむ。要予約。",
       "fee": "3300",
       "organizer": "DONZO Brewing",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81b2-92b7-fde1ca7aeab1",
+      "title": "入宿神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-09-10",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 祝舎 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -2196,7 +2802,9 @@ window.NOTION_DATA = {
       "comment": "自分自身と向き合い、未来の目標や必要なものを見つめ直すためのビジョンボード作成ワークショップ。コトリコワーキング＆ホステル琴平のスタッフのぞみが企画し、参加者のモチベーションや視野を広げることを目的としている。",
       "fee": "500",
       "organizer": "コトリコワーキング＆ホステル琴平",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     },
     {
@@ -2213,7 +2821,28 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-8194-b160-ea50462a7d22",
+      "title": "竃祓祭・御幣立神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-09-09",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 神事場 / 年間行事ページでは「祝舎御幣立神事」 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -2230,7 +2859,47 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-81c5-95bb-ca5fd7d39230",
+      "title": "潮川神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-09-08T18:00",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 金倉川に臨む神事場の斎館 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "40f0b4e5-ff5b-819e-aefb-deece6abeb05",
+      "title": "潮汲藻刈神事",
+      "url": "https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.html",
+      "start": "2026-09-08",
+      "end": "",
+      "status": "終了",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "",
+      "comment": "場所: 多度津金刀比羅神社(熊手八幡宮) / 時刻: 午前中 / 出典: 金刀比羅宮公式サイト（令和8年年間行事）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
       "featured": false
     },
     {
@@ -2247,7 +2916,9 @@ window.NOTION_DATA = {
       "comment": "",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "基本のイベント"
+      ],
       "featured": false
     }
   ],
