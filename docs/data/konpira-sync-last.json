@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T22:44:58+09:00",
+ "generated": "2026-11-05T22:59:27+09:00",
  "apply": true,
  "days": 90,
  "window": {
@@ -12,13 +12,13 @@
  "counts": {
   "created": 0,
   "new": 0,
-  "filled": 0,
-  "ok": 24,
+  "filled": 21,
+  "ok": 3,
   "held": 0,
   "conflict": 0,
   "skipped": 0,
   "failed": 0,
-  "place_pending": 21
+  "place_pending": 0
  },
  "rows": [
   {
@@ -29,11 +29,13 @@
    "location": "厳魂神社（奥社）・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-81af-9f2b-fae0c5b381ad",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 嚴魂神社（奥社）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2026-11-07",
@@ -82,11 +84,13 @@
    "location": "御本宮・白峰神社",
    "notion_id": "40f0b4e5-ff5b-8151-b6ae-f2a0d7331b5c",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2026-12-01",
@@ -96,11 +100,13 @@
    "location": "御本宮・三穂津姫社・旭社・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-8166-9fe1-fd1782847f91",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2026-12-06",
@@ -110,11 +116,13 @@
    "location": "厳魂神社（奥社）・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-8115-8bb3-fe9279e1987b",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 嚴魂神社（奥社）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2026-12-10",
@@ -124,11 +132,13 @@
    "location": "御本宮・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-81ce-aee7-d1cfdea3552e",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2026-12-26",
@@ -138,11 +148,13 @@
    "location": "御本宮・白峰神社",
    "notion_id": "40f0b4e5-ff5b-8162-90d6-cb690422e82d",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2026-12-31",
@@ -152,11 +164,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-81ed-8be6-fd0d3a88ae8d",
    "notion_title": "大祓奏上祭・大祓式・道饗祭・鎮火祭・除夜祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "contain",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "17:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-01",
@@ -166,11 +180,13 @@
    "location": "御本宮",
    "notion_id": "40f0b4e5-ff5b-81c0-a993-c38f36626e72",
    "notion_title": "歳旦祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "00:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-01",
@@ -180,11 +196,13 @@
    "location": "御本宮・三穂津姫社・旭社・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-8152-baf7-f6beeb83334d",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-05",
@@ -194,11 +212,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-81bd-955f-fdd0d61d3448",
    "notion_title": "斎籠神事 朝祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-05",
@@ -208,11 +228,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-812e-be47-cf395ae76a1d",
    "notion_title": "斎籠神事 夕祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "16:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-06",
@@ -222,11 +244,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-819c-a489-c1baafbbc1bc",
    "notion_title": "斎籠神事 朝祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-06",
@@ -236,11 +260,13 @@
    "location": "厳魂神社（奥社）・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-8130-baeb-e1bcadbc2747",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 嚴魂神社（奥社）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-06",
@@ -250,11 +276,13 @@
    "location": "嚴魂神社(金刀比羅宮奥社)",
    "notion_id": "40f0b4e5-ff5b-81da-a127-e5f87a811e3f",
    "notion_title": "厳魂神社（奥社）例祭",
-   "fills": [],
+   "fills": [
+    "開催場所 嚴魂神社（奥社）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "11:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-06",
@@ -264,11 +292,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-8143-85f4-c2076dd9ffcb",
    "notion_title": "斎籠神事 夕祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "16:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-07",
@@ -278,11 +308,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-8181-8c3c-faa83c87cad2",
    "notion_title": "斎籠神事 朝祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-07",
@@ -292,11 +324,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-819f-824f-d00ab4323372",
    "notion_title": "斎籠神事 竟祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "14:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-10",
@@ -306,11 +340,13 @@
    "location": "御本宮・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-8104-815a-e747422b52a4",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-10",
@@ -320,11 +356,13 @@
    "location": "金刀比羅宮 御本宮",
    "notion_id": "40f0b4e5-ff5b-8141-9284-c4ce1247b0ba",
    "notion_title": "初十日祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "10:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-01-26",
@@ -334,11 +372,13 @@
    "location": "御本宮・白峰神社",
    "notion_id": "40f0b4e5-ff5b-81a4-b3de-f3d07c5adc34",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   },
   {
    "date": "2027-02-01",
@@ -348,11 +388,13 @@
    "location": "御本宮・三穂津姫社・旭社・金刀比羅本教総本部",
    "notion_id": "40f0b4e5-ff5b-8134-b7fa-e1c623644544",
    "notion_title": "月次祭",
-   "fills": [],
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
    "reason": "exact",
-   "status": "ok",
+   "status": "filled",
    "notion_start": "09:00",
-   "place_pending": true
+   "applied": true
   }
  ]
 }
