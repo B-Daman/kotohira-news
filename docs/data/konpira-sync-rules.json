@@ -1,0 +1,113 @@
+{
+  "_doc": "金刀比羅宮カレンダー同期の規則（人が育てる）。docs/金刀比羅宮カレンダー同期_設計.md §2-3。titles[].action: same=同日の notion 題名と同じ行事 / new=同日に別の神社ページがあっても登録してよい / ignore=登録しない。places[].match は LOCATION の先頭語（「金刀比羅宮 」を外し、「・（(」で区切った最初の語）との一致。",
+  "source_url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+  "ics_url": "https://calendar.google.com/calendar/ical/64b68ef555a41f2caf5f34f93acba872a95083434d72ca613eae03a38907f6e5%40group.calendar.google.com/public/basic.ics",
+  "titles": [
+    {
+      "ics": "厳魂神社（奥社）例祭",
+      "action": "same",
+      "notion": "厳魂神社大祭",
+      "note": "2026-01-06 11:00 で一致（本人の手入力名）"
+    },
+    {
+      "ics": "藻刈潮汲神事",
+      "action": "same",
+      "notion": "潮汲藻刈神事",
+      "note": "2026-09-08・語順違い"
+    },
+    {
+      "ics": "夏越大祓式",
+      "action": "same",
+      "notion": "大祓奏上祭・大祓式・道饗祭・鎮火祭",
+      "note": "2026-06-30・年間行事ページの連名"
+    },
+    {
+      "ics": "御本宮 例祭",
+      "action": "same",
+      "notion": "例大祭 例祭（御本宮）",
+      "note": "2026-10-10 10:00 で一致"
+    },
+    {
+      "ics": "御神輿渡御",
+      "action": "same",
+      "notion": "例大祭 御神輿 御本宮発御（お下がり：御本宮→御旅所）",
+      "note": "2026-10-10 21:00 で一致"
+    },
+    {
+      "ics": "講社奉幣式",
+      "action": "same",
+      "notion": "例大祭 講社祭",
+      "note": "2026-10-11 14:00 で一致"
+    },
+    {
+      "ics": "御還幸",
+      "action": "same",
+      "notion": "例大祭 御神輿 御旅所発御（お上がり：御旅所→御本宮）",
+      "note": "2026-10-11 21:00 で一致"
+    },
+    {
+      "ics": "行宮着御祭",
+      "action": "same",
+      "notion": "例大祭 行宮着御祭",
+      "note": "ICS は 10/11 01:00。本人の行は 10/10 日付のみ（日付の要確認は従来どおり）"
+    },
+    {
+      "ics": "太鼓台清祓式",
+      "action": "new",
+      "note": "同日 10/1 の御厩神事とは別の行事"
+    },
+    {
+      "ics": "講社神楽",
+      "action": "new",
+      "note": "同日 10/9 の例大祭（本人の親ページ）とは別"
+    },
+    {
+      "ics": "神幸祭",
+      "action": "new",
+      "note": "10/10 16:00。本人の例大祭シリーズに無い"
+    }
+  ],
+  "skip_titles": [],
+  "places": [
+    {
+      "name": "嚴魂神社（奥社）",
+      "page": "1fe0b4e5-ff5b-802d-80c9-c862652b60a4",
+      "match": [
+        "嚴魂神社",
+        "厳魂神社"
+      ]
+    },
+    {
+      "name": "白峰神社",
+      "page": "1fe0b4e5-ff5b-8004-83a1-c13ed8e9c2fd",
+      "match": [
+        "白峰神社"
+      ]
+    },
+    {
+      "name": "金刀比羅宮（旭社）",
+      "page": "3500b4e5-ff5b-806a-8dfb-f75ac661a8b1",
+      "match": [
+        "旭社"
+      ]
+    },
+    {
+      "name": "金刀比羅宮神事場",
+      "page": "1fe0b4e5-ff5b-8093-8ace-fe8f5e932ad0",
+      "match": [
+        "金刀比羅宮神事場",
+        "御神事場",
+        "神事場"
+      ]
+    },
+    {
+      "name": "金刀比羅宮（御本宮）",
+      "page": "1a60b4e5-ff5b-807c-adb7-f25d181a2f7b",
+      "match": [
+        "御本宮",
+        "境内",
+        "金刀比羅宮"
+      ]
+    }
+  ]
+}
