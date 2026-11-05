@@ -313,7 +313,7 @@
       <div class="meta"><span>独自ドメイン kotohilife.com で公開中（2026-08-26〜）</span><span>Notion毎時自動更新（10-05〜）・ダム1日2回自動更新 稼働</span><span>運用フェーズ（Phase 2.8 完了・Phase 1 継続）</span><span>最終更新 2026-09-05</span></div>
     </div>
 
-    <div class="section-title">1. いまの現在地<span class="sub">2026-10-15時点（09-05版を部分更新）。数値は notion-data.js 実測</span></div>
+    <div class="section-title">1. いまの現在地<span class="sub">2026-11-05時点（09-05版を部分更新）。数値は notion-data.js 実測</span></div>
     <div class="kpis">
       <div class="kpi"><div class="n">F1〜38</div><div class="l">機能要件（29項目：実装済み23／保留6）</div></div>
       <div class="kpi"><div class="n">5</div><div class="l">ナビ分類：ホーム／町の今／くらし／訪れる・関わる／町を知る</div></div>
@@ -325,7 +325,7 @@
     <div class="focus">
       <div class="ft">🔥 現在の本線・次の一手</div>
       <dl>
-        <dt>進行中</dt><dd>統合カレンダーPhase 1（レイヤー切替UI実装済み・未コミット。Notion側でカレンダーselect追加＋インテグレーション接続待ち。金刀比羅宮61件は登録ツール準備済み）→ 6. 検討中の案</dd>
+        <dt>進行中</dt><dd>統合カレンダーPhase 1（multi-select「カレンダー」前提で実装し main にマージ済み・push は確認待ち。Notion 側のプロパティは作成済み。残り＝push／既存820件への「基本のイベント」一括付与（scripts/backfill_calendar.py・dry-run 済み・apply は本人承認待ち）／金刀比羅宮60件の登録（dry-run → 本人承認待ち）／konpie-bot デプロイ）→ 6. 検討中の案</dd>
         <dt>残件</dt><dd>広告掲載ルールの確定（低優先）／旧GitHub Pages併存の扱い決定／お店カレンダーの掲載許可（現在0/8）／うどん店の掲載許可（UDON_PUBLISHED=false で一時非表示）</dd>
         <dt>検討中</dt><dd>キャンペーンタブの月/週カレンダー統一／PCサイドバーの再設計／イベントチラシ画像の高さ制限</dd>
         <dt>直近の済</dt><dd>広報10月号QR入稿（08-28確認・Web掲載は9/24前後見込み）／団体データのNotion移行（09-05）／くらしタブ新設・ダムウィジェット（09-03〜05）</dd>
@@ -373,7 +373,7 @@
   <!-- ========== 2. 要件定義書（サブタブ：本文 v1.4（原本）／追補 2026-08〜09／統合カレンダー要件定義） ========== -->
   <section class="page" id="page-req" data-page="req" data-title="要件定義書" role="tabpanel">
     <div class="pagehead"><div class="num">2</div><div><h2>要件定義書</h2><div class="desc">町民・来訪者・運用者に必要な機能と、公開までの条件</div></div></div>
-    <div class="srcnote"><b>本文</b>＝<code>docs/要件定義書.md</code> v1.4（2026-07-14・改訂保留中）の全文。<b>追補</b>＝2026-08月以降に増えた要件（F29〜F38）と各要件の現状、スコープ・非機能・受入条件の更新。<b>統合カレンダー要件定義</b>＝<code>docs/統合カレンダー要件定義.md</code> v1.0（2026-09-03）の全文。食い違う箇所は追補が正。</div>
+    <div class="srcnote"><b>本文</b>＝<code>docs/要件定義書.md</code> v1.4（2026-07-14・改訂保留中）の全文。<b>追補</b>＝2026-08月以降に増えた要件（F29〜F38）と各要件の現状、スコープ・非機能・受入条件の更新。<b>統合カレンダー要件定義</b>＝<code>docs/統合カレンダー要件定義.md</code> v1.0（2026-09-03）＋追補 v1.1（2026-11-05・カレンダーを multi-select に変更、Phase 3 新設）の全文。食い違う箇所は追補 v1.1 が正。</div>
 
     <div class="subtabs" role="tablist" aria-label="要件定義書の区分">
       <button type="button" class="subtab" data-sub="main" role="tab">本文 v1.4（原本）</button>
@@ -516,8 +516,8 @@
 
     <!-- ---- 2-C 統合カレンダー要件定義（原本） ---- -->
     <div class="subpanel" data-sub="calendar" data-title="統合カレンダー要件定義" hidden>
-      <div class="note info" style="margin-top:12px">2026-09-03起案の機能要件。進行状況・残作業は「6. 検討中の案 › 統合カレンダー」、実装した関数は「4. 詳細設計書 › 表示部 §3」。</div>
-    <div class="section-title" id="doc-d-4227a754">統合イベントカレンダー 要件定義<span class="sub">docs/統合カレンダー要件定義.md・更新 2026-09-03</span></div>
+      <div class="note info" style="margin-top:12px">2026-09-03起案（v1.0）・2026-11-05に本人裁定で追補 v1.1 を追加した機能要件。進行状況・残作業は「6. 検討中の案 › 統合カレンダー」、実装した関数は「4. 詳細設計書 › 表示部 §3」。</div>
+    <div class="section-title" id="doc-d-4227a754">統合イベントカレンダー 要件定義<span class="sub">docs/統合カレンダー要件定義.md・更新 2026-11-05</span></div>
 <div class="doc-src">原本: <a href="file:///C:/Users/user/kotohira-news/docs/統合カレンダー要件定義.md">docs/統合カレンダー要件定義.md</a>（本タブは原本の写し。編集は原本側で）</div>
 <div class="doc">
 <p>v1.0 / 2026-09-03 / 起案: あっきー・まとめ: Claude（Fable 5）</p>
@@ -542,6 +542,17 @@
 <ul><li><code>python scripts/verify_ui_styles.py</code> 系の算出スタイル実測＋headless Chromeプローブでの描画確認（calendar値を注入したスタブデータでレイヤー切替・ホーム除外ルールを検証）</li><li><code>node --check</code> / インラインJS構文確認</li><li>登録は dry-run→少数試行→一括の順。登録件数と結果の報告を残す</li><li><code>.env</code> の読み取り・値の出力をしない。fetch_notion.py の実行（外部API）は事前確認の上で行う</li></ul>
 <h2>未決事項</h2>
 <ul><li>金刀比羅宮レイヤーの色トークン（実装時に既存パレットから選定）</li><li>Phase 2 の抽出プロンプト・承認フローの具体化</li><li>「祝舎」系7行事（2026年公式一覧には記載あり→2026年分は登録する。恒例か否かは来年の一覧で確認）</li></ul>
+<hr>
+<h2>追補 v1.1（2026-11-05・本人裁定）</h2>
+<p>実装前に本人と見直した結果。食い違う箇所はこの追補が正。</p>
+<h3>1. 「カレンダー」は <b>multi-select</b>・値は3つとも明示する</h3>
+<ul><li>NotionイベントDBのプロパティ「カレンダー」を <b>multi-select</b> で作る（本人作業。選択肢は書き込み時に自動生成）</li><li>値は3つ: <b><code>基本のイベント</code> ／ <code>金刀比羅宮</code> ／ <code>こんぴらカレンダー</code></b>（本人裁定 2026-11-05）<ul><li><code>基本のイベント</code> ＝ ことひらいふに出す一般向けのイベント。<b>町外の人も来られる</b>ものはここに入れる</li><li><code>金刀比羅宮</code> ＝ 神社の年中行事</li><li><code>こんぴらカレンダー</code> ＝ 広報ことひら誌面の予定（町民向け）</li></ul></li><li>1件が複数の値を持てる。これで出どころと対象（町内／町外）の両方を表す<ul><li>こんぴら朝市 ＝ 基本のイベント ＋ こんぴらカレンダー（町民行事だが町外の人も来られる）</li><li>検診・相談 ＝ こんぴらカレンダー のみ（町民向け）</li><li>例大祭 ＝ 基本のイベント ＋ 金刀比羅宮 ＋ こんぴらカレンダー</li></ul></li><li><b>「町外OK」のチェック欄は作らない</b>（本人裁定。基本のイベントに入れるかどうかで表す）</li><li>既存の約96件: 一度だけ、値が空の件に <code>基本のイベント</code> を一括で付ける（API・dry-run → 本実行。件数を報告）。以後、値が空の件は「未分類」として扱い、サイトは基本のイベントとして表示しつつ、開発ダッシュボードに未分類の件数を出す</li><li>登録ツールの既定値: <code>kotohira-news-register</code>（ニュース・イベント登録）と konpie-bot の登録は、値を指定しなければ <code>基本のイベント</code> を付ける。こんぴらカレンダーからの登録（Phase 2）は <code>こんぴらカレンダー</code> を付け、町外の人も来られる行事は本人が承認画面のチェック1つで <code>基本のイベント</code> を足す</li></ul>
+<h3>2. 表示側の読み替え</h3>
+<ul><li>ソース切替チップは3つ（基本のイベント・金刀比羅宮・こんぴらカレンダー）を固定で出し、未知の値があればデータ駆動で足す</li><li><code>visibleEvents()</code>: その件の値のいずれかがONなら表示。値が空（未分類）の件は基本のイベントのON/OFFに従う</li><li>詳細モーダルのソースバッジは値の数だけ並べる</li><li>ホームの「直近のイベント」: <code>基本のイベント</code> を持つ件（＋金刀比羅宮のうち大規模✓）。こんぴらカレンダーだけの件はホームに出さない</li><li>初期状態（基本のイベント=ON・金刀比羅宮=ON・こんぴらカレンダー=OFF）は変えない</li></ul>
+<h3>3. こんぴらカレンダー（Phase 2）の登録規則</h3>
+<ul><li>入力は <code>assets/towncal/events-YYYY-MM.csv</code>（<code>docs/こんぴらカレンダー自動更新_要件定義.md</code> で月次に自動生成）</li><li>登録前に既存のイベントと <b>日付＋名前（正規化）</b> で突合し、同じ件があれば<b>新規作成せず「カレンダー」に <code>こんぴらカレンダー</code> を足す</b>。無ければ新規作成して値を付ける</li><li><code>check=1</code> の行は承認画面の先頭に出す。承認（dry-run → 本登録）は本人</li></ul>
+<h3>4. Phase 3（新規）: 本人のスケジュールへの反映</h3>
+<ul><li>目的: 3つのカレンダーを別々に管理したまま、本人の Google カレンダーに反映する（本人要望 2026-11-05）</li><li>方式: サイトが <code>notion-data.js</code> から <b>ICS を配信</b>する。<code>events-all.ics</code>（全件）と、レイヤー別 <code>events-base.ics</code>／<code>events-konpira.ics</code>／<code>events-towncal.ics</code>。生成は毎時の <code>update-notion-data.yml</code> に1段足す</li><li>本人は Google カレンダーで URL を購読する（書き込み権限は持たない＝事故が起きない）。レイヤー別に購読すれば Google 側でも ON/OFF できる</li><li>詳細設計は Phase 1 実装後</li></ul>
 </div>
     </div>
   </section>
@@ -944,7 +955,7 @@ window.DASHBOARD_DATA = { "orgs": [ /* 旧スキーマ。新規追加・更新�
   <!-- ========== 4. 詳細設計書（サブタブ：取得スクリプト／表示部 index.html／ナビ・データファイル／自動更新・検証・ビルド） ========== -->
   <section class="page" id="page-detail" data-page="detail" data-title="詳細設計書" role="tabpanel">
     <div class="pagehead"><div class="num">4</div><div><h2>詳細設計書</h2><div class="desc">取得スクリプトの変換仕様、表示部の内部構造、ナビとデータファイル、自動更新と検証ツール。コードから起こした実装レベルの記述</div></div></div>
-    <div class="srcnote"><b>原本：</b> コードが正（<code>scripts/*.py</code>・<code>index.html</code>・<code>site-nav.js</code>・<code>.github/workflows/*.yml</code>）。関数名・定数名・行番号は <b>2026-09-05時点</b>（未コミットの統合カレンダー Phase 1 を含む）。埋め込みの仕組みの旧記述は <code>docs/設計書.md</code> §5（「3. 基本設計書 › 本文」）。</div>
+    <div class="srcnote"><b>原本：</b> コードが正（<code>scripts/*.py</code>・<code>index.html</code>・<code>site-nav.js</code>・<code>.github/workflows/*.yml</code>）。関数名・定数名・行番号は <b>2026-09-05時点</b>（統合カレンダー Phase 1 の行番号のみ 2026-11-05 の index.html で取り直し済み）。埋め込みの仕組みの旧記述は <code>docs/設計書.md</code> §5（「3. 基本設計書 › 本文」）。</div>
 
     <div class="subtabs" role="tablist" aria-label="詳細設計書の区分">
       <button type="button" class="subtab" data-sub="fetch" role="tab">取得スクリプト</button>
@@ -992,7 +1003,7 @@ window.DASHBOARD_DATA = { "orgs": [ /* 旧スキーマ。新規追加・更新�
           <thead><tr><th>DB → キー</th><th>parse／fetch 関数</th><th>主なプロパティ → フィールド</th><th>フィルタ・ソート・上限</th></tr></thead>
           <tbody>
             <tr><td>ニュース → <code>news</code></td><td><code>parse_news</code>（601行）／<code>fetch_news</code>（702行）</td><td>見出し・出典URL・要約（<code>strip_html</code>）・出典団体・出典媒体・公開日・サムネイル・重複の可能性・定例で紹介・表示対象</td><td>公開日降順で取得 → Python側で表示対象✓のみ。<code>NEWS_MAX=60</code></td></tr>
-            <tr><td>イベント → <code>events</code></td><td><code>parse_event</code>（648行）／<code>fetch_events</code>（757行）</td><td>イベント名・ソース・開催日時（開始・終了）・<code>status_from_dates</code>（618行）で算出したステータス・市町村・開催場所（relation → <code>resolve_place_names</code> 738行で会場DBから名前解決）・住所（rollup）・参考画像・コメント・参加費・主催運営・<b><code>calendar</code></b>（select「カレンダー」・空＝町のイベント）・<b><code>featured</code></b>（checkbox「大規模イベント」）</td><td>開催日時（開始）降順で取得 → <code>filter_events</code>（679行）で「終了済みは開始日が実行日の60日前以降のみ残す」（<code>RECENT_WINDOW_DAYS=60</code>）。<code>EVENT_MAX=200</code>。表示順は表示側の <code>byStartAsc</code> が決める</td></tr>
+            <tr><td>イベント → <code>events</code></td><td><code>parse_event</code>（648行）／<code>fetch_events</code>（757行）</td><td>イベント名・ソース・開催日時（開始・終了）・<code>status_from_dates</code>（618行）で算出したステータス・市町村・開催場所（relation → <code>resolve_place_names</code> 738行で会場DBから名前解決）・住所（rollup）・参考画像・コメント・参加費・主催運営・<b><code>calendar</code></b>（multi-select「カレンダー」の配列・空＝未分類＝基本のイベント扱い）・<b><code>featured</code></b>（checkbox「大規模イベント」）</td><td>開催日時（開始）降順で取得 → <code>filter_events</code>（679行）で「終了済みは開始日が実行日の60日前以降のみ残す」（<code>RECENT_WINDOW_DAYS=60</code>）。<code>EVENT_MAX=200</code>。表示順は表示側の <code>byStartAsc</code> が決める</td></tr>
             <tr><td>キャンペーン → <code>campaigns</code></td><td>同上（<code>parse_event</code> 共用）</td><td>eventsと同一。「カレンダー」「大規模イベント」プロパティは無いため <code>calendar</code> は空・<code>featured</code> は false（<code>get_select</code>／<code>get_checkbox</code> はプロパティ非存在で空を返す）</td><td>eventsと同一</td></tr>
             <tr><td>体験・滞在 → <code>experiences</code></td><td><code>parse_experience</code>（768行）／<code>fetch_experiences</code>（794行）</td><td>タイトル・種別・団体／主催・概要・募集開始日／終了日・場所・費用報酬・対象条件・URL・ステータス（空なら「募集中」）・画像・表示対象</td><td>募集開始日降順、表示対象✓のみ。<code>EXPERIENCE_MAX=200</code>。DB未設定時は表示側が <code>experiences-data.js</code> を使う</td></tr>
             <tr><td>お店 → <code>shops</code></td><td><code>parse_shop</code>（807行）／<code>fetch_shops</code>（835行）</td><td>店名・ジャンル（multi_select）・今月のカレンダー（files → <code>image</code>）・更新月・Instagram／X／Facebook／Threads／HP・元投稿URL・GoogleマップURL・住所・備考・表示対象（「市町村」列は参照しない）</td><td>店名昇順。<b>表示対象✓ かつ 画像あり</b>のみ。<code>SHOP_MAX=100</code></td></tr>
@@ -1153,22 +1164,25 @@ orgsListHTML / orgDetailHTML / newsTabHTML / eventsTabHTML / campaignsTabHTML / 
         </ul>
       </div>
 
-      <div class="section-title">3. イベントカレンダーと統合カレンダー Phase 1<span class="sub">2140〜2198行ほか（未コミット）</span></div>
+      <div class="section-title">3. イベントカレンダーと統合カレンダー Phase 1<span class="sub">index.html 2183〜2250行ほか（2026-11-05 取り直し・multi-select 版）</span></div>
       <div class="card">
         <div class="table-wrap"><table>
           <thead><tr><th>関数・定数</th><th>行</th><th>役割</th></tr></thead>
           <tbody>
-            <tr><td><code>eventCalLayers</code></td><td>1070</td><td>レイヤーON/OFFの状態。初期 <code>{"":true, "金刀比羅宮":true, "こんぴらカレンダー":false}</code>。ページ内のみ保持（永続化しない）</td></tr>
-            <tr><td><code>EVENT_CAL_LAYER_ORDER</code>／<code>EVENT_CAL_LAYER_META</code></td><td>2145／2146</td><td>表示順（空→金刀比羅宮→こんぴらカレンダー→未知値）と絵文字・ラベル</td></tr>
-            <tr><td><code>calSourceClass(v)</code>／<code>calSourceDotHTML(v)</code></td><td>2157／2163</td><td>色クラス：金刀比羅宮＝<code>cal-src-konpira</code>、こんぴらカレンダー＝<code>cal-src-towncal</code>、未知の非空＝<code>cal-src-other</code>、空＝無指定（現行色）</td></tr>
-            <tr><td><code>isEventLayerOn(v)</code></td><td>2168</td><td><code>eventCalLayers</code> に無い未知キーは既定ON</td></tr>
-            <tr><td><code>visibleEvents()</code></td><td>2172</td><td><code>ND.events.filter(it =&gt; isEventLayerOn(it.calendar))</code>。カレンダー描画・月/週切替・月移動がこれを読む</td></tr>
-            <tr><td><code>homeEvents()</code></td><td>2179</td><td>ホーム専用の固定ルール：町のイベント全部＋金刀比羅宮のうち <code>featured</code> のみ（レイヤー選択と独立）</td></tr>
-            <tr><td><code>eventCalLayerChipsHTML()</code></td><td>2184</td><td>チップ群。データに <code>calendar</code> 非空値が1件も無ければ空文字（＝登録前は見た目が現状と同一）</td></tr>
-            <tr><td><code>toggleEventCalLayer(key)</code></td><td>1554</td><td>状態反転 → イベントタブ本体（<code>eventsTabBodyHTML</code>）を再描画 → 押したチップへフォーカス復帰</td></tr>
+            <tr><td><code>eventCalLayers</code></td><td>1101</td><td>レイヤーON/OFFの状態。初期 <code>{"基本のイベント":true, "金刀比羅宮":true, "こんぴらカレンダー":false}</code>。ページ内のみ保持（永続化しない）</td></tr>
+            <tr><td><code>EVENT_CAL_BASE</code>／<code>EVENT_CAL_LAYER_ORDER</code>／<code>EVENT_CAL_LAYER_META</code></td><td>2183／2184／2185</td><td>基本のイベントの名前定数、表示順（基本のイベント→金刀比羅宮→こんぴらカレンダー→未知値）、絵文字・ラベル・色クラス</td></tr>
+            <tr><td><code>calsOf(it)</code></td><td>2195</td><td>その件が属するカレンダー名の配列。<code>calendar</code> が空・キー無し（未分類）なら <code>["基本のイベント"]</code> として扱う</td></tr>
+            <tr><td><code>isEventLayerOn(key)</code>／<code>isEventVisible(it)</code></td><td>2200／2204</td><td>未知キーは既定ON。値のいずれか1つでもONなら表示（未分類は基本のイベントのON/OFFに従う）</td></tr>
+            <tr><td><code>visibleEvents()</code></td><td>2205</td><td><code>ND.events.filter(isEventVisible)</code>。カレンダー描画・月/週切替・月移動がこれを読む</td></tr>
+            <tr><td><code>homeEvents()</code></td><td>2210</td><td>ホーム専用の固定ルール：<code>基本のイベント</code> を持つ件全部＋金刀比羅宮のうち <code>featured</code>（大規模✓）のみ。レイヤー選択と独立。こんぴらカレンダーのみの件は出ない</td></tr>
+            <tr><td><code>calPrimary(it)</code></td><td>2214</td><td>色の優先：金刀比羅宮＞こんぴらカレンダー＞基本のイベント＞その他</td></tr>
+            <tr><td><code>calSourceClass(it)</code>／<code>calSourceDotsHTML(it)</code></td><td>2223／2229</td><td>色クラスは <code>calPrimary</code> から決定（基本のイベントは無指定＝現行色、未知は <code>cal-src-other</code>）。ドットは値が2つ以上の件だけ（基本のみ・未分類は出さない）。モーダルのバッジは基本以外の値の数だけ</td></tr>
+            <tr><td><code>eventCalLayerChipsHTML()</code></td><td>2235</td><td>チップ3つを固定で常に表示し、データに未知の値があれば末尾に足す</td></tr>
+            <tr><td><code>toggleEventCalLayer(key)</code></td><td>1586</td><td>状態反転 → イベントタブ本体（<code>eventsTabBodyHTML</code>）を再描画 → 押したチップへフォーカス復帰</td></tr>
+            <tr><td><code>parse_event</code>（fetch_notion.py）</td><td>648</td><td><code>calendar</code> は <code>get_multi_select(properties, "カレンダー")</code> の配列、<code>featured</code> は checkbox「大規模イベント」</td></tr>
           </tbody>
         </table></div>
-        <div class="note info">月/週カレンダー本体は <code>eventCalendarInnerHTML(events)</code>（月グリッド・単日チップ＋複数日バー）と <code>eventWeekGridHTML(events, weekStart)</code>（週）。引数渡しのため <code>visibleEvents()</code> に差し替えるだけで追随する。キャンペーンは別実装の月グリッドのみ（統合対象外）。CSS側の色トークンは <code>--cal-konpira</code>／<code>--cal-towncal</code>（＋各 soft）。</div>
+        <div class="note info">月/週カレンダー本体は <code>eventCalendarInnerHTML(events)</code>（月グリッド・単日チップ＋複数日バー）と <code>eventWeekGridHTML(events, weekStart)</code>（週）。引数渡しのため <code>visibleEvents()</code> に差し替えるだけで追随する。キャンペーンは別実装の月グリッドのみ（統合対象外）。CSS側の色トークンは <code>--cal-konpira</code>／<code>--cal-towncal</code>（＋各 soft）。設計の経緯は <code>docs/統合カレンダー_Phase1_設計.md</code>。</div>
       </div>
 
       <div class="section-title">4. 詳細モーダル・ドロワーのフォーカス管理</div>
@@ -1698,46 +1712,51 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
 
     <!-- ---- 6-A 統合カレンダー ---- -->
     <div class="subpanel" data-sub="cal" data-title="統合カレンダー">
-      <div class="section-title">1. 目的とフェーズ分割<span class="sub">要件定義 v1.0（2026-09-03）</span></div>
+      <div class="section-title">1. 目的とフェーズ分割<span class="sub">要件定義 v1.0（2026-09-03）＋追補 v1.1（2026-11-05）</span></div>
       <div class="card">
-        <p>町のイベント・金刀比羅宮の年中行事・こんぴらカレンダー（広報の町民向け予定）を1つのカレンダーに統合し、Googleカレンダーのようにソース単位でON/OFFできるようにする。「琴平の予定は全部ここ」を実現する。</p>
+        <p>基本のイベント（一般向け・町外の人も来られる）・金刀比羅宮の年中行事・こんぴらカレンダー（広報の町民向け予定）の3つを1つのカレンダーに統合し、Googleカレンダーのようにカレンダー単位でON/OFFできるようにする。1件が複数のカレンダーに属せる（multi-select）。「町外OK」欄は作らない（本人裁定 11-05）。「琴平の予定は全部ここ」を実現する。</p>
         <div class="table-wrap"><table>
           <tr><th>区分</th><th>範囲</th><th>状態</th></tr>
-          <tr><td>Phase 1</td><td>ソース切替UI＋金刀比羅宮レイヤー（本要件の実装範囲）</td><td><span class="state pending">UI実装済み・未コミット／Notion側とデータ登録が残</span></td></tr>
-          <tr><td>Phase 2</td><td>こんぴらカレンダーの月次バッチ登録（概要のみ。詳細設計は精度検証後）</td><td><span class="state future">構想</span></td></tr>
+          <tr><td>Phase 1</td><td>カレンダー（multi-select）切替UI＋金刀比羅宮レイヤー</td><td><span class="state pending">実装・main マージ済み（6c366be → f63eb0f）／push・一括付与・金刀比羅宮登録が残</span></td></tr>
+          <tr><td>Phase 2</td><td>こんぴらカレンダーの月次登録（誌面の行事 CSV → 既存イベントと日付＋名前で突合 → 承認 → Notion 登録）。CSV は 2026-10・11 月分を <code>assets/towncal/events-YYYY-MM.csv</code> に作成済み</td><td><span class="state pending">設計済み・未実装（<code>docs/こんぴらカレンダー自動更新_要件定義.md</code>）</span></td></tr>
+          <tr><td>Phase 3（新設）</td><td>レイヤー別 ICS 配信（<code>events-all/base/konpira/towncal.ics</code>）→ 本人の Google カレンダーで URL 購読。生成は毎時の <code>update-notion-data.yml</code> に1段足す</td><td><span class="state future">構想（詳細設計は Phase 1 実装後）</span></td></tr>
           <tr><td>対象外</td><td>キャンペーン月グリッドの統合（性質が違うため混ぜない）／右サイドバーの大型イベント告知枠（site-widgets-data.js由来でNotion非連動のため現状維持）</td><td>—</td></tr>
         </table></div>
         <div class="note info">データ設計・表示仕様の本文は「2. 要件定義書 › 統合カレンダー要件定義」、実装した関数は「4. 詳細設計書 › 表示部 §3」を参照。ここには残作業と未決だけを置く。</div>
       </div>
 
-      <div class="section-title">2. 金刀比羅宮データの登録（Phase 1 の残作業）</div>
+      <div class="section-title">2. Phase 1 の残作業（2026-11-05 時点）</div>
       <div class="card">
         <ul class="chk">
-          <li class="todo">Notion側：イベントDBに select「カレンダー」・checkbox「大規模イベント」を追加（あっきーさん）</li>
-          <li class="todo">登録経路：<code>kotohira-news-register</code> スキルの <code>register_news.py --config config-events.json</code>（イベントDB向け設定を新設）。事前改修3点＝①終了日（date end）送信 ②トークン env 名の分離（読み取り専用トークンと衝突するため） ③会場は「開催場所」relation 非対応のためコメント欄に記載</li>
-          <li class="todo"><b>本登録前に必ず <code>--dry-run</code></b>：旧API（2022-06-28）でのスキーマ取得疎通を確認。落ちたら data_sources API 対応を判断</li>
-          <li class="todo">登録対象：公式サイトの令和8年（2026年）年間行事一覧のうち<b>裏取りできた行事のみ</b>（61件・登録ツール準備済み）。蹴鞠（2026年一覧に無し）と毎月の月次祭4種は登録しない。例大祭（10/9〜11・固定日程）は各神事の時間・場所まで詳細登録</li>
-          <li class="todo">未コミットの実装（index.html・fetch_notion.py）を、Notion側のプロパティ追加後にコミット・push</li>
+          <li class="done">Notion 側：イベントDBに multi-select「カレンダー」を本人が作成済み（値3つ確認：基本のイベント／金刀比羅宮／こんぴらカレンダー）。イベントDBは821件で、うち空820件</li>
+          <li class="done">実装：ブランチ calendar-phase1 を main にマージ（6c366be）→ multi-select 前提に書き直し（f63eb0f）。チップ3つ固定・色の優先 金刀比羅宮＞こんぴらカレンダー＞基本・ドットは2値以上の件だけ・モーダルは基本以外の値の数だけバッジ・ホームは基本＋金刀比羅宮の大規模✓。未分類（空）は基本扱い</li>
+          <li class="done">登録経路の既定値：<code>config-events.json</code> の defaults.カレンダー＝基本のイベント（token_env＝KOTOHIRA_NOTION_TOKEN）、<code>config-events-konpira.json</code>（金刀比羅宮用）を新設。konpie-bot の <code>register_watcher</code> の <code>_map_event_like</code> は kind==event のとき基本のイベントを付ける（<b>デプロイ未</b>）</li>
+          <li class="done">金刀比羅宮データ：旧61件は消失したため公式サイトから再取得し、原文と突き合わせて60件（例大祭10・祝舎10・年中行事40・要確認1件＝行宮着御祭の日付）を <code>docs/data/konpira-events-2026.json</code>（＋.md）に保存。月次祭は登録しない</li>
+          <li class="todo"><b>push</b>：main の未 push コミットを Fable 確認後に push</li>
+          <li class="todo"><b>既存820件への一括付与</b>：<code>scripts/backfill_calendar.py</code>（dry-run で対象820件を確認済み）。apply は本人承認待ち</li>
+          <li class="todo"><b>金刀比羅宮60件の登録</b>：<code>config-events-konpira.json</code> で dry-run → 本人承認 → 本登録。行宮着御祭の日付は要確認。旧API（2022-06-28）での疎通を dry-run で確認</li>
+          <li class="todo">konpie-bot のデプロイ（イベント登録の既定値を反映）</li>
         </ul>
-        <div class="note info"><b>年次運用：</b> 年1回（1月頃）、公式の新年度行事一覧と突き合わせて更新。移動祝日連動の5件（成人の日・春分・海の日・秋分・スポーツの日）は毎年日付が変わるため必ず確認。「祝舎」系7行事は2026年分は登録し、恒例か否かは来年の一覧で確認。</div>
+        <div class="note info"><b>年次運用：</b> 年1回（1月頃）、公式の新年度行事一覧と突き合わせて更新。移動祝日連動の5件（成人の日・春分・海の日・秋分・スポーツの日）は毎年日付が変わるため毎年1月に確認。「祝舎」系は2026年分は登録し、恒例か否かは来年の一覧で確認。</div>
       </div>
 
-      <div class="section-title">3. Phase 2 概要とDefinition of Done</div>
+      <div class="section-title">3. Phase 2・3 概要とDefinition of Done</div>
       <div class="card">
         <div class="stagewrap">
           <span class="lbl">Phase 2 の想定フロー（凡例：teal=自動／amber=人の確認／枠=生成物）</span>
-          <span class="stage auto">fetch_towncal.py の誌面画像</span><span class="stagearrow">→</span>
-          <span class="stage auto">Claudeが構造化</span><span class="stagearrow">→</span>
+          <span class="stage auto">誌面画像 → 行事 CSV（events-YYYY-MM.csv）</span><span class="stagearrow">→</span>
+          <span class="stage auto">既存イベントと日付＋名前で突合</span><span class="stagearrow">→</span>
           <span class="stage">--dry-run ドラフト</span><span class="stagearrow">→</span>
           <span class="stage manual">誌面と突き合わせて承認</span><span class="stagearrow">→</span>
-          <span class="stage auto">本登録（カレンダー=こんぴらカレンダー）</span>
+          <span class="stage auto">本登録（突合一致は「こんぴらカレンダー」を足す／無ければ新規）</span>
         </div>
         <ul class="b">
-          <li>最初の2〜3か月は半自動（人の承認必須）。精度が安定したら承認を軽量化。</li>
+          <li>最初の2〜3か月は半自動（人の承認必須）。精度が安定したら承認を軽量化。<code>check=1</code> の行は承認画面の先頭。町外の人も来られる行事は、承認画面のチェック1つで「基本のイベント」を足す。画像の月次更新は毎時 workflow に門つきで乗せる設計（未実装）。</li>
+          <li><b>Phase 3</b>：<code>notion-data.js</code> から ICS を生成して配信し、本人は Google カレンダーで URL を購読する（書き込み権限なし＝事故が起きない）。レイヤー別に購読すれば Google 側でも ON/OFF できる。</li>
           <li>誌面画像ページ（くらし › こんぴらカレンダー）は正本の忠実なコピー兼検証台帳として存続。Phase 2開始時に「統合カレンダーで見る」導線を追加。</li>
           <li><b>DoD</b>：算出スタイル実測＋headless Chromeプローブ（calendar値を注入したスタブデータでレイヤー切替・ホーム除外ルールを検証）／<code>node --check</code>／登録は dry-run→少数試行→一括の順で件数と結果を報告／<code>.env</code> の読み取り・値の出力をしない。</li>
         </ul>
-        <div class="note warn"><b>未決：</b> Phase 2 の抽出プロンプト・承認フローの具体化。金刀比羅宮レイヤーの色トークンは実装時に紫系（<code>--cal-konpira</code>）で仮決め済み（見た目の最終確認は登録後）。</div>
+        <div class="note warn"><b>未決：</b> Phase 2 の承認フロー実装の具体化、Phase 3 の詳細設計。金刀比羅宮レイヤーの色トークンは紫系（<code>--cal-konpira</code>）で仮決め済み（見た目の最終確認は登録後）。行宮着御祭の日付は要確認。</div>
       </div>
     </div>
 
@@ -1912,7 +1931,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
           <li class="done">団体詳細ページを「サブタブ切替」から「1スクロールのセクション型」へリニューアル（媒体ごとにホームと同じhomeSection＋カルーセル部品。埋め込みはIntersectionObserverで画面接近時に遅延起動）09-05</li>
           <li class="done">団体データをregistry.json/data.jsからNotion 2DB（琴平町関連団体＋関連団体の投稿）へ移行。noteは団体DBのプロフィールURLからRSSを自動導出。投稿DBはURLドメインから媒体（Instagram/X）を自動判定。registry.json/data.jsは凍結レガシー（notion-data.jsのorgsが空の時だけ読むフォールバック）に09-05</li>
           <li class="done">団体詳細ヘッダーにThreads/Facebookバッジ追加、Instagram埋め込みにキャプション表示（data-instgrm-captioned）、offバッジの塗りつぶし不具合修正、団体切替プルダウン追加、団体一覧に導入文追加、Instagram埋め込みの高さを850pxへ統一（縦長投稿でも本文が数行見えるよう実測調整）09-05</li>
-          <li class="progress">統合カレンダー Phase 1：レイヤー切替UI・fetch_notion.py の calendar／featured 出力を実装（未コミット）。Notion側のプロパティ追加と金刀比羅宮データ登録が残作業 09-05</li>
+          <li class="progress">統合カレンダー Phase 1：レイヤー切替UI・fetch_notion.py の calendar／featured 出力を実装 09-05 → 11-05 multi-select 前提に書き直して main にマージ済み（push 未）。Notion の「カレンダー」作成済み。一括付与・金刀比羅宮60件の登録・konpie-bot デプロイが残作業</li>
         </ul>
       </div>
 
@@ -1980,9 +1999,10 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
     <div class="subpanel" data-sub="log" data-title="決定ログ" hidden>
       <div class="note info" style="margin-top:12px">設計・運用の判断を時系列で残す台帳。新しい月が上。各項目は当時の判断であり、後から覆った判断は「フェーズ・実績」「6. 検討中の案」側に最新状態がある。2026-07-10以前の決定は原本ロードマップ.md の決定ログにもある。</div>
 
-      <div class="section-title">1. 2026年11月<span class="sub">SNS 導線の中継ページ・公式 SNS リンク</span></div>
+      <div class="section-title">1. 2026年11月<span class="sub">統合カレンダーの multi-select 化・SNS 導線の中継ページ・公式 SNS リンク</span></div>
       <div class="card">
         <ul class="b">
+          <li><b>11-05</b>：統合カレンダーを本人と見直し、追補 v1.1 として裁定（<code>docs/統合カレンダー要件定義.md</code> 末尾）。①Notion の「カレンダー」は <b>multi-select</b>、値は3つ明示（<code>基本のイベント</code>＝一般向け・町外の人も来られる／<code>金刀比羅宮</code>／<code>こんぴらカレンダー</code>）。1件が複数の値を持て、出どころと対象（町内／町外）の両方を表す。②「町外OK」のチェック欄は作らない。③既存の空820件は <code>scripts/backfill_calendar.py</code> で一度だけ「基本のイベント」を一括付与（以後、空は未分類として基本扱い）。④表示：色の優先は 金刀比羅宮＞こんぴらカレンダー＞基本、ホームは基本のイベント＋金刀比羅宮の大規模✓。⑤登録経路は値を指定しなければ基本のイベントを付ける（config-events.json・konpie-bot）。⑥Phase 3（新設）＝レイヤー別 ICS 配信 → Google カレンダー購読。実装は calendar-phase1 を main にマージ（6c366be）→ multi-select に書き直し（f63eb0f）。金刀比羅宮の旧61件は消失したため公式サイトから再取得・原文突合して60件を <code>docs/data/konpira-events-2026.json</code> に保存（登録は dry-run → 本人承認待ち）。こんぴらカレンダー（Phase 2）は誌面の行事 CSV を2026年10・11月分作成し、画像の月次更新は毎時 workflow に門つきで乗せる設計（<code>docs/こんぴらカレンダー自動更新_要件定義.md</code>・未実装）。</li>
           <li><b>11-03</b>：SNS 導線の中継ページを実装（<code>routes.json</code> 正本・<code>scripts/build_routes.py</code> 生成・<code>go/{行き先}/{出どころ}/</code> 18枚・1.2秒後に自動転送・noindex）。出どころをパスで分け、Cloudflare Web Analytics のページ別閲覧数で「どこから押されたか」を数える（集計は sns-hub の site.mjs）。サイト側はサイドバーの LINE カード「ことひらいふ」、リンク集の琴平町DAO・琴平デジタル町民のリンクを <code>/go/…/site/</code> 経由に差し替え（QR 画像は参加URLのままなので QR 経由は数えない）。本人裁定（11-02）：#好きがコトひらく町を行き先に含める／デジタル町民の入口は LINE 公式 @997qsntl／プロフィールの Web 欄は <code>/go/site/{x|th|ig}/</code> の自動転送（出どころ別リンク集 /l/ は1タップ増えるので作らない）／Discord の招待は1本のまま（出どころ別5本は母数不足と管理の重さで見送り）／投稿に貼る URL は X・Threads 共通で出どころ post の1つ／無料AI体験会 OC は行き先に含めずカードだけ／サイトにことひらいふの X・Threads・Instagram を置く（サイドバーに SNS カード、運営者情報に「公式アカウント」の節）。設計: SecondBrain/03_Resources/agent-outputs/activity-os-map/plan/2026-10-31_SNS導線設計_v1.md §3・§7。</li>
         </ul>
       </div>
@@ -2010,7 +2030,7 @@ python -m py_compile scripts/fetch_notion.py   <span class="cmt"># Pythonの構�
           <li><b>09-05</b>：早明浦ダム貯水率ウィジェットを追加。国交省「川の防災情報」から1日2回自動取得する scripts/fetch_dam.py を新設（GitHub Actions）。リアルタイム値ではないため表示側は必ず観測時刻を明示。サイドバー・モバイルヘッダーにダムチップを追加し、天気チップも気温表示・パネル見出しを改善。</li>
           <li><b>09-05</b>：🏪お店の営業カレンダーを追加。fetch_notion.py にお店DB取得を実装し、「表示対象✓かつ画像あり」のみ掲載する運用に。リスト＋詳細モーダル型（tmp-shopcal-a.htmlの試作をあっきーさんが選定）、ジャンル絞り込みチップを実装。「くらし」タブへ格納。</li>
           <li><b>09-04</b>：大型イベント告知枠の「第4回 台湾フェス・台湾夜市 in 琴平」を台風接近による延期のため無効化（振替日程確定後に再有効化）。</li>
-          <li><b>09-03</b>：統合イベントカレンダーの要件定義 v1.0 を確定（<code>docs/統合カレンダー要件定義.md</code>）。Phase 1＝ソース切替UI＋金刀比羅宮レイヤー、Phase 2＝こんぴらカレンダーの月次バッチ登録。キャンペーン月グリッドと大型イベント告知枠は統合対象外。既存イベント約96件は移行作業なし（calendar空＝町のイベント）。</li>
+          <li><b>09-03</b>：統合イベントカレンダーの要件定義 v1.0 を確定（<code>docs/統合カレンダー要件定義.md</code>）。Phase 1＝ソース切替UI＋金刀比羅宮レイヤー、Phase 2＝こんぴらカレンダーの月次バッチ登録。キャンペーン月グリッドと大型イベント告知枠は統合対象外。既存イベント約96件は移行作業なし（calendar空＝町のイベント）。※11-05 に multi-select 化・「町のイベント」を「基本のイベント」へ改称し、空への一括付与に変更（上の 11-05 項）。</li>
           <li><b>09-03</b>：🗓こんぴらカレンダー公開。町HPのPDF/画像URLから広報誌面のカレンダー面を取得しWebP変換保存する scripts/fetch_towncal.py を新設。「くらし」タブの第一弾。</li>
         </ul>
       </div>
@@ -2599,7 +2619,7 @@ python scripts/verify_ui_styles.py ".drawer a"
         <tr><td>設計書.md</td><td>設計書 v2.4（→ 3. 基本設計書 › 本文）</td><td>2026-07-14</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/設計書.md">C:\Users\user\kotohira-news\docs\設計書.md</a></td></tr>
         <tr><td>ロードマップ.md</td><td>ロードマップ・決定ログ（→ 方針・全体設計 › ロードマップ）</td><td>2026-07-10</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/ロードマップ.md">C:\Users\user\kotohira-news\docs\ロードマップ.md</a></td></tr>
         <tr><td>運用手順.md</td><td>運用手順 A〜I（→ 5. 実装・運用 › 本文）</td><td>2026-07-19</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/運用手順.md">C:\Users\user\kotohira-news\docs\運用手順.md</a></td></tr>
-        <tr><td>統合カレンダー要件定義.md</td><td>統合イベントカレンダー要件定義 v1.0（→ 2. 要件定義書 › 統合カレンダー要件定義）</td><td>2026-09-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/統合カレンダー要件定義.md">C:\Users\user\kotohira-news\docs\統合カレンダー要件定義.md</a></td></tr>
+        <tr><td>統合カレンダー要件定義.md</td><td>統合イベントカレンダー要件定義 v1.0（→ 2. 要件定義書 › 統合カレンダー要件定義）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/統合カレンダー要件定義.md">C:\Users\user\kotohira-news\docs\統合カレンダー要件定義.md</a></td></tr>
       </tbody>
     </table></div></div>
 
@@ -2628,7 +2648,7 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>index.html</td><td>表示部の正本（5分類ナビ・SPAビュー・カレンダー・モーダル）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/index.html">C:\Users\user\kotohira-news\index.html</a></td></tr>
+        <tr><td>index.html</td><td>表示部の正本（5分類ナビ・SPAビュー・カレンダー・モーダル）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/index.html">C:\Users\user\kotohira-news\index.html</a></td></tr>
         <tr><td>site-nav.js</td><td>ナビ構造の正本（5分類・ドロワー・サイト情報）</td><td>2026-09-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/site-nav.js">C:\Users\user\kotohira-news\site-nav.js</a></td></tr>
         <tr><td>site-widgets-data.js</td><td>天気・LINE・大型イベント・広告・フッターの設定</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/site-widgets-data.js">C:\Users\user\kotohira-news\site-widgets-data.js</a></td></tr>
         <tr><td>links-data.js</td><td>リンク集（3分類14件）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/links-data.js">C:\Users\user\kotohira-news\links-data.js</a></td></tr>
@@ -2645,9 +2665,9 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>notion-data.js</td><td>Notion 5DB → 表示用データ（毎時自動）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/notion-data.js">C:\Users\user\kotohira-news\notion-data.js</a></td></tr>
-        <tr><td>dam-data.js</td><td>早明浦ダム貯水率（1日2回自動）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/dam-data.js">C:\Users\user\kotohira-news\dam-data.js</a></td></tr>
-        <tr><td>towncal-data.js</td><td>こんぴらカレンダー（fetch_towncal.py が月次更新）</td><td>2026-10-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/towncal-data.js">C:\Users\user\kotohira-news\towncal-data.js</a></td></tr>
+        <tr><td>notion-data.js</td><td>Notion 5DB → 表示用データ（毎時自動）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/notion-data.js">C:\Users\user\kotohira-news\notion-data.js</a></td></tr>
+        <tr><td>dam-data.js</td><td>早明浦ダム貯水率（1日2回自動）</td><td>2026-11-04</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/dam-data.js">C:\Users\user\kotohira-news\dam-data.js</a></td></tr>
+        <tr><td>towncal-data.js</td><td>こんぴらカレンダー（fetch_towncal.py が月次更新）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/towncal-data.js">C:\Users\user\kotohira-news\towncal-data.js</a></td></tr>
         <tr><td>data.js</td><td>凍結レガシー：notion-data.js の orgs が空の時だけ読む団体フォールバック</td><td>2026-06-26</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/data.js">C:\Users\user\kotohira-news\data.js</a></td></tr>
         <tr><td>registry.json</td><td>kotohira-news スキル（週次ニュース草案）の団体台帳。表示には使わない</td><td>2026-06-26</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/registry.json">C:\Users\user\kotohira-news\registry.json</a></td></tr>
         <tr><td>image-overrides.json</td><td>ローカル画像を最優先にする対応表（assets/manual/）</td><td>2026-08-25</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/assets/image-overrides.json">C:\Users\user\kotohira-news\assets\image-overrides.json</a></td></tr>
@@ -2658,7 +2678,7 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>fetch_notion.py</td><td>Notion取得（サムネWebP保存・note RSS自動導出）</td><td>2026-10-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/fetch_notion.py">C:\Users\user\kotohira-news\scripts\fetch_notion.py</a></td></tr>
+        <tr><td>fetch_notion.py</td><td>Notion取得（サムネWebP保存・note RSS自動導出）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/fetch_notion.py">C:\Users\user\kotohira-news\scripts\fetch_notion.py</a></td></tr>
         <tr><td>fetch_dam.py</td><td>早明浦ダム貯水率取得（国交省・www1.river.go.jp のみ）</td><td>2026-10-08</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/fetch_dam.py">C:\Users\user\kotohira-news\scripts\fetch_dam.py</a></td></tr>
         <tr><td>fetch_towncal.py</td><td>こんぴらカレンダー月次更新（町HP誌面 → WebP）</td><td>2026-09-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/fetch_towncal.py">C:\Users\user\kotohira-news\scripts\fetch_towncal.py</a></td></tr>
         <tr><td>image_utils.py</td><td>WebP圧縮の共通処理</td><td>2026-08-25</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/image_utils.py">C:\Users\user\kotohira-news\scripts\image_utils.py</a></td></tr>
@@ -2674,8 +2694,8 @@ python scripts/verify_ui_styles.py ".drawer a"
     <div class="card"><div class="table-wrap"><table class="files">
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
-        <tr><td>開発ダッシュボード.base.html</td><td>編集元（要約・追補の本文＋原本注入マーカー）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.base.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.base.html</a></td></tr>
-        <tr><td>開発ダッシュボード.html</td><td>生成物（python scripts/build_dashboard.py で再生成）</td><td>2026-10-15</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.html</a></td></tr>
+        <tr><td>開発ダッシュボード.base.html</td><td>編集元（要約・追補の本文＋原本注入マーカー）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.base.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.base.html</a></td></tr>
+        <tr><td>開発ダッシュボード.html</td><td>生成物（python scripts/build_dashboard.py で再生成）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.html</a></td></tr>
       </tbody>
     </table></div></div>
 
@@ -2700,7 +2720,7 @@ python scripts/verify_ui_styles.py ".drawer a"
 </div>
 
 <footer>
-  kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-09-05（ビルド 2026-11-03 02:57） ／ ローカルHTML・公開対象外<br>
+  kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-09-05（ビルド 2026-11-05 16:14） ／ ローカルHTML・公開対象外<br>
   各文書タブ＝本文（原本md全文）＋追補。編集は base 側、原本は各mdで。表示部の正本＝index.html ／ データは各生成スクリプト経由でのみ更新（生成物JSを手編集しない）
 </footer>
 
