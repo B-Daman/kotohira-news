@@ -571,6 +571,16 @@
   .cal-layer-chip:hover{border-color:var(--accent);color:var(--accent-d)}
   .cal-layer-chip:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
   .cal-layer-chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+  /* 📲 自分のカレンダーに入れる（イベントタブのチップの下・ICS購読の案内）。.hintと同じ小さな注記の流儀で、
+     折りたたみ（details）にして普段は1行だけ見せる */
+  .ics-sub{margin:-2px 0 12px;font-size:12px;color:var(--sub)}
+  .ics-sub summary{cursor:pointer;font-weight:700;color:var(--accent-d);padding:2px 0}
+  .ics-sub summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .ics-sub-list{list-style:none;margin:6px 0 4px;padding:0;display:grid;gap:4px}
+  .ics-sub-list li{display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline}
+  .ics-sub-list code{font-size:11px;background:var(--card);border:1px solid var(--line);border-radius:6px;
+    padding:1px 6px;color:var(--ink);word-break:break-all;user-select:all}
+  .ics-sub ol{margin:4px 0 0;padding-left:18px;line-height:1.7}
   /* 週表示：Googleカレンダーの「スケジュール」ビュー風。全体を1枚のカードにし、日付列とイベント列の
      2列グリッド行を1pxの区切り線だけで縦に並べる（PC・スマホ共通。月表示の出し分けとは別クラス）。 */
   .event-week-view{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--card)}
@@ -2247,6 +2257,29 @@ function eventCalLayerChipsHTML(){
   return `<div class="cal-layer-chips" role="group" aria-label="表示するカレンダーを選ぶ">${chips}</div>`;
 }
 
+/* 📲 自分のカレンダーに入れる：レイヤー別ICS（scripts/build_ics.py が毎時生成・サイト直下）の購読案内。
+   既定は all・base・konpira の3つを前に、towncal（町民向け）は注記つきで最後。URLは絶対URL固定
+   （Googleカレンダーの「URLで追加」に貼る値のため、location.originに依存させない）。 */
+const ICS_FEEDS = [
+  {file:"events-all.ics", label:"すべてのイベント", note:""},
+  {file:"events-base.ics", label:"基本のイベント", note:""},
+  {file:"events-konpira.ics", label:"金刀比羅宮", note:""},
+  {file:"events-towncal.ics", label:"こんぴらカレンダー", note:"町民向け・広報の行事"}
+];
+function eventIcsSubscribeHTML(){
+  const rows = ICS_FEEDS.map(f=>{
+    const url = "https://kotohilife.com/" + f.file;
+    return `<li><span>${esc(f.label)}${f.note?`（${esc(f.note)}）`:""}</span><code>${esc(url)}</code></li>`;
+  }).join("");
+  return `<details class="ics-sub"><summary>📲 自分のカレンダーに入れる</summary>
+    <ul class="ics-sub-list">${rows}</ul>
+    <ol>
+      <li>PCのGoogleカレンダーを開き、左の「他のカレンダー」の「＋」を押す</li>
+      <li>「URLで追加」を選び、上の入れたいURLをコピーして貼り、「カレンダーを追加」を押す</li>
+      <li>以後は自動で更新されます（反映はGoogle側の周期で、半日〜1日ほどかかります）</li>
+    </ol></details>`;
+}
+
 /* ===== 📅 イベントタブ ===== */
 function eventsTabHTML(){
   if(!ND.events.length) return emptyMsg(NOTION_EMPTY_MSG);
@@ -2258,7 +2291,7 @@ function eventsTabHTML(){
    チップは常に先頭に出る）。 */
 function eventsTabBodyHTML(){
   const items = visibleEvents();
-  let html = eventCalLayerChipsHTML();
+  let html = eventCalLayerChipsHTML() + eventIcsSubscribeHTML();
   if(!items.length){
     return html + emptyMsg("表示中のカレンダーがありません。チップで表示したいカレンダーを選んでください。");
   }

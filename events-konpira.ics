@@ -1,0 +1,447 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//kotohilife.com//events//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ことひらいふ 金刀比羅宮
+X-WR-TIMEZONE:Asia/Tokyo
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-819e-aefb-deece6abeb05@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260909
+SUMMARY:潮汲藻刈神事
+LOCATION:琴平町
+DESCRIPTION:場所: 多度津金刀比羅神社(熊手八幡宮) / 時刻: 
+ 午前中 / 出典: 金刀比羅宮公式サイト（令和8年年間行
+ 事）\n主催: 金刀比羅宮\nことひらいふ イベント: https://
+ kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81c5-95bb-ca5fd7d39230@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260908T180000
+SUMMARY:潮川神事
+LOCATION:琴平町
+DESCRIPTION:場所: 金倉川に臨む神事場の斎館 / 出典: 金刀
+ 比羅宮公式サイト（令和8年年間行事）\n主催: 金刀比羅
+ 宮\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8194-b160-ea50462a7d22@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:竃祓祭・御幣立神事
+LOCATION:琴平町
+DESCRIPTION:場所: 神事場 / 年間行事ページでは「祝舎御幣
+ 立神事」 / 出典: 金刀比羅宮公式サイト（令和8年年間
+ 行事）\n主催: 金刀比羅宮\nことひらいふ イベント: https
+ ://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81b2-92b7-fde1ca7aeab1@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260911
+SUMMARY:入宿神事
+LOCATION:琴平町
+DESCRIPTION:場所: 祝舎 / 出典: 金刀比羅宮公式サイト（令
+ 和8年年間行事）\n主催: 金刀比羅宮\nことひらいふ イベ
+ ント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8166-bcf7-dbd4d8691566@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:秋分祭・秋季大霊神祭
+LOCATION:琴平町
+DESCRIPTION:年間行事ページに「23日 秋分の日」と併記 / 出
+ 典: 金刀比羅宮公式サイト（令和8年年間行事）\n主催: 
+ 金刀比羅宮\nことひらいふ イベント: https://kotohilife.com/#
+ events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8147-b054-fa193ec9e793@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:氏子祭
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81c0-8cfa-e0713d07b401@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:御厩神事
+LOCATION:琴平町
+DESCRIPTION:場所: 神事場 / 例大祭ページに記載。年間行事
+ ページには無い / 出典: 金刀比羅宮公式サイト（令和8
+ 年年間行事）\n主催: 金刀比羅宮\nことひらいふ イベン
+ ト: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8198-8e6b-f328133dfcc3@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:指合神事
+LOCATION:琴平町
+DESCRIPTION:場所: 祝舎 / 出典: 金刀比羅宮公式サイト（令
+ 和8年年間行事）\n主催: 金刀比羅宮\nことひらいふ イベ
+ ント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3eb0b4e5-ff5b-810c-be8e-f5dd83b3f133@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261009T160000
+DTEND;TZID=Asia/Tokyo:20261012T000000
+SUMMARY:令和8年 金刀比羅宮例大祭
+LOCATION:金刀比羅宮（御本宮）
+DESCRIPTION:会場: 金刀比羅宮 令和8年10月9日(金曜日)から11
+ 日(日曜日)まで、金刀比羅宮例大祭が開催されます。例
+ 大祭期間中は、奉納行事や奉納演奏、こんぴら舩々お
+ どりなど、さまざまな行事が行われます。\n参加費: 無
+ 料\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.town.kotohira.kagawa.jp/soshiki/8/12045.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-8171-a9bb-fe6b3992af7d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261009T160000
+SUMMARY:例大祭 宵宮祭（御本宮）
+LOCATION:金刀比羅宮（御本宮）
+DESCRIPTION:金刀比羅宮例大祭の初日。お祭の前日を「宵宮
+ 」といい、この日に斎行する祭典。八少女舞を奏進。
+ 会場：御本宮\n参加費: 無料\n主催: 金刀比羅宮\nことひ
+ らいふ イベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/QR/02/a.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8150-a92b-fda14874c9c5@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:例大祭 金幣式
+LOCATION:琴平町
+DESCRIPTION:場所: 御本宮 / 突合で追加。例大祭ページで例
+ 祭の後に御本宮でお頭人さんの金幣式を行う。時刻の
+ 記載なし / 出典: 金刀比羅宮公式サイト（令和8年年間
+ 行事）\n主催: 金刀比羅宮\nことひらいふ イベント: https
+ ://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-818b-8921-ce8ed9f381b8@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:例大祭 行宮着御祭
+LOCATION:琴平町
+DESCRIPTION:【要確認】場所: 神事場の行宮 / 時刻: 深夜 / 
+ 年間行事ページは11日欄に記載、例大祭ページは10日の
+ 御神輿渡御の後の「深夜」(日付の明記なし)で食い違い
+ 。両方を併記 / 出典: 金刀比羅宮公式サイト（令和8年
+ 年間行事）\n主催: 金刀比羅宮\nことひらいふ イベント:
+  https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-813f-b05d-d037123a2da1@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261010T100000
+SUMMARY:例大祭 例祭（御本宮）
+LOCATION:金刀比羅宮（御本宮）
+DESCRIPTION:2月の祈年祭・11月の新嘗祭と共に金刀比羅宮の
+ 三大祭の一つで、その中でも最も重要な祭典。大和舞
+ を奏進。会場：御本宮\n参加費: 無料\n主催: 金刀比羅宮
+ \nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/QR/02/a.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-810f-9dee-e9da968a825a@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261010T210000
+DTEND;TZID=Asia/Tokyo:20261010T230000
+SUMMARY:例大祭 御神輿 御本宮発御（お下がり：御本宮→
+ 御旅所）
+LOCATION:琴平町
+DESCRIPTION:年に一度、金刀比羅大神さまが門前町に下りら
+ れる「お下がり」。約600名が御本宮から御旅所（神事
+ 場）まで約2kmを2時間かけて進む。行列の先頭は乗馬の
+ 男子児童2人と駕籠の女子児童2人の「お頭人さん」。10/
+ 10 19時〜11日2時は一部道路が歩行者専用。経路地図：htt
+ ps://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootmap.pdf\
+ n参加費: 無料\n主催: 金刀比羅宮\nことひらいふ イベン
+ ト: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootma
+ p.pdf
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81c3-9d01-d26cd9c3d9cb@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:例大祭 報賽祭
+LOCATION:琴平町
+DESCRIPTION:場所: 御本宮 / 時刻: 深夜 / 突合で追加。年間
+ 行事ページは11日欄。例大祭ページは御神輿の御還幸後
+ の深夜(日付の明記なし)で、金幣式・五人百姓の供応・
+ 解斎歌を行う / 出典: 金刀比羅宮公式サイト（令和8年
+ 年間行事）\n主催: 金刀比羅宮\nことひらいふ イベント:
+  https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-810c-9f4e-fe655cefaac1@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261011T100000
+SUMMARY:例大祭 朝祭・献馬式(行宮朝祭)
+LOCATION:琴平町
+DESCRIPTION:場所: 行宮 / 出典: 金刀比羅宮公式サイト（令
+ 和8年年間行事）\n主催: 金刀比羅宮\nことひらいふ イベ
+ ント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8154-af09-f1073be9ff40@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261011T140000
+SUMMARY:例大祭 講社祭
+LOCATION:琴平町
+DESCRIPTION:場所の記載なし / 出典: 金刀比羅宮公式サイト
+ （令和8年年間行事）\n主催: 金刀比羅宮\nことひらいふ 
+ イベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81bc-a144-ff0f33b54269@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261011T160000
+SUMMARY:例大祭 還幸祭
+LOCATION:琴平町
+DESCRIPTION:例大祭ページは午後4時、場所の記載なし。御
+ 神輿の御旅所発御は21時で、還幸祭が先。年間行事ペー
+ ジは11日欄で時刻なし / 出典: 金刀比羅宮公式サイト（
+ 令和8年年間行事）\n主催: 金刀比羅宮\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-81d2-ba5c-d3da63a5dc80@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261011T210000
+DTEND;TZID=Asia/Tokyo:20261011T230000
+SUMMARY:例大祭 御神輿 御旅所発御（お上がり：御旅所→
+ 御本宮）
+LOCATION:琴平町
+DESCRIPTION:御神輿が御旅所（神事場）から御本宮へ還る御
+ 還幸。10/12午前0時に御本宮還御、続いて報賽祭。\n参加
+ 費: 無料\n主催: 金刀比羅宮\nことひらいふ イベント: htt
+ ps://kotohilife.com/#events
+URL:https://www.konpira.or.jp/QR/02/a.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81d4-8731-c505ed2aa1a2@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:御幣下神事
+LOCATION:琴平町
+DESCRIPTION:場所: 祝舎 / 時刻: 1:00頃 / 例大祭ページは「10
+ 月12日、午前1時頃より祝舎にて」。年間行事ページの
+ 欄は12日(スポーツの日と併記、連動の記載なし) ／ 祝
+ 日（成人の日・スポーツの日）の欄に記載。年次確認
+ の対象として連動扱い（2026-11-05 Fable 判断） / 出典: 金
+ 刀比羅宮公式サイト（令和8年年間行事）\n主催: 金刀比
+ 羅宮\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-819f-bac9-ce9adc98d449@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:頭人三日詣
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81a7-9616-f85c4841151b@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:焼払神事
+LOCATION:琴平町
+DESCRIPTION:場所は公式に記載なし。祝舎の建物を取り壊し
+ 、用材や御幣を焼き払う。46日間の例大祭の終了 / 出典
+ : 金刀比羅宮公式サイト（令和8年年間行事）\n主催: 金
+ 刀比羅宮\nことひらいふ イベント: https://kotohilife.com/#eve
+ nts
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/article_A.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8106-b3ed-d37b7153d909@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:神嘗奉祝祭
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-8192-bc7d-c76c3273e161@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:明治祭
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81cd-aa5d-fb6b2c60733d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:紅葉祭
+LOCATION:琴平町
+DESCRIPTION:場所: 御本宮 / 紅葉の枝の太玉串の御行列は取
+ りやめ(カレンダーページ) / 出典: 金刀比羅宮公式サイ
+ ト（令和8年年間行事）\n主催: 金刀比羅宮\nことひらい
+ ふ イベント: https://kotohilife.com/#events
+URL:http://www.konpira.or.jp/?language=JAPANESE&stageID=hp_calendar
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81e4-ac28-f3c110191fb5@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:新嘗祭
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81a0-b95d-d7df913803ad@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:煤払式・御年木伐神事
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81c9-b5cc-cea3e46e8161@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261229
+SUMMARY:竈神祭・井神祭・門神祭
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:40f0b4e5-ff5b-81ed-8be6-fd0d3a88ae8d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:大祓奏上祭・大祓式・道饗祭・鎮火祭・除夜祭
+LOCATION:琴平町
+DESCRIPTION:出典: 金刀比羅宮公式サイト（令和8年年間行事
+ ）\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.
+ html
+CATEGORIES:金刀比羅宮
+END:VEVENT
+END:VCALENDAR

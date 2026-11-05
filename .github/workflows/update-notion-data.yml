@@ -48,6 +48,11 @@ jobs:
             python scripts/fetch_notion.py
           fi
 
+      - name: Build ICS feeds
+        # レイヤー別の購読用カレンダー（events-*.ics）を notion-data.js から生成する（docs/統合カレンダー_Phase3_設計.md）。
+        # 内容が同じなら出力も同じバイト列になり、コミットは出ない
+        run: python scripts/build_ics.py
+
       - name: Validate output
         # 3キーとも空でないことを確認してから公開する（空なら中止。fetch側にも失敗時の既存データ温存あり）
         run: |
@@ -109,6 +114,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add notion-data.js assets/thumbs
+          git add -- '*.ics'
           git add towncal-data.js assets/towncal 2>/dev/null || true
           git add docs/data/duplicate-candidates.json docs/data/duplicate-candidates.md 2>/dev/null || true
           if git diff --cached --quiet; then

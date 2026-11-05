@@ -1,0 +1,1678 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//kotohilife.com//events//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ことひらいふ 基本のイベント
+X-WR-TIMEZONE:Asia/Tokyo
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:3ce0b4e5-ff5b-803e-a576-cadd1eee98cb@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260907
+SUMMARY:ことウラさんぽ モニターツアー（第二次予備調査
+ ）
+LOCATION:琴平町
+DESCRIPTION:ことひらいふ イベント: https://kotohilife.com/#events
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3cd0b4e5-ff5b-804e-8747-d727722bca0c@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260908T200000
+DTEND;TZID=Asia/Tokyo:20260908T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-80fc-aa3c-eedd6d30f6f5@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260909T120000
+DTEND;TZID=Asia/Tokyo:20260909T130000
+SUMMARY:今日はどこ行く？ランチ会
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:今日はどこ行く？ランチ会 みんなでランチ! 琴
+ 平のローカルなお店へランチに行きます🍽\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-8171-a5b3-d984c126c2fa@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260909T190000
+SUMMARY:ビジョンボード作成ワークショップ
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:自分自身と向き合い、未来の目標や必要なもの
+ を見つめ直すためのビジョンボード作成ワークショッ
+ プ。コトリコワーキング＆ホステル琴平のスタッフの
+ ぞみが企画し、参加者のモチベーションや視野を広げ
+ ることを目的としている。\n参加費: 500円\n主催: コトリ
+ コワーキング＆ホステル琴平\nことひらいふ イベント: 
+ https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dc3DYGXzA93/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3b90b4e5-ff5b-81aa-becd-efb6408e5110@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260910T170000
+DTEND;TZID=Asia/Tokyo:20260910T200000
+SUMMARY:Craft Beer & Food Event - DONZO Brewing × イタリアンシェフ
+ ペアリング
+LOCATION:呑象ブリューイング
+DESCRIPTION:会場: DONZO Brewing DONZO Brewingと南イタリア出身シ
+ ェフによるクラフトビール＆フードペアリングイベン
+ ト第2弾。全8品のコース料理とクラフトビール3種また
+ は4種のマリアージュを楽しむ。要予約。\n参加費: 3300
+ 円\n主催: DONZO Brewing\nことひらいふ イベント: https://kotoh
+ ilife.com/#events
+URL:https://www.instagram.com/p/DbxXdG1s96-/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3c40b4e5-ff5b-8196-85aa-e7b6a784f00c@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260911T160000
+SUMMARY:熊本地震チャリティライブ 高松千春
+LOCATION:ヴィスポことひら
+DESCRIPTION:会場: ヴィスポことひら サブアリーナ 熊本地
+ 震復興支援を目的とした高松千春によるチャリティラ
+ イブが琴平町で開催される。入場は無料で、会場での
+ 投げ銭募金は全額熊本地震復興支援に寄付される。\n参
+ 加費: 無料\n主催: 株式会社ウエイ（ことひらいとこひ
+ ペートナーズ）\nことひらいふ イベント: https://kotohilife
+ .com/#events
+URL:https://www.instagram.com/p/DcKx2kkkfsd/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3a50b4e5-ff5b-818d-a225-d0048ef3f63f@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260911T180000
+SUMMARY:四国シェアサミット2026 in 琴平 前夜祭
+LOCATION:琴平町公会堂
+DESCRIPTION:会場: 琴平町公会堂（主会場）ほか町内各所 琴
+ 平町で2026年9月12日・13日に開催される、シェアリング
+ エコノミーのカンファレンス。「人口をシェアする」
+ をテーマに、全国から40名超の実践者が登壇し、二地域
+ 居住・関係人口について議論する。参加は無料。\n参加
+ 費: 無料\n主催: 四国シェアサミット実行委員会、一般
+ 社団法人シェアリングエコノミー協会\nことひらいふ 
+ イベント: https://kotohilife.com/#events
+URL:https://prtimes.jp/main/html/rd/p/000000011.000169805.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-8062-8850-c9dccebaa7b5@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260912T072000
+DTEND;TZID=Asia/Tokyo:20260912T090000
+SUMMARY:朝うどん巡礼ツアー
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅
+ 。 朝だけの特別な体験。 うどんタクシードライバーと
+ 巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」\n参
+ 加費: 2800円\nことひらいふ イベント: https://kotohilife.com/#
+ events
+URL:https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d50b4e5-ff5b-803a-9771-fd5687c65cd0@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260912T093000
+DTEND;TZID=Asia/Tokyo:20260912T203500
+SUMMARY:四国シェアサミット2026 in 琴平 DAY1
+LOCATION:琴平町公会堂
+DESCRIPTION:会場: 琴平町公会堂（主会場）ほか町内各所 琴
+ 平町で2026年9月12日・13日に開催される、シェアリング
+ エコノミーのカンファレンス。「人口をシェアする」
+ をテーマに、全国から40名超の実践者が登壇し、二地域
+ 居住・関係人口について議論する。参加は無料。\n参加
+ 費: 無料\n主催: 四国シェアサミット実行委員会、一般
+ 社団法人シェアリングエコノミー協会\nことひらいふ 
+ イベント: https://kotohilife.com/#events
+URL:https://prtimes.jp/main/html/rd/p/000000011.000169805.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3c80b4e5-ff5b-81a1-bbda-f8ed9895895d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260912T170000
+SUMMARY:第8回 こんぴら秋夜市
+LOCATION:一之橋公園
+DESCRIPTION:会場: 一之橋公園・金陵の郷 琴平町で開催され
+ る秋の夜市イベント。ゲームコーナーや大富くじ大会
+ など、子どもから大人まで楽しめる催しが予定されて
+ いる。カマタマーレ讃岐も参加予定。\n参加費: 無料\n
+ 主催: 琴平町商工会\nことひらいふ イベント: https://kotoh
+ ilife.com/#events
+URL:https://www.instagram.com/p/DcZ-1R0hu9w/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d50b4e5-ff5b-8034-8a48-cf5c59b47878@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260913T094500
+DTEND;TZID=Asia/Tokyo:20260913T123000
+SUMMARY:四国シェアサミット2026 in 琴平 DAY2
+LOCATION:琴平町公会堂
+DESCRIPTION:会場: 琴平町公会堂（主会場）ほか町内各所 琴
+ 平町で2026年9月12日・13日に開催される、シェアリング
+ エコノミーのカンファレンス。「人口をシェアする」
+ をテーマに、全国から40名超の実践者が登壇し、二地域
+ 居住・関係人口について議論する。参加は無料。\n参加
+ 費: 無料\n主催: 四国シェアサミット実行委員会、一般
+ 社団法人シェアリングエコノミー協会\nことひらいふ 
+ イベント: https://kotohilife.com/#events
+URL:https://prtimes.jp/main/html/rd/p/000000011.000169805.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:39e0b4e5-ff5b-8153-842a-c16dbdfaad50@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20260915
+DTEND;VALUE=DATE:20260923
+SUMMARY:第3回コトコトプロジェクト 琴平での8日間体験プ
+ ログラム
+LOCATION:琴平町
+DESCRIPTION:会場: 琴平町内（KOTO VEGAS、こんぴら温泉、中野
+ うどん学校琴平校） 琴平町での出会いや経験を通じて
+ 地域や住民の魅力に触れるプロジェクト。KOTO VEGAS、こ
+ んぴら温泉、中野うどん学校琴平校での体験プログラ
+ ムに参加者を募集。\n参加費: 無料\n主催: 流通科学大学
+ \nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DauldN1E2cQ/?img_index=1
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80f8-adbc-cf8eb1842479@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260915T133000
+DTEND;TZID=Asia/Tokyo:20260915T153000
+SUMMARY:あなたにもできる AI体験会「琴平町のお話を、AI
+ を使って4コマ漫画にしてみよう」
+LOCATION:カフェ 象山
+DESCRIPTION:琴平町の地域おこし協力隊 あっきーさんが、
+ 毎週行っている無料のAIセミナー。今週は生成AIの基礎
+ から気軽に学べます。\n参加費: 無料\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://forms.gle/Kv5QqvWUvNZUTxpo7
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3cd0b4e5-ff5b-80b5-bf44-c186c4228a75@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260915T200000
+DTEND;TZID=Asia/Tokyo:20260915T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-806e-a74a-f23aa502083b@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260916T120000
+DTEND;TZID=Asia/Tokyo:20260916T130000
+SUMMARY:今日はどこ行く？ランチ会
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:今日はどこ行く？ランチ会 みんなでランチ! 琴
+ 平のローカルなお店へランチに行きます🍽\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3db0b4e5-ff5b-8109-88eb-d5b8465a9fdf@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260916T183000
+DTEND;TZID=Asia/Tokyo:20260916T203000
+SUMMARY:Play and Doodle with Paul - ドローイングワークショップ
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:会場: コトリ琴平 フランスから来たイラストレ
+ ーターPaulによるドローイングワークショップ。基本的
+ なエクササイズやゲームを通じて、見る・描く・表現
+ する楽しさを学びます。初心者向け。\n参加費: 500円\n
+ 主催: Kotori Coworking & Hostel Kotohira\nことひらいふ イベン
+ ト: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DdIT5r_TBq3/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260917T183000
+DTEND;TZID=Asia/Tokyo:20260917T200000
+SUMMARY:第16回「ユルッと楽しく着付けレッスン」
+LOCATION:つるや旅館
+DESCRIPTION:琴平町のつるや旅館で開催される着付けレッス
+ ン。初心者向けで、着物の自装を学ぶ。ドリンク・お
+ やつ付き。\n参加費: 500円\n主催: つるや旅館、藤田屋\n
+ ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DcJUmy4gUJL/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3de0b4e5-ff5b-8126-9e0d-d21a9e36b81e@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260918T190000
+DTEND;TZID=Asia/Tokyo:20260919T200000
+SUMMARY:KOTOHIRA 785 FOOD LAUNCH オンライン説明会
+LOCATION:オンライン
+DESCRIPTION:会場: オンライン 琴平町での食の事業展開を検
+ 討している人向けのオンライン説明会。自分や会社の
+ 強みを観光地で選ばれる食体験へ展開することをテー
+ マとしている。\n参加費: 78500円\n主催: KOTOHIRA 785 FOOD LAUN
+ CH\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://peatix.com/event/5170585
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-805e-86aa-ca48f43e34d3@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260919T072000
+DTEND;TZID=Asia/Tokyo:20260919T090000
+SUMMARY:朝うどん巡礼ツアー
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅
+ 。 朝だけの特別な体験。 うどんタクシードライバーと
+ 巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」\n参
+ 加費: 2800円\nことひらいふ イベント: https://kotohilife.com/#
+ events
+URL:https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ce0b4e5-ff5b-817d-b9ac-c06e7d8b3d2e@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260919T100000
+DTEND;TZID=Asia/Tokyo:20260919T120000
+SUMMARY:オリジナル着物の半衿を作るワークショップ〜刺
+ 繍
+LOCATION:こんぴら路地裏街歩き着物レンタル藤田屋
+DESCRIPTION:琴平町のこんぴら路地裏着物レンタル藤田屋で
+ 、カンタ刺繍を学びながらオリジナルの着物の半衿を
+ 作るワークショップを開催。講師はちくちく針ねずみ
+ 。\n参加費: 2000円\n主催: こんぴら路地裏着物レンタル
+ 藤田屋\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DctUUTtmAPo/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3e00b4e5-ff5b-812f-88a8-de2c5d0bb881@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260921T153000
+SUMMARY:GHIBLI JAZZ TRIO LIVE
+LOCATION:麻心 琴平店
+DESCRIPTION:会場: 麻心～まごころ～（香川県仲多度郡琴平
+ 町621-9） 愛媛県松山市のジブリジャズ専門ピアニスト
+ 野上朝生率いるJAZZトリオが琴平に初来訪。スタジオジ
+ ブリの名曲をジャズアレンジで演奏するライブイベン
+ ト。\n参加費: 3000円\n主催: 麻心～まごころ～\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DdVM0X2pfXx/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-80e1-9208-f5f486857a0e@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260922T190000
+DTEND;TZID=Asia/Tokyo:20260922T210000
+SUMMARY:第14回 讃岐おでん試作会～夏おでん意見交換回～
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:香川県の第3のご当地グルメを目指す「讃岐お
+ でん」プロジェクトの試作会。夏向けおでんの研究と
+ 試作を行う作戦会議。\n参加費: 2000円\n主催: 讃岐おで
+ んプロジェクト\nことひらいふ イベント: https://kotohilife
+ .com/#events
+URL:https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzou
+ i
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3e00b4e5-ff5b-8199-98d4-f5a6dd6ec311@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260922T190000
+SUMMARY:THE GORILLA GUERRILLAS ライブ@麻心琴平
+LOCATION:麻心 琴平店
+DESCRIPTION:会場: 麻心琴平 リズムマスター4人によるアン
+ サンブルライブ。アフリカ大陸起源の楽器を奏でる太
+ 鼓叩き達が琴平に集結。入場無料（投げ銭制）。\n参加
+ 費: 無料\n主催: THE GORILLA GUERRILLAS / 音楽で琴平を盛り上
+ げるプロジェクト\nことひらいふ イベント: https://kotohil
+ ife.com/#events
+URL:https://www.instagram.com/p/DdYAbwLJyif/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3cd0b4e5-ff5b-80f1-897f-dd274584a853@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260922T200000
+DTEND;TZID=Asia/Tokyo:20260922T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-805d-91af-ee1c972c47b2@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260923T120000
+DTEND;TZID=Asia/Tokyo:20260923T130000
+SUMMARY:今日はどこ行く？ランチ会
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:今日はどこ行く？ランチ会 みんなでランチ! 琴
+ 平のローカルなお店へランチに行きます🍽\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3db0b4e5-ff5b-8130-8ff0-fffc01bc91a4@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260925T180000
+DTEND;TZID=Asia/Tokyo:20260925T190000
+SUMMARY:台湾文化 × 台湾華語 ミニ講座 第1回 台湾の言葉
+ を知ろう！
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:琴平町地域おこし協力隊が主催する台湾文化・
+ 台湾華語の3回連続講座。言葉・食文化・旅行用語を学
+ ぶ内容。会場はKOTORI。\n参加費: 無料\n主催: 琴平町地域
+ おこし協力隊ケリー\nことひらいふ イベント: https://koto
+ hilife.com/#events
+URL:https://www.instagram.com/p/DdIohwNhWd6/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-80b2-b056-e3f9f0bfc0b9@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260925T183000
+DTEND;TZID=Asia/Tokyo:20260925T210000
+SUMMARY:ご飯ついでに、国際交流～みんなでカレーを囲み
+ ながら世界の人たちと気軽に交流
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:参加者が持ち寄った具材やトッピングで「世界
+ にひとつだけのカレー」を作り、国際色豊かな雰囲気
+ の中で食事と交流を楽しむイベント。予約制で、お惣
+ 菜一品持参は500円、持参なしは800円。\n参加費: 500円\n
+ 主催: Kotori Coworking & Hostel Kotohira\nことひらいふ イベン
+ ト: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dc-xKBwExgT/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-809a-9bf6-d1d241d3411d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260926T072000
+DTEND;TZID=Asia/Tokyo:20260926T090000
+SUMMARY:朝うどん巡礼ツアー
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅
+ 。 朝だけの特別な体験。 うどんタクシードライバーと
+ 巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」\n参
+ 加費: 2800円\nことひらいふ イベント: https://kotohilife.com/#
+ events
+URL:https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3dd0b4e5-ff5b-813e-a469-ed8ce89d16de@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260926T100000
+DTEND;TZID=Asia/Tokyo:20260926T110000
+SUMMARY:金陵杜氏さんの勉強会〜お酒にまつわるおはなし
+LOCATION:金陵の郷
+DESCRIPTION:会場: 金陵の郷 文化館（琴平町琴平623番地） 
+ 琴平町の「金陵の郷」文化館で、江戸時代1789年創業の
+ 日本酒蔵「金陵」の杜氏による、お酒の歴史と文化に
+ 関する勉強会が開催される。参加は無料で、事前申し
+ 込みが必要。\n参加費: 無料\n主催: ことひらまちじゅう
+ 図書館\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DdTmrX9ziwd/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3e00b4e5-ff5b-81bb-a80b-ee1099ba242a@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260927T100000
+DTEND;TZID=Asia/Tokyo:20260927T120000
+SUMMARY:象郷地区の未来を考える意見交換会
+LOCATION:楽集館
+DESCRIPTION:会場: 楽集館（琴平町上櫛梨241） 象郷地区の未
+ 来について、学校施設の活用アイデアや暮らしの声を
+ 集める意見交換会。子ども連れや見学のみの参加も歓
+ 迎。\n参加費: 無料\n主催: 全国空き家アドバイザー協議
+ 会琴平支部\nことひらいふ イベント: https://kotohilife.com/#
+ events
+URL:https://www.instagram.com/p/DdbjuOQEgmx/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3cd0b4e5-ff5b-80a5-b41e-ce2094c5382b@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260929T200000
+DTEND;TZID=Asia/Tokyo:20260929T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d40b4e5-ff5b-802e-bb1e-fa37f3c55f29@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260930T120000
+DTEND;TZID=Asia/Tokyo:20260930T130000
+SUMMARY:今日はどこ行く？ランチ会
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:今日はどこ行く？ランチ会 みんなでランチ! 琴
+ 平のローカルなお店へランチに行きます🍽\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80d1-b777-f6cb7477662d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260930T133000
+DTEND;TZID=Asia/Tokyo:20260930T153000
+SUMMARY:あなたにもできる AI体験会「琴平町のお話を、AI
+ を使って4コマ漫画にしてみよう」
+LOCATION:カフェ 象山
+DESCRIPTION:琴平町の地域おこし協力隊 あっきーさんが、
+ 毎週行っている無料のAIセミナー。今週は生成AIの基礎
+ から気軽に学べます。\n参加費: 無料\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://forms.gle/Kv5QqvWUvNZUTxpo7
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80a3-a95b-e13814173208@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20260930T190000
+SUMMARY:春日神社例大祭  太鼓台清祓式・町内巡行
+LOCATION:籏岡神社
+DESCRIPTION:ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-393.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3950b4e5-ff5b-80a5-8568-c7496fa57528@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261001T190000
+SUMMARY:第152回 こんぴら氏子まつり 太鼓台清祓式・町内
+ 巡行
+LOCATION:琴平町
+DESCRIPTION:ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-393.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-802c-a41c-df3f76c3b178@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261001T190000
+SUMMARY:春日神社例大祭 かき揚げ
+LOCATION:琴平町役場
+DESCRIPTION:ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-393.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-803c-a3dd-f5a9787512f2@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261002T160000
+SUMMARY:春日神社例大祭 かきくらべ
+LOCATION:春日神社
+DESCRIPTION:ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-393.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ed0b4e5-ff5b-8131-be00-c7363033d918@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261026
+SUMMARY:象郷・五條地区の鎮守秋祭り（大歳神社、櫛梨神
+ 社、石井八幡宮、大井八幡宮、大麻神社）
+LOCATION:琴平町
+DESCRIPTION:会場: 大歳神社、櫛梨神社、石井八幡宮、大井
+ 八幡宮、大麻神社 10月は象郷・五條地区の秋祭りシー
+ ズン。各神社で獅子舞や神楽などが奉納される秋季大
+ 祭が開催される。大歳神社（10/17-18）、櫛梨神社（10/10-
+ 11）、石井八幡宮（10/25）、大井八幡宮（10/10-11）、大
+ 麻神社（10/3-4）での開催。\n参加費: 無料\n主催: 各地区
+ の鎮守神社\nことひらいふ イベント: https://kotohilife.com/#
+ events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-528.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-803b-8967-c066db6bc0d6@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261003T180000
+SUMMARY:第152回 こんぴら氏子まつり 奉納行事（かきくら
+ べ）
+LOCATION:琴平町
+DESCRIPTION:ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-393.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3bc0b4e5-ff5b-8157-895d-f6bf67704406@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261004T100000
+DTEND;TZID=Asia/Tokyo:20261004T120000
+SUMMARY:第58回 こんぴら石段マラソン
+LOCATION:金陵の郷
+DESCRIPTION:会場: 参道～金刀比羅宮御本宮 琴平町で開催さ
+ れる石段マラソン大会。参道から金刀比羅宮御本宮ま
+ でのコースを走る。定員785名、参加費3\,000円。\n参加費
+ : 3000円\n主催: 琴平町\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.town.kotohira.kagawa.jp/soshiki/8/11910.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3db0b4e5-ff5b-8023-8820-f1629cd02f83@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261004T103000
+DTEND;TZID=Asia/Tokyo:20261004T113000
+SUMMARY:台湾文化 × 台湾華語 ミニ講座 第2回 台湾の食文
+ 化を知ろう！
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:台湾出身の琴平町地域おこし協力隊 ケリーが
+ 主催する台湾文化・台湾華語の3回連続講座。言葉・食
+ 文化・旅行用語を学ぶ内容。会場はKOTORI。\n参加費: 無
+ 料\n主催: 琴平町地域おこし協力隊ケリー\nことひらい
+ ふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DdIohwNhWd6/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-8009-8dd4-f1500bc5e4e6@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261006T133000
+DTEND;TZID=Asia/Tokyo:20261006T153000
+SUMMARY:あなたにもできる AI体験会「琴平町のお話を、AI
+ を使って4コマ漫画にしてみよう」
+LOCATION:カフェ 象山
+DESCRIPTION:琴平町の地域おこし協力隊 あっきーさんが、
+ 毎週行っている無料のAIセミナー。今週は生成AIの基礎
+ から気軽に学べます。\n参加費: 無料\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://forms.gle/Kv5QqvWUvNZUTxpo7
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-809c-8fad-e2bdba9724b8@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261006T200000
+DTEND;TZID=Asia/Tokyo:20261006T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-8167-899c-f0d3820d9669@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261007T183000
+DTEND;TZID=Asia/Tokyo:20261007T200000
+SUMMARY:NAGONO LOCAL MEETS「琴平 -KOTOHIRA-」
+LOCATION:名古屋市
+DESCRIPTION:会場: なごのキャンパス（名古屋駅・桜通口か
+ ら徒歩8分） 琴平との二地域居住・関係人口をテーマに
+ したトークイベント。琴平バスでつながる全国5都市で
+ のツアー第1回。琴平の最近の変化や挑戦、滞在型ワー
+ クと表現活動の取り組みについて紹介される。\n参加費
+ : 無料\n主催: 琴平町 / なごのキャンパス\nことひらいふ
+  イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dd20zwGTzfn/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3eb0b4e5-ff5b-810c-be8e-f5dd83b3f133@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261009T160000
+DTEND;TZID=Asia/Tokyo:20261012T000000
+SUMMARY:令和8年 金刀比羅宮例大祭
+LOCATION:金刀比羅宮（御本宮）
+DESCRIPTION:会場: 金刀比羅宮 令和8年10月9日(金曜日)から11
+ 日(日曜日)まで、金刀比羅宮例大祭が開催されます。例
+ 大祭期間中は、奉納行事や奉納演奏、こんぴら舩々お
+ どりなど、さまざまな行事が行われます。\n参加費: 無
+ 料\n主催: 金刀比羅宮\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.town.kotohira.kagawa.jp/soshiki/8/12045.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-8171-a9bb-fe6b3992af7d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261009T160000
+SUMMARY:例大祭 宵宮祭（御本宮）
+LOCATION:金刀比羅宮（御本宮）
+DESCRIPTION:金刀比羅宮例大祭の初日。お祭の前日を「宵宮
+ 」といい、この日に斎行する祭典。八少女舞を奏進。
+ 会場：御本宮\n参加費: 無料\n主催: 金刀比羅宮\nことひ
+ らいふ イベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/QR/02/a.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3db0b4e5-ff5b-8060-9e12-c8bb3853479d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261009T180000
+DTEND;TZID=Asia/Tokyo:20261009T190000
+SUMMARY:台湾文化 × 台湾華語 ミニ講座 第3回 旅行で使え
+ る台湾華語
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:台湾出身の琴平町地域おこし協力隊 ケリーが
+ 主催する台湾文化・台湾華語の3回連続講座。言葉・食
+ 文化・旅行用語を学ぶ内容。会場はKOTORI。\n参加費: 無
+ 料\n主催: 琴平町地域おこし協力隊ケリー\nことひらい
+ ふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DdIohwNhWd6/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-8198-9bba-f26abb6d88f5@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:10/10 こんぴら十帖
+LOCATION:琴平町
+DESCRIPTION:会場: 琴平町・こんぴら十帖加盟店舗（複数店
+ ） こんぴら十帖に参加する複数店舗が、毎月十日の参
+ 詣者向けに限定メニューを提供する。10月のメニューは
+ 各店舗で異なり、数量限定・予約制の店舗もある。\n主
+ 催: こんぴら十帖\nことひらいふ イベント: https://kotohili
+ fe.com/#events
+URL:https://www.instagram.com/p/Dd2qWiEMw1Q/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-8040-ae92-f737d2aa1efe@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:大井八幡宮例大祭 1日目
+LOCATION:大井八幡宮
+DESCRIPTION:参加費: 無料\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-528.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-80b5-8b24-fe89257fcc0c@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:櫛梨神社 秋祭り（例大祭）1日目
+LOCATION:櫛梨神社
+DESCRIPTION:参加費: 無料\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-528.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-813f-b05d-d037123a2da1@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261010T100000
+SUMMARY:例大祭 例祭（御本宮）
+LOCATION:金刀比羅宮（御本宮）
+DESCRIPTION:2月の祈年祭・11月の新嘗祭と共に金刀比羅宮の
+ 三大祭の一つで、その中でも最も重要な祭典。大和舞
+ を奏進。会場：御本宮\n参加費: 無料\n主催: 金刀比羅宮
+ \nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/QR/02/a.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-810f-9dee-e9da968a825a@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261010T210000
+DTEND;TZID=Asia/Tokyo:20261010T230000
+SUMMARY:例大祭 御神輿 御本宮発御（お下がり：御本宮→
+ 御旅所）
+LOCATION:琴平町
+DESCRIPTION:年に一度、金刀比羅大神さまが門前町に下りら
+ れる「お下がり」。約600名が御本宮から御旅所（神事
+ 場）まで約2kmを2時間かけて進む。行列の先頭は乗馬の
+ 男子児童2人と駕籠の女子児童2人の「お頭人さん」。10/
+ 10 19時〜11日2時は一部道路が歩行者専用。経路地図：htt
+ ps://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootmap.pdf\
+ n参加費: 無料\n主催: 金刀比羅宮\nことひらいふ イベン
+ ト: https://kotohilife.com/#events
+URL:https://www.konpira.or.jp/ARCHIVES/ritual/00_annual-festival/1010rootma
+ p.pdf
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-8046-b3a4-ce42a7388667@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:櫛梨神社 秋祭り（例大祭）2日目
+LOCATION:櫛梨神社
+DESCRIPTION:参加費: 無料\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-528.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-80af-a87e-fb23ed265b91@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:大井八幡宮例大祭 2日目
+LOCATION:大井八幡宮
+DESCRIPTION:参加費: 無料\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-528.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-81d2-ba5c-d3da63a5dc80@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261011T210000
+DTEND;TZID=Asia/Tokyo:20261011T230000
+SUMMARY:例大祭 御神輿 御旅所発御（お上がり：御旅所→
+ 御本宮）
+LOCATION:琴平町
+DESCRIPTION:御神輿が御旅所（神事場）から御本宮へ還る御
+ 還幸。10/12午前0時に御本宮還御、続いて報賽祭。\n参加
+ 費: 無料\n主催: 金刀比羅宮\nことひらいふ イベント: htt
+ ps://kotohilife.com/#events
+URL:https://www.konpira.or.jp/QR/02/a.html
+CATEGORIES:基本のイベント,金刀比羅宮
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80f1-a57c-e7b5fd22b0dd@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261013T200000
+DTEND;TZID=Asia/Tokyo:20261013T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-80fe-a8c9-e367422ff563@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:大歳神社秋祭り（秋季大祭）1日目
+LOCATION:大歳神社
+DESCRIPTION:毎年10月の第三週に上櫛梨（象郷地区）の大歳
+ 神社で開催される秋祭り。獅子舞や琴平の里神楽が奉
+ 納される。地区内外・旅行者の見学も自由。\n参加費: 
+ 無料\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-280.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-8012-8e2d-f7593297f163@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+SUMMARY:大歳神社秋祭り（秋季大祭）2日目
+LOCATION:大歳神社
+DESCRIPTION:毎年10月の第三週に上櫛梨（象郷地区）の大歳
+ 神社で開催される秋祭り。獅子舞や琴平の里神楽が奉
+ 納される。地区内外・旅行者の見学も自由。\n参加費: 
+ 無料\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-528.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d50b4e5-ff5b-8152-9bb6-f6ff0c82f387@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261018T100000
+DTEND;TZID=Asia/Tokyo:20261018T120000
+SUMMARY:みんなで楽しむインクルーシブスポーツ ボッチャ
+ 教室＆交流大会
+LOCATION:琴平町総合センター
+DESCRIPTION:会場: 総合センター 2階大ホール 東京パラリン
+ ピックで注目を集めた「ボッチャ」の教室と交流大会
+ を開催します。香川県リハビリテーションセンターか
+ ら講師を招き、障がいのある方もない方も、年齢や性
+ 別を問わず参加できます。\n参加費: 無料\n主催: 琴平町
+ 福祉課・生涯学習課\nことひらいふ イベント: https://koto
+ hilife.com/#events
+URL:https://www.town.kotohira.kagawa.jp/soshiki/25/11981.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3fb0b4e5-ff5b-8159-b6b9-d8c4212af449@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261020T120000
+DTEND;TZID=Asia/Tokyo:20261020T160000
+SUMMARY:琴平観光物産展 in 台湾瑞芳（1日目）
+LOCATION:台湾 新北市瑞芳区
+DESCRIPTION:会場: 新北市瑞芳區區民廣場（台湾新北市瑞芳
+ 区明燈路三段） 琴平町とこんぴら観光まちづくり協会
+ が、台湾新北市瑞芳区にて琴平町の観光・特産品を紹
+ 介する物産展を開催。商談会、試食販売、文化交流を
+ 目的とする。\n参加費: 無料\n主催: 琴平町商工会、琴平
+ 町、こんぴら観光まちづくり協会\nことひらいふ イベ
+ ント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/news/entry-631.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-8030-8a16-f006c24aa1d3@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261020T133000
+DTEND;TZID=Asia/Tokyo:20261020T153000
+SUMMARY:あなたにもできる AI体験会「琴平町のお話を、AI
+ を使って4コマ漫画にしてみよう」
+LOCATION:カフェ 象山
+DESCRIPTION:琴平町の地域おこし協力隊 あっきーさんが、
+ 毎週行っている無料のAIセミナー。今週は生成AIの基礎
+ から気軽に学べます。\n参加費: 無料\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://forms.gle/Kv5QqvWUvNZUTxpo7
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-8097-a313-f7c75e664fda@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261020T200000
+DTEND;TZID=Asia/Tokyo:20261020T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3fb0b4e5-ff5b-80ba-abab-d9d30b61066f@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261021T100000
+DTEND;TZID=Asia/Tokyo:20261021T150000
+SUMMARY:琴平観光物産展 in 台湾瑞芳（2日目）
+LOCATION:台湾 新北市瑞芳区
+DESCRIPTION:会場: 新北市瑞芳區區民廣場（台湾新北市瑞芳
+ 区明燈路三段） 琴平町とこんぴら観光まちづくり協会
+ が、台湾新北市瑞芳区にて琴平町の観光・特産品を紹
+ 介する物産展を開催。商談会、試食販売、文化交流を
+ 目的とする。\n参加費: 無料\n主催: 琴平町商工会、琴平
+ 町、こんぴら観光まちづくり協会\nことひらいふ イベ
+ ント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/news/entry-631.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-816d-882d-f84b213f7419@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261022T183000
+DTEND;TZID=Asia/Tokyo:20261022T200000
+SUMMARY:第17回「ユルッと楽しく着付けレッスン」
+LOCATION:つるや旅館
+DESCRIPTION:会場: つるや旅館 琴平町のつるや旅館で開催さ
+ れる着付けレッスン。初心者向けで、着物の自装を学
+ べます。ドリンクとおやつ付き。\n参加費: 1000円\n主催:
+  つるや旅館、藤田屋\nことひらいふ イベント: https://kot
+ ohilife.com/#events
+URL:https://www.instagram.com/p/DeJzOLEADgo/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80f7-bc2a-fe81311889bc@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261022T190000
+DTEND;TZID=Asia/Tokyo:20261022T210000
+SUMMARY:第15回 讃岐おでん試作会～夏おでん意見交換回～
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:香川県の第3のご当地グルメを目指す「讃岐お
+ でん」プロジェクトの試作会。夏向けおでんの研究と
+ 試作を行う作戦会議。\n参加費: 2000円\n主催: 讃岐おで
+ んプロジェクト\nことひらいふ イベント: https://kotohilife
+ .com/#events
+URL:https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzou
+ i
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d70b4e5-ff5b-80e1-861d-f79bddb0619b@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261024T150000
+DTEND;TZID=Asia/Tokyo:20261024T200000
+SUMMARY:第4回 台湾フェス・台湾夜市 in 琴平（第四届琴平
+ 台湾節・台湾夜市）
+LOCATION:金陵の郷
+DESCRIPTION:琴平町の金陵の郷で開催される台湾グルメ・文
+ 化イベント。台湾屋台グルメの出店、ステージイベン
+ ト（電音三太子・二胡演奏・トークショー）、町内コ
+ ラボメニュースタンプラリー、限定ガチャガチャなど
+ が予定されている。\n参加費: 無料\n主催: 琴平町\nこと
+ ひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DdDKu6ahjmA/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-8166-a406-e8fc93903987@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:石井八幡宮（象郷・苗田）秋祭り
+LOCATION:石井八幡宮
+DESCRIPTION:会場: 石井八幡宮（象郷・苗田） 10月の最終土
+ 日の週末に、苗田（象郷地区）の石井八幡宮で獅子舞
+ 、神楽などが奉納される秋祭が開催される。本年は第
+ 四週の週末が対象。\nことひらいふ イベント: https://koto
+ hilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-620.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f10b4e5-ff5b-8110-8722-d15e9fa0d5ae@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261025T140000
+DTEND;TZID=Asia/Tokyo:20261025T160000
+SUMMARY:ハロウィンパーティー
+LOCATION:琴平町公会堂
+DESCRIPTION:会場: 琴平町公会堂 大ホール 子育て応援ボラ
+ ンティアグループ415のわが主催するハロウィンパーテ
+ ィー。季節のおはなし会、トリックオアトリートスタ
+ ンプラリー、フリータイム、ママカフェなどが行われ
+ る。仮装有無を問わず参加可能。\n参加費: 無料\n主催: 
+ 子育て応援ボランティアグループ415のわ\nことひらいふ
+  イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DeExJGbREmz/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-81e8-a76c-f9841fc0a08b@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261026T170000
+DTEND;TZID=Asia/Tokyo:20261026T220000
+SUMMARY:あゆな酢スタンド限定フードイベント
+LOCATION:呑象ブリューイング
+DESCRIPTION:会場: 呑象ブリューイング 呑象ブリューイング
+ において、お酢を使ったフードメニューとクラフトビ
+ ールを楽しむ1日限定イベント。秋の晩酌プレートやお
+ 酢のビアカクテルなど特別メニューが登場。予約制。\n
+ 参加費: 2000円\n主催: 呑象ブリューイング / あゆな酢ス
+ タンド\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DeRPJtctLuk/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80d1-954f-f65d907696d6@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261027T200000
+DTEND;TZID=Asia/Tokyo:20261027T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-80e3-af30-f76bfc7db50d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261030T183000
+DTEND;TZID=Asia/Tokyo:20261030T210000
+SUMMARY:ご飯ついでに、国際交流～みんなでカレーを囲み
+ ながら世界の人たちと気軽に交流
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:参加者が持ち寄った具材やトッピングで「世界
+ にひとつだけのカレー」を作り、国際色豊かな雰囲気
+ の中で食事と交流を楽しむイベント。予約制で、お惣
+ 菜一品持参は500円、持参なしは800円。\n参加費: 500円\n
+ 主催: Kotori Coworking & Hostel Kotohira\nことひらいふ イベン
+ ト: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DeQj2igEdrF/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4040b4e5-ff5b-8150-806d-cf14daab6de3@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261030T183000
+SUMMARY:果桜軒 秋のワイン会
+LOCATION:ことひら 果桜軒
+DESCRIPTION:会場: 黒桜軒（KAOHKEN） 黒桜軒で開催される秋
+ のワイン会。美味しい料理とワイン4種類、ソフトドリ
+ ンク飲み放題でお楽しみいただけます。\n参加費: 8800円
+ \n主催: 黒桜軒\nことひらいふ イベント: https://kotohilife.c
+ om/#events
+URL:https://www.instagram.com/p/De068n9MT3j/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3e20b4e5-ff5b-8138-901d-d098e2cb7a38@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261031T100000
+DTEND;TZID=Asia/Tokyo:20261031T150000
+SUMMARY:防災・住教育フェス in 一之橋公園
+LOCATION:一之橋公園
+DESCRIPTION:琴平町の一之橋公園で防災と住教育を学べるフ
+ ァミリア向けイベント。輪投げやスーパーボールすく
+ い、パトカー展示、空き家相談会、ハンディライト作
+ り体験などが行われる。入場無料。\n参加費: 無料\n主
+ 催: 全国空き家アドバイザー協議会琴平支部・まんのう
+ 支部\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DdivoGryVr0/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f40b4e5-ff5b-811a-9ca4-cbffe969d3ff@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261103T090000
+DTEND;TZID=Asia/Tokyo:20261103T170000
+SUMMARY:ことひら由加山交流行事参加者募集
+LOCATION:琴平町役場
+DESCRIPTION:会場: 由加山（由加神社本宮・蓮台寺） 琴平町
+ にゆかりのある町民・在勤・在学者を対象とした「こ
+ とひら由加山火渡り大祭交流行事」の参加者募集。こ
+ んぴらさんと由加山の両参り文化や歴史的な繋がりを
+ 再発見する交流の機会。先着30名、参加費3\,000円。\n参
+ 加費: 3000円\n主催: こんぴら観光まちづくり協会\nこと
+ ひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-622.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-803c-adb4-c1c7c8557d15@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261103T200000
+DTEND;TZID=Asia/Tokyo:20261103T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-8081-874b-ee00da8c2eb6@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261104T133000
+DTEND;TZID=Asia/Tokyo:20261104T153000
+SUMMARY:あなたにもできる AI体験会「琴平町のお話を、AI
+ を使って4コマ漫画にしてみよう」
+LOCATION:カフェ 象山
+DESCRIPTION:琴平町の地域おこし協力隊 あっきーさんが、
+ 毎週行っている無料のAIセミナー。今週は生成AIの基礎
+ から気軽に学べます。\n参加費: 無料\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://forms.gle/Kv5QqvWUvNZUTxpo7
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-8151-be78-edc00a6e96ed@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261107T103000
+DTEND;TZID=Asia/Tokyo:20261107T113000
+SUMMARY:台湾文化×台湾華語 ミニ講座「台湾漫遊鉄道のふ
+ たりから見る台湾の食文化」
+LOCATION:琴平中学校
+DESCRIPTION:会場: 琴平中学校 図書館 国際ブッカー賞受賞
+ 作『台湾漫遊鉄道のふたり』に登場する料理を入り口
+ に、台湾の食文化や暮らしを紹介し、食べ物にまつわ
+ る台湾華語を学ぶミニ講座。琴平中学校図書館で開催
+ 。\n参加費: 無料\n主催: 琴平町地域おこし協力隊 ケリ
+ ー\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DfOBXHEhxEb/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3a50b4e5-ff5b-8110-b6ec-dc2d98a5715d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261107T140000
+DTEND;TZID=Asia/Tokyo:20261107T160000
+SUMMARY:イタリア古楽×雅楽共演 琴平・金丸座特別公演 1
+ 日目
+LOCATION:旧金毘羅大芝居(金丸座)
+DESCRIPTION:会場: 琴平町 旧金毘羅大芝居・金丸座 公益財
+ 団法人中山芳彦香川イタリア交流財団が11月7、8日に琴
+ 平町の金丸座でイタリア古楽と雅楽の共演公演を開催
+ 。小学生～高校生200人を無料招待する。\n参加費: 10000
+ 円\n主催: 公益財団法人中山芳彦香川イタリア交流財団\
+ nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f20b4e5-ff5b-8100-abab-eb9c273dffbc@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261108T100000
+DTEND;TZID=Asia/Tokyo:20261108T113000
+SUMMARY:三豊ドリームカーフェスタ2026（ことひら会場）
+LOCATION:琴平小学校
+DESCRIPTION:会場: 琴平小学校 全国から集まったスーパーカ
+ ーが琴平に終結するイベント。朝9時に高瀬自動車学校
+ をスタートして中西讃地域を周遊した後、琴平小学校
+ に到着。琴平到着時間は未定。\n主催: こんぴら観光ま
+ ちづくり協会\nことひらいふ イベント: https://kotohilife.co
+ m/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-619.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-8073-bb9b-e4e7fe918754@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261108T140000
+DTEND;TZID=Asia/Tokyo:20261108T160000
+SUMMARY:イタリア古楽×雅楽共演 琴平・金丸座特別公演 2
+ 日目
+LOCATION:旧金毘羅大芝居(金丸座)
+DESCRIPTION:会場: 琴平町 旧金毘羅大芝居・金丸座 公益財
+ 団法人中山芳彦香川イタリア交流財団が11月7、8日に琴
+ 平町の金丸座でイタリア古楽と雅楽の共演公演を開催
+ 。小学生～高校生200人を無料招待する。\n参加費: 10000
+ 円\n主催: 公益財団法人中山芳彦香川イタリア交流財団\
+ nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-8099-901d-c987214c2815@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261110T200000
+DTEND;TZID=Asia/Tokyo:20261110T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4070b4e5-ff5b-81c6-983c-dce39c5878ae@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:1070形1073×1074号引退記念イベント 定期列車最終運
+ 用 + 記念きっぷ発売 + 公募写真展開催
+LOCATION:琴平町
+DESCRIPTION:会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴
+ 平線で運行していた1070形1073×1074号の引退を記念し、11
+ 月14日の最終運用から11月23日までの期間、撮影会、乗
+ 車ツアー、記念イベントが開催される。\n主催: 琴電運
+ 輸サービス部・地域開発部\nことひらいふ イベント: htt
+ ps://kotohilife.com/#events
+URL:https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/i
+ ndex.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40e0b4e5-ff5b-80e8-8f20-fb485c54f48c@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261117T133000
+DTEND;TZID=Asia/Tokyo:20261117T153000
+SUMMARY:あなたにもできる AI体験会「琴平町のお話を、AI
+ を使って4コマ漫画にしてみよう」
+LOCATION:カフェ 象山
+DESCRIPTION:琴平町の地域おこし協力隊 あっきーさんが、
+ 毎週行っている無料のAIセミナー。今週は生成AIの基礎
+ から気軽に学べます。\n参加費: 無料\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://forms.gle/Kv5QqvWUvNZUTxpo7
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-806e-940b-e1af3307618f@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261117T200000
+DTEND;TZID=Asia/Tokyo:20261117T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-8105-97b0-ed52d75e5bed@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261121T093000
+DTEND;TZID=Asia/Tokyo:20261121T153000
+SUMMARY:第23回 祝宴 金陵初しぼり 1日目
+LOCATION:金陵の郷
+DESCRIPTION:会場: 金陵の郷（こんぴらさんの参道口）、香
+ 川県仲多度郡琴平町623 琴平町の金陵の郷で、初しぼり
+ の販売を記念した祝宴を開催。初しぼり鏡開き・振舞
+ い酒（無料）、グルメコーナー、備前焼展示販売など
+ が行われる。\n参加費: 無料\n主催: 西野金陵株式会社\n
+ ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.nishino-kinryo.co.jp/news/year2026/news0930.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4070b4e5-ff5b-8033-bc82-ef0003dc545c@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:1070形1073×1074号引退記念イベント 連結相手組み換
+ え 不協和音満喫ツアー
+LOCATION:琴平町
+DESCRIPTION:会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴
+ 平線で運行していた1070形1073×1074号の引退を記念し、11
+ 月14日の最終運用から11月23日までの期間、撮影会、乗
+ 車ツアー、記念イベントが開催される。\n参加費: 30000
+ 円\n主催: 琴電運輸サービス部・地域開発部\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/i
+ ndex.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4070b4e5-ff5b-80d4-8b16-e4dd41a6325f@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:1070形1073×1074号引退記念イベント 1070形4両編成乗
+ 車 & 全車両録音ツアー
+LOCATION:琴平町
+DESCRIPTION:会場: 琴電琴平駅、仏生山駅ほか琴平線全線 琴
+ 平線で運行していた1070形1073×1074号の引退を記念し、11
+ 月14日の最終運用から11月23日までの期間、撮影会、乗
+ 車ツアー、記念イベントが開催される。\n参加費: 20000
+ 円\n主催: 琴電運輸サービス部・地域開発部\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/i
+ ndex.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-800c-b922-ecc4c69a55bf@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261122T093000
+DTEND;TZID=Asia/Tokyo:20261122T153000
+SUMMARY:第23回 祝宴 金陵初しぼり 2日目
+LOCATION:金陵の郷
+DESCRIPTION:会場: 金陵の郷（こんぴらさんの参道口）、香
+ 川県仲多度郡琴平町623 琴平町の金陵の郷で、初しぼり
+ の販売を記念した祝宴を開催。初しぼり鏡開き・振舞
+ い酒（無料）、グルメコーナー、備前焼展示販売など
+ が行われる。\n参加費: 無料\n主催: 西野金陵株式会社\n
+ ことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.nishino-kinryo.co.jp/news/year2026/news0930.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80d6-8f56-db486fb4d258@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261124T200000
+DTEND;TZID=Asia/Tokyo:20261124T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ee0b4e5-ff5b-814c-86dd-fb13438e8d8b@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261128T170000
+DTEND;TZID=Asia/Tokyo:20261128T183000
+SUMMARY:【ことひらナイト】第３回こんぴらくご
+LOCATION:てんてこ舞
+DESCRIPTION:会場: てんてこ舞（表参道） 琴平町のナイトコ
+ ンテンツ企画として、高松らくご愛好会メンバーによ
+ る落語やマジックを楽しむイベント。2026年11月28日（土
+ ）17:00～18:30、てんてこ舞（表参道）で開催。前売チケ
+ ットは1\,100円（税込、ワンドリンク付き）。\n参加費: 1
+ 100円\n主催: こんぴら観光まちづくり協会\nことひらい
+ ふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-549.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3f00b4e5-ff5b-8179-9d03-f6094a4c4e3a@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:第３回こんぴら観光まちづくり検定試験
+LOCATION:琴平町
+DESCRIPTION:第３回こんぴら観光まちづくり検定試験の申し
+ 込みが10月5日から開始されました。試験は11月29日（日
+ ）に実施され、初級・中級の2つの受験級があります。\
+ n主催: こんぴら観光まちづくり協会\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/news/entry-617.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4040b4e5-ff5b-81dd-966f-f167c6fef95d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261129T100000
+DTEND;TZID=Asia/Tokyo:20261129T130000
+SUMMARY:ことウラさんぽ モニター参加者募集
+LOCATION:琴平町
+DESCRIPTION:会場: 香川県琴平町（詳細は当選者へご案内） 
+ 香川大学地域マネジメント研究科による琴平町の実証
+ 実験プロジェクト。参加者は事前に琴平文具店でカス
+ タマイズしたノートを受け取り、琴平のB面（知られざ
+ る魅力）を街歩きしながらノートに記録し、最後に感
+ 想をシェアする体験イベント。参加費無料、3000円相当
+ の特製ノートをプレゼント。\n参加費: 無料\n主催: 香川
+ 大学大学院 地域マネジメント研究科\nことひらいふ イ
+ ベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DerDE-6kUdE/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d00b4e5-ff5b-815b-8074-d95b25c98d21@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261129T102000
+DTEND;TZID=Asia/Tokyo:20261129T150000
+SUMMARY:第3回こんぴら観光まちづくり検定
+LOCATION:琴平町商工会
+DESCRIPTION:会場: 琴平町商工会館 一般社団法人こんぴら観
+ 光まちづくり協会が主催する第3回検定試験。琴平町の
+ 歴史・文化・観光資源に関する初級・中級の2つの受験
+ 級を実施する。合格者は協会認定ガイド登録への道が
+ 開ける。\n参加費: 3300円\n主催: 一般社団法人こんぴら
+ 観光まちづくり協会\nことひらいふ イベント: https://koto
+ hilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-540.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80d7-8b2f-cb8e463b9dba@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261201T200000
+DTEND;TZID=Asia/Tokyo:20261201T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4040b4e5-ff5b-8155-b7e8-d9deb9bc94aa@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:七五三スペシャルイベント撮影会 in こんぴら
+LOCATION:金陵の郷
+DESCRIPTION:会場: 金陵の郷周辺（琴平） 藤田屋・MIYUKI・蔵
+ 六写真館がコラボした、1日限定の七五三撮影会。琴平
+ の金陵の郷周辺で、着物レンタル・着付け・ヘアメイ
+ ク・撮影がセットになったプランを提供する。\n参加費
+ : 42000円\n主催: 藤田屋・MIYUKI・蔵六写真館\nことひらい
+ ふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/DewCVaYoE_g/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4040b4e5-ff5b-8127-baaf-cec8df2164fc@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261205T090000
+DTEND;TZID=Asia/Tokyo:20261205T150000
+SUMMARY:第52回ことひら社協チャリティー作品即売展（Bazar
+ ）1日目
+LOCATION:琴平町役場
+DESCRIPTION:会場: 琴平町役場前駐車場、琴平町総合センタ
+ ー 琴平町の冬の一大イベント。チャリティー作品の即
+ 売会が12月5日（土）と6日（日）に琴平町役場前駐車場
+ と琴平町総合センターで開催される。\n主催: ことひら
+ 社協\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-519.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ef0b4e5-ff5b-8189-aaa3-fc69d9b48512@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261205T130000
+DTEND;TZID=Asia/Tokyo:20261205T203000
+SUMMARY:コミュニティリーダーズサミット in 琴平 2026（第1
+ 回 CLS琴平）
+LOCATION:HAKOBUNEビル
+DESCRIPTION:会場: 琴平 地域課題の解決に取り組むコミュニ
+ ティリーダーが集まるサミット。点から線へ、人から
+ 人へつながる交流の場として、琴平で開催される。\n参
+ 加費: 3000円\nことひらいふ イベント: https://kotohilife.com/#
+ events
+URL:https://clskotohira01.peatix.com/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:4040b4e5-ff5b-80c0-96f6-e86fe97f5fc0@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261206T090000
+DTEND;TZID=Asia/Tokyo:20261206T160000
+SUMMARY:第52回ことひら社協チャリティー作品即売展（Bazar
+ ）2日目
+LOCATION:琴平町役場
+DESCRIPTION:会場: 琴平町役場前駐車場、琴平町総合センタ
+ ー 琴平町の冬の一大イベント。チャリティー作品の即
+ 売会が12月5日（土）と6日（日）に琴平町役場前駐車場
+ と琴平町総合センターで開催される。\n主催: ことひら
+ 社協\nことひらいふ イベント: https://kotohilife.com/#events
+URL:https://www.kotohirakankou.jp/event/normal-event/entry-519.html
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3d10b4e5-ff5b-8159-9816-c01cbdd2c1cf@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261206T120000
+DTEND;TZID=Asia/Tokyo:20261206T140000
+SUMMARY:着物でランチ会～つるや旅館～
+LOCATION:つるや旅館
+DESCRIPTION:こんぴらさんの門前町にある江戸末期創業の老
+ 舗旅館つるや旅館で、着物を着用してのランチ会を開
+ 催。女将による和食の食べ方講座付き。\n参加費: 5500円
+ \n主催: こんぴら路地裏着物レンタル藤田屋\nことひら
+ いふ イベント: https://kotohilife.com/#events
+URL:https://www.instagram.com/p/Dc1NErYmDwA/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-8025-ad52-e893b25290c4@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261208T200000
+DTEND;TZID=Asia/Tokyo:20261208T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-8134-83a1-fef280fd68dd@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261212T130000
+DTEND;TZID=Asia/Tokyo:20261212T200000
+SUMMARY:第4回カブフェス演劇フェスティバルin琴平 1日目
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:会場: 琴平町・表参道エリア周辺 琴平町の表参
+ 道エリアで12月12日・13日に開催される演劇フェスティ
+ バル。全国から劇団・アーティストが集まり、短編演
+ 劇の上演と町歩きを通じて物語に出会う企画。妖怪人
+ 狼、即興演劇バトル、ゴーストビルディングなどが開
+ 催される。\n参加費: 2500円\n主催: 株式劇団マエカブ、
+ カブフェス実行委員会\nことひらいふ イベント: https://k
+ otohilife.com/#events
+URL:https://www.instagram.com/p/DfDMCVLSzRb/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-803b-b4ce-e74379649651@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261213T110000
+DTEND;TZID=Asia/Tokyo:20261213T170000
+SUMMARY:第4回カブフェス演劇フェスティバルin琴平 2日目
+LOCATION:コトリ コワーキング＆ホステル 琴平
+DESCRIPTION:会場: 琴平町・表参道エリア周辺 琴平町の表参
+ 道エリアで12月12日・13日に開催される演劇フェスティ
+ バル。全国から劇団・アーティストが集まり、短編演
+ 劇の上演と町歩きを通じて物語に出会う企画。妖怪人
+ 狼、即興演劇バトル、ゴーストビルディングなどが開
+ 催される。\n参加費: 2500円\n主催: 株式劇団マエカブ、
+ カブフェス実行委員会\nことひらいふ イベント: https://k
+ otohilife.com/#events
+URL:https://www.instagram.com/p/DfDMCVLSzRb/
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-80ad-be0f-d43d5ca1bf70@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261215T200000
+DTEND;TZID=Asia/Tokyo:20261215T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:40d0b4e5-ff5b-812a-8233-c3dd4feb2b6d@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261220T141500
+DTEND;TZID=Asia/Tokyo:20261220T164000
+SUMMARY:香川だョ！全員集合2026 ZUMBA®100分スペシャル
+LOCATION:琴平中学校
+DESCRIPTION:会場: 琴平中学校体育館 SundaySevenプレゼンツに
+ よるZUMBA®フィットネスダンスイベント。総勢10名のイ
+ ンストラクターが出演し、クリスマスシーズンを楽し
+ む催事。\n参加費: 3000円\n主催: SundaySeven\nことひらいふ 
+ イベント: https://kotohilife.com/#events
+URL:https://www.threads.com/@toshimasa_tai/post/DfLoOJKlJNZ
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-8072-acf2-d4ffb938904e@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261222T200000
+DTEND;TZID=Asia/Tokyo:20261222T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+BEGIN:VEVENT
+UID:3ea0b4e5-ff5b-8088-a386-c4de0821fba8@kotohilife.com
+DTSTAMP:20261105T074100Z
+DTSTART;TZID=Asia/Tokyo:20261229T200000
+DTEND;TZID=Asia/Tokyo:20261229T210000
+SUMMARY:【定期】琴平町DAOオンラインミーティング
+LOCATION:オンライン
+DESCRIPTION:琴平町DAOは、町民や、琴平町以外にお住まいの
+ 方たちが集まり、情報交換や交流をするコミュニティ
+ であり、毎週火曜日に定例会をやっています。 琴平町
+ で動いているプロジェクトや、課題、雑談などについ
+ てお話しているので、お気軽に参加してみてください(^
+ ^)/\n参加費: 無料\nことひらいふ イベント: https://kotohilif
+ e.com/#events
+URL:https://discord.com/events/1303754853855793263/1424607096531320913
+CATEGORIES:基本のイベント
+END:VEVENT
+END:VCALENDAR
