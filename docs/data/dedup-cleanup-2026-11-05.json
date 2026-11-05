@@ -1,0 +1,224 @@
+{
+ "generated": "2026-11-05",
+ "archive": [
+  {
+   "page_id": "3f00b4e5-ff5b-8179-9d03-f6094a4c4e3a",
+   "title": "第３回こんぴら観光まちづくり検定試験",
+   "start": "2026-11-29",
+   "created": "2026-10-05",
+   "cal": [
+    "基本のイベント"
+   ],
+   "src": "https://www.kotohirakankou.jp/news/entry-617.html",
+   "keep_instead": "3d00b4e5-ff5b-815b-8074-d95b25c98d21",
+   "keep_title": "第3回こんぴら観光まちづくり検定"
+  },
+  {
+   "page_id": "40f0b4e5-ff5b-81d1-bbb6-d7134d1472ab",
+   "title": "歳旦祭・拝賀式",
+   "start": "2026-01-01",
+   "created": "2026-11-05",
+   "cal": [
+    "金刀比羅宮"
+   ],
+   "src": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+   "keep_instead": "2df0b4e5-ff5b-80f1-ad66-edce7c371cdd",
+   "keep_title": "歳旦祭"
+  },
+  {
+   "page_id": "40f0b4e5-ff5b-8109-a5a3-e87b2a9ff621",
+   "title": "斎籠神事",
+   "start": "2026-01-05",
+   "created": "2026-11-05",
+   "cal": [
+    "金刀比羅宮"
+   ],
+   "src": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+   "keep_instead": "2df0b4e5-ff5b-80b6-8120-c5b108fd7169",
+   "keep_title": "斎籠神事 朝祭"
+  },
+  {
+   "page_id": "40f0b4e5-ff5b-8191-8f59-e2a40956ae6a",
+   "title": "厳魂神社例祭",
+   "start": "2026-01-06",
+   "created": "2026-11-05",
+   "cal": [
+    "金刀比羅宮"
+   ],
+   "src": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+   "keep_instead": ""
+  },
+  {
+   "page_id": "40f0b4e5-ff5b-8111-a199-cad0de172b9e",
+   "title": "初十日祭(初こんぴら)",
+   "start": "2026-01-10",
+   "created": "2026-11-05",
+   "cal": [
+    "金刀比羅宮"
+   ],
+   "src": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+   "keep_instead": "2df0b4e5-ff5b-8078-87e3-d9e480f6b0f9",
+   "keep_title": "初十日祭"
+  },
+  {
+   "page_id": "40f0b4e5-ff5b-8109-82af-f461bf9eadd6",
+   "title": "紀元祭",
+   "start": "2026-02-11",
+   "created": "2026-11-05",
+   "cal": [
+    "金刀比羅宮"
+   ],
+   "src": "https://www.konpira.or.jp/articles_2026/20260225_annual-events/article.html",
+   "keep_instead": "3020b4e5-ff5b-8030-9137-f75423d30bf3",
+   "keep_title": "紀元祭（きねんさい）"
+  },
+  {
+   "page_id": "3020b4e5-ff5b-80d4-adf1-e2fb0061f4f1",
+   "title": "2月1日・月次祭（御本宮・三穂津姫社・旭社・金刀比羅本教総本部）",
+   "start": "2026-02-01",
+   "created": "2026-02-09",
+   "cal": [
+    "基本のイベント"
+   ],
+   "src": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+   "keep_instead": "2df0b4e5-ff5b-80c7-b0e5-e0f92e9a3aff"
+  }
+ ],
+ "patch": [
+  {
+   "page_id": "2df0b4e5-ff5b-80f1-ad66-edce7c371cdd",
+   "title": "歳旦祭",
+   "start": "2026-01-01",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-80b6-8120-c5b108fd7169",
+   "title": "斎籠神事 朝祭",
+   "start": "2026-01-05",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-8044-b24d-d4e13b1c8d6a",
+   "title": "斎籠神事 夕祭",
+   "start": "2026-01-05",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-80fc-bc0e-fab3b9c388a7",
+   "title": "斎籠神事 朝祭",
+   "start": "2026-01-06",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-8015-bcc5-c182574082ec",
+   "title": "厳魂神社大祭",
+   "start": "2026-01-06",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-80ae-afbc-dd2b3bdc5a15",
+   "title": "斎籠神事 夕祭",
+   "start": "2026-01-06",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-808c-9973-e887e9e01d25",
+   "title": "斎籠神事 朝祭",
+   "start": "2026-01-07",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-8009-a7d3-ee7f43b9cd09",
+   "title": "斎籠神事 竟祭",
+   "start": "2026-01-07",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-8078-87e3-d9e480f6b0f9",
+   "title": "初十日祭",
+   "start": "2026-01-10",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-802a-b185-e06d1461760a",
+   "title": "1月26日・月次祭（御本宮・白峰神社）",
+   "start": "2026-01-26",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "2df0b4e5-ff5b-80c7-b0e5-e0f92e9a3aff",
+   "title": "2月1日・月次祭（御本宮・三穂津姫社・旭社・金刀比羅本教総本部）",
+   "start": "2026-02-01",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "3020b4e5-ff5b-8059-a0c4-d4c20cfa8e59",
+   "title": "2月6日・月次祭（嚴魂神社（奥社）・金刀比羅本教総本部）",
+   "start": "2026-02-06",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "3020b4e5-ff5b-80fd-8ec1-eb959319d7c5",
+   "title": "2月10日・月次祭（御本宮）",
+   "start": "2026-02-10",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "3020b4e5-ff5b-8030-9137-f75423d30bf3",
+   "title": "紀元祭（きねんさい）",
+   "start": "2026-02-11",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  },
+  {
+   "page_id": "3020b4e5-ff5b-808b-b2cf-e4d4b7aaeabf",
+   "title": "2月26日・月次祭（御本宮・白峰神社）",
+   "start": "2026-02-26",
+   "add_calendar": [
+    "金刀比羅宮"
+   ],
+   "featured": false
+  }
+ ]
+}
