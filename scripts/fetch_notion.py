@@ -668,10 +668,10 @@ def parse_event(page: dict[str, Any]) -> dict[str, Any]:
         "comment": strip_html(get_rich_text(properties, "コメント")),
         "fee": get_any_text(properties, "参加費（日本円）"),
         "organizer": get_any_text(properties, "主催/運営"),
-        # 統合カレンダーのソース切替用。空＝町のイベント／金刀比羅宮／こんぴらカレンダー。
-        # get_select・get_checkbox はプロパティ非存在で空/Falseを返すため、同じparse_eventを
+        # 統合カレンダーのソース切替用。multi-selectの配列（空＝未分類＝サイトでは基本のイベント扱い）。
+        # get_multi_select・get_checkbox はプロパティ非存在で空/Falseを返すため、同じparse_eventを
         # 共用するキャンペーンDB（該当プロパティ無し）にも無害。
-        "calendar": get_select(properties, "カレンダー"),
+        "calendar": get_multi_select(properties, "カレンダー"),
         "featured": get_checkbox(properties, "大規模イベント"),
     }
 
