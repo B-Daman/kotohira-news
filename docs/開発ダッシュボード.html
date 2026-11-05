@@ -332,6 +332,13 @@
       </dl>
     </div>
 
+    <div class="section-title" id="doc-duplicate-candidates-7e4c3eaa">重複候補（同日・類似）<span class="sub">docs/data/duplicate-candidates.md・更新 2026-11-05</span></div>
+<div class="doc-src">原本: <a href="file:///C:/Users/user/kotohira-news/docs/data/duplicate-candidates.md">docs/data/duplicate-candidates.md</a>（本タブは原本の写し。編集は原本側で）</div>
+<div class="doc">
+<p>1組（イベントDB 872件を監査）。同じ日に題名が似ている組です。別の行事なら <code>docs/data/duplicate-allowlist.json</code> に id の組を追記すると外れます。消すかどうかは人が決めます。</p>
+<div class="table-wrap"><table><thead><tr><th>日付</th><th>題名A（作成日）</th><th>題名B（作成日）</th><th>一致率</th><th>リンク</th></tr></thead><tbody><tr><td>2026-11-29</td><td>第3回こんぴら観光まちづくり検定（2026-09-03）</td><td>第３回こんぴら観光まちづくり検定試験（2026-10-05）</td><td>0.94</td><td><a href="https://app.notion.com/p/3-3d00b4e5ff5b815b8074d95b25c98d21">A</a> <a href="https://app.notion.com/p/3f00b4e5ff5b81799d03f6094a4c4e3a">B</a></td></tr></tbody></table></div>
+</div>
+
     <div class="section-title">2. 現在のステータス<span class="sub">機能・データ・公開の状態一覧（上線：teal=稼働／amber=保留）</span></div>
     <div class="card ov">
       <div class="status">
@@ -1310,7 +1317,7 @@ window.SiteNav = { accordionHTML, bindAccordionToggles };
         <div class="note info">Validate output で空配列を弾くため、Notion側の障害で全件0になった日は notion-data.js を壊さずに失敗で止まる（前日のデータが残る）。手動 push の前は bot のコミットを <code>git pull</code> で取り込む。</div>
       </div>
 
-    <div class="section-title" id="doc-update-notion-data-9c7cfd3b">update-notion-data.yml<span class="sub">更新 2026-10-05</span></div>
+    <div class="section-title" id="doc-update-notion-data-9c7cfd3b">update-notion-data.yml<span class="sub">更新 2026-11-05</span></div>
 <div class="doc-src">原本: <a href="file:///C:/Users/user/kotohira-news/.github/workflows/update-notion-data.yml">.github/workflows/update-notion-data.yml</a></div>
 <pre class="src"><code># Notionの3DB（ニュース・イベント・キャンペーン）を毎時取得して notion-data.js を更新し、
 # 差分があればコミット→push→Cloudflare Pages に自動反映するワークフロー。
@@ -1378,11 +1385,31 @@ jobs:
               console.log(k + &quot;: &quot; + d[k].length + &quot; items&quot;);
             }&#x27;
 
+      - name: Audit duplicate events (once a day, from 09:00 JST)
+        # イベントDBの同日類似を1日1回監査する（docs/重複防止_設計.md 5章）。
+        # JST 9 時以降で、出力JSONの generated_date が今日（JST）でないときに実行する。
+        # cron が遅れても当日の最初の回で動く。手動実行（workflow_dispatch）は常に実行。
+        # 読み取りのみ。失敗しても更新全体は止めない
+        continue-on-error: true
+        env:
+          KOTOHIRA_DASHBOARD_NOTION_TOKEN: ${{ secrets.KOTOHIRA_DASHBOARD_NOTION_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          hour=$(TZ=Asia/Tokyo date +%H)
+          today=$(TZ=Asia/Tokyo date +%F)
+          last=$(python -c &quot;import json;print(json.load(open(&#x27;docs/data/duplicate-candidates.json&#x27;,encoding=&#x27;utf-8&#x27;)).get(&#x27;generated_date&#x27;,&#x27;&#x27;))&quot; 2&gt;/dev/null || true)
+          if [ &quot;$EVENT_NAME&quot; = &quot;workflow_dispatch&quot; ] || { [ &quot;$((10#$hour))&quot; -ge 9 ] &amp;&amp; [ &quot;$last&quot; != &quot;$today&quot; ]; }; then
+            python scripts/audit_duplicates.py
+          else
+            echo &quot;Duplicate audit already done today or before 09:00 JST; skip.&quot;
+          fi
+
       - name: Commit and push if changed
         run: |
           git config user.name &quot;github-actions[bot]&quot;
           git config user.email &quot;41898282+github-actions[bot]@users.noreply.github.com&quot;
           git add notion-data.js assets/thumbs
+          git add docs/data/duplicate-candidates.json docs/data/duplicate-candidates.md 2&gt;/dev/null || true
           if git diff --cached --quiet; then
             echo &quot;No changes; skip commit.&quot;
             exit 0
@@ -2685,7 +2712,7 @@ python scripts/verify_ui_styles.py ".drawer a"
         <tr><td>compress_thumbs.py</td><td>既存画像の一括WebP変換（一回性・08-25実行済み）</td><td>2026-08-25</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/compress_thumbs.py">C:\Users\user\kotohira-news\scripts\compress_thumbs.py</a></td></tr>
         <tr><td>verify_ui_styles.py</td><td>UI変更後の算出スタイル実測（headless Chrome）</td><td>2026-08-27</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/verify_ui_styles.py">C:\Users\user\kotohira-news\scripts\verify_ui_styles.py</a></td></tr>
         <tr><td>build_dashboard.py</td><td>本書のビルド（base.html＋原本注入）</td><td>2026-09-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/scripts/build_dashboard.py">C:\Users\user\kotohira-news\scripts\build_dashboard.py</a></td></tr>
-        <tr><td>update-notion-data.yml</td><td>毎時30分（JST 6:30〜翌0:30）に fetch_notion.py → 差分があればコミット・push</td><td>2026-10-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/.github/workflows/update-notion-data.yml">C:\Users\user\kotohira-news\.github\workflows\update-notion-data.yml</a></td></tr>
+        <tr><td>update-notion-data.yml</td><td>毎時30分（JST 6:30〜翌0:30）に fetch_notion.py → 差分があればコミット・push</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/.github/workflows/update-notion-data.yml">C:\Users\user\kotohira-news\.github\workflows\update-notion-data.yml</a></td></tr>
         <tr><td>update-dam-data.yml</td><td>7:00／19:00 JST に fetch_dam.py → コミット・push</td><td>2026-10-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/.github/workflows/update-dam-data.yml">C:\Users\user\kotohira-news\.github\workflows\update-dam-data.yml</a></td></tr>
       </tbody>
     </table></div></div>
@@ -2695,7 +2722,7 @@ python scripts/verify_ui_styles.py ".drawer a"
       <thead><tr><th>ファイル</th><th>用途・行き先</th><th>更新</th><th>パス（クリックで開く）</th></tr></thead>
       <tbody>
         <tr><td>開発ダッシュボード.base.html</td><td>編集元（要約・追補の本文＋原本注入マーカー）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.base.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.base.html</a></td></tr>
-        <tr><td>開発ダッシュボード.html</td><td>生成物（python scripts/build_dashboard.py で再生成）</td><td>2026-11-03</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.html</a></td></tr>
+        <tr><td>開発ダッシュボード.html</td><td>生成物（python scripts/build_dashboard.py で再生成）</td><td>2026-11-05</td><td><a class="path" href="file:///C:/Users/user/kotohira-news/docs/開発ダッシュボード.html">C:\Users\user\kotohira-news\docs\開発ダッシュボード.html</a></td></tr>
       </tbody>
     </table></div></div>
 
@@ -2720,7 +2747,7 @@ python scripts/verify_ui_styles.py ".drawer a"
 </div>
 
 <footer>
-  kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-09-05（ビルド 2026-11-05 16:14） ／ ローカルHTML・公開対象外<br>
+  kotohira-news ／ 「ことひらいふ」開発ダッシュボード ／ 更新 2026-09-05（ビルド 2026-11-05 16:58） ／ ローカルHTML・公開対象外<br>
   各文書タブ＝本文（原本md全文）＋追補。編集は base 側、原本は各mdで。表示部の正本＝index.html ／ データは各生成スクリプト経由でのみ更新（生成物JSを手編集しない）
 </footer>
 

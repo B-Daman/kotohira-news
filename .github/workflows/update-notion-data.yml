@@ -64,11 +64,31 @@ jobs:
               console.log(k + ": " + d[k].length + " items");
             }'
 
+      - name: Audit duplicate events (once a day, from 09:00 JST)
+        # イベントDBの同日類似を1日1回監査する（docs/重複防止_設計.md 5章）。
+        # JST 9 時以降で、出力JSONの generated_date が今日（JST）でないときに実行する。
+        # cron が遅れても当日の最初の回で動く。手動実行（workflow_dispatch）は常に実行。
+        # 読み取りのみ。失敗しても更新全体は止めない
+        continue-on-error: true
+        env:
+          KOTOHIRA_DASHBOARD_NOTION_TOKEN: ${{ secrets.KOTOHIRA_DASHBOARD_NOTION_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          hour=$(TZ=Asia/Tokyo date +%H)
+          today=$(TZ=Asia/Tokyo date +%F)
+          last=$(python -c "import json;print(json.load(open('docs/data/duplicate-candidates.json',encoding='utf-8')).get('generated_date',''))" 2>/dev/null || true)
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || { [ "$((10#$hour))" -ge 9 ] && [ "$last" != "$today" ]; }; then
+            python scripts/audit_duplicates.py
+          else
+            echo "Duplicate audit already done today or before 09:00 JST; skip."
+          fi
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add notion-data.js assets/thumbs
+          git add docs/data/duplicate-candidates.json docs/data/duplicate-candidates.md 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes; skip commit."
             exit 0
