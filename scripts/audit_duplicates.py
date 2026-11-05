@@ -44,7 +44,7 @@ EVENT_MAX = 5000
 PAGE_URL = "https://www.notion.so/{}"
 
 # ---- 判定（register_news.py と同じ規則。設計書2章） ----
-_PART_RE = re.compile(r"午前|午後|第[0-9一二三四五六七八九十]+部|朝祭|夕祭|[0-9一二三四五六七八九十]+日目|昼|夜(?!市)")
+_PART_RE = re.compile(r"午前|午後|第[0-9一二三四五六七八九十]+部|朝祭|夕祭|竟祭|結願祭|[0-9一二三四五六七八九十]+日目|昼|夜(?!市)")
 SAME_DAY_RATIO = 0.80
 SAME_DAY_MIN_CONTAIN = 3
 

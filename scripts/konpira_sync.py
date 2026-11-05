@@ -225,18 +225,17 @@ def norm(s: str) -> str:
 
 
 def similar(a: str, b: str) -> str | None:
-    """同じ行事とみなせるなら根拠（exact / contain / ratio）を返す。"""
-    na, nb = norm(a), norm(b)
-    if not na or not nb:
+    """同じ行事とみなせるなら根拠（exact / contain / ratio）を返す。
+    判定は登録スキルの same_day_score と同じ（朝祭/夕祭/竟祭 など「別の回」の語が違えば別の行事）。"""
+    if rn.same_day_score(a, b) <= 0.0:
         return None
+    na, nb = norm(a), norm(b)
     if na == nb:
         return "exact"
     shorter, longer = (na, nb) if len(na) <= len(nb) else (nb, na)
     if len(shorter) >= MIN_CONTAIN and shorter in longer:
         return "contain"
-    if difflib.SequenceMatcher(None, na, nb).ratio() >= SIMILAR_RATIO:
-        return "ratio"
-    return None
+    return "ratio"
 
 
 def load_rules() -> dict:
@@ -388,15 +387,41 @@ class Writer:
     def __init__(self, token: str | None):
         self.token = token
         self.last = 0.0
+        self._place_ok: dict[str, bool] = {}
 
-    def patch(self, page_id: str, props: dict) -> None:
+    def _throttle(self) -> None:
         wait = bc.MIN_INTERVAL - (time.monotonic() - self.last)
         if wait > 0:
             time.sleep(wait)
+
+    def patch(self, page_id: str, props: dict) -> None:
+        self._throttle()
         try:
             pcv.api(self.token, "PATCH", page_id, {"properties": props})
         finally:
             self.last = time.monotonic()
+
+    def place_writable(self, place_page_id: str) -> bool:
+        """場所DBのページに書き込みトークンが届くか（届かないと relation の PATCH が 404 になる）。1件1回だけ確かめる。"""
+        if place_page_id not in self._place_ok:
+            self._throttle()
+            try:
+                pcv.api(self.token, "GET", place_page_id)
+                self._place_ok[place_page_id] = True
+            except urllib.error.HTTPError as e:
+                if e.code != 404:
+                    raise
+                self._place_ok[place_page_id] = False
+            finally:
+                self.last = time.monotonic()
+        return self._place_ok[place_page_id]
+
+    def strip_unwritable_place(self, props: dict) -> tuple[dict, bool]:
+        """relation 先に届かないなら 開催場所 を外して返す。(残りの props, 外したか)"""
+        rel = props.get(PLACE_PROP)
+        if not rel or self.place_writable(rel["relation"][0]["id"]):
+            return props, False
+        return {k: v for k, v in props.items() if k != PLACE_PROP}, True
 
 
 # ---------- 突合 ----------
@@ -460,8 +485,16 @@ def apply_changes(rows: list[dict], rules: dict, token: str | None, dry_run: boo
     # 補完
     for r in rows:
         if r["status"] in ("filled", "conflict") and r.get("_patch") and not dry_run:
+            props, dropped = writer.strip_unwritable_place(r["_patch"])
+            if dropped:
+                r["place_pending"] = True
+                r["fills"] = describe_fills(props, rules)
+                if not props:
+                    if r["status"] == "filled":
+                        r["status"] = "ok"
+                    continue
             try:
-                writer.patch(r["notion_id"], r["_patch"])
+                writer.patch(r["notion_id"], props)
                 r["applied"] = True
             except urllib.error.HTTPError as e:
                 r["status"], r["reason"] = "failed", f"patch_http_{e.code}"
@@ -479,11 +512,14 @@ def apply_changes(rows: list[dict], rules: dict, token: str | None, dry_run: boo
             pl = place_for(r["_occ"]["location"], rules)
             pid = page_id_of(r["page_url"] or "")
             if pl and pid and not dry_run:
-                try:
-                    writer.patch(pid, {PLACE_PROP: {"relation": [{"id": pl["page"]}]}})
-                    r["fills"] = [f"開催場所 {pl['name']}"]
-                except urllib.error.HTTPError as e:
-                    r["reason"] = f"place_patch_http_{e.code}"
+                if not writer.place_writable(pl["page"]):
+                    r["place_pending"] = True
+                else:
+                    try:
+                        writer.patch(pid, {PLACE_PROP: {"relation": [{"id": pl["page"]}]}})
+                        r["fills"] = [f"開催場所 {pl['name']}"]
+                    except urllib.error.HTTPError as e:
+                        r["reason"] = f"place_patch_http_{e.code}"
         elif st == "held_title_dup" or res.get("dup_status") == "possible_title_dup":
             r["status"], r["reason"] = "held", "skill_same_day"
             r["same_day"] = [{"title": sim.get("見出し"), "start": None, "id": page_id_of(sim.get("existing_page") or "")}]
@@ -497,7 +533,9 @@ def apply_changes(rows: list[dict], rules: dict, token: str | None, dry_run: boo
 
 def counts_of(rows: list[dict]) -> dict:
     c = collections.Counter(r["status"] for r in rows)
-    return {k: c.get(k, 0) for k in ("created", "new", "filled", "ok", "held", "conflict", "skipped", "failed")}
+    out = {k: c.get(k, 0) for k in ("created", "new", "filled", "ok", "held", "conflict", "skipped", "failed")}
+    out["place_pending"] = sum(1 for r in rows if r.get("place_pending"))
+    return out
 
 
 def build_md(doc: dict) -> str:
@@ -533,6 +571,13 @@ def build_md(doc: dict) -> str:
     sec("失敗", ("failed",), lambda r: f"- {r['date']} {r['title']}: {r['reason']}")
     sec("除外", ("skipped",), lambda r: f"- {r['date']} {r['title']}: {r['reason']}")
     sec("変更なし", ("ok",), lambda r: f"- {r['date']} {r['notion_title']}")
+    place_ng = [r for r in rows if r.get("place_pending")]
+    if place_ng:
+        L.extend(["", f"## 注意: 開催場所を付けられなかった（{len(place_ng)}）", "",
+                  "場所DB（会場名・住所）が書き込みインテグレーションに接続されていないため。"
+                  "Notion で場所DBを開き「…」→「接続」から、登録スキル用の書き込みインテグレーション"
+                  "（イベントDBに接続してあるもの）を追加すると、次回の同期で自動で付く。", ""])
+        L.extend(f"- {r['date']} {r['title']}" for r in place_ng)
     return "\n".join(L) + "\n"
 
 
