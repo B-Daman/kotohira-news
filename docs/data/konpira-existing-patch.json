@@ -1,0 +1,92 @@
+[
+  {
+    "page_id": "2df0b4e5ff5b8030a531d82d3109a341",
+    "title": "元始祭",
+    "start": "2026-01-03",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": false
+  },
+  {
+    "page_id": "2df0b4e5ff5b80ce9ecdc20f0dc030f6",
+    "title": "とんど焼神事",
+    "start": "2026-01-18",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": false
+  },
+  {
+    "page_id": "2e90b4e5ff5b80f5a642d27fbc0d4637",
+    "title": "節分祭",
+    "start": "2026-02-03",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": true
+  },
+  {
+    "page_id": "3020b4e5ff5b809aa040e4ea15bdd3e0",
+    "title": "祈年祭",
+    "start": "2026-02-17",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": false
+  },
+  {
+    "page_id": "3020b4e5ff5b80b38161d0f3208370ed",
+    "title": "天長祭",
+    "start": "2026-02-23",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": false
+  },
+  {
+    "page_id": "3ef0b4e5ff5b8171a9bbfe6b3992af7d",
+    "title": "例大祭 宵宮祭（御本宮）",
+    "start": "2026-10-09",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": true
+  },
+  {
+    "page_id": "3ef0b4e5ff5b813fb05dd037123a2da1",
+    "title": "例大祭 例祭（御本宮）",
+    "start": "2026-10-10",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": true
+  },
+  {
+    "page_id": "3ef0b4e5ff5b810f9deee9da968a825a",
+    "title": "例大祭 御神輿 御本宮発御（お下がり：御本宮→御旅所）",
+    "start": "2026-10-10",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": true
+  },
+  {
+    "page_id": "3ef0b4e5ff5b81d2ba5cd3da63a5dc80",
+    "title": "例大祭 御神輿 御旅所発御（お上がり：御旅所→御本宮）",
+    "start": "2026-10-11",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": true
+  },
+  {
+    "page_id": "3eb0b4e5ff5b810cbe8ef5dd83b3f133",
+    "title": "令和8年 金刀比羅宮例大祭",
+    "start": "2026-10-09",
+    "add_calendar": [
+      "金刀比羅宮"
+    ],
+    "featured": true
+  }
+]
