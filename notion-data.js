@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-06 03:13",
+  "fetched": "2026-11-06 18:45",
   "news": [
+    {
+      "id": "4100b4e5-ff5b-81ec-957e-f095179c22a9",
+      "title": "こんぴらさんの石段オーナー権、160枠を追加販売",
+      "url": "https://news.yahoo.co.jp/articles/76884c7738a89282c33f15c753f23596d90cad2c",
+      "summary": "金刀比羅宮の参道石段に名前を掲示できる「石段オーナー権」の第1弾40枠が完売したため、琴平町は5日から第2弾として160枠の追加販売を開始した。1枠5万円で365段の中から好きな番号を選び、5年間名前を掲示できる。",
+      "org": "朝日新聞",
+      "media": "新聞",
+      "date": "2026-11-06",
+      "thumbnail": "assets/thumbs/4100b4e5ff5b81ec957ef095179c22a9.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "40f0b4e5-ff5b-8163-9923-c1dc14b33bca",
       "title": "金刀比羅宮参道の石段オーナー権利 第2弾160枠販売開始",
@@ -427,19 +440,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-10-16",
       "thumbnail": "assets/thumbs/3fb0b4e5ff5b814f986bd7d5af903cf8.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3fb0b4e5-ff5b-810d-857d-dd48e24f9a5a",
-      "title": "ことひらナイト・台湾夜市in琴平",
-      "url": "https://news.yahoo.co.jp/articles/74157af8213b05f6cf15cafb728519bbfbab8536",
-      "summary": "香川県琴平町で台湾グルメと文化が楽しめる「ことひらナイト・台湾夜市in琴平」が開催される。9月5日の開催予定が台風延期により24日に変更。オリジナルコラボカプセルの販売やステージイベントを実施。",
-      "org": "KSB瀬戸内海放送",
-      "media": "テレビ",
-      "date": "2026-10-15",
-      "thumbnail": "assets/thumbs/3fb0b4e5ff5b810d857ddd48e24f9a5a.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
