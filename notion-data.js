@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-08 09:52",
+  "fetched": "2026-11-09 00:31",
   "news": [
     {
       "id": "4100b4e5-ff5b-81ec-957e-f095179c22a9",
@@ -2041,7 +2041,7 @@ window.NOTION_DATA = {
       "address": "〒766-0001 香川県仲多度郡琴平町621−9",
       "image": "assets/thumbs/4110b4e5ff5b819fb24dfbe03c3d7c03.webp",
       "comment": "会場: 麻心 magokoro 琴平（香川県仲多度郡琴平町621-9） ミュージシャン「タケヒロノウル」による2026年『HOU』アルバムツアーの秋音巡礼ツアーが、香川県琴平町のベジ料理店「麻心」で開催されます。食、健康、音楽、アートが交わる特別なライブイベント。投げ銭制。",
-      "fee": "0",
+      "fee": "",
       "organizer": "麻心 magokoro 琴平",
       "calendar": [
         "基本のイベント"
@@ -2130,7 +2130,7 @@ window.NOTION_DATA = {
       "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026072200000001100",
       "start": "2026-11-08T14:00",
       "end": "2026-11-08T16:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "旧金毘羅大芝居(金丸座)",
       "address": "〒766-0001 香川県仲多度郡琴平町乙1241",
@@ -2149,7 +2149,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-619.html",
       "start": "2026-11-08T10:00",
       "end": "2026-11-08T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "琴平小学校",
       "address": "〒766-0002 香川県仲多度郡琴平町145-1",
@@ -2168,7 +2168,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-08T09:00",
       "end": "2026-11-08T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2187,7 +2187,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-08T09:00",
       "end": "2026-11-08T12:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
