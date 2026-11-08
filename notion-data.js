@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-08 00:02",
+  "fetched": "2026-11-08 09:52",
   "news": [
     {
       "id": "4100b4e5-ff5b-81ec-957e-f095179c22a9",
@@ -433,6 +433,25 @@ window.NOTION_DATA = {
     }
   ],
   "events": [
+    {
+      "id": "4110b4e5-ff5b-81f4-910f-df495e989d1c",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-02-06T09:00",
+      "end": "2027-02-06T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "嚴魂神社（奥社）",
+      "address": "〒766-8501 香川県仲多度郡琴平町892-1（石段1368段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
     {
       "id": "40f0b4e5-ff5b-8134-b7fa-e1c623644544",
       "title": "月次祭",
@@ -4207,25 +4226,6 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-10-01T10:30",
       "end": "2026-10-01T11:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
-      "fee": "",
-      "organizer": "",
-      "calendar": [
-        "こんぴらカレンダー"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-8196-8d89-c75fb1e88ef6",
-      "title": "姿勢の美男美女",
-      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
-      "start": "2026-10-01T10:00",
-      "end": "2026-10-01T11:00",
       "status": "終了",
       "city": "琴平町",
       "place": "",
