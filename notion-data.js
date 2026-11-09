@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-09 00:31",
+  "fetched": "2026-11-09 17:35",
   "news": [
+    {
+      "id": "4130b4e5-ff5b-8161-80ed-d908737269be",
+      "title": "琴平町で「第2弾 街ガチャ in 琴平町」が販売されてる！地元の高校生がデザインした全11種類でシークレットデザインも！",
+      "url": "https://www.marugame2.jp/topics/134051",
+      "summary": "琴平町で「第2弾 街ガチャ in 琴平町」が販売されています。 第1弾も好評だった琴平町内の限られた場所でしか手に入れることができない「街ガチャ in 琴平町」！ 昨年に引き続き待望の第2弾が販売開始",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-11-09",
+      "thumbnail": "assets/thumbs/4130b4e5ff5b816180edd908737269be.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4100b4e5-ff5b-81ec-957e-f095179c22a9",
       "title": "こんぴらさんの石段オーナー権、160枠を追加販売",
