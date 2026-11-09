@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-09 17:35",
+  "fetched": "2026-11-10 04:58",
   "news": [
     {
       "id": "4130b4e5-ff5b-8161-80ed-d908737269be",
@@ -483,6 +483,25 @@ window.NOTION_DATA = {
         "金刀比羅宮"
       ],
       "featured": false
+    },
+    {
+      "id": "4130b4e5-ff5b-81b0-8dc5-d49da5a975e4",
+      "title": "わん詣2027 ペット初詣・ペットマーケット",
+      "url": "https://www.instagram.com/p/DfgPqudOCPv/",
+      "start": "2027-01-30T00:00",
+      "end": "2027-01-31T23:59",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/4130b4e5ff5b81b08dc5d49da5a975e4.webp",
+      "comment": "会場: 金刀比羅宮、金陵の郷（香川県琴平町） 琴平町の金刀比羅宮で、愛犬と一緒に参拝・初詣ができる「わん詣2027」が開催されます。ペット初詣、ペットマーケット、愛犬との写真撮影などが予定されており、金陵の郷でも併催されます。",
+      "fee": "0",
+      "organizer": "ペット参拝わんちゃんを楽しむ会",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": true
     },
     {
       "id": "40f0b4e5-ff5b-81a4-b3de-f3d07c5adc34",
@@ -1220,6 +1239,25 @@ window.NOTION_DATA = {
       "comment": "会場: てんてこ舞（表参道） 琴平町のナイトコンテンツ企画として、高松らくご愛好会メンバーによる落語やマジックを楽しむイベント。2026年11月28日（土）17:00～18:30、てんてこ舞（表参道）で開催。前売チケットは1,100円（税込、ワンドリンク付き）。",
       "fee": "1100",
       "organizer": "こんぴら観光まちづくり協会",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "4130b4e5-ff5b-819c-a78b-d9fb17eec995",
+      "title": "ことひらまちじゅう勉強会③『金刀比羅宮』高橋由一館でお宮の話、舞曲（笛や歌）を聴きましょう。",
+      "url": "https://www.instagram.com/p/DffrbwYTboT/",
+      "start": "2026-11-28T13:00",
+      "end": "2026-11-28T14:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "髙橋由一館",
+      "address": "〒766-0001 香川県仲多度郡琴平町（石段400段目）",
+      "image": "assets/thumbs/4130b4e5ff5b819ca78bd9fb17eec995.webp",
+      "comment": "会場: 金刀比羅宮内『高橋由一館』 金刀比羅宮内の高橋由一館で開催される勉強会。お宮の話や舞曲（笛や歌）を聴く催し。参加は無料で事前申し込み必須。定員20人。",
+      "fee": "0",
+      "organizer": "ことひらまちじゅう図書館",
       "calendar": [
         "基本のイベント"
       ],
@@ -2029,7 +2067,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-11-10T20:00",
       "end": "2026-11-10T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -2048,7 +2086,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DfVqIfqyg3n/",
       "start": "2026-11-10T19:00",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "麻心 琴平店",
       "address": "〒766-0001 香川県仲多度郡琴平町621−9",
@@ -2067,7 +2105,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-10T10:00",
       "end": "2026-11-10T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2086,7 +2124,7 @@ window.NOTION_DATA = {
       "url": "http://www.konpira.or.jp/?language=JAPANESE&stageID=hp_calendar",
       "start": "2026-11-10T10:00",
       "end": "2026-11-10T10:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
@@ -2105,7 +2143,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-10T09:30",
       "end": "2026-11-10T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2124,7 +2162,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dd2qWiEMw1Q/",
       "start": "2026-11-10",
       "end": "",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -4211,44 +4249,6 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3950b4e5-ff5b-80a5-8568-c7496fa57528",
-      "title": "第152回 こんぴら氏子まつり 太鼓台清祓式・町内巡行",
-      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-393.html",
-      "start": "2026-10-01T19:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3950b4e5ff5b80a58568c7496fa57528.webp",
-      "comment": "",
-      "fee": "",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "40f0b4e5-ff5b-81bf-ae9a-e0b5beb5b17d",
-      "title": "ほっとひといき琴平",
-      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
-      "start": "2026-10-01T10:30",
-      "end": "2026-10-01T11:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "",
-      "comment": "場所: 総合センター / 区分: 福祉・保健（誌面の色分けから推定） / 出典: 広報ことひら 2026年10月号 こんぴらカレンダー",
-      "fee": "",
-      "organizer": "",
-      "calendar": [
-        "こんぴらカレンダー"
       ],
       "featured": false
     }
