@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-11 17:14",
+  "fetched": "2026-11-12 01:30",
   "news": [
     {
       "id": "4150b4e5-ff5b-81e2-88a6-e9b726f1e201",
@@ -1233,32 +1233,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-09-11",
       "thumbnail": "assets/thumbs/3d80b4e5ff5b818888bff382f7541e15.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d70b4e5-ff5b-8127-bac9-c2b5b2d58a83",
-      "title": "イギリスの旅行会社がうどん作り体験 四国の認知度を上げ“誘客を” 香川・琴平町（KSB瀬戸内海放送） - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rOHVtY2R4cE9nZEFudnl1bGJNZzFJUjRlQmI1dXBmMTZhazVVMmpuNGIzdGFldU1mREk5YUROUDN3b1oyVGttd0wtR09pS2dsNVFaQVBaOUxWZ0doQzlDMGtXaUktQVZPYXhJSUNyYVp5YXJscEFWMHA4YlIyaVU?oc=5",
-      "summary": "",
-      "org": "Yahoo!ニュース",
-      "media": "Webメディア",
-      "date": "2026-09-10",
-      "thumbnail": "assets/thumbs/3d70b4e5ff5b8127bac9c2b5b2d58a83.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d70b4e5-ff5b-819e-aae8-daf0b855333f",
-      "title": "熊本地震で３職員派遣　琴平町",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091000000000800",
-      "summary": "琴平町は9月10日から、熊本地震の被災地支援のため職員3人を熊本県宇土市に順次派遣する。派遣職員は同市役所で家屋解体の相談業務などに従事する。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-10",
-      "thumbnail": "assets/thumbs/3d70b4e5ff5b819eaae8daf0b855333f.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2792,7 +2766,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T13:30",
       "end": "2026-11-12T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2811,7 +2785,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T13:00",
       "end": "2026-11-12T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2830,7 +2804,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T10:30",
       "end": "2026-11-12T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2849,7 +2823,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T10:00",
       "end": "2026-11-12T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2868,7 +2842,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-11-11T12:00",
       "end": "2026-11-11T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2887,7 +2861,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-11T11:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2906,7 +2880,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-11T09:00",
       "end": "2026-11-11T11:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5680,44 +5654,6 @@ window.NOTION_DATA = {
         "基本のイベント"
       ],
       "featured": false
-    },
-    {
-      "id": "3c80b4e5-ff5b-81a1-bbda-f8ed9895895d",
-      "title": "第8回 こんぴら秋夜市",
-      "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
-      "start": "2026-09-12T17:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/thumbs/3c80b4e5ff5b81a1bbdaf8ed9895895d.webp",
-      "comment": "会場: 一之橋公園・金陵の郷 琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
-      "fee": "0",
-      "organizer": "琴平町商工会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d50b4e5-ff5b-803a-9771-fd5687c65cd0",
-      "title": "四国シェアサミット2026 in 琴平 DAY1",
-      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
-      "start": "2026-09-12T09:30",
-      "end": "2026-09-12T20:35",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町公会堂",
-      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
-      "image": "assets/thumbs/3d50b4e5ff5b803a9771fd5687c65cd0.webp",
-      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
-      "fee": "0",
-      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
     }
   ],
   "campaigns": [
@@ -5837,23 +5773,6 @@ window.NOTION_DATA = {
       "comment": "会場: GOKAN KOTOHIRA（琴平町） GOKAN KOTOHIRAが公式サイト経由の予約に対し、宿泊料金15%OFFのキャンペーンを実施。対象期間は2026年9月25日〜12月20日（一部連休を除く）。クーポンコード「Shikoku15」を使用。",
       "fee": "",
       "organizer": "GOKAN KOTOHIRA",
-      "calendar": [],
-      "featured": false
-    },
-    {
-      "id": "3db0b4e5-ff5b-8011-9516-fe5a1354e7a7",
-      "title": "1号店3周年アニバーサリー 富くじ参道店",
-      "url": "https://www.instagram.com/p/DdIzcYOtLBg/",
-      "start": "2026-09-12",
-      "end": "2026-09-13",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "元祖こんぴら射的場 富くじ 参道店",
-      "address": "〒766-0001 香川県仲多度郡琴平町804",
-      "image": "assets/thumbs/3db0b4e5ff5b80119516fe5a1354e7a7.webp",
-      "comment": "",
-      "fee": "500",
-      "organizer": "",
       "calendar": [],
       "featured": false
     }
@@ -5986,88 +5905,7 @@ window.NOTION_DATA = {
         "https://www.instagram.com/p/DZMh8-yvH3D/"
       ],
       "x": [],
-      "items": [
-        {
-          "id": "note-bd32f53efe4ed851360a329e",
-          "source": "note",
-          "title": "琴平の街で出会う、懐かしくて新しいプリン🍮✨ こんぴらプリンの魅力に迫る！",
-          "url": "https://note.com/matatabi_tour/n/n061cedbc157d",
-          "date": "2026-11-01",
-          "thumbnail": "assets/thumbs/notebd32f53efe4ed851360a329e.webp"
-        },
-        {
-          "id": "note-676ed450252abd1e04fd0879",
-          "source": "note",
-          "title": "またたび×うどんタクシー×東大うどん部",
-          "url": "https://note.com/matatabi_tour/n/n9a9dc09b2dc3",
-          "date": "2026-10-01",
-          "thumbnail": "assets/thumbs/note676ed450252abd1e04fd0879.webp"
-        },
-        {
-          "id": "note-d1afb313507e9e48e93c5179",
-          "source": "note",
-          "title": "琴平ビト探訪第12弾〜192段目で出会う「かわいい」の先にある琴平の物語〜",
-          "url": "https://note.com/matatabi_tour/n/n285e1bced919",
-          "date": "2026-09-01",
-          "thumbnail": "assets/thumbs/noted1afb313507e9e48e93c5179.webp"
-        },
-        {
-          "id": "note-b5e3d60a42e42c498a34dc68",
-          "source": "note",
-          "title": "子供から大人まで笑顔になれる場所！「富くじ 元祖こんぴら射的場」が目指す、琴平の\"年中縁日\"構想✨",
-          "url": "https://note.com/matatabi_tour/n/n7bf5e1740a3c",
-          "date": "2026-08-01",
-          "thumbnail": "assets/thumbs/noteb5e3d60a42e42c498a34dc68.webp"
-        },
-        {
-          "id": "note-706b2176c2c4f0675e173472",
-          "source": "note",
-          "title": "【番外編】新メンバーとこんぴら十帖食べ歩きツアー",
-          "url": "https://note.com/matatabi_tour/n/n221f11ef142b",
-          "date": "2026-07-01",
-          "thumbnail": "assets/thumbs/note706b2176c2c4f0675e173472.webp"
-        },
-        {
-          "id": "note-6e87714bc649c3f2d2872089",
-          "source": "note",
-          "title": "【番外編】またたび、22匹(!?)になりました。新メンバー大集合！",
-          "url": "https://note.com/matatabi_tour/n/n62a2531d9c6a",
-          "date": "2026-06-01",
-          "thumbnail": "assets/thumbs/note6e87714bc649c3f2d2872089.webp"
-        },
-        {
-          "id": "note-6080e5a334a1c0b096bafe56",
-          "source": "note",
-          "title": "琴平ビト探訪第10弾〜フルコースを、一本に凝縮。美食の頂点を見てきた男が、辿り着いた「食の原点」～",
-          "url": "https://note.com/matatabi_tour/n/nddfbc45ac246",
-          "date": "2026-05-01",
-          "thumbnail": "assets/thumbs/note6080e5a334a1c0b096bafe56.webp"
-        },
-        {
-          "id": "note-154810c00f5283b6d08397b6",
-          "source": "note",
-          "title": "【番外編】琴平から、アートへ。香川三人の巨匠をめぐる3時間の旅",
-          "url": "https://note.com/matatabi_tour/n/nb161eaa70bbd",
-          "date": "2026-04-01",
-          "thumbnail": "assets/thumbs/note154810c00f5283b6d08397b6.webp"
-        },
-        {
-          "id": "note-051017c28f1437d49174d7a0",
-          "source": "note",
-          "title": "琴平ビト探訪第9弾～参道をぬけたら、甘い香りがした～",
-          "url": "https://note.com/matatabi_tour/n/n7538f5451010",
-          "date": "2026-03-01",
-          "thumbnail": "assets/thumbs/note051017c28f1437d49174d7a0.webp"
-        },
-        {
-          "id": "note-157df9a21479d26970361a1c",
-          "source": "note",
-          "title": "【番外編】香川県大学プロジェクト・新体制スタート！『琴平縁むすびプロジェクト またたび』",
-          "url": "https://note.com/matatabi_tour/n/n347d3a319908",
-          "date": "2026-02-01",
-          "thumbnail": "assets/thumbs/note157df9a21479d26970361a1c.webp"
-        }
-      ]
+      "items": []
     }
   ]
 };
