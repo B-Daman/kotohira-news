@@ -32,9 +32,30 @@
    上記以外（個別体験施設・単独求人・単独の宿・移住支援金など）は末尾の「アーカイブ」に
    show:false で退避（削除せず。再掲の可能性があるため）。 */
 window.EXPERIENCES_DATA = {
-  updated: "2026-07-13",
+  updated: "2026-11-11",
   items: [
     /* ===== 🎨 体験プログラム・特別な権利（各サービスの入口へ導線を集約） ===== */
+    /* 2026-11-11 本人指示でこの区分の先頭に追加。説明文はリンク集（links-data.js）の同カードと同じ。
+       リンクは導線計測の中継ページ経由（routes.json の chomin/site。行き先は LINE 公式 @997qsntl） */
+    {
+      id: "exp-digital-chomin",
+      title: "琴平デジタル町民",
+      category: "体験プログラム",
+      org: "琴平バス株式会社",
+      summary: "琴平バスが運営する“デジタル町民”の取り組みです。遠くからでも琴平に関われます。LINE公式アカウントから参加できます。",
+      start: "",
+      end: "",
+      place: "オンライン（LINE）",
+      reward: "",
+      target: "",
+      url: "https://kotohilife.com/go/chomin/site/",
+      linkLabel: "LINEで登録する",
+      status: "案内",
+      image: "assets/links/digital-chomin.png",
+      imageFit: "contain",
+      show: true
+    },
+
     {
       id: "exp-kotohira-travel",
       title: "Kotohira Travel",

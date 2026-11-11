@@ -105,8 +105,13 @@ ORG_POST_DB_ID = os.environ.get(
     "ORG_POST_NOTION_DB_ID", "3d10b4e5ff5b8024a440c3162bb6bd00"
 )
 
-NEWS_MAX = 60
-EVENT_MAX = 200
+# 取得件数の安全上限。絞り込みは Notion 側の filter で行う（fetch_news / fetch_events）ので、
+# 通常はこの上限に届かない。届いた場合は警告を出す（2026-11-11: 旧 60/200 は「先頭 N 件を
+# 取ってから絞る」方式で、ニュースが26日分・イベントが10/1以降しか出なくなっていた）。
+NEWS_MAX = 300
+EVENT_MAX = 1000
+# ニュースの取得期間。画面は「直近2か月」（index.html の isWithinMonths(…, 2)）なので少し広めに取る。
+NEWS_WINDOW_DAYS = 62
 EXPERIENCE_MAX = 200
 SHOP_MAX = 100
 ORG_MAX = 50
@@ -209,10 +214,12 @@ def query_data_source(
     token: str,
     sorts: list[dict[str, Any]],
     max_total: int,
+    filter_: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     """data_sources/{id}/query をページネーションしながら呼び出す。
 
-    最大 max_total 件まで取得する。
+    最大 max_total 件まで取得する。filter_ は Notion の filter オブジェクト（省略時は全件）。
+    上限に届いて続きが残っている場合は警告を出す（黙って切り捨てない）。
     """
     results: list[dict[str, Any]] = []
     cursor: str | None = None
@@ -221,6 +228,8 @@ def query_data_source(
             "page_size": min(100, max_total - len(results)),
             "sorts": sorts,
         }
+        if filter_:
+            body["filter"] = filter_
         if cursor:
             body["start_cursor"] = cursor
         res = http_request(
@@ -235,6 +244,8 @@ def query_data_source(
         cursor = res.get("next_cursor")
         if not cursor:
             break
+        if len(results) >= max_total:
+            print(f"[警告] 取得上限 {max_total} 件に達しました。続きは取得していません（上限の見直しが必要）")
     return results[:max_total]
 
 
@@ -702,19 +713,22 @@ def filter_events(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def fetch_news(token: str) -> list[dict[str, Any]]:
     """ニュースDBを取得し、「表示対象」チェック済みの項目のみ返す。
 
-    notion-data.js はPhase2で公開予定のファイルのため、非表示指定の
-    記事はそもそも書き出さない（公開事故防止）。並びは公開日降順を
-    維持する。
-    注意: 現状 NEWS_MAX（先頭 max_total 件）を取得してから絞り込む
-    ため、DB全体の件数が NEWS_MAX を超え、かつ表示対象チェック済みが
-    NEWS_MAX 件目より後ろに偏っていると漏れる可能性がある。現時点は
-    総件数がNEWS_MAX未満のため実害は無いが、将来DBが増えて超えたら
-    Notion側フィルタ（data_sources.query の filter で「表示対象」を
-    直接絞る）への切り替えを検討すること。
+    notion-data.js は公開ファイルのため、非表示指定の記事はそもそも
+    書き出さない（公開事故防止）。並びは公開日降順を維持する。
+    絞り込みは Notion 側で行う（「表示対象」✓ かつ 公開日が直近
+    NEWS_WINDOW_DAYS 日以内）。以前は先頭 60 件を取ってから絞っていたため、
+    非表示の記事が多い時期に表示対象の記事が押し出されていた。
     """
     dsid = get_data_source_id(NEWS_DB_ID, token)
     sorts = [{"property": "公開日", "direction": "descending"}]
-    pages = query_data_source(dsid, token, sorts, NEWS_MAX)
+    since = (datetime.now(JST).date() - timedelta(days=NEWS_WINDOW_DAYS)).isoformat()
+    filter_ = {
+        "and": [
+            {"property": "表示対象", "checkbox": {"equals": True}},
+            {"property": "公開日", "date": {"on_or_after": since}},
+        ]
+    }
+    pages = query_data_source(dsid, token, sorts, NEWS_MAX, filter_)
     items = [parse_news(p) for p in pages]
     return [item for item in items if item.get("show")]
 
@@ -757,7 +771,18 @@ def resolve_place_names(items: list[dict[str, Any]], token: str) -> None:
 def fetch_events(database_id: str, token: str) -> list[dict[str, Any]]:
     dsid = get_data_source_id(database_id, token)
     sorts = [{"property": "開催日時（開始）", "direction": "descending"}]
-    pages = query_data_source(dsid, token, sorts, EVENT_MAX)
+    # filter_events と同じ範囲を Notion 側で先に絞る（開始が直近 RECENT_WINDOW_DAYS 日以降、
+    # または終了が今日以降＝長期開催中）。開始日・終了日とも空の行はここで外れる
+    # （日付が無いと実施前/終了を判定できず「今後の予定」に出続けるため掲載しない）。
+    today = datetime.now(JST).date()
+    since = (today - timedelta(days=RECENT_WINDOW_DAYS)).isoformat()
+    filter_ = {
+        "or": [
+            {"property": "開催日時（開始）", "date": {"on_or_after": since}},
+            {"property": "開催日時（終了）", "date": {"on_or_after": today.isoformat()}},
+        ]
+    }
+    pages = query_data_source(dsid, token, sorts, EVENT_MAX, filter_)
     items = [parse_event(p) for p in pages]
     items = filter_events(items)
     # 絞り込み後に会場名を解決する（対象件数を減らしてAPIコールを節約）

@@ -54,6 +54,9 @@ window.SITE_WIDGETS_DATA = {
        表示レイヤーはURLに固定済み）。四国の水がめに雨が降っているかを見る用途。
        PC版パス(/kawabou/pc/)。スマホでの見え方が窮屈なら /kawabou/sp/ に差し替える（同じパラメータで開ける） */
   dam: {
+    /* 更新が止まった時（観測から36時間超）に「最新の貯水状況を見る」で案内する先。
+       水資源機構「リアルタイム水源情報」の早明浦ダムのリンク先と同じ（2026-11-11確認）。 */
+    currentUrl: "https://www.river.go.jp/kawabou/pcfull/tm?itmkndCd=7&ofcCd=22552&obsCd=4&isCurrent=true&fld=0",
     relatedLinks: [
       { label: "📷 ダムのライブカメラ", url: "https://www.water.go.jp/yoshino/ikeda/" },
       { label: "🌧 ダム周辺の雨量", url: "https://www.river.go.jp/kawabou/pc/tm?zm=10&clat=33.720913019358676&clon=133.46122741699222&fld=0&mapType=0&viewGrpStg=0&viewRd=1&viewRW=1&viewRiver=1&viewPoint=1&ext=0&ofcCd=22552&itmkndCd=7&obsCd=4&viewRl=1&viewRn=1" }

@@ -82,7 +82,7 @@
     { "dest": "discord", "src": "lineoc", "placed": null, "note": "LINE OC ことひらいふ の使い方ノート（本人作業）" },
     { "dest": "discord", "src": "suki", "placed": null, "note": "#好きがコトひらく町 に本人が投稿する時だけ" },
     { "dest": "discord", "src": "fb", "placed": null, "note": "Facebook グループに本人が投稿する時だけ" },
-    { "dest": "chomin", "src": "site", "placed": "2026-11-03", "note": "リンク集の琴平デジタル町民カード（links-data.js）" },
+    { "dest": "chomin", "src": "site", "placed": "2026-11-03", "note": "リンク集の琴平デジタル町民カード（links-data.js）＋体験・滞在の先頭カード（experiences-data.js・2026-11-11）" },
     { "dest": "chomin", "src": "dc", "placed": null, "note": "Discord「はじめに」の固定（本人作業）" }
   ]
 }

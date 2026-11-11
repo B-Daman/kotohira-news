@@ -371,6 +371,8 @@
   .dam-rate-num{font-size:30px;font-weight:900;line-height:1;color:#1d75b3}
   .dam-rate-pct{font-size:16px;font-weight:900;margin-left:1px}
   .dam-rate-label{font-size:11px;color:var(--sub);font-weight:700}
+  .dam-stale{font-size:12px;line-height:1.6;color:#7a4b00;background:#fff6e0;border:1px solid #f0d28a;border-radius:8px;padding:8px 10px;margin:0 0 10px}
+  .dam-rate-old .dam-rate-num{color:var(--sub)}
   .dam-chart{margin:2px 0 10px;padding:8px 8px 4px;background:#f6f9fc;border-radius:8px}
   .dam-chart svg{display:block;max-width:340px;margin:0 auto}
   .dam-chart-head{display:flex;justify-content:space-between;gap:8px;font-size:11px;font-weight:700;color:#4d5b69;margin-bottom:2px}
@@ -1061,8 +1063,8 @@ const MEDIA_CLASS = {
   "note":"note", "Instagram":"instagram", "X":"x", "HP":"website",
   "新聞":"newspaper", "テレビ":"tv", "行政":"gov", "Webメディア":"webmedia", "その他":"other"
 };
-const NOTION_EMPTY_MSG = "Notion連携が未設定です。scripts/fetch_notion.py を実行すると表示されます。";
-const EXPERIENCE_EMPTY_MSG = "体験・滞在の情報は準備中です。Notionで体験・滞在DBを作成し、EXPERIENCE_NOTION_DB_ID を設定して scripts/fetch_notion.py を実行すると表示されます。";
+const NOTION_EMPTY_MSG = "ただいま情報を準備しています。";
+const EXPERIENCE_EMPTY_MSG = "体験・滞在の情報は準備中です。";
 /* 種別ごとの絵文字・表示順（体験・滞在タブのグループ見出しと欠損時プレースホルダで共用） */
 const EXPERIENCE_CATS = ["体験プログラム","お手伝い滞在","移住・行政"];
 const EXPERIENCE_EMOJI = {"体験プログラム":"🎨","お手伝い滞在":"🤝","移住・行政":"🏛"};
@@ -1296,15 +1298,17 @@ function render(opt){
 function pageTitleMeta(view){
   const experienceUpdated = (Array.isArray(ND_RAW.experiences) && ND_RAW.experiences.length)
     ? ND.fetched : (window.EXPERIENCES_DATA?.updated || "");
+  /* 手編集データの確認日。180日を過ぎたら「情報が古い可能性」を添える（運用手順 H-7） */
+  const checkedMeta = d => d ? `確認 ${fmtDate(d)}${isOlderThanDays(d, 180) ? "（情報が古い可能性があります）" : ""}` : "";
   const values = {
     news:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
     events:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
     campaigns:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
     experiences:experienceUpdated ? `更新 ${fmtDate(experienceUpdated)}` : "",
-    udon:UDON_PUBLISHED ? [`${(UDON.items || []).filter(x=>x.show !== false).length}件`, UDON.checked ? `確認 ${fmtDate(UDON.checked)}` : ""].filter(Boolean).join(" · ") : "",
-    sweets:[`${(COOL_SWEETS.items || []).filter(x=>x.show !== false).length}店`, COOL_SWEETS.checked ? `確認 ${fmtDate(COOL_SWEETS.checked)}` : ""].filter(Boolean).join(" · "),
-    parking:[`${(PARKING.items || []).filter(x=>x.show !== false).length}件`, PARKING.checked ? `確認 ${fmtDate(PARKING.checked)}` : ""].filter(Boolean).join(" · "),
-    orgs:D.updated ? `更新 ${fmtDate(D.updated)}` : "",
+    udon:UDON_PUBLISHED ? [`${(UDON.items || []).filter(x=>x.show !== false).length}件`, checkedMeta(UDON.checked)].filter(Boolean).join(" · ") : "",
+    sweets:[`${(COOL_SWEETS.items || []).filter(x=>x.show !== false).length}店`, checkedMeta(COOL_SWEETS.checked)].filter(Boolean).join(" · "),
+    parking:[`${(PARKING.items || []).filter(x=>x.show !== false).length}件`, checkedMeta(PARKING.checked)].filter(Boolean).join(" · "),
+    orgs:ND.fetched ? `更新 ${fmtDate(ND.fetched)}` : "",
     links:LINKS.updated ? `更新 ${fmtDate(LINKS.updated)}` : ""
   };
   return values[view] || "";
@@ -1989,7 +1993,7 @@ function orgDetailHTML(o){
       <p class="desc">${esc(o.summary||"")}</p>
       <div class="links org-badges">${linkBadges(o.links)}</div>
     </div>
-    ${sectionsHtml || emptyMsg("まだ発信がありません。registry.json にRSSや投稿URLを登録すると、ここに媒体ごとのセクションが並びます。")}`;
+    ${sectionsHtml || emptyMsg("まだ発信がありません。")}`;
 }
 /* 団体詳細ページの団体切替プルダウン。表示対象の全団体（ND.orgs）を選べ、選択で
    既存のハッシュルーティングに乗せて#org=<id>へ遷移する（配線はonMainInputのchange/input）。
@@ -3636,6 +3640,7 @@ function renderCommunityWidgets(){
    関連リンク（ライブカメラ・雨量マップ）は生成物のdam-data.jsではなく、手編集の
    site-widgets-data.js（WIDGETS.dam.relatedLinks＝{label,url}の配列・上から順）から読み、
    labelが空かurlがhttp(s)以外の項目は落とす。設定が無ければ空配列＝リンク行ごと非表示。 */
+const DAM_STALE_HOURS = 36;
 function damContent(){
   if(!DAM) return null;
   const m = ("" + (DAM.observedAt || "")).match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/);
@@ -3655,6 +3660,11 @@ function damContent(){
     inflowText: fmtNum(DAM.inflow, 1) + " m³/s",
     outflowText: fmtNum(DAM.outflow, 1) + " m³/s",
     observedLabel: `${+m[2]}月${+m[3]}日 ${+m[4]}時時点（速報値）`,
+    /* 取得は1日2回。観測から DAM_STALE_HOURS を超えたら「更新が止まっている」とみなし、
+       古い値を今の値のように見せない（2026-11 に取得元の廃止で1週間止まったまま表示された）。 */
+    stale: (Date.now() - new Date(+m[1], +m[2]-1, +m[3], +m[4], +m[5]).getTime()) > DAM_STALE_HOURS * 3600000,
+    staleLabel: `${+m[2]}月${+m[3]}日 ${+m[4]}時`,
+    currentUrl: safeUrl(damCfg.currentUrl),
     sourceUrl: safeUrl(DAM.sourceUrl),
     relatedLinks,
     history: damHistoryPoints()
@@ -3709,6 +3719,11 @@ function damHistoryChartHTML(points){
    だけにする（出典もリンク行に並べると「川の防災情報」が2本並んで区別がつかないため）。
    カード枠（widget-card）やチップパネルの外枠は呼び出し側が用意する。 */
 function damBodyHTML(c){
+  if(c.stale){
+    return `<p class="dam-stale" role="note">⚠ データの更新が止まっています。下の数値は <strong>${esc(c.staleLabel)}</strong> の観測値で、現在の値ではありません。${c.currentUrl ? `<br><a class="widget-link" href="${esc(c.currentUrl)}" target="_blank" rel="noopener">最新の貯水状況を見る（川の防災情報）↗</a>` : ""}</p>
+    <div class="dam-rate dam-rate-old"><span class="dam-rate-num">${esc(c.rateText)}<span class="dam-rate-pct">%</span></span><span class="dam-rate-label">${esc(c.staleLabel)}の${esc(c.rateLabel)}</span></div>
+    ${c.relatedLinks.length ? `<div class="widget-links">${c.relatedLinks.map(l => `<a class="widget-link" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}`;
+  }
   return `<div class="dam-rate"><span class="dam-rate-num">${esc(c.rateText)}<span class="dam-rate-pct">%</span></span><span class="dam-rate-label">${esc(c.rateLabel)}</span></div>
     ${damHistoryChartHTML(c.history)}
     <div class="dam-rows">
@@ -4009,7 +4024,9 @@ function renderDamChip(){
     closeDamChipPanel();
     return;
   }
-  chip.innerHTML = `<span aria-hidden="true">💧</span><span>${esc(c.rateText)}%</span>`;
+  chip.innerHTML = c.stale
+    ? `<span aria-hidden="true">💧</span><span aria-label="早明浦ダムのデータは更新停止中">—</span>`
+    : `<span aria-hidden="true">💧</span><span>${esc(c.rateText)}%</span>`;
   chip.classList.add("ready");
   const panelBody = document.getElementById("damChipPanelBody");
   if(panelBody) panelBody.innerHTML = damBodyHTML(c);
