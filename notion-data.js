@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-11 05:34",
+  "fetched": "2026-11-11 10:25",
   "news": [
+    {
+      "id": "4150b4e5-ff5b-81ef-b85d-eb226445255a",
+      "title": "令和8年12月定例会会期日程について",
+      "url": "https://www.town.kotohira.kagawa.jp/site/gikai/4763.html",
+      "summary": "琴平町議会の令和8年12月定例会の会期日程が予定されている。詳細はPDFファイルで確認できる。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-11-10",
+      "thumbnail": "assets/thumbs/4150b4e5ff5b81efb85deb226445255a.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4130b4e5-ff5b-8161-80ed-d908737269be",
       "title": "琴平町で「第2弾 街ガチャ in 琴平町」が販売されてる！地元の高校生がデザインした全11種類でシークレットデザインも！",
