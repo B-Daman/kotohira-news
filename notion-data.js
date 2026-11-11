@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-11 12:01",
+  "fetched": "2026-11-11 17:14",
   "news": [
     {
       "id": "4150b4e5-ff5b-81e2-88a6-e9b726f1e201",
@@ -1304,11 +1304,30 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "4150b4e5-ff5b-8065-bf62-c08e8a245b51",
+      "title": "わん詣2027 ペット初詣・ペットマーケット 2日目",
+      "url": "https://www.instagram.com/p/DfgPqudOCPv/",
+      "start": "2027-01-31T00:00",
+      "end": "2027-01-31T23:59",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/4150b4e5ff5b8065bf62c08e8a245b51.webp",
+      "comment": "会場: 金刀比羅宮、金陵の郷（香川県琴平町） 琴平町の金刀比羅宮で、愛犬と一緒に参拝・初詣ができる「わん詣2027」が開催されます。ペット初詣、ペットマーケット、愛犬との写真撮影などが予定されており、金陵の郷でも併催されます。",
+      "fee": "0",
+      "organizer": "ペット参拝わんちゃんを楽しむ会",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": true
+    },
+    {
       "id": "4130b4e5-ff5b-81b0-8dc5-d49da5a975e4",
-      "title": "わん詣2027 ペット初詣・ペットマーケット",
+      "title": "わん詣2027 ペット初詣・ペットマーケット 1日目",
       "url": "https://www.instagram.com/p/DfgPqudOCPv/",
       "start": "2027-01-30T00:00",
-      "end": "2027-01-31T23:59",
+      "end": "2027-01-30T23:59",
       "status": "実施前",
       "city": "琴平町",
       "place": "金陵の郷",
@@ -2007,6 +2026,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "4150b4e5-ff5b-8110-b725-f684d040c53b",
+      "title": "VISPO FEST 2026 みんなで楽しむスポーツ＆地域フェス",
+      "url": "https://www.instagram.com/p/DfgtSpwkQPg/?img_index=1",
+      "start": "2026-11-29T10:00",
+      "end": "2026-11-29T16:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "ヴィスポことひら",
+      "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
+      "image": "assets/thumbs/4150b4e5ff5b8110b725f684d040c53b.webp",
+      "comment": "会場: いこいの郷公園・VISPOことひら 琴平町のいこいの郷公園・VISPOことひらで開催される地域フェス。体力測定チャレンジ、ステージイベント、スポーツ体験、グルメ、ハンドメイド雑貨、車両展示など、子どもから大人まで楽しめる企画が盛りだくさん。スタンプラリー大抽選会も開催。",
+      "fee": "0",
+      "organizer": "VISPO",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
       "id": "4040b4e5-ff5b-81dd-966f-f167c6fef95d",
       "title": "ことウラさんぽ モニター参加者募集",
       "url": "https://www.instagram.com/p/DerDE-6kUdE/",
@@ -2142,7 +2180,7 @@ window.NOTION_DATA = {
     {
       "id": "4110b4e5-ff5b-8092-a84f-f192a16eaeab",
       "title": "ご飯ついでに、国際交流～みんなでカレーを囲みながら世界の人たちと気軽に交流",
-      "url": "https://www.instagram.com/p/DeQj2igEdrF/",
+      "url": "https://www.instagram.com/p/DfjCYMpNuK_/",
       "start": "2026-11-27T18:30",
       "end": "2026-11-27T21:00",
       "status": "実施前",
