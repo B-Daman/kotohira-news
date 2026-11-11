@@ -609,6 +609,38 @@ def save_images(items: list[dict[str, Any]], field: str) -> tuple[int, int]:
     return total, success
 
 
+# 同じ中身の画像をこの件数以上のニュースが使っていたら、媒体や町のロゴ等の汎用画像とみなす
+GENERIC_THUMB_MIN = 3
+
+
+def mark_generic_thumbnails(items: list[dict[str, Any]]) -> int:
+    """ロゴ等の汎用サムネに thumbGeneric=True を付け、付けた件数を返す。
+
+    記事元の og:image がサイトのロゴ（町のロゴ・新聞社のロゴ等）のとき、どの記事も
+    同じ画像になり見分ける手がかりにならない。保存済みファイルの中身のハッシュが
+    GENERIC_THUMB_MIN 件以上で一致したものを汎用画像とみなす。サイト側は
+    thumbGeneric の記事を画像の代わりに媒体の色の四角で表示する。
+    """
+    by_hash: dict[str, list[dict[str, Any]]] = {}
+    for item in items:
+        path = item.get("thumbnail", "")
+        if not path.startswith("assets/"):
+            continue
+        try:
+            with open(os.path.join(REPO_ROOT, *path.split("/")), "rb") as f:
+                digest = hashlib.sha1(f.read()).hexdigest()
+        except OSError:
+            continue
+        by_hash.setdefault(digest, []).append(item)
+    marked = 0
+    for group in by_hash.values():
+        if len(group) >= GENERIC_THUMB_MIN:
+            for item in group:
+                item["thumbGeneric"] = True
+            marked += len(group)
+    return marked
+
+
 def parse_news(page: dict[str, Any]) -> dict[str, Any]:
     properties = page.get("properties", {})
     return {
@@ -988,7 +1020,7 @@ def rss_pubdate_to_ymd(pub_date: str) -> str:
     return dt.strftime("%Y-%m-%d")
 
 
-def fetch_note_rss(note_profile_url: str, max_items: int = 10) -> list[dict[str, Any]]:
+def fetch_note_rss(note_profile_url: str, max_items: int = 10) -> list[dict[str, Any]] | None:
     """noteプロフィールURLから自動導出したRSSを取得し、テキスト系媒体items形式へ変換する。
 
     標準ライブラリのみ（urllib + xml.etree、feedparser等のpip依存なし）。
@@ -1000,6 +1032,9 @@ def fetch_note_rss(note_profile_url: str, max_items: int = 10) -> list[dict[str,
     Ameblo等の他テキスト媒体は現DBに該当団体が無いため未実装。導入する場合は
     ここと同じ要領で「https://ameblo.jp/xxx」→ Ameblo公式のRSS URL規則（要確認）
     への変換関数を追加し、fetch_orgs側でsource="ameblo"のitemsとして混ぜ込めばよい。
+
+    取得・パースに失敗した時は None を返す（記事が0件の [] と区別する。
+    呼び出し側は None の時に前回の記事を残す）。
     """
     rss_url = note_profile_to_rss(note_profile_url)
     if not rss_url:
@@ -1011,12 +1046,12 @@ def fetch_note_rss(note_profile_url: str, max_items: int = 10) -> list[dict[str,
             raw = res.read()
     except Exception as e:
         print(f"[警告] note RSSの取得に失敗しました（{rss_url}）: {type(e).__name__}")
-        return []
+        return None
     try:
         root = ET.fromstring(raw)
     except ET.ParseError as e:
         print(f"[警告] note RSSのパースに失敗しました（{rss_url}）: {e}")
-        return []
+        return None
 
     ns = {"media": "http://search.yahoo.com/mrss/"}
     items: list[dict[str, Any]] = []
@@ -1067,6 +1102,10 @@ def fetch_orgs(token: str) -> list[dict[str, Any]]:
     for p in posts:
         posts_by_org.setdefault(p["org_id"], []).append(p)
 
+    # note の取得に失敗した団体は、前回の notion-data.js にある記事を残す（失敗で投稿が消えないように）
+    previous_items = {
+        o.get("id"): o.get("items", []) for o in load_existing_data().get("orgs", [])
+    }
     note_total = 0
     for o in orgs:
         org_posts = posts_by_org.get(o["id"], [])
@@ -1079,6 +1118,11 @@ def fetch_orgs(token: str) -> list[dict[str, Any]]:
         note_url = o["links"].get("note", "")
         if note_url:
             rss_items = fetch_note_rss(note_url)
+            if rss_items is None:
+                rss_items = [
+                    i for i in previous_items.get(o["id"], []) if i.get("source") == "note"
+                ]
+                print(f"note RSS: 取得失敗のため前回の記事を残します（{o.get('name', '')}・{len(rss_items)}件）")
             items.extend(rss_items)
             note_total += len(rss_items)
         save_images(items, "thumbnail")
@@ -1163,6 +1207,10 @@ def main() -> None:
                 t, s = save_images(items, image_field)
                 image_total += t
                 image_success += s
+                if key == "news":
+                    generic = mark_generic_thumbnails(items)
+                    if generic:
+                        print(f"news: ロゴ等の汎用サムネを{generic}件判定しました")
             result[key] = items
             print(f"{key}: {len(items)}件取得しました")
         except urllib.error.HTTPError as e:

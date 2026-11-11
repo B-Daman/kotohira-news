@@ -137,6 +137,16 @@ window.SITE_WIDGETS_DATA = {
     }
   ],
 
+  /* ホームの見出しの帯に敷く絵（2026-11-12）。画像のパスを入れるとその区画の帯が絵に替わる。空のままならテーマ色の帯。
+     絵は横3：縦2（1536×1024px）のままでよい。帯には上下の中央（横5：縦1の範囲）だけが見える。
+     その範囲の左24%までに絵柄、その右は題名を重ねるための無地の空きにする。
+     生成プロンプト: SecondBrain/03_Resources/agent-outputs/kotohilife/plan/2026-11-12_見出し帯イラスト_プロンプト.yaml */
+  sectionBanners: {
+    news: "",
+    events: "",
+    campaigns: ""
+  },
+
   footerLinks: {
     privacyPolicyUrl: "privacy.html",
     operatorUrl: "operator.html",

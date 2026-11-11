@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
 <script src="data.js"></script>
 <script src="notion-data.js"></script>
 <script src="links-data.js"></script>
@@ -36,8 +36,11 @@
 <!-- Instagram/X の埋め込みスクリプトはここでは読み込まない。表示時にのみ動的注入する（ensureIgScript/ensureTwttrScript） -->
 <style>
   :root{
-    --bg:#faf8f4; --card:#ffffff; --line:#e7e1d6; --ink:#2c2622; --sub:#7a7066;
+    --bg:#fbf1e2; --card:#ffffff; --line:#e7e1d6; --ink:#3F444A; --sub:#6a6157;
     --accent:#c8472f; --accent-d:#a3381f; --accent-soft:#fbe9e4;
+    /* テーマ（2026-11-12）：採用済みブランド（kotohilife\brand\README.md）の色。空＝青灰、墨、だし色、のれんの深緑、藍＝空を濃くした色 */
+    --sky:#9DBBC2; --sky-soft:#e3edef; --sky-line:#86a7af; --sky-soft-line:#c3d6da; --dashi:#b9701c; --noren:#2f6650; --ai:#3d6f7d;
+    --head-font:"Zen Maru Gothic","Noto Sans JP",sans-serif;
     /* --note/--web/--yt/--ameblo/--media-tv/--media-gov/--media-other は
        白文字バッジのコントラスト比AA(4.5:1)を満たす調整値。他は初代のまま */
     --note:#258475; --ig:#c13584; --x:#1d1d1f; --web:#3170eb; --yt:#df3047; --ameblo:#298542;
@@ -61,18 +64,44 @@
   a{color:var(--accent-d);text-decoration:none}
 
   /* 上部固定バー＋ホバー／フォーカスで開く2階層ナビ */
-  .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
-    backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid var(--line)}
+  /* 上の帯は絵の空と同じ青灰。下に白い線を入れて本文と区切る（2026-11-12） */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(157,187,194,.96);
+    backdrop-filter:saturate(180%) blur(6px);border-bottom:4px solid #fff;
+    box-shadow:0 1px 0 var(--sky-line),0 3px 8px rgba(63,68,74,.10)}
   /* ヘッダーは全幅（参考サイト調査より）。コンテンツ本体のみ幅を絞る */
   .topbar-inner{padding:10px 20px 0}
   .brandrow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .brand{font-weight:900;font-size:22px;color:var(--accent-d)}
-  .brand small{color:var(--sub);font-weight:500;font-size:13.5px;margin-left:10px}
+  .brand{font-weight:900;font-size:22px;color:var(--ink);font-family:var(--head-font)}
+  .brand small{color:var(--ink);opacity:.88;font-weight:700;font-size:13.5px;margin-left:10px}
   /* ヘッダー右側の天気チップ＋ハンバーガー。PCでは常に非表示（≤720pxの@mediaで出す） */
   .topbar-actions{display:none}
+  /* サイト内検索（2026-11-12）。PCは上の帯の右に入力欄、スマホはメニュー（ドロワー）を開いた一番上に入力欄 */
+  .drawer-search{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+  .drawer-search input{flex:1;min-width:0;padding:9px 14px;border:1px solid var(--sky-line);border-radius:999px;font-size:16px;
+    background:#fff;color:var(--ink);font-family:inherit}
+  .drawer-search input:focus{outline:2px solid var(--ink);outline-offset:1px}
+  .drawer-search button{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:9px 16px;font-size:14px;font-weight:700;
+    cursor:pointer;font-family:inherit;white-space:nowrap}
+  .site-search{display:flex;align-items:center;gap:6px;margin-left:auto}
+  .site-search input{width:230px;padding:7px 14px;border:1px solid var(--sky-line);border-radius:999px;font-size:14px;
+    background:#fff;color:var(--ink);font-family:inherit}
+  .site-search input:focus{outline:2px solid var(--ink);outline-offset:1px}
+  .site-search button{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:700;
+    cursor:pointer;font-family:inherit;white-space:nowrap}
+  .site-search button:hover{background:#2c3035}
+  .search-page-form{display:flex;gap:8px;margin:0 0 6px;flex-wrap:wrap}
+  .search-page-form input{flex:1;min-width:0;max-width:560px;padding:11px 16px;border:2px solid var(--sky-line);border-radius:12px;
+    font-size:16px;background:#fff;color:var(--ink);font-family:inherit}
+  .search-page-form input:focus{outline:2px solid var(--ink);outline-offset:1px}
+  .search-summary{font-size:14px;color:var(--ink);margin:10px 2px 4px;font-weight:700}
+  .search-hint{font-size:13.5px;color:var(--sub);margin:6px 2px 0;line-height:1.7}
+  .search-more{font-size:13px;color:var(--sub);padding:8px 14px;border-top:1px solid var(--line)}
+  .search-results .group-h{margin-top:22px}
+  .search-results a.news-row{text-decoration:none;color:inherit}
+  .search-results .nr-sub{font-size:13px;color:var(--sub);line-height:1.6;margin-top:2px}
   .primary-nav{display:flex;gap:7px;padding:10px 0 6px;overflow:visible}
   .primary-nav-item{position:relative;flex:0 0 auto}
-  .primary-tab{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);
+  .primary-tab{width:100%;border:1px solid transparent;background:rgba(255,255,255,.84);color:var(--ink);font-family:var(--head-font);
     border-radius:10px;padding:8px 15px;font-size:14px;font-weight:900;cursor:pointer;
     white-space:nowrap;transition:.12s;font-family:inherit}
   .primary-tab:hover{background:var(--accent-soft);color:var(--accent-d)}
@@ -173,7 +202,7 @@
   .org-name{font-weight:700;color:var(--accent-d)}
 
   /* 出典・媒体バッジ（団体items由来 / Notionニュース由来 共用） */
-  .src{display:inline-block;border-radius:5px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap}
+  .src{display:inline-block;border-radius:5px;padding:1px 8px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
   .src.note{background:var(--note)} .src.instagram{background:var(--ig)} .src.x{background:var(--x)}
   .src.website{background:var(--web)} .src.youtube{background:var(--yt)} .src.ameblo{background:var(--ameblo)}
   .src.newspaper{background:var(--media-newspaper)} .src.tv{background:var(--media-tv)}
@@ -182,30 +211,35 @@
   /* プレースホルダサムネ共通（.src と組み合わせて背景色をつける） */
   .ph{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
 
-  .badge-new{background:var(--accent);color:#fff;border-radius:5px;padding:1px 7px;font-size:10.5px;font-weight:900}
-  .badge-dup{background:#d8d0c4;color:#5c554c;border-radius:5px;padding:1px 7px;font-size:10.5px;font-weight:700}
+  .badge-new{background:var(--accent);color:#fff;border-radius:5px;padding:1px 7px;font-size:12px;font-weight:900}
+  .badge-dup{background:#d8d0c4;color:#5c554c;border-radius:5px;padding:1px 7px;font-size:12px;font-weight:700}
   .pickup-section{margin-bottom:26px}
   .pickup-section .feed-item{border-color:var(--accent)}
 
-  /* 最新ニュース：通常ニュースと明確に差をつける大きめのフィーチャーカード */
-  .pf-grid{display:flex;flex-direction:column;gap:14px}
-  .pf-card{display:flex;gap:16px;background:var(--card);border:2px solid var(--accent);border-radius:16px;
-    padding:14px;text-decoration:none;color:inherit;transition:box-shadow .12s;cursor:pointer;outline:none}
-  .pf-card:hover{box-shadow:0 4px 16px rgba(200,71,47,.18)}
-  .pf-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .pf-img{width:180px;height:120px;object-fit:cover;border-radius:12px;flex:0 0 180px;background:#eee;font-size:34px}
-  .pf-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;justify-content:center}
-  .pf-meta{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .pf-title{font-size:17px;font-weight:900;line-height:1.45}
-  .pf-summary{font-size:13px;color:var(--sub);line-height:1.6}
-  @media (max-width:480px){
-    .pf-card{flex-direction:column}
-    .pf-img{width:100%;flex:0 0 auto;aspect-ratio:16/9;height:auto}
+  /* ニュースの行（ホームとニュースタブで共用。小さいサムネ＋日付・媒体バッジ＋見出し。見出しは折り返す）。
+     2026-11-12：大きいサムネのカード（ホームのカルーセル・最新1件の大カード・ギャラリー）を廃止し、
+     小さいサムネ付きの一覧に統一。サムネは見分ける手がかりとして残し、主役は見出しにする */
+  .news-list{border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+  .news-row{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line);cursor:pointer;outline:none}
+  .news-row:last-child{border-bottom:none}
+  .news-row:hover{background:var(--accent-soft)}
+  .news-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .nr-img{flex:0 0 96px;width:96px;height:72px;object-fit:cover;border-radius:8px;background:#eee;font-size:24px}
+  .nr-body{flex:1;min-width:0}
+  .nr-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--ink);margin-bottom:4px}
+  .nr-title{font-size:15.5px;font-weight:700;line-height:1.55}
+  .nr-summary{display:none}
+  .news-month{font-size:14px;font-weight:900;color:var(--sub);margin:22px 2px 8px}
+  .news-month:first-child{margin-top:0}
+  @media (min-width:721px){
+    .news-row{gap:16px;padding:14px 16px}
+    .nr-img{flex-basis:168px;width:168px;height:105px;border-radius:10px;font-size:34px}
+    .nr-title{font-size:17px}
+    .news-list.full .nr-summary{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+      font-size:13.5px;color:var(--sub);line-height:1.6;margin-top:4px}
+    /* ホームは件数が少ないので、PCでもサムネを小さめに保つ */
+    .hs-news .nr-img{flex-basis:120px;width:120px;height:75px}
   }
-
-  /* ニュース：②リストは5行程度に固定し縦スクロール */
-  .compact-list-scroll{max-height:200px;overflow-y:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
-  .compact-list-scroll .compact-row{padding:8px 10px}
 
   /* 行クランプ（2行） */
   .clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -217,24 +251,33 @@
     cursor:pointer;outline:none}
   .ev-card:hover{border-color:var(--accent)}
   .ev-card:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-  .ev-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;display:block}
+  /* PCは横に細長い帯の画像（見分ける手がかり）。スマホは下の@mediaで小さい画像＋文字の横並びにする */
+  .ev-img{width:100%;aspect-ratio:5/2;object-fit:cover;background:#eee;display:block}
   .ev-img.ph{display:flex;font-size:30px;color:var(--sub);background:#f1ece2}
   .ev-img.fit-contain,.modal-img.fit-contain{object-fit:contain;background:#fff}
   .ev-body{padding:12px 14px;display:flex;flex-direction:column;gap:4px}
   .ev-status-badge{display:inline-block;background:var(--accent);color:#fff;border-radius:5px;padding:1px 8px;
-    font-size:10.5px;font-weight:900;margin-bottom:2px;align-self:flex-start}
+    font-size:12px;font-weight:900;margin-bottom:2px;align-self:flex-start}
   .ev-status-badge.upcoming{background:var(--accent-soft);color:var(--accent-d)}
   .ev-status-badge.ended{background:#d8d0c4;color:#5c554c}
-  .ev-title{font-size:14.5px;font-weight:700;line-height:1.5}
-  .ev-meta{font-size:12.5px;color:var(--sub)}
-  .ev-comment{font-size:12.5px;color:#43403b;margin-top:4px}
+  .ev-when{font-size:15px;font-weight:900;color:var(--ink);line-height:1.45}
+  .ev-title{font-size:15.5px;font-weight:700;line-height:1.5}
+  .ev-meta{font-size:13px;color:var(--sub)}
+  .ev-more{font-size:13px;font-weight:700;color:var(--ink)}
+  .ev-comment{font-size:13px;color:#43403b;margin-top:4px}
+  @media (max-width:720px){
+    /* スマホ：画像を小さくして左に置き、日時・題名・場所を右に並べる（1画面に複数件入れる） */
+    .ev-card{flex-direction:row;align-items:flex-start;gap:12px;padding:12px}
+    .ev-img{flex:0 0 104px;width:104px;aspect-ratio:4/3;border-radius:8px}
+    .ev-body{padding:0;flex:1;min-width:0}
+  }
   .ended-section{margin-top:22px}
   .ended-section summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--sub);padding:8px 0}
   .ended-section[open] summary{margin-bottom:6px}
 
   /* 🅿 駐車場タブ：裏取り（confidence）バッジ。◎確認済み=緑／○一部確認=青／△要確認=目立つ赤。
      カード左上に置くため .ev-status-badge と同じ位置取り。既存CSSは最大限流用し追加はこれのみ */
-  .conf-badge{display:inline-block;border-radius:5px;padding:1px 8px;font-size:10.5px;font-weight:900;
+  .conf-badge{display:inline-block;border-radius:5px;padding:1px 8px;font-size:12px;font-weight:900;
     align-self:flex-start;margin-bottom:2px}
   .conf-high{background:var(--media-gov);color:#fff}   /* ◎ 一次確認済み */
   .conf-medium{background:var(--web);color:#fff}       /* ○ 一部裏取り */
@@ -245,8 +288,8 @@
      .lg はモーダル用の一回り大きい版（modal-badge と並べる）。 */
   .badge-row{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:2px}
   .badge-row .ev-status-badge{margin-bottom:0}
-  .open-badge{display:inline-block;border-radius:5px;padding:1px 8px;font-size:10.5px;font-weight:900}
-  .open-badge.lg{padding:3px 10px;font-size:11.5px;border-radius:6px}
+  .open-badge{display:inline-block;border-radius:5px;padding:1px 8px;font-size:12px;font-weight:900}
+  .open-badge.lg{padding:3px 10px;font-size:12px;border-radius:6px}
   .open-badge.open{background:var(--media-gov);color:#fff}
   .open-badge.pre{background:var(--accent-soft);color:var(--accent-d)}
   .open-badge.closed-today,.open-badge.after{background:#d8d0c4;color:#5c554c}
@@ -271,10 +314,17 @@
   .lc-img.ph{display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:var(--sub)}
   .lc-body{padding:12px 16px 4px}
   .lc-sns{padding:2px 16px 12px;margin-top:auto}
+  @media (max-width:720px){
+    .lc-main{display:flex;align-items:flex-start;gap:12px;padding:12px 12px 6px}
+    .lc-img{flex:0 0 96px;width:96px;aspect-ratio:4/3;object-fit:contain;border-radius:8px;background:#fff;border:1px solid var(--line)}
+    .lc-img.ph{background:#f1ece2;border:0}
+    .lc-body{padding:0;flex:1;min-width:0}
+    .lc-sns{padding:2px 12px 12px}
+  }
   .link-name{font-size:14.5px;font-weight:700;line-height:1.5;color:var(--ink)}
   .link-arrow{color:var(--accent-d);font-size:12px}
   .link-note{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.55}
-  .link-url{font-size:11.5px;color:var(--web);margin-top:6px;word-break:break-all}
+  .link-url{font-size:12px;color:var(--web);margin-top:6px;word-break:break-all}
 
   /* 終了・ニュースリスト等：コンパクトな行（クリックでモーダル or 外部記事） */
   .compact-list{display:flex;flex-direction:column}
@@ -297,26 +347,100 @@
      .hb-img が display:block で .ph の flex を上書きするため、ここで再指定して中央寄せを効かせる */
   .hb-img.ph{display:flex;font-size:22px}
   .hb-body{padding:10px 12px;display:flex;flex-direction:column;gap:4px}
-  .hb-meta{font-size:11px;color:var(--sub);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .hb-meta{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
   .hb-title{font-size:13.5px;font-weight:700;line-height:1.45}
+
+  /* 見出しは丸ゴシック（Zen Maru Gothic）。本文は Noto Sans JP のまま（数字と日付の読みやすさを優先。2026-11-12 本人選定） */
+  .group-h,.today-date,.today-col-h,.page-title-card h1,.widget-title,.fl-text strong,.home-hero-copy,.footer-brand,.news-month{font-family:var(--head-font)}
+
+  /* ホームの冒頭：このサイトが何のページかを、採用済みのヘッダーの絵と一言で伝える（2026-11-12）。PCでも題名カードの代わりに出す */
+  body[data-view="home"] .page-title-card{display:none}
+  .home-hero{position:relative;border-radius:16px;overflow:hidden;margin:0 0 16px;aspect-ratio:3/1;border:1px solid var(--sky-line);
+    background:var(--sky) url('assets/brand/hero-home.webp') right bottom/cover no-repeat}
+  .home-hero-text{position:absolute;left:3%;top:9%;background:rgba(157,187,194,.86);border-radius:14px;padding:10px 18px 12px}
+  .home-hero-copy{font-size:28px;font-weight:900;color:var(--ink);line-height:1.35;margin:0;white-space:nowrap}
+  .home-hero-sub{font-size:14.5px;font-weight:700;color:var(--ink);margin:5px 0 0;line-height:1.6}
+  @media (max-width:1099px){
+    .home-hero-copy{font-size:24px}
+  }
+  @media (max-width:720px){
+    /* スマホ：絵の右側（鳥居〜電車）が入るように高さを決めて切り取る */
+    .home-hero{aspect-ratio:auto;height:200px;background-position:78% bottom;background-size:auto 100%}
+    .home-hero-text{left:8px;top:8px;right:8px;padding:6px 12px 8px}
+    .home-hero-copy{font-size:19px}
+    .home-hero-sub{font-size:12.5px;margin-top:2px}
+    /* スマホは1行に収めるため「香川県琴平町の」を省く（すぐ上の帯の副題に同じ地名がある） */
+    .hh-pref{display:none}
+  }
+
+  /* ホーム最上部「今日の琴平」：日めくりの日付・天気・今日とあすの町の予定（2026-11-12）。
+     町民が毎日開く理由になるものを一番上に置く。淡い朱の地に白い札を並べ、ほかの区画と見分ける */
+  .today-card{background:var(--sky-soft);border:1px solid var(--sky-soft-line);border-radius:16px;padding:14px;margin-bottom:26px}
+  .today-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .today-leaf{flex:0 0 78px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  .tl-month{display:block;background:var(--accent);color:#fff;font-size:13px;font-weight:900;padding:2px 0}
+  .tl-day{display:block;font-size:34px;font-weight:900;line-height:1.15;color:var(--ink)}
+  .tl-wd{display:block;font-size:12px;font-weight:700;color:var(--sub);padding-bottom:4px}
+  .today-headtext{flex:1;min-width:0}
+  .today-date{font-size:21px;font-weight:900;margin:0 0 3px;line-height:1.4;color:var(--ink)}
+  /* 天気は「天気の文」と「最高・最低・降水の札」に分ける。札は途中で折り返さない（スマホで「最高／20℃」と割れない） */
+  .today-weather{display:flex;flex-direction:column;gap:5px;color:var(--ink)}
+  .today-weather:empty{display:none}
+  .tw-main{font-size:15px;font-weight:700;line-height:1.5}
+  .tw-chips{display:flex;gap:6px;flex-wrap:wrap}
+  .tw-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:1px 10px;font-size:13.5px;font-weight:700;white-space:nowrap}
+  .tw-chip b{font-size:15.5px;font-weight:900}
+  .tw-chip.max b{color:var(--accent-d)}
+  .tw-chip.min b{color:#2f6f8f}
+  /* PC（1100px〜）は右のサイドバーに天気の札があるので、ここでは出さない（重複を避ける） */
+  @media (min-width:1100px){ .today-weather{display:none} }
+  .today-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .today-col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px 6px}
+  .today-col-h{font-size:14px;font-weight:900;color:var(--ink);margin:0 0 6px}
+  .today-row{display:flex;gap:10px;padding:8px 4px;border-top:1px solid var(--line);font-size:15px;line-height:1.5;cursor:pointer;outline:none}
+  .today-row:hover{background:var(--accent-soft)}
+  .today-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .today-time{flex:0 0 54px;font-weight:900;white-space:nowrap;color:var(--accent-d)}
+  .today-title{flex:1;min-width:0;font-weight:700}
+  .today-none{font-size:14px;color:var(--sub);padding:8px 4px;border-top:1px solid var(--line);margin:0}
+  .today-more{font-size:13px;color:var(--sub);padding:6px 4px;border-top:1px solid var(--line)}
+  @media (max-width:720px){
+    .today-card{padding:12px}
+    .today-cols{grid-template-columns:1fr}
+    .today-leaf{flex-basis:68px}
+    .tl-day{font-size:30px}
+    .today-date{font-size:19px}
+  }
 
   /* ホーム：3セクション（ニュース＝赤／イベント＝青／キャンペーン＝緑）をテーマ色の
      縦ライン・見出し色・説明文で区別する。「全部ニュース？」と誤読されない工夫 */
-  .home-sec{border-left:4px solid var(--hs);padding:2px 0 2px 16px;margin-bottom:28px}
+  /* 区画は「見出しの帯＋中身」を1つの枠で囲む。どこからどこまでが最新ニュースかを枠と地の色で示す */
+  .home-sec{margin-bottom:28px;border:2px solid var(--hs);border:2px solid color-mix(in srgb,var(--hs) 45%,#fff);
+    border-radius:16px;overflow:hidden;background:var(--card);background:color-mix(in srgb,var(--hs) 4%,#fff)}
+  .home-sec > :not(.home-sec-head){margin-left:14px;margin-right:14px}
+  .home-sec > :last-child{margin-bottom:14px}
   /* 末尾の余白調整：うどんモジュールが無い日は.hs-camps、ある日は.home-udonが実際の最後尾になる。
      :last-of-typeは<section>タグ単位の判定でクラスを見ないため、順序が変わると効かなくなる。
      :last-childなら実際の兄弟順で判定できるので、どちらが最後でも正しくmargin-bottomが消える */
   .home-sec:last-child{margin-bottom:0}
   .hs-news{--hs:var(--accent)}
-  .hs-events{--hs:#3170eb}
-  .hs-camps{--hs:#1d8a4e}
+  .hs-events{--hs:var(--dashi)}
+  .hs-camps{--hs:var(--noren)}
   /* 団体詳細ページ（2026-09-05にサブタブ切替→セクション型スクロールへ移行）の媒体別見出し色。
      既存の媒体色トークンをそのまま流用する（新規カラーは作らない） */
   .hs-org-note{--hs:var(--note)} .hs-org-instagram{--hs:var(--ig)} .hs-org-x{--hs:var(--x)}
   .hs-org-website{--hs:var(--web)} .hs-org-youtube{--hs:var(--yt)} .hs-org-ameblo{--hs:var(--ameblo)}
   .hs-org-other{--hs:var(--media-other)}
-  .home-sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 10px}
-  .home-sec-head .group-h{margin:0;color:var(--hs)}
+  /* 見出しは枠の上端いっぱいの横に細長い帯（2026-11-12）。絵（site-widgets-data.js の sectionBanners）が
+     登録されていれば帯の絵を敷き、題名は絵の空き（左24%〜右4%）に重ねる。未登録の間はテーマ色の帯。
+     絵は幅いっぱいに敷いて上下の中央（横5：縦1の範囲）だけを見せるので、横3：縦2の画像をそのまま置ける */
+  .home-sec-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 14px;
+    padding:11px 16px;background:var(--card);
+    background:linear-gradient(90deg,color-mix(in srgb,var(--hs) 24%,#fff),color-mix(in srgb,var(--hs) 8%,#fff))}
+  .home-sec-head.has-banner{aspect-ratio:5/1;padding:0 4% 0 24%;flex-wrap:nowrap;background-color:#fff;
+    background-repeat:no-repeat;background-position:center;background-size:100% auto}
+  .home-sec-head .group-h{margin:0;font-size:18px;color:var(--hs);color:color-mix(in srgb,var(--hs) 82%,#000)}
   .hs-sub{flex:1;font-size:12px;color:var(--sub);white-space:nowrap}
   .more-link{background:none;border:none;color:var(--accent-d);font-size:12.5px;font-weight:700;
     cursor:pointer;font-family:inherit;white-space:nowrap}
@@ -328,7 +452,7 @@
   .home-udon:last-child{margin-bottom:0}
   .home-udon-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
   .home-udon-head .group-h{margin:0;color:#8a5a1d}
-  .home-udon-time{font-size:11.5px;color:var(--sub);font-weight:700;white-space:nowrap}
+  .home-udon-time{font-size:12px;color:var(--sub);font-weight:700;white-space:nowrap}
   .home-udon-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;
     overflow:hidden;background:var(--card)}
   .home-udon-row{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;border:0;
@@ -338,7 +462,7 @@
   .home-udon-row:hover{background:var(--accent-soft)}
   .home-udon-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
   .hur-name{font-size:13.5px;font-weight:900;line-height:1.4}
-  .hur-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:11.5px;color:var(--sub)}
+  .hur-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:12px;color:var(--sub)}
   .home-udon-empty{font-size:12.5px;color:var(--sub);padding:6px 2px}
   .home-udon-pre{font-size:12px;color:#4d4740;margin-top:8px}
   .home-udon-foot{margin-top:10px}
@@ -349,47 +473,47 @@
     background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
     border-radius:12px;padding:9px 14px;margin:0 0 14px}
   .page-title-card h1{font-size:17px;line-height:1.4;font-weight:900;margin:0}
-  .page-title-meta{color:var(--sub);font-size:11px;font-weight:700;white-space:nowrap}
+  .page-title-meta{color:var(--sub);font-size:12px;font-weight:700;white-space:nowrap}
 
   /* サイドバーウィジェット（モバイルは本文を先にし、その後へまとめる） */
   .widget-stack{display:flex;flex-direction:column;gap:14px}
   .widget-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;min-width:0}
-  .widget-card.weather-card{border-top:4px solid #3170eb}
-  .widget-card.line-card{border-top:4px solid #148244}
-  .widget-card.dam-card{border-top:4px solid #1d75b3}
+  .widget-card.weather-card{border-top:4px solid var(--ai)}
+  .widget-card.line-card{border-top:4px solid var(--noren)}
+  .widget-card.dam-card{border-top:4px solid var(--ai)}
   .widget-card.ad-card{padding:10px}
-  .widget-kicker{display:block;color:var(--sub);font-size:10.5px;font-weight:900;letter-spacing:.06em;margin-bottom:2px}
+  .widget-kicker{display:block;color:var(--sub);font-size:12px;font-weight:900;letter-spacing:.06em;margin-bottom:2px}
   .widget-title{font-size:15px;font-weight:900;line-height:1.45;margin:0 0 8px}
   .widget-copy{font-size:12.5px;color:#4d4740;line-height:1.65;margin:0 0 10px}
-  .widget-note{font-size:10.5px;color:var(--sub);line-height:1.55;margin:8px 0 0}
+  .widget-note{font-size:12px;color:var(--sub);line-height:1.55;margin:8px 0 0}
   .widget-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-  .widget-link{font-size:11.5px;font-weight:700;color:var(--accent-d);text-decoration:none}
+  .widget-link{font-size:12px;font-weight:700;color:var(--accent-d);text-decoration:none}
   .widget-link:hover{text-decoration:underline}
   .widget-loading{font-size:12.5px;color:var(--sub);padding:8px 0}
   /* 💧 早明浦ダム貯水状況：貯水率を大きく、貯水量・流入量・放流量は控えめな一覧行にする */
   .dam-rate{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
   .dam-rate-num{font-size:30px;font-weight:900;line-height:1;color:#1d75b3}
   .dam-rate-pct{font-size:16px;font-weight:900;margin-left:1px}
-  .dam-rate-label{font-size:11px;color:var(--sub);font-weight:700}
+  .dam-rate-label{font-size:12px;color:var(--sub);font-weight:700}
   .dam-stale{font-size:12px;line-height:1.6;color:#7a4b00;background:#fff6e0;border:1px solid #f0d28a;border-radius:8px;padding:8px 10px;margin:0 0 10px}
   .dam-rate-old .dam-rate-num{color:var(--sub)}
   .dam-chart{margin:2px 0 10px;padding:8px 8px 4px;background:#f6f9fc;border-radius:8px}
   .dam-chart svg{display:block;max-width:340px;margin:0 auto}
-  .dam-chart-head{display:flex;justify-content:space-between;gap:8px;font-size:11px;font-weight:700;color:#4d5b69;margin-bottom:2px}
+  .dam-chart-head{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:700;color:#4d5b69;margin-bottom:2px}
   .dam-chart-diff{color:#1d75b3}
   /* 貯水量・流入量・放流量は横3列（項目名を上、値を下）にして縦の場所を取らない */
   .dam-rows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
   .dam-row{display:flex;flex-direction:column;gap:1px;padding:5px 7px;background:#f6f9fc;border-radius:6px;
     font-size:12.5px;font-weight:700;color:#4d4740;white-space:nowrap}
-  .dam-row span:first-child{font-size:10.5px;font-weight:400;color:var(--sub)}
+  .dam-row span:first-child{font-size:12px;font-weight:400;color:var(--sub)}
   .weather-days{display:flex;flex-direction:column;gap:8px}
   .weather-day{display:grid;grid-template-columns:42px minmax(0,1fr);gap:9px;align-items:center;
     border-top:1px solid var(--line);padding-top:8px}
   .weather-day:first-child{border-top:none;padding-top:0}
   .weather-icon{font-size:28px;line-height:1;text-align:center}
-  .weather-label{font-size:11px;color:var(--sub);font-weight:700}
+  .weather-label{font-size:12px;color:var(--sub);font-weight:700}
   .weather-text{font-size:13.5px;font-weight:900;line-height:1.4;margin-top:1px}
-  .weather-meta{display:flex;gap:8px;flex-wrap:wrap;color:#4d4740;font-size:11.5px;margin-top:3px}
+  .weather-meta{display:flex;gap:8px;flex-wrap:wrap;color:#4d4740;font-size:12px;margin-top:3px}
   .weather-fallback{font-size:12.5px;color:var(--sub);line-height:1.65}
   /* 警報・注意報（天気欄の1行＋警報以上の時だけ出るページ上部の帯）。色は気象庁の警戒レベル配色に寄せる */
   .weather-warning{font-size:12px;line-height:1.6;border-radius:8px;padding:6px 9px;margin:4px 0 8px;
@@ -404,13 +528,13 @@
   .alert-banner.lv-danger{background:#7a1fa2}
   .alert-banner.lv-special{background:#111}
   .alert-banner strong{font-weight:900}
-  .alert-banner .alert-note{display:block;font-size:11.5px;opacity:.95}
+  .alert-banner .alert-note{display:block;font-size:12px;opacity:.95}
   .alert-banner a{color:#fff;font-weight:900;text-decoration:underline;margin-left:6px;white-space:nowrap}
   /* .quick-route: 「目的から探す」カード（2026-09-05削除）の名残だが、home-udon-moreボタンが
      同じクラスを流用しているため維持する。.quick-grid（4ボタンの2x2グリッド）はカード削除に
      伴い他に使用箇所が無いため削除済み。 */
   .quick-route{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 7px;
-    color:var(--ink);font-family:inherit;font-weight:700;font-size:11.5px;line-height:1.35;text-align:left;cursor:pointer}
+    color:var(--ink);font-family:inherit;font-weight:700;font-size:12px;line-height:1.35;text-align:left;cursor:pointer}
   .quick-route:hover{background:var(--accent-soft);color:var(--accent-d);border-color:var(--accent)}
   .quick-route:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .line-content{display:flex;flex-direction:column;gap:10px}
@@ -429,26 +553,39 @@
   .featured-event-meta{display:flex;flex-direction:column;gap:3px;font-size:12.5px;color:#4d4740;line-height:1.55}
   .featured-event-cta{margin-top:9px;font-size:12.5px;font-weight:900;color:var(--accent-d)}
   .ad-label{display:flex;justify-content:space-between;gap:8px;align-items:center;color:var(--sub);
-    font-size:10px;font-weight:900;margin:0 2px 7px}
+    font-size:12px;font-weight:900;margin:0 2px 7px}
   .ad-main{display:block;color:inherit;text-decoration:none;border-radius:8px;overflow:hidden}
   .ad-main:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .ad-image{width:100%;aspect-ratio:3/1;display:block;object-fit:cover;background:#f1ece2}
   .ad-title{font-size:12px;font-weight:700;line-height:1.5;padding:8px 3px 2px}
-  .ad-vacancy{border-style:dashed;text-align:center;background:#fcfaf6}
-  .ad-vacancy .widget-copy{margin-bottom:0}
   .ad-mobile-only{display:none}
   .mobile-ad-slot{display:none;margin:0 0 18px}
   .data-widget{background:transparent;border-style:dashed}
   .data-widget .widget-note{margin:0}
 
   /* 最小限のフッター。リンクは正式URLが設定されたものだけ表示する */
-  .site-footer{border-top:1px solid var(--line);background:#fff}
+  .site-footer{border-top:4px solid #fff;box-shadow:0 -1px 0 var(--sky-soft-line);background:var(--sky-soft)}
+  /* 全ページ共通の LINE への入口（「見る＝サイト、話す＝LINE」。2026-07-08 確定分を 2026-11-12 に実装） */
+  .footer-line{max-width:1320px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--sky-soft-line)}
+  .footer-line[hidden]{display:none}
+  .fl-text{display:flex;flex-direction:column;gap:2px;font-size:14px;color:var(--ink);min-width:0}
+  .fl-text strong{font-size:16px;font-weight:900}
+  .fl-btn{display:inline-block;background:#148244;color:#fff;border-radius:10px;padding:11px 20px;font-size:15px;
+    font-weight:900;text-decoration:none;white-space:nowrap}
+  .fl-btn:hover{background:#0f6e38;color:#fff}
+  .modal-line{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px;color:var(--sub)}
+  .modal-line a{color:#0f6e38;font-weight:900}
+  @media (max-width:720px){
+    .footer-line{padding:14px 12px}
+    .fl-btn{width:100%;text-align:center}
+  }
   .footer-inner{max-width:1320px;margin:0 auto;padding:15px 20px;display:flex;align-items:center;
     justify-content:space-between;gap:16px;flex-wrap:wrap}
   .footer-brand{font-size:14px;font-weight:900;color:var(--accent-d)}
   .footer-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .footer-links[hidden],.footer-links:empty{display:none}
-  .footer-link{font-size:11.5px;color:var(--sub);font-weight:700}
+  .footer-link{font-size:12px;color:var(--sub);font-weight:700}
   .footer-link:hover{text-decoration:underline;color:var(--accent-d)}
 
 
@@ -461,7 +598,7 @@
   .cal-month-label{font-size:16px;font-weight:900;min-width:110px;text-align:center}
   .cal-weekday-row{display:grid;grid-template-columns:repeat(7,1fr);border-left:1px solid var(--line);
     border-top:1px solid var(--line)}
-  .cal-weekday{font-size:11px;color:var(--sub);text-align:center;font-weight:700;padding:4px 0;
+  .cal-weekday{font-size:12px;color:var(--sub);text-align:center;font-weight:700;padding:4px 0;
     background:#fcfaf6;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
   .cal-weekday.sat{color:#2b63cf}
   .cal-weekday.sun{color:var(--accent-d)}
@@ -525,7 +662,7 @@
      チップは折り返しを許可し「HH:MM イベント名」を最大3行まで表示、時刻部分を強調する。 */
   .cal-cells.week-grid .cal-cell{min-height:260px}
   .cal-cells.week-grid .cal-chips{gap:4px}
-  .cal-chip-week{white-space:normal;text-overflow:clip;font-size:11.5px;line-height:1.35;
+  .cal-chip-week{white-space:normal;text-overflow:clip;font-size:12px;line-height:1.35;
     padding:3px 6px;border-radius:5px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}
   .cal-chip-time{font-weight:900;color:var(--accent-d)}
 
@@ -543,11 +680,11 @@
   .event-agenda-item:focus-visible{position:relative;z-index:1;outline:2px solid var(--accent);outline-offset:-2px}
   .event-agenda-date{display:flex;flex-direction:column;line-height:1.35;color:var(--accent-d)}
   .event-agenda-date strong{font-size:13px;font-weight:900}
-  .event-agenda-date small{font-size:11px;color:var(--sub);font-weight:700}
+  .event-agenda-date small{font-size:12px;color:var(--sub);font-weight:700}
   .event-agenda-body{min-width:0;display:flex;flex-direction:column;gap:3px}
   .event-agenda-title{font-size:13.5px;line-height:1.5;font-weight:900;overflow-wrap:anywhere}
-  .event-agenda-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:11.5px;color:var(--sub)}
-  .event-agenda-status{display:inline-block;border-radius:999px;padding:1px 6px;font-size:10.5px;font-weight:800;
+  .event-agenda-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:12px;color:var(--sub)}
+  .event-agenda-status{display:inline-block;border-radius:999px;padding:1px 6px;font-size:12px;font-weight:800;
     background:var(--accent-soft);color:var(--accent-d)}
   .event-agenda-status.active{background:var(--accent);color:#fff}
   .event-agenda-status.ended{background:#e8e3dc;color:#625a51}
@@ -580,7 +717,7 @@
   .ics-sub summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .ics-sub-list{list-style:none;margin:6px 0 4px;padding:0;display:grid;gap:4px}
   .ics-sub-list li{display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline}
-  .ics-sub-list code{font-size:11px;background:var(--card);border:1px solid var(--line);border-radius:6px;
+  .ics-sub-list code{font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:6px;
     padding:1px 6px;color:var(--ink);word-break:break-all;user-select:all}
   .ics-sub ol{margin:4px 0 0;padding-left:18px;line-height:1.7}
   /* 週表示：Googleカレンダーの「スケジュール」ビュー風。全体を1枚のカードにし、日付列とイベント列の
@@ -593,14 +730,14 @@
   .ewk-datecol{display:flex;flex-direction:column;justify-content:center;gap:1px;line-height:1.2;
     padding:10px 8px 10px 12px;border-right:1px solid var(--line)}
   .ewk-date{font-size:16px;font-weight:900;color:var(--ink)}
-  .ewk-sub{font-size:10.5px;font-weight:700;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ewk-sub{font-size:12px;font-weight:700;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .ewk-row.sat .ewk-date,.ewk-row.sat .ewk-sub{color:#2b63cf}
   .ewk-row.sun .ewk-date,.ewk-row.sun .ewk-sub{color:var(--accent-d)}
   .ewk-events{min-width:0;display:flex;flex-direction:column;justify-content:center}
   /* イベント行内はカード背景を透過させ、行の強調（today）や区切り線が正しく見えるようにする */
   .ewk-events .event-agenda-item{background:transparent}
   /* 予定のない日は低い行高で薄く（見出しは7日分すべて残す） */
-  .ewk-empty{padding:7px 12px;font-size:11.5px;color:var(--sub)}
+  .ewk-empty{padding:7px 12px;font-size:12px;color:var(--sub)}
   /* 週表示の行は日付見出しが別にあるため、日付列を省いた本文＋矢印の2列にする */
   .event-agenda-item.agenda-week{grid-template-columns:minmax(0,1fr) 14px}
 
@@ -617,7 +754,7 @@
   .modal-title{font-size:17px;font-weight:900;margin:0 0 8px;padding-right:30px}
   .modal-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:12px;background:#eee;display:block}
   .modal-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--sub);margin-bottom:10px}
-  .modal-badge{display:inline-block;border-radius:6px;padding:3px 10px;font-size:11.5px;font-weight:700;margin-bottom:10px}
+  .modal-badge{display:inline-block;border-radius:6px;padding:3px 10px;font-size:12px;font-weight:700;margin-bottom:10px}
   .modal-badge.status-active{background:var(--accent);color:#fff}
   .modal-badge.status-upcoming{background:var(--accent-soft);color:var(--accent-d)}
   .modal-badge.status-ended{background:#d8d0c4;color:#5c554c}
@@ -703,7 +840,7 @@
   .shop-card-body{padding:8px 10px 10px}
   .shop-card-name{font-size:13px;font-weight:900;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;
     -webkit-box-orient:vertical;overflow:hidden}
-  .shop-card-month{margin-top:4px;font-size:11.5px;color:var(--sub);font-weight:700}
+  .shop-card-month{margin-top:4px;font-size:12px;color:var(--sub);font-weight:700}
   .old-flag{color:var(--accent-d);font-weight:900}
   /* 拡大ビュー：既存の詳細モーダル（#modalOverlay）をお店のときだけ拡大モードにする（openDetailModalが
      .shop-zoom-modeを付け、closeDetailModalが外す）。箱を画面幅いっぱい近くまで広げ、画像は高さ72vhまで
@@ -746,8 +883,12 @@
     .topbar-inner{padding:8px 12px 0}
     .brandrow{align-items:center}
     .brand{font-size:20px}
-    .brand small{display:none}
+    /* スマホでも「香川県琴平町」が見えるよう、副題をブランド名の下に小さく出す */
+    .brand small{display:block;margin:1px 0 0;font-size:12px;line-height:1.3}
+    /* スマホでは自分の画面のQRは読めないので出さない（参加ボタンで足りる） */
+    .line-qr{display:none}
     .topbar-actions{display:flex;align-items:center;gap:8px}
+    .site-search{display:none}
     .primary-nav{display:none}
     .page-shell{padding:16px 12px 30px;gap:16px}
     .footer-inner{padding:13px 12px}
@@ -800,7 +941,7 @@
     /* ハンバーガードロワー（右寄せ。既存.modal-overlayと同じdisplay切替方式） */
     .drawer-overlay.show{display:flex;position:fixed;inset:0;z-index:90;
       background:rgba(30,25,20,.5);justify-content:flex-end}
-    .drawer-build{flex:0 0 auto;padding:6px 16px 12px;font-size:11px;color:var(--sub);text-align:right}
+    .drawer-build{flex:0 0 auto;padding:6px 16px 12px;font-size:12px;color:var(--sub);text-align:right}
     .drawer-panel{width:82%;max-width:320px;height:100%;background:var(--card);
       -webkit-text-size-adjust:100%;text-size-adjust:100%;
       display:flex;flex-direction:column;box-shadow:-8px 0 24px rgba(0,0,0,.22)}
@@ -847,7 +988,6 @@
 
     /* ホームタブはタブ切替のアクティブ表示と重複するため、ページ名カードを消す
        （他タブでは残す。ホームのみ view=home の時だけ main が再生成されるため body[data-view]で判定） */
-    body[data-view="home"] .page-title-card{display:none}
 
     /* セクション見出しの「もっと見る →」を折り返させず見出し行の右端に固定。
        幅が足りないのでサブテキスト(.hs-sub)はモバイルでは非表示にする */
@@ -872,10 +1012,6 @@
     .carousel-arrow:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     .carousel.at-start .carousel-arrow.prev{opacity:.35;pointer-events:none}
     .carousel.at-end .carousel-arrow.next{opacity:.35;pointer-events:none}
-  }
-  /* PC(721px〜)ではホーム最新ニュースを従来通り3件だけ見せる（データ自体は6件描画している） */
-  @media (min-width:721px){
-    .hs-news .card-grid > .home-box:nth-child(n+4){display:none}
   }
   @media (max-width:1099px){
     .ad-desktop-only{display:none}
@@ -902,6 +1038,10 @@
     <div class="topbar-inner">
       <div class="brandrow">
         <div class="brand" id="hTitle">ことひらいふ <small>香川県琴平町の"今"をお届け</small></div>
+        <form class="site-search" id="siteSearch" role="search" autocomplete="off">
+          <input type="search" id="siteSearchInput" placeholder="サイト内をさがす" aria-label="サイト内検索">
+          <button type="submit">検索</button>
+        </form>
         <div class="topbar-actions">
           <button type="button" class="weather-chip" id="weatherChip" aria-haspopup="true" aria-expanded="false" aria-controls="weatherChipPanel"></button>
           <button type="button" class="dam-chip" id="damChip" aria-haspopup="true" aria-expanded="false" aria-controls="damChipPanel"></button>
@@ -929,6 +1069,7 @@
   </div>
 
   <footer class="site-footer" id="siteFooter">
+    <div class="footer-line" id="footerLine" hidden></div>
     <div class="footer-inner">
       <div class="footer-brand">ことひらいふ</div>
       <nav class="footer-links" id="footerLinks" aria-label="サイト情報" hidden></nav>
@@ -949,6 +1090,10 @@
       <span class="drawer-title">メニュー</span>
       <button class="drawer-close" id="drawerCloseBtn" aria-label="閉じる" type="button">×</button>
     </div>
+    <form class="drawer-search" id="drawerSearch" role="search" autocomplete="off">
+      <input type="search" id="drawerSearchInput" placeholder="サイト内をさがす" aria-label="サイト内検索">
+      <button type="submit">検索</button>
+    </form>
     <nav class="drawer-nav" id="drawerNav" aria-label="サイトメニュー"></nav>
   </div>
 </div>
@@ -1041,23 +1186,24 @@ const NAV_GROUPS = SITE_NAV_GROUPS.map(g => ({
   key: g.key, label: g.label, shortLabel: g.shortLabel, routes: (g.items || []).map(it => it.key)
 }));
 const PAGE_META = {
-  home:{title:"🏠 ホーム"},
-  news:{title:"📰 ニュース"},
-  events:{title:"📅 イベント"},
-  campaigns:{title:"🎁 キャンペーン"},
-  experiences:{title:"🧭 体験・滞在"},
-  udon:{title:"🍜 うどん店"},
-  sweets:{title:"🍧 かき氷・アイス"},
-  parking:{title:"🅿 駐車場"},
-  towncal:{title:"🗓 こんぴらカレンダー"},
-  shopcal:{title:"🏪 お店の営業カレンダー"},
-  orgs:{title:"📋 団体"},
-  links:{title:"🔗 リンク"},
+  search:{title:"サイト内検索"},
+  home:{title:"ホーム"},
+  news:{title:"ニュース"},
+  events:{title:"イベント"},
+  campaigns:{title:"キャンペーン"},
+  experiences:{title:"体験・滞在"},
+  udon:{title:"うどん店"},
+  sweets:{title:"かき氷・アイス"},
+  parking:{title:"駐車場"},
+  towncal:{title:"こんぴらカレンダー"},
+  shopcal:{title:"お店の営業カレンダー"},
+  orgs:{title:"団体"},
+  links:{title:"リンク"},
   /* サイト情報3ページ（2026-09-05にoperator.html等からSPA統合。上部タブグループには入れず、
      ドロワー/フッターの「サイト情報」からのみ遷移する独立ページという性質は維持する） */
-  operator:{title:"👤 運営者情報"},
-  contact:{title:"✉️ お問い合わせ"},
-  privacy:{title:"🔒 プライバシーポリシー"}
+  operator:{title:"運営者情報"},
+  contact:{title:"お問い合わせ"},
+  privacy:{title:"プライバシーポリシー"}
 };
 const MEDIA_CLASS = {
   "note":"note", "Instagram":"instagram", "X":"x", "HP":"website",
@@ -1205,6 +1351,14 @@ function init(){
       if(damPanel && damPanel.classList.contains("show")) closeDamChipPanel();
     }
   });
+  // サイト内検索：上の帯の入力欄（PC）と、メニューを開いた一番上の入力欄（スマホ）
+  [["siteSearch","siteSearchInput"],["drawerSearch","drawerSearchInput"]].forEach(function(pair){
+    document.getElementById(pair[0]).addEventListener("submit", function(e){
+      e.preventDefault();
+      const next = "#search=" + encodeURIComponent(document.getElementById(pair[1]).value.trim());
+      if(location.hash === next) render(); else location.hash = next;   // 同じことばでも検索の画面へ進む（メニューも閉じる）
+    });
+  });
   window.addEventListener("hashchange", render);
   if(!location.hash){ history.replaceState(null, "", "#home"); }
   renderUtilityWidgets();
@@ -1216,12 +1370,95 @@ function init(){
   render();
 }
 
+/* ===== サイト内検索（2026-11-12） =====
+   サイトが持っているデータ（ニュース・イベント・キャンペーン・体験・団体・リンク・駐車場）を、その場で探す。
+   サーバーには何も送らない。ことばは空白で区切ると「すべて含む」で絞る。ひらがな／カタカナ、全角／半角、大文字／小文字は区別しない。 */
+const SEARCH_GROUP_MAX = 30;
+function searchNorm(v){
+  return ("" + (v || "")).normalize("NFKC").toLowerCase()
+    .replace(/[\u30a1-\u30f6]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+}
+function searchMatcher(q){
+  const words = searchNorm(q).split(/\s+/).filter(Boolean);
+  if(!words.length) return null;
+  return fields => { const hay = searchNorm(fields.join(" ")); return words.every(w => hay.indexOf(w) >= 0); };
+}
+/* 検索結果の1行（ニュースの行と同じ見た目。画像なし）。attrs は data-open-detail など */
+function searchRow(attrs, meta, title, sub, href){
+  const inner = `<div class="nr-body">${meta ? `<div class="nr-meta">${meta}</div>` : ""}<div class="nr-title">${esc(title)}</div>${sub ? `<div class="nr-sub clamp2">${esc(sub)}</div>` : ""}</div>`;
+  return href
+    ? `<a class="news-row" href="${esc(href)}" rel="noopener">${inner}</a>`
+    : `<div class="news-row" ${attrs} tabindex="0" role="button">${inner}</div>`;
+}
+function searchGroupHTML(label, rows){
+  if(!rows.length) return "";
+  const rest = rows.length - SEARCH_GROUP_MAX;
+  return `<h2 class="group-h">${esc(label)}（${rows.length}件）</h2><div class="news-list">${rows.slice(0, SEARCH_GROUP_MAX).join("")}${
+    rest > 0 ? `<div class="search-more">ほか${rest}件。ことばを足すと絞り込めます。</div>` : ""}</div>`;
+}
+function searchResultsHTML(q){
+  const match = searchMatcher(q);
+  if(!match){
+    return `<p class="search-hint">ことばを入れると、ニュース・イベント・キャンペーン・体験・団体・リンク・駐車場から探します。<br>
+      空白で区切ると、すべてのことばを含むものに絞ります（例：「うどん 体験」）。ニュースは直近2か月分、イベントは終了から約2か月分までが対象です。</p>`;
+  }
+  // イベント・キャンペーン：これからのものを近い順に、終わったものはその後ろに新しい順で
+  const byDate = list => {
+    const up = list.filter(it => eventDateStatus(it) !== "終了").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
+    const past = list.filter(it => eventDateStatus(it) === "終了").sort((a,b)=>(b.start||"").localeCompare(a.start||""));
+    return up.concat(past);
+  };
+  // 毎週の同じ催しは1行にまとめる（collapseRepeats。一番近い回を出し、残りは回数だけ添える）
+  const eventRow = kind => g => {
+    const it = g.it;
+    const st = eventDateStatus(it);
+    const cls = st === "終了" ? " ended" : (st === "開催予定" ? " upcoming" : "");
+    const meta = `<span>${esc(fmtEventDate(it.start, it.end, true))}</span>${st ? `<span class="ev-status-badge${cls}">${esc(st)}</span>` : ""}`;
+    const sub = [it.place || "", g.more.length ? `同じ催しがほかに${g.more.length}回あります` : ""].filter(Boolean).join("　／　");
+    return searchRow(`data-open-detail="${esc(registerItem(it, kind))}"`, meta, it.title, sub);
+  };
+  const news = ND.news.filter(newsIsVisible).filter(n => match([n.title, n.summary, n.org, n.media]))
+    .sort((a,b)=>(b.date||"").localeCompare(a.date||"")).map(newsRow);
+  const events = collapseRepeats(byDate(ND.events.filter(it => match([it.title, it.place, it.city, it.address, it.organizer, it.comment])))).map(eventRow("event"));
+  const camps = collapseRepeats(byDate(ND.campaigns.filter(it => match([it.title, it.place, it.city, it.organizer, it.comment])))).map(eventRow("campaign"));
+  const exps = ND.experiences.filter(x => x.show !== false).filter(it => match([it.title, it.summary, it.org, it.place, it.category]))
+    .map(it => searchRow(`data-open-detail="${esc(registerItem(it, "experience"))}"`, it.category ? `<span>${esc(it.category)}</span>` : "", it.title, it.summary || ""));
+  const orgs = ND.orgs.filter(o => match([o.name, o.summary]))
+    .map(o => searchRow(`data-org-id="${esc(o.id)}"`, "", o.name, o.summary || ""));
+  const links = [];
+  (LINKS.categories || []).forEach(c => (c.links || []).forEach(l => {
+    const href = safeUrl(l.url);
+    if(href && match([l.name, l.note, l.url])) links.push(searchRow("", `<span>${esc(stripLeadingEmoji(c.name || ""))}</span>`, l.name, l.note || "", href));
+  }));
+  const parking = (PARKING.items || []).filter(x => x.show !== false).filter(it => match([it.name, it.address, it.operator, it.group]))
+    .map(it => searchRow(`data-open-detail="${esc(registerItem(it, "parking"))}"`, it.group ? `<span>${esc(it.group)}</span>` : "", it.name, it.address || ""));
+  const total = news.length + events.length + camps.length + exps.length + orgs.length + links.length + parking.length;
+  if(!total){
+    return `<p class="search-summary">「${esc(q.trim())}」に当てはまるものは見つかりませんでした。</p>
+      <p class="search-hint">ことばを短くするか、別の言い方でお試しください。ニュースは直近2か月分、イベントは終了から約2か月分までが対象です。</p>`;
+  }
+  return `<p class="search-summary">「${esc(q.trim())}」で${total}件見つかりました。</p>`
+    + searchGroupHTML("イベント", events) + searchGroupHTML("ニュース", news) + searchGroupHTML("キャンペーン", camps)
+    + searchGroupHTML("体験・滞在", exps) + searchGroupHTML("団体", orgs) + searchGroupHTML("リンク", links) + searchGroupHTML("駐車場", parking);
+}
+function searchTabHTML(q){
+  return `<form class="search-page-form" role="search" autocomplete="off" onsubmit="return false">
+      <input type="search" id="searchPageInput" value="${esc(q || "")}" placeholder="さがしたいことば（例：うどん、朝市、金丸座）" aria-label="サイト内検索">
+    </form>
+    <div class="search-results" id="searchResults" aria-live="polite">${searchResultsHTML(q || "")}</div>`;
+}
+
 /* ===== ルーティング ===== */
 function parseHash(){
   const h = (location.hash||"").replace(/^#/, "");
   if(h.indexOf("org=") === 0){
     try{ return {view:"org", id: decodeURIComponent(h.slice(4))}; }
     catch(e){ return {view:"orgs"}; }
+  }
+  if(h === "search" || h.indexOf("search=") === 0){
+    let q = "";
+    try{ q = decodeURIComponent(h.slice(7)); }catch(e){ q = ""; }
+    return {view:"search", q};
   }
   if(["home","orgs","news","events","campaigns","experiences","udon","sweets","parking","towncal","shopcal","links","operator","contact","privacy"].indexOf(h) >= 0) return {view:h};
   return {view:"home"};
@@ -1267,6 +1504,8 @@ function render(opt){
     m.innerHTML = contactTabHTML();
   } else if(r.view === "privacy"){
     m.innerHTML = privacyTabHTML();
+  } else if(r.view === "search"){
+    m.innerHTML = searchTabHTML(r.q);
   } else {
     m.innerHTML = homeHTML();
   }
@@ -1293,6 +1532,15 @@ function render(opt){
     window.scrollTo({top:0, behavior:"smooth"});
   }
   hasRenderedOnce = true;
+  // 検索の画面では入力欄にカーソルを置く。上の帯の入力欄にも同じことばを入れておく
+  const topSearch = document.getElementById("siteSearchInput");
+  if(topSearch && r.view === "search") topSearch.value = r.q || "";
+  const drawerSearch = document.getElementById("drawerSearchInput");
+  if(drawerSearch) drawerSearch.value = r.view === "search" ? (r.q || "") : "";
+  if(r.view === "search"){
+    const box = document.getElementById("searchPageInput");
+    if(box && !(opt && opt.noScroll)){ try{ box.focus({preventScroll:true}); box.setSelectionRange(box.value.length, box.value.length); }catch(e){} }
+  }
 }
 
 function pageTitleMeta(view){
@@ -1510,6 +1758,16 @@ function onMainClick(e){
   if(shopGenre){ setShopGenreFilter(shopGenre.dataset.shopGenre); return; }
 }
 function onMainInput(e){
+  if(e.target && e.target.id === "searchPageInput"){
+    // 打つたびに結果だけ入れ替える（画面全体は描き直さない＝入力中のカーソルを保つ）。URL も同じことばに合わせる
+    const q = e.target.value;
+    const host = document.getElementById("searchResults");
+    if(host) host.innerHTML = searchResultsHTML(q);
+    history.replaceState(null, "", "#search=" + encodeURIComponent(q.trim()));
+    const topSearch = document.getElementById("siteSearchInput");
+    if(topSearch) topSearch.value = q;
+    return;
+  }
   if(e.target && e.target.id === "orgSearchInput"){
     orgSearchTerm = e.target.value;
     const rows = document.getElementById("orgRows");
@@ -1670,7 +1928,7 @@ function modalContentHTML(it, kind){
   const rows = [row(isEvent ? "開催日時" : "🗓 日時", fmtEventDate(it.start, it.end))];
   if(placeParts.length) rows.push(row(isEvent ? "開催場所" : "📍 場所", placeParts.join(" / ")));
   if(it.address) rows.push(row(isEvent ? "住所" : "🏠 住所", it.address));
-  if(it.fee) rows.push(row(isEvent ? "参加費" : "💰 参加費", isEvent ? formatEventFee(it.fee) : it.fee));
+  if(isEvent ? it.fee : hasCampaignFee(it.fee)) rows.push(row(isEvent ? "参加費" : "💰 参加費", isEvent ? formatEventFee(it.fee) : it.fee));
   if(it.organizer) rows.push(row(isEvent ? "主催" : "🏢 主催", it.organizer));
   // ステータスはカード（クリック前）と一致させる：イベントは開催日から毎回計算した値を使う
   const statusText = isEvent ? eventDateStatus(it) : it.status;
@@ -1692,7 +1950,8 @@ function modalContentHTML(it, kind){
     ${badgesHtml}
     ${rows.join("")}
     ${it.comment ? `<div class="modal-comment">${esc(it.comment)}</div>` : ""}
-    ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">ホームページを開く ↗</a>` : ""}`;
+    ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">ホームページを開く ↗</a>` : ""}
+    ${modalLineHTML()}`;
 }
 function openDetailModal(item, kind){
   const overlay = document.getElementById("modalOverlay");
@@ -1793,9 +2052,16 @@ function openDayEventsModal(dateKey, items){
 
 /* ===== 🏠 ホーム（ダイジェスト。カードは各タブと同じ部品・同じサイズで統一。
    3セクションはテーマ色＋説明文で区別する） ===== */
+/* 見出しの帯に敷く絵。site-widgets-data.js の sectionBanners（news／events／campaigns）に画像のパスがあれば使う */
+const SECTION_BANNER_KEY = {"hs-news":"news", "hs-events":"events", "hs-camps":"campaigns"};
+function sectionBannerUrl(cls){
+  const banners = WIDGETS.sectionBanners || {};
+  return safeUrl(banners[SECTION_BANNER_KEY[cls]] || "");
+}
 function homeSection(cls, title, sub, route, bodyHtml){
+  const banner = sectionBannerUrl(cls);
   return `<section class="home-sec ${cls}">
-    <div class="home-sec-head"><h2 class="group-h">${title}</h2><span class="hs-sub">${esc(sub)}</span><button class="more-link" data-route="${route}">もっと見る →</button></div>
+    <div class="home-sec-head${banner ? " has-banner" : ""}"${banner ? ` style="background-image:url('${esc(banner)}')"` : ""}><h2 class="group-h">${title}</h2><span class="hs-sub">${esc(sub)}</span><button class="more-link" data-route="${route}">もっと見る →</button></div>
     ${bodyHtml}
   </section>`;
 }
@@ -1809,14 +2075,72 @@ function carouselHTML(cardGridHtml){
     <button type="button" class="carousel-arrow next" aria-label="次のカードへ">▶</button>
   </div>`;
 }
+/* ===== ホーム最上部「今日の琴平」（日付・天気・今日とあすの町の予定） =====
+   予定は3つのカレンダー全部（基本のイベント・金刀比羅宮・こんぴらカレンダー）から拾う。
+   下の「直近のイベント」は基本のイベント中心のカードで、こちらは町の行事も含む文字の一覧 */
+const TODAY_MAX_ROWS = 5;
+function todayCardHTML(){
+  const t = todayMidnight();
+  const tomorrow = new Date(t); tomorrow.setDate(t.getDate() + 1);
+  const md = d => `${d.getMonth()+1}月${d.getDate()}日(${WEEKDAYS[d.getDay()]})`;
+  const sameDay = (s, d) => !!s && s.y === d.getFullYear() && s.mo === d.getMonth()+1 && s.d === d.getDate();
+  // 並び順：その日に始まる時刻つき（時刻順）→ その日に始まる時刻なし → 期間中
+  const sortKey = (it, d) => {
+    const s = parseDT(it.start);
+    if(!sameDay(s, d)) return "2" + (it.title || "");
+    return s.h !== null ? "0" + pad2(s.h) + pad2(s.mi) : "1" + (it.title || "");
+  };
+  const rowHTML = (it, d) => {
+    const s = parseDT(it.start);
+    const time = sameDay(s, d) ? (s.h !== null ? `${pad2(s.h)}:${pad2(s.mi)}` : "―") : "期間中";
+    const slug = registerItem(it, "event");
+    return `<div class="today-row" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog"><span class="today-time">${time}</span><span class="today-title">${esc(it.title)}</span></div>`;
+  };
+  const col = (label, d) => {
+    const list = ND.events.filter(it => { const r = eventDayRange(it); return r && r.start <= d && d <= r.end; })
+      .sort((a,b) => sortKey(a, d).localeCompare(sortKey(b, d)));
+    const rest = list.length - TODAY_MAX_ROWS;
+    return `<div class="today-col"><h3 class="today-col-h">${esc(label)}</h3>${
+      list.length ? list.slice(0, TODAY_MAX_ROWS).map(it => rowHTML(it, d)).join("") : `<p class="today-none">予定の登録はありません。</p>`
+    }${rest > 0 ? `<div class="today-more">ほか${rest}件（イベントのカレンダーに載っています）</div>` : ""}</div>`;
+  };
+  return `<section class="today-card" aria-label="今日の琴平">
+    <div class="today-head">
+      <div class="today-leaf" aria-hidden="true"><span class="tl-month">${t.getMonth()+1}月</span><span class="tl-day">${t.getDate()}</span><span class="tl-wd">${WEEKDAYS[t.getDay()]}曜日</span></div>
+      <div class="today-headtext"><h2 class="today-date">今日の琴平</h2><div class="today-weather" id="todayWeather">${todayWeatherHTML()}</div></div>
+    </div>
+    <div class="today-cols">${col(`今日 ${md(t)} の予定`, t)}${col(`あす ${md(tomorrow)} の予定`, tomorrow)}</div>
+  </section>`;
+}
+/* ホームの冒頭：採用済みのヘッダーの絵に、このサイトが何を届けるかの一言を重ねる */
+function homeIntroHTML(){
+  return `<section class="home-hero" aria-label="このサイトについて">
+    <div class="home-hero-text">
+      <h1 class="home-hero-copy">琴平の“いま”を、ゆるっと。</h1>
+      <p class="home-hero-sub"><span class="hh-pref">香川県琴平町の</span>ニュース・催し・暮らしの情報を1か所に。</p>
+    </div>
+  </section>`;
+}
+/* 「今日の琴平」の天気。予報がまだ届いていない／取れない時は空（renderWeatherChip が届いた時点で入れ直す）。
+   天気の文と、最高・最低・降水の札（折り返さない）に分ける */
+function todayWeatherHTML(){
+  const day = weatherChipState && Array.isArray(weatherChipState.data?.days) ? weatherChipState.data.days[0] : null;
+  if(!day) return "";
+  const has = v => v !== null && v !== undefined;
+  const chips = [];
+  if(has(day.max)) chips.push(`<span class="tw-chip max">最高 <b>${esc(day.max)}</b>℃</span>`);
+  if(has(day.min)) chips.push(`<span class="tw-chip min">最低 <b>${esc(day.min)}</b>℃</span>`);
+  if(has(day.precipitationMax)) chips.push(`<span class="tw-chip">降水 <b>${esc(day.precipitationMax)}</b>%</span>`);
+  return `<span class="tw-main">${weatherIcon(day.weatherCode)} ${esc(day.weather || weatherCodeLabel(day.weatherCode))}</span>`
+    + (chips.length ? `<span class="tw-chips">${chips.join("")}</span>` : "");
+}
 function homeHTML(){
   let newsBody;
   const newsVisible = ND.news.filter(newsIsVisible);
   if(newsVisible.length){
-    /* PC(>720px)は先頭3件だけを見せる（CSSで4件目以降を隠す）。
-       モバイルは横スクロールカルーセルで6件まで見せるため、ここでは6件描画しておく */
-    const topPicks = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,6);
-    newsBody = carouselHTML(`<div class="card-grid">${topPicks.map(newsBox).join("")}</div>`);
+    /* サムネなしの文字の一覧で新しい順に5件（PC・モバイル共通） */
+    const topPicks = newsVisible.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,5);
+    newsBody = `<div class="news-list">${topPicks.map(newsRow).join("")}</div>`;
   } else {
     newsBody = emptyMsg(ND.news.length ? "表示対象のニュースがありません。" : NOTION_EMPTY_MSG);
   }
@@ -1830,9 +2154,10 @@ function homeHTML(){
     const homeEv = homeEvents();
     const active = homeEv.filter(i=>{ const st = eventDateStatus(i); return st === "本日開催" || st === "開催中"; });
     const upcoming = homeEv.filter(i=>eventDateStatus(i)==="開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
-    const picks = active.concat(upcoming).slice(0,3);
+    // 毎週の同じ催しは1枚にまとめてから3件選ぶ（同じ催しで枠が埋まらないように）
+    const picks = collapseRepeats(active.concat(upcoming)).slice(0,3);
     eventsBody = picks.length
-      ? carouselHTML(`<div class="card-grid">${picks.map(it=>itemCard(it,"event")).join("")}</div>`)
+      ? `<div class="card-grid">${picks.map(g=>itemCard(g.it,"event",{more:g.more})).join("")}</div>`
       : emptyMsg("現在、開催中・予定のイベントはありません。");
   } else {
     eventsBody = emptyMsg(NOTION_EMPTY_MSG);
@@ -1842,16 +2167,17 @@ function homeHTML(){
   if(ND.campaigns.length){
     const active = ND.campaigns.filter(i=>i.status==="実施中");
     campsBody = active.length
-      ? carouselHTML(`<div class="card-grid">${active.slice(0,3).map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`)
+      ? `<div class="card-grid">${active.slice(0,3).map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`
       : emptyMsg("現在実施中のキャンペーンはありません。");
   } else {
     campsBody = emptyMsg(NOTION_EMPTY_MSG);
   }
 
   /* 並び順：最新ニュース→直近のイベント→実施中のキャンペーン→いま営業中のうどん店（PC・モバイル共通） */
-  return homeSection("hs-news", "📰 最新ニュース", "町に関する報道・記事", "news", newsBody)
-    + homeSection("hs-events", "📅 直近のイベント", "今日・これからの催し", "events", eventsBody)
-    + homeSection("hs-camps", "🎁 実施中のキャンペーン", "いま使えるお得情報", "campaigns", campsBody)
+  return homeIntroHTML() + todayCardHTML()
+    + homeSection("hs-news", "最新ニュース", "町に関する報道・記事", "news", newsBody)
+    + homeSection("hs-events", "直近のイベント", "今日・これからの催し", "events", eventsBody)
+    + homeSection("hs-camps", "実施中のキャンペーン", "いま使えるお得情報", "campaigns", campsBody)
     + homeUdonOpenHTML();
 }
 /* ホーム3カルーセル（ニュース/イベント/キャンペーン）共通の矢印配線。render()のたびに呼ぶが、
@@ -1915,7 +2241,7 @@ function homeUdonOpenHTML(){
 
   return `<section class="home-udon" aria-labelledby="homeUdonTitle">
     <div class="home-udon-head">
-      <h2 class="group-h" id="homeUdonTitle">🍜 いま営業中のうどん店</h2>
+      <h2 class="group-h" id="homeUdonTitle">いま営業中のうどん店</h2>
       <span class="home-udon-time">${esc(nowLabel)}時点</span>
     </div>
     ${listHtml}
@@ -1936,20 +2262,6 @@ function homeUdonRow(it, nowParts){
     <span class="hur-meta">${meta}</span>
   </button>`;
 }
-/* ニュースのboxカード（ホームのダイジェスト／ニュースタブのギャラリーで共用。card-grid内で使う）。
-   イベント・キャンペーンのカードはタブと同じ itemCard を使うため、この部品はニュース専用 */
-function newsBox(it){
-  const cls = mediaClass(it.media);
-  const imgSrc = safeUrl(it.thumbnail);
-  const img = imgSrc
-    ? `<img class="hb-img" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-    : `<div class="hb-img ph src ${cls}">${esc((it.media||"?").charAt(0))}</div>`;
-  const meta = `<span class="src ${cls}">${esc(it.media||"")}</span><span>${esc(fmtDate(it.date))}</span>`;
-  const slug = registerItem(it, "news");
-  const inner = `${img}<div class="hb-body"><div class="hb-meta">${meta}</div><div class="hb-title">${esc(it.title)}</div></div>`;
-  return `<div class="home-box" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
-}
-
 /* ===== 📋 団体タブ ===== */
 function orgsListHTML(filter){
   return `<p class="hint">琴平町の事を発信している団体・プロジェクトの紹介と、各団体のSNSでの発信をまとめています。</p>
@@ -2041,7 +2353,7 @@ function orgTextSectionsHTML(o){
         carouselHTML(`<div class="card-grid">${items.map(orgFeedBox).join("")}</div>`));
     }).join("");
 }
-/* テキスト系媒体のカード。ホーム最新ニュースのnewsBox()と同じ部品（.home-box/.hb-*）を、
+/* テキスト系媒体のカード。boxカードの部品（.home-box/.hb-*）を、
    団体items側のフィールド名（it.source。it.mediaのようなマッピングを介さずCSSクラス名と直結）に合わせて流用 */
 function orgFeedBox(it){
   const cls = esc(it.source || "other");
@@ -2112,17 +2424,25 @@ function newsFeedItem(it){
   const cls2 = `feed-item${it.duplicate?' dup':''}`;
   return href ? `<a class="${cls2}" href="${esc(href)}">${inner}</a>` : `<div class="${cls2}">${inner}</div>`;
 }
-/* ニュースのコンパクト行（日付＋媒体バッジ＋見出し。サムネなし。クリックで詳細モーダル） */
-function newsCompactRow(it){
+/* ニュースの行（小さいサムネ＋日付＋媒体バッジ＋見出し＋要約。クリックで詳細モーダル）。ホームとニュースタブで共用。
+   要約はニュースタブ（.news-list.full）のPC幅でだけ見せる */
+function newsRow(it){
   const cls = mediaClass(it.media);
   const slug = registerItem(it, "news");
-  const inner = `<span class="cr-date">${esc(fmtDate(it.date))}</span><span class="src ${cls}">${esc(it.media||"")}</span><span class="cr-title">${esc(it.title)}</span>`;
-  return `<div class="compact-row" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
+  // thumbGeneric＝同じ画像を3件以上が使っている（媒体や町のロゴ等。fetch_notion.pyが付ける）→媒体の色の四角にする
+  const imgSrc = it.thumbGeneric ? "" : safeUrl(it.thumbnail);
+  const img = imgSrc
+    ? `<img class="nr-img" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    : `<div class="nr-img ph src ${cls}">${esc((it.media||"?").charAt(0))}</div>`;
+  const meta = `<span class="nr-date">${esc(fmtDate(it.date))}</span><span class="src ${cls}">${esc(it.media||"")}</span>`
+    + (isWithinDays(it.date, 7) ? '<span class="badge-new">NEW</span>' : "");
+  const summary = it.summary ? `<div class="nr-summary">${esc(it.summary)}</div>` : "";
+  return `<div class="news-row" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${img}<div class="nr-body"><div class="nr-meta">${meta}</div><div class="nr-title">${esc(it.title)}</div>${summary}</div></div>`;
 }
 /* ニュース詳細モーダル（イベント／キャンペーンと同様に、カードクリックで要約を表示。記事へのリンク付き） */
 function newsModalHTML(it){
   const cls = mediaClass(it.media);
-  const imgSrc = safeUrl(it.thumbnail);
+  const imgSrc = it.thumbGeneric ? "" : safeUrl(it.thumbnail);
   const href = safeUrl(it.url);
   const meta = [
     it.media ? `<span class="src ${cls}">${esc(it.media)}</span>` : "",
@@ -2135,60 +2455,31 @@ function newsModalHTML(it){
     <h3 class="modal-title" id="modalTitle">${esc(it.title)}</h3>
     <div class="modal-meta">${meta}</div>
     ${it.summary ? `<div class="modal-comment">${esc(it.summary)}</div>` : ""}
-    ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">記事を開く ↗</a>` : ""}`;
+    ${href ? `<a class="modal-link" href="${esc(href)}" target="_blank" rel="noopener">記事を開く ↗</a>` : ""}
+    ${modalLineHTML()}`;
 }
 function mediaClass(media){ return MEDIA_CLASS[media] || "other"; }
 /* ニュースの表示対象フィルタ：show===false のみ非表示（未定義/absentは表示する前方互換ロジック） */
 function newsIsVisible(n){ return n.show !== false; }
 
-/* ===== 📰 ニュースタブ（①最新ニュース(1件)→②ニュース一覧(直近2か月)→③ギャラリー(直近2か月)。フィルタチップ・切替UIは無し） ===== */
+/* ===== 📰 ニュースタブ（直近2か月のニュースを新しい順に、月ごとの見出しで区切った小サムネ付きの一覧で表示。フィルタチップ・切替UIは無し） ===== */
 function newsTabHTML(){
   if(!ND.news.length) return emptyMsg(NOTION_EMPTY_MSG);
   const visible = ND.news.filter(newsIsVisible).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
   if(!visible.length) return emptyMsg("表示対象のニュースがありません。");
-
-  // ①最新ニュース：もっとも新しいニュース1件だけを大きめのフィーチャーカードで表示
-  let html = `<div class="pickup-section">
-      <h2 class="group-h">⭐ 最新ニュース</h2>
-      <div class="pf-grid">${pickupFeatureCard(visible[0])}</div>
-    </div>`;
-
-  // 直近2か月のニュース（②一覧・③ギャラリーで共用）
   const recent = visible.filter(n=>isWithinMonths(n.date, 2));
-
-  // ②ニュース一覧：直近2か月のニュースをコンパクトなリストで表示
-  html += `<h2 class="group-h">📋 ニュース一覧</h2>` + (recent.length
-    ? `<div class="compact-list-scroll"><div class="compact-list">${recent.map(newsCompactRow).join("")}</div></div>`
-    : emptyMsg("直近2か月のニュースはありません。"));
-
-  // ③ギャラリー：直近2か月のニュースをサムネ付きのカードで一覧
-  html += `<h2 class="group-h">🗂 ギャラリー</h2>` + (recent.length
-    ? `<div class="card-grid">${recent.map(newsBox).join("")}</div>`
-    : emptyMsg("直近2か月のニュースはありません。"));
-  return html;
-}
-/* 最新ニュース：通常ニュースより大きいフィーチャーカード（大きいサムネ＋大きめタイトル＋目立つ枠） */
-function pickupFeatureCard(it){
-  const cls = mediaClass(it.media);
-  const letter = esc((it.media||"?").charAt(0));
-  const isNew = isWithinDays(it.date, 7);
-  const imgSrc = safeUrl(it.thumbnail);
-  const img = imgSrc
-    ? `<img class="pf-img" src="${esc(imgSrc)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
-    : `<div class="pf-img ph src ${cls}">${letter}</div>`;
-  const meta = [
-    `<span class="src ${cls}">${esc(it.media||"")}</span>`,
-    `<span class="org-name">${esc(it.org||"")}</span>`,
-    `<span>${esc(fmtDate(it.date))}</span>`,
-    isNew ? '<span class="badge-new">NEW</span>' : ""
-  ].filter(Boolean).join(" ");
-  const slug = registerItem(it, "news");
-  const inner = `${img}<div class="pf-body">
-      <div class="pf-meta">${meta}</div>
-      <div class="pf-title">${esc(it.title)}</div>
-      ${it.summary ? `<div class="pf-summary clamp2">${esc(it.summary)}</div>` : ""}
-    </div>`;
-  return `<div class="pf-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
+  if(!recent.length) return emptyMsg("直近2か月のニュースはありません。");
+  const months = [];
+  recent.forEach(n=>{
+    const key = (n.date||"").slice(0,7);
+    const last = months[months.length-1];
+    if(last && last.key === key) last.items.push(n); else months.push({key, items:[n]});
+  });
+  return months.map(m=>{
+    const [y, mo] = m.key.split("-");
+    const label = y && mo ? `${Number(y)}年${Number(mo)}月` : "日付なし";
+    return `<h2 class="news-month">${label}（${m.items.length}件）</h2><div class="news-list full">${m.items.map(newsRow).join("")}</div>`;
+  }).join("");
 }
 
 /* ===== 統合カレンダー：ソース切替（Phase 1） =====
@@ -2305,8 +2596,8 @@ function eventsTabBodyHTML(){
   const upcoming = items.filter(it => eventDateStatus(it) === "開催予定").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
 
   html += `<div class="cal-wrap" id="eventCalendar" aria-live="polite">${eventCalendarInnerHTML(items)}</div>`;
-  if(todays.length) html += `<h2 class="group-h">🔴 今日のイベント</h2><div class="card-grid">${todays.map(it=>itemCard(it,"event")).join("")}</div>`;
-  if(upcoming.length) html += `<h2 class="group-h">🔜 今後の予定</h2><div class="card-grid">${upcoming.map(it=>itemCard(it,"event")).join("")}</div>`;
+  if(todays.length) html += `<h2 class="group-h">今日のイベント</h2><div class="card-grid">${todays.map(it=>itemCard(it,"event")).join("")}</div>`;
+  if(upcoming.length) html += `<h2 class="group-h">今後の予定</h2><div class="card-grid">${collapseRepeats(upcoming).map(g=>itemCard(g.it,"event",{more:g.more})).join("")}</div>`;
   if(!todays.length && !upcoming.length) html += emptyMsg("今日・今後のイベントはありません。過去のイベントはカレンダーからご覧いただけます。");
   return html;
 }
@@ -2677,9 +2968,12 @@ function itemCard(it, kind, opts){
   // 「開催日時：」等のテキストにする。住所・参加費・内容は個別モーダルで表示。キャンペーンは従来どおり。
   let rows, badgeText, badgeCls = "";
   if(kind === "event"){
+    // 日時は題名より前に太字で出す（rowsには入れない）。同じ催しの次回以降は opts.more（collapseRepeats）で1行にまとめる
+    const more = opts.more || [];
+    const moreDays = more.slice(0,3).map(m=>fmtDay(m.start)).filter(Boolean).join("・");
     rows = [
-      `<div class="ev-meta">開催日時：${esc(fmtEventDate(it.start, it.end))}</div>`,
-      placeParts.length ? `<div class="ev-meta">開催場所：${esc(placeParts.join(" / "))}</div>` : ""
+      placeParts.length ? `<div class="ev-meta">開催場所：${esc(placeParts.join(" / "))}</div>` : "",
+      more.length ? `<div class="ev-more">このあと ${esc(moreDays)}${more.length > 3 ? " ほか" : ""}（あと${more.length}回）</div>` : ""
     ].filter(Boolean).join("");
     badgeText = eventDateStatus(it);   // クリック後のモーダルと同じ状態・色で表示（統一）
     badgeCls = badgeText === "終了" ? " ended" : (badgeText === "開催予定" ? " upcoming" : "");
@@ -2687,16 +2981,36 @@ function itemCard(it, kind, opts){
     rows = [
       `<div class="ev-meta">🗓 ${esc(fmtEventDate(it.start, it.end))}</div>`,
       placeParts.length ? `<div class="ev-meta">📍 ${esc(placeParts.join(" / "))}</div>` : "",
-      it.fee ? `<div class="ev-meta">💰 ${esc(it.fee)}</div>` : "",
+      hasCampaignFee(it.fee) ? `<div class="ev-meta">💰 ${esc(it.fee)}</div>` : "",
       it.organizer ? `<div class="ev-meta">🏢 ${esc(it.organizer)}</div>` : "",
       it.comment ? `<div class="ev-comment clamp2">${esc(it.comment)}</div>` : ""
     ].filter(Boolean).join("");
     badgeText = opts.badge || "";      // キャンペーンは従来どおりアクセント色
   }
   const badge = badgeText ? `<span class="ev-status-badge${badgeCls}">${esc(badgeText)}</span>` : "";
-  const inner = `${img}<div class="ev-body">${badge}<div class="ev-title">${esc(it.title)}</div>${rows}</div>`;
+  const when = kind === "event" ? `<div class="ev-when">${esc(fmtEventDate(it.start, it.end))}</div>` : "";
+  const inner = `${img}<div class="ev-body">${badge}${when}<div class="ev-title">${esc(it.title)}</div>${rows}</div>`;
   const slug = registerItem(it, kind);
   return `<div class="ev-card" data-open-detail="${esc(slug)}" tabindex="0" role="button" aria-haspopup="dialog">${inner}</div>`;
+}
+/* 同じ催しの繰り返し（題名と場所が同じ）を、いちばん近い1件にまとめる。戻り値は {it, more:[次回以降]} の配列。
+   渡す配列は開催日の昇順にしておく。カレンダーの枠には全回がそのまま出るので、ここで畳んでも情報は失われない */
+function collapseRepeats(list){
+  const groups = new Map();
+  list.forEach(it=>{
+    const key = (it.title||"") + "|" + (it.place||"");
+    const g = groups.get(key);
+    if(g) g.more.push(it); else groups.set(key, {it, more:[]});
+  });
+  return Array.from(groups.values());
+}
+/* キャンペーンの参加費を出すか。0（Notion の数値列の既定）は「💰 0」と出ても意味が通らないので出さない。
+   イベントは formatEventFee が 0 を「無料」にするので対象外 */
+function hasCampaignFee(fee){ return !!fee && ("" + fee).trim() !== "0"; }
+/* 「11/18(水)」の形（時刻なし） */
+function fmtDay(s){
+  const dt = parseDT(s);
+  return dt ? `${dt.mo}/${dt.d}(${WEEKDAYS[new Date(dt.y, dt.mo-1, dt.d).getDay()]})` : "";
 }
 /* 終了イベント／キャンペーンのコンパクト行（クリックで詳細モーダル） */
 function compactRow(it, kind){
@@ -2719,8 +3033,8 @@ function campaignsTabHTML(){
   const active = items.filter(i=>i.status==="実施中");
   const upcoming = items.filter(i=>i.status!=="実施中" && i.status!=="終了").sort((a,b)=>(a.start||"").localeCompare(b.start||""));
 
-  if(active.length) html += `<h2 class="group-h">🔴 実施中のキャンペーン</h2><div class="card-grid">${active.map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`;
-  if(upcoming.length) html += `<h2 class="group-h">🔜 今後の予定のキャンペーン</h2><div class="card-grid">${upcoming.map(it=>itemCard(it,"campaign")).join("")}</div>`;
+  if(active.length) html += `<h2 class="group-h">実施中のキャンペーン</h2><div class="card-grid">${active.map(it=>itemCard(it,"campaign",{badge:"実施中"})).join("")}</div>`;
+  if(upcoming.length) html += `<h2 class="group-h">今後の予定のキャンペーン</h2><div class="card-grid">${upcoming.map(it=>itemCard(it,"campaign")).join("")}</div>`;
   if(!active.length && !upcoming.length) html += emptyMsg("実施中・今後のキャンペーンはありません。");
   return html;
 }
@@ -3267,7 +3581,7 @@ function towncalAreaHTML(){
   const sourceUrl = safeUrl(T.sourceUrl);
   const toggle = canSwitch ? `<div class="cal-view-toggle" style="margin-bottom:10px"><button type="button" class="cal-view-btn" data-towncal-view="${it === nextIssue ? "current" : "next"}">${it === nextIssue ? "今月号に戻る" : "来月号を見る"}</button></div>` : "";
   return `
-    <h2 class="group-h">🗓 ${esc(monthLabel)}のこんぴらカレンダー</h2>
+    <h2 class="group-h">${esc(monthLabel)}のこんぴらカレンダー</h2>
     ${toggle}
     ${isOld ? `<div class="towncal-notice">この号は${esc(monthLabel)}のものです。最新の予定は琴平町ホームページでご確認ください。</div>` : ""}
     ${imgSrc ? `
@@ -3593,7 +3907,7 @@ function renderUtilityWidgets(){
   const weatherCard = weather.enabled === true ? `
     <section class="widget-card weather-card" aria-labelledby="weatherWidgetTitle">
       <span class="widget-kicker">今日の琴平</span>
-      <div class="widget-title" id="weatherWidgetTitle">🌤 ${esc(weatherLocation)}周辺の天気</div>
+      <div class="widget-title" id="weatherWidgetTitle">${esc(weatherLocation)}周辺の天気</div>
       <div class="weather-warning-slot"></div>
       <div id="weatherBody" aria-live="polite"><div class="widget-loading">予報を読み込んでいます…</div></div>
     </section>` : "";
@@ -3619,11 +3933,7 @@ function renderCommunityWidgets(){
   const sidebarAds = adsForPlacement("sidebar", 2);
   const adsHTML = sidebarAds.length
     ? sidebarAds.map(ad=>adCardHTML(ad, " ad-desktop-only")).join("")
-    : `<section class="widget-card ad-vacancy ad-desktop-only" aria-label="地域スポンサー広告枠">
-        <span class="widget-kicker">地域スポンサー</span>
-        <div class="widget-title">広告掲載枠</div>
-        <p class="widget-copy">琴平に関わる事業者・団体の広告枠を準備しています。</p>
-      </section>`;
+    : "";   // 広告が無いときは枠ごと出さない（2026-11-12。「準備しています」だけの枠をやめた）
 
   /* 並び順：大型イベント→ダム→LINE→SNS→広告。告知枠はダムより上に置く（2026-10-15 本人指示。PC・スマホとも
      同じこの関数で描画しているため、ここを変えれば両方に効く）。SNS カードは 2026-11-03 追加 */
@@ -3740,7 +4050,7 @@ function damWidgetCardHTML(){
   if(!c) return "";
   return `<section class="widget-card dam-card" aria-labelledby="damWidgetTitle">
     <span class="widget-kicker">水資源</span>
-    <div class="widget-title" id="damWidgetTitle">💧 ${esc(c.name)} 貯水状況</div>
+    <div class="widget-title" id="damWidgetTitle">${esc(c.name)} 貯水状況</div>
     ${damBodyHTML(c)}
   </section>`;
 }
@@ -3757,7 +4067,7 @@ function lineOpenChatCardHTML(line, i){
   const titleId = `lineWidgetTitle${i}`;
   return `<section class="widget-card line-card" aria-labelledby="${titleId}">
     <span class="widget-kicker">${esc(line.kicker || "地域コミュニティ")}</span>
-    <div class="widget-title" id="${titleId}">💬 ${esc(name)}</div>
+    <div class="widget-title" id="${titleId}">${esc(name)}</div>
     <div class="line-content">
       ${line.description ? `<p class="widget-copy">${esc(line.description)}</p>` : ""}
       ${qr ? `<img class="line-qr" src="${esc(qr)}" alt="${esc(name)}のLINEオープンチャット参加用QRコード" loading="lazy">` : ""}
@@ -3781,7 +4091,7 @@ function snsFollowCardHTML(){
   if(!sns.length) return "";
   return `<section class="widget-card sns-card" aria-labelledby="snsWidgetTitle">
     <span class="widget-kicker">SNS</span>
-    <div class="widget-title" id="snsWidgetTitle">📣 ことひらいふの SNS</div>
+    <div class="widget-title" id="snsWidgetTitle">ことひらいふの SNS</div>
     <p class="widget-copy">琴平の“いま”を、X・Threads・Instagram でも流しています。</p>
     <div class="widget-links">${sns.map(s => `<a class="widget-link" href="${esc(s.url)}" rel="noopener">${esc(s.label)} ↗</a>`).join("")}</div>
   </section>`;
@@ -3934,6 +4244,27 @@ function renderFooterLinks(){
     `<a class="footer-link" href="#${esc(link.route)}" target="_self">${esc(link.label)}</a>`
   ).join("");
   host.hidden = false;
+  renderFooterLine();
+}
+/* LINE への入口に使うオープンチャット（site-widgets-data.js の lineOpenChats で最初に有効なもの＝ことひらいふ） */
+function primaryLineChat(){
+  const chats = Array.isArray(WIDGETS.lineOpenChats) ? WIDGETS.lineOpenChats : (WIDGETS.lineOpenChat ? [WIDGETS.lineOpenChat] : []);
+  return chats.find(c => c && c.enabled === true && safeUrl(c.joinUrl) && c.name) || null;
+}
+/* 全ページ共通のフッターに LINE への入口を出す。有効なオープンチャットが無ければ何も出さない */
+function renderFooterLine(){
+  const host = document.getElementById("footerLine");
+  const c = primaryLineChat();
+  if(!host || !c) return;
+  host.innerHTML = `<div class="fl-text"><strong>町の話題を話す場所は、LINEです。</strong>
+      <span>オープンチャット「${esc(c.name)}」。ニックネームで参加できます。</span></div>
+    <a class="fl-btn" href="${esc(safeUrl(c.joinUrl))}" target="_blank" rel="noopener">LINEで参加する ↗</a>`;
+  host.hidden = false;
+}
+/* イベント・キャンペーン・ニュースの詳細モーダルの末尾に出す LINE への1行 */
+function modalLineHTML(){
+  const c = primaryLineChat();
+  return c ? `<div class="modal-line">この話題を話すなら <a href="${esc(safeUrl(c.joinUrl))}" target="_blank" rel="noopener">LINEオープンチャット「${esc(c.name)}」↗</a></div>` : "";
 }
 
 const WEATHER_CACHE_KEY = "kotohiralife-weather-v1";
@@ -3973,6 +4304,8 @@ async function loadWeatherWidget(){
    チップ本体はアイコン＋今日の最高気温のみ。タップで展開するパネルはweatherForecastHTMLをそのまま流用する。 */
 function renderWeatherChip(state){
   weatherChipState = state;
+  const todayWeather = document.getElementById("todayWeather");   // ホームの「今日の琴平」が表示中なら天気を入れる
+  if(todayWeather) todayWeather.innerHTML = todayWeatherHTML();
   const chip = document.getElementById("weatherChip");
   if(!chip) return;
   const day = state && Array.isArray(state.data?.days) ? state.data.days[0] : null;

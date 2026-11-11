@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-11 12:01",
+  "fetched": "2026-11-12 01:49",
   "news": [
     {
       "id": "4150b4e5-ff5b-81e2-88a6-e9b726f1e201",
@@ -26,7 +26,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/4150b4e5ff5b81efb85deb226445255a.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "4130b4e5-ff5b-8161-80ed-d908737269be",
@@ -130,7 +131,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/40a0b4e5ff5b8123a1c0e80a4edd81b9.webp",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "40a0b4e5-ff5b-819b-adb7-dc7ddd0305ed",
@@ -208,7 +210,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/4090b4e5ff5b811195a3c89ed0b559e7.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "4090b4e5-ff5b-8169-875d-c7039052839f",
@@ -221,7 +224,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/4090b4e5ff5b8169875dc7039052839f.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "4090b4e5-ff5b-8126-814b-ca4eb25aca7a",
@@ -390,7 +394,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/4010b4e5ff5b819783b7e448eb243783.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "4010b4e5-ff5b-8117-ba87-c2105dad4168",
@@ -403,7 +408,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/4010b4e5ff5b8117ba87c2105dad4168.webp",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "4040b4e5-ff5b-8171-a96c-e6adf0166187",
@@ -429,7 +435,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/4000b4e5ff5b8187aec7df7468989641.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "3ff0b4e5-ff5b-81a8-b62e-cc0933ed35db",
@@ -468,7 +475,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/3ff0b4e5ff5b817e98b2d45fcf1acc7a.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "3fb0b4e5-ff5b-816d-9292-c91fdffc72db",
@@ -546,7 +554,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/3f90b4e5ff5b81429f16cbf794896fd9.webp",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "3f70b4e5-ff5b-81f7-bc87-d091402d2e1b",
@@ -663,7 +672,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/3f30b4e5ff5b81659609f93f061b1715.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "3f20b4e5-ff5b-81f5-a07c-c9f56cdc8d89",
@@ -715,7 +725,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/3f10b4e5ff5b81f6a200eb062d99568c.webp",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "3f10b4e5-ff5b-80f8-8655-d7e4be1bb333",
@@ -871,7 +882,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/3ec0b4e5ff5b818c81d8f2a13324af7e.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "3ec0b4e5-ff5b-819a-9806-dd7323b518bc",
@@ -936,7 +948,8 @@ window.NOTION_DATA = {
       "thumbnail": "assets/thumbs/3eb0b4e5ff5b8169876cff03b595f287.png",
       "duplicate": false,
       "pickup": false,
-      "show": true
+      "show": true,
+      "thumbGeneric": true
     },
     {
       "id": "3eb0b4e5-ff5b-8153-97c5-fac00df30859",
@@ -1236,32 +1249,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3d70b4e5-ff5b-8127-bac9-c2b5b2d58a83",
-      "title": "イギリスの旅行会社がうどん作り体験 四国の認知度を上げ“誘客を” 香川・琴平町（KSB瀬戸内海放送） - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rOHVtY2R4cE9nZEFudnl1bGJNZzFJUjRlQmI1dXBmMTZhazVVMmpuNGIzdGFldU1mREk5YUROUDN3b1oyVGttd0wtR09pS2dsNVFaQVBaOUxWZ0doQzlDMGtXaUktQVZPYXhJSUNyYVp5YXJscEFWMHA4YlIyaVU?oc=5",
-      "summary": "",
-      "org": "Yahoo!ニュース",
-      "media": "Webメディア",
-      "date": "2026-09-10",
-      "thumbnail": "assets/thumbs/3d70b4e5ff5b8127bac9c2b5b2d58a83.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d70b4e5-ff5b-819e-aae8-daf0b855333f",
-      "title": "熊本地震で３職員派遣　琴平町",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091000000000800",
-      "summary": "琴平町は9月10日から、熊本地震の被災地支援のため職員3人を熊本県宇土市に順次派遣する。派遣職員は同市役所で家屋解体の相談業務などに従事する。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-10",
-      "thumbnail": "assets/thumbs/3d70b4e5ff5b819eaae8daf0b855333f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -1304,11 +1291,30 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "4150b4e5-ff5b-8065-bf62-c08e8a245b51",
+      "title": "わん詣2027 ペット初詣・ペットマーケット 2日目",
+      "url": "https://www.instagram.com/p/DfgPqudOCPv/",
+      "start": "2027-01-31T00:00",
+      "end": "2027-01-31T23:59",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/4150b4e5ff5b8065bf62c08e8a245b51.webp",
+      "comment": "会場: 金刀比羅宮、金陵の郷（香川県琴平町） 琴平町の金刀比羅宮で、愛犬と一緒に参拝・初詣ができる「わん詣2027」が開催されます。ペット初詣、ペットマーケット、愛犬との写真撮影などが予定されており、金陵の郷でも併催されます。",
+      "fee": "0",
+      "organizer": "ペット参拝わんちゃんを楽しむ会",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": true
+    },
+    {
       "id": "4130b4e5-ff5b-81b0-8dc5-d49da5a975e4",
-      "title": "わん詣2027 ペット初詣・ペットマーケット",
+      "title": "わん詣2027 ペット初詣・ペットマーケット 1日目",
       "url": "https://www.instagram.com/p/DfgPqudOCPv/",
       "start": "2027-01-30T00:00",
-      "end": "2027-01-31T23:59",
+      "end": "2027-01-30T23:59",
       "status": "実施前",
       "city": "琴平町",
       "place": "金陵の郷",
@@ -2007,6 +2013,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "4150b4e5-ff5b-8110-b725-f684d040c53b",
+      "title": "VISPO FEST 2026 みんなで楽しむスポーツ＆地域フェス",
+      "url": "https://www.instagram.com/p/DfgtSpwkQPg/?img_index=1",
+      "start": "2026-11-29T10:00",
+      "end": "2026-11-29T16:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "ヴィスポことひら",
+      "address": "〒766-0003 香川県仲多度郡琴平町五條1022-1",
+      "image": "assets/thumbs/4150b4e5ff5b8110b725f684d040c53b.webp",
+      "comment": "会場: いこいの郷公園・VISPOことひら 琴平町のいこいの郷公園・VISPOことひらで開催される地域フェス。体力測定チャレンジ、ステージイベント、スポーツ体験、グルメ、ハンドメイド雑貨、車両展示など、子どもから大人まで楽しめる企画が盛りだくさん。スタンプラリー大抽選会も開催。",
+      "fee": "0",
+      "organizer": "VISPO",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
       "id": "4040b4e5-ff5b-81dd-966f-f167c6fef95d",
       "title": "ことウラさんぽ モニター参加者募集",
       "url": "https://www.instagram.com/p/DerDE-6kUdE/",
@@ -2142,7 +2167,7 @@ window.NOTION_DATA = {
     {
       "id": "4110b4e5-ff5b-8092-a84f-f192a16eaeab",
       "title": "ご飯ついでに、国際交流～みんなでカレーを囲みながら世界の人たちと気軽に交流",
-      "url": "https://www.instagram.com/p/DeQj2igEdrF/",
+      "url": "https://www.instagram.com/p/DfjCYMpNuK_/",
       "start": "2026-11-27T18:30",
       "end": "2026-11-27T21:00",
       "status": "実施前",
@@ -2754,7 +2779,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T13:30",
       "end": "2026-11-12T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2773,7 +2798,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T13:00",
       "end": "2026-11-12T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2792,7 +2817,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T10:30",
       "end": "2026-11-12T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2811,7 +2836,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T10:00",
       "end": "2026-11-12T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2830,7 +2855,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-11-11T12:00",
       "end": "2026-11-11T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2849,7 +2874,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-11T11:00",
       "end": "",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2868,7 +2893,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-11T09:00",
       "end": "2026-11-11T11:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5642,44 +5667,6 @@ window.NOTION_DATA = {
         "基本のイベント"
       ],
       "featured": false
-    },
-    {
-      "id": "3c80b4e5-ff5b-81a1-bbda-f8ed9895895d",
-      "title": "第8回 こんぴら秋夜市",
-      "url": "https://www.instagram.com/p/DcZ-1R0hu9w/",
-      "start": "2026-09-12T17:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "一之橋公園",
-      "address": "〒766-0001 香川県仲多度郡琴平町722",
-      "image": "assets/thumbs/3c80b4e5ff5b81a1bbdaf8ed9895895d.webp",
-      "comment": "会場: 一之橋公園・金陵の郷 琴平町で開催される秋の夜市イベント。ゲームコーナーや大富くじ大会など、子どもから大人まで楽しめる催しが予定されている。カマタマーレ讃岐も参加予定。",
-      "fee": "0",
-      "organizer": "琴平町商工会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d50b4e5-ff5b-803a-9771-fd5687c65cd0",
-      "title": "四国シェアサミット2026 in 琴平 DAY1",
-      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
-      "start": "2026-09-12T09:30",
-      "end": "2026-09-12T20:35",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町公会堂",
-      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
-      "image": "assets/thumbs/3d50b4e5ff5b803a9771fd5687c65cd0.webp",
-      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
-      "fee": "0",
-      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
     }
   ],
   "campaigns": [
@@ -5799,23 +5786,6 @@ window.NOTION_DATA = {
       "comment": "会場: GOKAN KOTOHIRA（琴平町） GOKAN KOTOHIRAが公式サイト経由の予約に対し、宿泊料金15%OFFのキャンペーンを実施。対象期間は2026年9月25日〜12月20日（一部連休を除く）。クーポンコード「Shikoku15」を使用。",
       "fee": "",
       "organizer": "GOKAN KOTOHIRA",
-      "calendar": [],
-      "featured": false
-    },
-    {
-      "id": "3db0b4e5-ff5b-8011-9516-fe5a1354e7a7",
-      "title": "1号店3周年アニバーサリー 富くじ参道店",
-      "url": "https://www.instagram.com/p/DdIzcYOtLBg/",
-      "start": "2026-09-12",
-      "end": "2026-09-13",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "元祖こんぴら射的場 富くじ 参道店",
-      "address": "〒766-0001 香川県仲多度郡琴平町804",
-      "image": "assets/thumbs/3db0b4e5ff5b80119516fe5a1354e7a7.webp",
-      "comment": "",
-      "fee": "500",
-      "organizer": "",
       "calendar": [],
       "featured": false
     }

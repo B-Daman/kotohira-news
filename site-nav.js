@@ -16,40 +16,40 @@
   /* ===== ナビ構造の正本 ===== */
   window.SITE_NAV = {
     groups: [
-      {key:"home", label:"🏠 ホーム", shortLabel:"🏠 ホーム", flat:true,
-        items:[{key:"home", label:"🏠 ホーム"}]},
-      {key:"now", label:"📰 町の今", shortLabel:"📰 町の今",
+      {key:"home", label:"ホーム", shortLabel:"ホーム", flat:true,
+        items:[{key:"home", label:"ホーム"}]},
+      {key:"now", label:"町の今", shortLabel:"町の今",
         items:[
-          {key:"news", label:"📰 ニュース"},
-          {key:"events", label:"📅 イベント"},
-          {key:"campaigns", label:"🎁 キャンペーン"}
+          {key:"news", label:"ニュース"},
+          {key:"events", label:"イベント"},
+          {key:"campaigns", label:"キャンペーン"}
         ]},
       /* 2026-09-05: 町民向けサイトという性格から、くらしを訪れる・関わるより先に置く（あっきーさん判断） */
-      {key:"kurashi", label:"🏡 くらし", shortLabel:"🏡 くらし",
+      {key:"kurashi", label:"くらし", shortLabel:"くらし",
         items:[
-          {key:"towncal", label:"🗓 こんぴらカレンダー"},
-          {key:"shopcal", label:"🏪 お店の営業カレンダー"}
+          {key:"towncal", label:"こんぴらカレンダー"},
+          {key:"shopcal", label:"お店の営業カレンダー"}
         ]},
-      {key:"visit", label:"🧭 訪れる・関わる", shortLabel:"🧭 訪れる",
+      {key:"visit", label:"訪れる・関わる", shortLabel:"訪れる",
         items:[
-          {key:"experiences", label:"🧭 体験・滞在"},
-          {key:"udon", label:"🍜 うどん店"},
+          {key:"experiences", label:"体験・滞在"},
+          {key:"udon", label:"うどん店"},
           /* sweets（かき氷・アイス）は2026-08-28にアーカイブ。#sweets直リンクでページは開けるが
-             メニューには出さない。復活させる場合はここに {key:"sweets", label:"🍧 かき氷・アイス"} を戻す */
-          {key:"parking", label:"🅿 駐車場"}
+             メニューには出さない。復活させる場合はここに {key:"sweets", label:"かき氷・アイス"} を戻す */
+          {key:"parking", label:"駐車場"}
         ]},
-      {key:"know", label:"🔗 町を知る", shortLabel:"🔗 町を知る",
+      {key:"know", label:"町を知る", shortLabel:"町を知る",
         items:[
-          {key:"orgs", label:"📋 団体"},
-          {key:"links", label:"🔗 リンク"}
+          {key:"orgs", label:"団体"},
+          {key:"links", label:"リンク"}
         ]}
     ],
     /* index.htmlのSPAビュー（#operator等）への通常のハッシュ遷移。groups同様、他のitemsと
        同じ扱いでよくなったため、urlフィールドは持たない（2026-09-05のSPA統合で廃止）。 */
     siteLinks: [
-      {key:"operator", label:"👤 運営者情報"},
-      {key:"contact", label:"✉️ お問い合わせ"},
-      {key:"privacy", label:"🔒 プライバシーポリシー"}
+      {key:"operator", label:"運営者情報"},
+      {key:"contact", label:"お問い合わせ"},
+      {key:"privacy", label:"プライバシーポリシー"}
     ]
   };
 
@@ -71,7 +71,7 @@
       return `<a class="drawer-link${active ? " active" : ""}" href="#${escNav(it.key)}">${escNav(it.label)}</a>`;
     };
     const groups = (window.SITE_NAV.groups || []).concat([{
-      key:"siteinfo", label:"ℹ️ サイト情報",
+      key:"siteinfo", label:"サイト情報",
       items: window.SITE_NAV.siteLinks || []
     }]);
     return groups.map(g=>{
