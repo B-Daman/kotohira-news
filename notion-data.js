@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-12 01:49",
+  "fetched": "2026-11-12 19:10",
   "news": [
+    {
+      "id": "4160b4e5-ff5b-81e2-b118-c00d0ecb53ea",
+      "title": "瀬戸内を舞台に地域イノベーション人材を育てるブックラウンジ「Side B」、香川・琴平に開業",
+      "url": "https://prtimes.jp/main/html/rd/p/000000002.000193790.html",
+      "summary": "株式会社かける小町は、2026年12月6日に香川県琴平町にブックラウンジ「本から始まる探求ラウンジ Side B」を開業します。企業が本棚を持ち、社員が地域の事業者と企画を進める人材育成の場として、瀬戸内地域を中心としたフィールドで新規事業や共創拠点を担う人材育成に取り組みます。",
+      "org": "PR TIMES（株式会社かける小町プレスリリース）",
+      "media": "行政",
+      "date": "2026-11-12",
+      "thumbnail": "assets/thumbs/4160b4e5ff5b81e2b118c00d0ecb53ea.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4150b4e5-ff5b-81e2-88a6-e9b726f1e201",
       "title": "金丸座に響く伝統の調べ　琴平　イタリア古楽と雅楽公演　児童や学生鑑賞",
