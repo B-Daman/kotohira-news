@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-12 19:10",
+  "fetched": "2026-11-13 03:32",
   "news": [
     {
       "id": "4160b4e5-ff5b-81e2-b118-c00d0ecb53ea",
@@ -1220,45 +1220,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-12",
       "thumbnail": "assets/thumbs/3da0b4e5ff5b81e3a512c400b4babd8a.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d80b4e5-ff5b-816c-adc7-ffc1f2232fb1",
-      "title": "【琴平町✖️テック未来】ロボットと暮らす未来 こんぴら表参道で歩行支援ロボット実験 - かがわ経済ニュース",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LdlFLMnFiU3BhYmswbllvTXBHdDlBX2ZNN1JDRVltWDJLNzlkNWVmNW5zeC0wOW9uaVUtYTA4TWw5ZG95cGpybEkyRmRmUHp5aTlmVGJ6dmdicWV6dDBWeg?oc=5",
-      "summary": "8月1日にコトリ コワーキング&ホステル琴平でNPO法人ブロードバンドスクール協会主催の「スマートエイジング ハイブリッドフォーラム2026」が開催された。7月31日には、こんぴら表参道で歩行支援ロボット「WALK-MATE」を使った歩行実験が行われ、町内の高齢者や琴平町議会議長が参加した。",
-      "org": "かがわ経済ニュース",
-      "media": "Webメディア",
-      "date": "2026-09-11",
-      "thumbnail": "assets/thumbs/3d80b4e5ff5b816cadc7ffc1f2232fb1.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d80b4e5-ff5b-8167-a569-e2e7a02185c9",
-      "title": "住んでなくても“住民”になれる時代がくる？琴平町で試用版アプリのモニター募集中！※2026年9月18日(金)締切(先着順)",
-      "url": "https://www.marugame2.jp/topics/130438",
-      "summary": "琴平町が総務省＆面白法人カヤックとタッグを組んで、「ふるさと住民登録制度」のモニター実証事業をスタートすることになりました！ 「琴平町が好き！」「おでかけや旅行で訪れたことがある」「地方とつながる新し",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-11",
-      "thumbnail": "assets/thumbs/3d80b4e5ff5b8167a569e2e7a02185c9.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3d80b4e5-ff5b-8188-88bf-f382f7541e15",
-      "title": "琴平の夜を楽しんで　屋台や富くじ…あす「秋夜市」",
-      "url": "https://www.coolkagawa.jp/news/entry-5907.html",
-      "summary": "琴平町の秋の夜を楽しむイベント「こんぴら秋夜市」が9月12日午後5時から一之橋公園などで開催。赤ちょうちんで照らされた会場でステージイベント、屋台、富くじ大会、ゲームコーナーなどが行われ、琴平のシンボルのライトアップも実施。",
-      "org": "COOL KAGAWA（四国新聞社）",
-      "media": "新聞",
-      "date": "2026-09-11",
-      "thumbnail": "assets/thumbs/3d80b4e5ff5b818888bff382f7541e15.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2773,7 +2734,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-13T10:00",
       "end": "2026-11-13T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2792,7 +2753,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T13:30",
       "end": "2026-11-12T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2811,7 +2772,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T13:00",
       "end": "2026-11-12T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2830,7 +2791,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T10:30",
       "end": "2026-11-12T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2849,7 +2810,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-12T10:00",
       "end": "2026-11-12T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5657,25 +5618,6 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町内（KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校） 琴平町での出会いや経験を通じて地域や住民の魅力に触れるプロジェクト。KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校での体験プログラムに参加者を募集。",
       "fee": "0",
       "organizer": "流通科学大学",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d50b4e5-ff5b-8034-8a48-cf5c59b47878",
-      "title": "四国シェアサミット2026 in 琴平 DAY2",
-      "url": "https://prtimes.jp/main/html/rd/p/000000011.000169805.html",
-      "start": "2026-09-13T09:45",
-      "end": "2026-09-13T12:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "琴平町公会堂",
-      "address": "〒766-0001 香川県仲多度郡琴平町975−1",
-      "image": "assets/thumbs/3d50b4e5ff5b80348a48cf5c59b47878.webp",
-      "comment": "会場: 琴平町公会堂（主会場）ほか町内各所 琴平町で2026年9月12日・13日に開催される、シェアリングエコノミーのカンファレンス。「人口をシェアする」をテーマに、全国から40名超の実践者が登壇し、二地域居住・関係人口について議論する。参加は無料。",
-      "fee": "0",
-      "organizer": "四国シェアサミット実行委員会、一般社団法人シェアリングエコノミー協会",
       "calendar": [
         "基本のイベント"
       ],
