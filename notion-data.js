@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-13 03:32",
+  "fetched": "2026-11-14 02:59",
   "news": [
     {
       "id": "4160b4e5-ff5b-81e2-b118-c00d0ecb53ea",
@@ -1210,19 +1210,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3da0b4e5-ff5b-81e3-a512-c400b4babd8a",
-      "title": "World Nomad Conference Fukuoka, Japan 2026",
-      "url": "https://www.kagawabiz-news.media/todayskagawa/13778",
-      "summary": "世界最大級のデジタルノマド国際会議が2026年9月30日に福岡で開催されます。香川県琴平町から琴平バス（Kotori Coworking & Hostel）の今川弥生氏が登壇者として参加し、地方の交通・観光業界の事例を世界的なコミュニティリーダーと共有します。",
-      "org": "香川ビジネスニュース",
-      "media": "Webメディア",
-      "date": "2026-09-12",
-      "thumbnail": "assets/thumbs/3da0b4e5ff5b81e3a512c400b4babd8a.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -1924,6 +1911,44 @@ window.NOTION_DATA = {
       "comment": "会場: 琴平町役場前駐車場、琴平町総合センター 琴平町の冬の一大イベント。チャリティー作品の即売会が12月5日（土）と6日（日）に琴平町役場前駐車場と琴平町総合センターで開催される。",
       "fee": "",
       "organizer": "ことひら社協",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "4170b4e5-ff5b-8110-bb18-de6f9bab7ab3",
+      "title": "小鳥に模様を描くワークショップ & Hygge mini Live",
+      "url": "https://www.instagram.com/sandosand.stand/p/DfofpSFD2r7/?img_index=1",
+      "start": "2026-12-04T17:00",
+      "end": "2026-12-04T19:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "Sando Sand. Stand",
+      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル 1F",
+      "image": "assets/thumbs/4170b4e5ff5b8110bb18de6f9bab7ab3.webp",
+      "comment": "会場: Sando Sand. Stand（香川県仲多度郡琴平町725 HAKOBUNEビル 1F） 12月4日（金）、カフェ「Sando Sand. Stand」でワークショップとミニライブを開催。ポスカで小鳥の絵付けをしてドライフラワー一輪挿しを作るワークショップ（17:00〜、参加費3,000円）と、サックスとギターのデュオ「Hygge」によるミニライブ（18:45〜、料金1,500円）。",
+      "fee": "3000",
+      "organizer": "Sando Sand. Stand",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "4170b4e5-ff5b-819c-be52-f5c824fce50e",
+      "title": "いとまみき個展「mellow blue」",
+      "url": "https://www.instagram.com/sandosand.stand/p/DfHD0r2j_Qy/",
+      "start": "2026-12-02T11:00",
+      "end": "2026-12-06T16:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "Sando Sand. Stand",
+      "address": "香川県仲多度郡琴平町725 HAKOBUNEビル 1F",
+      "image": "assets/thumbs/4170b4e5ff5b819cbe52f5c824fce50e.webp",
+      "comment": "会場: Sando Sand. Stand 店内ギャラリー イラストレーター・いとまみきさんによる個展「mellow blue」が、Sando Sand. Stand店内ギャラリーで開催される。12月4日はオリジナル一輪挿しの絵付けワークショップと音楽ユニット「Hygge」によるミニライブも予定されている。",
+      "fee": "",
+      "organizer": "Sando Sand. Stand",
       "calendar": [
         "基本のイベント"
       ],
@@ -2696,7 +2721,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
       "start": "2026-11-14",
       "end": "2026-11-14",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2715,7 +2740,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-11-14T07:20",
       "end": "2026-11-14T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2734,7 +2759,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-13T10:00",
       "end": "2026-11-13T12:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5762,6 +5787,25 @@ window.NOTION_DATA = {
       "sourcePost": "https://www.instagram.com/p/DfRmIixzgIT/",
       "map": "https://maps.app.goo.gl/ZYGeM7G3zC6kcck67",
       "address": "香川県仲多度郡琴平町720−15",
+      "note": "",
+      "show": true
+    },
+    {
+      "id": "3d10b4e5-ff5b-80ff-9bd0-e566a2a2a50c",
+      "name": "ヘアーサロンやました",
+      "genres": [
+        "💇 美容・理容"
+      ],
+      "image": "assets/thumbs/3d10b4e5ff5b80ff9bd0e566a2a2a50c.webp",
+      "month": "2026-11",
+      "instagram": "",
+      "x": "",
+      "facebook": "https://www.facebook.com/saron.yamashita",
+      "threads": "",
+      "hp": "http://salon-yamashita.net/?fbclid=IwY2xjawUHXy9wZG9mBWV4dG4DYWVtAjEwAGJyaWQRMThHWFQydlpFdTUxN29HQVNzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEetRAjOfLKEPHzvPIBlkeK3tdOFpIG01LZle4I4u7Xf5Jx_FYQ8f9rnubF3ZM_aem_ERKhQ6HYtqQSBeYoD77w1A",
+      "sourcePost": "https://www.facebook.com/photo/?fbid=1751452470323017&set=a.496727905795486",
+      "map": "https://maps.app.goo.gl/1raSyEWnkAkksjx97",
+      "address": "〒766-0004 香川県仲多度郡琴平町榎井600-10",
       "note": "",
       "show": true
     }
