@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-14 02:59",
+  "fetched": "2026-11-15 00:59",
   "news": [
     {
       "id": "4160b4e5-ff5b-81e2-b118-c00d0ecb53ea",
@@ -1168,45 +1168,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-14",
       "thumbnail": "assets/thumbs/3dd0b4e5ff5b815c9870f5c1054f44df.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3db0b4e5-ff5b-81a4-811c-ea36e98e19d4",
-      "title": "果桜軒がホットペッパーグルメでネット予約開始",
-      "url": "https://www.instagram.com/p/DdOO9RLE1tZ/",
-      "summary": "琴平町の居酒屋「果桜軒」がホットペッパーグルメでのネット予約に対応開始。7名以上の予約で奥のお部屋を貸し切りで利用できる。",
-      "org": "Instagram（果桜軒）",
-      "media": "Webメディア",
-      "date": "2026-09-13",
-      "thumbnail": "assets/thumbs/3db0b4e5ff5b81a4811cea36e98e19d4.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3da0b4e5-ff5b-8195-a98a-ebfab64bc953",
-      "title": "「人口シェア」で活性化　琴平で四国サミット　全国の事業者が意見交換",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091300000004400",
-      "summary": "シェアリングエコノミーをテーマにした「四国シェアサミット2026」が琴平町の町公会堂で開催された。全国のシェアサービス事業者ら約200人が参加し、関係人口や2地域居住などについて意見交換した。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-13",
-      "thumbnail": "assets/thumbs/3da0b4e5ff5b8195a98aebfab64bc953.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3da0b4e5-ff5b-8129-8036-fc952dfee11f",
-      "title": "さぬきこんぴら785（ななはこ）7/8にオープン 創作いなり専門店",
-      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026091300000001000",
-      "summary": "琴平町に創作いなりの専門店「さぬきこんぴら785」が7/8にオープンした。すし職人だったオーナーが考案した、バラエティー豊かな具材を油揚げで包んだ創作いなりで、観光客向けの食べ歩きメニューとなっている。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-13",
-      "thumbnail": "assets/thumbs/3da0b4e5ff5b81298036fc952dfee11f.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2721,7 +2682,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
       "start": "2026-11-14",
       "end": "2026-11-14",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2740,7 +2701,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-11-14T07:20",
       "end": "2026-11-14T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -5586,63 +5547,6 @@ window.NOTION_DATA = {
       "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
       "fee": "",
       "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3cd0b4e5-ff5b-80b5-bf44-c186c4228a75",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-09-15T20:00",
-      "end": "2026-09-15T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3cd0b4e5ff5b80b5bf44c186c4228a75.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3ea0b4e5-ff5b-80f8-adbc-cf8eb1842479",
-      "title": "あなたにもできる AI体験会「琴平町のお話を、AIを使って4コマ漫画にしてみよう」",
-      "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
-      "start": "2026-09-15T13:30",
-      "end": "2026-09-15T15:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "カフェ 象山",
-      "address": "香川県仲多度郡琴平町榎井553−1",
-      "image": "assets/thumbs/3ea0b4e5ff5b80f8adbccf8eb1842479.webp",
-      "comment": "琴平町の地域おこし協力隊 あっきーさんが、毎週行っている無料のAIセミナー。今週は生成AIの基礎から気軽に学べます。",
-      "fee": "0",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "39e0b4e5-ff5b-8153-842a-c16dbdfaad50",
-      "title": "第3回コトコトプロジェクト 琴平での8日間体験プログラム",
-      "url": "https://www.instagram.com/p/DauldN1E2cQ/?img_index=1",
-      "start": "2026-09-15",
-      "end": "2026-09-22",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/39e0b4e5ff5b8153842ac16dbdfaad50.webp",
-      "comment": "会場: 琴平町内（KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校） 琴平町での出会いや経験を通じて地域や住民の魅力に触れるプロジェクト。KOTO VEGAS、こんぴら温泉、中野うどん学校琴平校での体験プログラムに参加者を募集。",
-      "fee": "0",
-      "organizer": "流通科学大学",
       "calendar": [
         "基本のイベント"
       ],
