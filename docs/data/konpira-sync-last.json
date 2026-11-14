@@ -1,16 +1,16 @@
 {
- "generated": "2026-11-08T07:30:25+09:00",
+ "generated": "2026-11-15T07:30:26+09:00",
  "apply": true,
  "days": 90,
  "window": {
-  "from": "2026-11-08",
-  "to": "2027-02-06"
+  "from": "2026-11-15",
+  "to": "2027-02-13"
  },
  "ics_events": 117,
- "ics_rows": 23,
- "notion_rows": 92,
+ "ics_rows": 24,
+ "notion_rows": 79,
  "counts": {
-  "created": 1,
+  "created": 2,
   "new": 0,
   "filled": 0,
   "ok": 22,
@@ -21,19 +21,6 @@
   "place_pending": 0
  },
  "rows": [
-  {
-   "date": "2026-11-10",
-   "title": "紅葉祭",
-   "start": "10:00",
-   "end": "10:30",
-   "location": "",
-   "notion_id": "40f0b4e5-ff5b-81cd-aa5d-fb6b2c60733d",
-   "notion_title": "紅葉祭",
-   "fills": [],
-   "reason": "exact",
-   "status": "ok",
-   "notion_start": "10:00"
-  },
   {
    "date": "2026-11-23",
    "title": "新嘗祭",
@@ -313,14 +300,42 @@
    "start": "09:00",
    "end": "09:30",
    "location": "厳魂神社（奥社）・金刀比羅本教総本部",
+   "notion_id": "4110b4e5-ff5b-81f4-910f-df495e989d1c",
+   "notion_title": "月次祭",
+   "fills": [],
+   "reason": "exact",
+   "status": "ok",
+   "notion_start": "09:00"
+  },
+  {
+   "date": "2027-02-10",
+   "title": "月次祭",
+   "start": "09:00",
+   "end": "09:30",
+   "location": "御本宮・金刀比羅本教総本部",
    "notion_id": null,
    "notion_title": null,
    "fills": [
-    "開催場所 嚴魂神社（奥社）"
+    "開催場所 金刀比羅宮（御本宮）"
    ],
    "reason": null,
    "status": "created",
-   "page_url": "https://app.notion.com/p/4110b4e5ff5b81f4910fdf495e989d1c"
+   "page_url": "https://app.notion.com/p/4180b4e5ff5b810b8915ebd38c6195a9"
+  },
+  {
+   "date": "2027-02-11",
+   "title": "紀元祭",
+   "start": "10:00",
+   "end": "10:30",
+   "location": "金刀比羅宮 御本宮",
+   "notion_id": null,
+   "notion_title": null,
+   "fills": [
+    "開催場所 金刀比羅宮（御本宮）"
+   ],
+   "reason": null,
+   "status": "created",
+   "page_url": "https://app.notion.com/p/4180b4e5ff5b811c8d37f09900564b4b"
   }
  ]
 }
