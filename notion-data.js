@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-15 00:59",
+  "fetched": "2026-11-15 10:14",
   "news": [
     {
       "id": "4160b4e5-ff5b-81e2-b118-c00d0ecb53ea",
@@ -1174,6 +1174,44 @@ window.NOTION_DATA = {
     }
   ],
   "events": [
+    {
+      "id": "4180b4e5-ff5b-811c-8d37-f09900564b4b",
+      "title": "紀元祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-02-11T10:00",
+      "end": "2027-02-11T10:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "初代天皇である神武天皇が即位された日を慶祝する祭典です。 祭典終了後、神武天皇陵を遥拝いたします。 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "4180b4e5-ff5b-810b-8915-ebd38c6195a9",
+      "title": "月次祭",
+      "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
+      "start": "2027-02-10T09:00",
+      "end": "2027-02-10T09:30",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金刀比羅宮（御本宮）",
+      "address": "香川県仲多度郡琴平町892-1（石段785段目）",
+      "image": "",
+      "comment": "毎月1・6・10・26日に斎行 / 出典: 金刀比羅宮公式カレンダー（こんぴらさんカレンダー）",
+      "fee": "",
+      "organizer": "金刀比羅宮",
+      "calendar": [
+        "金刀比羅宮"
+      ],
+      "featured": false
+    },
     {
       "id": "4110b4e5-ff5b-81f4-910f-df495e989d1c",
       "title": "月次祭",
