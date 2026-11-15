@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-15 10:14",
+  "fetched": "2026-11-16 00:49",
   "news": [
     {
       "id": "4160b4e5-ff5b-81e2-b118-c00d0ecb53ea",
@@ -1155,19 +1155,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-16",
       "thumbnail": "assets/thumbs/3dd0b4e5ff5b81ac9dabc98669f41b58.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3dd0b4e5-ff5b-815c-9870-f5c1054f44df",
-      "title": "御宿 敷島館 開業7周年記念プラン",
-      "url": "https://www.instagram.com/p/DdQ0zIPpEbQ/",
-      "summary": "御宿 敷島館が開業7周年を迎え、通常プランより7％OFFの7周年記念プランを販売中。詳細はInstagramプロフィールのURLから確認可能。",
-      "org": "Instagram (@onyado_shikishimakan)",
-      "media": "Webメディア",
-      "date": "2026-09-14",
-      "thumbnail": "assets/thumbs/3dd0b4e5ff5b815c9870f5c1054f44df.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2701,7 +2688,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-16T10:00",
       "end": "2026-11-16T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5547,44 +5534,6 @@ window.NOTION_DATA = {
       "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
       "fee": "500",
       "organizer": "つるや旅館、藤田屋",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3db0b4e5-ff5b-8109-88eb-d5b8465a9fdf",
-      "title": "Play and Doodle with Paul - ドローイングワークショップ",
-      "url": "https://www.instagram.com/p/DdIT5r_TBq3/",
-      "start": "2026-09-16T18:30",
-      "end": "2026-09-16T20:30",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3db0b4e5ff5b810988ebd5b8465a9fdf.webp",
-      "comment": "会場: コトリ琴平 フランスから来たイラストレーターPaulによるドローイングワークショップ。基本的なエクササイズやゲームを通じて、見る・描く・表現する楽しさを学びます。初心者向け。",
-      "fee": "500",
-      "organizer": "Kotori Coworking & Hostel Kotohira",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-806e-a74a-f23aa502083b",
-      "title": "今日はどこ行く？ランチ会",
-      "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
-      "start": "2026-09-16T12:00",
-      "end": "2026-09-16T13:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b806ea74af23aa502083b.webp",
-      "comment": "今日はどこ行く？ランチ会 みんなでランチ! 琴平のローカルなお店へランチに行きます🍽",
-      "fee": "",
-      "organizer": "",
       "calendar": [
         "基本のイベント"
       ],
