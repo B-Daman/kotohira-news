@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-16 17:29",
+  "fetched": "2026-11-17 03:52",
   "news": [
+    {
+      "id": "41a0b4e5-ff5b-81af-89c4-dbe70acd3112",
+      "title": "30年ぶり人間国宝2人が出演　来春40回目の「四国こんぴら歌舞伎大芝居」　香川",
+      "url": "https://www.youtube.com/watch?v=YomRWC_X_aw",
+      "summary": "人間国宝2人が30年ぶりに出演する、来春の「四国こんぴら歌舞伎大芝居」が40回目の開催となることが報じられた。香川県琴平町での催事。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-11-16",
+      "thumbnail": "assets/thumbs/41a0b4e5ff5b81af89c4dbe70acd3112.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "41a0b4e5-ff5b-81de-9ced-fc6fec84949a",
+      "title": "片岡仁左衛門さんら出演へ　来春、こんぴら歌舞伎",
+      "url": "https://www.okinawatimes.co.jp/articles/-/1967387",
+      "summary": "香川県琴平町の旧金毘羅大芝居（金丸座）で来年4月に催される「四国こんぴら歌舞伎大芝居」に、片岡仁左衛門さん、中村歌六さんら人間国宝10人が出演。源平布引滝など計4演目を披露する。",
+      "org": "沖縄タイムス＋プラス（共同通信）",
+      "media": "Webメディア",
+      "date": "2026-11-16",
+      "thumbnail": "assets/thumbs/41a0b4e5ff5b81de9cedfc6fec84949a.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "41a0b4e5-ff5b-81fc-b9c2-ec9b523941b4",
       "title": "JR四国、元日に金刀比羅宮初詣の臨時列車3本運転　高松駅―琴平駅間",
@@ -2625,7 +2651,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-11-17T20:00",
       "end": "2026-11-17T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -2644,7 +2670,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-17T13:30",
       "end": "2026-11-17T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2663,7 +2689,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-11-17T13:30",
       "end": "2026-11-17T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -2682,7 +2708,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-17T10:00",
       "end": "2026-11-17T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2701,7 +2727,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-16T10:00",
       "end": "2026-11-16T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5528,25 +5554,6 @@ window.NOTION_DATA = {
       "comment": "会場: オンライン 琴平町での食の事業展開を検討している人向けのオンライン説明会。自分や会社の強みを観光地で選ばれる食体験へ展開することをテーマとしている。",
       "fee": "78500",
       "organizer": "KOTOHIRA 785 FOOD LAUNCH",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3bf0b4e5-ff5b-81c0-9360-c0c6944cd93a",
-      "title": "第16回「ユルッと楽しく着付けレッスン」",
-      "url": "https://www.instagram.com/p/DcJUmy4gUJL/",
-      "start": "2026-09-17T18:30",
-      "end": "2026-09-17T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "つるや旅館",
-      "address": "766-0001 香川県仲多度郡琴平町620",
-      "image": "assets/thumbs/3bf0b4e5ff5b81c09360c0c6944cd93a.webp",
-      "comment": "琴平町のつるや旅館で開催される着付けレッスン。初心者向けで、着物の自装を学ぶ。ドリンク・おやつ付き。",
-      "fee": "500",
-      "organizer": "つるや旅館、藤田屋",
       "calendar": [
         "基本のイベント"
       ],
