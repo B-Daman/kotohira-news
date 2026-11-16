@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-16 00:49",
+  "fetched": "2026-11-16 17:29",
   "news": [
+    {
+      "id": "41a0b4e5-ff5b-81fc-b9c2-ec9b523941b4",
+      "title": "JR四国、元日に金刀比羅宮初詣の臨時列車3本運転　高松駅―琴平駅間",
+      "url": "https://www.topics.or.jp/articles/-/1520714",
+      "summary": "JR四国は2027年1月1日、金刀比羅宮への初詣利用者向けに臨時普通列車3本を高松駅―琴平駅間で運転する。高松駅発が0時35分、琴平駅発は1時40分と4時26分の便が用意される。",
+      "org": "徳島新聞デジタル",
+      "media": "新聞",
+      "date": "2026-11-15",
+      "thumbnail": "assets/thumbs/41a0b4e5ff5b81fcb9c2ec9b523941b4.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4160b4e5-ff5b-81e2-b118-c00d0ecb53ea",
       "title": "瀬戸内を舞台に地域イノベーション人材を育てるブックラウンジ「Side B」、香川・琴平に開業",
