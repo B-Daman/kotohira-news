@@ -1,7 +1,33 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-17 03:52",
+  "fetched": "2026-11-17 13:08",
   "news": [
+    {
+      "id": "41b0b4e5-ff5b-81ee-8895-f312b20a55da",
+      "title": "「石段オーナー権」いかが！？　金刀比羅宮参道　希望の段に名前掲示　琴平町　好評完売で追加枠　／香川 | 毎日新聞",
+      "url": "https://mainichi.jp/articles/20261117/ddl/k37/040/164000c",
+      "summary": "香川県琴平町が金刀比羅宮の参道365段に企業・個人の名前を掲示できる「石段オーナー権」を販売している。10月の40枠が2日で完売したため、11月に160枠を追加で売り出した。1枠5万円で5年間掲示できる。",
+      "org": "毎日新聞",
+      "media": "新聞",
+      "date": "2026-11-17",
+      "thumbnail": "assets/thumbs/41b0b4e5ff5b81ee8895f312b20a55da.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "41b0b4e5-ff5b-8136-8497-e1e045112a1b",
+      "title": "地域の日常に旅人の席を　琴平と鳴門で見つけた関係深化の舞台 | トラベルニュースat",
+      "url": "https://www.travelnews.co.jp/closeup/tokusyu/2026111709021351201.html",
+      "summary": "琴平町のKotori Coworking & Hostelで開催される「Kotori Community Diner -OKAWARI-」など、地域の日常の場に旅人を迎える取り組みが紹介されている。旅人と地域住民が食事を共にして交流する場づくりが、地方観光の新しい形として注目されている。",
+      "org": "トラベルニュースat",
+      "media": "Webメディア",
+      "date": "2026-11-17",
+      "thumbnail": "assets/thumbs/41b0b4e5ff5b81368497e1e045112a1b.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "41a0b4e5-ff5b-81af-89c4-dbe70acd3112",
       "title": "30年ぶり人間国宝2人が出演　来春40回目の「四国こんぴら歌舞伎大芝居」　香川",
