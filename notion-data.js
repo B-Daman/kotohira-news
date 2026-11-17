@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-17 22:45",
+  "fetched": "2026-11-18 07:35",
   "news": [
     {
       "id": "41b0b4e5-ff5b-81ee-8895-f312b20a55da",
@@ -1194,32 +1194,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-17",
       "thumbnail": "assets/thumbs/3de0b4e5ff5b812a94ccddcd726a9e95.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3dd0b4e5-ff5b-8198-8995-c6d041ce3713",
-      "title": "オリジナルフレーム切手「こんぴらさんのおたからさん 金刀比羅宮の神域に集いし 名画たち」販売開始と贈呈式",
-      "url": "https://www.post.japanpost.jp/enjoy/culture/stamp/frame/detail.php?id=3883",
-      "summary": "日本郵便株式会社四国支社が、金刀比羅宮をテーマにしたオリジナルフレーム切手の販売を開始します。9月28日には金刀比羅宮宝物館正面玄関で贈呈式が開催されます。",
-      "org": "日本郵便株式会社四国支社",
-      "media": "Webメディア",
-      "date": "2026-09-16",
-      "thumbnail": "assets/thumbs/3dd0b4e5ff5b81988995c6d041ce3713.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3dd0b4e5-ff5b-81ac-9dab-c98669f41b58",
-      "title": "琴平町「大センダンのある広場」の名前を募集中！どんな名前になると思う？2026年9月30日(水)まで！",
-      "url": "https://www.marugame2.jp/topics/130537",
-      "summary": "樹齢約300年ともいわれる国の天然記念物、そして町のシンボルとしても愛されている「大センダンの木」を中心に、地域のみなさんや観光で訪れるたくさんの人に親しまれる広場を目指して、現在名称 (ネーミング)を募集中",
-      "org": "まるごと・中讃つーしん",
-      "media": "Webメディア",
-      "date": "2026-09-16",
-      "thumbnail": "assets/thumbs/3dd0b4e5ff5b81ac9dabc98669f41b58.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2677,7 +2651,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-11-18T12:00",
       "end": "2026-11-18T13:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2696,7 +2670,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-18T10:00",
       "end": "2026-11-18T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2715,7 +2689,7 @@ window.NOTION_DATA = {
       "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
       "start": "2026-11-17T20:00",
       "end": "2026-11-17T21:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "オンライン",
       "place": "",
       "address": "",
@@ -2734,7 +2708,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-17T13:30",
       "end": "2026-11-17T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2753,7 +2727,7 @@ window.NOTION_DATA = {
       "url": "https://forms.gle/Kv5QqvWUvNZUTxpo7",
       "start": "2026-11-17T13:30",
       "end": "2026-11-17T15:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "カフェ 象山",
       "address": "香川県仲多度郡琴平町榎井553−1",
@@ -2772,7 +2746,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-17T10:00",
       "end": "2026-11-17T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5580,44 +5554,6 @@ window.NOTION_DATA = {
       "comment": "琴平町のこんぴら路地裏着物レンタル藤田屋で、カンタ刺繍を学びながらオリジナルの着物の半衿を作るワークショップを開催。講師はちくちく針ねずみ。",
       "fee": "2000",
       "organizer": "こんぴら路地裏着物レンタル藤田屋",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-805e-86aa-ca48f43e34d3",
-      "title": "朝うどん巡礼ツアー",
-      "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
-      "start": "2026-09-19T07:20",
-      "end": "2026-09-19T09:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b805e86aaca48f43e34d3.webp",
-      "comment": "🍜 朝9時頃には琴平へ戻れる、香川だけの朝旅。 朝だけの特別な体験。 うどんタクシードライバーと巡る 宮川製麺所 × 善通寺「朝うどん巡礼ツアー」",
-      "fee": "2800",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3de0b4e5-ff5b-8126-9e0d-d21a9e36b81e",
-      "title": "KOTOHIRA 785 FOOD LAUNCH オンライン説明会",
-      "url": "https://peatix.com/event/5170585",
-      "start": "2026-09-18T19:00",
-      "end": "2026-09-19T20:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "オンライン",
-      "address": "",
-      "image": "assets/thumbs/3de0b4e5ff5b81269e0dd21a9e36b81e.webp",
-      "comment": "会場: オンライン 琴平町での食の事業展開を検討している人向けのオンライン説明会。自分や会社の強みを観光地で選ばれる食体験へ展開することをテーマとしている。",
-      "fee": "78500",
-      "organizer": "KOTOHIRA 785 FOOD LAUNCH",
       "calendar": [
         "基本のイベント"
       ],
