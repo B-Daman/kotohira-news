@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-17 13:08",
+  "fetched": "2026-11-17 22:45",
   "news": [
     {
       "id": "41b0b4e5-ff5b-81ee-8895-f312b20a55da",
@@ -2401,6 +2401,44 @@ window.NOTION_DATA = {
       "organizer": "",
       "calendar": [
         "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
+      "id": "41b0b4e5-ff5b-81c1-86bf-e7f16b3f82d9",
+      "title": "Go Jean Paul & Jr.BONG LIVE is a JOURNEY",
+      "url": "https://www.instagram.com/p/DfmLfA-JkaH/",
+      "start": "2026-11-23T19:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "旅人のハーバー",
+      "address": "〒766-0001 香川県仲多度郡琴平町954-1 壱段屋ビル 1F",
+      "image": "assets/thumbs/41b0b4e5ff5b81c186bfe7f16b3f82d9.webp",
+      "comment": "会場: 旅人のハーバー Jean PaulとJr.BONGによるライブイベント。11月23日（月）に旅人のハーバーで開催。開場18:00、開演19:30。",
+      "fee": "1000",
+      "organizer": "",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "41b0b4e5-ff5b-8171-9b8c-d314732a7c44",
+      "title": "アフリカンナイト レコ発LIVE in 香川麻心琴平店",
+      "url": "https://www.instagram.com/p/Dfzwje5PJpK/",
+      "start": "2026-11-23T18:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "麻心 琴平店",
+      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
+      "image": "assets/thumbs/41b0b4e5ff5b81719b8cd314732a7c44.webp",
+      "comment": "会場: 麻心琴平店 アフリカ音楽を牽引するアラカリ大輔によるンゴニアルバムのレコ発ツアーが香川に来訪。四国のアフリカ音楽リーダーとのスペシャルユニットライブ。",
+      "fee": "2500",
+      "organizer": "麻心琴平",
+      "calendar": [
+        "基本のイベント"
       ],
       "featured": false
     },
