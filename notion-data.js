@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-18 07:35",
+  "fetched": "2026-11-18 13:39",
   "news": [
+    {
+      "id": "41c0b4e5-ff5b-8105-bd5b-e0e65b2f2bd1",
+      "title": "【こんぴらナイト】国営讃岐まんのう公園 ウィンターファンタジー イルミネーションツアー | イベント | イベント | 琴平まるごとNavi | こんぴら観光まちづくり協会",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-659.html",
+      "summary": "琴平町内から直行バスで国営讃岐まんのう公園のイルミネーションを鑑賞するツアー。大人1,000円、往復バス代と入園料、ホッカイロ、記念ポストカード、旅行保険が含まれる。毎日運行（除外日あり）、往路17:00出発、復路19:00頃到着予定。",
+      "org": "琴平まるごとNavi（こんぴら観光まちづくり協会）",
+      "media": "Webメディア",
+      "date": "2026-11-18",
+      "thumbnail": "assets/thumbs/41c0b4e5ff5b8105bd5be0e65b2f2bd1.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "41b0b4e5-ff5b-81ee-8895-f312b20a55da",
       "title": "「石段オーナー権」いかが！？　金刀比羅宮参道　希望の段に名前掲示　琴平町　好評完売で追加枠　／香川 | 毎日新聞",
@@ -5561,6 +5574,23 @@ window.NOTION_DATA = {
     }
   ],
   "campaigns": [
+    {
+      "id": "41c0b4e5-ff5b-8149-9c48-f8bc0eee27bf",
+      "title": "【こんぴらナイト】国営讃岐まんのう公園 ウィンターファンタジー イルミネーションツアー | イベント | イベント | 琴平まるごとNavi | こんぴら観光まちづくり協会",
+      "url": "https://www.kotohirakankou.jp/event/normal-event/entry-659.html",
+      "start": "2026-11-21T17:00",
+      "end": "2027-01-11T19:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "https://www.kotohirakankou.jp/archives/",
+      "comment": "会場: 国営讃岐まんのう公園（琴平町内各地から出発） 琴平町内から直行バスで国営讃岐まんのう公園のイルミネーションを鑑賞するツアー。大人1,000円、往復バス代と入園料、ホッカイロ、記念ポストカード、旅行保険が含まれる。毎日運行（除外日あり）、往路17:00出発、復路19:00頃到着予定。",
+      "fee": "1000",
+      "organizer": "こんぴら観光まちづくり協会",
+      "calendar": [],
+      "featured": false
+    },
     {
       "id": "40f0b4e5-ff5b-8112-b179-cb04372f9f16",
       "title": "琴平・鳴門・倉敷周遊ドライブスタンプラリー",
