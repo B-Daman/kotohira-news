@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-18 13:39",
+  "fetched": "2026-11-19 07:17",
   "news": [
     {
       "id": "41c0b4e5-ff5b-8105-bd5b-e0e65b2f2bd1",
@@ -1194,19 +1194,6 @@ window.NOTION_DATA = {
       "media": "行政",
       "date": "2026-09-18",
       "thumbnail": "assets/thumbs/3df0b4e5ff5b81e1bff9e84ca9aa81f5.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3de0b4e5-ff5b-812a-94cc-ddcd726a9e95",
-      "title": "BEAMS JAPANが香川・琴平に10月31日常設店をオープン",
-      "url": "https://prtimes.jp/main/html/rd/p/000000998.000012471.html",
-      "summary": "株式会社ビームスは2026年10月31日、香川・琴平の金刀比羅宮表参道に常設店「ビームス ジャパン 琴平」をオープンする。地域共創型の出店で、琴平町の伝統工芸品や地域産品を取り揃える予定。",
-      "org": "PR TIMES（株式会社ビームス プレスリリース）",
-      "media": "Webメディア",
-      "date": "2026-09-17",
-      "thumbnail": "assets/thumbs/3de0b4e5ff5b812a94ccddcd726a9e95.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2645,7 +2632,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-19T10:30",
       "end": "2026-11-19T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2664,7 +2651,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-11-18T12:00",
       "end": "2026-11-18T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2683,7 +2670,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-18T10:00",
       "end": "2026-11-18T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5548,25 +5535,6 @@ window.NOTION_DATA = {
       "comment": "会場: 麻心～まごころ～（香川県仲多度郡琴平町621-9） 愛媛県松山市のジブリジャズ専門ピアニスト野上朝生率いるJAZZトリオが琴平に初来訪。スタジオジブリの名曲をジャズアレンジで演奏するライブイベント。",
       "fee": "3000",
       "organizer": "麻心～まごころ～",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3ce0b4e5-ff5b-817d-b9ac-c06e7d8b3d2e",
-      "title": "オリジナル着物の半衿を作るワークショップ〜刺繍",
-      "url": "https://www.instagram.com/p/DctUUTtmAPo/",
-      "start": "2026-09-19T10:00",
-      "end": "2026-09-19T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "こんぴら路地裏街歩き着物レンタル藤田屋",
-      "address": "香川県仲多度郡琴平町806",
-      "image": "assets/thumbs/3ce0b4e5ff5b817db9acc06e7d8b3d2e.webp",
-      "comment": "琴平町のこんぴら路地裏着物レンタル藤田屋で、カンタ刺繍を学びながらオリジナルの着物の半衿を作るワークショップを開催。講師はちくちく針ねずみ。",
-      "fee": "2000",
-      "organizer": "こんぴら路地裏着物レンタル藤田屋",
       "calendar": [
         "基本のイベント"
       ],
