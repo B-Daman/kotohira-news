@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-19 12:46",
+  "fetched": "2026-11-19 22:46",
   "news": [
+    {
+      "id": "41d0b4e5-ff5b-81d0-bd7b-eabf774ff9ad",
+      "title": "【香川県琴平町】讃岐うどんの次は「讃岐おでん」。地域おこし協力隊あっきーさんと仲間が毎月22日に鍋を囲む会、11月22日は子どもたちとおでんづくり",
+      "url": "https://prtimes.jp/main/html/rd/p/000000394.000091165.html",
+      "summary": "香川県琴平町の讃岐おでんプロジェクトでは、毎月22日に地域住民と訪問者が一緒におでんを作って食べながら、具材や味つけを試している。11月22日は子どもたちと一緒におでんを作る会を開催する。",
+      "org": "株式会社あるやうむ（プレスリリース）",
+      "media": "Webメディア",
+      "date": "2026-11-19",
+      "thumbnail": "assets/thumbs/41d0b4e5ff5b81d0bd7beabf774ff9ad.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "41c0b4e5-ff5b-8105-bd5b-e0e65b2f2bd1",
       "title": "【こんぴらナイト】国営讃岐まんのう公園 ウィンターファンタジー イルミネーションツアー | イベント | イベント | 琴平まるごとNavi | こんぴら観光まちづくり協会",
