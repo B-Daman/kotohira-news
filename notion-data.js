@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-19 22:46",
+  "fetched": "2026-11-20 07:23",
   "news": [
     {
       "id": "41d0b4e5-ff5b-81d0-bd7b-eabf774ff9ad",
@@ -1181,32 +1181,6 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-09-20",
       "thumbnail": "assets/thumbs/3e20b4e5ff5b81b9b78bf4d95f2bf45f.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3df0b4e5-ff5b-811f-a3e9-f9611ada4770",
-      "title": "こんぴら観光協がガイド研修　検定合格者が心得学ぶ",
-      "url": "https://www.47news.jp/14959761.html",
-      "summary": "こんぴら観光まちづくり協会の認定ガイド養成研修が9月14日、琴平町や周辺の市町で開かれた。同協会の「こんぴら観光まちづくり検定」合格者を対象に、観光地の見どころについて学んだ。",
-      "org": "四国新聞",
-      "media": "新聞",
-      "date": "2026-09-18",
-      "thumbnail": "assets/thumbs/3df0b4e5ff5b811fa3e9f9611ada4770.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3df0b4e5-ff5b-81e1-bff9-e84ca9aa81f5",
-      "title": "かがわ子育てステーションの新婚世帯向けプログラム開始",
-      "url": "https://www.town.kotohira.kagawa.jp/site/ijyuu/12028.html",
-      "summary": "香川県の子育て拠点「かがわ子育てステーション」で、新婚世帯向けのプログラムが開始された。夫婦で暮らしについて対話する30分間のプログラムを提供している。同時に結婚新生活支援事業も実施中で、新居の家賃や引越費用などを補助している。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-18",
-      "thumbnail": "assets/thumbs/3df0b4e5ff5b81e1bff9e84ca9aa81f5.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2626,7 +2600,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-20T15:00",
       "end": "2026-11-20T17:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2645,7 +2619,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-20T13:00",
       "end": "2026-11-20T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2664,7 +2638,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-19T10:30",
       "end": "2026-11-19T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
