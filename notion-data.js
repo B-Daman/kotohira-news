@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-19 07:17",
+  "fetched": "2026-11-19 12:46",
   "news": [
     {
       "id": "41c0b4e5-ff5b-8105-bd5b-e0e65b2f2bd1",
@@ -1822,6 +1822,25 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
+      "id": "41d0b4e5-ff5b-81df-b1a6-da4e834f215c",
+      "title": "関係人口フォーラム in 中国・四国ブロック",
+      "url": "https://www.instagram.com/p/DftmqyyBXOD/",
+      "start": "2026-12-07T13:30",
+      "end": "2026-12-07T16:30",
+      "status": "実施前",
+      "city": "高松市",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/41d0b4e5ff5b81dfb1a6da4e834f215c.webp",
+      "comment": "会場: サンポートホール高松（香川県高松市サンポート2-1） 地域づくりをテーマにした関係人口フォーラムがサンポートホール高松で開催される。地域に暮らす人と関わる人が共感・共創するための点を探るため、中国・四国の4つの事例紹介とクロストークが行われる。",
+      "fee": "0",
+      "organizer": "内閣府 地方創生推進室",
       "calendar": [
         "基本のイベント"
       ],
@@ -5809,6 +5828,8 @@ window.NOTION_DATA = {
         "facebook": "https://www.facebook.com/MataTabi.kagawa/"
       },
       "instagram": [
+        "https://www.instagram.com/p/Df3w2j2S7L2/",
+        "https://www.instagram.com/p/DfnxXf0SN1i/",
         "https://www.instagram.com/p/DfToZqFS2Xm/",
         "https://www.instagram.com/p/DfBhvUIy-9S/",
         "https://www.instagram.com/p/DevfiRbylko/",
