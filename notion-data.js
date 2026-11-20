@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-20 22:29",
+  "fetched": "2026-11-21 06:29",
   "news": [
     {
       "id": "41e0b4e5-ff5b-8124-b66e-fd551075571f",
@@ -2640,7 +2640,7 @@ window.NOTION_DATA = {
       "url": "https://www.nishino-kinryo.co.jp/news/year2026/news0930.html",
       "start": "2026-11-21T09:30",
       "end": "2026-11-21T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -2659,7 +2659,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-11-21T07:20",
       "end": "2026-11-21T09:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2678,7 +2678,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-20T15:00",
       "end": "2026-11-20T17:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2697,7 +2697,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-20T13:00",
       "end": "2026-11-20T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5604,25 +5604,6 @@ window.NOTION_DATA = {
         "基本のイベント"
       ],
       "featured": false
-    },
-    {
-      "id": "3e00b4e5-ff5b-812f-88a8-de2c5d0bb881",
-      "title": "GHIBLI JAZZ TRIO LIVE",
-      "url": "https://www.instagram.com/p/DdVM0X2pfXx/",
-      "start": "2026-09-21T15:30",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/3e00b4e5ff5b812f88a8de2c5d0bb881.webp",
-      "comment": "会場: 麻心～まごころ～（香川県仲多度郡琴平町621-9） 愛媛県松山市のジブリジャズ専門ピアニスト野上朝生率いるJAZZトリオが琴平に初来訪。スタジオジブリの名曲をジャズアレンジで演奏するライブイベント。",
-      "fee": "3000",
-      "organizer": "麻心～まごころ～",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
     }
   ],
   "campaigns": [
@@ -5632,7 +5613,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Df6xvNKBryp/",
       "start": "2026-11-21T17:00",
       "end": "2027-01-11T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5649,7 +5630,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-659.html",
       "start": "2026-11-21T17:00",
       "end": "2027-01-11T19:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
