@@ -1,7 +1,34 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-20 07:23",
+  "fetched": "2026-11-20 22:29",
   "news": [
+    {
+      "id": "41e0b4e5-ff5b-8124-b66e-fd551075571f",
+      "title": "今年はどっちが強い？琴平高校で剣道部VSなぎなた部「異種武道大会」　香川（KSB瀬戸内海放送）｜ｄメニューニュース",
+      "url": "https://topics.smt.docomo.ne.jp/article/ksb/region/ksb-17068383",
+      "summary": "香川県琴平町の琴平高校で2026年12月15日に毎年恒例の「異種武道大会」が開催される。剣道部となぎなた部が対戦し、過去17年間では剣道部10勝、なぎなた部7勝。試合は午後1時10分から午後2時45分に体育館で行われ、誰でも観戦できる。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-11-20",
+      "thumbnail": "assets/thumbs/41e0b4e5ff5b8124b66efd551075571f.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "41e0b4e5-ff5b-81cc-be17-e7ff602b1a8a",
+      "title": "町内全域一斉クリーン作戦実施のお知らせ - 琴平町公式ホームページ",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/24/12198.html",
+      "summary": "琴平町全域を対象とした一斉清掃作戦が11月29日に開催されます。午前9時から10時30分まで、町内10箇所の受付場所から参加できます。火バサミ、軍手、ごみ袋は用意されています。",
+      "org": "琴平町公式ホームページ",
+      "media": "行政",
+      "date": "2026-11-19",
+      "thumbnail": "assets/thumbs/41e0b4e5ff5b81ccbe17e7ff602b1a8a.png",
+      "duplicate": false,
+      "pickup": false,
+      "show": true,
+      "thumbGeneric": true
+    },
     {
       "id": "41d0b4e5-ff5b-81d0-bd7b-eabf774ff9ad",
       "title": "【香川県琴平町】讃岐うどんの次は「讃岐おでん」。地域おこし協力隊あっきーさんと仲間が毎月22日に鍋を囲む会、11月22日は子どもたちとおでんづくり",
@@ -115,6 +142,19 @@ window.NOTION_DATA = {
       "media": "新聞",
       "date": "2026-11-11",
       "thumbnail": "assets/thumbs/4150b4e5ff5b81e288a6e9b726f1e201.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "41e0b4e5-ff5b-8179-87cc-dbf1c4d246bc",
+      "title": "観光スポットなどチャーム（飾り）にして販売 第2弾「街ガチャin琴平町」 香川 (KSB瀬戸内海放送) - Yahoo!ニュース",
+      "url": "https://news.yahoo.co.jp/articles/9285024976aff4ac24f74b6e291dec5f122ed9ed/images/000",
+      "summary": "琴平町の観光スポットをモチーフにしたチャーム（飾り）をカプセルトイ（ガチャガチャ）として販売する第2弾企画。高校生もデザインに参加している。",
+      "org": "Yahoo!ニュース",
+      "media": "Webメディア",
+      "date": "2026-11-10",
+      "thumbnail": "assets/thumbs/41e0b4e5ff5b817987ccdbf1c4d246bc.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -1720,6 +1760,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "41e0b4e5-ff5b-81f1-a644-c5948c5437f2",
+      "title": "今年はどっちが強い？琴平高校で剣道部VSなぎなた部「異種武道大会」",
+      "url": "https://topics.smt.docomo.ne.jp/article/ksb/region/ksb-17068383",
+      "start": "2026-12-15T13:10",
+      "end": "2026-12-15T14:45",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "琴平高校",
+      "address": "香川県仲多度郡琴平町五條142-2",
+      "image": "assets/thumbs/41e0b4e5ff5b81f1a644c5948c5437f2.webp",
+      "comment": "会場: 琴平高校体育館 香川県琴平町の琴平高校で2026年12月15日に毎年恒例の「異種武道大会」が開催される。剣道部となぎなた部が対戦し、過去17年間では剣道部10勝、なぎなた部7勝。試合は午後1時10分から午後2時45分に体育館で行われ、誰でも観戦できる。",
+      "fee": "",
+      "organizer": "琴平高校",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
       "id": "40d0b4e5-ff5b-803b-b4ce-e74379649651",
       "title": "第4回カブフェス演劇フェスティバルin琴平 2日目",
       "url": "https://www.instagram.com/p/DfDMCVLSzRb/",
@@ -2024,6 +2083,25 @@ window.NOTION_DATA = {
       "featured": false
     },
     {
+      "id": "41e0b4e5-ff5b-816b-9b0b-d014d858aee9",
+      "title": "君の日々にも箏の音を　～箏と、かがわの日本酒文化に出会う午後～｜イベント｜かがわアートナビ",
+      "url": "https://www.kagawa-arts.or.jp/event/202611/event03292.php",
+      "start": "2026-11-29T13:30",
+      "end": "2026-11-29T14:15",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "金陵の郷",
+      "address": "〒766-0001 香川県仲多度郡琴平町 623",
+      "image": "assets/thumbs/41e0b4e5ff5b816b9b0bd014d858aee9.webp",
+      "comment": "会場: 金陵の郷 讃酒館 箏の音色と香川の日本酒文化を身近に楽しむコンサート。ポップスなど親しみやすい曲を通して箏の魅力を、酒米や酵母、味わいの紹介を通して日本酒の魅力を伝える。かがわ文化芸術祭2026参加公演。",
+      "fee": "0",
+      "organizer": "Ｎａｎａｅ / 金陵の郷　讃酒館",
+      "calendar": [
+        "基本のイベント"
+      ],
+      "featured": false
+    },
+    {
       "id": "3d00b4e5-ff5b-815b-8074-d95b25c98d21",
       "title": "第3回こんぴら観光まちづくり検定",
       "url": "https://www.kotohirakankou.jp/event/normal-event/entry-540.html",
@@ -2085,7 +2163,7 @@ window.NOTION_DATA = {
       "title": "クリーン作戦",
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-29T09:00",
-      "end": "",
+      "end": "2026-11-29T10:30",
       "status": "実施前",
       "city": "琴平町",
       "place": "",
@@ -5548,6 +5626,23 @@ window.NOTION_DATA = {
     }
   ],
   "campaigns": [
+    {
+      "id": "41e0b4e5-ff5b-814b-82f4-e8a2a52d40fc",
+      "title": "国営讃岐まんのう公園 ウィンターファンタジー イルミネーションツアー",
+      "url": "https://www.instagram.com/p/Df6xvNKBryp/",
+      "start": "2026-11-21T17:00",
+      "end": "2027-01-11T19:00",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "",
+      "address": "",
+      "image": "assets/thumbs/41e0b4e5ff5b814b82f4e8a2a52d40fc.webp",
+      "comment": "会場: 国営讃岐まんのう公園 国営讃岐まんのう公園で開催されるイルミネーションへのツアーが実施されます。琴平町から17時頃出発し19時頃帰着予定で、夕食時間に間に合います。入場料込みのツアーです。",
+      "fee": "1000",
+      "organizer": "こんぴら観光まちづくり協会",
+      "calendar": [],
+      "featured": false
+    },
     {
       "id": "41c0b4e5-ff5b-8149-9c48-f8bc0eee27bf",
       "title": "【こんぴらナイト】国営讃岐まんのう公園 ウィンターファンタジー イルミネーションツアー | イベント | イベント | 琴平まるごとNavi | こんぴら観光まちづくり協会",
