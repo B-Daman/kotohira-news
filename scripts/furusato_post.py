@@ -51,6 +51,14 @@ def load_contacts():
         return {}
 
 
+def find_contact(org):
+    """主催者の名前（または別名）で控えを引く。"""
+    contacts = load_contacts()
+    if org in contacts:
+        return contacts[org]
+    return next((c for c in contacts.values() if org in c.get("別名", [])), None)
+
+
 def client_and_db():
     with open(SKILL_DIR + "/config-events.json", encoding="utf-8") as f:
         cfg = json.load(f)
@@ -196,10 +204,6 @@ def cmd_set(args):
     status = data.get("status") or ("掲載文あり" if data.get("body") else None)
     if status:
         props[P_STATUS] = {"select": {"name": status}}
-    if not props:
-        print("書く項目がありません。")
-        return
-
     client, _ = client_and_db()
     before = client.pages.retrieve(page_id=args.page_id)["properties"]
     print("イベント:", text_of(before["イベント名"]), "/", text_of(before["開催日時（開始）"])[:16])
@@ -209,7 +213,7 @@ def cmd_set(args):
     filled = any(text_of(before.get(n)) for n in (P_NAME, P_TEL, P_MAIL))
     if not has_contact and not filled:
         orgs = [o.get("name", "") for o in before.get("主催/運営", {}).get("multi_select", [])]
-        hit = next(((o, c) for o in orgs for c in [load_contacts().get(o)] if c), None)
+        hit = next(((o, c) for o in orgs for c in [find_contact(o)] if c), None)
         if hit:
             org, c = hit
             sub = {k: c[k] for k in ("contact_name", "contact_phone", "contact_email") if c.get(k)}
@@ -226,6 +230,9 @@ def cmd_set(args):
                     props[P_MAIL] = {"email": sub["contact_email"]}
         elif orgs:
             print(f"問い合わせ先の控えなし: {'、'.join(orgs)}（主催者に聞いて {CONTACTS_PATH} に書く）")
+    if not props:
+        print("書く項目がありません。")
+        return
     for name in props:
         old = text_of(before.get(name))
         new = text_of({**props[name], "type": next(iter(props[name]))})
