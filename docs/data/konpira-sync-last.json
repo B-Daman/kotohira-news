@@ -1,19 +1,19 @@
 {
- "generated": "2026-11-15T07:30:26+09:00",
+ "generated": "2026-11-22T07:30:25+09:00",
  "apply": true,
  "days": 90,
  "window": {
-  "from": "2026-11-15",
-  "to": "2027-02-13"
+  "from": "2026-11-22",
+  "to": "2027-02-20"
  },
  "ics_events": 117,
- "ics_rows": 24,
- "notion_rows": 79,
+ "ics_rows": 25,
+ "notion_rows": 74,
  "counts": {
-  "created": 2,
+  "created": 1,
   "new": 0,
   "filled": 0,
-  "ok": 22,
+  "ok": 24,
   "held": 0,
   "conflict": 0,
   "skipped": 0,
@@ -313,18 +313,29 @@
    "start": "09:00",
    "end": "09:30",
    "location": "御本宮・金刀比羅本教総本部",
-   "notion_id": null,
-   "notion_title": null,
-   "fills": [
-    "開催場所 金刀比羅宮（御本宮）"
-   ],
-   "reason": null,
-   "status": "created",
-   "page_url": "https://app.notion.com/p/4180b4e5ff5b810b8915ebd38c6195a9"
+   "notion_id": "4180b4e5-ff5b-810b-8915-ebd38c6195a9",
+   "notion_title": "月次祭",
+   "fills": [],
+   "reason": "exact",
+   "status": "ok",
+   "notion_start": "09:00"
   },
   {
    "date": "2027-02-11",
    "title": "紀元祭",
+   "start": "10:00",
+   "end": "10:30",
+   "location": "金刀比羅宮 御本宮",
+   "notion_id": "4180b4e5-ff5b-811c-8d37-f09900564b4b",
+   "notion_title": "紀元祭",
+   "fills": [],
+   "reason": "exact",
+   "status": "ok",
+   "notion_start": "10:00"
+  },
+  {
+   "date": "2027-02-17",
+   "title": "祈年祭",
    "start": "10:00",
    "end": "10:30",
    "location": "金刀比羅宮 御本宮",
@@ -335,7 +346,7 @@
    ],
    "reason": null,
    "status": "created",
-   "page_url": "https://app.notion.com/p/4180b4e5ff5b811c8d37f09900564b4b"
+   "page_url": "https://app.notion.com/p/41f0b4e5ff5b8148a843db71acb8984f"
   }
  ]
 }
