@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-21 06:29",
+  "fetched": "2026-11-22 04:41",
   "news": [
     {
       "id": "41e0b4e5-ff5b-8124-b66e-fd551075571f",
@@ -1208,19 +1208,6 @@ window.NOTION_DATA = {
       "media": "Webメディア",
       "date": "2026-09-22",
       "thumbnail": "assets/thumbs/3e30b4e5ff5b819eb06cdac9c3f0c758.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e20b4e5-ff5b-81b9-b78b-f4d95f2bf45f",
-      "title": "【こだわりの宿特集 温泉・浴場編】琴平グランドホテル桜の抄（香川県・こんぴら温泉郷）",
-      "url": "https://www.kankokeizai.com/2609202000kks/",
-      "summary": "金刀比羅宮の参道沿いに建つ琴平グランドホテル桜の抄は、プライベートサウナを備えた客室が人気。2024年3月にオープンした「初音スタンダード サウナ&スパルーム」はロウリュサウナや温泉風呂を完備している。",
-      "org": "観光経済新聞",
-      "media": "新聞",
-      "date": "2026-09-20",
-      "thumbnail": "assets/thumbs/3e20b4e5ff5b81b9b78bf4d95f2bf45f.webp",
       "duplicate": false,
       "pickup": false,
       "show": true
@@ -2544,7 +2531,7 @@ window.NOTION_DATA = {
       "url": "https://did-event.vercel.app/events/cmw54ke3u01czchicewoe8fs9?ref=cmo0x2dtb01mmf2fr3e4qsctp",
       "start": "2026-11-22T13:00",
       "end": "2026-11-22T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2563,7 +2550,7 @@ window.NOTION_DATA = {
       "url": "https://www.nishino-kinryo.co.jp/news/year2026/news0930.html",
       "start": "2026-11-22T09:30",
       "end": "2026-11-22T15:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -2582,7 +2569,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-22T09:00",
       "end": "2026-11-22T15:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "一之橋公園",
       "address": "〒766-0001 香川県仲多度郡琴平町722",
@@ -2602,7 +2589,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
       "start": "2026-11-22",
       "end": "2026-11-22",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2621,7 +2608,7 @@ window.NOTION_DATA = {
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index.html",
       "start": "2026-11-22",
       "end": "2026-11-22",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2640,7 +2627,7 @@ window.NOTION_DATA = {
       "url": "https://www.nishino-kinryo.co.jp/news/year2026/news0930.html",
       "start": "2026-11-21T09:30",
       "end": "2026-11-21T15:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "金陵の郷",
       "address": "〒766-0001 香川県仲多度郡琴平町 623",
@@ -2659,7 +2646,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dbc9-3_E6O7/?img_index=2",
       "start": "2026-11-21T07:20",
       "end": "2026-11-21T09:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -5545,63 +5532,6 @@ window.NOTION_DATA = {
       "organizer": "金刀比羅宮",
       "calendar": [
         "金刀比羅宮"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3cd0b4e5-ff5b-80f1-897f-dd274584a853",
-      "title": "【定期】琴平町DAOオンラインミーティング",
-      "url": "https://discord.com/events/1303754853855793263/1424607096531320913",
-      "start": "2026-09-22T20:00",
-      "end": "2026-09-22T21:00",
-      "status": "終了",
-      "city": "オンライン",
-      "place": "",
-      "address": "",
-      "image": "assets/thumbs/3cd0b4e5ff5b80f1897fdd274584a853.webp",
-      "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
-      "fee": "0",
-      "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3e00b4e5-ff5b-8199-98d4-f5a6dd6ec311",
-      "title": "THE GORILLA GUERRILLAS ライブ@麻心琴平",
-      "url": "https://www.instagram.com/p/DdYAbwLJyif/",
-      "start": "2026-09-22T19:00",
-      "end": "",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "麻心 琴平店",
-      "address": "〒766-0001 香川県仲多度郡琴平町621−9",
-      "image": "assets/thumbs/3e00b4e5ff5b819998d4f5a6dd6ec311.webp",
-      "comment": "会場: 麻心琴平 リズムマスター4人によるアンサンブルライブ。アフリカ大陸起源の楽器を奏でる太鼓叩き達が琴平に集結。入場無料（投げ銭制）。",
-      "fee": "0",
-      "organizer": "THE GORILLA GUERRILLAS / 音楽で琴平を盛り上げるプロジェクト",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3d40b4e5-ff5b-80e1-9208-f5f486857a0e",
-      "title": "第14回 讃岐おでん試作会～夏おでん意見交換回～",
-      "url": "https://did-event.vercel.app/c/kotohira/events/cmrwqxytw0031ceefwkupzoui",
-      "start": "2026-09-22T19:00",
-      "end": "2026-09-22T21:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "コトリ コワーキング＆ホステル 琴平",
-      "address": "香川県仲多度郡琴平町720−15",
-      "image": "assets/thumbs/3d40b4e5ff5b80e19208f5f486857a0e.webp",
-      "comment": "香川県の第3のご当地グルメを目指す「讃岐おでん」プロジェクトの試作会。夏向けおでんの研究と試作を行う作戦会議。",
-      "fee": "2000",
-      "organizer": "讃岐おでんプロジェクト",
-      "calendar": [
-        "基本のイベント"
       ],
       "featured": false
     }
