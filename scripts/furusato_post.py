@@ -1,14 +1,21 @@
-"""イベントDBの「ふるさと住民アプリへの掲載」用の列を読み書きする道具。
+"""イベントDB と、表「ふるさと住民 ニュース」の「ふるさと住民アプリへの掲載」用の列を読み書きする道具。
 
 掲載文そのものは人か AI が考える。この道具は、探す・見る・決まりを確かめて書く、だけを行う。
 書くのは次の列だけ。ほかの列には触らない。
-  ふるさと住民 掲載／掲載文／カテゴリ／タグ、問い合わせ先 担当者名／電話／メール
+  ふる住 掲載／掲載文／カテゴリ／タグ、問い合わせ先 担当者名／電話／メール
 
 使い方（notion-event-formatter の .venv の python で）:
     python scripts/furusato_post.py find [--from 2026-11-22] [--q おでん]   # これからのイベントを探す
     python scripts/furusato_post.py show <page_id>                          # 1件の中身を見る
     python scripts/furusato_post.py set <page_id> --file 掲載.json           # 何を書くかを表示（空実行）
     python scripts/furusato_post.py set <page_id> --file 掲載.json --apply   # 書く
+
+ニュースの表を相手にするときは、どの命令にも --news を付ける（手順はイベントと同じ）:
+    python scripts/furusato_post.py find --news [--q おでん]
+    python scripts/furusato_post.py show <page_id> --news
+    python scripts/furusato_post.py set <page_id> --news --file 掲載.json [--apply]
+  ニュースの 掲載.json に書けるのは body / categories / tags / status / title だけ（問い合わせ先の欄は無い）。
+  表のIDは、環境変数 FURUSATO_NEWS_DB_ID か、下の IDS_PATH のファイルから読む（公開リポジトリに書かないため）。
 
 掲載.json の形（どの項目も省ける。省いた列は触らない）:
     {"body": "掲載文", "categories": ["食・特産品"], "tags": ["初心者歓迎"],
@@ -20,6 +27,7 @@
 import argparse
 import datetime
 import json
+import os
 import re
 import sys
 
@@ -33,7 +41,7 @@ CATEGORIES = [
     "歴史・文化", "芸術・クリエイティブ", "食・特産品", "健康・福祉", "広報・メディア", "スポーツ", "国際・多文化交流",
 ]
 STATUSES = ["載せる", "掲載文あり", "申請済み"]
-P_STATUS, P_BODY, P_CATS, P_TAGS = "ふるさと住民 掲載", "ふるさと住民 掲載文", "ふるさと住民 カテゴリ", "ふるさと住民 タグ"
+P_STATUS, P_BODY, P_CATS, P_TAGS = "ふる住 掲載", "ふる住 掲載文", "ふる住 カテゴリ", "ふる住 タグ"
 P_NAME, P_TEL, P_MAIL = "問い合わせ先 担当者名", "問い合わせ先 電話", "問い合わせ先 メール"
 # 管理画面の決まり（拡張機能 furusato-paste-input と同じ）
 LEFT = re.compile(r"要確認|未定|調整中|確認中|TODO|〇〇|○○|（仮）")
@@ -41,6 +49,24 @@ LEFT = re.compile(r"要確認|未定|調整中|確認中|TODO|〇〇|○○|（�
 
 # 主催者ごとの問い合わせ先の控え。連絡先が入るので、このリポジトリ（公開）には置かない
 CONTACTS_PATH = "C:/Users/user/furusato-resident/data/event-contacts.json"
+# Notion の表のIDの控え（{"furusato_news_db_id": "…"}）。これも公開リポジトリには置かない
+IDS_PATH = "C:/Users/user/furusato-resident/data/notion-ids.json"
+N_TITLE, N_KIND, N_END = "タイトル", "種類", "掲載終了"
+EVENT_KEYS = {"body", "categories", "tags", "contact_name", "contact_phone", "contact_email", "status"}
+NEWS_KEYS = {"body", "categories", "tags", "status", "title"}
+
+
+def news_db_id():
+    value = os.environ.get("FURUSATO_NEWS_DB_ID")
+    if not value:
+        try:
+            with open(IDS_PATH, encoding="utf-8") as f:
+                value = json.load(f).get("furusato_news_db_id")
+        except FileNotFoundError:
+            value = None
+    if not value:
+        sys.exit(f"ニュースの表のIDがありません。環境変数 FURUSATO_NEWS_DB_ID か {IDS_PATH} に入れてください")
+    return value
 
 
 def load_contacts():
@@ -96,7 +122,21 @@ def text_of(prop):
     return ""
 
 
+def cmd_find_news(args):
+    client, _ = client_and_db()
+    kw = {"filter": {"property": N_TITLE, "title": {"contains": args.q}}} if args.q else {}
+    res = client.databases.query(database_id=news_db_id(), page_size=args.limit,
+                                 sorts=[{"timestamp": "created_time", "direction": "descending"}], **kw)
+    for p in res["results"]:
+        pr = p["properties"]
+        print(f"{p['created_time'][:10]} | {text_of(pr.get(N_KIND)) or '-':8} | {text_of(pr.get(P_STATUS)) or '-':6} | "
+              f"終了 {text_of(pr.get(N_END)) or '-':10} | {text_of(pr.get(N_TITLE))} | {p['id']}")
+    print(f"{len(res['results'])} 件（ふるさと住民 ニュース・新しい順）")
+
+
 def cmd_find(args):
+    if args.news:
+        return cmd_find_news(args)
     client, db = client_and_db()
     start = args.date_from or datetime.date.today().isoformat()
     flt = {"and": [
@@ -116,6 +156,11 @@ def cmd_find(args):
 def cmd_show(args):
     client, _ = client_and_db()
     pr = client.pages.retrieve(page_id=args.page_id)["properties"]
+    if args.news:
+        for name in [N_TITLE, N_KIND, "メモ", "外部リンク", N_END, P_STATUS, P_CATS, P_TAGS, P_BODY]:
+            print(f"【{name}】{text_of(pr.get(name))}")
+        print(f"【画像】{len(pr.get('画像', {}).get('files', []))} 枚")
+        return
     for name in ["イベント名", "開催日時（開始）", "開催日時（終了）", "市町村", "住所", "主催/運営", "参加費（日本円）", "内容",
                  "コメント", "ソース", "関連リンク", P_STATUS, P_CATS, P_TAGS, P_NAME, P_TEL, P_MAIL, P_BODY]:
         print(f"【{name}】{text_of(pr.get(name))}")
@@ -129,10 +174,10 @@ def cmd_show(args):
             print("【開催場所】（読めませんでした）")
 
 
-def check(data):
+def check(data, news=False):
     """書く前に、管理画面の決まりを確かめる。返すもの＝(エラー, 注意)"""
     err, warn = [], []
-    unknown = set(data) - {"body", "categories", "tags", "contact_name", "contact_phone", "contact_email", "status"}
+    unknown = set(data) - (NEWS_KEYS if news else EVENT_KEYS)
     if unknown:
         err.append(f"知らない項目: {sorted(unknown)}")
     body = data.get("body")
@@ -144,7 +189,7 @@ def check(data):
                 err.append(f"掲載文が {len(body)} 字（1,000字まで）")
             if LEFT.search(body):
                 warn.append(f"掲載文に「{LEFT.search(body).group()}」が残っている")
-            if "http" not in body:
+            if not news and "http" not in body:
                 warn.append("掲載文にアンケートの URL がない（琴平町の決まり）")
     cats = data.get("categories")
     if cats is not None:
@@ -168,6 +213,9 @@ def check(data):
     mail = data.get("contact_email")
     if mail and not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", mail):
         err.append("メールの形ではない")
+    title = data.get("title")
+    if title is not None and not (isinstance(title, str) and 0 < len(title) <= 100):
+        err.append("title は1〜100字で")
     name = data.get("contact_name")
     if name and len(name) > 100:
         err.append("担当者名は100字まで")
@@ -179,7 +227,7 @@ def check(data):
 def cmd_set(args):
     with open(args.file, encoding="utf-8") as f:
         data = json.load(f)
-    err, warn = check(data)
+    err, warn = check(data, args.news)
     for w in warn:
         print("注意:", w)
     if err:
@@ -188,6 +236,8 @@ def cmd_set(args):
         sys.exit(1)
 
     props = {}
+    if "title" in data:
+        props[N_TITLE] = {"title": [{"type": "text", "text": {"content": data["title"]}}]}
     if "body" in data:
         # rich_text は1かたまり2,000字まで。掲載文は1,000字までなので1つで足りる
         props[P_BODY] = {"rich_text": [{"type": "text", "text": {"content": data["body"]}}] if data["body"] else []}
@@ -206,12 +256,17 @@ def cmd_set(args):
         props[P_STATUS] = {"select": {"name": status}}
     client, _ = client_and_db()
     before = client.pages.retrieve(page_id=args.page_id)["properties"]
-    print("イベント:", text_of(before["イベント名"]), "/", text_of(before["開催日時（開始）"])[:16])
+    if args.news:
+        if N_KIND not in before:
+            sys.exit("ニュースの表の行ではありません（--news を外すか、page_id を確かめてください）")
+        print("ニュース:", text_of(before[N_TITLE]), "/", text_of(before.get(N_KIND)) or "種類なし")
+    else:
+        print("イベント:", text_of(before["イベント名"]), "/", text_of(before["開催日時（開始）"])[:16])
 
     # 問い合わせ先が掲載.json に無く、Notion にもまだ無いときは、主催者ごとの控えから入れる
     has_contact = any(k in data for k in ("contact_name", "contact_phone", "contact_email"))
     filled = any(text_of(before.get(n)) for n in (P_NAME, P_TEL, P_MAIL))
-    if not has_contact and not filled:
+    if not args.news and not has_contact and not filled:
         orgs = [o.get("name", "") for o in before.get("主催/運営", {}).get("multi_select", [])]
         hit = next(((o, c) for o in orgs for c in [find_contact(o)] if c), None)
         if hit:
@@ -257,14 +312,17 @@ def main():
     f.add_argument("--from", dest="date_from")
     f.add_argument("--q")
     f.add_argument("--limit", type=int, default=30)
+    f.add_argument("--news", action="store_true", help="表「ふるさと住民 ニュース」を相手にする")
     f.set_defaults(fn=cmd_find)
     s = sub.add_parser("show")
     s.add_argument("page_id")
+    s.add_argument("--news", action="store_true")
     s.set_defaults(fn=cmd_show)
     w = sub.add_parser("set")
     w.add_argument("page_id")
     w.add_argument("--file", required=True)
     w.add_argument("--apply", action="store_true")
+    w.add_argument("--news", action="store_true")
     w.set_defaults(fn=cmd_set)
     args = ap.parse_args()
     args.fn(args)

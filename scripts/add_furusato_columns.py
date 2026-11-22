@@ -25,14 +25,14 @@ CATEGORIES = [
 
 # 足す列。名前 → Notion のプロパティ定義
 COLUMNS = {
-    "ふるさと住民 掲載": {"select": {"options": [
+    "ふる住 掲載": {"select": {"options": [
         {"name": "載せる", "color": "yellow"},
         {"name": "掲載文あり", "color": "blue"},
         {"name": "申請済み", "color": "green"},
     ]}},
-    "ふるさと住民 掲載文": {"rich_text": {}},
-    "ふるさと住民 カテゴリ": {"multi_select": {"options": [{"name": c} for c in CATEGORIES]}},
-    "ふるさと住民 タグ": {"multi_select": {"options": []}},
+    "ふる住 掲載文": {"rich_text": {}},
+    "ふる住 カテゴリ": {"multi_select": {"options": [{"name": c} for c in CATEGORIES]}},
+    "ふる住 タグ": {"multi_select": {"options": []}},
     "問い合わせ先 担当者名": {"rich_text": {}},
     "問い合わせ先 電話": {"phone_number": {}},
     "問い合わせ先 メール": {"email": {}},
