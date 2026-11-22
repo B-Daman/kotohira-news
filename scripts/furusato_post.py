@@ -185,8 +185,8 @@ def check(data, news=False):
         if not isinstance(body, str):
             err.append("body は文字で")
         else:
-            if len(body) > 1000:
-                err.append(f"掲載文が {len(body)} 字（1,000字まで）")
+            if len(body) > 800:
+                err.append(f"掲載文が {len(body)} 字（800字まで。末尾にアンケートの段が付くため）")
             if LEFT.search(body):
                 warn.append(f"掲載文に「{LEFT.search(body).group()}」が残っている")
             if not news and "http" not in body:
