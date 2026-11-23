@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-23 02:59",
+  "fetched": "2026-11-23 20:06",
   "news": [
     {
       "id": "4200b4e5-ff5b-814a-a698-d889855c2ef7",
@@ -1827,6 +1827,23 @@ window.NOTION_DATA = {
       "calendar": [
         "基本のイベント"
       ],
+      "featured": false
+    },
+    {
+      "id": "4210b4e5-ff5b-8059-89a1-f6cf2dd356d9",
+      "title": "象郷地区 未来検討会",
+      "url": "https://www.facebook.com/reel/2573707866448542",
+      "start": "2026-12-13T10:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "楽集館",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
+      "image": "",
+      "comment": "",
+      "fee": "",
+      "organizer": "",
+      "calendar": [],
       "featured": false
     },
     {
