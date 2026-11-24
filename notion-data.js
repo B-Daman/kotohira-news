@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-24 07:52",
+  "fetched": "2026-11-24 16:03",
   "news": [
     {
       "id": "4200b4e5-ff5b-814a-a698-d889855c2ef7",
@@ -1228,6 +1228,25 @@ window.NOTION_DATA = {
   ],
   "events": [
     {
+      "id": "4220b4e5-ff5b-80df-93cf-d85075dfa177",
+      "title": "象郷地区 未来検討会",
+      "url": "https://www.facebook.com/reel/2573707866448542",
+      "start": "2027-03-21T10:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "楽集館",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
+      "image": "assets/thumbs/4220b4e5ff5b80df93cfd85075dfa177.webp",
+      "comment": "",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
+      "featured": false
+    },
+    {
       "id": "41f0b4e5-ff5b-8148-a843-db71acb8984f",
       "title": "祈年祭",
       "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
@@ -1243,6 +1262,25 @@ window.NOTION_DATA = {
       "organizer": "金刀比羅宮",
       "calendar": [
         "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "4220b4e5-ff5b-8019-b6e0-ccf8378cc509",
+      "title": "象郷地区 未来検討会",
+      "url": "https://www.facebook.com/reel/2573707866448542",
+      "start": "2027-02-14T10:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "楽集館",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
+      "image": "assets/thumbs/4220b4e5ff5b8019b6e0ccf8378cc509.webp",
+      "comment": "",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1376,6 +1414,25 @@ window.NOTION_DATA = {
       "organizer": "金刀比羅宮",
       "calendar": [
         "金刀比羅宮"
+      ],
+      "featured": false
+    },
+    {
+      "id": "4220b4e5-ff5b-80c3-9386-c2e4be2fbe36",
+      "title": "象郷地区 未来検討会",
+      "url": "https://www.facebook.com/reel/2573707866448542",
+      "start": "2027-01-11T10:00",
+      "end": "",
+      "status": "実施前",
+      "city": "琴平町",
+      "place": "楽集館",
+      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
+      "image": "assets/thumbs/4220b4e5ff5b80c39386c2e4be2fbe36.webp",
+      "comment": "",
+      "fee": "",
+      "organizer": "",
+      "calendar": [
+        "こんぴらカレンダー"
       ],
       "featured": false
     },
@@ -1826,11 +1883,13 @@ window.NOTION_DATA = {
       "city": "琴平町",
       "place": "楽集館",
       "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
-      "image": "",
+      "image": "assets/thumbs/4210b4e5ff5b805989a1f6cf2dd356d9.webp",
       "comment": "",
       "fee": "",
       "organizer": "",
-      "calendar": [],
+      "calendar": [
+        "こんぴらカレンダー"
+      ],
       "featured": false
     },
     {
