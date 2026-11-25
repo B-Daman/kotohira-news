@@ -1,7 +1,20 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-25 23:53",
+  "fetched": "2026-11-26 08:44",
   "news": [
+    {
+      "id": "4230b4e5-ff5b-8181-b09f-edc700428441",
+      "title": "夜の琴平で落語堪能を　２８日、アマ４組出演｜四国新聞WEB朝刊",
+      "url": "https://www.shikoku-np.co.jp/dg/article.aspx?id=K2026112600000003500",
+      "summary": "琴平町の夜の観光を盛り上げるため、アマチュア落語家4組が出演する落語会が開催される。江戸時代の雰囲気漂う会場での催し。",
+      "org": "四国新聞",
+      "media": "新聞",
+      "date": "2026-11-26",
+      "thumbnail": "assets/thumbs/4230b4e5ff5b8181b09fedc700428441.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4230b4e5-ff5b-81b9-bc3d-d7581f1c4b74",
       "title": "スターラックス航空が香川県の金刀比羅宮とコラボ、航空安全のお守り, Taiwan Today",
@@ -1264,19 +1277,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3e50b4e5-ff5b-8176-9b6e-d98dc06d0dc3",
-      "title": "広報ことひら10月号",
-      "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/12034.html",
-      "summary": "琴平町の広報紙10月号（vol.590）。町の行政情報、イベント、お知らせなどを掲載したPDF形式の月刊広報誌。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-24",
-      "thumbnail": "assets/thumbs/3e50b4e5ff5b81769b6ed98dc06d0dc3.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -2464,7 +2464,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-26T10:30",
       "end": "2026-11-26T11:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2483,7 +2483,7 @@ window.NOTION_DATA = {
       "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
       "start": "2026-11-26T09:00",
       "end": "2026-11-26T09:30",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
@@ -2502,7 +2502,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-26T09:00",
       "end": "2026-11-26T12:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2521,7 +2521,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-25T13:30",
       "end": "2026-11-25T15:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2540,7 +2540,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/Dc5i2DtE1Cw/?img_index=2",
       "start": "2026-11-25T12:00",
       "end": "2026-11-25T13:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2559,7 +2559,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-25T09:00",
       "end": "2026-11-25T11:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5577,25 +5577,6 @@ window.NOTION_DATA = {
       "comment": "会場: 楽集館（琴平町上櫛梨241） 象郷地区の未来について、学校施設の活用アイデアや暮らしの声を集める意見交換会。子ども連れや見学のみの参加も歓迎。",
       "fee": "0",
       "organizer": "全国空き家アドバイザー協議会琴平支部",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3dd0b4e5-ff5b-813e-a469-ed8ce89d16de",
-      "title": "金陵杜氏さんの勉強会〜お酒にまつわるおはなし",
-      "url": "https://www.instagram.com/p/DdTmrX9ziwd/",
-      "start": "2026-09-26T10:00",
-      "end": "2026-09-26T11:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "金陵の郷",
-      "address": "〒766-0001 香川県仲多度郡琴平町 623",
-      "image": "assets/thumbs/3dd0b4e5ff5b813ea469ed8ce89d16de.webp",
-      "comment": "会場: 金陵の郷 文化館（琴平町琴平623番地） 琴平町の「金陵の郷」文化館で、江戸時代1789年創業の日本酒蔵「金陵」の杜氏による、お酒の歴史と文化に関する勉強会が開催される。参加は無料で、事前申し込みが必要。",
-      "fee": "0",
-      "organizer": "ことひらまちじゅう図書館",
       "calendar": [
         "基本のイベント"
       ],
