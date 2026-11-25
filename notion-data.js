@@ -1,7 +1,46 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-25 04:01",
+  "fetched": "2026-11-25 23:53",
   "news": [
+    {
+      "id": "4230b4e5-ff5b-81b9-bc3d-d7581f1c4b74",
+      "title": "スターラックス航空が香川県の金刀比羅宮とコラボ、航空安全のお守り, Taiwan Today",
+      "url": "https://jp.taiwantoday.tw/photos/7187/56158",
+      "summary": "台湾のスターラックス航空が香川県琴平町の金刀比羅宮とコラボして、航空安全を願うお守りを制作した。金刀比羅宮が民間企業とコラボしてお守りを作るのは初めてである。スターラックス航空は高松空港と台中を結ぶ定期便を週5往復運航している。",
+      "org": "Taiwan Today",
+      "media": "Webメディア",
+      "date": "2026-11-25",
+      "thumbnail": "assets/thumbs/4230b4e5ff5b81b9bc3dd7581f1c4b74.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4230b4e5-ff5b-810c-a27a-dd7888ab4509",
+      "title": "金刀比羅宮でアクリル製「航空安全お守り」授与開始 台湾の航空会社と初のコラボ企画【香川・琴平町】（OHK岡山放送） - Yahoo!ニュース",
+      "url": "https://news.yahoo.co.jp/articles/0233cd5ef0643f90f69f83cf418676a45ca1dc21",
+      "summary": "香川県琴平町の金刀比羅宮が台湾の航空会社「スターラックス航空」と協力して、航空安全を願うアクリル製のお守りを制作した。11月25日から1つ1000円で授与されており、金刀比羅宮が交通機関の会社とのコラボでお守りを作るのは初めて。",
+      "org": "Yahoo!ニュース",
+      "media": "Webメディア",
+      "date": "2026-11-25",
+      "thumbnail": "assets/thumbs/4230b4e5ff5b810ca27add7888ab4509.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4230b4e5-ff5b-8110-906b-e3c8345d76cc",
+      "title": "琴平町の新町商店街に新しい寄り道スポット誕生！本から始まる探求ラウンジ「Side B」が2026年12月6日(日)にオープンするみたい",
+      "url": "https://www.marugame2.jp/stores/135249",
+      "summary": "琴平町の新町商店街に本を読んだり人との会話を楽しめる滞在型ブックラウンジ「Side B」が12月6日(日)にオープンする。琴平の街の人や旅人が選んだ本が並び、ドロップイン利用は2時間1,100円から。",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-11-25",
+      "thumbnail": "assets/thumbs/4230b4e5ff5b8110906be3c8345d76cc.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4220b4e5-ff5b-81b7-9a2b-e4497b60f54d",
       "title": "令和9年度町立認定こども園・私立保育所の申込について - 琴平町公式ホームページ",
