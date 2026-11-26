@@ -1,6 +1,6 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-26 08:44",
+  "fetched": "2026-11-27 04:14",
   "news": [
     {
       "id": "4230b4e5-ff5b-8181-b09f-edc700428441",
@@ -1251,32 +1251,6 @@ window.NOTION_DATA = {
       "duplicate": false,
       "pickup": false,
       "show": true
-    },
-    {
-      "id": "3e60b4e5-ff5b-819e-aca0-d13461364ebb",
-      "title": "第２弾 街ガチャin琴平町 販売開始",
-      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/11909.html",
-      "summary": "琴平町の街ガチャ第2弾がアクリルめじるしチャーム形式で販売される。善通寺第一高等学校デザイン科の生徒がデザインを担当し、西山食肉店、アタリヤ商店、幸せのおいりソフト、あめがけソフトクリーム、金陵のオブジェの5種類がラインナップに含まれる。",
-      "org": "琴平町公式ホームページ",
-      "media": "行政",
-      "date": "2026-09-25",
-      "thumbnail": "assets/thumbs/3e60b4e5ff5b819eaca0d13461364ebb.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
-    },
-    {
-      "id": "3e50b4e5-ff5b-8132-a700-ce21fa5d2b63",
-      "title": "秋山豊寛さんの宇宙飛行絵馬が金刀比羅宮に奉納",
-      "url": "https://www.nikkei.com/article/DGXZQOCC2333R0T20C26A9000000/",
-      "summary": "日本人初の宇宙飛行者・秋山豊寛さん（8月84歳で逝去）の絵馬が香川県琴平町の金刀比羅宮に奉納されている。白い宇宙服姿と旧ソ連宇宙船「ソユーズ」打ち上げシーンが描かれた絵馬は、「船の守り神」である同宮との縁を物語るものである。",
-      "org": "日本経済新聞",
-      "media": "新聞",
-      "date": "2026-09-25",
-      "thumbnail": "assets/thumbs/3e50b4e5ff5b8132a700ce21fa5d2b63.webp",
-      "duplicate": false,
-      "pickup": false,
-      "show": true
     }
   ],
   "events": [
@@ -2426,7 +2400,7 @@ window.NOTION_DATA = {
       "url": "https://www.instagram.com/p/DfjCYMpNuK_/",
       "start": "2026-11-27T18:30",
       "end": "2026-11-27T21:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "コトリ コワーキング＆ホステル 琴平",
       "address": "香川県仲多度郡琴平町720−15",
@@ -2445,7 +2419,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-27T10:00",
       "end": "2026-11-27T11:00",
-      "status": "実施前",
+      "status": "実施中",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2464,7 +2438,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-26T10:30",
       "end": "2026-11-26T11:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -2483,7 +2457,7 @@ window.NOTION_DATA = {
       "url": "https://www.konpira.or.jp/?stageID=hp_calendar&language=JAPANESE",
       "start": "2026-11-26T09:00",
       "end": "2026-11-26T09:30",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "金刀比羅宮（御本宮）",
       "address": "香川県仲多度郡琴平町892-1（石段785段目）",
@@ -2502,7 +2476,7 @@ window.NOTION_DATA = {
       "url": "https://www.town.kotohira.kagawa.jp/site/kouhou/list18.html",
       "start": "2026-11-26T09:00",
       "end": "2026-11-26T12:00",
-      "status": "実施中",
+      "status": "終了",
       "city": "琴平町",
       "place": "",
       "address": "",
@@ -5558,25 +5532,6 @@ window.NOTION_DATA = {
       "comment": "琴平町DAOは、町民や、琴平町以外にお住まいの方たちが集まり、情報交換や交流をするコミュニティであり、毎週火曜日に定例会をやっています。 琴平町で動いているプロジェクトや、課題、雑談などについてお話しているので、お気軽に参加してみてください(^^)/",
       "fee": "0",
       "organizer": "",
-      "calendar": [
-        "基本のイベント"
-      ],
-      "featured": false
-    },
-    {
-      "id": "3e00b4e5-ff5b-81bb-a80b-ee1099ba242a",
-      "title": "象郷地区の未来を考える意見交換会",
-      "url": "https://www.instagram.com/p/DdbjuOQEgmx/",
-      "start": "2026-09-27T10:00",
-      "end": "2026-09-27T12:00",
-      "status": "終了",
-      "city": "琴平町",
-      "place": "楽集館",
-      "address": "〒766-0006 香川県仲多度郡琴平町上櫛梨241",
-      "image": "assets/thumbs/3e00b4e5ff5b81bba80bee1099ba242a.webp",
-      "comment": "会場: 楽集館（琴平町上櫛梨241） 象郷地区の未来について、学校施設の活用アイデアや暮らしの声を集める意見交換会。子ども連れや見学のみの参加も歓迎。",
-      "fee": "0",
-      "organizer": "全国空き家アドバイザー協議会琴平支部",
       "calendar": [
         "基本のイベント"
       ],
