@@ -1,7 +1,72 @@
 /* 自動生成: scripts/fetch_notion.py が再生成します。手編集しないでください */
 window.NOTION_DATA = {
-  "fetched": "2026-11-27 04:14",
+  "fetched": "2026-11-27 23:12",
   "news": [
+    {
+      "id": "4250b4e5-ff5b-8135-9d70-dc62cf335803",
+      "title": "こんぴらの町に妖怪出現！門前町丸ごと劇場　12月12日と13日開催　香川・琴平町 | KSBニュース | KSB瀬戸内海放送",
+      "url": "https://news.ksb.co.jp/article/17086020",
+      "summary": "2026年12月12日と13日、香川県琴平町の表参道エリアで回遊型演劇祭が開催されます。全国から27の団体が集まり、表参道や商店街周辺で舞踊や短編演劇などを行います。12日には「こんぴら鬼天狗行列」が午後2時20分から行われます。",
+      "org": "KSB瀬戸内海放送",
+      "media": "テレビ",
+      "date": "2026-11-27",
+      "thumbnail": "assets/thumbs/4250b4e5ff5b81359d70dc62cf335803.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4250b4e5-ff5b-81ff-a51a-fd0d68ebabfe",
+      "title": "琴平・新町商店街に、本から会話が始まる場所「Side B」が12月6日開業　オープニングイベントを開催",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000193790.html",
+      "summary": "琴平町・新町商店街に12月6日開業する「本から始まる探求ラウンジ Side B」のオープニングイベントが開催されます。琴平町長ら地元事業者がゲストとして来場し、鏡開き・テープカット・乾杯を通じて開業を祝います。",
+      "org": "prtimes.jp / 株式会社かける小町",
+      "media": "行政",
+      "date": "2026-11-27",
+      "thumbnail": "assets/thumbs/4250b4e5ff5b81ffa51afd0d68ebabfe.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4250b4e5-ff5b-813e-a5fa-cb1172cdc6ca",
+      "title": "ビームスの最新店舗は香川「こんぴらさん」参道　「JAPAN」レーベルに込められた狙い",
+      "url": "https://www.sankei.com/article/20261127-S2V7PFZ7PJMRXES7KYGOJIPLGE/",
+      "summary": "アパレル大手ビームスが香川県琴平町の金刀比羅宮参道にセレクトショップ「ビームス ジャパン 琴平」をオープンした。築100年を超える建物を改装した店内には約400種類の日本製商品を取りそろえ、丸亀うちわなどの地元伝統工芸品も扱っている。",
+      "org": "産経ニュース",
+      "media": "Webメディア",
+      "date": "2026-11-27",
+      "thumbnail": "assets/thumbs/4250b4e5ff5b813ea5facb1172cdc6ca.jpg",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4250b4e5-ff5b-81d5-af2b-d30d77c36b7a",
+      "title": "建築技能継承　若者に道　「匠の学舎」グッドデザイン賞　琴平　／香川 | 毎日新聞",
+      "url": "https://mainichi.jp/articles/20261127/ddl/k37/040/146000c",
+      "summary": "香川県琴平町の職業訓練校「匠の学舎」の実践型教育モデルが2026年度グッドデザイン賞を受賞した。同校は創立10周年を迎え、建築職人の育成と教育を目指す全国初の取り組みが評価された。",
+      "org": "毎日新聞",
+      "media": "新聞",
+      "date": "2026-11-27",
+      "thumbnail": "assets/thumbs/4250b4e5ff5b81d5af2bd30d77c36b7a.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
+    {
+      "id": "4240b4e5-ff5b-8111-b703-dcf6ae556248",
+      "title": "琴平町の「ほっかほっか亭 琴平店」隣にコインランドリー「Smile Wash(スマイルウォッシュ)」が2026年11月13日(金)にオープンしてる！洗濯待ちもお弁当で快適に？",
+      "url": "https://www.marugame2.jp/stores/135411",
+      "summary": "琴平町のほっかほっか亭琴平店隣に、24時間営業のコインランドリー「Smile Wash」が2026年11月13日にオープンした。洗濯乾燥機や洗濯機のほか、靴用ランドリー設備も備えている。",
+      "org": "まるごと・中讃つーしん",
+      "media": "Webメディア",
+      "date": "2026-11-26",
+      "thumbnail": "assets/thumbs/4240b4e5ff5b8111b703dcf6ae556248.webp",
+      "duplicate": false,
+      "pickup": false,
+      "show": true
+    },
     {
       "id": "4230b4e5-ff5b-8181-b09f-edc700428441",
       "title": "夜の琴平で落語堪能を　２８日、アマ４組出演｜四国新聞WEB朝刊",
